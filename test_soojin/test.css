@@ -8,4 +8,44 @@ body {
 main {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 150px;
+  height: 200px;
+  padding: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box-div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  transition: all 0.3s linear;
+}
+
+.wrapper:hover .box-div {
+  transform: perspective(400px) rotateX(80deg);
+}
+
+.wrapper span {
+  font-size: 22px;
+  font-weight: 700;
+  position: absolute;
+  top: 40px;
+  opacity: 0;
+  transition: opacity 0.3s ease 0s;
+  display: block;
+}
+
+.wrapper:hover span {
+  opacity: 1;
 }
