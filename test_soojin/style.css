@@ -6,7 +6,7 @@
 :root {
   --default-color1: yellow;
   --default-color2: blue;
-  --border-radius: 10px;
+  --border-radius: 4px;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
