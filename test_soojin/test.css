@@ -207,3 +207,7 @@ header {
 .showing {
   display: block;
 }
+
+input:focus {
+  outline: none;
+}
