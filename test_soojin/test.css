@@ -3,17 +3,39 @@
 body {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 main {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
 
-.wrapper {
+.background-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-image: url("bg01.jpg");
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.logo-wrapper {
   width: 150px;
   height: 200px;
   padding: 25px;
@@ -28,24 +50,66 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  border: 2px solid rgb(255, 255, 255);
   transition: all 0.3s linear;
-}
-
-.wrapper:hover .box-div {
+  box-shadow: var(--light-shadow);
   transform: perspective(400px) rotateX(80deg);
 }
 
-.wrapper span {
-  font-size: 22px;
-  font-weight: 700;
+.logo-wrapper:hover .box-div {
+  transform: none;
+}
+
+.logo-wrapper span {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 600;
   position: absolute;
-  top: 40px;
-  opacity: 0;
-  transition: opacity 0.3s ease 0s;
+  top: 46px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out 0s;
   display: block;
 }
 
-.wrapper:hover span {
-  opacity: 1;
+.logo-wrapper:hover span {
+  opacity: 0;
+  top: 46px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  margin-top: 40px;
+  margin-bottom: 250px;
+}
+
+.content .text {
+  font-size: 50px;
+  color: white;
+  font-weight: lighter;
+}
+
+.start-btn {
+  margin-top: 70px;
+  border: 1px solid white;
+  width: 250px;
+  height: 80px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.start-btn:hover {
+  background-color: rgba(0, 0, 0, 0.666);
 }
