@@ -8,6 +8,7 @@
       src="https://kit.fontawesome.com/ae58912594.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="sign_up.css" />
   </head>
   <body>
@@ -25,23 +26,47 @@
           >좋아요! 이제 간단한 두 단계만 거치면 YOGAYO와 함께 하실 수
           있습니다.</span
         >
-        <span class="step_1"></span>
+        <span class="step_1">1. 회원가입을 위한 정보를 입력해주세요.</span>
         <div class="sign-up-form">
           <form action="" method="post">
             <label for="">이메일</label>
             <input
               type="text"
               name="userId"
+              id="email"
               placeholder="example@gmail.com"
-            /><br />
+            />
+            <br />
             <label for="">이름</label
-            ><input type="text" name="userId" placeholder="" /><br />
+            ><input
+              type="text"
+              name="userName"
+              id="name"
+              placeholder="3자 이상"
+            /><br />
             <label for="">생년월일</label
-            ><input type="date" name="userId" placeholder="태어난 년도" /><br />
+            ><input
+              type="date"
+              name="userBirthDay"
+              id="birthDay"
+              placeholder=""
+            /><br />
             <label for="">비밀번호</label
-            ><input type="password" name="password" placeholder="" /><br />
+            ><input
+              type="password"
+              name="password1"
+              id="pwd1"
+              placeholder="6자 이상"
+            /><br />
             <label for="">비밀번호 확인</label
-            ><input type="password" name="password" placeholder="" /><br />
+            ><input
+              type="password"
+              name="password2"
+              id="pwd2"
+              placeholder="6자 이상"
+            />
+            <div class="alert-pwd alert"></div>
+            <br />
           </form>
         </div>
         <div class="down-btn" onclick="goToStep2()">
@@ -52,16 +77,44 @@
         <div class="up-btn" onclick="goToStep1()">
           <i class="fas fa-arrow-up"></i>
         </div>
+        <span class="step_1">2. 우리에게 당신의 관심사를 모두 알려주세요.</span>
+        <span class="step_1">YOGAYO만의 맞춤 코스를 추천해드리겠습니다.</span>
+        <div class="interests">
+          <span class="interest">저강도의</span>
+          <span class="interest">체력 단련</span>
+          <span class="interest">영적인 경험</span>
+          <span class="interest">체중 감량</span>
+          <span class="interest">균형</span>
+          <span class="interest">유연성</span>
+          <span class="interest">임신중에 할 수 있는</span>
+          <span class="interest">근력 개선</span>
+          <span class="interest">스트레스 감소</span>
+          <span class="interest">기분 및 행동 개선</span>
+          <span class="interest">만성 요통</span>
+          <span class="interest">우울증</span>
+          <span class="interest">아이를 위한</span>
+          <span class="interest">정신건강</span>
+          <span class="interest">내적 평화</span>
+          <span class="interest">명상 훈련</span>
+          <span class="interest">고강도의</span>
+          <span class="interest">현대 요가</span>
+          <span class="interest">호흡법</span>
+          <span class="interest">관절염</span>
+          <span class="interest">불면증</span>
+          <span class="interest">친구와 같이 하는</span>
+          <span class="interest">천식</span>
+        </div>
       </section>
     </main>
     <script>
       function goToStep2() {
         window.scrollTo({ top: 1080, behavior: "smooth" });
       }
-
       function goToStep1() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
     </script>
+    <script src="sign_up_vaild_check.js"></script>
+    <script src="sign_up_interests.js"></script>
   </body>
 </html>
