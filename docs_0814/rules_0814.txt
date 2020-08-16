@@ -1,5 +1,5 @@
 변수: 페이지 이름을 접두사로 쓰자
-       자바,스프링에서는 카멜, html css js jsp 는 언더바
+       자바,스프링에서는 카멜, html css js jsp 는 언더바(스네이크)
        
 클래스명: 컨트롤러는 접미사= 컨트롤러(LoginController)
 	: dao는   접미사=Dao (UserDao)
@@ -14,6 +14,8 @@ js/home.js
 !!!구조 반드시 지킬것!!!
 
 매일 스프링 프로젝트 일별로 백업
+
+DB QUERY는 항상 대문자로 해주세요
 
 
 
