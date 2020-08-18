@@ -1,0 +1,164 @@
+@import url("../set_0815/style.css");
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-wrapper {
+  width: 150px;
+  padding-top: 25px;
+  padding-left: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box-div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(0, 0, 0);
+  transition: all 0.3s linear;
+  transform: perspective(400px) rotateX(80deg);
+}
+
+.logo-wrapper:hover .box-div {
+  transform: none;
+}
+
+.logo-wrapper span {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  top: 46px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out 0s;
+  display: block;
+}
+
+.logo-wrapper:hover span {
+  opacity: 0;
+  top: 46px;
+}
+
+header > nav_bar {
+  display: inline-block;
+  position: absolute;
+}
+
+.main-wrapper {
+  width: 100%;
+  height: 820px;
+  background-color: black;
+  display: flex;
+  padding-left: 95px;
+  padding-right: 80px;
+}
+
+.course-main {
+  width: 1280px;
+  height: 720px;
+  background-color: rebeccapurple;
+  margin: 0px 30px 0px 10px;
+}
+
+.image-wrapper {
+  width: inherit;
+  height: 720px;
+  background-color: lawngreen;
+  margin-bottom: 7px;
+  overflow: hidden;
+}
+
+.course-image{
+  display: block;
+  margin: auto;
+
+}
+
+.info-wrapper {
+  width: inherit;
+  height: 93px;
+  background-color: red;
+}
+
+.course-list {
+  height: inherit;
+  width: 400px;
+  background-color: khaki;
+  padding:10px;
+}
+
+.list-header{
+  background-color: lightcyan;
+  margin-bottom: 5px ;
+  height: 50px;
+}
+
+.scroll-overflow{
+  display: inline-block;
+  background-color: lightgray;
+  height: 300px;
+  overflow: auto;
+}
+
+.scroll-overflow::-webkit-scrollbar {
+  width: 10px;
+}
+
+.order-progress-bar{
+  position: absolute;
+  height: 70px;
+  background-color: magenta;
+  z-index: 1;
+  opacity: 0.3;
+  width: 50px;
+}
+
+.order-wrapper{
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.order-number{
+  width: 24px;
+  background-color: lightcoral;
+  height: 70px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.order-number div{
+  margin-left: 5px;
+}
+.order-image{
+  display: inline-block;
+  width:100px;
+  background-color: lightseagreen;
+  height: 60px;
+  overflow: hidden;
+}
+
+.order-image img{
+  max-width: 100px;
+  top: -20
+}
+.order-title{
+  display: inline-block;
+  width: 260px;
+  background-color: lightskyblue;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
