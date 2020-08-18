@@ -13,3 +13,32 @@ TEAM4 FINAL PROJECT !!
 -html에 stylesheet link하는 부분에 그 html에 맞는 쌍 css 파일 이름을 수정해서 적용 되나 봐야 한다.
 
 -set.css에 이미 body, main 부분 width랑 height가 설정되어 있다.
+
+# 변수명 정하는 방법
+변수: 페이지 이름을 접두사로 쓰자
+       자바,스프링에서는 카멜, html css js jsp 는 언더바(스네이크)
+       
+클래스명: 컨트롤러는 접미사= 컨트롤러(LoginController)
+	: dao는   접미사=Dao (UserDao)
+	:Vo, UserVo 이런식으루..
+파일명: 페이지 이름 따라갈것 ex) course.jsp, course.css course.js
+폴더: js/css/jsp--- hotme.html, login.html, 
+
+
+# 경로 설정 방법
+html/home.html
+css/home.css
+js/home.js
+해당 폴더안에 바로 있게
+!!!구조 반드시 지킬것!!!
+
+# 백업 
+매일 스프링 프로젝트 일별로 백업
+
+# DB 규칙
+DB QUERY는 항상 대문자로 해주세요
+
+
+
+# 기본 컬러, 기본 폰트 설정
+defaultColor1
