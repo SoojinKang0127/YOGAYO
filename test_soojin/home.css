@@ -1,0 +1,213 @@
+@import url("style.css");
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.background-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background-image: url("bg01.jpg");
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.logo-wrapper {
+  width: 150px;
+  height: 200px;
+  padding: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box-div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(255, 255, 255);
+  transition: all 0.3s linear;
+  box-shadow: var(--light-shadow);
+  transform: perspective(400px) rotateX(80deg);
+}
+
+.logo-wrapper:hover .box-div {
+  transform: none;
+}
+
+.logo-wrapper span {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  top: 46px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out 0s;
+  display: block;
+}
+
+.logo-wrapper:hover span {
+  opacity: 0;
+  top: 46px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  margin-top: 40px;
+}
+
+.content .text {
+  margin-top: 250px;
+  font-size: 50px;
+  color: white;
+  font-weight: lighter;
+}
+
+.start-btn {
+  margin-top: 70px;
+  border: 1px solid white;
+  width: 250px;
+  height: 80px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.start-btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+.start-btn:hover .box-div {
+  transform: none;
+}
+
+.login-form-wrapper {
+  display: none;
+}
+
+.login-form {
+  border-radius: var(--border-radius);
+  border: 1px solid white;
+  background-color: rgb(255, 255, 255);
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--dark-shadow);
+}
+
+.login-form span {
+  margin-top: 50px;
+  font-size: 35px;
+  font-weight: 200;
+  margin-bottom: 35px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.form-row input[type="text"],
+.form-row input[type="password"] {
+  font-size: 17px;
+  text-align: center;
+  line-height: 50px;
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.form-row input[type="submit"] {
+  margin-top: 20px;
+  width: 300px;
+  height: 40px;
+  font-size: 17px;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  box-shadow: var(--light-shadow);
+  cursor: pointer;
+}
+
+.withgoogle {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.withgoogle div {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.349);
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: var(--light-shadow);
+}
+
+.sign-up-btn {
+  width: 300px;
+  height: 40px;
+  font-size: 17px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--light-shadow);
+  cursor: pointer;
+}
+
+.hiding {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+input:focus {
+  outline: none;
+}

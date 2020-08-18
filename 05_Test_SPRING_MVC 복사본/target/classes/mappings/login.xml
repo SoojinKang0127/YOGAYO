@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="UserDao">
+
+	<select id="select" resultType="UserVo">
+		<!-- 테이블명 대소문자 구분 -->
+		SELECT * FROM user WHERE USERID=#{userId} AND PASSWORD=#{password}
+	</select>
+
+
+
+
+
+</mapper>
