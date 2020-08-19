@@ -83,6 +83,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 10);
     }
   };
+
+  like = document.getElementsByClassName("leftwrapper");
+
+  like[0].onclick(function () {
+      heart=document.getElementsByClassName("")
+  });
   /*
     console.log(p_btn)
     length=0
