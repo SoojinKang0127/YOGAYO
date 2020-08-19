@@ -6,6 +6,10 @@
     <title>TaeGyum</title>
     <!-- 아래 href에 자기 css파일 이름 제대로 넣고 적용 되나 확인하세요 -->
     <link rel="stylesheet" href="player.css" />
+    <script
+      src="https://kit.fontawesome.com/7bad96e258.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -21,7 +25,9 @@
       <div class="main-wrapper">
         <div class="course-main">
           <div class="image-wrapper">
-            <div class="image-progress-bar"></div>
+            <div class="image-progress-bar">
+              <i class="fas fa-pause btn"></i>
+            </div>
             <image class="course-image" src="boat.webp"></image>
           </div>
           <div class="info-wrapper">
@@ -47,16 +53,31 @@
                     <image src="boat.webp"> </image>
                   </div>
                   <div class="order-title">
-                    <div>배자세</div>
+                    <div>배 자세</div>
+                    <div></div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="order-progress-bar"></div>
+                <div class="order-wrapper">
+                  <div class="order-number"><div>1</div></div>
+                  <div class="order-image">
+                    <image src="chair.webp"> </image>
+                  </div>
+                  <div class="order-title">
+                    <div>의자 자세</div>
                     <div>0:30</div>
                   </div>
                 </div>
               </li>
+              
             </ul>
           </div>
           <div></div>
         </div>
       </div>
     </main>
+    <script src="player.js"></script>
   </body>
 </html>

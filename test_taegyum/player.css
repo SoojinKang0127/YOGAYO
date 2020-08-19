@@ -106,8 +106,8 @@ header > nav_bar {
 
 .scroll-overflow{
   display: inline-block;
-  background-color: lightgray;
-  height: 300px;
+  background-color: lightcoral;
+  height: 650px;
   overflow: auto;
 }
 
@@ -121,8 +121,15 @@ header > nav_bar {
   background-color: magenta;
   z-index: 1;
   opacity: 0.3;
-  width: 50px;
+
+ 
 }
+
+@keyframes progress{
+  from{width:0px}
+  to{width:384px}
+}
+
 
 .order-wrapper{
   height: 70px;
@@ -161,4 +168,14 @@ header > nav_bar {
   height: 70px;
   display: flex;
   align-items: center;
+}
+
+.btn{
+  font-size:30px;
+  translate: 10px;
+}
+.image-progress-bar{
+  position: relative;
+  top:93%;
+  left:50%
 }
