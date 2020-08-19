@@ -12,72 +12,78 @@
     ></script>
   </head>
   <body>
-    <header>
-      <a href="">
-        <div class="logo-wrapper">
-          <span>YOGAYO</span>
-          <div class="box-div"></div>
+    <div class="all-wrapper">
+      <header>
+        <div class="header-wrapper">
+          <div class="logo-wrapper">
+            <a href="">
+              <span>YOGAYO</span>
+              <div class="box-div"></div>
+            </a>
+          </div>
+          <div class="nav_bar"></div>
         </div>
-      </a>
-      <div class="nav_bar"></div>
-    </header>
-    <main>
-      <div class="main-wrapper">
-        <div class="course-main">
-          <div class="image-wrapper">
-            <div class="image-progress-bar">
-              <i class="fas fa-pause btn"></i>
+      </header>
+      <main>
+        <div class="main-wrapper">
+          <div class="course-main">
+            <div class="image-wrapper">
+              <div class="image-progress-bar">
+                <i class="fas fa-pause btn"></i>
+              </div>
+              <div class="course-image"></div>
             </div>
-            <div class="course-image"></div>
+            <div class="info-wrapper">
+              <div class="course-title"></div>
+              <div class="course-info">
+                <div class="main-course-title">코스 A: 허리에 좋은 기초 요가 클래스</div>
+                <div class="main-course-info">산자세</div>
+              </div>
+            </div>
           </div>
-          <div class="info-wrapper">
-            <div class="course-title"></div>
-            <div class="course-info">
-              <div>코스 A</div>
-              <div>산자세</div>
+          <div class="course-list">
+            <div class="list-header">
+              <div class="list-header-title">코스 A</div>
+              <div class="list-header-count">by yogayo 1/30</div>
+            </div>
+            <div class="scroll-overflow">
+              <ul>
+                <li>
+                  <div class="order-progress-bar"></div>
+                  <div class="order-wrapper">
+                    <div class="order-number"><div>1</div></div>
+                    <div class="order-image">
+                      <image src="boat.webp"> </image>
+                    </div>
+                    <div class="order-title">
+                      <div>배 자세</div>
+                      <div></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="order-progress-bar"></div>
+                  <div class="order-wrapper">
+                    <div class="order-number"><div>2</div></div>
+                    <div class="order-image">
+                      <image src="chair.webp"> </image>
+                    </div>
+                    <div class="order-title">
+                      <div>의자 자세</div>
+                      <div>0:30</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="list-footer">
+              <div class="play-button">일시정지</div>
+              <div class="end-btn">운동 종료</div>
             </div>
           </div>
         </div>
-        <div class="course-list">
-          <div class="list-header">
-            <div class="list-header-title">코스 A</div>
-            <div class="list-header-count">1/30</div>
-          </div>
-          <div class="scroll-overflow">
-            <ul>
-              <li>
-                <div class="order-progress-bar"></div>
-                <div class="order-wrapper">
-                  <div class="order-number"><div>1</div></div>
-                  <div class="order-image">
-                    <image src="boat.webp"> </image>
-                  </div>
-                  <div class="order-title">
-                    <div>배 자세</div>
-                    <div></div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="order-progress-bar"></div>
-                <div class="order-wrapper">
-                  <div class="order-number"><div>1</div></div>
-                  <div class="order-image">
-                    <image src="chair.webp"> </image>
-                  </div>
-                  <div class="order-title">
-                    <div>의자 자세</div>
-                    <div>0:30</div>
-                  </div>
-                </div>
-              </li>
-              
-            </ul>
-          </div>
-          <div></div>
-        </div>
-      </div>
-    </main>
-    <script src="player.js"></script>
+      </main>
+      <script src="player.js"></script>
+    </div>
   </body>
 </html>

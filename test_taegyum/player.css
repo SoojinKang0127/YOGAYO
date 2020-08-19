@@ -3,13 +3,15 @@
 body {
   width: 100%;
   height: 100%;
+  background-color: #f9f9f9;
 }
 
 main {
   width: 100%;
   height: 100%;
 }
-
+.header-wrapper {
+}
 .logo-wrapper {
   width: 150px;
   padding-top: 25px;
@@ -56,10 +58,11 @@ header > nav_bar {
 }
 
 .main-wrapper {
+  position: absolute;
+  top: 100px;
   width: 100%;
   height: 820px;
   background-color: #f9f9f9;
-
   display: flex;
   padding-left: 95px;
   padding-right: 80px;
@@ -79,7 +82,7 @@ header > nav_bar {
   overflow: hidden;
 }
 
-.course-image{
+.course-image {
   position: relative;
   top: 0px;
   height: 100%;
@@ -89,95 +92,176 @@ header > nav_bar {
   display: block;
   margin: auto;
   background-image: url("boat.webp");
-
 }
+
+
 
 .info-wrapper {
   width: inherit;
   height: 93px;
 }
 
+.main-course-title{
+  font-weight: 500;
+  font-size: 20px;
+}
+
 .course-list {
   height: inherit;
   width: 400px;
-  padding:10px;
+  border: 1px solid #dddddd;
+  background-color: white;
+  box-shadow: var(--light-shadow);
+  border-radius: 10px;
 }
 
-.list-header{
-  margin-bottom: 5px ;
-  height: 50px;
+.list-header {
+  height: 75px;
+  padding: 14px;
+  border-bottom: 1px solid #dddddd;
 }
 
-.scroll-overflow{
-  display: inline-block;
+.list-header-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 7px;
+  padding-left: 10px;
+}
+
+.list-header-count {
+  font-size: 14px;
+  font-weight: 300;
+  padding-left: 10px;
+}
+
+.scroll-overflow {
   height: 650px;
   overflow: auto;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #dddddd;
 }
 
 .scroll-overflow::-webkit-scrollbar {
   width: 10px;
 }
 
-.order-progress-bar{
+.order-progress-bar {
   position: absolute;
   height: 70px;
-  z-index: 1;
-  opacity: 0.3;
-
- 
+  background-color: #febe2e;
 }
 
-@keyframes progress{
-  from{width:0px}
-  to{width:384px}
+@keyframes progress {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 398px;
+  }
 }
 
-
-.order-wrapper{
+.order-wrapper {
+  width: 398px;
   height: 70px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #dddddd;
 }
 
-.order-number{
+.order-number {
   width: 24px;
-
   height: 70px;
   text-align: center;
   display: flex;
   align-items: center;
+  z-index: 1;
 }
-.order-number div{
+.order-number div {
   margin-left: 5px;
+  font-size: 14px;
 }
-.order-image{
+.order-image {
   display: inline-block;
-  width:100px;
-
+  width: 100px;
   height: 60px;
   overflow: hidden;
+  z-index: 1;
 }
 
-.order-image img{
+.order-image img {
   max-width: 100px;
-  top: -20
+  top: -20;
 }
-.order-title{
+.order-title {
   display: inline-block;
   width: 260px;
-
   height: 70px;
   display: flex;
   align-items: center;
+  z-index: 1;
+  justify-content: space-between;
 }
 
-.btn{
-  font-size:30px;
-  translate: 10px;
+.order-title > div:nth-child(1) {
+  font-weight: 800;
+  padding-left: 10px;
 }
-.image-progress-bar{
+
+.order-title > div:nth-child(2) {
+  padding-right: 10px;
+}
+
+.btn {
+  font-size: 30px;
+}
+.image-progress-bar {
   position: relative;
-  top:93%;
-  left:50%
+  top: 91%;
+  left: 50%;
+  color: black;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.list-footer {
+  bottom: 0px;
+  height: 95px;
+  background-color: #f9f9f9;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 15px 0 15px;
+}
+
+.play-button {
+  display: flex;
+  background-color: #363a49;
+  color: white;
+  width: 150px;
+  height: 45px;
+  text-align: center;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.end-btn {
+  display: flex;
+  background-color: #363a49;
+  color: white;
+  width: 150px;
+  height: 45px;
+  text-align: center;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  font-weight: 500;
+  font-size: 18px;
 }
