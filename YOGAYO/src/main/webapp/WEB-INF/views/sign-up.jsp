@@ -25,7 +25,7 @@
 			<span class="welcome">좋아요! 이제 간단한 두 단계만 거치면 YOGAYO와 함께 하실 수
 				있습니다.</span> <span class="step_1">1. 회원가입을 위한 정보를 입력해주세요.</span>
 			<div class="sign-up-form">
-				<form action="sign-up" method="POST">
+				<form action="/sign-up" method="POST">
 					<input type="hidden" name="interest_1" id="interest_1"
 						value="false"> <input type="hidden" name="interest_2"
 						id="interest_2" value="false"> <input type="hidden"
@@ -62,11 +62,11 @@
 						<input type="text" name="id" id="email"
 						placeholder="johndoe@example.com" /> <br /> <label for="">이름</label><input
 						type="text" name="name" id="name" placeholder="3자 이상" /><br />
-					<label for="">생년월일</label><input type="date" name="userBirthDay"
-						id="bDate" placeholder="" /><br /> <label for="">성별</label><select
+					<label for="">생년월일</label><input type="date" name="bDate"
+						id="birthDay" placeholder="" /><br /> <label for="">성별</label><select
 						name="gender" id="gender">
-						<option value="male">남성</option>
-						<option value="female">여성</option>
+						<option value="M">남성</option>
+						<option value="F">여성</option>
 					</select> <br /> <label for="">비밀번호</label><input type="password"
 						name="pwd" id="pwd1" placeholder="6자 이상" /><br /> <label
 						for="">비밀번호 확인</label><input type="password" name="password2"
@@ -107,11 +107,11 @@
 					class="interest_20 interest">관절염</span> <span
 					class="interest_21 interest">불면증</span> <span
 					class="interest_22 interest">친구와 같이 하는</span> <span
-					class="interest_23 interest" >천식</span>
+					class="interest_23 interest" onclick="alert()">천식</span>
 			</div>
 
 
-			<input type="submit" value="가입하기">
+			<input type="submit" value="가입하기" disabled="disabled">
 			</form>
 
 		</section>
@@ -122,9 +122,10 @@
 		src="${pageContext.request.contextPath}/resources/js/sign_up_interests.js"></script>
 	<script>
 	
-		function alert(){
-			alert("환영합니다.")
-		}
+		
+	
+	
+	
 	
 		var emailCheck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 	

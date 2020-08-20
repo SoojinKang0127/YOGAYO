@@ -20,9 +20,10 @@ public class UserDAOImpl implements UserDAO {
 		return mybatis.selectOne("UserDao.select", vo);
 	}
 
+	
 	@Override
 	public void signUp(UserVo vo) throws Exception {
-		mybatis.insert("UserDao.insert", vo);
+		mybatis.insert("UserDao.signup", vo);
 		mybatis.commit();
 		
 	}

@@ -48,7 +48,7 @@ $(document).ready(function() {
 	/* 비밀번호 유효성 */
 
 	$("#pwd1").keyup(function() {
-
+		console.log($("#birthDay").val());
 		if ($("#birthDay").val().length != 0) {
 			$("#birthDay").css({
 				color : "green",

@@ -1,5 +1,6 @@
 package com.team4.test;
 
+import java.sql.Date;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,10 +15,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.team4.dao.UserDAO;
 import com.team4.dao.UserDAOImpl;
+import com.team4.dao.UserServiceImpl;
 import com.team4.vo.UserVo;
 
 @Controller
 public class SignUpController {
+	
+	
+	UserServiceImpl service = new UserServiceImpl();
 
 	@Autowired(required=true) 
 	private HttpServletRequest request;
@@ -32,20 +37,29 @@ public class SignUpController {
 	}
 	
 	@RequestMapping(value = "/sign-up", method = RequestMethod.POST)
-	public String signUp1( Locale locale, Model model, @RequestParam("id")String id) {
-		System.out.println("sdf");
+	public String signUp1(Model model, 
+			@RequestParam("id")String id,
+			@RequestParam("name")String name,
+			@RequestParam("bDate")Date date,
+			@RequestParam("pwd")String pwd,
+			@RequestParam("gender")char gender) {
+
 		UserVo vo= new UserVo();
-		UserDAO userdaoimplDao = new UserDAOImpl();
-		request.getAttribute("id");
-		request.getAttribute("name");
-		request.getAttribute("bDate");
-		request.getAttribute("id");
-		request.getAttribute("id");
-		System.out.println(id);
+
 		
+		vo.setId(id);
+		vo.setName(name);
+		vo.setPwd(pwd);
+		vo.setbDate(date);
+		vo.setGender(gender);
+			
+		try {
+			service.signUp(vo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
-		
-		return "sign-up";
+		return "main";
 	}
 	
 }

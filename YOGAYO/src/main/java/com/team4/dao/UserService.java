@@ -5,5 +5,6 @@ import com.team4.vo.UserVo;
 public interface UserService {
 	
 	public UserVo login(UserVo vo) throws Exception;
+	public void signUp(UserVo vo) throws Exception;
 
 }
