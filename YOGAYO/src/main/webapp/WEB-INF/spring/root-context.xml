@@ -7,7 +7,7 @@
 
 
 	<!-- HandlerMapping 등록 -->
-
+<!-- 
 	<bean
 		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
 		<property name="mappings">
@@ -16,6 +16,7 @@
 			</props>
 		</property>
 	</bean>
+	-->
 
 
 	<!-- Controller 등록 -->

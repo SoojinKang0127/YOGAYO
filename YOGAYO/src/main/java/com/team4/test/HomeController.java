@@ -15,8 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.team4.dao.Dao;
-import com.team4.vo.Vo;
+
 
 
 @Controller
@@ -31,11 +30,6 @@ public class HomeController {
 	};
 	
 	
-	@RequestMapping(value = "/sign-up", method = RequestMethod.GET)
-	public String login(Locale locale, Model model) {
-		
-		return "sign-up";
-	}
 	
 	
 	@RequestMapping(value = "/main-x", method = RequestMethod.GET)
