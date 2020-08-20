@@ -288,6 +288,10 @@ main {
   font-size: 18pt;
 }
 
+.course_detail-rating i{
+	color:var( --theme-color);
+}
+
 .course_detail-review {
   width: 50%;
   display: flex;
