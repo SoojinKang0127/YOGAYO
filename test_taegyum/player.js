@@ -1,6 +1,7 @@
 barArr = document.getElementsByClassName("order-progress-bar");
 bar = barArr[0];
 time = 3000;
+play=document.getElementsByClassName("play-button")
 p_btn = document.getElementsByClassName("fas fa-pause btn");
 document.get;
 index = 0;
@@ -10,6 +11,7 @@ timer = document.querySelector(
     ") > div.order-wrapper > div.order-title > div:nth-child(2)"
 );
 interval = null;
+heart=document.getElementsByClassName("fa-heart")
 
 document.addEventListener("DOMContentLoaded", function () {
   bar.style.animationDuration = time / 100 + "s";
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 10);
 
-  p_btn[0].onclick = function () {
+  play[0].onclick = function () {
     current_name = p_btn[0].className;
     if (current_name == "fas fa-pause btn") {
       p_btn[0].className = "fas fa-play btn";
@@ -87,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
   like = document.getElementsByClassName("leftwrapper");
 
   like[0].onclick(function () {
-      heart=document.getElementsByClassName("")
+    console.log(1)
   });
   /*
     console.log(p_btn)
