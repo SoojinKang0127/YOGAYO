@@ -5,10 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      <!-- 이 안에 일단 자기 이름 넣기... 헷갈리지 않게 -->
-    </title>
-    <!-- 아래 href에 자기 css파일 이름 제대로 넣고 적용 되나 확인하세요 -->
+    <title>YOGAYO | MY PAGE</title>
      <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/mypage.css">
     <script
@@ -28,7 +25,7 @@
         <div class="content_top">
           <div class="content_top_welcome">
             <div class="content_top_faceImg"></div>
-            <div class="content_top_welcomeTxt">My Records ${user.password}</div>
+            <div class="content_top_welcomeTxt">${user.name} My Records</div>
           </div>
           <div class="content_top_btn">
             <button class="content_top_btn_edit">정보 수정</button>
@@ -80,7 +77,6 @@
                 </ul>
                 <ul class="squares">
                   <!-- added via javascript -->
-                  <script src="./square.js"></script>
                 </ul>
               </div>
             </div>

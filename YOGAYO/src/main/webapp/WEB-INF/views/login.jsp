@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YOGAYO</title>
+    <title>YOGAYO | LOGIN</title>
 
  <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/home.css">
@@ -19,11 +19,12 @@
             <div class="box-div"></div>
           </div>
         </header>
-        <div class="login-form-wrapper" id="login-wrapper">
+        <div class="login-form-wrapper showing" id="login-wrapper">
           <div class="login-form">
             <span>로그인</span>
+            <div class="errMessage">${errMessage}</div>
             <div class="form-row">
-              <form action="/login" method="post">
+              <form action="login" method="post">
                 <input
                   type="text"
                   name="id"
@@ -46,18 +47,11 @@
           </div>
         </div>
 
-        <span class="text" id="text"
-          >요가를 할 때 몸과 마음에서는 어떤 일이 일어날까요?</span
-        >
-        <a href="login"><div class="start-btn" id="start-btn">
-          시작하기
-        </div></a>
       </div>
       <div class="background-cover"></div>
       <div class="background"></div>
     </main>
     <script>
-
     </script>
   </body>
 </html>

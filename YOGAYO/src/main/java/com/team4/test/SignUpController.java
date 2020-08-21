@@ -1,6 +1,7 @@
 package com.team4.test;
 
 import java.sql.Date;
+import java.util.List;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +24,7 @@ public class SignUpController {
 	
 	
 	UserServiceImpl service = new UserServiceImpl();
+	UserDAO dao = new UserDAOImpl();
 
 	@Autowired(required=true) 
 	private HttpServletRequest request;
@@ -31,6 +33,17 @@ public class SignUpController {
 	
 	@RequestMapping(value = "/sign-up", method = RequestMethod.GET)
 	public String signUp(Locale locale, Model model) {
+		
+		List<String> list = null;
+		
+		try {
+			
+			list = dao.selectAllId();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		model.addAttribute("idList", list);
 		
 		
 		return "sign-up";
@@ -45,7 +58,8 @@ public class SignUpController {
 			@RequestParam("gender")char gender) {
 
 		UserVo vo= new UserVo();
-
+		
+		
 		
 		vo.setId(id);
 		vo.setName(name);
@@ -59,7 +73,10 @@ public class SignUpController {
 			e.printStackTrace();
 		}
 		
-		return "main";
+		String errMessage = "가입을 축하합니다. 로그인을 해주세요!";
+		model.addAttribute("errMessage", errMessage);
+		
+		return "login";
 	}
 	
 }

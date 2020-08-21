@@ -4,9 +4,9 @@
 
 <mapper namespace="UserDao">
 
-	<select id="select" resultType="UserVo">
+	<select id="login" resultType="UserVo">
 		<!-- 테이블명 대소문자 구분 -->
-		SELECT * FROM USER WHERE ID=#{userId} AND PWD=#{password}
+		SELECT * FROM USER WHERE ID=#{id} AND PWD=#{pwd}
 	</select>
 
 
@@ -15,5 +15,10 @@
 		USER(ID,PWD,NAME,BDATE,GENDER)
 		VALUES(#{id},#{pwd},#{name},#{bDate},#{gender});
 	</insert>
-	
+
+
+	<select id="selectAllId" resultType="String">
+		SELECT ID FROM USER
+	</select>
+
 </mapper>

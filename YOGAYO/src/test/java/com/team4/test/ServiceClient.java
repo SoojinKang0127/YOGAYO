@@ -1,6 +1,7 @@
 package com.team4.test;
 
 import java.sql.Date;
+import java.util.List;
 
 import com.team4.dao.UserDAO;
 import com.team4.dao.UserDAOImpl;
@@ -26,24 +27,35 @@ public class ServiceClient {
 		
 		
 		UserDAO dao = new UserDAOImpl();
+//		
+//		UserVo vo = new UserVo();
+//		vo.setId("11");
+//		vo.setPwd("11");
+//		vo.setName("11");
+//		vo.setbDate(new Date(19910705));
+//		vo.setGender('F');
+//		
+//		
+//		
+//	
+//		
+//		try {
+//			dao.signUp(vo);
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
-		UserVo vo = new UserVo();
-		vo.setId("11");
-		vo.setPwd("11");
-		vo.setName("11");
-		vo.setbDate(new Date(19910705));
-		vo.setGender('F');
-		
-		
-		
-	
+		List<String> list = null;
 		
 		try {
-			dao.signUp(vo);
+			
+			list = dao.selectAllId();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		System.out.println(list.get(0));
 		
 		
 

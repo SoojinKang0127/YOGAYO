@@ -1,5 +1,7 @@
 package com.team4.dao;
 
+
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.team4.util.SqlSessionFactoryBean;
@@ -17,7 +19,7 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public UserVo login(UserVo vo) throws Exception {
 		
-		return mybatis.selectOne("UserDao.select", vo);
+		return mybatis.selectOne("UserDao.login", vo);
 	}
 
 	
@@ -26,6 +28,11 @@ public class UserDAOImpl implements UserDAO {
 		mybatis.insert("UserDao.signup", vo);
 		mybatis.commit();
 		
+	}
+
+	@Override
+	public java.util.List<String> selectAllId() throws Exception {
+		return mybatis.selectList("UserDao.selectAllId");
 	}
 
 }

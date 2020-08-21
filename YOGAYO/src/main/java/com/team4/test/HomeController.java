@@ -1,11 +1,10 @@
 package com.team4.test;
 
-import java.text.DateFormat;
-import java.util.Date;
+
 import java.util.Locale;
 
-import javax.inject.Inject;
-import javax.swing.text.View;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 
 
@@ -25,55 +23,45 @@ public class HomeController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		
 		return "home";
+	};
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String login(Locale locale, Model model) {
+		return "login";
 	};
 	
 	
 	
-	
-	@RequestMapping(value = "/main-x", method = RequestMethod.GET)
-	public String mainX(Model model) {
-		
-		
-		
-		
-		
-		
-		
-		return "main_X";
-	}
-	
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
-	public String main(Model model) {
+	public String main(Model model, HttpServletRequest req) {
 		
-		
-		String name = "전예슬";
-		
-		model.addAttribute("name", name);
-		
-		
+		HttpSession session = req.getSession();	
+		Object user = session.getAttribute("user");
+		if(user == null) {
+			String errMessage = "로그인 후 이용이 가능합니다.";
+			model.addAttribute("errMessage", errMessage);
+			return "login";
+		}
 		return "main";
 	}
 	
 	
 	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
 	public String couesePage(Model model) {
-		
-		
-		
 		return "course-page";
 	}
 	
 	@RequestMapping(value = "/course-detail", method = RequestMethod.GET)
 	public String coueseDetail(Model model) {
-		
-		
-		
+
 		return "course-detail";
 	}
 	
-	
+	@RequestMapping(value = "/my-page", method = RequestMethod.GET)
+	public String myPage(Model model) {
+
+		return "mypage";
+	}
 
 
 

@@ -1,5 +1,7 @@
 package com.team4.dao;
 
+import java.util.List;
+
 import com.team4.vo.UserVo;
 
 public class UserServiceImpl implements UserService {
@@ -17,7 +19,11 @@ public class UserServiceImpl implements UserService {
 		dao.signUp(vo);
 	}
 
-
+	@Override
+	public List<String> selectAllid() throws Exception {
+		return dao.selectAllId();
+		
+	}
 
 
 
