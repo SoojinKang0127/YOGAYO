@@ -111,7 +111,7 @@
 			</div>
 
 
-			<input type="submit" value="가입하기" disabled="disabled">
+			<input type="submit" value="가입하기" >
 			</form>
 
 		</section>

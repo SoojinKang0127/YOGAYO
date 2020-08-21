@@ -1,6 +1,16 @@
 package com.team4.vo;
 
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.bson.Document;
+
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+
+
 
 public class UserVo {
 
@@ -16,6 +26,24 @@ public class UserVo {
 	public UserVo() {
 	}
 	
+	public static void main(String[] args) {
+		MongoClient  mongo = new MongoClient("localhost",27017);
+		MongoDatabase test = mongo.getDatabase("test");
+        //3. 컬렉션 가져오기(Bson 형태)
+        MongoCollection<Document> collection = test.getCollection("user");
+        String b="안녕하세요!!";
+       List<String> a= new ArrayList<String>();
+       a.add("안");
+       a.add("녕");
+       a.add("하");
+       a.add("세");
+       a.add("요");
+        Document doc= new Document("_id",1771717).append("keyword", a  );
+        collection.insertOne(doc);
+        System.out.println("성공");
+		
+	
+	}
 	
 
 	public UserVo(int uNum, String id, String pwd, String name, Date bDate, char gender, String img, Date regDate) {
@@ -101,5 +129,7 @@ public class UserVo {
 	public void setRegDate(Date regDate) {
 		this.regDate = regDate;
 	}
+	
+	
 
 }
