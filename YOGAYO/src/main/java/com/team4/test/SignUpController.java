@@ -22,30 +22,18 @@ import com.team4.vo.UserVo;
 @Controller
 public class SignUpController {
 	
-	
 	UserServiceImpl service = new UserServiceImpl();
 	UserDAO dao = new UserDAOImpl();
-
-	@Autowired(required=true) 
-	private HttpServletRequest request;
-
-
 	
 	@RequestMapping(value = "/sign-up", method = RequestMethod.GET)
 	public String signUp(Locale locale, Model model) {
-		
 		List<String> list = null;
-		
 		try {
-			
 			list = dao.selectAllId();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 		model.addAttribute("idList", list);
-		
-		
 		return "sign-up";
 	}
 	
@@ -58,9 +46,7 @@ public class SignUpController {
 			@RequestParam("gender")char gender) {
 
 		UserVo vo= new UserVo();
-		
-		
-		
+	
 		vo.setId(id);
 		vo.setName(name);
 		vo.setPwd(pwd);
@@ -75,7 +61,6 @@ public class SignUpController {
 		
 		String errMessage = "가입을 축하합니다. 로그인을 해주세요!";
 		model.addAttribute("errMessage", errMessage);
-		
 		return "login";
 	}
 	

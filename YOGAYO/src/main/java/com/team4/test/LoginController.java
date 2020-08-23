@@ -16,7 +16,6 @@ import com.team4.vo.UserVo;
 @Controller
 public class LoginController {
 	
-	
 	UserServiceImpl service = new UserServiceImpl();
 	
 	@RequestMapping(value="/login", method = RequestMethod.POST)
