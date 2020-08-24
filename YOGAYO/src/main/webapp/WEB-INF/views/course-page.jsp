@@ -18,13 +18,13 @@
 	<header class="header">
 		<div class="status_bar">
 			<div class="logo_wrapper">
-				<a href="main_page.html"> <img src="${pageContext.request.contextPath}/resources/image/course/logo.jpg"
+				<a href="${pageContext.request.contextPath}/main"><img src="${pageContext.request.contextPath}/resources/image/course/logo.jpg"
 					alt="logo" />
 				</a>
 				<div class="box-div"></div>
 			</div>
 			<div class="profile">
-				<a href="my_page"><img
+				<a href="${pageContext.request.contextPath}/my-page"><img
 					src="${pageContext.request.contextPath}/resources/image/course/profile_face.png" class="profile_img" /></a>
 			</div>
 		</div>
@@ -67,7 +67,7 @@
 		<div class="course-courses_container">
 			<div class="up-on-scroll">
 				<div class="courses_first_line">
-					<a href="course_detail.html">
+					<a href="${pageContext.request.contextPath}/course-detail?crsNum=1">
 						<div class="course_container">
 							<img src="${pageContext.request.contextPath}/resources/image/course/course.jpg" alt="couser" />
 							<div class="course_star_rating">

@@ -5,6 +5,10 @@ import java.util.List;
 
 import com.team4.dao.UserDAO;
 import com.team4.dao.UserDAOImpl;
+import com.team4.dao.course.CourseDAO;
+import com.team4.dao.course.CourseService;
+import com.team4.dao.course.CourseServiceImpl;
+import com.team4.vo.CourseVo;
 import com.team4.vo.UserVo;
 
 //import com.team4.dao.Dao;
@@ -36,29 +40,57 @@ public class ServiceClient {
 //		vo.setGender('F');
 //		
 //		
-//		
-//	
-//		
 //		try {
 //			dao.signUp(vo);
 //		} catch (Exception e) {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
+		/*
+		 * List<String> list = null;
+		 * 
+		 * try {
+		 * 
+		 * list = dao.selectAllId(); } catch (Exception e) { e.printStackTrace(); }
+		 * 
+		 * System.out.println(list.get(0));
+		 */
 		
-		List<String> list = null;
+		CourseVo vo = new CourseVo();
+//		vo.setTitle("플라잉 요가");
+//		vo.setuNum(101);
+//		vo.setDscrt("다이어트요가");
+//		vo.setMaterial("요가매트");
+//		vo.setImgPath("C:\\IMAGES\\yoga.jpg");
+//		vo.setSeq1(1);
+//		vo.setSeq2(2);
+//		vo.setSeq3(3);
+//		vo.setSeq4(4);
+//		vo.setSeq5(5);
+//		vo.setSeq6(6);
+//		vo.setSeq7(7);
+//		vo.setSeq8(8);
+//		
+		CourseService service = new CourseServiceImpl();
+//		
+//		try {
+//			service.makeCourse(vo);
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
+		vo.setCrsNum(1);
 		
 		try {
-			
-			list = dao.selectAllId();
+			CourseVo list = service.selectOne(vo);
+			System.out.println(list.getTitle());
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		System.out.println(list.get(0));
 		
-		
-
 	}
 
 }
