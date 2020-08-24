@@ -25,7 +25,7 @@
         <div class="content_top">
           <div class="content_top_welcome">
             <div class="content_top_faceImg"></div>
-            <div class="content_top_welcomeTxt">${user.name} My Records</div>
+            <div class="content_top_welcomeTxt">${user.id} My Records</div>
           </div>
           <div class="content_top_btn">
             <button class="content_top_btn_edit">정보 수정</button>

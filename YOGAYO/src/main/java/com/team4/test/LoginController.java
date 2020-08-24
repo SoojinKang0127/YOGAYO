@@ -1,6 +1,8 @@
 package com.team4.test;
 
 
+import java.util.Locale;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -18,10 +20,18 @@ public class LoginController {
 	
 	UserServiceImpl service = new UserServiceImpl();
 	
+	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String login(Locale locale, Model model) {
+		
+		return "login";
+	};
+	
+	
 	@RequestMapping(value="/login", method = RequestMethod.POST)
 	public String login(UserVo vo, HttpServletRequest req, RedirectAttributes rttr, Model model ) throws Exception{
 			
-		HttpSession session = req.getSession();
+		HttpSession session = req.getSession();	
 		UserVo login = service.login(vo);
 		
 		if(login == null) {
@@ -33,6 +43,7 @@ public class LoginController {
 			model.addAttribute("errMessage", errMessage);
 			return "login";
 		}else {
+			
 			session.setAttribute("user", login);
 			System.out.println("로그인 됨");
 		}
@@ -45,8 +56,6 @@ public class LoginController {
 		session.invalidate();
 		return "redirect:/";
 	}
-	
-	
 	
 	
 

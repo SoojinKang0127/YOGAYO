@@ -25,17 +25,13 @@ public class HomeController {
 	public String home(Locale locale, Model model) {
 		return "home";
 	};
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String login(Locale locale, Model model) {
-		return "login";
-	};
-	
 	
 	
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public String main(Model model, HttpServletRequest req) {
 		
 		HttpSession session = req.getSession();	
+		
 		Object user = session.getAttribute("user");
 		if(user == null) {
 			String errMessage = "로그인 후 이용이 가능합니다.";
@@ -46,10 +42,16 @@ public class HomeController {
 	}
 	
 	
+	
 	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
 	public String couesePage(Model model) {
 		return "course-page";
 	}
+	
+	
+	
+	
+	
 	
 	@RequestMapping(value = "/course-detail", method = RequestMethod.GET)
 	public String coueseDetail(Model model) {
@@ -57,12 +59,26 @@ public class HomeController {
 		return "course-detail";
 	}
 	
+	
+	
+	
 	@RequestMapping(value = "/my-page", method = RequestMethod.GET)
 	public String myPage(Model model) {
 
 		return "mypage";
 	}
 
+	
+	@RequestMapping(value = "/pose", method = RequestMethod.GET)
+	public String pose(Model model) {
 
+		return "dictionary-detail";
+	}
+	
+
+	
+	
+	
+	
 
 }

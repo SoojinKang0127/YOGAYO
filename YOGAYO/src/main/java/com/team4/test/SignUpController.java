@@ -3,11 +3,6 @@ package com.team4.test;
 import java.sql.Date;
 import java.util.List;
 import java.util.Locale;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,6 +32,7 @@ public class SignUpController {
 		return "sign-up";
 	}
 	
+	
 	@RequestMapping(value = "/sign-up", method = RequestMethod.POST)
 	public String signUp1(Model model, 
 			@RequestParam("id")String id,
@@ -45,13 +41,14 @@ public class SignUpController {
 			@RequestParam("pwd")String pwd,
 			@RequestParam("gender")char gender) {
 
+		
 		UserVo vo= new UserVo();
-	
 		vo.setId(id);
 		vo.setName(name);
 		vo.setPwd(pwd);
 		vo.setbDate(date);
 		vo.setGender(gender);
+		
 			
 		try {
 			service.signUp(vo);

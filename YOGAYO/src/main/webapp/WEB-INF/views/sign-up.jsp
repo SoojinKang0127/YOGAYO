@@ -56,19 +56,23 @@
 					<input type="hidden" name="interest_21" id="interest_21"
 						value="false"> <input type="hidden" name="interest_22"
 						id="interest_22" value="false"> <input type="hidden"
-						name="interest_23" id="interest_23" value="false"> <label
-						for="">이메일</label> <input type="text" name="id" id="email"
-						placeholder="johndoe@example.com" /> <br /> <label for="">이름</label><input
-						type="text" name="name" id="name" placeholder="3자 이상" /><br /> <label
-						for="">생년월일</label><input type="date" name="bDate" id="birthDay"
-						placeholder="" /><br /> <label for="">성별</label><select
-						name="gender" id="gender">
+						name="interest_23" id="interest_23" value="false"> 
+						
+						
+						
+						<label for="">이메일</label>
+						<input type="text" name="id" id="email" placeholder="johndoe@example.com" /> <br /> 
+						
+						<label for="">이름</label>
+						<input type="text" name="name" id="name" placeholder="3자 이상" /><br /> 
+						
+						<label for="">생년월일</label> <input type="date" name="bDate" id="birthDay" placeholder="" /><br /> <label for="">성별</label>
+						<select name="gender" id="gender">
 						<option value="M">남성</option>
 						<option value="F">여성</option>
-					</select> <br /> <label for="">비밀번호</label><input type="password"
-						name="pwd" id="pwd1" placeholder="7자 이상" /><br /> <label for="">비밀번호
-						확인</label><input type="password" name="password2" id="pwd2"
-						placeholder="7자 이상" />
+					</select> <br /> 
+					<label for="">비밀번호</label><input type="password" name="pwd" id="pwd1" placeholder="7자 이상" /><br /> 
+					<label for="">비밀번호 확인</label><input type="password" name="password2" id="pwd2" placeholder="7자 이상" />
 					<div class="alert-pwd alert"></div>
 					<br />
 			</div>
