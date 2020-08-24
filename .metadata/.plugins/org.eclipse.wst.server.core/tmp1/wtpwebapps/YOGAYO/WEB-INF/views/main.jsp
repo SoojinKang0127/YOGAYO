@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YOGAYO_main_page_recommand</title>
+    <title>YOGAYO</title>
     <script
       src="https://kit.fontawesome.com/54919de5bd.js"
       crossorigin="anonymous"
@@ -30,9 +30,9 @@
         </div>
         <div class="main-profile">
           <div class="welcome_user">
-            안녕하세요. ${name}님
+            안녕하세요. ${user.name}님
           </div>
-          <a href="my_page"
+          <a href="my-page"
             ><img src="${pageContext.request.contextPath}/resources/image/course/profile_face.png" class="profile_img"
           /></a>
         </div>

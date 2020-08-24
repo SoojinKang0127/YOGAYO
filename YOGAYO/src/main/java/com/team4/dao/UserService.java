@@ -8,6 +8,9 @@ public interface UserService {
 	
 	public UserVo login(UserVo vo) throws Exception;
 	public void signUp(UserVo vo) throws Exception;
+	public void update(UserVo vo) throws Exception;
+
+	
 	public List<String> selectAllid() throws Exception;
 
 }

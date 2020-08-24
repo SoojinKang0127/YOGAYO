@@ -9,6 +9,7 @@ public interface UserDAO {
 	//로그인
 	public UserVo login(UserVo vo) throws Exception;
 	public void signUp(UserVo vo) throws Exception;
+	public void update(UserVo vo) throws Exception;
 	
 	
 	public List<String> selectAllId() throws Exception;

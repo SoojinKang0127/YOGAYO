@@ -32,6 +32,14 @@ public class UserDAOImpl implements UserDAO {
 		return mybatis.selectList("UserDao.selectAllId");
 	}
 
+
+	@Override
+	public void update(UserVo vo) throws Exception {
+		mybatis.update("UserDao.update", vo);
+		mybatis.commit();
+		
+	}
+
 }
 
 

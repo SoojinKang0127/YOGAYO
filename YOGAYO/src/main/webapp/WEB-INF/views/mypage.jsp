@@ -28,7 +28,7 @@
             <div class="content_top_welcomeTxt">${user.id} My Records</div>
           </div>
           <div class="content_top_btn">
-            <button class="content_top_btn_edit">정보 수정</button>
+            <a href="update"><button class="content_top_btn_edit">정보 수정</button></a>
             <button class="content_top_btn_addCrs">코스 추가</button>
           </div>
         </div>

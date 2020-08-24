@@ -25,6 +25,13 @@ public class UserServiceImpl implements UserService {
 		
 	}
 
+	@Override
+	public void update(UserVo vo) throws Exception {
+		
+		dao.update(vo);
+		
+	}
+
 
 
 }

@@ -29,6 +29,7 @@
 	<mappers>
 		
 		<mapper resource="mappings/login.xml" />
+		<mapper resource="mappings/update.xml"/>
 	</mappers>
 
 </configuration>
