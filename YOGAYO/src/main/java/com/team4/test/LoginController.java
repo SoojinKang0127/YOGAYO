@@ -23,7 +23,6 @@ public class LoginController {
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Locale locale, Model model) {
-		
 		return "login";
 	};
 	
@@ -38,7 +37,6 @@ public class LoginController {
 			session.setAttribute("user", null);
 			rttr.addFlashAttribute("mag", false);
 			System.out.println("로그인 정보 찾을 수 없음");
-			
 			String errMessage = "회원 정보를 찾을 수 없습니다.";
 			model.addAttribute("errMessage", errMessage);
 			return "login";
