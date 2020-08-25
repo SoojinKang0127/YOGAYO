@@ -27,24 +27,24 @@ public class JavaJson{
 		
 		
 		
-		for(int i=0;i<71;i++) {
-			JSONObject obj2=(JSONObject) obj.get(Integer.toString(i));
-			String title=(String) obj2.get("title");
-			String imgPath=(String)	obj2.get("image");
-			
-			PoseVo vo=new PoseVo();
-			vo.setpNum(i);
-			vo.setTitle(title);
-			vo.setImgPath(imgPath);
-			System.out.println(vo.toString());
-			try {
-				service.poseDefaultSet(vo);
-			} catch (Exception e) {
-				
-				e.printStackTrace();
-			}
-			
-		}
+//		for(int i=0;i<71;i++) {
+//			JSONObject obj2=(JSONObject) obj.get(Integer.toString(i));
+//			String title=(String) obj2.get("title");
+//			String imgPath=(String)	obj2.get("image");
+//			
+//			PoseVo vo=new PoseVo();
+//			vo.setpNum(i);
+//			vo.setTitle(title);
+//			vo.setImgPath(imgPath);
+//			System.out.println(vo.toString());
+//			try {
+//				service.poseDefaultSet(vo);
+//			} catch (Exception e) {
+//				
+//				e.printStackTrace();
+//			}
+//			
+//		}
 				
 		
 
