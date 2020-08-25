@@ -3,3 +3,7 @@ INDEX VERSION 1.131
 /YOGAYO/src/main/java
 /Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3748728972.index
 /YOGAYO/src/main/java
+/Users/paso/Documents/code/github/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3748728972.index
+/YOGAYO/src/main/java
+/Users/paso/Documents/code/github/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3572079652.index
+/YOGAYO/src/main/java

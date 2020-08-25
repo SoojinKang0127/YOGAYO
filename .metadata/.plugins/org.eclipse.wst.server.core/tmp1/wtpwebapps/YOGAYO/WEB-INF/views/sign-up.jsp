@@ -1,11 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>YOGAYO 회원가입</title>
+<title>YOGAYO | 회원가입</title>
 <script src="https://kit.fontawesome.com/ae58912594.js"
 	crossorigin="anonymous"></script>
 <script
@@ -17,7 +21,7 @@
 	<main>
 		<section id="step_1">
 			<header>
-				<a href="/test/"><div class="logo-wrapper">
+				<a href="/"><div class="logo-wrapper">
 						<span>YOGAYO</span>
 						<div class="box-div"></div>
 					</div> </a>
@@ -25,7 +29,7 @@
 			<span class="welcome">좋아요! 이제 간단한 두 단계만 거치면 YOGAYO와 함께 하실 수
 				있습니다.</span> <span class="step_1">1. 회원가입을 위한 정보를 입력해주세요.</span>
 			<div class="sign-up-form">
-				<form action="sign.html" method="GET">
+				<form action="sign-up" method="POST">
 					<input type="hidden" name="interest_1" id="interest_1"
 						value="false"> <input type="hidden" name="interest_2"
 						id="interest_2" value="false"> <input type="hidden"
@@ -54,19 +58,23 @@
 					<input type="hidden" name="interest_21" id="interest_21"
 						value="false"> <input type="hidden" name="interest_22"
 						id="interest_22" value="false"> <input type="hidden"
-						name="interest_23" id="interest_23" value="false"> <label
-						for="">이메일</label> <input type="text" name="userId" id="email"
-						placeholder="example@gmail.com" /> <br /> <label for="">이름</label><input
-						type="text" name="userName" id="name" placeholder="3자 이상" /><br />
-					<label for="">생년월일</label><input type="date" name="userBirthDay"
-						id="birthDay" placeholder="" /><br /> <label for="">성별</label><select
-						name="gender" id="gender">
-						<option value="male">남성</option>
-						<option value="female">여성</option>
-					</select> <br /> <label for="">비밀번호</label><input type="password"
-						name="password1" id="pwd1" placeholder="6자 이상" /><br /> <label
-						for="">비밀번호 확인</label><input type="password" name="password2"
-						id="pwd2" placeholder="6자 이상" />
+						name="interest_23" id="interest_23" value="false"> 
+						
+						
+						
+						<label for="">이메일</label>
+						<input type="text" name="id" id="email" placeholder="johndoe@example.com" /> <br /> 
+						
+						<label for="">이름</label>
+						<input type="text" name="name" id="name" placeholder="3자 이상" /><br /> 
+						
+						<label for="">생년월일</label> <input type="date" name="bDate" id="birthDay" placeholder="" /><br /> <label for="">성별</label>
+						<select name="gender" id="gender">
+						<option value="M">남성</option>
+						<option value="F">여성</option>
+					</select> <br /> 
+					<label for="">비밀번호</label><input type="password" name="pwd" id="pwd1" placeholder="7자 이상" /><br /> 
+					<label for="">비밀번호 확인</label><input type="password" name="password2" id="pwd2" placeholder="7자 이상" />
 					<div class="alert-pwd alert"></div>
 					<br />
 			</div>
@@ -103,11 +111,14 @@
 					class="interest_20 interest">관절염</span> <span
 					class="interest_21 interest">불면증</span> <span
 					class="interest_22 interest">친구와 같이 하는</span> <span
-					class="interest_23 interest">천식</span>
+					class="interest_23 interest" onclick="alert()">천식</span>
 			</div>
 
 
-			<input type="submit" value="가입하기">
+			<div id="signUpBtn">
+				<input type="submit" value="가입하기" disabled="disabled" id="submitBtn"
+					class="submitBtn">
+			</div>
 			</form>
 
 		</section>
@@ -117,8 +128,9 @@
 	<script language=JavaScript
 		src="${pageContext.request.contextPath}/resources/js/sign_up_interests.js"></script>
 	<script>
+		var signUpBtn = document.getElementById("signUpBtn");
+		var submitBtn = document.getElementById("submitBtn");
 		var emailCheck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-	
 
 		function emailVaildCheck() {
 			if (emailCheck.test($("#email").val()))
@@ -128,7 +140,7 @@
 		}
 
 		function nameVaildCheck() {
-			if ($("#name").val().length != 0 && $("#name").val().length > 2)
+			if ($("#name").val().length != 0 && $("#name").val().length > 1)
 				return true;
 			else
 				return false;
@@ -155,15 +167,21 @@
 
 		function goToStep2() {
 
-			if(emailVaildCheck() && birthdayVaildCheck() && password1VaildCheck() && password2VaildCheck()){
-				
-				$('.down-btn i').css({color : "green", "border" : "1px solid green"});
+			if (emailVaildCheck() && nameVaildCheck() && birthdayVaildCheck()
+					&& password1VaildCheck() && password2VaildCheck()) {
+				$('.down-btn i').css({
+					color : "green",
+					"border" : "1px solid green"
+				});
 				window.scrollTo({
 					top : 1080,
 					behavior : "smooth"
 				});
-			}else{
-				$('.down-btn i').css({color : "red", "border" : "1px solid red"});
+			} else {
+				$('.down-btn i').css({
+					color : "red",
+					"border" : "1px solid red"
+				});
 			}
 
 		}
@@ -174,6 +192,45 @@
 				behavior : "smooth"
 			});
 		}
+
+		function infoAllVaildCheck() {
+			if (emailVaildCheck() && nameVaildCheck() && birthdayVaildCheck()
+					&& password1VaildCheck() && password2VaildCheck()) {
+				return true;
+			} else {
+				return false;
+			}
+
+		}
+
+		document.addEventListener("mouseover", function() {
+			console.log(infoAllVaildCheck())
+			if (infoAllVaildCheck()) {
+				submitBtn.removeAttribute("disabled");
+				submitBtn.classList.remove("invaild");
+				submitBtn.classList.add("vaild");
+			} else {
+				submitBtn.classList.remove("vaild");
+				submitBtn.setAttribute("disabled", "disabled");
+			}
+		})
+	</script>
+	<script type="text/javascript">
+		var idList = new Array();
+
+		//idList = "${idList}";
+
+		<c:forEach items="${idList}" var="id">
+		idList.push("${id}");
+		</c:forEach>
+
+		
+		
+		//idList에 담아옴
+		alert(idList[0])
+		
+		
+		;
 	</script>
 </body>
 </html>

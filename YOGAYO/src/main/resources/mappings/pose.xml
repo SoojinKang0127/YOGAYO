@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="PoseDao">
+
+ 	<insert id="poseInsert" parameterType="PoseVo">
+		INSERT INTO POSE(PNUM, IMG_PATH,TITLE,AUDIO_PATH,TIME,DIFFICULTY)
+		VALUES(#{pNum},#{imgPath},#{title},#{audioPath},#{time},#{difficulty},#{regDate})
+	</insert>
+	
+	<insert id="poseDefaultSet" parameterType="PoseVo">
+		INSERT INTO POSE(PNUM,TITLE,IMG_PATH) VALUES(#{pNum}, #{title}, #{imgPath}) 
+	</insert>
+
+
+	<!-- 파라미터 select가 Dao.select에서 select가 되고, parameter type이 매개변수타입이 됨 근데 
+		생략 가능 -->
+
+	<select id="poseSelectOne" parameterType="PoseVo" resultType="PoseVo">
+		SELECT * FROM POSE WHERE PNUM=#{pNum}
+	</select>
+	
+	<select id="poseSelectAll" resultType="PoseVo">
+		SELECT * FROM POSE
+	</select>
+
+	<!-- <delete id="delete">
+		DELETE FROM test
+		WHERE no=#{no}
+	</delete>
+
+	<update id="update">
+		UPDATE test SET no=${no}, name=#{name} WHERE no=#{no}
+	</update>
+ -->
+
+
+</mapper>
