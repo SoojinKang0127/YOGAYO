@@ -61,19 +61,20 @@
         <div class="up-on-scroll">
           <div class="main-second_bg">
             <div class="main-recommand">
-            <a href="${pageContext.request.contextPath}/course-detail">
+            <a href="${pageContext.request.contextPath}/course-detail?crsNum=1">
               <img src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
               <div class="main-first_course">
                 <div class="main-course_title">
-                  당신의 허리를 위한 스트레칭
+                 ${allCourses.get(0).title}
                 </div>
                 <div class="main-first_course_explain">
-                  예전 같지 않은 허리 이대로 괜찮으신가요?
+                  ${allCourses.get(0).dscrt}
                 </div>
               </div>
               </a>
             </div>
             <div class="main-recommand">
+             <a href="${pageContext.request.contextPath}/course-detail">
               <img src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
               <div class="main-second_course">
                 <div class="main-course_title">
@@ -83,6 +84,7 @@
                   예전 같지 않은 허리 이대로 괜찮으신가요?
                 </div>
               </div>
+              </a>
             </div>
             <div class="main-recommand">
               <img src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />

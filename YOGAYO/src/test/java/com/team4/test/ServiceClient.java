@@ -80,11 +80,22 @@ public class ServiceClient {
 //			e.printStackTrace();
 //		}
 //		
-		vo.setCrsNum(1);
+		/*
+		 * vo.setCrsNum(1);
+		 * 
+		 * try { CourseVo list = service.selectOne(vo);
+		 * System.out.println(list.getTitle()); } catch (Exception e) { // TODO
+		 * Auto-generated catch block e.printStackTrace(); }
+		 */
 		
 		try {
-			CourseVo list = service.selectOne(vo);
-			System.out.println(list.getTitle());
+			List<CourseVo> courses = service.selectAll();
+			System.out.println(courses.get(0).getTitle());
+			System.out.println(courses.get(1).getTitle());
+			System.out.println(courses.get(2).getTitle());
+			System.out.println(courses.get(3).getTitle());
+			System.out.println(courses.get(4).getTitle());
+			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -10,3 +10,4 @@ public interface CourseDAO {
 	public CourseVo selectOne(CourseVo vo) throws Exception;
 
 }
+	
