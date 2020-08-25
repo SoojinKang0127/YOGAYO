@@ -320,7 +320,7 @@ When most people think of caching, they are technically referring to the &lt;em&
   &lt;li&gt;&lt;a href="https://twitter.com/cloudfoundry/status/1295762491503292417"&gt;How &lt;code&gt;cf-for-k8s&lt;/code&gt; Reinvents Cloud Foundry as a Native Kubernetes App Platform&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/08/07/loom-performance/"&gt;Interesting post on the performance of user-mode threads and coroutines&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring-gcp.saturnism.me/"&gt;Introduction - Spring Boot on GCP&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://m.facebook.com/355408241562041/videos/708422819736807"&gt;Microsoft&amp;rsquo;s Rory Preddy on Integrating ‚ÄúReactive‚Äù APIs to traditional relational databases&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://m.facebook.com/355408241562041/videos/708422819736807"&gt;Microsoft&amp;rsquo;s Rory Preddy on Integrating °∞Reactive°± APIs to traditional relational databases&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/08/18/foreign-api-jep/"&gt;New candidate JEP: 389: Foreign Linker API (Incubator)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/13/premiering-the-rsocket-revolution"&gt;Premiering: The RSocket Revolution&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/13/spring-batch-4-3-0-m2-is-out"&gt;Spring Batch 4.3.0-M2 is out!&lt;/a&gt;&lt;/li&gt;
@@ -428,7 +428,7 @@ Request timeout in milliseconds. (Long, default: 30000)&lt;br&gt;&lt;/p&gt;
 A SpEL expression against the incoming message to determine the URL to use. (Expression, default: &amp;lt;none&amp;gt;)&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;The SpEL expressions are applied to the incoming Message.  So fields like &lt;code&gt;body&lt;/code&gt; and &lt;code&gt;headers[name]&lt;/code&gt; can be used to evaluate message contents.  I say "&lt;em&gt;can be‚Ä¶&lt;/em&gt;" because sometimes it is more desirable to use static values. In this case, literal values must be enclosed in single quotes, for example:&lt;/p&gt;
+&lt;p&gt;The SpEL expressions are applied to the incoming Message.  So fields like &lt;code&gt;body&lt;/code&gt; and &lt;code&gt;headers[name]&lt;/code&gt; can be used to evaluate message contents.  I say "&lt;em&gt;can be°¶&lt;/em&gt;" because sometimes it is more desirable to use static values. In this case, literal values must be enclosed in single quotes, for example:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="listingblock"&gt;
 &lt;div class="content"&gt;
@@ -440,7 +440,7 @@ http.request.http-method-expression='POST'&lt;/pre&gt;
 &lt;div class="sect3"&gt;
 &lt;h4 id="example-1-using-the-http-request-function-in-a-standalone-application"&gt;&lt;a class="anchor" href="#example-1-using-the-http-request-function-in-a-standalone-application"&gt;&lt;/a&gt;Example 1: Using the HTTP Request Function in a Standalone Application&lt;/h4&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Let‚Äôs look at an example of how to use this function in a simple Spring Boot web application. In this example, we will use it in an app that retrieves an image from a URL and renders a thumbnail of the image. The complete code for this example is &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-web"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Let°Øs look at an example of how to use this function in a simple Spring Boot web application. In this example, we will use it in an app that retrieves an image from a URL and renders a thumbnail of the image. The complete code for this example is &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-web"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;We will build the application using Spring Boot and Spring Web Flux, along with our function to retrieve the image, and some code to generate a thumbnail.&lt;/p&gt;
@@ -454,7 +454,7 @@ http.request.http-method-expression='POST'&lt;/pre&gt;
 &lt;p&gt;org.springframework.cloud.fn:http-request-function - The HTTP request function transitively includes &lt;code&gt;spring-boot-starter-webflux&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;io.spring.example:image-thumbnail-processor - A simple Java function, included in this &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/blob/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-processor/src/main/java/io/spring/example/image/thumbnail/processor/ThumbnailProcessor.java"&gt;example&lt;/a&gt;, that creates thumbnails. We won‚Äôt get into the details here,  just note that it is a separate component which we will reuse in a later example.&lt;/p&gt;
+&lt;p&gt;io.spring.example:image-thumbnail-processor - A simple Java function, included in this &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/blob/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-processor/src/main/java/io/spring/example/image/thumbnail/processor/ThumbnailProcessor.java"&gt;example&lt;/a&gt;, that creates thumbnails. We won°Øt get into the details here,  just note that it is a separate component which we will reuse in a later example.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -537,7 +537,7 @@ public class ThumbnailStandaloneApplication {
 &lt;p&gt;where the &lt;code&gt;|&lt;/code&gt; represents I/O using a message broker.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Here, we are using a &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-stream-sample/image-thumbnail-sink"&gt;user-developed sink&lt;/a&gt; that uses the &lt;a href="https://github.com/spring-cloud/stream-applications/tree/master/functions/consumer/file-consumer"&gt;file-consumer&lt;/a&gt; function to write each thumbnail to a file.  The sink uses Spring Cloud Function‚Äôs declarative &lt;a href="https://spring.io/blog/2020/07/20/introducing-java-functions-for-spring-cloud-stream-applications-part-1"&gt;composition&lt;/a&gt; to compose the &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/blob/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-processor/src/main/java/io/spring/example/image/thumbnail/processor/ThumbnailProcessor.java"&gt;thumbnail-processor&lt;/a&gt;, from the previous example, with a header enricher, and finally the  standard &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/functions/consumer/file-consumer"&gt;fileConsumer&lt;/a&gt;.  So our composed function is defined by:&lt;/p&gt;
+&lt;p&gt;Here, we are using a &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-stream-sample/image-thumbnail-sink"&gt;user-developed sink&lt;/a&gt; that uses the &lt;a href="https://github.com/spring-cloud/stream-applications/tree/master/functions/consumer/file-consumer"&gt;file-consumer&lt;/a&gt; function to write each thumbnail to a file.  The sink uses Spring Cloud Function°Øs declarative &lt;a href="https://spring.io/blog/2020/07/20/introducing-java-functions-for-spring-cloud-stream-applications-part-1"&gt;composition&lt;/a&gt; to compose the &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/blob/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-processor/src/main/java/io/spring/example/image/thumbnail/processor/ThumbnailProcessor.java"&gt;thumbnail-processor&lt;/a&gt;, from the previous example, with a header enricher, and finally the  standard &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/functions/consumer/file-consumer"&gt;fileConsumer&lt;/a&gt;.  So our composed function is defined by:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="listingblock"&gt;
 &lt;div class="content"&gt;
@@ -591,11 +591,11 @@ public class ThumbnailStandaloneApplication {
     <link rel="alternate" href="https://spring.io/blog/2020/08/17/spring-initializr-0-9-1-available-now" />
     <category term="releases" label="Releases" />
     <author>
-      <name>St√©phane Nicoll</name>
+      <name>St?phane Nicoll</name>
     </author>
     <id>tag:spring.io,2020-08-17:4173</id>
     <updated>2020-08-17T15:36:07Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I‚Äôm happy to announce that Spring Initializr 0.9.1 has been released and is now available from repo.spring.io and Maven Central.&lt;/p&gt;
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I°Øm happy to announce that Spring Initializr 0.9.1 has been released and is now available from repo.spring.io and Maven Central.&lt;/p&gt;
 &lt;p&gt;This release includes &lt;a href="https://github.com/spring-io/initializr/releases/tag/v0.9.1"&gt;2 fixes&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/spring-io/initializr"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/initializr/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/initializr/docs/0.9.1/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-initializr"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-io/initializr"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
@@ -704,7 +704,7 @@ public class ThumbnailStandaloneApplication {
   &lt;li&gt;Maciej&amp;rsquo;s recent video on getting started with &lt;a href="https://www.youtube.com/watch?v=Ts2a-YdN6vI"&gt;Spring Cloud AWS&lt;/a&gt; on his excellent YouTube channel Spring Academy&lt;/li&gt;
   &lt;li&gt;Josh&amp;rsquo;s book &lt;a href="http://ReactiveSpring.io"&gt;&lt;em&gt;Reactive Spring&lt;/em&gt;&lt;/a&gt; has been updated with a new whopping 70+ page chapter on RSocket&lt;/li&gt;
   &lt;li&gt;Josh&amp;rsquo;s &lt;a href="https://www.youtube.com/watch?v=ipVfRdl5SP0&amp;t=1s"&gt;&lt;em&gt;The RSocket Revolution&lt;/em&gt;&lt;/a&gt; talk&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://github.com/spring-projects-experimental"&gt;Spring Retrosocket&lt;/a&gt; - a declarative client for RSocket √† la Feign or Retrofit&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://github.com/spring-projects-experimental"&gt;Spring Retrosocket&lt;/a&gt; - a declarative client for RSocket ? la Feign or Retrofit&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
@@ -1088,7 +1088,7 @@ If you want to read more about them, you can checkout the updated &lt;a href="ht
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/12/spring-data-2020-0-0-m2-released"&gt;Spring Data 2020.0.0.M2&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;An update to the way that &lt;code&gt;application.properties&lt;/code&gt; and &lt;code&gt;application.yml&lt;/code&gt; files are processed, including import support and support for volume mounted config trees.&lt;/li&gt;
   &lt;li&gt;A a significant overhaul of the Neo4j support.&lt;/li&gt;
-  &lt;li&gt;Numerous other &lt;a href="https://github.com/spring-projects/spring-boot/issues?utf8=‚úì&amp;q=label%3A%22type%3A+dependency-upgrade%22+milestone%3A2.4.0-M2"&gt;dependency upgrades&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Numerous other &lt;a href="https://github.com/spring-projects/spring-boot/issues?utf8=?&amp;q=label%3A%22type%3A+dependency-upgrade%22+milestone%3A2.4.0-M2"&gt;dependency upgrades&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For a complete list of changes and upgrade instructions, please see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.4.0-M2-Release-Notes"&gt;Spring Boot 2.4 Release Notes&lt;/a&gt; on the wiki and the &lt;a href="http://docs.spring.io/spring-boot/docs/2.4.0-M2/reference/html/"&gt;updated reference documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you&amp;rsquo;re interested in learning more about the changes to &lt;code&gt;application.properties&lt;/code&gt; and &lt;code&gt;application.yml&lt;/code&gt; processing, check out &lt;a href="https://spring.io/blog/2020/08/14/config-file-processing-in-spring-boot-2-4"&gt;this blog post&lt;/a&gt; on the subject.&lt;/p&gt;
@@ -1106,7 +1106,7 @@ If you want to read more about them, you can checkout the updated &lt;a href="ht
     <id>tag:spring.io,2020-08-11:4161</id>
     <updated>2020-08-14T00:28:52Z</updated>
     <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the community, I‚Äôm pleased to announce the release of
+&lt;p&gt;On behalf of the community, I°Øm pleased to announce the release of
 Spring Security 5.4.0-RC1! You can find the complete details in the &lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.4.0-RC1"&gt;release notes&lt;/a&gt; and the highlights below:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="sect1"&gt;
@@ -1235,7 +1235,7 @@ Spring Security 5.4.0-RC1! You can find the complete details in the &lt;a href="
     </author>
     <id>tag:spring.io,2020-08-13:4168</id>
     <updated>2020-08-13T16:16:27Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the Spring Batch team, I am pleased to announce that Spring Batch 4.3.0-M2 is now available from our &lt;a href="https://repo.spring.io/milestone/"&gt;milestone repository&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-s-new" class="anchor" name="what-s-new"&gt;&lt;/a&gt;What‚Äôs new?&lt;/h2&gt;
+    <content type="html">&lt;p&gt;On behalf of the Spring Batch team, I am pleased to announce that Spring Batch 4.3.0-M2 is now available from our &lt;a href="https://repo.spring.io/milestone/"&gt;milestone repository&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-s-new" class="anchor" name="what-s-new"&gt;&lt;/a&gt;What°Øs new?&lt;/h2&gt;
 &lt;p&gt;This release comes with a number of new features and enhancements that you can find in the &lt;a href="https://github.com/spring-projects/spring-batch/releases/tag/4.3.0-M2"&gt;release notes&lt;/a&gt;, but here are the major highlights:&lt;/p&gt;&lt;h4&gt;&lt;a href="#1-kafka-support-enhancements" class="anchor" name="1-kafka-support-enhancements"&gt;&lt;/a&gt;1. Kafka support enhancements&lt;/h4&gt;
 &lt;p&gt;By default, the &lt;code&gt;KafkaItemReader&lt;/code&gt; reads a topic from the beginning. When we initially introduced this reader in v4.2, it was not possible to configure it to read records from a custom offset. In this release, we added this feature. As a result of this addition, it is now possible to configure the reader to start from the offset stored in Kafka.&lt;/p&gt;&lt;h4&gt;&lt;a href="#2-micrometer-support-enhancements" class="anchor" name="2-micrometer-support-enhancements"&gt;&lt;/a&gt;2. Micrometer support enhancements&lt;/h4&gt;
 &lt;p&gt;Micrometer support has been introduced in v4.2 last year, and we got a lot of feedback since then. One of the requested features is the ability to know the currently active jobs. Spring Batch provides a metric called &lt;code&gt;spring.batch.job.active&lt;/code&gt; that gives the number of currently active jobs. However, until now, this metric did not let you know which specific jobs are currently active. In this release, we enriched the metric tags to make this possible.&lt;/p&gt;&lt;h4&gt;&lt;a href="#3-add-a-new-code-jobparametersincrementer-code-implementation" class="anchor" name="3-add-a-new-code-jobparametersincrementer-code-implementation"&gt;&lt;/a&gt;3. Add a new &lt;code&gt;JobParametersIncrementer&lt;/code&gt; implementation&lt;/h4&gt;
@@ -1368,7 +1368,7 @@ Artem&lt;/p&gt;
     </author>
     <id>tag:spring.io,2020-08-12:4164</id>
     <updated>2020-08-12T11:48:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the Spring Data team, I‚Äôm pleased to announce the availability of the third service release of the Spring Data Neumann release train. &lt;code&gt;Neumann SR3&lt;/code&gt; ships with &lt;a href="https://jira.spring.io/issues/?filter=17036"&gt;34 tickets fixed&lt;/a&gt;.&lt;/p&gt;
+    <content type="html">&lt;p&gt;On behalf of the Spring Data team, I°Øm pleased to announce the availability of the third service release of the Spring Data Neumann release train. &lt;code&gt;Neumann SR3&lt;/code&gt; ships with &lt;a href="https://jira.spring.io/issues/?filter=17036"&gt;34 tickets fixed&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This release ships with mostly bug fixes and dependency upgrades and will be picked up by Spring Boot 2.3.3 in the coming days.&lt;/p&gt;
 &lt;p&gt;Here are the detailed links to each individual artifact and the reference documentation:&lt;/p&gt;
 &lt;ul&gt;
@@ -1400,7 +1400,7 @@ Artem&lt;/p&gt;
     </author>
     <id>tag:spring.io,2020-08-12:4163</id>
     <updated>2020-08-12T11:45:08Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the Spring Data team I‚Äôm delighted to announce the second milestone of the &lt;code&gt;2020.0.0&lt;/code&gt; release train (codename &amp;ldquo;Ockham&amp;rdquo;). This release ships almost 120 tickets fixed! The most important new features are:&lt;/p&gt;
+    <content type="html">&lt;p&gt;On behalf of the Spring Data team I°Øm delighted to announce the second milestone of the &lt;code&gt;2020.0.0&lt;/code&gt; release train (codename &amp;ldquo;Ockham&amp;rdquo;). This release ships almost 120 tickets fixed! The most important new features are:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Support for reactive SpEL context extensions.&lt;/li&gt;
   &lt;li&gt;Support for reactive auditing in Cassandra, Elasticsearch, MongoDB, and R2DBC.&lt;/li&gt;
@@ -1450,7 +1450,7 @@ Artem&lt;/p&gt;
   &lt;li&gt;&lt;a href="https://yusuke.blog/2020/08/05/2747"&gt;Delivering compressed SVG format(SVGZ) using Spring Boot | yusuke.blog&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/VMwareTanzu/status/1292985082249084930"&gt;Did you hear? Tanzu Application Service 2.0 is now GA!&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/SpringData/status/1291440704766521345"&gt;Introduction into Spring Data Elasticsearch - wrote a small app using Spring Data Elasticsearch, spent yesterday evening to write up my impression from the perspective of a heavy Elasticsearch user.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://twitter.com/javinpaul/status/1293072333955936257?s=12"&gt;I‚Äôm honored to have books to which I contributed included not once, not twice, but three times in this list of interesting Java ecosystem books.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://twitter.com/javinpaul/status/1293072333955936257?s=12"&gt;I°Øm honored to have books to which I contributed included not once, not twice, but three times in this list of interesting Java ecosystem books.&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/08/07/loomperformance/"&gt;On the Performance of User-Mode Threads and Coroutines&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://blogs.vmware.com/vmworld/2020/08/registered-for-vmworld-2020-check-out-these-sessions-from-the-education-services-team.html"&gt;Registered for VMworld 2020? Check out these Sessions from the Education Services Team&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=3iugql6zc7u&amp;feature=share"&gt;Solace has a nice presentation up on YouTube: developing event-driven micro services using Spring Cloud Stream&lt;/a&gt;&lt;/li&gt;
@@ -1468,7 +1468,7 @@ Artem&lt;/p&gt;
     <link rel="alternate" href="https://spring.io/blog/2020/08/11/spring-framework-5-3-0-m2-available-now" />
     <category term="releases" label="Releases" />
     <author>
-      <name>St√©phane Nicoll</name>
+      <name>St?phane Nicoll</name>
     </author>
     <id>tag:spring.io,2020-08-11:4159</id>
     <updated>2020-08-11T09:07:37Z</updated>

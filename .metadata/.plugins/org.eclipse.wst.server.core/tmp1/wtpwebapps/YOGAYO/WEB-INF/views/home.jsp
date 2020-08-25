@@ -26,12 +26,12 @@
               <form action="/login" method="post">
                 <input
                   type="text"
-                  name="userId"
+                  name="id"
                   placeholder="이메일 (example@gmail.com)"
                 /><br />
                 <input
                   type="password"
-                  name="password"
+                  name="pwd"
                   placeholder="비밀번호"
                 /><br />
                 <input type="submit" value="로그인" />
@@ -49,23 +49,15 @@
         <span class="text" id="text"
           >요가를 할 때 몸과 마음에서는 어떤 일이 일어날까요?</span
         >
-        <div class="start-btn" id="start-btn" onclick="startBtn();">
+        <a href="login"><div class="start-btn" id="start-btn">
           시작하기
-        </div>
+        </div></a>
       </div>
       <div class="background-cover"></div>
       <div class="background"></div>
     </main>
     <script>
-      var text = document.getElementById("text");
-      var start_btn = document.getElementById("start-btn");
-      var login_form = document.getElementById("login-wrapper");
 
-      function startBtn() {
-        text.setAttribute("class", "hiding");
-        start_btn.setAttribute("class", "hiding");
-        login_form.setAttribute("class", "showing");
-      }
     </script>
   </body>
 </html>
