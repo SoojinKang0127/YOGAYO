@@ -32,7 +32,7 @@
           <div class="welcome_user">
             안녕하세요. ${user.name}님
           </div>
-          <a href="my-page"
+          <a href="myPage"
             ><img src="${pageContext.request.contextPath}/resources/image/course/profile_face.png" class="profile_img"
           /></a>
         </div>

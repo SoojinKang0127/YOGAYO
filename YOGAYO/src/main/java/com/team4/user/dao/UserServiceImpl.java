@@ -1,7 +1,8 @@
-package com.team4.dao;
+package com.team4.user.dao;
 
 import java.util.List;
 
+import com.team4.vo.FeedVo;
 import com.team4.vo.UserVo;
 
 public class UserServiceImpl implements UserService {
@@ -31,6 +32,16 @@ public class UserServiceImpl implements UserService {
 		dao.update(vo);
 		
 	}
+
+	@Override
+	public int myPage() throws Exception {
+		
+		return dao.myPage();
+	}
+
+
+	
+	
 
 
 

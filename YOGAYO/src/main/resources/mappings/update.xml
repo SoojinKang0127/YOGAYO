@@ -5,7 +5,7 @@
 <mapper namespace="UserDao">
 
 	<update id="update" parameterType="UserVo">
-		UPDATE USER SET 
+		UPDATE USER SET
 		PWD=#{pwd},
 		NAME=#{name},
 		BDATE=#{bDate},

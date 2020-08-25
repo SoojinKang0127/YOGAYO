@@ -55,25 +55,6 @@ public class HomeController {
 
 		return "course-detail";
 	}
-	
-	
-	
-	
-	@RequestMapping(value = "/my-page", method = RequestMethod.GET)
-	public String myPage(Model model) {
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		return "mypage";
-	}
 
 	
 	@RequestMapping(value = "/pose", method = RequestMethod.GET)

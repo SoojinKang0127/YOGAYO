@@ -27,9 +27,9 @@
 
 	<!-- Sql Mapper 설정 : 여러개 가능 -->
 	<mappers>
-		
 		<mapper resource="mappings/login.xml" />
 		<mapper resource="mappings/update.xml"/>
+		<mapper resource="mappings/myPage.xml"/>
 	</mappers>
 
 </configuration>
