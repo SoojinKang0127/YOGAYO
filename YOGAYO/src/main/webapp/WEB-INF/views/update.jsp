@@ -59,6 +59,7 @@
 		<script type="text/javascript">
 		
 		var gender = "${user.gender}"
+		
 		var male = document.getElementById("male");
 		var female = document.getElementById("female");
 		

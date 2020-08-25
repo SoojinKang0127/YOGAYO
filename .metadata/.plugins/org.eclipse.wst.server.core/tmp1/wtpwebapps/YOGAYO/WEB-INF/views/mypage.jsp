@@ -25,18 +25,18 @@
         <div class="content_top">
           <div class="content_top_welcome">
             <div class="content_top_faceImg"></div>
-            <div class="content_top_welcomeTxt">${user.id} My Records</div>
+            <div class="content_top_welcomeTxt">${user.id} 님의 기록</div>
           </div>
           <div class="content_top_btn">
-            <a href="update" class="updateBtn"><button class="content_top_btn_edit">정보 수정</button></a>
+            <button class="content_top_btn_edit" onclick="location.href='update'">정보 수정</button>
             <button class="content_top_btn_addCrs">코스 추가</button>
           </div>
         </div>
         <div class="content_front">
           <div class="front_first">
-            <div class="front_first_title">총 감량 몸무게</div>
+            <div class="front_first_title">현재 몸무게</div>
             <div class="front_first_value">
-              <div class="first_value1">30.5kg</div>
+              <div class="first_value1">${feed.weight }</div>
               <div class="first_value2">+5.5kg</div>
             </div>
           </div>

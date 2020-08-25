@@ -22,12 +22,14 @@ public class SignUpController {
 	
 	@RequestMapping(value = "/sign-up", method = RequestMethod.GET)
 	public String signUp(Locale locale, Model model) {
+		
 		List<String> list = null;
 		try {
 			list = dao.selectAllId();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		model.addAttribute("idList", list);
 		return "sign-up";
 	}

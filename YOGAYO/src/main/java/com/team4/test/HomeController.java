@@ -61,6 +61,16 @@ public class HomeController {
 	
 	@RequestMapping(value = "/my-page", method = RequestMethod.GET)
 	public String myPage(Model model) {
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 
 		return "mypage";
 	}

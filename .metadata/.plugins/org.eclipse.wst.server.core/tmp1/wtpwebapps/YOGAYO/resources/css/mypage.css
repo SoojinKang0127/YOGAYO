@@ -86,7 +86,7 @@ footer {
   text-align: center;
 }
 
-.content > .content_top > .content_top_btn > .updateBtn > .content_top_btn_edit {
+.content_top_btn_edit {
   width: 150px;
   height: 50px;
   margin-right: 50px;
