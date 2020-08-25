@@ -128,8 +128,25 @@ $(function () {
       })
 
   $('ul,li').disableSelection();
+  
+var request = new XMLHttpRequest();
 
+$('.course_search > .textbox').click(()=>{
+var arr=$('.course_search > .textbox')
+var box=arr[0]
+console.log(box.value)
+	request.open("Post", "./poseSearch?pose="+ encodeURIComponent(box.value),true);
+	request.onreadystatechange=after_ajax;
+	request.send(null);
+})
 
+function after_ajax(){
+ if(request.readyState ==4 && request.status==200){
+ 	var list= eval('('+request.responseText+')')
+ 	console.log(list);
+ 	//받아온 데이터를 view에 알맞게 가공하여 붙이는 곳
+ }
+}
 
 
 });

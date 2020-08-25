@@ -1,12 +1,14 @@
 package com.team4.test;
 
 
+import java.io.IOException;
 import java.sql.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -51,6 +53,10 @@ public class PlaylistController {
 		
 		
 		
+	
+		
+		
+		
 		
 //		try {
 //			list = service.poseSelectAll();
@@ -77,6 +83,24 @@ public class PlaylistController {
 
 		
 		return "course_playlist";
+	}
+	
+	@RequestMapping(value = "/poseSearch", method = RequestMethod.POST)
+	public void playListAJAX(@RequestParam("pose")String pose,HttpServletResponse res) {
+		//pose로 db를 셀렉해오는 dao를 만들어서 그 값들을 json형태로 바꾼다음에 res통해 view로 전달
+		
+		
+		
+		
+		
+		
+		String jsonLike="{\"taegyum\":[1,2,3],\"jinseok\":[2,3,4]}";
+		try {
+			res.getWriter().write(jsonLike);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	
