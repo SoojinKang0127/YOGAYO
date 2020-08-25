@@ -3232,3 +3232,9 @@ java.lang.IllegalArgumentException: Index out of bounds
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-24 20:08:20.238
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-25 09:22:15.467
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-25 09:22:15.471
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!

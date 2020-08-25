@@ -9,7 +9,6 @@ INDEX VERSION 1.131+/Users/minjae/Documents/GitHub/YOGAYO/.metadata/.plugins/org
 1542513598.index
 538477657.index
 3859171801.index
-275976719.index
 1662266553.index
 1574316073.index
 2143329161.index

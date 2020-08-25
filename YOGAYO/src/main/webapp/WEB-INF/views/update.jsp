@@ -55,7 +55,7 @@
 		</section>
 	</main>
 	<script language=JavaScript
-		src="update_valid_check.js"></script>
+		src="${pageContext.request.contextPath}/resources/js/update_valid_check.js"></script>
 		<script type="text/javascript">
 		
 		var gender = "${user.gender}"
