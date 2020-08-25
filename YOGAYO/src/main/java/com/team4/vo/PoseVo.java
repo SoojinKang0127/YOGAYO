@@ -4,9 +4,9 @@ import java.sql.Date;
 
 public class PoseVo {
 	int  pNum;
-	String imgPath;
+	String img_Path;
 	String title;
-	String audioPath;
+	String audio_Path;
 	int time;
 	int difficulty;
 	Date regDate;
@@ -17,9 +17,9 @@ public class PoseVo {
 
 	public PoseVo(int pNum, String imgPath, String title, String audioPath, int time, int difficulty, Date regDate) {
 		this.pNum = pNum;
-		this.imgPath = imgPath;
+		this.img_Path = imgPath;
 		this.title = title;
-		this.audioPath = audioPath;
+		this.audio_Path = audioPath;
 		this.time = time;
 		this.difficulty = difficulty;
 		this.regDate = regDate;
@@ -37,12 +37,12 @@ public class PoseVo {
 
 
 	public String getImgPath() {
-		return imgPath;
+		return img_Path;
 	}
 
 
 	public void setImgPath(String imgPath) {
-		this.imgPath = imgPath;
+		this.img_Path = imgPath;
 	}
 
 
@@ -57,12 +57,12 @@ public class PoseVo {
 
 
 	public String getAudioPath() {
-		return audioPath;
+		return audio_Path;
 	}
 
 
 	public void setAudioPath(String audioPath) {
-		this.audioPath = audioPath;
+		this.audio_Path = audioPath;
 	}
 
 
@@ -98,7 +98,7 @@ public class PoseVo {
 
 	@Override
 	public String toString() {
-		return "PoseVo [pNum=" + pNum + ", imgPath=" + imgPath + ", title=" + title + ", audioPath=" + audioPath
+		return "PoseVo [pNum=" + pNum + ", imgPath=" + img_Path + ", title=" + title + ", audioPath=" + audio_Path
 				+ ", time=" + time + ", difficulty=" + difficulty + ", regDate=" + regDate + "]";
 	}
 

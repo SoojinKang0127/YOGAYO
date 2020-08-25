@@ -6,11 +6,11 @@
 
  	<insert id="poseInsert" parameterType="PoseVo">
 		INSERT INTO POSE(PNUM, IMG_PATH,TITLE,AUDIO_PATH,TIME,DIFFICULTY)
-		VALUES(#{pNum},#{imgPath},#{title},#{audioPath},#{time},#{difficulty},#{regDate})
+		VALUES(#{pNum},#{img_Path},#{title},#{audio_Path},#{time},#{difficulty},#{regDate})
 	</insert>
 	
 	<insert id="poseDefaultSet" parameterType="PoseVo">
-		INSERT INTO POSE(PNUM,TITLE,IMG_PATH) VALUES(#{pNum}, #{title}, #{imgPath}) 
+		INSERT INTO POSE(PNUM,TITLE,IMG_PATH) VALUES(#{pNum}, #{title}, #{img_Path}) 
 	</insert>
 
 
