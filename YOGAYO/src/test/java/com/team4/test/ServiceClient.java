@@ -5,6 +5,8 @@ import java.util.List;
 
 import com.team4.dao.UserDAO;
 import com.team4.dao.UserDAOImpl;
+import com.team4.dao.pose.PoseServiceImpl;
+import com.team4.vo.PoseVo;
 import com.team4.vo.UserVo;
 
 //import com.team4.dao.Dao;
@@ -46,16 +48,28 @@ public class ServiceClient {
 //			e.printStackTrace();
 //		}
 		
-		List<String> list = null;
+//		List<String> list = null;
+//		
+//		try {
+//			
+//			list = dao.selectAllId();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		
+//		System.out.println(list.get(0));
+		
+		PoseVo vo = new PoseVo();
+		PoseServiceImpl service = new PoseServiceImpl();
+		vo.setpNum(3);
 		
 		try {
-			
-			list = dao.selectAllId();
+			PoseVo list = service.poseSelect(vo);
+			System.out.println(list.getTitle());
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		System.out.println(list.get(0));
 		
 		
 
