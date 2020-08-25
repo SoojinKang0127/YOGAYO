@@ -86,7 +86,7 @@ footer {
   text-align: center;
 }
 
-.content > .content_top > .content_top_btn > .content_top_btn_edit {
+.content > .content_top > .content_top_btn > .updateBtn > .content_top_btn_edit {
   width: 150px;
   height: 50px;
   margin-right: 50px;
@@ -100,7 +100,7 @@ footer {
   border-radius: 10px;
 }
 
-.content > .content_top > .content_top_btn > .content_top_btn_edit:hover {
+.content > .content_top > .content_top_btn > .updateBtn > .content_top_btn_edit:hover {
   width: 150px;
   height: 50px;
   margin-right: 50px;
