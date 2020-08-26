@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.team4.vo.PlaylistVo"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="com.team4.dao.pose.PoseServiceImpl"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.team4.vo.PoseVo"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="com.team4.test.PlaylistController"/>
+<fullyQualifiedTypeName name="com.team4.dao.pose.PoseDAO"/>
+<fullyQualifiedTypeName name="com.team4.dao.pose.PoseDAOImpl"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+</qualifiedTypeNameHistroy>
