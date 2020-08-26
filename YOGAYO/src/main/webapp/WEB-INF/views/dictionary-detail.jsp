@@ -25,7 +25,7 @@
 		<div class="yoga-title-box">
 			<div class="yoga-title-box-section">
 				<div class="yoga-title">
-					<h2>This is Pose1 : 산자세</h2>
+					<h2>This is Pose1 : ${pose.title}</h2>
 				</div>
 			</div>
 		</div>

@@ -5336,3 +5336,171 @@ Binding(CTRL+D,
 
 !ENTRY org.eclipse.wst.html.ui 1 1 2020-08-26 09:28:25.270
 !MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2020-08-26 12:45:41.618
+!MESSAGE source not specified
+!STACK 0
+java.lang.IllegalStateException: source not specified
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:644)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.SourceIndexer.indexDocument(SourceIndexer.java:93)
+	at org.eclipse.wst.jsdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:79)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:325)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager$1.execute(IndexManager.java:728)
+	at org.eclipse.wst.jsdt.internal.core.search.processing.JobManager.run(JobManager.java:393)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2020-08-26 12:45:41.691
+!MESSAGE source not specified
+!STACK 0
+java.lang.IllegalStateException: source not specified
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:644)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.SourceIndexer.indexDocument(SourceIndexer.java:93)
+	at org.eclipse.wst.jsdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:79)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:325)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager$1.execute(IndexManager.java:728)
+	at org.eclipse.wst.jsdt.internal.core.search.processing.JobManager.run(JobManager.java:393)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2020-08-26 12:45:41.749
+!MESSAGE source not specified
+!STACK 0
+java.lang.IllegalStateException: source not specified
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:644)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.SourceIndexer.indexDocument(SourceIndexer.java:93)
+	at org.eclipse.wst.jsdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:79)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:325)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager$1.execute(IndexManager.java:728)
+	at org.eclipse.wst.jsdt.internal.core.search.processing.JobManager.run(JobManager.java:393)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2020-08-26 12:45:41.821
+!MESSAGE source not specified
+!STACK 0
+java.lang.IllegalStateException: source not specified
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:644)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.SourceIndexer.indexDocument(SourceIndexer.java:93)
+	at org.eclipse.wst.jsdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:79)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:325)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager$1.execute(IndexManager.java:728)
+	at org.eclipse.wst.jsdt.internal.core.search.processing.JobManager.run(JobManager.java:393)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2020-08-26 12:45:41.877
+!MESSAGE source not specified
+!STACK 0
+java.lang.IllegalStateException: source not specified
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:644)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.SourceIndexer.indexDocument(SourceIndexer.java:93)
+	at org.eclipse.wst.jsdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:79)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:325)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager$1.execute(IndexManager.java:728)
+	at org.eclipse.wst.jsdt.internal.core.search.processing.JobManager.run(JobManager.java:393)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2020-08-26 12:45:41.937
+!MESSAGE source not specified
+!STACK 0
+java.lang.IllegalStateException: source not specified
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:644)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.SourceIndexer.indexDocument(SourceIndexer.java:93)
+	at org.eclipse.wst.jsdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:79)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:325)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager$1.execute(IndexManager.java:728)
+	at org.eclipse.wst.jsdt.internal.core.search.processing.JobManager.run(JobManager.java:393)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2020-08-26 12:45:42.010
+!MESSAGE source not specified
+!STACK 0
+java.lang.IllegalStateException: source not specified
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:644)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.SourceIndexer.indexDocument(SourceIndexer.java:93)
+	at org.eclipse.wst.jsdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:79)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:325)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager$1.execute(IndexManager.java:728)
+	at org.eclipse.wst.jsdt.internal.core.search.processing.JobManager.run(JobManager.java:393)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2020-08-26 12:45:42.083
+!MESSAGE source not specified
+!STACK 0
+java.lang.IllegalStateException: source not specified
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:644)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.SourceIndexer.indexDocument(SourceIndexer.java:93)
+	at org.eclipse.wst.jsdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:79)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:325)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager$1.execute(IndexManager.java:728)
+	at org.eclipse.wst.jsdt.internal.core.search.processing.JobManager.run(JobManager.java:393)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2020-08-26 12:45:42.141
+!MESSAGE source not specified
+!STACK 0
+java.lang.IllegalStateException: source not specified
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:644)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.SourceIndexer.indexDocument(SourceIndexer.java:93)
+	at org.eclipse.wst.jsdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:79)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:325)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager$1.execute(IndexManager.java:728)
+	at org.eclipse.wst.jsdt.internal.core.search.processing.JobManager.run(JobManager.java:393)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2020-08-26 12:45:42.198
+!MESSAGE source not specified
+!STACK 0
+java.lang.IllegalStateException: source not specified
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:644)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.SourceIndexer.indexDocument(SourceIndexer.java:93)
+	at org.eclipse.wst.jsdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:79)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:325)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager$1.execute(IndexManager.java:728)
+	at org.eclipse.wst.jsdt.internal.core.search.processing.JobManager.run(JobManager.java:393)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.wst.jsdt.core 4 4 2020-08-26 12:45:42.254
+!MESSAGE source not specified
+!STACK 0
+java.lang.IllegalStateException: source not specified
+	at org.eclipse.wst.jsdt.core.dom.ASTParser.createAST(ASTParser.java:644)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.SourceIndexer.indexDocument(SourceIndexer.java:93)
+	at org.eclipse.wst.jsdt.internal.core.search.JavaSearchParticipant.indexDocument(JavaSearchParticipant.java:79)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager.indexDocument(IndexManager.java:325)
+	at org.eclipse.wst.jsdt.internal.core.search.indexing.IndexManager$1.execute(IndexManager.java:728)
+	at org.eclipse.wst.jsdt.internal.core.search.processing.JobManager.run(JobManager.java:393)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-08-26 12:45:50.537
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-08-26 12:45:50.544
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-08-26 12:45:50.551
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-08-26 13:15:23.542
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-08-26 13:15:23.547
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-08-26 13:15:23.552
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-08-26 14:04:29.435
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-08-26 14:04:29.440
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-08-26 14:04:29.446
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-08-26 15:25:22.087
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-08-26 15:25:22.093
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-08-26 15:25:22.098
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT

@@ -24,21 +24,13 @@
 &lt;p&gt;Alright my friends, let&amp;rsquo;s get into it. We&amp;rsquo;ve got a ton of stuff to go through so onward! &lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/liangkylie/status/1296682854194327552?s=12"&gt;Azure Spring Cloud now supports autoscale!&lt;/a&gt;&lt;/li&gt;
-<<<<<<< HEAD
-  &lt;li&gt;&lt;a href="https://techcommunity.microsoft.com/t5/spring-on-azure/azure-spring-integrations-august-update/ba-p/1595105"&gt;Azure Spring Integrations â€“ August update - Microsoft Tech Community - 1595105&lt;/a&gt;&lt;/li&gt;
-=======
   &lt;li&gt;&lt;a href="https://techcommunity.microsoft.com/t5/spring-on-azure/azure-spring-integrations-august-update/ba-p/1595105"&gt;Azure Spring Integrations ? August update - Microsoft Tech Community - 1595105&lt;/a&gt;&lt;/li&gt;
->>>>>>> master
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/21/bootiful-podcast-google-cloud-s-elena-felder-on-spring-cloud-gcp-reactor-and-more"&gt;Bootiful Podcast: Google Cloud&amp;rsquo;s Elena Felder on Spring Cloud GCP, Reactor, and More&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://www.youtube.com/watch?feature=youtu.be&amp;v=PR6Gw4Ca-sE&amp;app=desktop"&gt;Build a Secure CRUD Application with React, Spring Boot, and Kotlin - YouTube&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/25/case-study-reading-from-a-file-and-writing-to-mongodb"&gt;Case Study: Reading from a file and writing to MongoDB&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/21/get-the-very-first-bits-of-spring-authorization-server-0-0-1"&gt;Get the very first bits of Spring Authorization Server 0.0.1 !&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/08/20/jep338-proposed-to-target-jdk16/"&gt;JEP proposed to target JDK 16: 338: Vector API (Incubator)&lt;/a&gt;&lt;/li&gt;
-<<<<<<< HEAD
-  &lt;li&gt;&lt;a href="https://blog.jetbrains.com/kotlin/2020/08/kotlin-1-4-released-with-a-focus-on-quality-and-performance/"&gt;Kotlin 1.4 Released with a Focus on Quality and Performance â€“ Kotlin Blog | JetBrains&lt;/a&gt;&lt;/li&gt;
-=======
   &lt;li&gt;&lt;a href="https://blog.jetbrains.com/kotlin/2020/08/kotlin-1-4-released-with-a-focus-on-quality-and-performance/"&gt;Kotlin 1.4 Released with a Focus on Quality and Performance ? Kotlin Blog | JetBrains&lt;/a&gt;&lt;/li&gt;
->>>>>>> master
   &lt;li&gt;&lt;a href="https://jax.de/spring-boot-cheat-sheet/"&gt;Spring Boot Cheat Sheet | W-JAX |&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/22/spring-boot-for-apache-geode-vmware-gemfire-1-4-0-m2-and-1-3-3-release-available"&gt;Spring Boot for Apache Geode &amp;amp; VMware GemFire 1.4.0-M2 and 1.3.3.RELEASE Available&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/spencerbgibb/status/1296904539300388873?s=12"&gt;The RSocket routing broker roadmap is now available&lt;/a&gt;&lt;/li&gt;
@@ -92,11 +84,7 @@
 &lt;h2 id="file-reading-and-processing-use-cases"&gt;&lt;a class="anchor" href="#file-reading-and-processing-use-cases"&gt;&lt;/a&gt;File reading and processing use cases&lt;/h2&gt;
 &lt;div class="sectionbody"&gt;
 &lt;div class="paragraph"&gt;
-<<<<<<< HEAD
-&lt;p&gt;File ingestion and reading data from those files is a classic enterprise use case. Many businesses have been relying on varying levels of file facilities for many decades to carry out mission-critical systems. Terabytes of data travel through the interwebs and enterprise intranets as files. For example, imagine a banking data center where it receives data from all its branches, ATMs, and POS transactions as files every second which then needs to be processed and placed into other systems. This is just one domain, but there are hundreds of thousands of examples out there in which file processing is on the critical path of many businesses. There are a lot of legacy systems in which many custom applications were written each employing its own ways of handling these use cases. Spring Integration has been providing &lt;a href="https://docs.spring.io/spring-integration/reference/html/file.html"&gt;file support&lt;/a&gt; as channel adapters for many years. These components can be realized as functions and in the case of reading from files, we can provide a generic &lt;code&gt;Supplier&lt;/code&gt; function that is reusable and injected in end-user applications. In the following sections, we will see more details about this functional abstraction and itâ€™s various usage scenarios.&lt;/p&gt;
-=======
 &lt;p&gt;File ingestion and reading data from those files is a classic enterprise use case. Many businesses have been relying on varying levels of file facilities for many decades to carry out mission-critical systems. Terabytes of data travel through the interwebs and enterprise intranets as files. For example, imagine a banking data center where it receives data from all its branches, ATMs, and POS transactions as files every second which then needs to be processed and placed into other systems. This is just one domain, but there are hundreds of thousands of examples out there in which file processing is on the critical path of many businesses. There are a lot of legacy systems in which many custom applications were written each employing its own ways of handling these use cases. Spring Integration has been providing &lt;a href="https://docs.spring.io/spring-integration/reference/html/file.html"&gt;file support&lt;/a&gt; as channel adapters for many years. These components can be realized as functions and in the case of reading from files, we can provide a generic &lt;code&gt;Supplier&lt;/code&gt; function that is reusable and injected in end-user applications. In the following sections, we will see more details about this functional abstraction and it¡¯s various usage scenarios.&lt;/p&gt;
->>>>>>> master
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -149,22 +137,14 @@ public void consumeDataAndSendEmail() {
 &lt;h2 id="running-a-standalone-file-source-that-uses-the-file-supplier"&gt;&lt;a class="anchor" href="#running-a-standalone-file-source-that-uses-the-file-supplier"&gt;&lt;/a&gt;Running a standalone file source that uses the file supplier&lt;/h2&gt;
 &lt;div class="sectionbody"&gt;
 &lt;div class="paragraph"&gt;
-<<<<<<< HEAD
-&lt;p&gt;File supplier becomes more powerful when it is combined with Spring Cloud Stream to make it a &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/applications/source/file-source/README.adoc"&gt;file source&lt;/a&gt;. As we have seen in the earlier blogs, this supplier is already prepackaged with both &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/file-source-kafka/3.0.0-SNAPSHOT/"&gt;Kafka&lt;/a&gt; and &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/file-source-rabbit/3.0.0-SNAPSHOT/"&gt;RabbitMQ&lt;/a&gt; binders in Spring Cloud Stream to make them uber jars which are runnable as Spring Boot applications. Letâ€™s see how we can take this uber jar and run it as standalone.&lt;/p&gt;
-=======
 &lt;p&gt;File supplier becomes more powerful when it is combined with Spring Cloud Stream to make it a &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/applications/source/file-source/README.adoc"&gt;file source&lt;/a&gt;. As we have seen in the earlier blogs, this supplier is already prepackaged with both &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/file-source-kafka/3.0.0-SNAPSHOT/"&gt;Kafka&lt;/a&gt; and &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/file-source-rabbit/3.0.0-SNAPSHOT/"&gt;RabbitMQ&lt;/a&gt; binders in Spring Cloud Stream to make them uber jars which are runnable as Spring Boot applications. Let¡¯s see how we can take this uber jar and run it as standalone.&lt;/p&gt;
->>>>>>> master
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;As a first step, go ahead and grab this file source with the Apache Kafa variant.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="listingblock"&gt;
 &lt;div class="content"&gt;
-<<<<<<< HEAD
 &lt;pre class="prettyprint highlight"&gt;&lt;code&gt;wget https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/file-source-kafka/3.0.0-SNAPSHOT/file-source-kafka-3.0.0-SNAPSHOT.jar&lt;/code&gt;&lt;/pre&gt;
-=======
-&lt;pre class="prettyprint highlight"&gt;&lt;code&gt;wget https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/file-source-kafka/3.0.0-M2/file-source-kafka-3.0.0-SNAPSHOT.jar&lt;/code&gt;&lt;/pre&gt;
->>>>>>> master
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
@@ -221,11 +201,7 @@ public void consumeDataAndSendEmail() {
 &lt;h2 id="mongodb-consumer"&gt;&lt;a class="anchor" href="#mongodb-consumer"&gt;&lt;/a&gt;MongoDB Consumer&lt;/h2&gt;
 &lt;div class="sectionbody"&gt;
 &lt;div class="paragraph"&gt;
-<<<<<<< HEAD
 &lt;p&gt;MongoDB consumer provides a function that allows one to receive data from external systems and then write that data into MongoDB. We can use the consumer bean directly in our custom applications to insert data into MongoDB collections. Here is the type signature of the MongoDB consumer bean.&lt;/p&gt;
-=======
-&lt;p&gt;MongoDB consumer provides a function that allows one to receive data from external systems and then sink that data into MongoDB. We can use the consumer bean directly in our custom applications to insert data into MongoDB collections. Here is the type signature of the MongoDB consumer bean.&lt;/p&gt;
->>>>>>> master
 &lt;/div&gt;
 &lt;div class="listingblock"&gt;
 &lt;div class="content"&gt;
@@ -233,11 +209,7 @@ public void consumeDataAndSendEmail() {
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-<<<<<<< HEAD
-&lt;p&gt;Once injected into a custom application, users can directly invoke the &lt;code&gt;accept&lt;/code&gt; method of the consumer and provide a &lt;code&gt;Message&amp;lt;?&amp;gt;&lt;/code&gt; object to send itâ€™s payload to a MongoDB collection.&lt;/p&gt;
-=======
 &lt;p&gt;Once injected into a custom application, users can directly invoke the &lt;code&gt;accept&lt;/code&gt; method of the consumer and provide a &lt;code&gt;Message&amp;lt;?&amp;gt;&lt;/code&gt; object to send it¡¯s payload to a MongoDB collection.&lt;/p&gt;
->>>>>>> master
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;When using the MongoDB consumer, the collection is a required property and it must be configured through &lt;code&gt;mongodb.consumer.collection&lt;/code&gt;.&lt;/p&gt;
@@ -251,11 +223,7 @@ public void consumeDataAndSendEmail() {
 &lt;p&gt;As in the case of File Source, Spring Cloud Stream out of the box applications already provide a MongoDB sink using the MongoDB consumer. The sink is available for both &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/mongodb-sink-kafka/3.0.0-SNAPSHOT/"&gt;Kafka&lt;/a&gt; and &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/mongodb-sink-rabbit/3.0.0-SNAPSHOT/"&gt;RabbitMQ&lt;/a&gt; binder variants. When used as a Spring Cloud Stream sink, the MongoDB consumer is automatically configured to accept data from the respective middleware system, for example, from a Kafka topic or RabbitMQ exchange.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-<<<<<<< HEAD
-&lt;p&gt;Letâ€™s take a few minutes and verify that we can run the MongoDB sink standalone.&lt;/p&gt;
-=======
 &lt;p&gt;Let¡¯s take a few minutes and verify that we can run the MongoDB sink standalone.&lt;/p&gt;
->>>>>>> master
 &lt;/div&gt;
 &lt;div class="sect2"&gt;
 &lt;h3 id="setting-up-mongodb-for-testing-the-sink-using-docker"&gt;&lt;a class="anchor" href="#setting-up-mongodb-for-testing-the-sink-using-docker"&gt;&lt;/a&gt;Setting up MongoDB for testing the sink using Docker&lt;/h3&gt;
@@ -287,20 +255,12 @@ public void consumeDataAndSendEmail() {
 
 &amp;gt; db.auth('mongoadmin','secret')
 1
-<<<<<<< HEAD
-&amp;gt; db.createCollection('test_collectionâ€™')
-=======
 &amp;gt; db.createCollection('test_collection¡¯')
->>>>>>> master
 { "ok" : 1 }&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-<<<<<<< HEAD
-&lt;p&gt;Now that we have our MongoDB setup, letâ€™s run the sink standalone.&lt;/p&gt;
-=======
 &lt;p&gt;Now that we have our MongoDB setup, let¡¯s run the sink standalone.&lt;/p&gt;
->>>>>>> master
 &lt;/div&gt;
 &lt;div class="listingblock"&gt;
 &lt;div class="content"&gt;
@@ -392,17 +352,10 @@ export STREAM_APPS_URI=https://repo.spring.io/libs-snapshot-local/org/springfram
 &lt;p&gt;&lt;span class="image"&gt;&lt;img src="https://github.com/spring-cloud/stream-applications/blob/gh-pages/img/file-mongo/file-mongo-scdf-blog.png?raw=true" alt="File to MongoDB SCDF Blog Pipeline"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-<<<<<<< HEAD
-&lt;p&gt;Name the stream as file-source-filter-mongo and then click on Create the Stream. Once it&amp;#8217;s created, click on â€œDeploy the Streamâ€. Accept all the default options and click on â€œDeploy Streamâ€ at the bottom of the screen.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Once the stream is deployed, go ahead and create a directory called &lt;code&gt;source-files&lt;/code&gt; in the same directory where the Spring Cloud Data Flow docker-compose script was invoked. This directory is already mounted by the docker container that is running one of the Spring Cloud Data Flow components (Skipper) and seen by the container. Ensure that this &lt;code&gt;source-files&lt;/code&gt; directory has the right access levels, especially, since the docker container will run the applications as root and you will most likely run as a non-root user on your local machine. Watch the file source applicationâ€™s logs on the UI for any permission errors. If you see any, address those issues.&lt;/p&gt;
-=======
 &lt;p&gt;Name the stream as file-source-filter-mongo and then click on Create the Stream. Once it&amp;#8217;s created, click on ¡°Deploy the Stream¡±. Accept all the default options and click on ¡°Deploy Stream¡± at the bottom of the screen.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;Once the stream is deployed, go ahead and create a directory called &lt;code&gt;source-files&lt;/code&gt; in the same directory where the Spring Cloud Data Flow docker-compose script was invoked. This directory is already mounted by the docker container that is running one of the Spring Cloud Data Flow components (Skipper) and seen by the container. Ensure that this &lt;code&gt;source-files&lt;/code&gt; directory has the right access levels, especially, since the docker container will run the applications as root and you will most likely run as a non-root user on your local machine. Watch the file source application¡¯s logs on the UI for any permission errors. If you see any, address those issues.&lt;/p&gt;
->>>>>>> master
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;Prepare a new terminal session with &lt;code&gt;mongo&lt;/code&gt; CLI tool.&lt;/p&gt;
@@ -418,15 +371,9 @@ export STREAM_APPS_URI=https://repo.spring.io/libs-snapshot-local/org/springfram
 
 &amp;gt; use admin
 
-<<<<<<< HEAD
-&amp;gt; db.auth(â€˜mongoadminâ€™,'secret')
-1
-&amp;gt; db.createCollection(â€˜mongo_dataâ€™')
-=======
 &amp;gt; db.auth(¡®mongoadmin¡¯,'secret')
 1
 &amp;gt; db.createCollection(¡®mongo_data¡¯')
->>>>>>> master
 { "ok" : 1 }&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -466,11 +413,7 @@ export STREAM_APPS_URI=https://repo.spring.io/libs-snapshot-local/org/springfram
 &lt;h2 id="summary"&gt;&lt;a class="anchor" href="#summary"&gt;&lt;/a&gt;Summary&lt;/h2&gt;
 &lt;div class="sectionbody"&gt;
 &lt;div class="paragraph"&gt;
-<<<<<<< HEAD
-&lt;p&gt;In this blog, we took a whirlwind tour through File Supplier and itâ€™s Spring Cloud Stream source counterpart. We also saw the MongoDB consumer and the corresponding Spring Cloud Stream sink application. We looked at how the function components can be injected into custom applications. After that, we saw how to run the Spring Cloud Stream applications for both file source and MongoDB sink standalone. Finally, we delved into Spring Cloud Data Flow and orchestrated a pipeline that goes from File Source to MongoDB sink, on its way filtering some data out.&lt;/p&gt;
-=======
 &lt;p&gt;In this blog, we took a whirlwind tour through File Supplier and it¡¯s Spring Cloud Stream source counterpart. We also saw the MongoDB consumer and the corresponding Spring Cloud Stream sink application. We looked at how the function components can be injected into custom applications. After that, we saw how to run the Spring Cloud Stream applications for both file source and MongoDB sink standalone. Finally, we delved into Spring Cloud Data Flow and orchestrated a pipeline that goes from File Source to MongoDB sink, on its way filtering some data out.&lt;/p&gt;
->>>>>>> master
 &lt;/div&gt;
 &lt;div class="sect2"&gt;
 &lt;h3 id="stay-tuned"&gt;&lt;a class="anchor" href="#stay-tuned"&gt;&lt;/a&gt;Stay tuned&lt;/h3&gt;
