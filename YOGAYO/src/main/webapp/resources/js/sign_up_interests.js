@@ -11,13 +11,13 @@ interests.forEach(function (interest) {
     if (e.currentTarget.classList.contains("selected")) {
       str = e.currentTarget.classList;
       classArr = str.toString().split(" ");
-      document.getElementById(classArr[0]).setAttribute("value", true);
       arr.push(keyword)
+      document.getElementById("keyword").setAttribute("value", arr.toString());
     } else {
       str = e.currentTarget.classList;
       classArr = str.toString().split(" ");
-      document.getElementById(classArr[0]).setAttribute("value", false);
       arr.splice(arr.indexOf(keyword),1);
+      document.getElementById("keyword").setAttribute("value", arr.toString());
     }
   });
   i++;

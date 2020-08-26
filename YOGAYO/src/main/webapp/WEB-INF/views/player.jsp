@@ -154,83 +154,83 @@
 				</div>
 			</header>
 			<main>
-				<div class="main-wrapper">
-					<div class="course-main">
-						<div class="image-wrapper">
-							<div class="image-progress-bar"></div>
-							<div class="course-image"></div>
-						</div>
-						<div class="info-wrapper">
-							<div class="course-title"></div>
-							<div class="course-info">
-								<div class="main-course-title">코스 A: 허리에 좋은 기초 요가 클래스</div>
-								<div class="main-course-info">
-									<div class="rightwrapper">
-										<span>누적 플레이 수</span> <span class="accumulate-number">
-											160회</span> <span>•</span> <span class="reg-date"> 2020.08.19</span>
-									</div>
-									<div class="leftwrapper">
-										<span class="like"><i class="far fa-heart"></i></span> <span
-											class="like-number">34</span>
-									</div>
-								</div>
-							</div>
-							<div class="user-info">
-								<div class="user-image"></div>
-								<div class="user-detail">
-									<div class="user-name">태겸</div>
-									<div class="user-introduction">안녕하세요!</div>
-								</div>
-							</div>
-						</div>
+			<div class="main-wrapper">
+				<div class="course-main">
+					<div class="image-wrapper">
+						<div class="image-progress-bar"></div>
+						<div class="course-image"></div>
 					</div>
-					<div class="course-list">
-						<div class="list-header">
-							<div class="list-header-title">COURSE A</div>
-							<div class="list-header-count">코스 1/30</div>
-						</div>
-						<div class="scroll-overflow">
-							<ul class="order-ul">
-								<li class="order-li">
-									<div class="order-progress-bar"></div>
-									<div class="order-wrapper">
-										<div class="order-number">
-											<div>1</div>
-										</div>
-										<div class="order-image">
-											<image src="boat.webp"> </image>
-										</div>
-										<div class="order-title">
-											<div>배 자세</div>
-											<div></div>
-										</div>
-									</div>
-								</li>
-								<li class="order-li">
-									<div class="order-progress-bar"></div>
-									<div class="order-wrapper">
-										<div class="order-number">
-											<div>2</div>
-										</div>
-										<div class="order-image">
-											<image src="chair.webp"> </image>
-										</div>
-										<div class="order-title">
-											<div>의자 자세</div>
-											<div>0:30</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="list-footer">
-							<div class="play-button">
-								<i class="fas fa-pause btn"></i>
+					<div class="info-wrapper">
+						<div class="course-title"></div>
+						<div class="course-info">
+							<div class="main-course-title">코스 A: 허리에 좋은 기초 요가 클래스</div>
+							<div class="main-course-info">
+								<div class="rightwrapper">
+									<span>누적 플레이 수</span> <span class="accumulate-number">
+										160회</span> <span>•</span> <span class="reg-date"> 2020.08.19</span>
+								</div>
+								<div class="leftwrapper">
+									<span class="like"><i class="far fa-heart"></i></span> <span
+										class="like-number">34</span>
+								</div>
 							</div>
-							<div class="end-btn">운동 종료</div>
+						</div>
+						<div class="user-info">
+							<div class="user-image"></div>
+							<div class="user-detail">
+								<div class="user-name">태겸</div>
+								<div class="user-introduction">안녕하세요!</div>
+							</div>
 						</div>
 					</div>
 				</div>
+				<div class="course-list">
+					<div class="list-header">
+						<div class="list-header-title">COURSE A</div>
+						<div class="list-header-count">코스 1/30</div>
+					</div>
+					<div class="scroll-overflow">
+						<ul class="order-ul">
+							<li class="order-li">
+								<div class="order-progress-bar"></div>
+								<div class="order-wrapper">
+									<div class="order-number">
+										<div>1</div>
+									</div>
+									<div class="order-image">
+										<image src="boat.webp"> </image>
+									</div>
+									<div class="order-title">
+										<div>배 자세</div>
+										<div></div>
+									</div>
+								</div>
+							</li>
+							<li class="order-li">
+								<div class="order-progress-bar"></div>
+								<div class="order-wrapper">
+									<div class="order-number">
+										<div>2</div>
+									</div>
+									<div class="order-image">
+										<image src="chair.webp"> </image>
+									</div>
+									<div class="order-title">
+										<div>의자 자세</div>
+										<div>0:30</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="list-footer">
+						<div class="play-button">
+							<i class="fas fa-pause btn"></i>
+						</div>
+						<div class="end-btn">운동 종료</div>
+					</div>
+				</div>
+			</div>
 			</main>
 			<script language=JavaScript
 				src="${pageContext.request.contextPath}/resources/js/player.js"></script>
@@ -270,8 +270,7 @@
 					</div>
 					<div class="pop2-main-bottom">
 						<div class="main-bottom-btn1">
-						<label for="file1">사진 업로드</label>
-						<input type="file" id="file1"
+							<label for="file1">사진 업로드</label> <input type="file" id="file1"
 								name="file" onchange="setThumbnailMulti(event);" multiple />
 						</div>
 						<div class="main-bottom-btn2">몸무게</div>
@@ -279,14 +278,10 @@
 				</div>
 				<div class="userImageContainer">
 					<div class="userImage img1">
-						<div class="btnContainer btn1">
-							
-						</div>
+						<div class="btnContainer btn1"></div>
 					</div>
-					<div class="userImage img2">
-					</div>
-					<div class="userImage img3">
-					</div>
+					<div class="userImage img2"></div>
+					<div class="userImage img3"></div>
 				</div>
 				<script>
 				

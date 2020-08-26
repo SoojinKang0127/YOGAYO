@@ -32,15 +32,17 @@ public class SignUpController {
 
 	@RequestMapping(value = "/sign-up", method = RequestMethod.POST)
 	public String signUp1(Model model, @RequestParam("id") String id, @RequestParam("name") String name,
-			@RequestParam("bDate") Date date, @RequestParam("pwd") String pwd, @RequestParam("gender") char gender) {
-
+			@RequestParam("bDate") Date date, @RequestParam("pwd") String pwd, @RequestParam("gender") char gender,@RequestParam("keyword")String keyword) {
+		
+		
+		String[] keywordArr=keyword.split(",");
 		UserVo vo = new UserVo();
 		vo.setId(id);
 		vo.setName(name);
 		vo.setPwd(pwd);
 		vo.setbDate(date);
 		vo.setGender(gender);
-
+		System.out.println(keyword);
 		try {
 			service.signUp(vo);
 		} catch (Exception e) {
