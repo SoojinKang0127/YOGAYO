@@ -20,5 +20,9 @@
 	<select id="selectAllId" resultType="String">
 		SELECT ID FROM USER
 	</select>
+	
+	<select id="checkDuplication" parameterType="UserVo" resultType="UserVo">
+		SELECT * FROM USER WHERE ID=#{id}
+	</select>
 </mapper>
 

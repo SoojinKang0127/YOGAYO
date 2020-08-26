@@ -47,6 +47,13 @@ public class UserServiceImpl implements UserService {
 		return dao.lWeight();
 	}
 
+	@Override
+	public UserVo checkDuplication(UserVo vo) throws Exception {
+		
+		
+		return dao.checkDuplication(vo);
+	}
+
 
 	
 	

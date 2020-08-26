@@ -1,7 +1,6 @@
 var emailCheck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 
-$(document).ready(
-		function() {
+$(document).ready(function() {
 			/* 이메일 유효성 */
 			$("#email").keyup(function() {
 				if ($("#email").val().length != 0) {
@@ -113,4 +112,8 @@ $(document).ready(
 
 						}
 					});
+		
+			
+		
+		
 		});
