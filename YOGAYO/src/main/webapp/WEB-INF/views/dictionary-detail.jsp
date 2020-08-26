@@ -10,6 +10,9 @@
 
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/dictionary-detail.css">
+<link rel="stylesheet" type="text/js"
+	href="${pageContext.request.contextPath}/resources/js/dictionary-detail.js">
+<script src="http://code.jquery.com/jquery.js"></script>
 </head>
 
 <body>
@@ -31,16 +34,17 @@
 		</div>
 		<div class="search-img_yoga-title">
 			<div class="search-img">
-				<img src="${pageContext.request.contextPath}/resources/image/dictionary-detail/bg01.jpg" alt="불러오지 못함">
+				<img src="${pose.img_Path}" alt="불러오지 못함">
 			</div>
-			<div class="search-img2">
+			 <div class="search-img2">
 				<img src="${pageContext.request.contextPath}/resources/image/dictionary-detail/bg02.jpg" alt="불러오지 못함">
-			</div>
+			</div> 
 		</div>
 		<div class="yoga-second-dificult-box">
 			<div class="yoga-second-dificult-box-section">
 				<div class="yoga-second-dificult">
-					<span>CLCOCK 60SEC</span> <span>DIFFI 5</span>
+					<span>CLCOCK ${pose.time} SEC</span> 
+					<span>DIFFICULT ${pose.difficulty}</span> 
 				</div>
 			</div>
 		</div>
