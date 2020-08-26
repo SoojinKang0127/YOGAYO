@@ -41,8 +41,8 @@ public class PoseVo {
 	}
 
 
-	public void setImgPath(String imgPath) {
-		this.img_Path = imgPath;
+	public void setImgPath(String img_Path) {
+		this.img_Path = img_Path;
 	}
 
 

@@ -19,15 +19,23 @@
 	<!-- 파라미터 select가 Dao.select에서 select가 되고, parameter type이 매개변수타입이 됨 근데 
 		생략 가능 -->
 
-	<select id="poseSelectOne" resultType="PoseVo">
-		SELECT * FROM POSE WHERE
-		PNUM=#{pNum}
+	<select id="poseSelectOne" parameterType="PoseVo" resultType="PoseVo">
+		SELECT * FROM POSE WHERE PNUM=#{pNum}
 	</select>
-
+	
 	<select id="poseSelectAll" resultType="PoseVo">
 		SELECT * FROM POSE
 	</select>
 
+	<!-- <delete id="delete">
+		DELETE FROM test
+		WHERE no=#{no}
+	</delete>
+
+	<update id="update">
+		UPDATE test SET no=${no}, name=#{name} WHERE no=#{no}
+	</update>
+ -->
 	<update id="poseUpdate" parameterType="PoseVo">
 		UPDATE POSE
 		SET AUDIO_PATH=#{audio_Path}, TIME=#{time}
