@@ -36,6 +36,8 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public int myPage() throws Exception {
 		
+		System.out.println(dao.myPage());
+		
 		return dao.myPage();
 	}
 

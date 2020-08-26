@@ -20,12 +20,21 @@ public class MyPageController {
 	UserDAO dao = new UserDAOImpl();
 	
 	@RequestMapping(value="/myPage", method = RequestMethod.GET)
-	public String myPage(Model model) {
+	public String myPage(Model model)
+			 {
 		
+		int weight =0 ;
+		try {
+			weight = service.myPage();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		
-		
-		int weight = 100;
 		model.addAttribute("banana", weight);
+		System.out.println(weight);
+		System.out.println("hi");
 		
 		return "mypage";
 	}
@@ -33,9 +42,8 @@ public class MyPageController {
 	@RequestMapping(value="/myPage", method = RequestMethod.POST)
 	public String myPage(Model model, HttpServletRequest req,
 			@RequestParam(value="userId", defaultValue = "name",
-			required = false)String name,
-			@RequestParam (value="userWeight", defaultValue="weight",
-			required = false)String weight
+			required = false)String name
+			
 	) {
 		HttpSession session = req.getSession();
 		

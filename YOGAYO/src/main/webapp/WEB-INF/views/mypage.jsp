@@ -25,7 +25,7 @@
         <div class="content_top">
           <div class="content_top_welcome">
             <div class="content_top_faceImg"></div>
-            <div class="content_top_welcomeTxt" name="userId">${user.id} 님의 기록</div>
+            <div class="content_top_welcomeTxt">${user.id} 님의 기록</div>
           </div>
           <div class="content_top_btn">
             <button class="content_top_btn_edit" onclick="location.href='update'">정보 수정</button>
@@ -36,14 +36,14 @@
           <div class="front_first">
             <div class="front_first_title">현재 몸무게</div>
             <div class="front_first_value">
-              <div class="first_value1" name="userWeight">${feed.weight } kg</div>
+              <div class="first_value1">${banana} kg</div>
               <div class="first_value2"></div>
             </div>
           </div>
           <div class="front_second">
             <div class="front_second_title">이번달 감량 몸무게</div>
             <div class="front_second_value">
-              <div class="second_value1">${user. } kg</div>
+              <div class="second_value1">kg</div>
               <div class="second_value2"></div>
             </div>
           </div>
