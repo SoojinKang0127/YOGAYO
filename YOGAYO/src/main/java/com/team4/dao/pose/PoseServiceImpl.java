@@ -29,4 +29,9 @@ public class PoseServiceImpl implements PoseService {
 		dao.poseDefaultSet(vo);
 	}
 
+	@Override
+	public void update(PoseVo vo) throws Exception {
+		dao.poseUpdate(vo);
+	}
+
 }

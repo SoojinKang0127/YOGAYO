@@ -9,7 +9,7 @@ public interface PoseDAO {
 	public PoseVo poseSelect(PoseVo vo) throws Exception;
 	public void poseInsert(PoseVo vo) throws Exception;
 	public void poseDefaultSet(PoseVo vo) throws Exception;
-	
+	public void poseUpdate(PoseVo vo) throws Exception;
 	
 	public List<String> poseSelectAll() throws Exception;
 	
