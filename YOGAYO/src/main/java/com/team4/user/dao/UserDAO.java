@@ -15,5 +15,5 @@ public interface UserDAO {
 	public int lWeight() throws Exception;
 	
 	public List<String> selectAllId() throws Exception;
-
+	public UserVo checkDuplication(UserVo vo) throws Exception;
 }

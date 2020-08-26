@@ -21,7 +21,6 @@
 
 	<!-- Controller 등록 -->
 
-	<bean id="login" class="com.team4.test.LoginController"></bean>
 
 
 

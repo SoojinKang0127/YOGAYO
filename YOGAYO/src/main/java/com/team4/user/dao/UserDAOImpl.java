@@ -55,6 +55,12 @@ public class UserDAOImpl implements UserDAO {
 
 	}
 
+
+	@Override
+	public UserVo checkDuplication(UserVo vo) throws Exception {
+		return mybatis.selectOne("UserDao.checkDuplication", vo);
+	}
+
 	
 
 

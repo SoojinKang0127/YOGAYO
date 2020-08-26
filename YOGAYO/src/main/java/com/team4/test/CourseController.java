@@ -4,6 +4,7 @@ import java.sql.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -34,7 +35,6 @@ public class CourseController {
 	@RequestMapping(value = "/course-detail", method = RequestMethod.GET)
 	public String makeCourse(CourseVo vo, HttpServletRequest req, RedirectAttributes rttr, Model model,
 			@RequestParam("crsNum") int crsNum) throws Exception {
-
 		vo = new CourseVo();
 		vo.setCrsNum(crsNum);
 		CourseVo course;
