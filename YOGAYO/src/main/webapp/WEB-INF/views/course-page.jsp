@@ -73,17 +73,17 @@
 		</div>
 		<div class="course-courses_container">
 			<div class="courses_first_line">
-				<c:forEach var="i" items="${list}" begin="1" end="13" varStatus="courses">
+				<c:forEach var="i" items="${courses}" begin="0" end="11">
 					<div class="up-on-scroll">
 						<div class="course_container">
 							<a
-								href="${pageContext.request.contextPath}/course-detail?crsNum=${i}">
+								href="${pageContext.request.contextPath}/course-detail?crsNum=${i.crsNum}">
 								<img
 								src="${pageContext.request.contextPath}/resources/image/course/course.jpg"
 								alt="couser" />
 								<div class="course_star_rating">
 									<i class="far fa-star">4.83(6)</i>
-									<div class="course_title">${courses.get(i).title}</div>
+									<div class="course_title">${i.title}</div>
 								</div>
 							</a>
 						</div>
