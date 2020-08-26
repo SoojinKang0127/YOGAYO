@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.team4.dao.UserServiceImpl;
+import com.team4.user.dao.UserServiceImpl;
 import com.team4.dao.course.CourseDAOImpl;
 import com.team4.dao.course.CourseServiceImpl;
 import com.team4.vo.CourseVo;

@@ -2,7 +2,7 @@ package com.team4.dao.pose;
 
 import java.util.List;
 
-import com.team4.dao.UserDAOImpl;
+import com.team4.user.dao.UserDAOImpl;
 import com.team4.vo.PoseVo;
 
 public class PoseServiceImpl implements PoseService {

@@ -26,8 +26,8 @@ import org.jaudiotagger.tag.TagException;
 import com.team4.user.dao.UserDAO;
 import com.team4.user.dao.UserDAOImpl;
 import com.team4.user.dao.UserServiceImpl;
-import com.team4.dao.UserDAO;
-import com.team4.dao.UserDAOImpl;
+import com.team4.user.dao.UserDAO;
+import com.team4.user.dao.UserDAOImpl;
 import com.team4.dao.course.CourseDAO;
 import com.team4.dao.course.CourseService;
 import com.team4.dao.course.CourseServiceImpl;
@@ -155,7 +155,7 @@ public class ServiceClient {
 //		vo.setSeq7(7);
 //		vo.setSeq8(8);
 //		
-		CourseService service = new CourseServiceImpl();
+		CourseService cservice = new CourseServiceImpl();
 //		
 //		try {
 //			service.makeCourse(vo);
@@ -174,14 +174,14 @@ public class ServiceClient {
 		
 	
 		try {
-			UserDAO dao = new UserDAOImpl();
+			UserDAO bdao = new UserDAOImpl();
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println("[SAervu=iceClient / main ]"+ e.toString());
 		}
 		
-			List<CourseVo> courses = service.selectAll();
+			List<CourseVo> courses = cservice.selectAll();
 			System.out.println(courses.get(0).getTitle());
 			System.out.println(courses.get(1).getTitle());
 			System.out.println(courses.get(2).getTitle());
@@ -201,12 +201,12 @@ public class ServiceClient {
 //		
 //		System.out.println(list.get(0));
 		
-		PoseVo vo = new PoseVo();
-		PoseServiceImpl service = new PoseServiceImpl();
-		vo.setpNum(3);
+		PoseVo avo = new PoseVo();
+		PoseServiceImpl aservice = new PoseServiceImpl();
+		avo.setpNum(3);
 		
 		try {
-			PoseVo list = service.poseSelect(vo);
+			PoseVo list = aservice.poseSelect(avo);
 			System.out.println(list.getTitle());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

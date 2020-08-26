@@ -56,7 +56,7 @@ public class HomeController {
 	public String coueseDetail(Model model) {
 
 		return "course-detail";
-	
+	}
 //	
 //	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
 //	public String couesePage(Model model) {

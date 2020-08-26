@@ -1,15 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YOGAYO | MY PAGE</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="${pageContext.request.contextPath}/resources/css/mypage.css"
-    />
+     <link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/mypage.css">
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
@@ -38,7 +36,7 @@
           <div class="front_first">
             <div class="front_first_title">현재 몸무게</div>
             <div class="front_first_value">
-              <div class="first_value1">kg</div>
+              <div class="first_value1"> kg</div>
               <div class="first_value2"></div>
             </div>
           </div>
@@ -276,13 +274,10 @@
       </div>
     </main>
     <footer></footer>
-    <script
-      language="JavaScript"
-      src="${pageContext.request.contextPath}/resources/js/graph.js"
-    ></script>
-    <script
-      language="JavaScript"
-      src="${pageContext.request.contextPath}/resources/js/square.js"
-    ></script>
+    	<script language=JavaScript
+		src="${pageContext.request.contextPath}/resources/js/graph.js"></script>
+		<script language=JavaScript
+		src="${pageContext.request.contextPath}/resources/js/square.js"></script>
   </body>
 </html>
+    
