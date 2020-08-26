@@ -20,5 +20,9 @@
 		SELECT * FROM COURSE WHERE CRSNUM=#{crsNum}
 	</select>
 	
+	<select id="selectPose" resultType="PoseVo">
+	SELECT  P.TITLE, P.TIME FROM COURSE C, POSE P WHERE C.SEQ1=P.PNUM;
+	</select>
+	
 	
 </mapper>

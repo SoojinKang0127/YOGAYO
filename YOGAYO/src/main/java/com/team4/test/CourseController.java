@@ -42,7 +42,7 @@ public class CourseController {
 			course = service.selectOne(vo);
 			model.addAttribute("course", course);
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("[CourseController /  makeCourse]" + e.toString());
 		}
 
 		return "course-detail";

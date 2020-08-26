@@ -172,22 +172,7 @@ public class ServiceClient {
 		 * Auto-generated catch block e.printStackTrace(); }
 		 */
 		
-	
-		try {
-			UserDAO bdao = new UserDAOImpl();
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			System.out.println("[SAervu=iceClient / main ]"+ e.toString());
-		}
-		
-			List<CourseVo> courses = cservice.selectAll();
-			System.out.println(courses.get(0).getTitle());
-			System.out.println(courses.get(1).getTitle());
-			System.out.println(courses.get(2).getTitle());
-			System.out.println(courses.get(3).getTitle());
-			System.out.println(courses.get(4).getTitle());
-			
+
 
 		
 //		List<String> list = null;

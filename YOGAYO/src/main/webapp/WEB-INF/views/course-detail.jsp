@@ -45,7 +45,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="course_detail-third">
 				<div class="section">
 					<div class="title_section">
@@ -53,16 +53,17 @@
 							<p>${course.title}</p>
 							<div class="course_detail-star_rating">
 								<span><i class="fas fa-star"></i></span> <span id="rating">4.97</span>
-								<span>(206)</span> <span>·</span> <span>전예슬</span>
+								<span>(206)</span> <span>·</span> <span>(만든사람)</span>
 							</div>
 						</div>
 					</div>
 					<div class="course_detail-info_section">
 						<div class="course_detail-info_title_section">
-							<div class="course_detail-info_title">!!안 불러와 짐!! 님이구성한 명상
-								코스</div>
-							<!-- <img src="./images/profile_face.png" alt="profile" /> -->
-							${course.imgPath}
+							<div class="course_detail-info_title">(만든사람)님이구성한 명상 코스</div>
+							<img
+								src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+								alt="profile" />
+
 						</div>
 						<div class="course_detail-info_icon_section">
 							<div class="first_line">
@@ -92,8 +93,7 @@
 							<div class="coures_detail-coures_materials_title">준비물</div>
 							<div class="coures_detail-coures_materials_list">
 								<ul>
-									<li><i class="far fa-check-circle"></i>
-										${course.material}</li>
+									<li><i class="far fa-check-circle"></i> ${course.material}</li>
 								</ul>
 							</div>
 						</div>
@@ -140,13 +140,15 @@
 						<div class="btn">
 							<div class="time">총 10분</div>
 							<div class="start_btn">
-								<button id="btn_to_start">시작하기</button>
+								<a href="${pageContext.request.contextPath}/course_playlist">
+									<button id="btn_to_start">시작하기</button>
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="course_detail-fourth_section">
 				<div class="course_detail-review_section">
 					<div class="course_detail-rating">
