@@ -164,12 +164,28 @@
 			<version>1.4</version>
 		</dependency>
 
+
 		<!-- https://mvnrepository.com/artifact/org/jaudiotagger -->
 		<dependency>
 			<groupId>org</groupId>
 			<artifactId>jaudiotagger</artifactId>
 			<version>2.0.3</version>
 		</dependency>
+
+		<!-- JSON -->
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20180813</version>
+		</dependency>
+
+
 
 
 	</dependencies>
