@@ -61,6 +61,12 @@ public class UserDAOImpl implements UserDAO {
 		return mybatis.selectOne("UserDao.checkDuplication", vo);
 	}
 
+
+	@Override
+	public int getUNum(UserVo vo) {
+		return mybatis.selectOne("UserDao.getUnum",vo);
+	}
+
 	
 
 

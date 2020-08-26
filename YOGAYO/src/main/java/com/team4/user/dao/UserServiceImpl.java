@@ -54,6 +54,11 @@ public class UserServiceImpl implements UserService {
 		return dao.checkDuplication(vo);
 	}
 
+	@Override
+	public int getUNum(UserVo vo) {
+		return dao.getUNum(vo);
+	}
+
 
 	
 	

@@ -2,17 +2,22 @@ package com.team4.test;
 
 import java.io.IOException;
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.bson.Document;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
 import com.team4.user.dao.UserDAO;
 import com.team4.user.dao.UserDAOImpl;
 import com.team4.user.dao.UserServiceImpl;
@@ -42,13 +47,23 @@ public class SignUpController {
 		vo.setPwd(pwd);
 		vo.setbDate(date);
 		vo.setGender(gender);
-		System.out.println(keyword);
 		try {
 			service.signUp(vo);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
+		int i=service.getUNum(vo);
+		List<String> mongoList= new ArrayList<String>();
+		for(String s:keywordArr) {
+			mongoList.add(s);
+		}
+		
+		MongoClient  mongo = new MongoClient("localhost",27017);
+		MongoDatabase test = mongo.getDatabase("test");
+		MongoCollection<Document> collection = test.getCollection("user");
+		Document doc= new Document("_id",i).append("keyword", mongoList  );
+        collection.insertOne(doc);
+		
 		String errMessage = "가입을 축하합니다. 로그인을 해주세요!";
 		model.addAttribute("errMessage", errMessage);
 		return "login";
@@ -72,14 +87,12 @@ public class SignUpController {
 			try {
 				res.getWriter().write("0");
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		} else {
 			try {
 				res.getWriter().write("1");
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
