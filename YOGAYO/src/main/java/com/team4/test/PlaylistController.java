@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.team4.dao.pose.PoseDAO;
 import com.team4.dao.pose.PoseDAOImpl;
+import com.team4.dao.pose.PoseService;
 import com.team4.dao.pose.PoseServiceImpl;
 import com.team4.vo.PoseVo;
 
@@ -40,7 +41,7 @@ public class PlaylistController {
 	public String course_playlist(Model model
 			) {
 		
-		PoseDAO dao = new PoseDAOImpl();
+		PoseService dao = new PoseServiceImpl();
 		List<PoseVo> list = null;
 		
 		try {
