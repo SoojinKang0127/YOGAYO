@@ -23,29 +23,28 @@ public class MyPageController {
 	public String myPage(Model model)
 			 {
 		
-		int weight =0 ;
+		int tWeight =0;
+		int	lWeight =0;
 		try {
-			weight = service.myPage();
+			tWeight = service.tWeight();
+			lWeight = service.lWeight();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			System.out.println("[MyPageController / myPage]" + e.toString());
 			e.printStackTrace();
 		}
 
 		
-		model.addAttribute("banana", weight);
-		System.out.println(weight);
-		System.out.println("hi");
+		model.addAttribute("tWeight", tWeight);
+		model.addAttribute("lWeight", lWeight);
+
 		
 		return "mypage";
 	}
 	
 	@RequestMapping(value="/myPage", method = RequestMethod.POST)
-	public String myPage(Model model, HttpServletRequest req,
-			@RequestParam(value="userId", defaultValue = "name",
-			required = false)String name
-			
-	) {
+	public String myPage(Model model, HttpServletRequest req) {
 		HttpSession session = req.getSession();
+		
 		
 		return "mypage";
 		

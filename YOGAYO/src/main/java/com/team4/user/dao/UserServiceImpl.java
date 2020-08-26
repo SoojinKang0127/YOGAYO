@@ -34,11 +34,17 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public int myPage() throws Exception {
+	public int tWeight() throws Exception {	
 		
-		System.out.println(dao.myPage());
+		return dao.tWeight();
+	}
+
+	@Override
+	public int lWeight() throws Exception {
 		
-		return dao.myPage();
+		System.out.println(dao.lWeight());
+		
+		return dao.lWeight();
 	}
 
 

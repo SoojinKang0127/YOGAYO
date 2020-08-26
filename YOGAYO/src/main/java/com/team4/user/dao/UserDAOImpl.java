@@ -43,10 +43,19 @@ public class UserDAOImpl implements UserDAO {
 
 
 	@Override
-	public int myPage() throws Exception {
-		return mybatis.selectOne("UserDao.myPage");
+	public int tWeight() throws Exception {
+		return mybatis.selectOne("UserDao.tWeight");
+		
+	}
+
+
+	@Override
+	public int lWeight() throws Exception {
+		return mybatis.selectOne("UserDao.lWeight");
 
 	}
+
+	
 
 
 }

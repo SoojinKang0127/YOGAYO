@@ -19,11 +19,6 @@ public class ServiceClient {
 		try {
 			UserDAO dao = new UserDAOImpl();
 			
-			UserServiceImpl serimp = new UserServiceImpl();
-			
-			System.out.println(serimp.myPage());
-			
-			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			System.out.println("[SAervu=iceClient / main ]"+ e.toString());

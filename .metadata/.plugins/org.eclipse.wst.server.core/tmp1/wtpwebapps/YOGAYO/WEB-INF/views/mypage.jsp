@@ -36,22 +36,22 @@
           <div class="front_first">
             <div class="front_first_title">현재 몸무게</div>
             <div class="front_first_value">
-              <div class="first_value1">${banana} kg</div>
+              <div class="first_value1"> kg</div>
               <div class="first_value2"></div>
             </div>
           </div>
           <div class="front_second">
             <div class="front_second_title">이번달 감량 몸무게</div>
             <div class="front_second_value">
-              <div class="second_value1">kg</div>
+              <div class="second_value1">${tWeight} kg</div>
               <div class="second_value2"></div>
             </div>
           </div>
           <div class="front_third">
             <div class="front_third_title">지난 달 감량 몸무게</div>
             <div class="front_third_value">
-              <div class="third_value1">2.5kg</div>
-              <div class="third_value2">-4.5kg</div>
+              <div class="third_value1">${lWeight} kg</div>
+              <div class="third_value2"></div>
             </div>
           </div>
         </div>

@@ -10,7 +10,8 @@ public interface UserService {
 	public UserVo login(UserVo vo) throws Exception;
 	public void signUp(UserVo vo) throws Exception;
 	public void update(UserVo vo) throws Exception;
-	public int myPage() throws Exception;
+	public int tWeight() throws Exception;
+	public int lWeight() throws Exception;
 
 
 	
