@@ -1,4 +1,14 @@
 INDEX VERSION 1.131
+<<<<<<< HEAD
+/Users/minjae/Documents/GitHub/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3572079652.index
+/YOGAYO/src/main/java
+/Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3572079652.index
+/YOGAYO/src/main/java
+/Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3748728972.index
+/YOGAYO/src/main/java
+/Users/minjae/Documents/GitHub/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3748728972.index
+/YOGAYO/src/main/java
+=======
 C:\Users\kosmo_28\Documents\GitHub\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4054100279.index
 \05_Test_SPRING_MVC\src\main\java
 C:\Users\kosmo_28\Desktop\YOGAYO\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3610453004.index
@@ -19,3 +29,4 @@ C:\Users\kosmo_28\Documents\GitHub\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp
 \YOGAYO\src\main\java
 C:\Users\kosmo_28\Desktop\YOGAYO\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2562703763.index
 \05_Test_SPRING_MVC\src\main\java
+>>>>>>> master

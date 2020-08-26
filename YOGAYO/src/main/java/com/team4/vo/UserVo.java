@@ -102,4 +102,6 @@ public class UserVo {
 		this.regDate = regDate;
 	}
 
+
+
 }

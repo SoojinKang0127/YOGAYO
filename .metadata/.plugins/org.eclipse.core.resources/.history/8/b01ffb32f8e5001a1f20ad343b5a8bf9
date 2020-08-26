@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="UserDao">
+
+	<update id="update" parameterType="UserVo">
+		UPDATE USER SET USER 
+		PWD=#{PWD},
+		NAME=#{NAME},
+		BDATE=#{BDATE},
+		GENDER=#{GENDER}
+		WHERE ID = #{ID}
+	</update>
+	
+
+</mapper>

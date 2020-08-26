@@ -1,0 +1,28 @@
+package com.team4.test;
+
+import java.util.List;
+import java.util.Locale;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.team4.dao.UserDAO;
+import com.team4.dao.UserDAOImpl;
+import com.team4.dao.UserServiceImpl;
+
+@Controller
+public class UpdateController {
+	
+	UserServiceImpl service = new UserServiceImpl();
+	UserDAO dao = new UserDAOImpl();
+	
+//	@RequestMapping(value="/update", method = RequestMethod.GET)
+//	public String update(Locale locale, Model model) {
+//		List<list>
+//	}
+	
+	
+
+}

@@ -1,24 +1,26 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YOGAYO</title>
-    <script
-      src="https://kit.fontawesome.com/54919de5bd.js"
-      crossorigin="anonymous"
-    ></script>
-     <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/main.css">
+    <script src="https://kit.fontawesome.com/54919de5bd.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="${pageContext.request.contextPath}/resources/css/main.css"
+    />
   </head>
   <body>
     <header class="header">
       <div class="main-status_bar">
         <div class="main-logo_wrapper">
           <a href="main_page.html">
-            <img src="${pageContext.request.contextPath}/resources/image/course/logo.jpg" alt="logo" />
+            <img
+              src="${pageContext.request.contextPath}/resources/image/course/logo.jpg"
+              alt="logo"
+            />
           </a>
           <div class="box-div"></div>
         </div>
@@ -32,8 +34,10 @@
           <div class="welcome_user">
             안녕하세요. ${user.name}님
           </div>
-          <a href="my-page"
-            ><img src="${pageContext.request.contextPath}/resources/image/course/profile_face.png" class="profile_img"
+          <a href="myPage"
+            ><img
+              src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+              class="profile_img"
           /></a>
         </div>
       </div>
@@ -141,8 +145,8 @@
                 <div class="main-latest_courses_title">새로 올라운 코스</div>
                 <div class="main-latest_courses_explain">
                   <p>
-                    세계 각지 사람들의 다양한 코스들을 경험해보세요. 저희
-                    요가요에서 제공하는 코스들도 놓치지 마세요.
+                    세계 각지 사람들의 다양한 코스들을 경험해보세요. 저희 요가요에서 제공하는
+                    코스들도 놓치지 마세요.
                   </p>
                 </div>
               </div>
@@ -156,7 +160,9 @@
           <div class="main-latest_sections">
             <div class="up-on-scroll">
               <div class="main-latest_section">
-                <img src="${pageContext.request.contextPath}/resources/image/course/latest_course.jpg" />
+                <img
+                  src="${pageContext.request.contextPath}/resources/image/course/latest_course.jpg"
+                />
                 <div class="main-first_course">
                   <div class="main-first_course_title">
                     어깨가 너무 결려서 만든 스트레칭
@@ -169,7 +175,9 @@
                 <div class="main-small_latest_courses">
                   <div class="up-on-scroll">
                     <div class="main-small_latest1">
-                      <img src="${pageContext.request.contextPath}/resources/image/course/latest_course.jpg" />
+                      <img
+                        src="${pageContext.request.contextPath}/resources/image/course/latest_course.jpg"
+                      />
                       <div class="main-first_course">
                         <div class="main-first_course_title">
                           어깨가 너무 결려서 만든 스트레칭
@@ -179,7 +187,9 @@
                   </div>
                   <div class="up-on-scroll">
                     <div class="main-samll_latest2">
-                      <img src="${pageContext.request.contextPath}/resources/image/course/latest_course.jpg" />
+                      <img
+                        src="${pageContext.request.contextPath}/resources/image/course/latest_course.jpg"
+                      />
                       <div class="main-first_course">
                         <div class="main-first_course_title">
                           어깨가 너무 결려서 만든 스트레칭
@@ -192,7 +202,9 @@
               <div class="up-on-scroll">
                 <div class="main-latest_section2-2">
                   <div class="main-latest">
-                    <img src="${pageContext.request.contextPath}/resources/image/course/latest_course.jpg" />
+                    <img
+                      src="${pageContext.request.contextPath}/resources/image/course/latest_course.jpg"
+                    />
                     <div class="main-first_course">
                       <div class="main-first_course_title">
                         어깨가 너무 결려서 만든 스트레칭
@@ -225,8 +237,9 @@
       </footer>
     </main>
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script language=JavaScript
-		src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+    <script
+      language="JavaScript"
+      src="${pageContext.request.contextPath}/resources/js/main.js"
+    ></script>
   </body>
 </html>
-    

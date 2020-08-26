@@ -23,6 +23,9 @@ import org.jaudiotagger.audio.exceptions.ReadOnlyFileException;
 import org.jaudiotagger.audio.mp3.MP3File;
 import org.jaudiotagger.tag.TagException;
 
+import com.team4.user.dao.UserDAO;
+import com.team4.user.dao.UserDAOImpl;
+import com.team4.user.dao.UserServiceImpl;
 import com.team4.dao.UserDAO;
 import com.team4.dao.UserDAOImpl;
 import com.team4.dao.course.CourseDAO;
@@ -169,7 +172,15 @@ public class ServiceClient {
 		 * Auto-generated catch block e.printStackTrace(); }
 		 */
 		
+	
 		try {
+			UserDAO dao = new UserDAOImpl();
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("[SAervu=iceClient / main ]"+ e.toString());
+		}
+		
 			List<CourseVo> courses = service.selectAll();
 			System.out.println(courses.get(0).getTitle());
 			System.out.println(courses.get(1).getTitle());
