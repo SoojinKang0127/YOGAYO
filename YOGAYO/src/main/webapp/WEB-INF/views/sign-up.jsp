@@ -33,6 +33,7 @@
 					<input type="hidden" name="interest_1" id="interest_1" value="false">
 						
 						 <input type="hidden" name="interest_2"
+
 						id="interest_2" value="false"> <input type="hidden"
 						name="interest_3" id="interest_3" value="false"> <input
 						type="hidden" name="interest_4" id="interest_4" value="false">

@@ -11,6 +11,7 @@
 	<typeAliases>
 		<typeAlias type="com.team4.vo.UserVo" alias="UserVo"></typeAlias>
 		<typeAlias type="com.team4.vo.FeedVo" alias="FeedVo"></typeAlias>
+		<typeAlias type="com.team4.vo.PoseVo" alias="PoseVo"></typeAlias>
 	</typeAliases>
 
 	<environments default="development">
@@ -29,6 +30,7 @@
 	<mappers>
 		<mapper resource="mappings/login.xml" />
 		<mapper resource="mappings/feed.xml" />
+		<mapper resource="mappings/pose.xml"/>
 	</mappers>
 
 </configuration>

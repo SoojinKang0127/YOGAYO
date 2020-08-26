@@ -7,6 +7,9 @@ import com.team4.dao.UserDAO;
 import com.team4.dao.UserDAOImpl;
 import com.team4.dao.feed.FeedServiceImpl;
 import com.team4.vo.FeedVo;
+import com.team4.dao.pose.PoseServiceImpl;
+import com.team4.vo.PoseVo;
+
 import com.team4.vo.UserVo;
 
 //import com.team4.dao.Dao;
@@ -44,6 +47,30 @@ public class ServiceClient {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
+
+		
+//		List<String> list = null;
+//		
+//		try {
+//			
+//			list = dao.selectAllId();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		
+//		System.out.println(list.get(0));
+		
+		PoseVo vo = new PoseVo();
+		PoseServiceImpl service = new PoseServiceImpl();
+		vo.setpNum(3);
+		
+		try {
+			PoseVo list = service.poseSelect(vo);
+			System.out.println(list.getTitle());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 //		List<String> list = null;
 //		
