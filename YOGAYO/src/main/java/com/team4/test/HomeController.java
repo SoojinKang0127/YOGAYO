@@ -78,34 +78,7 @@ public class HomeController {
 	}
 	
 	
-	@RequestMapping(value = "/player", method = RequestMethod.GET)
-	public String player(HttpServletRequest req) {
-		
-		//session에 저장된 user라는 오브젝트에 접근할 수 있다 
-//		HttpSession session = req.getSession();
-//		UserVo user = (UserVo)session.getValue("user");
-//		System.out.println(user.getuNum());		
-		
-		return "player";
-	}
-	
-	
-	@RequestMapping(value = "/review", method = RequestMethod.POST)
-	public String review(HttpServletRequest req) {
-		
-	
-		HttpSession session = req.getSession();
-		UserVo user = (UserVo)session.getValue("user");
-		System.out.println(user.getName());		
-		
-		
-		
-		
-		
-		
-		
-		return "main";
-	}
+
 	
 	
 	
