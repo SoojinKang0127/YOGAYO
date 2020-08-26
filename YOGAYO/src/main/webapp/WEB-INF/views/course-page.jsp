@@ -1,3 +1,9 @@
+<%@page import="com.team4.vo.CourseVo"%>
+<%@page import="com.team4.dao.course.CourseServiceImpl"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,14 +24,15 @@
 	<header class="header">
 		<div class="status_bar">
 			<div class="logo_wrapper">
-				<a href="main_page.html"> <img src="${pageContext.request.contextPath}/resources/image/course/logo.jpg"
-					alt="logo" />
-				</a>
+				<a href="${pageContext.request.contextPath}/main"><img
+					src="${pageContext.request.contextPath}/resources/image/course/logo.jpg"
+					alt="logo" /> </a>
 				<div class="box-div"></div>
 			</div>
 			<div class="profile">
-				<a href="my_page"><img
-					src="${pageContext.request.contextPath}/resources/image/course/profile_face.png" class="profile_img" /></a>
+				<a href="${pageContext.request.contextPath}/my-page"><img
+					src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+					class="profile_img" /></a>
 			</div>
 		</div>
 	</header>
@@ -65,105 +72,26 @@
 			</div>
 		</div>
 		<div class="course-courses_container">
-			<div class="up-on-scroll">
-				<div class="courses_first_line">
-					<a href="course_detail.html">
+			<div class="courses_first_line">
+				<c:forEach var="i" items="${courses}" begin="0" end="11">
+					<div class="up-on-scroll">
 						<div class="course_container">
-							<img src="${pageContext.request.contextPath}/resources/image/course/course.jpg" alt="couser" />
-							<div class="course_star_rating">
-								<i class="far fa-star">4.83(6)</i>
-							</div>
-							<div class="course_title">재호와 함께 칼로리 태우기1</div>
+							<a
+								href="${pageContext.request.contextPath}/course-detail?crsNum=${i.crsNum}">
+								<img
+								src="${pageContext.request.contextPath}/resources/image/course/course.jpg"
+								alt="couser" />
+								<div class="course_star_rating">
+									<i class="far fa-star">4.83(6)</i>
+									<div class="course_title">${i.title}</div>
+								</div>
+							</a>
 						</div>
-					</a>
-					<div class="course_container">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" alt="couser" />
-						<div class="course_star_rating">
-							<i class="far fa-star">4.83(6)</i>
-						</div>
-						<div class="course_title">재호와 함께 칼로리 태우기2</div>
 					</div>
-					<div class="course_container">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course3.jpg" alt="couser" />
-						<div class="course_star_rating">
-							<i class="far fa-star">4.83(6)</i>
-						</div>
-						<div class="course_title">재호와 함께 칼로리 태우기3</div>
-					</div>
-					<div class="course_container">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course4.jpg" alt="couser" />
-						<div class="course_star_rating">
-							<i class="far fa-star">4.83(6)</i>
-						</div>
-						<div class="course_title">재호와 함께 칼로리 태우기4</div>
-					</div>
-				</div>
-			</div>
-			<div class="up-on-scroll">
-				<div class="courses_second_line">
-					<div class="course_container">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course.jpg" alt="couser" />
-						<div class="course_star_rating">
-							<i class="far fa-star">4.83(6)</i>
-						</div>
-						<div class="course_title">허리디스크 완화를 위한 요가 스트레칭</div>
-					</div>
-					<div class="course_container">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" alt="couser" />
-						<div class="course_star_rating">
-							<i class="far fa-star">4.83(6)</i>
-						</div>
-						<div class="course_title">허리디스크 완화를 위한 요가 스트레칭</div>
-					</div>
-					<div class="course_container">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course3.jpg" alt="couser" />
-						<div class="course_star_rating">
-							<i class="far fa-star">4.83(6)</i>
-						</div>
-						<div class="course_title">허리디스크 완화를 위한 요가 스트레칭</div>
-					</div>
-					<div class="course_container">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course4.jpg" alt="couser" />
-						<div class="course_star_rating">
-							<i class="far fa-star">4.83(6)</i>
-						</div>
-						<div class="course_title">허리디스크 완화를 위한 요가 스트레칭</div>
-					</div>
-				</div>
-			</div>
-			<div class="up-on-scroll">
-				<div class="courses_third_line">
-					<div class="course_container">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course.jpg" alt="couser" />
-						<div class="course_star_rating">
-							<i class="far fa-star">4.83(6)</i>
-						</div>
-						<div class="course_title">비틀어진 골반 맞춰주는 스트레칭</div>
-					</div>
-					<div class="course_container">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" alt="couser" />
-						<div class="course_star_rating">
-							<i class="far fa-star">4.83(6)</i>
-						</div>
-						<div class="course_title">비틀어진 골반 맞춰주는 스트레칭</div>
-					</div>
-					<div class="course_container">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course3.jpg" alt="couser" />
-						<div class="course_star_rating">
-							<i class="far fa-star">4.83(6)</i>
-						</div>
-						<div class="course_title">비틀어진 골반 맞춰주는 스트레칭</div>
-					</div>
-					<div class="course_container">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course4.jpg" alt="couser" />
-						<div class="course_star_rating">
-							<i class="far fa-star">4.83(6)</i>
-						</div>
-						<div class="course_title">비틀어진 골반 맞춰주는 스트레칭</div>
-					</div>
-				</div>
+				</c:forEach>
 			</div>
 		</div>
+
 		<footer class="footer">
 			<div class="main-footer_right">
 				<i class="far fa-copyright"></i> 2020 Team4,Inc.All rights reserved

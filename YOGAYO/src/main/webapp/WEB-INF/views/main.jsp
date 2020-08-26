@@ -24,9 +24,9 @@
         </div>
         <div class="main-status_categories">
           <span class="recommand">추천</span>
-          <span class="course"><a href="./course_page.html">코스</a></span>
+          <span class="course"><a href="${pageContext.request.contextPath}/course-page">코스</a></span>
           <span class="dictionary">자세 사전</span>
-          <span class="my_page">마이 페이지</span>
+          <span class="my_page"><a href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
         </div>
         <div class="main-profile">
           <div class="welcome_user">
@@ -61,17 +61,20 @@
         <div class="up-on-scroll">
           <div class="main-second_bg">
             <div class="main-recommand">
+            <a href="${pageContext.request.contextPath}/course-detail?crsNum=1">
               <img src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
               <div class="main-first_course">
                 <div class="main-course_title">
-                  당신의 허리를 위한 스트레칭
+                 ${allCourses.get(0).title}
                 </div>
                 <div class="main-first_course_explain">
-                  예전 같지 않은 허리 이대로 괜찮으신가요?
+                  ${allCourses.get(0).dscrt}
                 </div>
               </div>
+              </a>
             </div>
             <div class="main-recommand">
+             <a href="${pageContext.request.contextPath}/course-detail">
               <img src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
               <div class="main-second_course">
                 <div class="main-course_title">
@@ -81,6 +84,7 @@
                   예전 같지 않은 허리 이대로 괜찮으신가요?
                 </div>
               </div>
+              </a>
             </div>
             <div class="main-recommand">
               <img src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
@@ -147,7 +151,7 @@
                 </div>
               </div>
               <div class="main-to_course_btn_section">
-                <a href="./course_page.html">
+                <a href="${pageContext.request.contextPath}/course-page">
                   <button id="main-to_course_btn">모두 둘러보기</button>
                 </a>
               </div>

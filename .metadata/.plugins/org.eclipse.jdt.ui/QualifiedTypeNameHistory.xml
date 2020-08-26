@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="com.team4.dao.UserDAOImpl"/>
 <fullyQualifiedTypeName name="java.util.Locale"/>
 <fullyQualifiedTypeName name="java.util.List"/>
@@ -23,4 +24,12 @@
 <fullyQualifiedTypeName name="com.team4.user.dao.UserDAOImpl"/>
 <fullyQualifiedTypeName name="com.team4.user.dao.UserDAO"/>
 <fullyQualifiedTypeName name="com.team4.user.dao.UserServiceImpl"/>
+=======
+<fullyQualifiedTypeName name="org.json.simple.parser.JSONParser"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
+<fullyQualifiedTypeName name="org.json.simple.parser.ParseException"/>
+<fullyQualifiedTypeName name="org.json.JSONArray"/>
+<fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
+<fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
+>>>>>>> master
 </qualifiedTypeNameHistroy>

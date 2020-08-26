@@ -1,9 +1,11 @@
 package com.team4.vo;
 
+import java.sql.Date;
+
 public class FeedVo {
 	
 	int fNum;
-	int nNum;
+	int uNum;
 	int crsNum;
 	int sLevel;
 	int dLevel;
