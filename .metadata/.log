@@ -2782,6 +2782,7 @@ Binding(COMMAND+O,
 	org.eclipse.wst.sse.ui.structuredTextEditorScope,,,system)
 
 !ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2020-08-25 21:35:41.980
+!MESSAGE Connection to https://dist.springsource.com/release/STS/doc/updates.xml failed on dist.springsource.com: nodename nor servname provided, or not known. Retry attempt 0 started
 !STACK 0
 java.net.UnknownHostException: dist.springsource.com: nodename nor servname provided, or not known
 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
