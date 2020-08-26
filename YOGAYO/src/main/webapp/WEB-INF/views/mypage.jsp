@@ -25,33 +25,33 @@
         <div class="content_top">
           <div class="content_top_welcome">
             <div class="content_top_faceImg"></div>
-            <div class="content_top_welcomeTxt">${user.id} My Records</div>
+            <div class="content_top_welcomeTxt">${user.id} 님의 기록</div>
           </div>
           <div class="content_top_btn">
-            <button class="content_top_btn_edit">정보 수정</button>
+            <button class="content_top_btn_edit" onclick="location.href='update'">정보 수정</button>
             <button class="content_top_btn_addCrs">코스 추가</button>
           </div>
         </div>
         <div class="content_front">
           <div class="front_first">
-            <div class="front_first_title">총 감량 몸무게</div>
+            <div class="front_first_title">현재 몸무게</div>
             <div class="front_first_value">
-              <div class="first_value1">30.5kg</div>
-              <div class="first_value2">+5.5kg</div>
+              <div class="first_value1"> kg</div>
+              <div class="first_value2"></div>
             </div>
           </div>
           <div class="front_second">
             <div class="front_second_title">이번달 감량 몸무게</div>
             <div class="front_second_value">
-              <div class="second_value1">5.5kg</div>
+              <div class="second_value1">${tWeight} kg</div>
               <div class="second_value2"></div>
             </div>
           </div>
           <div class="front_third">
-            <div class="front_third_title">지난 달 대비 감량 몸무게</div>
+            <div class="front_third_title">지난 달 감량 몸무게</div>
             <div class="front_third_value">
-              <div class="third_value1">2.5kg</div>
-              <div class="third_value2">-4.5kg</div>
+              <div class="third_value1">${lWeight} kg</div>
+              <div class="third_value2"></div>
             </div>
           </div>
         </div>
@@ -103,22 +103,22 @@
                   <div class="content_bottom_myRcds_top">
                     <div class="myRcds_time">
                       <span class="myRcds_time_txt">오늘 요가 시간:</span>
-                      <div class="myRcds_time_usrtime">32분</div>
+                      <div class="myRcds_time_usrtime"></div>
                     </div>
                     <div class="myRcds_crs">
                       <span class="myRcds_crs_txt">진행 코스:</span>
-                      <div class="myRcds_crs_crsname">A-2 코스</div>
+                      <div class="myRcds_crs_crsname">${crsnum }</div>
                     </div>
                     <div class="myRcds_stf">
                       <span class="myRcds_stf_txt">나의 만족도:</span>
-                      <div class="myRcds_stf_usrstf">좋음</div>
+                      <div class="myRcds_stf_usrstf">${slevel }</div>
                     </div>
                   </div>
                   <div class="content_bottom_myRcds_middle">
-                    <div class="middle_txt">"나는 오늘 정말 만족한다..<br /></div>
+                    <div class="middle_txt">${context}<br /></div>
                   </div>
                   <div class="content_bottom_myRcds_bottom">
-                    <div class="bottom_time">2020년 8월 15일</div>
+                    <div class="bottom_time">${regdate }</div>
                   </div>
                 </div>
                 <div class="content_bottom_myRcds_img"></div>
@@ -128,22 +128,22 @@
                   <div class="content_bottom_myRcds_top">
                     <div class="myRcds_time">
                       <span class="myRcds_time_txt">오늘 요가 시간</span>
-                      <div class="myRcds_time_usrtime">| 32분</div>
+                      <div class="myRcds_time_usrtime"></div>
                     </div>
                     <div class="myRcds_crs">
                       <span class="myRcds_crs_txt">진행 코스</span>
-                      <div class="myRcds_crs_crsname">| A-2 코스</div>
+                      <div class="myRcds_crs_crsname">${crsnum }</div>
                     </div>
                     <div class="myRcds_stf">
                       <span class="myRcds_stf_txt">나의 만족도</span>
-                      <div class="myRcds_stf_usrstf">| 좋음</div>
+                      <div class="myRcds_stf_usrstf">${slevel }</div>
                     </div>
                   </div>
                   <div class="content_bottom_myRcds_middle">
-                    <div class="middle_txt">"나는 오늘 정말 만족한다..<br /></div>
+                    <div class="middle_txt">${context }<br /></div>
                   </div>
                   <div class="content_bottom_myRcds_bottom">
-                    <div class="bottom_time">2020년 8월 15일</div>
+                    <div class="bottom_time">${regdate }</div>
                   </div>
                 </div>
                 <div class="content_bottom_myRcds_img"></div>

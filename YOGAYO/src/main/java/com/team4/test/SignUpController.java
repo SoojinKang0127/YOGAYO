@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.team4.dao.UserDAO;
-import com.team4.dao.UserDAOImpl;
-import com.team4.dao.UserServiceImpl;
+import com.team4.user.dao.UserDAO;
+import com.team4.user.dao.UserDAOImpl;
+import com.team4.user.dao.UserServiceImpl;
 import com.team4.vo.UserVo;
 
 @Controller
@@ -22,12 +22,14 @@ public class SignUpController {
 	
 	@RequestMapping(value = "/sign-up", method = RequestMethod.GET)
 	public String signUp(Locale locale, Model model) {
+		
 		List<String> list = null;
 		try {
 			list = dao.selectAllId();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		model.addAttribute("idList", list);
 		return "sign-up";
 	}

@@ -20,13 +20,18 @@ public class PoseServiceImpl implements PoseService {
 	}
 
 	@Override
-	public List<PoseVo> poseSelectAll() throws Exception {
+	public List<String> poseSelectAll() throws Exception {
 		return dao.poseSelectAll();
 	}
 
 	@Override
 	public void poseDefaultSet(PoseVo vo) throws Exception {
 		dao.poseDefaultSet(vo);
+	}
+
+	@Override
+	public void update(PoseVo vo) throws Exception {
+		dao.poseUpdate(vo);
 	}
 
 }

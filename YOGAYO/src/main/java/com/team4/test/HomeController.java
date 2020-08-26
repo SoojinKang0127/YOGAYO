@@ -13,6 +13,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.team4.vo.UserVo;
+
 
 
 
@@ -48,16 +50,32 @@ public class HomeController {
 		return "course-page";
 	}
 	
-	
-	
-	
-	
+
 	
 	@RequestMapping(value = "/course-detail", method = RequestMethod.GET)
 	public String coueseDetail(Model model) {
 
 		return "course-detail";
-	}
+	
+//	
+//	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
+//	public String couesePage(Model model) {
+//		
+//		
+//		
+//		return "course-page";
+//	}
+//	
+//	
+	
+	
+	
+//	
+//	@RequestMapping(value = "/course-detail", method = RequestMethod.GET)
+//	public String coueseDetail(Model model) {
+//
+//		return "course-detail";
+//	}
 	
 	
 	
@@ -74,6 +92,7 @@ public class HomeController {
 
 		return "dictionary-detail";
 	}
+	
 	
 
 	

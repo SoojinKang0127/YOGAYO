@@ -27,7 +27,7 @@ public class PoseDAOImpl implements PoseDAO {
 	}
 
 	@Override
-	public List<PoseVo> poseSelectAll() throws Exception {
+	public List<String> poseSelectAll() throws Exception {
 		return mybatis.selectList("PoseDao.poseSelectAll");
 	}
 
@@ -36,6 +36,12 @@ public class PoseDAOImpl implements PoseDAO {
 		mybatis.insert("PoseDao.poseDefaultSet", vo);
 		mybatis.commit();
 		
+	}
+
+	@Override
+	public void poseUpdate(PoseVo vo) throws Exception {
+		mybatis.update("PoseDao.poseUpdate",vo);
+		mybatis.commit();
 	}
 
 }
