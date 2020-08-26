@@ -9,6 +9,11 @@ import com.team4.dao.course.CourseDAO;
 import com.team4.dao.course.CourseService;
 import com.team4.dao.course.CourseServiceImpl;
 import com.team4.vo.CourseVo;
+import com.team4.dao.feed.FeedServiceImpl;
+import com.team4.vo.FeedVo;
+import com.team4.dao.pose.PoseServiceImpl;
+import com.team4.vo.PoseVo;
+
 import com.team4.vo.UserVo;
 
 //import com.team4.dao.Dao;
@@ -96,11 +101,61 @@ public class ServiceClient {
 			System.out.println(courses.get(3).getTitle());
 			System.out.println(courses.get(4).getTitle());
 			
+
+		
+//		List<String> list = null;
+//		
+//		try {
+//			
+//			list = dao.selectAllId();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		
+//		System.out.println(list.get(0));
+		
+		PoseVo vo = new PoseVo();
+		PoseServiceImpl service = new PoseServiceImpl();
+		vo.setpNum(3);
+		
+		try {
+			PoseVo list = service.poseSelect(vo);
+			System.out.println(list.getTitle());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
+//		List<String> list = null;
+//		
+//		try {
+//			
+//			list = dao.selectAllId();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//		
+//		System.out.println(list.get(0));
+
+
+//		FeedServiceImpl ser = new FeedServiceImpl();
+//		FeedVo vo = new FeedVo();
+//
+//		vo.setuNum(1001);
+//		vo.setCrsNum(20);
+//		vo.setsLevel(5);
+//		vo.setdLevel(4);
+//		vo.setContext("오늘 이 요가 코스는 정말 짱이었다!");
+//		vo.setuImg1("img주소");
+//		vo.setWeight(20);
+//		
+//		try {
+//			ser.upload(vo);
+//			System.out.println("들어감");
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 		
 	}
 

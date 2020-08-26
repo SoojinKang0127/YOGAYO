@@ -20,5 +20,4 @@
 	<select id="selectAllId" resultType="String">
 		SELECT ID FROM USER
 	</select>
-
 </mapper>

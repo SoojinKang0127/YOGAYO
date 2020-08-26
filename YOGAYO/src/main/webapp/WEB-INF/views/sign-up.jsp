@@ -15,6 +15,8 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/sign-up.css">
 </head>
+
+
 <body>
 	<main>
 		<section id="step_1">
@@ -28,8 +30,10 @@
 				있습니다.</span> <span class="step_1">1. 회원가입을 위한 정보를 입력해주세요.</span>
 			<div class="sign-up-form">
 				<form action="sign-up" method="POST">
-					<input type="hidden" name="interest_1" id="interest_1"
-						value="false"> <input type="hidden" name="interest_2"
+					<input type="hidden" name="interest_1" id="interest_1" value="false">
+						
+						 <input type="hidden" name="interest_2"
+
 						id="interest_2" value="false"> <input type="hidden"
 						name="interest_3" id="interest_3" value="false"> <input
 						type="hidden" name="interest_4" id="interest_4" value="false">
