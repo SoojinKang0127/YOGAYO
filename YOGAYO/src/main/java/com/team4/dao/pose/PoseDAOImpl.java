@@ -38,4 +38,10 @@ public class PoseDAOImpl implements PoseDAO {
 		
 	}
 
+	@Override
+	public void poseUpdate(PoseVo vo) throws Exception {
+		mybatis.update("PoseDao.poseUpdate",vo);
+		mybatis.commit();
+	}
+
 }

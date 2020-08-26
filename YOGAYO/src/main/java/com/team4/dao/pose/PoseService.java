@@ -10,5 +10,6 @@ public interface PoseService {
 	public void poseInsert(PoseVo vo) throws Exception;
 	public void poseDefaultSet(PoseVo vo) throws Exception;
 	public List<String> poseSelectAll() throws Exception;
+	public void update(PoseVo vo) throws Exception;
 
 }
