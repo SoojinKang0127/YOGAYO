@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.team4.user.dao.UserDAO;
@@ -57,10 +58,11 @@ public class SignUpController {
 		for(String s:keywordArr) {
 			mongoList.add(s);
 		}
-		
-		MongoClient  mongo = new MongoClient("localhost",27017);
-		MongoDatabase test = mongo.getDatabase("test");
-		MongoCollection<Document> collection = test.getCollection("user");
+		MongoClientURI uri = new MongoClientURI(
+	            "mongodb+srv://user:12345@cluster0.9bcza.mongodb.net/test?retryWrites=true&w=majority");
+	    MongoClient mongoClient = new MongoClient(uri);
+		MongoDatabase project = mongoClient.getDatabase("project");
+		MongoCollection<Document> collection = project.getCollection("USER");
 		Document doc= new Document("_id",i).append("keyword", mongoList  );
         collection.insertOne(doc);
 		
