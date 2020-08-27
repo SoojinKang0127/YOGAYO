@@ -87,6 +87,7 @@
 					</div>
 				</c:forEach>
 			</div>
+			
 		</div>
 
 		<footer class="footer">

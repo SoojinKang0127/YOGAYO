@@ -9,6 +9,7 @@
 <script src="https://kit.fontawesome.com/54919de5bd.js"
 	crossorigin="anonymous"></script>
 <script src="http://code.jquery.com/jquery.js"></script>
+
 <script language=JavaScript
 	src="${pageContext.request.contextPath}/resources/js/course-detail.js"></script>
 <link rel="stylesheet" type="text/css"
@@ -35,13 +36,9 @@
 			<div class="course_detail-second">
 				<div class="section">
 					<div class="course_detail-img_section">
-						<img
-							src="${pageContext.request.contextPath}/resources/image/course/course_detail.jpg"
-							alt="course_detail" /> <img
-							src="${pageContext.request.contextPath}/resources/image/course/course_detail.jpg"
-							alt="course_detail" /> <img
-							src="${pageContext.request.contextPath}/resources/image/course/course_detail.jpg"
-							alt="course_detail" />
+						<img src="${coursePoses.img1}" alt="course_detail" /> <img
+							src="${coursePoses.img2}" alt="course_detail" /> <img
+							src="${coursePoses.img3}" alt="course_detail" />
 					</div>
 				</div>
 			</div>
@@ -68,7 +65,7 @@
 						<div class="course_detail-info_icon_section">
 							<div class="first_line">
 								<div class="course_detail-info_time">
-									<i class="far fa-clock"></i>  ${totalMin}min
+									<i class="far fa-clock"></i> ${totalMin}min
 								</div>
 								<div class="course_detail-why">
 									<i class="fas fa-child"></i>정신 건강을 위한 명상
