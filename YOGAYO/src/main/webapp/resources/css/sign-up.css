@@ -116,9 +116,24 @@ input:focus {
   margin-bottom: 10px;
   border: none;
   outline: none;
+  padding-left: 130px;
+  padding-bottom: 10px;
+}
+
+#profiLevel {
+  width: 300px;
+  font-size: 17px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
   padding-left: 135px;
   padding-bottom: 10px;
 }
+
+
+
 
 .down-btn,
 .up-btn {
@@ -199,10 +214,6 @@ input:focus {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.submitBtn:hover {
-  color: black;
-  border: 1px solid black;
-}
 
 .vaild {
   background-color: green;
@@ -210,4 +221,16 @@ input:focus {
 
 .invaild {
   background-color: rgba(211, 211, 211, 0.516);
+}
+
+.msgContainer{
+	display:none;
+}
+
+.emailVaildMsg {
+	display:inline-block;
+	width: 300px;
+	text-align: center;
+	color:red;
+	font-size:14px;
 }

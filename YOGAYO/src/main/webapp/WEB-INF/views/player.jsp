@@ -85,6 +85,7 @@
 
 				}
 
+				<!-- 
 				$(".pop2-btn")
 						.click(
 								function() {
@@ -124,6 +125,8 @@
 									form.submit();
 
 								})
+								
+								-->
 
 			})
 </script>
@@ -131,14 +134,12 @@
 <body>
 
 
-	<form action="feed" method="POST" enctype="multipart/form-data">
-		<input type="hidden" name="course" value=""> <input
-			type="hidden" name="slevel" value=""> <input type="hidden"
-			name="dlevel" value=""> <input type="hidden" name="context"
-			value=""> <input type="hidden" name="weight" value="">
-
-
-
+	<form action="feed" method="POST" enctype="multipart/form-data" name="feed">
+		<input type="hidden" name="course" value=""> 
+		<input type="hidden" name="slevel" value="">
+		<input type="hidden" name="dlevel" value="">
+		<input type="hidden" name="context" value=""> 
+		<input type="hidden" name="weight" value="">
 
 
 
@@ -269,10 +270,10 @@
 							placeholder="오늘의 운동은 어떠셨나요?" />
 					</div>
 					<div class="pop2-main-bottom">
-						<div class="main-bottom-btn1">
-						<label for="file1">사진 업로드</label>
-						<input type="file" id="file1"
-								name="file" onchange="setThumbnailMulti(event);" multiple />
+						<div class="container">
+							<label for="file1" class="main-bottom-btn1">사진 업로드</label> <input
+								type="file" id="file1" name="file"
+								onchange="setThumbnail(event);" />
 						</div>
 						<div class="main-bottom-btn2">몸무게</div>
 					</div>
@@ -280,12 +281,8 @@
 				<div class="userImageContainer">
 					<div class="userImage img1">
 						<div class="btnContainer btn1">
-							
+							<i class="fas fa-image" id="icon"></i>
 						</div>
-					</div>
-					<div class="userImage img2">
-					</div>
-					<div class="userImage img3">
 					</div>
 				</div>
 				<script>
@@ -313,29 +310,19 @@
 							console.log(image); 
 							reader.readAsDataURL(image);
 					};
-					};
-
-
-				
-				
+					};				
 					function setThumbnail(event, no) {
 						var reader = new FileReader();
-						console.log();
-						className = "." + userImages[no-1].classList[1];
-						btnName = "." + btns[no-1].classList[1];
 						reader.onload = function(event) {
 							var img = document.createElement("img");
 							img.setAttribute("src", event.target.result);
-							document.querySelector(className).appendChild(img);
-							document.querySelector(btnName).style.display = "none";
-							console.log(event.target.result);
-					
-							
+							document.querySelector(".userImage").appendChild(img);
+							document.querySelector("#icon").style.display = "none";
 						};
 						reader.readAsDataURL(event.target.files[0]);
 					}
 				</script>
-				<div class="pop2-btn">게시하기</div>
+				<div class="pop2-btn" id="submit" onclick="submit();">게시하기</div>
 			</div>
 		</div>
 		<div id="pop3">
@@ -345,7 +332,24 @@
 			</div>
 			<div class="pop3-bottom">입력</div>
 		</div>
-
 	</form>
+	<script type="text/javascript">
+	
+	
+	function submit(){
+		
+		var form = document.feed;
+		
+		
+		
+		
+		
+		
+		
+		form.submit();
+	}
+	
+	
+	</script>
 </body>
 </html>

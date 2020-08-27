@@ -1,5 +1,7 @@
 package com.team4.user.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import com.team4.util.SqlSessionFactoryBean;
 import com.team4.vo.FeedVo;
