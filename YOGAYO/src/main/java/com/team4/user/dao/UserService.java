@@ -17,5 +17,7 @@ public interface UserService {
 
 	
 	public List<String> selectAllid() throws Exception;
+	
+	public int getUNum(UserVo vo);
 
 }
