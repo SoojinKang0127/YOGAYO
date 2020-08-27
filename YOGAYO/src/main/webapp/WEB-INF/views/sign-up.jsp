@@ -48,6 +48,12 @@
 						<option value="M">남성</option>
 						<option value="F">여성</option>
 					</select> <br /> 
+					<label for="">숙련도</label> 
+				 <select name="profiLevel" id="profiLevel">
+					<option value="5">상</option>
+					<option value="3" selected>중</option>
+					<option value="1">하</option>
+				</select> <br/>
 					<label for="">비밀번호</label><input type="password" name="pwd" id="pwd1" placeholder="7자 이상" /><br /> 
 					<label for="">비밀번호 확인</label><input type="password" name="password2" id="pwd2" placeholder="7자 이상" />
 					<div class="alert-pwd alert"></div>
@@ -103,46 +109,11 @@
 	<script language=JavaScript
 		src="${pageContext.request.contextPath}/resources/js/sign_up_interests.js"></script>
 	<script>
-		var signUpBtn = document.getElementById("signUpBtn");
-		var submitBtn = document.getElementById("submitBtn");
-		var emailCheck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+	
 
-		function emailVaildCheck() {
-			if (emailCheck.test($("#email").val()))
-				return true;
-			else
-				return false;
-		}
-
-		function nameVaildCheck() {
-			if ($("#name").val().length != 0 && $("#name").val().length > 1)
-				return true;
-			else
-				return false;
-		}
-		function birthdayVaildCheck() {
-			if ($("#birthDay").val().length != 0)
-				return true;
-
-			else
-				return false;
-		}
-		function password1VaildCheck() {
-			if ($("#pwd1").val().length > 6)
-				return true;
-			else
-				return false;
-		}
-		function password2VaildCheck() {
-			if (password1VaildCheck() && $("#pwd2").val() === $("#pwd1").val())
-				return true;
-			else
-				return false;
-		}
-
+	
 		function goToStep2() {
-
-			if (emailVaildCheck() && nameVaildCheck() && birthdayVaildCheck()
+			if (emailDuplCheck() && nameVaildCheck() && birthdayVaildCheck()
 					&& password1VaildCheck() && password2VaildCheck()) {
 				$('.down-btn i').css({
 					color : "green",
@@ -152,13 +123,20 @@
 					top : 1080,
 					behavior : "smooth"
 				});
+				$("#profiLevel").css({
+					color : "green",
+					"border-bottom" : "2px solid green",
+				});
 			} else {
 				$('.down-btn i').css({
 					color : "red",
 					"border" : "1px solid red"
 				});
+				$("#profiLevel").css({
+					color : "green",
+					"border-bottom" : "2px solid green",
+				});
 			}
-
 		}
 
 		function goToStep1() {
@@ -167,55 +145,6 @@
 				behavior : "smooth"
 			});
 		}
-
-		function infoAllVaildCheck() {
-			if (emailVaildCheck() && nameVaildCheck() && birthdayVaildCheck()
-					&& password1VaildCheck() && password2VaildCheck()) {
-				return true;
-			} else {
-				return false;
-			}
-
-		}
-
-		document.addEventListener("mouseover", function() {
-			//console.log(infoAllVaildCheck())
-			if (infoAllVaildCheck()) {
-				submitBtn.removeAttribute("disabled");
-				submitBtn.classList.remove("invaild");
-				submitBtn.classList.add("vaild");
-			} else {
-				submitBtn.classList.remove("vaild");
-				submitBtn.setAttribute("disabled", "disabled");
-			}
-			
-			
-		})
-		
 	</script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			var request = new XMLHttpRequest();
-
-			$('input#email').click(()=>{
-			var email=$('input#email');
-				request.open("Post", "./checkDuplication?email="+ encodeURIComponent(email[0].value),true);
-				request.onreadystatechange=after_ajax;
-				request.send(null);
-			})	
-
-			function after_ajax(){
-			 if(request.readyState ==4 && request.status==200){
-
-				 result= eval(request.responseText);
-
-				 console.log(result)
-			 	//받아온 데이터를 view에 알맞게 가공하여 붙이는 곳
-			 }
-			}
-
-		})
-	</script>
-	
 </body>
 </html>

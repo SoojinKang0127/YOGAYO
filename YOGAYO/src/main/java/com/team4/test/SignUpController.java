@@ -38,7 +38,8 @@ public class SignUpController {
 
 	@RequestMapping(value = "/sign-up", method = RequestMethod.POST)
 	public String signUp1(Model model, @RequestParam("id") String id, @RequestParam("name") String name,
-			@RequestParam("bDate") Date date, @RequestParam("pwd") String pwd, @RequestParam("gender") char gender,@RequestParam("keyword")String keyword) {
+			@RequestParam("bDate") Date date, @RequestParam("pwd") String pwd, @RequestParam("gender") char gender,@RequestParam("keyword")String keyword,
+			@RequestParam("profiLevel") int profiLevel) {
 		
 		
 		String[] keywordArr=keyword.split(",");
@@ -48,6 +49,8 @@ public class SignUpController {
 		vo.setPwd(pwd);
 		vo.setbDate(date);
 		vo.setGender(gender);
+		vo.setProfiLevel(profiLevel);
+
 		try {
 			service.signUp(vo);
 		} catch (Exception e) {
@@ -76,24 +79,32 @@ public class SignUpController {
 			@RequestParam("email") String email) {
 
 		// pose로 db를 셀렉해오는 dao를 만들어서 그 값들을 json형태로 바꾼다음에 res통해 view로 전달
+
+		System.out.println(email);
 		UserVo vo = new UserVo();
 		vo.setId(email);
 		UserVo result = null;
+
 		try {
+
 			result = service.checkDuplication(vo);
+			System.out.println(result);
+
 		} catch (Exception e1) {
+			System.out.println("에러 발생");
 			e1.printStackTrace();
+
 		}
 
 		if (result == null) {
 			try {
-				res.getWriter().write("0");
+				res.getWriter().write("1");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 		} else {
 			try {
-				res.getWriter().write("1");
+				res.getWriter().write("0");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
