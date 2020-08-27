@@ -68,7 +68,7 @@
 						<div class="course_detail-info_icon_section">
 							<div class="first_line">
 								<div class="course_detail-info_time">
-									<i class="far fa-clock"></i> 30min
+									<i class="far fa-clock"></i>  ${totalMin}min
 								</div>
 								<div class="course_detail-why">
 									<i class="fas fa-child"></i>정신 건강을 위한 명상
@@ -105,40 +105,40 @@
 						<div class="title">코스 개요</div>
 						<div class="poses">
 							<div class="pose">
-								<div class="pose_title">${course.seq1}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose1}</div>
+								<div class="time">${coursePoses.time1}</div>
 							</div>
 							<div class="pose">
-								<div class="pose_title">${course.seq2}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose2}</div>
+								<div class="time">${coursePoses.time2}</div>
 							</div>
 							<div class="pose">
-								<div class="pose_title">${course.seq3}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose3}</div>
+								<div class="time">${coursePoses.time3}</div>
 							</div>
 							<div class="pose">
-								<div class="pose_title">${course.seq4}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose4}</div>
+								<div class="time">${coursePoses.time4}</div>
 							</div>
 							<div class="pose">
-								<div class="pose_title">${course.seq5}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose5}</div>
+								<div class="time">${coursePoses.time5}</div>
 							</div>
 							<div class="pose">
-								<div class="pose_title">${course.seq6}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose6}</div>
+								<div class="time">${coursePoses.time6}</div>
 							</div>
 							<div class="pose">
-								<div class="pose_title">${course.seq7}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose7}</div>
+								<div class="time">${coursePoses.time7}</div>
 							</div>
 							<div class="pose">
-								<div class="pose_title">${course.seq8}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose8}</div>
+								<div class="time">${coursePoses.time8}</div>
 							</div>
 						</div>
 						<div class="btn">
-							<div class="time">총 10분</div>
+							<div class="time">총 ${totalMin}분 ${totalSec} 초</div>
 							<div class="start_btn">
 								<a href="${pageContext.request.contextPath}/course_playlist">
 									<button id="btn_to_start">시작하기</button>

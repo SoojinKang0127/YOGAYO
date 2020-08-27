@@ -264,6 +264,7 @@ main {
 	text-align: center;
 	width: 150px;
 	height: 40px;
+	color:black;
 }
 
 .course_detail-mini_view .btn #btn_to_start:active {

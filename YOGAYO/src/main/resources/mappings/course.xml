@@ -5,24 +5,57 @@
 <mapper namespace="CourseDao">
 
 	<insert id="makeCourse" parameterType="CourseVo">
-	INSERT INTO COURSE(TITLE,MNUM,DSCRT,MATERIAL,IMGPATH,SEQ1,SEQ2,SEQ3,SEQ4,SEQ5,SEQ6,SEQ7,SEQ8)
-	values(#{title},#{uNum},#{dscrt},#{material},#{imgPath},#{seq1},#{seq2},#{seq3},#{seq4},#{seq5},#{seq6},#{seq7},#{seq8});
+		INSERT INTO
+		COURSE(TITLE,MNUM,DSCRT,MATERIAL,IMGPATH,SEQ1,SEQ2,SEQ3,SEQ4,SEQ5,SEQ6,SEQ7,SEQ8)
+		values(#{title},#{uNum},#{dscrt},#{material},#{imgPath},#{seq1},#{seq2},#{seq3},#{seq4},#{seq5},#{seq6},#{seq7},#{seq8});
 	</insert>
-	
+
 	<select id="selectAll" resultType="CourseVo">
 		<!-- 테이블명 대소문자 구분 -->
-		SELECT * FROM COURSE
+		SELECT * FROM COURSE ORDER BY CRSNUM DESC LIMIT 12
 	</select>
-	
 	
 	<select id="selectOne" resultType="CourseVo">
 		<!-- 테이블명 대소문자 구분 -->
 		SELECT * FROM COURSE WHERE CRSNUM=#{crsNum}
 	</select>
-	
-	<select id="selectPose" resultType="PoseVo">
-	SELECT  P.TITLE, P.TIME FROM COURSE C, POSE P WHERE C.SEQ1=P.PNUM;
+
+	<select id="coursePoses" resultType="CoursePosesVo" parameterType="CourseVo">
+		select
+		(select P.TITLE from POSE P, COURSE C
+		where P.PNUM=C.SEQ1 and C.CRSNUM=#{crsNum}) AS POSE1,
+		(select P.TIME from POSE P, COURSE C
+		where P.PNUM=C.SEQ1 and C.CRSNUM=#{crsNum}) AS TIME1,
+		(select P.TITLE from POSE P, COURSE C
+		where P.PNUM=C.SEQ2 and C.CRSNUM=#{crsNum}) AS POSE2,
+		(select P.TIME from POSE P, COURSE C
+		where P.PNUM=C.SEQ2 and C.CRSNUM=#{crsNum}) AS TIME2,
+		(select P.TITLE from POSE P, COURSE C
+		where P.PNUM=C.SEQ3 and C.CRSNUM=#{crsNum}) AS POSE3,
+		(select P.TIME from POSE P, COURSE C
+		where P.PNUM=C.SEQ3 and C.CRSNUM=#{crsNum}) AS TIME3,
+		(select P.TITLE from POSE P, COURSE C
+		where P.PNUM=C.SEQ4 and C.CRSNUM=#{crsNum}) AS POSE4,
+		(select P.TIME from POSE P, COURSE C
+		where P.PNUM=C.SEQ4 and C.CRSNUM=#{crsNum}) AS TIME4,
+		(select P.TITLE from POSE P, COURSE C
+		where P.PNUM=C.SEQ5 and C.CRSNUM=#{crsNum}) AS POSE5,
+		(select P.TIME from POSE P, COURSE C
+		where P.PNUM=C.SEQ5 and C.CRSNUM=#{crsNum}) AS TIME5,
+		(select P.TITLE from POSE P, COURSE C
+		where P.PNUM=C.SEQ6 and C.CRSNUM=#{crsNum}) AS POSE6,
+		(select P.TIME from POSE P, COURSE C
+		where P.PNUM=C.SEQ6 and C.CRSNUM=#{crsNum}) AS TIME6,
+		(select P.TITLE from POSE P, COURSE C
+		where P.PNUM=C.SEQ7 and C.CRSNUM=#{crsNum}) AS POSE7,
+		(select P.TIME from POSE P, COURSE C
+		where P.PNUM=C.SEQ7 and C.CRSNUM=#{crsNum}) AS TIME7,
+		(select P.TITLE from POSE P, COURSE C
+		where P.PNUM=C.SEQ8 and C.CRSNUM=#{crsNum}) AS POSE8,
+		(select P.TIME from POSE P, COURSE C
+		where P.PNUM=C.SEQ8 and C.CRSNUM=#{crsNum}) AS TIME8
+		from dual;
 	</select>
-	
-	
+
+
 </mapper>
