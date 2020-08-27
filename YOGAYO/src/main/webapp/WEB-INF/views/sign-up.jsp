@@ -59,20 +59,32 @@
 					type="hidden" name="interest_21" id="interest_21" value="false">
 				<input type="hidden" name="interest_22" id="interest_22"
 					value="false"> <input type="hidden" name="interest_23"
-					id="interest_23" value="false"> <label for="">이메일</label> <input
+					id="interest_23" value="false"> <label for="">이메일</label> 
+					<input
 					type="text" name="id" id="email" placeholder="johndoe@example.com" />
-				<br /> <label for="">이름</label> <input type="text" name="name"
-					id="name" placeholder="3자 이상" /><br /> <label for="">생년월일</label>
-				<input type="date" name="bDate" id="birthDay" placeholder="" /><br />
-				<label for="">성별</label> <select name="gender" id="gender">
-					<option value="M">남성</option>
-					<option value="F">여성</option>
-				</select> <br /> <label for="">비밀번호</label><input type="password" name="pwd"
+				<br /><div class="msgContainer"><label for=""></label><span class="emailVaildMsg" >이미 사용중이거나 올바르지 않은 이메일입니다.</span><br /></div>
+				<label for="">이름</label> <input type="text" name="name"
+					id="name" placeholder="3자 이상" /><br /> 
+					<label for="">비밀번호</label><input type="password" name="pwd"
 					id="pwd1" placeholder="7자 이상" /><br /> <label for="">비밀번호
 					확인</label><input type="password" name="password2" id="pwd2"
 					placeholder="7자 이상" />
-				<div class="alert-pwd alert"></div>
 				<br />
+					
+					
+					<label for="">생년월일</label>
+				<input type="date" name="bDate" id="birthDay" placeholder="" /><br />
+				<label for="">성별</label> 
+				<select name="gender" id="gender">
+					<option value="M">남성</option>
+					<option value="F">여성</option>
+				</select> <br /> 
+				 <label for="">숙련도</label> 
+				 <select name="profiLevel" id="profiLevel">
+					<option value="5">상</option>
+					<option value="3" selected>중</option>
+					<option value="1">하</option>
+				</select> 
 		</div>
 		<div class="down-btn" onclick="goToStep2()">
 			<i class="fas fa-arrow-down"></i>
@@ -119,61 +131,16 @@
 
 	</section>
 	</main>
-	<script>
-	var button = document.getElementById("signUpBtn")
-	
-	function test(){
-		
-		alert("안녕");
-		
-	}
-	
-	</script>
 	<script language=JavaScript
 		src="${pageContext.request.contextPath}/resources/js/sign_up_vaild_check.js"></script>
 	<script language=JavaScript
 		src="${pageContext.request.contextPath}/resources/js/sign_up_interests.js"></script>
 	<script>
-		var signUpBtn = document.getElementById("signUpBtn");
-		var submitBtn = document.getElementById("submitBtn");
-		var emailCheck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+	
 
-		function emailVaildCheck() {
-			if (emailCheck.test($("#email").val()))
-				return true;
-			else
-				return false;
-		}
-
-		function nameVaildCheck() {
-			if ($("#name").val().length != 0 && $("#name").val().length > 1)
-				return true;
-			else
-				return false;
-		}
-		function birthdayVaildCheck() {
-			if ($("#birthDay").val().length != 0)
-				return true;
-
-			else
-				return false;
-		}
-		function password1VaildCheck() {
-			if ($("#pwd1").val().length > 6)
-				return true;
-			else
-				return false;
-		}
-		function password2VaildCheck() {
-			if (password1VaildCheck() && $("#pwd2").val() === $("#pwd1").val())
-				return true;
-			else
-				return false;
-		}
-
+	
 		function goToStep2() {
-
-			if (emailVaildCheck() && nameVaildCheck() && birthdayVaildCheck()
+			if (emailDuplCheck() && nameVaildCheck() && birthdayVaildCheck()
 					&& password1VaildCheck() && password2VaildCheck()) {
 				$('.down-btn i').css({
 					color : "green",
@@ -183,13 +150,20 @@
 					top : 1080,
 					behavior : "smooth"
 				});
+				$("#profiLevel").css({
+					color : "green",
+					"border-bottom" : "2px solid green",
+				});
 			} else {
 				$('.down-btn i').css({
 					color : "red",
 					"border" : "1px solid red"
 				});
+				$("#profiLevel").css({
+					color : "green",
+					"border-bottom" : "2px solid green",
+				});
 			}
-
 		}
 
 		function goToStep1() {
@@ -198,55 +172,6 @@
 				behavior : "smooth"
 			});
 		}
-
-		function infoAllVaildCheck() {
-			if (emailVaildCheck() && nameVaildCheck() && birthdayVaildCheck()
-					&& password1VaildCheck() && password2VaildCheck()) {
-				return true;
-			} else {
-				return false;
-			}
-
-		}
-
-		document.addEventListener("mouseover", function() {
-			//console.log(infoAllVaildCheck())
-			if (infoAllVaildCheck()) {
-				submitBtn.removeAttribute("disabled");
-				submitBtn.classList.remove("invaild");
-				submitBtn.classList.add("vaild");
-			} else {
-				submitBtn.classList.remove("vaild");
-				submitBtn.setAttribute("disabled", "disabled");
-			}
-			
-			
-		})
-		
 	</script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			var request = new XMLHttpRequest();
-
-			$('input#email').focusout(()=>{
-			var email=$('input#email');
-				request.open("Post", "./checkDuplication?email="+ encodeURIComponent(email[0].value),true);
-				request.onreadystatechange=after_ajax;
-				request.send(null);
-			})	
-
-			function after_ajax(){
-			 if(request.readyState ==4 && request.status==200){
-
-				 result= eval(request.responseText);
-
-				 console.log(result)
-			 	//받아온 데이터를 view에 알맞게 가공하여 붙이는 곳
-			 }
-			}
-
-		})
-	</script>
-
 </body>
 </html>
