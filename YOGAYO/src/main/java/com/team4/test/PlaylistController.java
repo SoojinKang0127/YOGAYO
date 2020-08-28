@@ -57,9 +57,11 @@ public class PlaylistController {
 	}
 	
 	@RequestMapping(value = "/course_playlist", method = RequestMethod.POST) 
-	public void playListAJAX(@RequestParam("pose")String pose, HttpServletResponse res, Model model) throws IOException {
+	public void playListAJAX(@RequestParam("pose")String pose, HttpServletResponse res, Model model,
+			HttpSession session, HttpServletRequest req) throws IOException {
 		//pose로 db를 셀렉해오는 dao를 만들어서 그 값들을 json형태로 바꾼다음에 res통해 view로 전달
 		
+		//session = req.getSession();
 		
 		PoseService dao = new PoseServiceImpl();
 		JsonArray jsonarr = new JsonArray();
