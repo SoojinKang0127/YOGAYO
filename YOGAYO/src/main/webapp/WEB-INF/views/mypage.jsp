@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+   
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,7 +17,16 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
     ></script>
-    <script></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/myPage.js"></script>
+    <script>
+    var data1 = ${count1week};
+    var data2 = ${count2week};
+    var data3 = ${count3week};
+    var data4 = ${count4week};
+
+ 
+    </script>
   </head>
   <body>
     <header></header>
@@ -36,7 +46,7 @@
           <div class="front_first">
             <div class="front_first_title">현재 몸무게</div>
             <div class="front_first_value">
-              <div class="first_value1"> kg</div>
+              <div class="first_value1">${cWeight} kg</div>
               <div class="first_value2"></div>
             </div>
           </div>
@@ -81,15 +91,15 @@
               </div>
             </div>
             <div class="statistics_2">
-              <div class="stat2_title">stat2</div>
+              <div class="stat2_title">피드 올린 횟수</div>
               <canvas id="stat2"></canvas>
             </div>
             <div class="statistics_3">
-              <div class="stat3_title">stat3</div>
+              <div class="stat3_title">피드 올린 횟수</div>
               <canvas id="stat3"></canvas>
             </div>
             <div class="statistics_4">
-              <div class="stat4_title">stat4</div>
+              <div class="stat4_title">피드 올린 횟수</div>
               <canvas id="stat4"></canvas>
             </div>
           </div>
@@ -107,96 +117,21 @@
                     </div>
                     <div class="myRcds_crs">
                       <span class="myRcds_crs_txt">진행 코스:</span>
-                      <div class="myRcds_crs_crsname">${crsnum }</div>
+                      <div class="myRcds_crs_crsname"></div>
                     </div>
                     <div class="myRcds_stf">
                       <span class="myRcds_stf_txt">나의 만족도:</span>
-                      <div class="myRcds_stf_usrstf">${slevel }</div>
+                      <div class="myRcds_stf_usrstf"></div>
                     </div>
                   </div>
                   <div class="content_bottom_myRcds_middle">
-                    <div class="middle_txt">${context}<br /></div>
+                    <div class="middle_txt"><br /></div>
                   </div>
                   <div class="content_bottom_myRcds_bottom">
-                    <div class="bottom_time">${regdate }</div>
+                    <div class="bottom_time"></div>
                   </div>
                 </div>
-                <div class="content_bottom_myRcds_img"></div>
-              </div>
-              <div class="content_bottom_myRcds_wrap">
-                <div class="content_bottom_myRcds_info">
-                  <div class="content_bottom_myRcds_top">
-                    <div class="myRcds_time">
-                      <span class="myRcds_time_txt">오늘 요가 시간</span>
-                      <div class="myRcds_time_usrtime"></div>
-                    </div>
-                    <div class="myRcds_crs">
-                      <span class="myRcds_crs_txt">진행 코스</span>
-                      <div class="myRcds_crs_crsname">${crsnum }</div>
-                    </div>
-                    <div class="myRcds_stf">
-                      <span class="myRcds_stf_txt">나의 만족도</span>
-                      <div class="myRcds_stf_usrstf">${slevel }</div>
-                    </div>
-                  </div>
-                  <div class="content_bottom_myRcds_middle">
-                    <div class="middle_txt">${context }<br /></div>
-                  </div>
-                  <div class="content_bottom_myRcds_bottom">
-                    <div class="bottom_time">${regdate }</div>
-                  </div>
-                </div>
-                <div class="content_bottom_myRcds_img"></div>
-              </div>
-              <div class="content_bottom_myRcds_wrap">
-                <div class="content_bottom_myRcds_info">
-                  <div class="content_bottom_myRcds_top">
-                    <div class="myRcds_time">
-                      <span class="myRcds_time_txt">오늘 요가 시간</span>
-                      <div class="myRcds_time_usrtime">| 32분</div>
-                    </div>
-                    <div class="myRcds_crs">
-                      <span class="myRcds_crs_txt">진행 코스</span>
-                      <div class="myRcds_crs_crsname">| A-2 코스</div>
-                    </div>
-                    <div class="myRcds_stf">
-                      <span class="myRcds_stf_txt">나의 만족도</span>
-                      <div class="myRcds_stf_usrstf">| 좋음</div>
-                    </div>
-                  </div>
-                  <div class="content_bottom_myRcds_middle">
-                    <div class="middle_txt">"나는 오늘 정말 만족한다..<br /></div>
-                  </div>
-                  <div class="content_bottom_myRcds_bottom">
-                    <div class="bottom_time">2020년 8월 15일</div>
-                  </div>
-                </div>
-                <div class="content_bottom_myRcds_img"></div>
-              </div>
-              <div class="content_bottom_myRcds_wrap">
-                <div class="content_bottom_myRcds_info">
-                  <div class="content_bottom_myRcds_top">
-                    <div class="myRcds_time">
-                      <span class="myRcds_time_txt">오늘 요가 시간</span>
-                      <div class="myRcds_time_usrtime">| 32분</div>
-                    </div>
-                    <div class="myRcds_crs">
-                      <span class="myRcds_crs_txt">진행 코스</span>
-                      <div class="myRcds_crs_crsname">| A-2 코스</div>
-                    </div>
-                    <div class="myRcds_stf">
-                      <span class="myRcds_stf_txt">나의 만족도</span>
-                      <div class="myRcds_stf_usrstf">| 좋음</div>
-                    </div>
-                  </div>
-                  <div class="content_bottom_myRcds_middle">
-                    <div class="middle_txt">"나는 오늘 정말 만족한다..<br /></div>
-                  </div>
-                  <div class="content_bottom_myRcds_bottom">
-                    <div class="bottom_time">2020년 8월 15일</div>
-                  </div>
-                </div>
-                <div class="content_bottom_myRcds_img"></div>
+                <img src="" class="content_bottom_myRcds_img">
               </div>
             </div>
           </div>

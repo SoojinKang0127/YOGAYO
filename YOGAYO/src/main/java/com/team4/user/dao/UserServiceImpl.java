@@ -34,22 +34,50 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public int tWeight() throws Exception {	
+	public int lWeight(UserVo vo) throws Exception {
 		
-		return dao.tWeight();
+		return dao.lWeight(vo);
 	}
 
 	@Override
-	public int lWeight() throws Exception {
-		
-		System.out.println(dao.lWeight());
-		
-		return dao.lWeight();
+	public int tWeight1(UserVo vo) throws Exception {
+		return dao.tWeight1(vo);
+	}
+	
+	@Override
+	public int tWeight2(UserVo vo) throws Exception {
+		return dao.tWeight2(vo);
 	}
 
+	@Override
+	public int cWeight(UserVo vo) throws Exception {
+		return dao.cWeight(vo);
+	}
 
+	@Override
+	public int count1week(UserVo vo) throws Exception {
+		return dao.count1week(vo);
+	}
 	
+	@Override
+	public int count2week(UserVo vo) throws Exception {
+		return dao.count2week(vo);
+	}
 	
+	@Override
+	public int count3week(UserVo vo) throws Exception {
+		return dao.count3week(vo);
+	}
+	
+	@Override
+	public int count4week(UserVo vo) throws Exception {
+		return dao.count4week(vo);
+	}
+
+	@Override
+	public List<FeedVo> selectAll(UserVo vo) throws Exception {
+		return dao.selectAll(vo);
+	}
 
 
 

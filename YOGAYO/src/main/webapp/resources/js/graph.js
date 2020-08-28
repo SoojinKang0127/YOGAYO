@@ -1,9 +1,9 @@
 var ctx2 = document.getElementById("stat2").getContext("2d")
-array = [12, 19, 3, 5, 2, 5]
+array = [data1, data2, data3, data4]
 var statistics_2_stat = new Chart(ctx2, {
   type: "pie",
   data: {
-    labels: ["Red", "Blue", "Yellow", "Green"],
+    labels: ["이번주", "1주전", "2주전", "3주전"],
     datasets: [
       {
         label: "weight",
@@ -26,11 +26,11 @@ var statistics_2_stat = new Chart(ctx2, {
 })
 
 var ctx3 = document.getElementById("stat3").getContext("2d")
-array = [12, 19, 3, 5, 2]
+array = [data1, data2, data3, data4]
 var statistics_3_stat = new Chart(ctx3, {
   type: "bar",
   data: {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple"],
+	    labels: ["이번주", "1주전", "2주전", "3주전"],
     datasets: [
       {
         label: ": weight",
@@ -61,11 +61,11 @@ var statistics_3_stat = new Chart(ctx3, {
 })
 
 var ctx4 = document.getElementById("stat4").getContext("2d")
-array = [12, 19, 3, 5, 2, 8]
+array = [data1, data2, data3, data4]
 var statistics_4_stat = new Chart(ctx4, {
   type: "line",
   data: {
-    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Black"],
+	    labels: ["이번주", "1주전", "2주전", "3주전"],
     datasets: [
       {
         label: ": weight",
