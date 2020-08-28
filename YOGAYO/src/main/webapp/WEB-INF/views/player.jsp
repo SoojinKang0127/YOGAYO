@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>TaeGyum</title>
+<title>course player</title>
 
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/player.css">
@@ -28,7 +28,7 @@
 					$("#pop3").hide()
 				}
 
-				var mySlider = new rSlider({
+/* 				var mySlider = new rSlider({
 					target : "#slider1",
 					values : [ 1, 2, 3, 4, 5 ],
 					range : false,
@@ -42,7 +42,11 @@
 					range : false,
 					set : [ 5 ],
 					tooltip : false,
-				})
+				}) */
+				
+				
+				
+				
 
 				$(".end-btn").click(function() {
 					$("#pop1").show()
@@ -61,6 +65,13 @@
 					$("#pop3").hide()
 					$(display).text(num[0].value + " kg")
 				})
+				
+				
+				
+				
+				
+
+				
 
 				function getParam(sname) {
 
@@ -84,62 +95,22 @@
 					return sval;
 
 				}
+				
+				
 
-				<!-- 
-				$(".pop2-btn")
-						.click(
-								function() {
 
-									var method = "POST";
-									var path = "feed";
-									var crsNum = getParam("course");
-
-									var form = document.createElement("form");
-									form.setAttribute("method", method);
-									form.setAttribute("action", path);
-									form.setAttribute("enctype",
-											"multipart/form-data");
-									document.body.appendChild(form);
-
-									var keys = [ "course", "slevel", "dlevel",
-											"context", "weight" ];
-									var values = [ crsNum,
-											(mySlider.values.end + 1),
-											(mySlider2.values.end + 1),
-											$(".main-top-text").val(),
-											num[0].value ];
-
-									for (var i = 0; i < 5; i++) {
-										var hiddenField = document
-												.createElement("input");
-										hiddenField.setAttribute("type",
-												"hidden");
-										hiddenField.setAttribute("name",
-												keys[i]);
-										hiddenField.setAttribute("value",
-												values[i]);
-
-										form.appendChild(hiddenField);
-									}
-
-									form.submit();
-
-								})
-								
-								-->
-
-			})
+			});
 </script>
 </head>
 <body>
 
 
-	<form action="feed" method="POST" enctype="multipart/form-data" name="feed">
-		<input type="hidden" name="course" value=""> 
-		<input type="hidden" name="slevel" value="">
-		<input type="hidden" name="dlevel" value="">
-		<input type="hidden" name="context" value=""> 
-		<input type="hidden" name="weight" value="">
+	<form action="feedupload" method="POST" enctype="multipart/form-data" name="feed" id="feed">
+		<input type="hidden" name="course" value="" id="course"> 
+		<input type="hidden" name="slevel" value="" id="slevel">
+		<input type="hidden" name="dlevel" value="" id="dlevel">
+		<input type="hidden" name="context" value="" id="context"> 
+		<input type="hidden" name="weight" value="" id="weight">
 
 
 
@@ -271,8 +242,8 @@
 					</div>
 					<div class="pop2-main-bottom">
 						<div class="container">
-							<label for="file1" class="main-bottom-btn1">사진 업로드</label> <input
-								type="file" id="file1" name="file"
+							<label for="file" class="main-bottom-btn1">사진 업로드</label> <input
+								type="file" id="file" name="file"
 								onchange="setThumbnail(event);" />
 						</div>
 						<div class="main-bottom-btn2">몸무게</div>
@@ -322,7 +293,7 @@
 						reader.readAsDataURL(event.target.files[0]);
 					}
 				</script>
-				<div class="pop2-btn" id="submit" onclick="submit();">게시하기</div>
+				<div class="pop2-btn" id="submit" onmouseover="submit();">게시하기</div>
 			</div>
 		</div>
 		<div id="pop3">
@@ -335,16 +306,69 @@
 	</form>
 	<script type="text/javascript">
 	
-	
+		var form = document.feed;
+		var course = document.getElementById("course");
+		var slevel = document.getElementById("slevel");
+		var dlevel = document.getElementById("dlevel");
+		var context = document.getElementById("context");
+		var weight = document.getElementById("weight");
+		//var file = document.file;
+		var num = document.getElementsByClassName("pop3-top-input")
+		
+		
+		var mySlider = new rSlider({
+			target : "#slider1",
+			values : [ 1, 2, 3, 4, 5 ],
+			range : false,
+			set : [ 5 ],
+			tooltip : false,
+		})
+
+		var mySlider2 = new rSlider({
+			target : "#slider2",
+			values : [ 1, 2, 3, 4, 5 ],
+			range : false,
+			set : [ 5 ],
+			tooltip : false,
+		})
+		
+		
+
+		function getParam(sname) {
+			var params = location.search.substr(location.search.indexOf("?") + 1);
+			var sval = "";
+			params = params.split("&");
+
+			for (var i = 0; i < params.length; i++) {
+				temp = params[i].split("=");
+				if ([ temp[0] ] == sname) {
+							sval = temp[1];
+				}
+			}
+					return sval;
+		}
+
 	function submit(){
 		
-		var form = document.feed;
+		console.log(getParam("course"));
+		console.log((mySlider.values.end + 1));
+		console.log((mySlider2.values.end + 1));
+		console.log($(".main-top-text").val());
+		console.log(num[0].value);
 		
 		
+		course.setAttribute("value", getParam("course"));
+		slevel.setAttribute("value", mySlider.values.end + 1);
+		dlevel.setAttribute("value", (mySlider2.values.end + 1));
+		context.setAttribute("value", $(".main-top-text").val());
+		weight.setAttribute("value", num[0].value);
 		
-		
-		
-		
+		console.log(course);
+		console.log(slevel);
+		console.log(dlevel);
+		console.log(context);
+		console.log(weight);
+		console.log(form);
 		
 		form.submit();
 	}

@@ -280,7 +280,7 @@
 					<i class="far fa-copyright"></i> 2020 Team4,Inc.All rights reserved
 					<div class="footer_right_sub">
 						<span>개인정보 처리방침</span> <span>·</span> <span>이용약관</span> <span>·</span>
-						<span>사이트 맵</span>
+						<span>사이트 맵 ${pageContext.request.contextPath}</span>
 					</div>
 				</div>
 				<div class="main-footer_left">
