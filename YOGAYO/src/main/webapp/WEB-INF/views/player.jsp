@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,13 +21,25 @@
 	src="${pageContext.request.contextPath}/resources/js/player-rSlider.min.js"></script>
 
 <script>
-	$(document).ready(
-			function() {
+	
+timeArr=new Array();
+timeArr.push('${pose1.time}'*100);
+timeArr.push('${pose2.time}'*100);
+timeArr.push('${pose3.time}'*100);
+timeArr.push('${pose4.time}'*100);
+timeArr.push('${pose5.time}'*100);
+timeArr.push('${pose6.time}'*100);
+timeArr.push('${pose7.time}'*100);
+timeArr.push('${pose8.time}'*100);
+	
+	$(document).ready(function() {
 				window.onload = function() {
+					a=<c:out value='${pose1.time}'/>;
+					console.log(a)
 					$("#pop1").hide()
 					$("#pop2").css("visibility", "hidden")
 					$("#pop3").hide()
-				}
+				} 
 				
 				$(".end-btn").click(function() {
 					$("#pop1").show()
@@ -70,86 +83,175 @@
 				</div>
 			</header>
 			<main>
-				<div class="main-wrapper">
-					<div class="course-main">
-						<div class="image-wrapper">
-							<div class="image-progress-bar"></div>
-							<div class="course-image"></div>
-						</div>
-						<div class="info-wrapper">
-							<div class="course-title"></div>
-							<div class="course-info">
-								<div class="main-course-title">코스 A: 허리에 좋은 기초 요가 클래스</div>
-								<div class="main-course-info">
-									<div class="rightwrapper">
-										<span>누적 플레이 수</span> <span class="accumulate-number">
-											160회</span> <span>•</span> <span class="reg-date"> 2020.08.19</span>
-									</div>
-									<div class="leftwrapper">
-										<span class="like"><i class="far fa-heart"></i></span> <span
-											class="like-number">34</span>
-									</div>
-								</div>
-							</div>
-							<div class="user-info">
-								<div class="user-image"></div>
-								<div class="user-detail">
-									<div class="user-name">태겸</div>
-									<div class="user-introduction">안녕하세요!</div>
-								</div>
-							</div>
-						</div>
+			<div class="main-wrapper">
+				<div class="course-main">
+					<div class="image-wrapper">
+						<div class="image-progress-bar"></div>
+						<div class="course-image"></div>
 					</div>
-					<div class="course-list">
-						<div class="list-header">
-							<div class="list-header-title">COURSE A</div>
-							<div class="list-header-count">코스 1/30</div>
-						</div>
-						<div class="scroll-overflow">
-							<ul class="order-ul">
-								<li class="order-li">
-									<div class="order-progress-bar"></div>
-									<div class="order-wrapper">
-										<div class="order-number">
-											<div>1</div>
-										</div>
-										<div class="order-image">
-											<image src="boat.webp"> </image>
-										</div>
-										<div class="order-title">
-											<div>배 자세</div>
-											<div></div>
-										</div>
-									</div>
-								</li>
-								<li class="order-li">
-									<div class="order-progress-bar"></div>
-									<div class="order-wrapper">
-										<div class="order-number">
-											<div>2</div>
-										</div>
-										<div class="order-image">
-											<image src="chair.webp"> </image>
-										</div>
-										<div class="order-title">
-											<div>의자 자세</div>
-											<div>0:30</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="list-footer">
-							<div class="play-button">
-								<i class="fas fa-pause btn"></i>
+					<div class="info-wrapper">
+						<div class="course-title">${course.title}</div>
+						<div class="course-info">
+							<div class="main-course-title"></div>
+							<div class="main-course-info">
+								<div class="rightwrapper">
+									<span>누적 플레이 수</span> <span class="accumulate-number">
+										160회</span> <span>•</span> <span class="reg-date"> 2020.08.19</span>
+								</div>
+								<div class="leftwrapper">
+									<span class="like"><i class="far fa-heart"></i></span> <span
+										class="like-number">34</span>
+								</div>
 							</div>
-							<div class="end-btn">운동 종료</div>
+						</div>
+						<div class="user-info">
+							<div class="user-image"></div>
+							<div class="user-detail">
+								<div class="user-name">태겸</div>
+								<div class="user-introduction">안녕하세요!</div>
+							</div>
 						</div>
 					</div>
 				</div>
+				<div class="course-list">
+					<div class="list-header">
+						<div class="list-header-title">${course.title}</div>
+						<div class="list-header-count">코스 1/8</div>
+					</div>
+					<div class="scroll-overflow">
+						<ul class="order-ul">
+							<li class="order-li">
+								<div class="order-progress-bar"></div>
+								<div class="order-wrapper">
+									<div class="order-number">
+										<div>1</div>
+									</div>
+									<div class="order-image">
+										<image src="${pose1.img_Path}"> </image>
+									</div>
+									<div class="order-title">
+										<div>${pose1.title}</div>
+										<div></div>
+									</div>
+								</div>
+							</li>
+							<li class="order-li">
+								<div class="order-progress-bar"></div>
+								<div class="order-wrapper">
+									<div class="order-number">
+										<div>2</div>
+									</div>
+									<div class="order-image">
+										<image src="${pose2.img_Path}"> </image>
+									</div>
+									<div class="order-title">
+										<div>${pose2.title}</div>
+										<div>0:30</div>
+									</div>
+								</div>
+							</li>
+							<li class="order-li">
+								<div class="order-progress-bar"></div>
+								<div class="order-wrapper">
+									<div class="order-number">
+										<div>1</div>
+									</div>
+									<div class="order-image">
+										<image src="${pose3.img_Path}"> </image>
+									</div>
+									<div class="order-title">
+										<div>${pose3.title}</div>
+										<div></div>
+									</div>
+								</div>
+							</li>
+							<li class="order-li">
+								<div class="order-progress-bar"></div>
+								<div class="order-wrapper">
+									<div class="order-number">
+										<div>1</div>
+									</div>
+									<div class="order-image">
+										<image src="${pose4.img_Path}"> </image>
+									</div>
+									<div class="order-title">
+										<div>${pose4.title}</div>
+										<div></div>
+									</div>
+								</div>
+							</li>
+							<li class="order-li">
+								<div class="order-progress-bar"></div>
+								<div class="order-wrapper">
+									<div class="order-number">
+										<div>1</div>
+									</div>
+									<div class="order-image">
+										<image src="${pose5.img_Path}"> </image>
+									</div>
+									<div class="order-title">
+										<div>${pose5.title}</div>
+										<div></div>
+									</div>
+								</div>
+							</li>
+							<li class="order-li">
+								<div class="order-progress-bar"></div>
+								<div class="order-wrapper">
+									<div class="order-number">
+										<div>1</div>
+									</div>
+									<div class="order-image">
+										<image src="${pose6.img_Path}"> </image>
+									</div>
+									<div class="order-title">
+										<div>${pose6.title}</div>
+										<div></div>
+									</div>
+								</div>
+							</li>
+							<li class="order-li">
+								<div class="order-progress-bar"></div>
+								<div class="order-wrapper">
+									<div class="order-number">
+										<div>1</div>
+									</div>
+									<div class="order-image">
+										<image src="${pose7.img_Path}"> </image>
+									</div>
+									<div class="order-title">
+										<div>${pose7.title}</div>
+										<div></div>
+									</div>
+								</div>
+							</li>
+							<li class="order-li">
+								<div class="order-progress-bar"></div>
+								<div class="order-wrapper">
+									<div class="order-number">
+										<div>1</div>
+									</div>
+									<div class="order-image">
+										<image src="${pose8.img_Path}"> </image>
+									</div>
+									<div class="order-title">
+										<div>${pose8.title}</div>
+										<div></div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="list-footer">
+						<div class="play-button">
+							<i class="fas fa-pause btn"></i>
+						</div>
+						<div class="end-btn">운동 종료</div>
+					</div>
+				</div>
+			</div>
 			</main>
-			<script language=JavaScript
-				src="${pageContext.request.contextPath}/resources/js/player.js"></script>
+			<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/player.js"></script>
 		</div>
 		<div id="pop1">
 			<div class="pop1-txt">

@@ -1,10 +1,11 @@
 barArr = document.getElementsByClassName("order-progress-bar")
 bar = barArr[0]
-time = 100
 play = document.getElementsByClassName("play-button")
 p_btn = document.getElementsByClassName("fas fa-pause btn")
 document.get
 index = 0
+time = timeArr[index]
+console.log(timeArr)
 timer = document.querySelector(
   "div.scroll-overflow > ul > li:nth-child(" +
     (index + 1) +
@@ -29,12 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
       time--
     } else {
       if (barArr.length > index) {
+    	  index++
         if (barArr.length - 1 == index) {
           time = 0
         } else {
-          time = 100
+          time = timeArr[index]
         }
-        index++
         bar = barArr[index]
         bar.style.animationDuration = time / 100 + "s"
         bar.style.animationName = "progress"
@@ -78,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
           if (barArr.length > index) {
             index++
-            time = 3000
+            time = timeArr[index]
             bar = barArr[index]
             bar.style.animationDuration = time / 100 + "s"
             bar.style.animationName = "progress"
