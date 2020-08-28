@@ -3,9 +3,12 @@ package com.team4.test;
 import java.io.IOException;
 import java.sql.Date;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.bson.Document;
@@ -19,6 +22,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.team4.resource.Rcontroller;
 import com.team4.user.dao.UserDAO;
 import com.team4.user.dao.UserDAOImpl;
 import com.team4.user.dao.UserServiceImpl;
@@ -31,8 +35,11 @@ public class SignUpController {
 	UserDAO dao = new UserDAOImpl();
 
 	@RequestMapping(value = "/sign-up", method = RequestMethod.GET)
-	public String signUp(Locale locale, Model model) {
-
+	public String signUp(Locale locale, Model model,HttpServletRequest req) {
+	Rcontroller rc= new Rcontroller();
+	Object[] keyword = rc.getKeywordList().toArray();
+	req.setAttribute("length",rc.getKeywordList().size());
+	req.setAttribute("keyword", keyword);
 		return "sign-up";
 	}
 
