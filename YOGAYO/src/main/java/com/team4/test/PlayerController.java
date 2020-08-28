@@ -69,15 +69,13 @@ public class PlayerController {
 		long fileSize = mf.getSize();
 		
 		String fileType=originalFileName.substring(originalFileName.lastIndexOf('.'), originalFileName.length());
-		System.out.println(fileType);
-		System.out.println(multi.getRealPath("/"));
-		
+		System.out.println("realpath:"+multi.getRealPath("/"));
 		//Users/soo/Documents/YOGAYO/YOGAYO/YOGAYO/src/main/webapp/resources/image/feedimages
 		//String testPath="C://Users/kosmo//document//github//yogayo/yogayo/.metadat////"
-		String realPath = "/Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/YOGAYO/";
+		String realPath = multi.getRealPath("/");
 		String curUserPath=realPath.substring(0, realPath.indexOf(".metadata"));
 		System.out.println(curUserPath);
-		String path = curUserPath +"YOGAYO/src/main/webapp/resources/image/feedimages/";
+		String path = curUserPath +"YOGAYO\\src\\main\\webapp\\resources\\image\\feedimages\\";
 		System.out.println(path);
 		int no=0;
 		try {
