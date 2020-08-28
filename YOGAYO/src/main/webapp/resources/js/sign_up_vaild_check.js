@@ -139,7 +139,6 @@ $(document).ready(
 		function() {
 			/* 이메일 유효성 */
 			$("#email").keyup(function() {
-				
 				request.open("Post", "./checkDuplication?email="
 						+ encodeURIComponent(email[0].value), true);
 				request.onreadystatechange = after_ajax;
