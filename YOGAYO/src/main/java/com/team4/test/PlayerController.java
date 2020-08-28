@@ -64,19 +64,19 @@ public class PlayerController {
 		
 		MultipartFile mf = multi.getFile("file");
 		String originalFileName = mf.getOriginalFilename();
-		long fileSize = mf.getSize();
-		
 		String fileType=originalFileName.substring(originalFileName.lastIndexOf('.'), originalFileName.length());
-		System.out.println(fileType);
-		System.out.println(multi.getRealPath("/"));
 		
-		
-		String realPath = "/Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/YOGAYO/";
+		String realPath = multi.getRealPath("/");
 		String curUserPath=realPath.substring(0, realPath.indexOf(".metadata"));
-		System.out.println(curUserPath);
-		String path = curUserPath +"YOGAYO/src/main/webapp/resources/image/feedimages/";
+		curUserPath=curUserPath.replace('\\', '/');
+		String path=null;
+	      if(curUserPath.indexOf("YOGAYO")==-1) {
+	         path= curUserPath+"YOGAYO/YOGAYO/src/main/webapp/resources/image/feedimages/";
+	      }else {
+	         
+	          path = curUserPath + "YOGAYO/src/main/webapp/resources/image/feedimages/";
+	      }
 		String projectPath = "resources/image/feedimages/";
-		System.out.println(path);
 		
 		int no=0;
 		try {
@@ -85,7 +85,6 @@ public class PlayerController {
 			e1.printStackTrace();
 		}
 		String safeFile = path + "feed"+Integer.toString(no)+fileType;
-		
 		String prjPathandName = projectPath + "feed"+Integer.toString(no)+fileType;
 		
 		
@@ -115,68 +114,10 @@ public class PlayerController {
 			System.out.println("피드 들어감");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("오류 피드 안 들어감");
+			System.out.println("오류! 피드 안 들어감");
 		}
 		
-		return "main";
-	}
-	
-	
-	
-	
-	
-	@RequestMapping(value = "/feeduploads", method = RequestMethod.POST)
-	public String review(MultipartHttpServletRequest request,
-			@RequestParam(value="course", defaultValue = "name"
-					, required = false) String crsNum,
-			@RequestParam(value="slevel", defaultValue = "name"
-					, required = false) String sLevel,
-			@RequestParam(value="dlevel", defaultValue = "name"
-					, required = false) String dLevel,
-			@RequestParam(value="context", defaultValue = "name"
-					, required = false) String context,
-			@RequestParam(value="weight", defaultValue = ""
-					, required = false) String weight){
-		
-		System.out.println(request.getParameter("course"));
-		
-		
-			
-	
-			
-		
-
-		
-//		System.out.println(crsNum);
-//		System.out.println(sLevel);
-//		System.out.println(dLevel);
-//		System.out.println(context);
-//		System.out.println(weight);
-		
-//		FeedVo vo = new FeedVo();
-//		FeedServiceImpl service = new FeedServiceImpl();
-//
-//		HttpSession session = req.getSession();
-//		UserVo user = (UserVo)session.getValue("user");
-//		int uNum = user.getuNum();
-//		
-//		vo.setuNum(uNum);
-//		vo.setCrsNum(crsNum);
-//		vo.setsLevel(sLevel);
-//		vo.setdLevel(dLevel);
-//		vo.setContext(context);
-//		vo.setWeight(weight);
-//	
-//		try {
-//			service.upload(vo);
-//			System.out.println("피드 들어감");
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//			 System.out.println("피드 안 들어감");
-//		}
-		
-		return "main";
+		return "mypage";
 	}
 	
 	

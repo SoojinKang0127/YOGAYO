@@ -292,6 +292,8 @@
 
 	function submit(){
 		
+		
+		alert("후기를 등록하였습니다.")
 		course.setAttribute("value", getParam("course"));
 		slevel.setAttribute("value", mySlider.values.end + 1);
 		dlevel.setAttribute("value", (mySlider2.values.end + 1));

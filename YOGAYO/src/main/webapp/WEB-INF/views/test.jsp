@@ -9,7 +9,8 @@
 <body>
 
 
-${message}
+<img src="${pageContext.request.contextPath}/${feed.umig}"
+					class="profile_img" />
 
 </body>
 </html>
