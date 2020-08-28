@@ -51,6 +51,7 @@ public class MyPageController {
 		int count2week = 0;
 		int count3week = 0;
 		int count4week = 0;
+	
 
 		
 		try {
@@ -63,7 +64,6 @@ public class MyPageController {
 			count3week = service.count3week(vo);
 			count4week = service.count4week(vo);
 	
-			
 		} catch (Exception e) {
 			System.out.println("[MyPageController / myPage]" + e.toString());
 			e.printStackTrace();
@@ -122,22 +122,16 @@ public class MyPageController {
 		
 		res.getWriter().write(msg);
 
-		System.out.println(msg);
+//		System.out.println(msg);
 
 		
 		
 		
 	// ----------------- end of 내 요가 후기 -------------------
-
-	}
-	
-	
-	
 	
 	// -------------- start of 나만의 코스 리스트 -------------------
 	
-	@RequestMapping(value = "/myPage", method = RequestMethod.POST) 
-	public void playListAJAX2(@RequestParam("course") String course, HttpServletResponse res) throws IOException {
+		
 		List<CourseVo> list2 =null;
 		
 		try {
@@ -159,6 +153,12 @@ public class MyPageController {
 			listObj2.put(Integer.toString(l),obj2);
 			l++;
 		}
-	}
 		
+		String msg2= listObj2.toString();
+		
+		System.out.println(msg2);
+		
+
+	}
+
 }

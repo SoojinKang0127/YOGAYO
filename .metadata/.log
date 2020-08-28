@@ -13903,3 +13903,90 @@ org.eclipse.swt.SWTException: Widget is disposed
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:17:15.281
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 4 2020-08-28 15:37:12.782
+!MESSAGE Background Indexer Crash Recovery
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:37:12.958
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:37:12.963
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!MESSAGE Background Indexer Crash Recovery
+!STACK 0
+java.lang.OutOfMemoryError: Requested array size exceeds VM limit
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:37:19.052
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:37:19.068
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:37:19.108
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jdt.core 4 1006 2020-08-28 15:37:19.156
+!MESSAGE /Users/minjae/.m2/repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2020-08-28 15:37:19.163
+!MESSAGE /Users/minjae/.m2/repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2020-08-28 15:37:19.167
+!MESSAGE /Users/minjae/.m2/repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2020-08-28 15:37:19.168
+!MESSAGE /Users/minjae/.m2/repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2020-08-28 15:37:19.168
+!MESSAGE /Users/minjae/.m2/repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2020-08-28 15:37:19.170
+!MESSAGE /Users/minjae/.m2/repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.core 4 1006 2020-08-28 15:37:19.171
+!MESSAGE /Users/minjae/.m2/repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar is not on its project's build path
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:38:39.206
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:38:39.232
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:40:28.474
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:40:28.478
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:53:22.651
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:53:22.655
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:55:16.109
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:55:16.115
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:56:34.309
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 15:56:34.326
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 16:03:48.042
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 16:03:48.106
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 16:07:22.028
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-08-28 16:07:22.034
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!

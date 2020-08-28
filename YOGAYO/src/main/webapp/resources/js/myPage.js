@@ -24,6 +24,7 @@ $(function() {
 	function after_ajax() {
 
 		var gol = request.responseText;
+		console.log(gol)
 		if (request.readyState == 4 && request.status == 200) {
 			var list = JSON.parse(gol)
 			var keyLength = Object.keys(list).length;
