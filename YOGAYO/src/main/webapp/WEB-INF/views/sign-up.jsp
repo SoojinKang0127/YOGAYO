@@ -39,7 +39,7 @@
 						
 						<label for="">이메일</label>
 						<input type="text" name="id" id="email" placeholder="johndoe@example.com" /> <br /> 
-						
+						<div class="msgContainer"><label for=""></label><span class="emailVaildMsg" >이미 사용중이거나 올바르지 않은 이메일입니다.</span><br /></div>
 						<label for="">이름</label>
 						<input type="text" name="name" id="name" placeholder="3자 이상" /><br /> 
 						
@@ -109,8 +109,6 @@
 	<script language=JavaScript
 		src="${pageContext.request.contextPath}/resources/js/sign_up_interests.js"></script>
 	<script>
-	
-
 	
 		function goToStep2() {
 			if (emailDuplCheck() && nameVaildCheck() && birthdayVaildCheck()
