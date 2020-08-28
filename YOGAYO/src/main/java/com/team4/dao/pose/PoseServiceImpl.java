@@ -20,7 +20,7 @@ public class PoseServiceImpl implements PoseService {
 	}
 
 	@Override
-	public List<String> poseSelectAll() throws Exception {
+	public List<PoseVo> poseSelectAll() throws Exception {
 		return dao.poseSelectAll();
 	}
 

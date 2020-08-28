@@ -27,7 +27,7 @@ public class PoseDAOImpl implements PoseDAO {
 	}
 
 	@Override
-	public List<String> poseSelectAll() throws Exception {
+	public List<PoseVo> poseSelectAll() throws Exception {
 		return mybatis.selectList("PoseDao.poseSelectAll");
 	}
 
