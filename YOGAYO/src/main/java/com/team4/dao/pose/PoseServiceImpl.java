@@ -20,7 +20,7 @@ public class PoseServiceImpl implements PoseService {
 	}
 
 	@Override
-	public List<String> poseSelectAll() throws Exception {
+	public List<PoseVo> poseSelectAll() throws Exception {
 		return dao.poseSelectAll();
 	}
 
@@ -32,6 +32,11 @@ public class PoseServiceImpl implements PoseService {
 	@Override
 	public void update(PoseVo vo) throws Exception {
 		dao.poseUpdate(vo);
+	}
+
+	public List<String> poseSelectJSON(String string) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.poseSelectJSON(string);
 	}
 
 }

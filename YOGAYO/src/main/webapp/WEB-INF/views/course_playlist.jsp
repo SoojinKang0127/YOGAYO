@@ -29,7 +29,7 @@
                 <input type="text" class="textbox" placeholder="코스의 제목을 입력하세요" />
               </div>
               <div class="course_search">
-                <input type="text" class="textbox" placeholder="원하는 포즈명을 입력하세요" />
+                <input type="text" id="searching_box" class="textbox" placeholder="원하는 포즈명을 입력하세요" />
               </div>
               
               <div class="course_add">
@@ -45,7 +45,7 @@
                       
                       
                       
-                      <li class="pose_content_box">
+                      <%-- <li class="pose_content_box">
                         <div class="pose_picture">
                           <img
                             src="https://i.pinimg.com/originals/fc/15/2d/fc152dc03dc4e6df1aa6e1079dfa3804.jpg"
@@ -55,8 +55,6 @@
                         <div class="pose_textarea">
                           <div class="pose_title">THIS IS POSE 1</div>
                           <div class="pose_content">
-                            이자세는 무슨무슨자세입니다.이자세는 무슨무슨자세입니다.이자세는
-                            무슨무슨자세입니다.이자세는 무슨무슨자세입니다.
                           </div>
                           <div class="info_box">
                             <div class="pose_time">
@@ -77,57 +75,18 @@
                             <input type="button" value="추가하기" class="add_button" />
                           </div>
                         </div>
-                      </li>
-
-
-                      <li class="pose_content_box">
-                        <div class="pose_picture">
-                          <img
-                            src="${poselist.img_Path}"
-                            class="s1_img"
-                          />
-                        </div>
-                        <div class="pose_textarea">
-                          <div class="pose_title">THIS IS POSE 1</div>
-                          <div class="pose_content">
-                            이자세는 무슨무슨자세입니다.이자세는 무슨무슨자세입니다.이자세는
-                            무슨무슨자세입니다.이자세는 무슨무슨자세입니다.
-                          </div>
-                          <div class="info_box">
-                            <div class="pose_time">
-                              <i class="far fa-clock" style="font-size: 24px;"></i>
-                              <p class="time">30초</p>
-                            </div>
-                            <div class="underline"></div>
-                            <div class="pose_tag">
-                              <i class="fas fa-hashtag" style="font-size: 24px;"></i>
-                              <p class="pose_tag_content">허리</p>
-                            </div>
-                            <div class="underline"></div>
-                            <div class="difficulty">
-                              <i class="fas fa-universal-access" style="font-size: 24px;"></i>
-                              <p class="difficulty_content">상</p>
-                            </div>
-                            <div class="underline"></div>
-                            <input type="button" value="추가하기" class="add_button" />
-                          </div>
-                        </div>
-                      </li>
-
-
-
-
+                      </li> --%>
 
 
 
                     </ul>
                   </div>
-                  <!--s1_wrapper end(blue)-->
+                  <!--s1_wrapper end()-->
                 </div>
               </div>
-              <!--end of pose_info_box(red)-->
+              <!--end of pose_info_box()-->
             </li>
-            <!--s1_wrapper(yellow)-->
+            <!--s1_wrapper()-->
           </div>
           <!-- <div class="add_btn_box">
                                                             <a href="#" class="add_pose">추가하기</a>
@@ -141,83 +100,6 @@
               <div class="list_box">
                 <ul id="sortable_list2" class="connectedSortable">
                   <div id="object1">obje1</div>
-
-                  <!-- <li class="pose_list_wrapper">
-                    <div class="pose_list_picture">
-                      <img
-                        src="http://image.dongascience.com/Photo/2019/09/d2468576cecf1313437de5a883bfa2ed.jpg"
-                        class="list_img"
-                      />
-                    </div>
-                    <div class="pose_list_textarea">
-                      <div class="pose_list_title">THIS IS POSE 1</div>
-                      <div class="underline"></div>
-                    </div>
-                  </li> -->
-
-                  <!-- <li class="pose_list_wrapper">
-                    <div class="pose_list_picture">
-                      <img
-                        src="http://image.dongascience.com/Photo/2019/09/d2468576cecf1313437de5a883bfa2ed.jpg"
-                        class="list_img"
-                      />
-                    </div>
-                    <div class="pose_list_textarea">
-                      <div class="pose_list_title">THIS IS POSE 1</div>
-                      <div class="underline"></div>
-                    </div>
-                  </li>
-
-                  <li class="pose_list_wrapper">
-                    <div class="pose_list_picture">
-                      <img
-                        src="http://image.dongascience.com/Photo/2019/09/d2468576cecf1313437de5a883bfa2ed.jpg"
-                        class="list_img"
-                      />
-                    </div>
-                    <div class="pose_list_textarea">
-                      <div class="pose_list_title">THIS IS POSE 1</div>
-                      <div class="underline"></div>
-                    </div>
-                  </li>
-
-                  <li class="pose_list_wrapper">
-                    <div class="pose_list_picture">
-                      <img
-                        src="http://image.dongascience.com/Photo/2019/09/d2468576cecf1313437de5a883bfa2ed.jpg"
-                        class="list_img"
-                      />
-                    </div>
-                    <div class="pose_list_textarea">
-                      <div class="pose_list_title">THIS IS POSE 1</div>
-                      <div class="underline"></div>
-                    </div>
-                  </li>
-                  <li class="pose_list_wrapper">
-                    <div class="pose_list_picture">
-                      <img
-                        src="http://image.dongascience.com/Photo/2019/09/d2468576cecf1313437de5a883bfa2ed.jpg"
-                        class="list_img"
-                      />
-                    </div>
-                    <div class="pose_list_textarea">
-                      <div class="pose_list_title">THIS IS POSE 1</div>
-                      <div class="underline"></div>
-                    </div>
-                  </li>
-
-                  <li class="pose_list_wrapper">
-                    <div class="pose_list_picture">
-                      <img
-                        src="http://image.dongascience.com/Photo/2019/09/d2468576cecf1313437de5a883bfa2ed.jpg"
-                        class="list_img"
-                      />
-                    </div>
-                    <div class="pose_list_textarea">
-                      <div class="pose_list_title">THIS IS POSE 1</div>
-                      <div class="underline"></div>
-                    </div>
-                  </li>  -->
                 </ul>
               </div>
               <div class="button_box">

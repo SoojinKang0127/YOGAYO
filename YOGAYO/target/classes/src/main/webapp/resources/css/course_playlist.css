@@ -1,5 +1,4 @@
 @import url("style.css");
-@import url("reset.css");
 
 /* add class css */
 
@@ -356,4 +355,8 @@ i {
 }
 
 #object1 {
+}
+
+#sortable_list2 > li {
+width: 50%;
 }
