@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="UserDao">
+  
+  	<select id="myPage" resultType="int">
+  	
+  		<![CDATA[ 
+  		select truncate((select 
+	avg(weight) 
+	from 
+	FEED 
+	where 
+	(last_day(now()) >  regdate 
+	and 
+	last_day(now() - interval 1 month) + interval 1 day < regdate)),0)
+  		 ]]>
+  	
+  	</select>
+  	
+  	<select id="review" resultType="UserVo">
+  		SELECT
+  			FNUM, SLEVEL, CONTEXT, UIMG1, REGDATE
+  		FROM
+  			FEED
+  		WHERE
+  			UNUM=#{uNum}
+  	</select>
+  
+  	
+  </mapper>

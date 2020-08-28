@@ -41,13 +41,13 @@
 &lt;p&gt;Alright my friends, let&amp;rsquo;s get into it. We&amp;rsquo;ve got a ton of stuff to go through so onward! &lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/liangkylie/status/1296682854194327552?s=12"&gt;Azure Spring Cloud now supports autoscale!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://techcommunity.microsoft.com/t5/spring-on-azure/azure-spring-integrations-august-update/ba-p/1595105"&gt;Azure Spring Integrations ? August update - Microsoft Tech Community - 1595105&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://techcommunity.microsoft.com/t5/spring-on-azure/azure-spring-integrations-august-update/ba-p/1595105"&gt;Azure Spring Integrations ‚Äì August update - Microsoft Tech Community - 1595105&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/21/bootiful-podcast-google-cloud-s-elena-felder-on-spring-cloud-gcp-reactor-and-more"&gt;Bootiful Podcast: Google Cloud&amp;rsquo;s Elena Felder on Spring Cloud GCP, Reactor, and More&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://www.youtube.com/watch?feature=youtu.be&amp;v=PR6Gw4Ca-sE&amp;app=desktop"&gt;Build a Secure CRUD Application with React, Spring Boot, and Kotlin - YouTube&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/25/case-study-reading-from-a-file-and-writing-to-mongodb"&gt;Case Study: Reading from a file and writing to MongoDB&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/21/get-the-very-first-bits-of-spring-authorization-server-0-0-1"&gt;Get the very first bits of Spring Authorization Server 0.0.1 !&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/08/20/jep338-proposed-to-target-jdk16/"&gt;JEP proposed to target JDK 16: 338: Vector API (Incubator)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blog.jetbrains.com/kotlin/2020/08/kotlin-1-4-released-with-a-focus-on-quality-and-performance/"&gt;Kotlin 1.4 Released with a Focus on Quality and Performance ? Kotlin Blog | JetBrains&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://blog.jetbrains.com/kotlin/2020/08/kotlin-1-4-released-with-a-focus-on-quality-and-performance/"&gt;Kotlin 1.4 Released with a Focus on Quality and Performance ‚Äì Kotlin Blog | JetBrains&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://jax.de/spring-boot-cheat-sheet/"&gt;Spring Boot Cheat Sheet | W-JAX |&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/22/spring-boot-for-apache-geode-vmware-gemfire-1-4-0-m2-and-1-3-3-release-available"&gt;Spring Boot for Apache Geode &amp;amp; VMware GemFire 1.4.0-M2 and 1.3.3.RELEASE Available&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/spencerbgibb/status/1296904539300388873?s=12"&gt;The RSocket routing broker roadmap is now available&lt;/a&gt;&lt;/li&gt;
@@ -101,7 +101,7 @@
 &lt;h2 id="file-reading-and-processing-use-cases"&gt;&lt;a class="anchor" href="#file-reading-and-processing-use-cases"&gt;&lt;/a&gt;File reading and processing use cases&lt;/h2&gt;
 &lt;div class="sectionbody"&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;File ingestion and reading data from those files is a classic enterprise use case. Many businesses have been relying on varying levels of file facilities for many decades to carry out mission-critical systems. Terabytes of data travel through the interwebs and enterprise intranets as files. For example, imagine a banking data center where it receives data from all its branches, ATMs, and POS transactions as files every second which then needs to be processed and placed into other systems. This is just one domain, but there are hundreds of thousands of examples out there in which file processing is on the critical path of many businesses. There are a lot of legacy systems in which many custom applications were written each employing its own ways of handling these use cases. Spring Integration has been providing &lt;a href="https://docs.spring.io/spring-integration/reference/html/file.html"&gt;file support&lt;/a&gt; as channel adapters for many years. These components can be realized as functions and in the case of reading from files, we can provide a generic &lt;code&gt;Supplier&lt;/code&gt; function that is reusable and injected in end-user applications. In the following sections, we will see more details about this functional abstraction and it°Øs various usage scenarios.&lt;/p&gt;
+&lt;p&gt;File ingestion and reading data from those files is a classic enterprise use case. Many businesses have been relying on varying levels of file facilities for many decades to carry out mission-critical systems. Terabytes of data travel through the interwebs and enterprise intranets as files. For example, imagine a banking data center where it receives data from all its branches, ATMs, and POS transactions as files every second which then needs to be processed and placed into other systems. This is just one domain, but there are hundreds of thousands of examples out there in which file processing is on the critical path of many businesses. There are a lot of legacy systems in which many custom applications were written each employing its own ways of handling these use cases. Spring Integration has been providing &lt;a href="https://docs.spring.io/spring-integration/reference/html/file.html"&gt;file support&lt;/a&gt; as channel adapters for many years. These components can be realized as functions and in the case of reading from files, we can provide a generic &lt;code&gt;Supplier&lt;/code&gt; function that is reusable and injected in end-user applications. In the following sections, we will see more details about this functional abstraction and it‚Äôs various usage scenarios.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -154,7 +154,7 @@ public void consumeDataAndSendEmail() {
 &lt;h2 id="running-a-standalone-file-source-that-uses-the-file-supplier"&gt;&lt;a class="anchor" href="#running-a-standalone-file-source-that-uses-the-file-supplier"&gt;&lt;/a&gt;Running a standalone file source that uses the file supplier&lt;/h2&gt;
 &lt;div class="sectionbody"&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;File supplier becomes more powerful when it is combined with Spring Cloud Stream to make it a &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/applications/source/file-source/README.adoc"&gt;file source&lt;/a&gt;. As we have seen in the earlier blogs, this supplier is already prepackaged with both &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/file-source-kafka/3.0.0-SNAPSHOT/"&gt;Kafka&lt;/a&gt; and &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/file-source-rabbit/3.0.0-SNAPSHOT/"&gt;RabbitMQ&lt;/a&gt; binders in Spring Cloud Stream to make them uber jars which are runnable as Spring Boot applications. Let°Øs see how we can take this uber jar and run it as standalone.&lt;/p&gt;
+&lt;p&gt;File supplier becomes more powerful when it is combined with Spring Cloud Stream to make it a &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/applications/source/file-source/README.adoc"&gt;file source&lt;/a&gt;. As we have seen in the earlier blogs, this supplier is already prepackaged with both &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/file-source-kafka/3.0.0-SNAPSHOT/"&gt;Kafka&lt;/a&gt; and &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/file-source-rabbit/3.0.0-SNAPSHOT/"&gt;RabbitMQ&lt;/a&gt; binders in Spring Cloud Stream to make them uber jars which are runnable as Spring Boot applications. Let‚Äôs see how we can take this uber jar and run it as standalone.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;As a first step, go ahead and grab this file source with the Apache Kafa variant.&lt;/p&gt;
@@ -226,7 +226,7 @@ public void consumeDataAndSendEmail() {
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Once injected into a custom application, users can directly invoke the &lt;code&gt;accept&lt;/code&gt; method of the consumer and provide a &lt;code&gt;Message&amp;lt;?&amp;gt;&lt;/code&gt; object to send it°Øs payload to a MongoDB collection.&lt;/p&gt;
+&lt;p&gt;Once injected into a custom application, users can directly invoke the &lt;code&gt;accept&lt;/code&gt; method of the consumer and provide a &lt;code&gt;Message&amp;lt;?&amp;gt;&lt;/code&gt; object to send it‚Äôs payload to a MongoDB collection.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;When using the MongoDB consumer, the collection is a required property and it must be configured through &lt;code&gt;mongodb.consumer.collection&lt;/code&gt;.&lt;/p&gt;
@@ -240,7 +240,7 @@ public void consumeDataAndSendEmail() {
 &lt;p&gt;As in the case of File Source, Spring Cloud Stream out of the box applications already provide a MongoDB sink using the MongoDB consumer. The sink is available for both &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/mongodb-sink-kafka/3.0.0-SNAPSHOT/"&gt;Kafka&lt;/a&gt; and &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/mongodb-sink-rabbit/3.0.0-SNAPSHOT/"&gt;RabbitMQ&lt;/a&gt; binder variants. When used as a Spring Cloud Stream sink, the MongoDB consumer is automatically configured to accept data from the respective middleware system, for example, from a Kafka topic or RabbitMQ exchange.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Let°Øs take a few minutes and verify that we can run the MongoDB sink standalone.&lt;/p&gt;
+&lt;p&gt;Let‚Äôs take a few minutes and verify that we can run the MongoDB sink standalone.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="sect2"&gt;
 &lt;h3 id="setting-up-mongodb-for-testing-the-sink-using-docker"&gt;&lt;a class="anchor" href="#setting-up-mongodb-for-testing-the-sink-using-docker"&gt;&lt;/a&gt;Setting up MongoDB for testing the sink using Docker&lt;/h3&gt;
@@ -272,12 +272,12 @@ public void consumeDataAndSendEmail() {
 
 &amp;gt; db.auth('mongoadmin','secret')
 1
-&amp;gt; db.createCollection('test_collection°Ø')
+&amp;gt; db.createCollection('test_collection‚Äô')
 { "ok" : 1 }&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Now that we have our MongoDB setup, let°Øs run the sink standalone.&lt;/p&gt;
+&lt;p&gt;Now that we have our MongoDB setup, let‚Äôs run the sink standalone.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="listingblock"&gt;
 &lt;div class="content"&gt;
@@ -369,10 +369,10 @@ export STREAM_APPS_URI=https://repo.spring.io/libs-snapshot-local/org/springfram
 &lt;p&gt;&lt;span class="image"&gt;&lt;img src="https://github.com/spring-cloud/stream-applications/blob/gh-pages/img/file-mongo/file-mongo-scdf-blog.png?raw=true" alt="File to MongoDB SCDF Blog Pipeline"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Name the stream as file-source-filter-mongo and then click on Create the Stream. Once it&amp;#8217;s created, click on °∞Deploy the Stream°±. Accept all the default options and click on °∞Deploy Stream°± at the bottom of the screen.&lt;/p&gt;
+&lt;p&gt;Name the stream as file-source-filter-mongo and then click on Create the Stream. Once it&amp;#8217;s created, click on ‚ÄúDeploy the Stream‚Äù. Accept all the default options and click on ‚ÄúDeploy Stream‚Äù at the bottom of the screen.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Once the stream is deployed, go ahead and create a directory called &lt;code&gt;source-files&lt;/code&gt; in the same directory where the Spring Cloud Data Flow docker-compose script was invoked. This directory is already mounted by the docker container that is running one of the Spring Cloud Data Flow components (Skipper) and seen by the container. Ensure that this &lt;code&gt;source-files&lt;/code&gt; directory has the right access levels, especially, since the docker container will run the applications as root and you will most likely run as a non-root user on your local machine. Watch the file source application°Øs logs on the UI for any permission errors. If you see any, address those issues.&lt;/p&gt;
+&lt;p&gt;Once the stream is deployed, go ahead and create a directory called &lt;code&gt;source-files&lt;/code&gt; in the same directory where the Spring Cloud Data Flow docker-compose script was invoked. This directory is already mounted by the docker container that is running one of the Spring Cloud Data Flow components (Skipper) and seen by the container. Ensure that this &lt;code&gt;source-files&lt;/code&gt; directory has the right access levels, especially, since the docker container will run the applications as root and you will most likely run as a non-root user on your local machine. Watch the file source application‚Äôs logs on the UI for any permission errors. If you see any, address those issues.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;Prepare a new terminal session with &lt;code&gt;mongo&lt;/code&gt; CLI tool.&lt;/p&gt;
@@ -388,9 +388,9 @@ export STREAM_APPS_URI=https://repo.spring.io/libs-snapshot-local/org/springfram
 
 &amp;gt; use admin
 
-&amp;gt; db.auth(°Æmongoadmin°Ø,'secret')
+&amp;gt; db.auth(‚Äòmongoadmin‚Äô,'secret')
 1
-&amp;gt; db.createCollection(°Æmongo_data°Ø')
+&amp;gt; db.createCollection(‚Äòmongo_data‚Äô')
 { "ok" : 1 }&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -430,7 +430,7 @@ export STREAM_APPS_URI=https://repo.spring.io/libs-snapshot-local/org/springfram
 &lt;h2 id="summary"&gt;&lt;a class="anchor" href="#summary"&gt;&lt;/a&gt;Summary&lt;/h2&gt;
 &lt;div class="sectionbody"&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;In this blog, we took a whirlwind tour through File Supplier and it°Øs Spring Cloud Stream source counterpart. We also saw the MongoDB consumer and the corresponding Spring Cloud Stream sink application. We looked at how the function components can be injected into custom applications. After that, we saw how to run the Spring Cloud Stream applications for both file source and MongoDB sink standalone. Finally, we delved into Spring Cloud Data Flow and orchestrated a pipeline that goes from File Source to MongoDB sink, on its way filtering some data out.&lt;/p&gt;
+&lt;p&gt;In this blog, we took a whirlwind tour through File Supplier and it‚Äôs Spring Cloud Stream source counterpart. We also saw the MongoDB consumer and the corresponding Spring Cloud Stream sink application. We looked at how the function components can be injected into custom applications. After that, we saw how to run the Spring Cloud Stream applications for both file source and MongoDB sink standalone. Finally, we delved into Spring Cloud Data Flow and orchestrated a pipeline that goes from File Source to MongoDB sink, on its way filtering some data out.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="sect2"&gt;
 &lt;h3 id="stay-tuned"&gt;&lt;a class="anchor" href="#stay-tuned"&gt;&lt;/a&gt;Stay tuned&lt;/h3&gt;
@@ -756,7 +756,7 @@ When most people think of caching, they are technically referring to the &lt;em&
   &lt;li&gt;&lt;a href="https://twitter.com/cloudfoundry/status/1295762491503292417"&gt;How &lt;code&gt;cf-for-k8s&lt;/code&gt; Reinvents Cloud Foundry as a Native Kubernetes App Platform&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/08/07/loom-performance/"&gt;Interesting post on the performance of user-mode threads and coroutines&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring-gcp.saturnism.me/"&gt;Introduction - Spring Boot on GCP&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://m.facebook.com/355408241562041/videos/708422819736807"&gt;Microsoft&amp;rsquo;s Rory Preddy on Integrating °∞Reactive°± APIs to traditional relational databases&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://m.facebook.com/355408241562041/videos/708422819736807"&gt;Microsoft&amp;rsquo;s Rory Preddy on Integrating ‚ÄúReactive‚Äù APIs to traditional relational databases&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/08/18/foreign-api-jep/"&gt;New candidate JEP: 389: Foreign Linker API (Incubator)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/13/premiering-the-rsocket-revolution"&gt;Premiering: The RSocket Revolution&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/13/spring-batch-4-3-0-m2-is-out"&gt;Spring Batch 4.3.0-M2 is out!&lt;/a&gt;&lt;/li&gt;
@@ -864,7 +864,7 @@ Request timeout in milliseconds. (Long, default: 30000)&lt;br&gt;&lt;/p&gt;
 A SpEL expression against the incoming message to determine the URL to use. (Expression, default: &amp;lt;none&amp;gt;)&lt;br&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;The SpEL expressions are applied to the incoming Message.  So fields like &lt;code&gt;body&lt;/code&gt; and &lt;code&gt;headers[name]&lt;/code&gt; can be used to evaluate message contents.  I say "&lt;em&gt;can be°¶&lt;/em&gt;" because sometimes it is more desirable to use static values. In this case, literal values must be enclosed in single quotes, for example:&lt;/p&gt;
+&lt;p&gt;The SpEL expressions are applied to the incoming Message.  So fields like &lt;code&gt;body&lt;/code&gt; and &lt;code&gt;headers[name]&lt;/code&gt; can be used to evaluate message contents.  I say "&lt;em&gt;can be‚Ä¶&lt;/em&gt;" because sometimes it is more desirable to use static values. In this case, literal values must be enclosed in single quotes, for example:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="listingblock"&gt;
 &lt;div class="content"&gt;
@@ -876,7 +876,7 @@ http.request.http-method-expression='POST'&lt;/pre&gt;
 &lt;div class="sect3"&gt;
 &lt;h4 id="example-1-using-the-http-request-function-in-a-standalone-application"&gt;&lt;a class="anchor" href="#example-1-using-the-http-request-function-in-a-standalone-application"&gt;&lt;/a&gt;Example 1: Using the HTTP Request Function in a Standalone Application&lt;/h4&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Let°Øs look at an example of how to use this function in a simple Spring Boot web application. In this example, we will use it in an app that retrieves an image from a URL and renders a thumbnail of the image. The complete code for this example is &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-web"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Let‚Äôs look at an example of how to use this function in a simple Spring Boot web application. In this example, we will use it in an app that retrieves an image from a URL and renders a thumbnail of the image. The complete code for this example is &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-web"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;We will build the application using Spring Boot and Spring Web Flux, along with our function to retrieve the image, and some code to generate a thumbnail.&lt;/p&gt;
@@ -890,7 +890,7 @@ http.request.http-method-expression='POST'&lt;/pre&gt;
 &lt;p&gt;org.springframework.cloud.fn:http-request-function - The HTTP request function transitively includes &lt;code&gt;spring-boot-starter-webflux&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;io.spring.example:image-thumbnail-processor - A simple Java function, included in this &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/blob/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-processor/src/main/java/io/spring/example/image/thumbnail/processor/ThumbnailProcessor.java"&gt;example&lt;/a&gt;, that creates thumbnails. We won°Øt get into the details here,  just note that it is a separate component which we will reuse in a later example.&lt;/p&gt;
+&lt;p&gt;io.spring.example:image-thumbnail-processor - A simple Java function, included in this &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/blob/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-processor/src/main/java/io/spring/example/image/thumbnail/processor/ThumbnailProcessor.java"&gt;example&lt;/a&gt;, that creates thumbnails. We won‚Äôt get into the details here,  just note that it is a separate component which we will reuse in a later example.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -973,7 +973,7 @@ public class ThumbnailStandaloneApplication {
 &lt;p&gt;where the &lt;code&gt;|&lt;/code&gt; represents I/O using a message broker.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Here, we are using a &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-stream-sample/image-thumbnail-sink"&gt;user-developed sink&lt;/a&gt; that uses the &lt;a href="https://github.com/spring-cloud/stream-applications/tree/master/functions/consumer/file-consumer"&gt;file-consumer&lt;/a&gt; function to write each thumbnail to a file.  The sink uses Spring Cloud Function°Øs declarative &lt;a href="https://spring.io/blog/2020/07/20/introducing-java-functions-for-spring-cloud-stream-applications-part-1"&gt;composition&lt;/a&gt; to compose the &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/blob/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-processor/src/main/java/io/spring/example/image/thumbnail/processor/ThumbnailProcessor.java"&gt;thumbnail-processor&lt;/a&gt;, from the previous example, with a header enricher, and finally the  standard &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/functions/consumer/file-consumer"&gt;fileConsumer&lt;/a&gt;.  So our composed function is defined by:&lt;/p&gt;
+&lt;p&gt;Here, we are using a &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-stream-sample/image-thumbnail-sink"&gt;user-developed sink&lt;/a&gt; that uses the &lt;a href="https://github.com/spring-cloud/stream-applications/tree/master/functions/consumer/file-consumer"&gt;file-consumer&lt;/a&gt; function to write each thumbnail to a file.  The sink uses Spring Cloud Function‚Äôs declarative &lt;a href="https://spring.io/blog/2020/07/20/introducing-java-functions-for-spring-cloud-stream-applications-part-1"&gt;composition&lt;/a&gt; to compose the &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/blob/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-processor/src/main/java/io/spring/example/image/thumbnail/processor/ThumbnailProcessor.java"&gt;thumbnail-processor&lt;/a&gt;, from the previous example, with a header enricher, and finally the  standard &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/functions/consumer/file-consumer"&gt;fileConsumer&lt;/a&gt;.  So our composed function is defined by:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="listingblock"&gt;
 &lt;div class="content"&gt;
@@ -1027,11 +1027,11 @@ public class ThumbnailStandaloneApplication {
     <link rel="alternate" href="https://spring.io/blog/2020/08/17/spring-initializr-0-9-1-available-now" />
     <category term="releases" label="Releases" />
     <author>
-      <name>St?phane Nicoll</name>
+      <name>St√©phane Nicoll</name>
     </author>
     <id>tag:spring.io,2020-08-17:4173</id>
     <updated>2020-08-17T15:36:07Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I°Øm happy to announce that Spring Initializr 0.9.1 has been released and is now available from repo.spring.io and Maven Central.&lt;/p&gt;
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I‚Äôm happy to announce that Spring Initializr 0.9.1 has been released and is now available from repo.spring.io and Maven Central.&lt;/p&gt;
 &lt;p&gt;This release includes &lt;a href="https://github.com/spring-io/initializr/releases/tag/v0.9.1"&gt;2 fixes&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://github.com/spring-io/initializr"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/initializr/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/initializr/docs/0.9.1/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-initializr"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-io/initializr"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
@@ -1140,7 +1140,7 @@ public class ThumbnailStandaloneApplication {
   &lt;li&gt;Maciej&amp;rsquo;s recent video on getting started with &lt;a href="https://www.youtube.com/watch?v=Ts2a-YdN6vI"&gt;Spring Cloud AWS&lt;/a&gt; on his excellent YouTube channel Spring Academy&lt;/li&gt;
   &lt;li&gt;Josh&amp;rsquo;s book &lt;a href="http://ReactiveSpring.io"&gt;&lt;em&gt;Reactive Spring&lt;/em&gt;&lt;/a&gt; has been updated with a new whopping 70+ page chapter on RSocket&lt;/li&gt;
   &lt;li&gt;Josh&amp;rsquo;s &lt;a href="https://www.youtube.com/watch?v=ipVfRdl5SP0&amp;t=1s"&gt;&lt;em&gt;The RSocket Revolution&lt;/em&gt;&lt;/a&gt; talk&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://github.com/spring-projects-experimental"&gt;Spring Retrosocket&lt;/a&gt; - a declarative client for RSocket ? la Feign or Retrofit&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://github.com/spring-projects-experimental"&gt;Spring Retrosocket&lt;/a&gt; - a declarative client for RSocket √† la Feign or Retrofit&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
@@ -1524,7 +1524,7 @@ If you want to read more about them, you can checkout the updated &lt;a href="ht
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/12/spring-data-2020-0-0-m2-released"&gt;Spring Data 2020.0.0.M2&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;An update to the way that &lt;code&gt;application.properties&lt;/code&gt; and &lt;code&gt;application.yml&lt;/code&gt; files are processed, including import support and support for volume mounted config trees.&lt;/li&gt;
   &lt;li&gt;A a significant overhaul of the Neo4j support.&lt;/li&gt;
-  &lt;li&gt;Numerous other &lt;a href="https://github.com/spring-projects/spring-boot/issues?utf8=?&amp;q=label%3A%22type%3A+dependency-upgrade%22+milestone%3A2.4.0-M2"&gt;dependency upgrades&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Numerous other &lt;a href="https://github.com/spring-projects/spring-boot/issues?utf8=‚úì&amp;q=label%3A%22type%3A+dependency-upgrade%22+milestone%3A2.4.0-M2"&gt;dependency upgrades&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For a complete list of changes and upgrade instructions, please see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.4.0-M2-Release-Notes"&gt;Spring Boot 2.4 Release Notes&lt;/a&gt; on the wiki and the &lt;a href="http://docs.spring.io/spring-boot/docs/2.4.0-M2/reference/html/"&gt;updated reference documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you&amp;rsquo;re interested in learning more about the changes to &lt;code&gt;application.properties&lt;/code&gt; and &lt;code&gt;application.yml&lt;/code&gt; processing, check out &lt;a href="https://spring.io/blog/2020/08/14/config-file-processing-in-spring-boot-2-4"&gt;this blog post&lt;/a&gt; on the subject.&lt;/p&gt;
@@ -1542,7 +1542,7 @@ If you want to read more about them, you can checkout the updated &lt;a href="ht
     <id>tag:spring.io,2020-08-11:4161</id>
     <updated>2020-08-14T00:28:52Z</updated>
     <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the community, I°Øm pleased to announce the release of
+&lt;p&gt;On behalf of the community, I‚Äôm pleased to announce the release of
 Spring Security 5.4.0-RC1! You can find the complete details in the &lt;a href="https://github.com/spring-projects/spring-security/releases/tag/5.4.0-RC1"&gt;release notes&lt;/a&gt; and the highlights below:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="sect1"&gt;
@@ -1671,7 +1671,7 @@ Spring Security 5.4.0-RC1! You can find the complete details in the &lt;a href="
     </author>
     <id>tag:spring.io,2020-08-13:4168</id>
     <updated>2020-08-13T16:16:27Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the Spring Batch team, I am pleased to announce that Spring Batch 4.3.0-M2 is now available from our &lt;a href="https://repo.spring.io/milestone/"&gt;milestone repository&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-s-new" class="anchor" name="what-s-new"&gt;&lt;/a&gt;What°Øs new?&lt;/h2&gt;
+    <content type="html">&lt;p&gt;On behalf of the Spring Batch team, I am pleased to announce that Spring Batch 4.3.0-M2 is now available from our &lt;a href="https://repo.spring.io/milestone/"&gt;milestone repository&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-s-new" class="anchor" name="what-s-new"&gt;&lt;/a&gt;What‚Äôs new?&lt;/h2&gt;
 &lt;p&gt;This release comes with a number of new features and enhancements that you can find in the &lt;a href="https://github.com/spring-projects/spring-batch/releases/tag/4.3.0-M2"&gt;release notes&lt;/a&gt;, but here are the major highlights:&lt;/p&gt;&lt;h4&gt;&lt;a href="#1-kafka-support-enhancements" class="anchor" name="1-kafka-support-enhancements"&gt;&lt;/a&gt;1. Kafka support enhancements&lt;/h4&gt;
 &lt;p&gt;By default, the &lt;code&gt;KafkaItemReader&lt;/code&gt; reads a topic from the beginning. When we initially introduced this reader in v4.2, it was not possible to configure it to read records from a custom offset. In this release, we added this feature. As a result of this addition, it is now possible to configure the reader to start from the offset stored in Kafka.&lt;/p&gt;&lt;h4&gt;&lt;a href="#2-micrometer-support-enhancements" class="anchor" name="2-micrometer-support-enhancements"&gt;&lt;/a&gt;2. Micrometer support enhancements&lt;/h4&gt;
 &lt;p&gt;Micrometer support has been introduced in v4.2 last year, and we got a lot of feedback since then. One of the requested features is the ability to know the currently active jobs. Spring Batch provides a metric called &lt;code&gt;spring.batch.job.active&lt;/code&gt; that gives the number of currently active jobs. However, until now, this metric did not let you know which specific jobs are currently active. In this release, we enriched the metric tags to make this possible.&lt;/p&gt;&lt;h4&gt;&lt;a href="#3-add-a-new-code-jobparametersincrementer-code-implementation" class="anchor" name="3-add-a-new-code-jobparametersincrementer-code-implementation"&gt;&lt;/a&gt;3. Add a new &lt;code&gt;JobParametersIncrementer&lt;/code&gt; implementation&lt;/h4&gt;
@@ -1804,7 +1804,7 @@ Artem&lt;/p&gt;
     </author>
     <id>tag:spring.io,2020-08-12:4164</id>
     <updated>2020-08-12T11:48:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the Spring Data team, I°Øm pleased to announce the availability of the third service release of the Spring Data Neumann release train. &lt;code&gt;Neumann SR3&lt;/code&gt; ships with &lt;a href="https://jira.spring.io/issues/?filter=17036"&gt;34 tickets fixed&lt;/a&gt;.&lt;/p&gt;
+    <content type="html">&lt;p&gt;On behalf of the Spring Data team, I‚Äôm pleased to announce the availability of the third service release of the Spring Data Neumann release train. &lt;code&gt;Neumann SR3&lt;/code&gt; ships with &lt;a href="https://jira.spring.io/issues/?filter=17036"&gt;34 tickets fixed&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This release ships with mostly bug fixes and dependency upgrades and will be picked up by Spring Boot 2.3.3 in the coming days.&lt;/p&gt;
 &lt;p&gt;Here are the detailed links to each individual artifact and the reference documentation:&lt;/p&gt;
 &lt;ul&gt;

@@ -1,5 +1,7 @@
 package com.team4.user.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import com.team4.util.SqlSessionFactoryBean;
 import com.team4.vo.FeedVo;
@@ -53,6 +55,18 @@ public class UserDAOImpl implements UserDAO {
 	public int lWeight() throws Exception {
 		return mybatis.selectOne("UserDao.lWeight");
 
+	}
+
+
+	@Override
+	public UserVo checkDuplication(UserVo vo) throws Exception {
+		return mybatis.selectOne("UserDao.checkDuplication", vo);
+	}
+
+
+	@Override
+	public int getUNum(UserVo vo) {
+		return mybatis.selectOne("UserDao.getUnum",vo);
 	}
 
 	

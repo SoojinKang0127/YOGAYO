@@ -12,13 +12,21 @@
 
 	<insert id="signup" parameterType="UserVo">
 		INSERT INTO
-		USER(ID,PWD,NAME,BDATE,GENDER)
-		VALUES(#{id},#{pwd},#{name},#{bDate},#{gender});
+		USER(ID, PWD, NAME, BDATE, GENDER, PROFILEVEL)
+		VALUES(#{id},#{pwd},#{name},#{bDate},#{gender}, #{profiLevel});
 	</insert>
 
 
 	<select id="selectAllId" resultType="String">
 		SELECT ID FROM USER
+	</select>
+	
+	<select id="checkDuplication" parameterType="UserVo" resultType="UserVo">
+		SELECT * FROM USER WHERE ID=#{id}
+	</select>
+	
+	<select id="getUnum" parameterType="UserVo" resultType="int">
+	 SELECT UNUM FROM USER WHERE ID=#{id} AND NAME=#{name} AND BDATE=#{bDate}
 	</select>
 </mapper>
 
