@@ -37,11 +37,13 @@ public class DictionaryController {
 	PoseServiceImpl service = new PoseServiceImpl();
 
 	@RequestMapping(value = "/dictionary-detail", method = RequestMethod.GET)
-	public String dictionary( Locale locale, Model model ,PoseVo vo)throws Exception {
+	public String dictionary( Locale locale, Model model ,PoseVo vo,HttpServletRequest req)throws Exception {
 			
-			
+		String pnum=req.getParameter("pnum");
+		
+		int num=Integer.parseInt(pnum);
 		vo= new PoseVo();
-			vo.setpNum(0);
+			vo.setpNum(num);
 			PoseVo pose;
 		
 			try {
@@ -55,15 +57,16 @@ public class DictionaryController {
 		PoseServiceImpl service= new PoseServiceImpl();
 		
 		
-			try {
-				JSONObject obj = (JSONObject) parser.parse(new FileReader("c:\\pose.json"));
-				
-				
-				JSONObject obj2 = (JSONObject) obj.get("0");
-				
-				//System.out.println(obj2.toString());
-				JSONArray  watchout= (JSONArray)obj2.get("watchout");
-				System.out.println(watchout.toString());
+//			try {
+//				JSONObject obj = (JSONObject) parser.parse(new FileReader("c:\\pose.json"));
+//				
+//				
+//				JSONObject obj2 = (JSONObject) obj.get("0");
+//				
+//				//System.out.println(obj2.toString());
+//				JSONArray  watchout= (JSONArray)obj2.get("watchout");
+//				
+//				System.out.println(watchout.toString());
 				
 				
 //				JSONArray  tips= (JSONArray)obj2.get("tips");
@@ -107,18 +110,16 @@ public class DictionaryController {
 //				}
 				
 				
-			}catch (FileNotFoundException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			} catch (ParseException e) {
-				e.printStackTrace();
-			}
+//			}catch (FileNotFoundException e) {
+//				e.printStackTrace();
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			} catch (ParseException e) {
+//				e.printStackTrace();
+//			}
 			
 		return "dictionary-detail";
 	};
-	
-	
 	
 	
 
