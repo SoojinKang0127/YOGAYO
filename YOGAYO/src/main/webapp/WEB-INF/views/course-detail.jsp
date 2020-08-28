@@ -8,8 +8,9 @@
 <title>YOGAYO | COURSE</title>
 <script src="https://kit.fontawesome.com/54919de5bd.js"
 	crossorigin="anonymous"></script>
-<script src="http://code.jquery.com/jquery.js"></script>
-
+<script src="http://code.jquery.com/jquery.js">
+	
+</script>
 <script language=JavaScript
 	src="${pageContext.request.contextPath}/resources/js/course-detail.js"></script>
 <link rel="stylesheet" type="text/css"
@@ -99,39 +100,40 @@
 				<div class="course_detail-mini_view_section">
 					<div class="fake_mini_view"></div>
 					<div class="course_detail-mini_view">
+
 						<div class="title">코스 개요</div>
 						<div class="poses">
 							<div class="pose">
 								<div class="pose_title">${coursePoses.pose1}</div>
-								<div class="time">${coursePoses.time1}</div>
+								<div class="time">${mins[0]}:${seconds[0]}</div>
 							</div>
 							<div class="pose">
 								<div class="pose_title">${coursePoses.pose2}</div>
-								<div class="time">${coursePoses.time2}</div>
+								<div class="time">${mins[1]}:${seconds[1]}</div>
 							</div>
 							<div class="pose">
 								<div class="pose_title">${coursePoses.pose3}</div>
-								<div class="time">${coursePoses.time3}</div>
+								<div class="time">${mins[2]}:${seconds[2]}</div>
 							</div>
 							<div class="pose">
 								<div class="pose_title">${coursePoses.pose4}</div>
-								<div class="time">${coursePoses.time4}</div>
+								<div class="time">${mins[3]}:${seconds[3]}</div>
 							</div>
 							<div class="pose">
 								<div class="pose_title">${coursePoses.pose5}</div>
-								<div class="time">${coursePoses.time5}</div>
+								<div class="time">${mins[4]}:${seconds[4]}</div>
 							</div>
 							<div class="pose">
 								<div class="pose_title">${coursePoses.pose6}</div>
-								<div class="time">${coursePoses.time6}</div>
+								<div class="time">${mins[5]}:${seconds[5]}</div>
 							</div>
 							<div class="pose">
 								<div class="pose_title">${coursePoses.pose7}</div>
-								<div class="time">${coursePoses.time7}</div>
+								<div class="time">${mins[6]}:${seconds[6]}</div>
 							</div>
 							<div class="pose">
 								<div class="pose_title">${coursePoses.pose8}</div>
-								<div class="time">${coursePoses.time8}</div>
+								<div class="time">${mins[7]}:${seconds[7]}</div>
 							</div>
 						</div>
 						<div class="btn">
@@ -148,6 +150,27 @@
 
 			<div class="course_detail-fourth_section">
 				<div class="course_detail-review_section">
+					<div class="review_text_box">
+						<div class="user_img">
+							<img
+								src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+								alt="profile">
+						</div>
+						<div class="text_box">
+							<select name="stars" id="stars">
+								<option value="none">☆☆☆☆☆</option>
+								<option value="one_star">☆☆☆☆★</option>
+								<option value="two_stars">☆☆☆★★</option>
+								<option value="three_stars">☆☆★★★</option>
+								<option value="four_stars">☆★★★★</option>
+								<option value="five_stars">★★★★★</option>
+							</select> <input type="text" id="text_box" name="review"
+								placeholder="댓글 달기..." />
+						</div>
+						<div class="review_btn">
+							<input type="submit" id="review_btn" name="review" value="게시" />
+						</div>
+					</div>
 					<div class="course_detail-rating">
 						<span><i class="fas fa-star"></i></span> <span>4.97(206)</span> <span>(후기
 							206개)</span>
