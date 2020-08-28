@@ -105,7 +105,7 @@
 <body>
 
 
-	<form action="feed" method="POST" enctype="multipart/form-data" name="feed" id="feed">
+	<form action="feedupload" method="POST" enctype="multipart/form-data" name="feed" id="feed">
 		<input type="hidden" name="course" value="" id="course"> 
 		<input type="hidden" name="slevel" value="" id="slevel">
 		<input type="hidden" name="dlevel" value="" id="dlevel">
@@ -358,7 +358,6 @@
 		
 		
 		course.setAttribute("value", getParam("course"));
-		
 		slevel.setAttribute("value", mySlider.values.end + 1);
 		dlevel.setAttribute("value", (mySlider2.values.end + 1));
 		context.setAttribute("value", $(".main-top-text").val());
