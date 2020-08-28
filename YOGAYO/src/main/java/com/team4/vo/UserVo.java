@@ -12,6 +12,7 @@ public class UserVo {
 	char gender;
 	String img;
 	Date regDate;
+	int profiLevel;
 	
 	public UserVo() {
 	}
@@ -103,5 +104,20 @@ public class UserVo {
 	}
 
 
+
+	public int getProfiLevel() {
+		return profiLevel;
+	}
+
+
+
+	public void setProfiLevel(int profiLevel) {
+		this.profiLevel = profiLevel;
+	}
+
+
+	
+	
+	
 
 }

@@ -44,7 +44,12 @@ public class PlaylistController {
 		PoseService dao = new PoseServiceImpl();
 		List<PoseVo> list = null;
 		
-		
+		try {
+			System.out.println(list.toString());
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		
 		
