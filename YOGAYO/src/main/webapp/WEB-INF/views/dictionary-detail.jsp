@@ -7,7 +7,9 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>YOGA POSE</title>
-
+	
+	<script src="https://kit.fontawesome.com/54919de5bd.js"
+	crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css"
 		href="${pageContext.request.contextPath}/resources/css/dictionary-detail.css">
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -28,23 +30,22 @@
 		<div class="yoga-title-box">
 			<div class="yoga-title-box-section">
 				<div class="yoga-title">
-					<h2>This is Pose1 : ${pose.title}</h2>
+					<h2>${pose.title}</h2>
 				</div>
 			</div>
 		</div>
-		<div class="search-img_yoga-title">
-			<div class="search-img">
+		<div class="search-img-box">
+			<div class="search-img-section">
+				<div class="search-img">
 				<img src="${pose.img_Path}" alt="불러오지 못함">
-			</div>
-			<div class="search-img2">
-				<img src="${pageContext.request.contextPath}/resources/image/dictionary-detail/bg02.jpg" alt="불러오지 못함">
+				</div>
 			</div>
 		</div>
 		<div class="yoga-second-dificult-box">
 			<div class="yoga-second-dificult-box-section">
 				<div class="yoga-second-dificult">
-					<span>CLCOCK ${pose.time} SEC</span>
-					<span>DIFFICULT ${pose.difficulty}</span>
+					<i class="far fa-clock"></i><span> ${pose.time} SEC</span>
+					<span>난이도:${pose.difficulty}</span>
 				</div>
 			</div>
 		</div>
