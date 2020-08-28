@@ -23,5 +23,12 @@ public class FeedDAOImpl implements FeedDAO{
 		
 		
 	}
+
+
+	@Override
+	public int getLastFnum() throws Exception {
+		
+		return mybatis.selectOne("FeedDAO.getLastFnum");
+	}
 	
 }

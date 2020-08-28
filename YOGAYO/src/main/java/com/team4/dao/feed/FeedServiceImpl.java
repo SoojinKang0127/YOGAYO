@@ -11,6 +11,11 @@ public class FeedServiceImpl implements FeedService{
 		dao.upload(vo);		
 	}
 
+	@Override
+	public int getLastFnum() throws Exception {
+		return dao.getLastFnum();
+	}
+
 
 	
 	

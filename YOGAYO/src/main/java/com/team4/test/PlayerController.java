@@ -79,7 +79,13 @@ public class PlayerController {
 		System.out.println(curUserPath);
 		String path = curUserPath +"YOGAYO/src/main/webapp/resources/image/feedimages/";
 		System.out.println(path);
-		String safeFile = path + "feed"+fileType;
+		int no=0;
+		try {
+			 no= service.getLastFnum()+1;
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		String safeFile = path + "feed"+Integer.toString(no)+fileType;
 		
 //		vo.setuNum(uNum);
 //		vo.setCrsNum(course);

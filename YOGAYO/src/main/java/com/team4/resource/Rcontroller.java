@@ -23,6 +23,7 @@ import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.team4.dao.feed.FeedServiceImpl;
 
 public class Rcontroller extends HttpServlet implements R {
 	private static final long serialVersionUID = 1L;
@@ -31,6 +32,7 @@ public class Rcontroller extends HttpServlet implements R {
 	MongoClient mongoClient = new MongoClient(uri);
 	MongoDatabase database = mongoClient.getDatabase("project");
 	DB db= mongoClient.getDB("project");
+	FeedServiceImpl fservice= new FeedServiceImpl();
     
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -46,6 +48,7 @@ public class Rcontroller extends HttpServlet implements R {
 
 		getListFromCourse();
 		getListFromPose();
+		getLastFnum();
 		System.out.println("Keyword Hashset initialized success [size: "+this.keyword.size()+"]");
 		System.out.println(this.keyword.toString());
 	}
@@ -89,6 +92,12 @@ public class Rcontroller extends HttpServlet implements R {
 	
 	public HashSet<String> getKeywordList(){
 		return this.keyword;
+	}
+	
+	public void getLastFnum() {
+	}
+	
+	public void plusLastFnum() {
 	}
 	
 	
