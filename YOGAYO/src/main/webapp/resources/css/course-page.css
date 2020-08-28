@@ -169,8 +169,16 @@ main {
 	margin-left:10px;
 }
 
+.course_container a{
+	color:black;
+}
+
 .course_container .course_star_rating {
 	font-size: 11pt;
+}
+
+.course_star_rating i{
+	color:var(--theme-color);
 }
 
 .footer {

@@ -8,7 +8,9 @@
 <title>YOGAYO | COURSE</title>
 <script src="https://kit.fontawesome.com/54919de5bd.js"
 	crossorigin="anonymous"></script>
-<script src="http://code.jquery.com/jquery.js"></script>
+<script src="http://code.jquery.com/jquery.js">
+	
+</script>
 <script language=JavaScript
 	src="${pageContext.request.contextPath}/resources/js/course-detail.js"></script>
 <link rel="stylesheet" type="text/css"
@@ -35,17 +37,13 @@
 			<div class="course_detail-second">
 				<div class="section">
 					<div class="course_detail-img_section">
-						<img
-							src="${pageContext.request.contextPath}/resources/image/course/course_detail.jpg"
-							alt="course_detail" /> <img
-							src="${pageContext.request.contextPath}/resources/image/course/course_detail.jpg"
-							alt="course_detail" /> <img
-							src="${pageContext.request.contextPath}/resources/image/course/course_detail.jpg"
-							alt="course_detail" />
+						<img src="${coursePoses.img1}" alt="course_detail" /> <img
+							src="${coursePoses.img2}" alt="course_detail" /> <img
+							src="${coursePoses.img3}" alt="course_detail" />
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="course_detail-third">
 				<div class="section">
 					<div class="title_section">
@@ -53,21 +51,22 @@
 							<p>${course.title}</p>
 							<div class="course_detail-star_rating">
 								<span><i class="fas fa-star"></i></span> <span id="rating">4.97</span>
-								<span>(206)</span> <span>·</span> <span>전예슬</span>
+								<span>(206)</span> <span>·</span> <span>(만든사람)</span>
 							</div>
 						</div>
 					</div>
 					<div class="course_detail-info_section">
 						<div class="course_detail-info_title_section">
-							<div class="course_detail-info_title">!!안 불러와 짐!! 님이구성한 명상
-								코스</div>
-							<!-- <img src="./images/profile_face.png" alt="profile" /> -->
-							${course.imgPath}
+							<div class="course_detail-info_title">(만든사람)님이구성한 명상 코스</div>
+							<img
+								src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+								alt="profile" />
+
 						</div>
 						<div class="course_detail-info_icon_section">
 							<div class="first_line">
 								<div class="course_detail-info_time">
-									<i class="far fa-clock"></i> 30min
+									<i class="far fa-clock"></i> ${totalMin}min
 								</div>
 								<div class="course_detail-why">
 									<i class="fas fa-child"></i>정신 건강을 위한 명상
@@ -92,8 +91,7 @@
 							<div class="coures_detail-coures_materials_title">준비물</div>
 							<div class="coures_detail-coures_materials_list">
 								<ul>
-									<li><i class="far fa-check-circle"></i>
-										${course.material}</li>
+									<li><i class="far fa-check-circle"></i> ${course.material}</li>
 								</ul>
 							</div>
 						</div>
@@ -102,53 +100,77 @@
 				<div class="course_detail-mini_view_section">
 					<div class="fake_mini_view"></div>
 					<div class="course_detail-mini_view">
+
 						<div class="title">코스 개요</div>
 						<div class="poses">
 							<div class="pose">
-								<div class="pose_title">${course.seq1}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose1}</div>
+								<div class="time">${mins[0]}:${seconds[0]}</div>
 							</div>
 							<div class="pose">
-								<div class="pose_title">${course.seq2}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose2}</div>
+								<div class="time">${mins[1]}:${seconds[1]}</div>
 							</div>
 							<div class="pose">
-								<div class="pose_title">${course.seq3}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose3}</div>
+								<div class="time">${mins[2]}:${seconds[2]}</div>
 							</div>
 							<div class="pose">
-								<div class="pose_title">${course.seq4}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose4}</div>
+								<div class="time">${mins[3]}:${seconds[3]}</div>
 							</div>
 							<div class="pose">
-								<div class="pose_title">${course.seq5}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose5}</div>
+								<div class="time">${mins[4]}:${seconds[4]}</div>
 							</div>
 							<div class="pose">
-								<div class="pose_title">${course.seq6}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose6}</div>
+								<div class="time">${mins[5]}:${seconds[5]}</div>
 							</div>
 							<div class="pose">
-								<div class="pose_title">${course.seq7}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose7}</div>
+								<div class="time">${mins[6]}:${seconds[6]}</div>
 							</div>
 							<div class="pose">
-								<div class="pose_title">${course.seq8}</div>
-								<div class="time">45:00</div>
+								<div class="pose_title">${coursePoses.pose8}</div>
+								<div class="time">${mins[7]}:${seconds[7]}</div>
 							</div>
 						</div>
 						<div class="btn">
-							<div class="time">총 10분</div>
+							<div class="time">총 ${totalMin}분 ${totalSec} 초</div>
 							<div class="start_btn">
-								<button id="btn_to_start">시작하기</button>
+								<a href="${pageContext.request.contextPath}/course_playlist">
+									<button id="btn_to_start">시작하기</button>
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="course_detail-fourth_section">
 				<div class="course_detail-review_section">
+					<div class="review_text_box">
+						<div class="user_img">
+							<img
+								src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+								alt="profile">
+						</div>
+						<div class="text_box">
+							<select name="stars" id="stars">
+								<option value="none">☆☆☆☆☆</option>
+								<option value="one_star">☆☆☆☆★</option>
+								<option value="two_stars">☆☆☆★★</option>
+								<option value="three_stars">☆☆★★★</option>
+								<option value="four_stars">☆★★★★</option>
+								<option value="five_stars">★★★★★</option>
+							</select> <input type="text" id="text_box" name="review"
+								placeholder="댓글 달기..." />
+						</div>
+						<div class="review_btn">
+							<input type="submit" id="review_btn" name="review" value="게시" />
+						</div>
+					</div>
 					<div class="course_detail-rating">
 						<span><i class="fas fa-star"></i></span> <span>4.97(206)</span> <span>(후기
 							206개)</span>

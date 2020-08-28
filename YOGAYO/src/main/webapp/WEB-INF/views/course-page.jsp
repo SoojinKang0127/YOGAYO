@@ -2,8 +2,6 @@
 <%@page import="com.team4.dao.course.CourseServiceImpl"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -73,16 +71,15 @@
 		</div>
 		<div class="course-courses_container">
 			<div class="courses_first_line">
-				<c:forEach var="i" items="${courses}" begin="0" end="11">
+				<c:forEach var="i" items="${courses}" >
 					<div class="up-on-scroll">
 						<div class="course_container">
 							<a
 								href="${pageContext.request.contextPath}/course-detail?crsNum=${i.crsNum}">
 								<img
-								src="${pageContext.request.contextPath}/resources/image/course/course.jpg"
-								alt="couser" />
+								src="${pageContext.request.contextPath}/resources/image/${i.imgPath}" alt="course" />
 								<div class="course_star_rating">
-									<i class="far fa-star">4.83(6)</i>
+									<i class="far fa-star"></i>4.83(6)
 									<div class="course_title">${i.title}</div>
 								</div>
 							</a>
@@ -90,6 +87,7 @@
 					</div>
 				</c:forEach>
 			</div>
+			
 		</div>
 
 		<footer class="footer">

@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">플랭크 자세로 시작합니다.<break time="700"/>한 번에 한 팔씩 팔뚝 위로 내립니다. 손바닥을 아래로 내리거나 손을 잡으세요.<break time="700"/>팔꿈치가 어깨 바로 아래에 있는지 확인하세요.<break time="700"/>견갑골을 등에 고정하고 뒤꿈치를 뒤로 밀어내세요.<break time="700"/>아랫배를 그리고 허벅지에 닿게 하세요.<break time="700"/>당신을 들어 올리는 데 도움이되도록 앞쪽 몸통을 뒤쪽 몸통쪽으로 움직여 보세요.<break time="700"/>당신보다 약간 앞쪽의 바닥을 바라 보는 척추와 목을 일직선으로 유지하세요.<break time="700"/>30초에서 몇 분까지 이 자세를 유지하세요.<break time="700"/>나오려면 무릎을 바닥에 얹으세요.<break time="700"/></prosody></speak>' > pose23.mp3

@@ -23,25 +23,22 @@ import com.team4.dao.feed.FeedServiceImpl;
 import com.team4.vo.FeedVo;
 import com.team4.vo.UserVo;
 
-
-
 @Controller
 public class PlayerController {
-	
+
 	FeedVo vo = new FeedVo();
 	FeedServiceImpl service = new FeedServiceImpl();
-	
-	
+
 	@RequestMapping(value = "/player", method = RequestMethod.GET)
 	public String player(HttpServletRequest req) {
-		
-		//session에 저장된 user라는 오브젝트에 접근할 수 있다 
+
+		// session에 저장된 user라는 오브젝트에 접근할 수 있다
 //		HttpSession session = req.getSession();
 //		UserVo user = (UserVo)session.getValue("user");
 //		System.out.println(user.getuNum());		
-		
+
 		System.out.println(req.getParameter("course"));
-		
+
 		return "player";
 	}
 	
@@ -80,7 +77,7 @@ public class PlayerController {
 		
 		int no=0;
 		try {
-			 no= service.getLastFnum()+1;
+			no = service.getLastFnum() + 1;
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
@@ -119,7 +116,6 @@ public class PlayerController {
 		
 		return "mypage";
 	}
-	
 	
 
 }

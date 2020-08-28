@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">무릎을 꿇고 엉덩이 너비로 벌린 다음 발가락을 집어 넣으십시오.<break time="700"/>허벅지 안쪽을 잡아 당기고 아랫배를 안팎으로 끌어 올린 다음 어깨를 뒤로 굴립니다<break time="700"/>숨을들이 쉬면 양쪽 허리를 늘려 가슴을 들어 올립니다<break time="700"/>하체가 안정된 상태에서 숨을 내쉴 때 허리를 굽히기 시작하면 가슴을 들어 올리고 목이나 허리를 구부리지 않습니다.<break time="700"/>등을 기대면서 손으로 뒤꿈치를 찾으세요. 또는 한 팔을 위로 그리고 뒤로 돌면서 한 번에 한 쪽씩 작업을 수행 할 수 있습니다.<break time="700"/>허벅지 안쪽을 유지하고 견갑골을 등쪽으로 단단히 고정하고 몇 번 숨을 쉬십시오.<break time="700"/>숨을 들이 마셔 ​​다시 올라올 수 있도록 한 다음, 무릎꿇는 자세로 돌아옵니다.<break time="700"/></prosody></speak>' > pose5.mp3
