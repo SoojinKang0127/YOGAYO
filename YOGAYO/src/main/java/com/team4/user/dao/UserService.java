@@ -2,6 +2,7 @@ package com.team4.user.dao;
 
 import java.util.List;
 
+import com.team4.vo.CourseVo;
 import com.team4.vo.FeedVo;
 import com.team4.vo.UserVo;
 
@@ -19,6 +20,8 @@ public interface UserService {
 	public int count3week(UserVo vo) throws Exception;
 	public int count4week(UserVo vo) throws Exception;
 	public List<FeedVo> selectAll(UserVo vo) throws Exception;
+	public List<CourseVo> selectAllCrs(UserVo vo) throws Exception;
+
 
 
 

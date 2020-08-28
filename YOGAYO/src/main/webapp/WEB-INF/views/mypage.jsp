@@ -1,3 +1,5 @@
+<%@page import="org.springframework.web.context.ContextLoader"%>
+<%@page import="org.springframework.web.context.WebApplicationContext"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
    
@@ -104,6 +106,8 @@
             </div>
           </div>
         </div>
+
+        
         <div class="content_bottom">
           <div class="content_bottom_rcdlist need_scrollbar">
             <div class="content_bottom_myRcds">

@@ -167,6 +167,19 @@
   			u.UNUM=#{uNum}
   			
   	</select>
+  	
+  	<select id="selectAllCrs" resultType="CourseVo">
+  		SELECT
+			*
+		FROM
+			COURSE c 
+		JOIN
+			USER u
+		ON
+			(c.MNUM = u.UNUM)
+		WHERE
+			u.UNUM=#{uNum};
+  	</select>
   
   	
   </mapper>

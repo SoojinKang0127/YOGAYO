@@ -16,12 +16,16 @@ $(function() {
 	var uImg1 = [];
 	var crsNum = [];
 	
+	var txt2 = "";
+	var title = [];
+	var dscrt = [];
+	var imgPath = [];
+	
 	function after_ajax() {
 
 		var gol = request.responseText;
 		if (request.readyState == 4 && request.status == 200) {
 			var list = JSON.parse(gol)
-			console.log(list);
 			var keyLength = Object.keys(list).length;
 
 			console.log(list[0].fNum)
@@ -34,12 +38,9 @@ $(function() {
 				crsNum[i] = list[i].crsNum
 			}
 			
-			console.log(crsNum[0]);
 
-//			for (var r = 0; r < 5; r++) {
-//				arrayFn(r);
-//				console.log(arrayFn(1));
-//			}
+
+				txt += "<div class='content_bottom_myRcds_title'>내 요가 후기</div>"
 
 				for(var r=0; r<keyLength; r++) {
 					
@@ -66,18 +67,34 @@ $(function() {
 				txt += "<div class='bottom_time'>"+regDate[r]+"</div>"
 				txt += "</div>"
 				txt += "</div>"
-				txt += "<img class='content_bottom_myRcds_img'>"
+				txt += "<img class='content_bottom_myRcds_img' alt='불러오지 못함' src='${pageContext.request.contextPath}"+uImg1[r]+"'>"
+			//	txt += "<img class='content_bottom_myRcds_img' alt='불러오지 못함' src='"+uImg1[r]+"'>"
 				txt += "</div>"
-				console.log(crsNum[0]);
+			//	txt += "<div class='white_space'><div>"
+					
+					console.log(uImg1[r])
 
 				}
 			
 			$('.content_bottom_myRcds').html(txt)
 			
 			
-			console.log($('content_bottom_myRcds').html(txt))
 
 		}
+		
+		// --------------- start of 나만의 요가 -----------------
+		
+		
+		var gol2 = request.responseText;
+		console.log(gol2);
+		if (request.readyState == 4 && request.status == 200) {
+			var list2 = JSON.parse(gol2)
+			console.log(list2);
+			var keyLength2 = Object.keys(list2).length;
+
+		}
+		
 	}
+	
 
 })
