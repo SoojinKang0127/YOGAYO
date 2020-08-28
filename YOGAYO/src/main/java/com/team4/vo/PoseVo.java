@@ -7,7 +7,7 @@ public class PoseVo {
 	String img_Path;
 	String title;
 	String audio_Path;
-	int time;
+	String time;
 	int difficulty;
 	Date regDate;
 	
@@ -15,7 +15,7 @@ public class PoseVo {
 	public PoseVo() {}
 
 
-	public PoseVo(int pNum, String img_Path, String title, String audioPath, int time, int difficulty, Date regDate) {
+	public PoseVo(int pNum, String img_Path, String title, String audioPath, String time, int difficulty, Date regDate) {
 		this.pNum = pNum;
 		this.img_Path = img_Path;
 		this.title = title;
@@ -66,12 +66,12 @@ public class PoseVo {
 	}
 
 
-	public int getTime() {
+	public String getTime() {
 		return time;
 	}
 
 
-	public void setTime(int time) {
+	public void setTime(String time) {
 		this.time = time;
 	}
 

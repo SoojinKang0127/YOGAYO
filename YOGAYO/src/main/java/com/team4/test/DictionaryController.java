@@ -21,6 +21,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.protobuf.Service;
 import com.team4.dao.course.CourseServiceImpl;
@@ -38,17 +39,29 @@ public class DictionaryController {
 
 	@RequestMapping(value = "/dictionary-detail", method = RequestMethod.GET)
 	public String dictionary( Locale locale, Model model ,PoseVo vo,HttpServletRequest req)throws Exception {
-			
+	
 		String pnum=req.getParameter("pnum");
 		
-		int num=Integer.parseInt(pnum);
+		int num=Integer.parseInt(pnum);  
+		
 		vo= new PoseVo();
 			vo.setpNum(num);
-			PoseVo pose;
+			PoseVo pose ;
 		
+			
+			
 			try {
-				pose = service.poseSelect(vo);
+				pose = service.poseSelect(vo);				
 				model.addAttribute("pose" , pose);
+				
+				
+				int minu = Integer.parseInt(pose.getTime()) / 60;
+				int second = Integer.parseInt(pose.getTime()) % 60;
+				
+				model.addAttribute("minu",minu);
+				model.addAttribute("second",second);
+				
+
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
