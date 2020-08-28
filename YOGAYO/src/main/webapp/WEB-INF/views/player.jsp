@@ -27,27 +27,7 @@
 					$("#pop2").css("visibility", "hidden")
 					$("#pop3").hide()
 				}
-
-/* 				var mySlider = new rSlider({
-					target : "#slider1",
-					values : [ 1, 2, 3, 4, 5 ],
-					range : false,
-					set : [ 5 ],
-					tooltip : false,
-				})
-
-				var mySlider2 = new rSlider({
-					target : "#slider2",
-					values : [ 1, 2, 3, 4, 5 ],
-					range : false,
-					set : [ 5 ],
-					tooltip : false,
-				}) */
 				
-				
-				
-				
-
 				$(".end-btn").click(function() {
 					$("#pop1").show()
 					$(".play-button").click()
@@ -66,53 +46,17 @@
 					$(display).text(num[0].value + " kg")
 				})
 				
-				
-				
-				
-				
-
-				
-
-				function getParam(sname) {
-
-					var params = location.search.substr(location.search
-							.indexOf("?") + 1);
-
-					var sval = "";
-
-					params = params.split("&");
-
-					for (var i = 0; i < params.length; i++) {
-
-						temp = params[i].split("=");
-
-						if ([ temp[0] ] == sname) {
-							sval = temp[1];
-						}
-
-					}
-
-					return sval;
-
-				}
-				
-				
-
-
 			});
 </script>
 </head>
 <body>
-
-
-	<form action="feedupload" method="POST" enctype="multipart/form-data" name="feed" id="feed">
-		<input type="hidden" name="course" value="" id="course"> 
-		<input type="hidden" name="slevel" value="" id="slevel">
-		<input type="hidden" name="dlevel" value="" id="dlevel">
-		<input type="hidden" name="context" value="" id="context"> 
-		<input type="hidden" name="weight" value="" id="weight">
-
-
+	<form action="feedupload" method="POST" enctype="multipart/form-data"
+		name="feed" id="feed">
+		<input type="hidden" name="course" value="" id="course"> <input
+			type="hidden" name="slevel" value="" id="slevel"> <input
+			type="hidden" name="dlevel" value="" id="dlevel"> <input
+			type="hidden" name="context" value="" id="context"> <input
+			type="hidden" name="weight" value="" id="weight">
 
 		<div class="all-wrapper">
 			<header>
@@ -256,8 +200,18 @@
 						</div>
 					</div>
 				</div>
-				<script>
-				
+				<div class="pop2-btn" id="submit" onclick="submit();">게시하기</div>
+			</div>
+		</div>
+		<div id="pop3">
+			<div class="pop3-top">
+				<input type="text" class="pop3-top-input" placeholder="여기에 입력" />
+				<div class="pop3-top-txt">kg</div>
+			</div>
+			<div class="pop3-bottom">입력</div>
+		</div>
+	</form>
+	<script>
 				var userImages = document.querySelectorAll(".userImage");
 				var btns = document.querySelectorAll(".btnContainer");
 				
@@ -293,17 +247,6 @@
 						reader.readAsDataURL(event.target.files[0]);
 					}
 				</script>
-				<div class="pop2-btn" id="submit" onmouseover="submit();">게시하기</div>
-			</div>
-		</div>
-		<div id="pop3">
-			<div class="pop3-top">
-				<input type="text" class="pop3-top-input" placeholder="여기에 입력" />
-				<div class="pop3-top-txt">kg</div>
-			</div>
-			<div class="pop3-bottom">입력</div>
-		</div>
-	</form>
 	<script type="text/javascript">
 	
 		var form = document.feed;
@@ -312,7 +255,6 @@
 		var dlevel = document.getElementById("dlevel");
 		var context = document.getElementById("context");
 		var weight = document.getElementById("weight");
-		//var file = document.file;
 		var num = document.getElementsByClassName("pop3-top-input")
 		
 		
@@ -350,29 +292,16 @@
 
 	function submit(){
 		
-		console.log(getParam("course"));
-		console.log((mySlider.values.end + 1));
-		console.log((mySlider2.values.end + 1));
-		console.log($(".main-top-text").val());
-		console.log(num[0].value);
 		
-		
+		alert("후기를 등록하였습니다.")
 		course.setAttribute("value", getParam("course"));
 		slevel.setAttribute("value", mySlider.values.end + 1);
 		dlevel.setAttribute("value", (mySlider2.values.end + 1));
 		context.setAttribute("value", $(".main-top-text").val());
 		weight.setAttribute("value", num[0].value);
 		
-		console.log(course);
-		console.log(slevel);
-		console.log(dlevel);
-		console.log(context);
-		console.log(weight);
-		console.log(form);
-		
 		form.submit();
 	}
-	
 	
 	</script>
 </body>

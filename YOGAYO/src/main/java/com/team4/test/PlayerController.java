@@ -41,151 +41,81 @@ public class PlayerController {
 
 		return "player";
 	}
-
+	
+	
+	
 	@RequestMapping(value = "/feedupload", method = RequestMethod.POST)
 	public String feedupload(MultipartHttpServletRequest multi, HttpServletRequest req) {
-
-//		HttpSession session = req.getSession();
-//		UserVo user = (UserVo)session.getValue("user");
-//		int uNum = user.getuNum();
-
-//		int  course = Integer.parseInt(multi.getParameter("course"));
-//		int slevel = Integer.parseInt(multi.getParameter("slevel"));
-//		int  dlevel = Integer.parseInt(multi.getParameter("dlevel"));
-//		String context = multi.getParameter("context");
-//		int  weight = Integer.parseInt(multi.getParameter("weight"));
+		
+		
+		HttpSession session = req.getSession();
+		UserVo user = (UserVo)session.getValue("user");
+		int uNum = user.getuNum();
+		
+		
+		int  course = Integer.parseInt(multi.getParameter("course"));
+		int slevel = Integer.parseInt(multi.getParameter("slevel"));
+		int  dlevel = Integer.parseInt(multi.getParameter("dlevel"));
+		String context = multi.getParameter("context");
+		int  weight = Integer.parseInt(multi.getParameter("weight"));
 		
 		MultipartFile mf = multi.getFile("file");
 		String originalFileName = mf.getOriginalFilename();
-		long fileSize = mf.getSize();
+		String fileType=originalFileName.substring(originalFileName.lastIndexOf('.'), originalFileName.length());
 		
-		String fileType = originalFileName.substring(originalFileName.lastIndexOf('.'), originalFileName.length());
-		System.out.println("realpath:" + multi.getRealPath("/"));
-		// Users/soo/Documents/YOGAYO/YOGAYO/YOGAYO/src/main/webapp/resources/image/feedimages
-		// String
-		// testPath="C://Users/kosmo//document//github//yogayo/yogayo/.metadat////"
 		String realPath = multi.getRealPath("/");
-		String curUserPath = realPath.substring(0, realPath.lastIndexOf(".metadata"));
+		String curUserPath=realPath.substring(0, realPath.indexOf(".metadata"));
 		curUserPath=curUserPath.replace('\\', '/');
-		System.out.println(curUserPath);
 		String path=null;
-		if(curUserPath.indexOf("YOGAYO")==-1) {
-			path= curUserPath+"YOGAYO/YOGAYO/src/main/webapp/resources/image/feedimages/";
-		}else {
-			
-			 path = curUserPath + "YOGAYO/src/main/webapp/resources/image/feedimages/";
-		}
-		System.out.println(path);
-		int no = 0;
+	      if(curUserPath.indexOf("YOGAYO")==-1) {
+	         path= curUserPath+"YOGAYO/YOGAYO/src/main/webapp/resources/image/feedimages/";
+	      }else {
+	         
+	          path = curUserPath + "YOGAYO/src/main/webapp/resources/image/feedimages/";
+	      }
+		String projectPath = "resources/image/feedimages/";
+		
+		int no=0;
 		try {
 			no = service.getLastFnum() + 1;
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
-		String safeFile = path + "feed" + Integer.toString(no) + fileType;
-//		realpath:/Users/minjae/Documents/GitHub/YOGAYO/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/YOGAYO/
-//                Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps/YOGAYO/
-//         		 C:\Users\kosmo_28\Documents\GitHub\YOGAYO\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps\YOGAYO\
-//      realpath:C:\Users\Kosmo_24\Documents\GitHub\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\05_Test_SPRING_MVC\
-//               C:\team4\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\05_Test_SPRING_MVC\
+		String safeFile = path + "feed"+Integer.toString(no)+fileType;
+		String prjPathandName = projectPath + "feed"+Integer.toString(no)+fileType;
 		
 		
 		
-		
-		
-//		realpath:/GitHub/YOGAYO/
-//               /YOGAYO/YOGAYO/
-//         		 \GitHub\YOGAYO\
-		
-//      realpath:\GitHub\
-//               \team4\
-		
-		
-		
-		
-		
-		
-		//		vo.setuNum(uNum);
-//		vo.setCrsNum(course);
-//		vo.setsLevel(slevel);
-//		vo.setdLevel(dlevel);
-//		vo.setContext(context);
-//		vo.setWeight(weight);
-//		vo.setuImg1(safeFile);
-//		
-//		
-
-		String message = "";
-
 		try {
 			mf.transferTo(new File(safeFile));
-			message = "파일 업로드 성공";
+			System.out.println("파일 들어감");
 		} catch (IllegalStateException e) {
 			e.printStackTrace();
-			message = "오류";
 		} catch (IOException e) {
 			e.printStackTrace();
-			message = "오류";
+			System.out.println("오류! 파일 안 들어감");
 		}
-
-//		try {
-//			service.upload(vo);
-//			System.out.println("피드 들어감");
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//			System.out.println("오류! 피드 안 들어감");
-//		}
-
-		return "test";
-	}
-
-	@RequestMapping(value = "/feeduploads", method = RequestMethod.POST)
-	public String review(MultipartHttpServletRequest request,
-			@RequestParam(value = "course", defaultValue = "name", required = false) String crsNum,
-			@RequestParam(value = "slevel", defaultValue = "name", required = false) String sLevel,
-			@RequestParam(value = "dlevel", defaultValue = "name", required = false) String dLevel,
-			@RequestParam(value = "context", defaultValue = "name", required = false) String context,
-			@RequestParam(value = "weight", defaultValue = "", required = false) String weight) {
-
-		System.out.println(request.getParameter("course"));
-
-//		System.out.println(crsNum);
-//		System.out.println(sLevel);
-//		System.out.println(dLevel);
-//		System.out.println(context);
-//		System.out.println(weight);
-
-//		FeedVo vo = new FeedVo();
-//		FeedServiceImpl service = new FeedServiceImpl();
-//
-//		HttpSession session = req.getSession();
-//		UserVo user = (UserVo)session.getValue("user");
-//		int uNum = user.getuNum();
-//		
-//		vo.setuNum(uNum);
-//		vo.setCrsNum(crsNum);
-//		vo.setsLevel(sLevel);
-//		vo.setdLevel(dLevel);
-//		vo.setContext(context);
-//		vo.setWeight(weight);
-//	
-//		try {
-//			service.upload(vo);
-//			System.out.println("피드 들어감");
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//			 System.out.println("피드 안 들어감");
-//		}
-
-		return "main";
+		
+				
+		vo.setuNum(uNum);
+		vo.setCrsNum(course);
+		vo.setsLevel(slevel);
+		vo.setdLevel(dlevel);
+		vo.setContext(context);
+		vo.setWeight(weight);
+		vo.setuImg1(prjPathandName);
+		
+		
+		try {
+			service.upload(vo);
+			System.out.println("피드 들어감");
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("오류! 피드 안 들어감");
+		}
+		
+		return "mypage";
 	}
 	
-	public static void main(String[] args) {
-		
-		System.out.println(currDir);
-		currDir.lastIndexOf("/YOGAYO");
-
-	}
 
 }
