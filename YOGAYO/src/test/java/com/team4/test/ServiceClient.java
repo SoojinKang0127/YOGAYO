@@ -44,17 +44,11 @@ import com.team4.vo.UserVo;
 
 public class ServiceClient {
 		
-	public static void main(String[] args) throws Exception {
-		
-		UserServiceImpl service = new UserServiceImpl();
-		
-		UserVo vo = new UserVo();
-		vo.setId("iamhajaml@naver.com");
-		
-		UserVo result = new UserVo();
-		result = service.checkDuplication(vo);
-		System.out.println(result);
-		
+	
+	
+	public static void main(String[] args) {
+		String os = System.getProperty("os.name").toLowerCase();
+		System.out.println(os);
 	}
 
 }

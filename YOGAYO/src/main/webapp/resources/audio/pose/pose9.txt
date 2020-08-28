@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">배에 누워서 발가락을 똑바로 펴고, 손은 어깨 아래에, 팔꿈치는 몸에 가깝게 눕습니다. 다리를 맞물리고 배를 안팎으로 당깁니다.<break time="700"/>숨을들이 쉴 때 가슴을 들어올리세요. 쇄골을 위로 올리고 어깨 뼈를 등 위쪽으로, 척추를 따라서 아래로 단단히 고정하십시오<break time="700"/>마지막으로 머리를 들어 올리십시오. 아직 손에 무게가없는 상태에서 심장을여십시오. 발가락까지 펴십시오.<break time="700"/>숨을 내쉬면서 다시 내려 오세요. 두 번 반복하세요<break time="700"/>세 번째로 올라 올 땐 완전히 가슴을 핍니다. 가슴을 들어 올리면 머리가 따라 올라갑니다. 편할때까지 올라가세요.<break time="700"/>측면 갈비뼈를 앞으로 가져오고, 팔뚝 뼈를 뒤로 당기고, 목을 늘립니다.<break time="700"/>척추 전체를 통해 등을 구부리십시오. 위를 향해 볼 수 있지만, 목 뒤쪽의 텐션을 유지해야합니다. 만약 목이 편하지 않다면, 시선을 앞으로 유지하십시오.<break time="700"/>5 ~ 10 번 숨을 쉬세요<break time="700"/>끝내려면 숨을 내쉴 때 몸을 아래로 내리고 배에 누워 휴식을 취하세요.<break time="700"/></prosody></speak>' > pose9.mp3
