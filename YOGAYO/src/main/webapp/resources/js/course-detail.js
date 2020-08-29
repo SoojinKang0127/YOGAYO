@@ -1,4 +1,32 @@
 $(window).ready(function() {
+	$("#heart").click(function() {
+		if ($(this).attr('class') == 'far fa-heart') {
+			$(this).attr('class', 'fas fa-heart');
+		} else {
+			$(this).attr('class', 'far fa-heart');
+		}
+	});
+	$(".fas").click(function() {
+		if ($(this).attr('class') == 'fas fa-caret-down') {
+			$(this).attr('class', 'fas fa-caret-left');
+			$(this).parent().next().show();
+		} else {
+			$(this).attr('class', 'fas fa-caret-down');
+			//$('.hidden_comment').hide();
+			$(this).parent().next().hide();
+		}
+	});
+
+	$("#show_me_the_comment").hover(function() {
+		$(this).css({
+			color : "black"
+		});
+	}, function() {
+		$(this).css({
+			color : "#C0C0C0"
+		});
+	});
+
 	$(window).scroll(function() {
 		var scrollTop = $(document).scrollTop();
 		if (scrollTop < 530) {

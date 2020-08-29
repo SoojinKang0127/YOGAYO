@@ -1,11 +1,9 @@
 package com.team4.test;
 
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -15,14 +13,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.team4.dao.course.CourseDAO;
-import com.team4.dao.course.CourseDAOImpl;
 import com.team4.dao.course.CourseServiceImpl;
 import com.team4.dao.pose.PoseServiceImpl;
+import com.team4.vo.CommentVo;
 import com.team4.vo.CoursePosesVo;
 import com.team4.vo.CourseVo;
-import com.team4.vo.PagingVo;
-import com.team4.vo.PoseVo;
 
 @Controller
 public class CourseController {
@@ -38,6 +33,22 @@ public class CourseController {
 
 	}
 
+	@RequestMapping(value = "/addComment", method = RequestMethod.GET)
+	public String addComment(CommentVo cvo, Model model, @RequestParam("crsNum") int crsNum,
+			@RequestParam("uNum") int uNum, @RequestParam("review") String context) {
+		cvo = new CommentVo();
+		cvo.setCrsNum(crsNum);
+		cvo.setuNum(uNum);
+		cvo.setContext(context);
+		try {
+			service.addComment(cvo);
+		} catch (Exception e) {
+			System.out.println("[CourseController /  addComment]" + e.toString());
+		}
+		
+		return "redirect:/course-detail?crsNum="+crsNum;
+	}
+
 	@RequestMapping(value = "/course-detail", method = RequestMethod.GET)
 	public String makeCourse(CourseVo vo, CoursePosesVo cpvo, HttpServletRequest req, RedirectAttributes rttr,
 			Model model, @RequestParam("crsNum") int crsNum) throws Exception {
@@ -49,17 +60,23 @@ public class CourseController {
 		cpvo = new CoursePosesVo();
 
 		vo.setCrsNum(crsNum);
+		model.addAttribute("crsNum", crsNum);
 
 		CourseVo course;
 		CoursePosesVo cpv;
+		List<CommentVo> commentList;
 
 		try {
+			
 			course = service.selectOne(vo);
 			model.addAttribute("course", course);
 
 			cpv = service.coursePoses(vo);
 			model.addAttribute("coursePoses", cpv);
 
+			commentList = service.commentAll();
+			model.addAttribute("commentList", commentList);
+			System.out.println(commentList.get(0).getContext());
 			int[] timeArr = { Integer.parseInt(cpv.getTime1()), Integer.parseInt(cpv.getTime2()),
 					Integer.parseInt(cpv.getTime3()), Integer.parseInt(cpv.getTime4()),
 					Integer.parseInt(cpv.getTime5()), Integer.parseInt(cpv.getTime6()),
@@ -82,9 +99,9 @@ public class CourseController {
 				if (sec < 10) {
 					second = "0" + Integer.toString(sec);
 				} else {
-					second = Integer.toString(sec);	
+					second = Integer.toString(sec);
 				}
-				
+
 				mins.add(minute);
 				seconds.add(second);
 			}

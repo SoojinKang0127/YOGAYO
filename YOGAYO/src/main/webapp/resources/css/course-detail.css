@@ -28,6 +28,7 @@ main {
 
 .like {
   display: flex;
+  cursor: pointer;
 }
 
 .like .like_icon {
@@ -36,6 +37,11 @@ main {
 
 .like .like_icon i {
   color: var(--theme-color);
+   
+}
+
+.like .like_icon #hidden_heart{
+	display:none;
 }
 
 .course_detail-img_section {
@@ -174,7 +180,7 @@ main {
 }
 
 .course_detail-mini_view_section {
-  /* border: 1px solid red; */
+ /* border: 1px solid red; */
 }
 
 .fake_mini_view {
@@ -291,15 +297,16 @@ main {
 }
 
 .review_text_box {
+	/* border:1px solid black; */
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-top: 30px;
 }
 
 .review_text_box .user_img {
-  /* border:1px solid green; */
+ /* border:1px solid green;  */
 }
 
 .review_text_box .user_img img {
@@ -310,9 +317,17 @@ main {
   margin-top: 30px;
 }
 
+.form{
+	/* border:1px solid gray; */
+	display:flex;
+	width:90%;
+	
+}
+
 .review_text_box .text_box {
-  /* border:1px solid orange; */
-  width: 80%;
+   /* border:1px solid orange; */
+  width: 90%;
+  margin-right:10px;
 }
 
 .review_text_box .text_box #text_box {
@@ -326,7 +341,7 @@ main {
 }
 
 .review_text_box .review_btn {
-  /* border:1px solid pink; */
+ /* border:1px solid pink; */
 }
 
 .review_text_box .review_btn #review_btn {
@@ -362,7 +377,7 @@ main {
 }
 
 .course_detail-review_container{
-	border:1px solid black;
+	/* border:1px solid black; */
 }
 
 .course_detail-rating i {
@@ -381,7 +396,7 @@ main {
 
 .course_detail-review_profile_img {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 24px;
   width:100%
 }
@@ -394,12 +409,13 @@ main {
 }
 
 .course_detail-review_user_info {
+	 /* border:1px solid green; */
   margin-left: 13px;
   width:100%;
 }
 
 .user_review{
-	margin-bottom:10px;
+	/* border:1px solid orange; */
 }
 
 .course_detail-review_user_name {
@@ -416,6 +432,26 @@ main {
   font-size: 13pt;
   line-height: 120%;
   letter-spacing: 1px;
+}
+
+.show_me_the_comment{
+	/*  border:1px solid navy;  */
+	text-align:right;
+	margin-right:5px;
+	font-size:15pt;
+}
+
+.show_me_the_comment i{
+	color: #C0C0C0;
+}
+
+.show_me_the_comment #left{
+	display:none;
+}
+
+.hidden_comment{
+	border:1px solid blue; 
+	display:none;
 }
 
 .comments{
@@ -439,8 +475,12 @@ main {
 	margin-bottom:5px;
 }
 
+.review_review{
+	border:1px solid red; 
+}
+
 .review_review #comment_text{
-	width:98%;
+	width:90%;
 	height:23px;
 }
 

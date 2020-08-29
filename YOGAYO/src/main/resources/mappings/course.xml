@@ -6,9 +6,18 @@
 
 	<insert id="makeCourse" parameterType="CourseVo">
 		INSERT INTO
-		COURSE(TITLE,MNUM,DSCRT,MATERIAL,IMGPATH,SEQ1,SEQ2,SEQ3,SEQ4,SEQ5,SEQ6,SEQ7,SEQ8)
+		COURSE(TITLE,UNUM,DSCRT,MATERIAL,IMGPATH,SEQ1,SEQ2,SEQ3,SEQ4,SEQ5,SEQ6,SEQ7,SEQ8)
 		values(#{title},#{uNum},#{dscrt},#{material},#{imgPath},#{seq1},#{seq2},#{seq3},#{seq4},#{seq5},#{seq6},#{seq7},#{seq8});
 	</insert>
+	
+	<insert id="addComment" parameterType="CommentVo">
+		INSERT INTO COMMENT(UNUM,CRSNUM,RATE,CONTEXT)
+		VALUES(#{uNum},#{crsNum},#{rate},#{context})
+	</insert>
+	
+	<select id="commentAll" parameterType="CommentVo" resultType="CommentVo">
+	SELECT * FROM COMMENT order by CMTNUM desc;
+	</select>
 
 	<select id="countCourse" resultType="int">
 		SELECT COUNT(*) FROM COURSE

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,6 +26,7 @@ pageEncoding="UTF-8"%>
     <header></header>
     <main>
       <div class="course_detail-bg">
+      
         <div class="course_detail-first">
           <div class="section">
             <div class="to_course">
@@ -34,12 +36,13 @@ pageEncoding="UTF-8"%>
             </div>
             <div class="like">
               <div class="like_icon">
-                <i class="far fa-heart"></i>
+                <i id="heart" class="far fa-heart"></i>
               </div>
               <div class="like_btn">찜하기</div>
             </div>
           </div>
         </div>
+        
         <div class="course_detail-second">
           <div class="section">
             <div class="course_detail-img_section">
@@ -161,6 +164,7 @@ pageEncoding="UTF-8"%>
         <div class="course_detail-fourth_section">
           <!-- black_line -->
           <div class="course_detail-review_section">
+          
             <div class="review_text_box">
               <div class="user_img">
                 <img
@@ -168,86 +172,91 @@ pageEncoding="UTF-8"%>
                   alt="profile"
                 />
               </div>
-              <div class="text_box">
-                <div id="full-stars-example-two">
-    <div class="rating-group">
-        <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
-        <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-        <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
-        <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-        <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
-        <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-        <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
-        <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-        <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
-        <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-        <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
-    </div>
-</div>
-                <input
-                  type="text"
-                  id="text_box"
-                  name="review"
-                  placeholder="댓글 달기..."
-                />
-              </div>
-              <div class="review_btn">
-                <input
-                  type="submit"
-                  id="review_btn"
-                  name="review"
-                  value="게시"
-                />
-              </div>
-            </div>
-            <!-- 댓글 시작  -->
+              
+              <form action="addComment" class="form" method="get">
+	              <div class="text_box">
+	                <div id="full-stars-example-two">
+					    <div class="rating-group">
+					        <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+					        <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+					        <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+					        <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+					        <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+					        <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+					        <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+					        <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+					        <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+					        <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+					        <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+					    </div>
+					</div>
+	                <input type="text" id="text_box" name="review" placeholder="댓글 달기..." />
+	                <input type="hidden" name="uNum" value="${user.uNum}"/>
+	                <input type="hidden" name="crsNum" value="${crsNum}"/>
+	              </div>
+	              <div class="review_btn">
+	                <input type="submit" id="review_btn"/>
+	              </div>
+	              </form>
+	             
+            
+            </div><!-- end of review text box -->
+            
+          <!-- 댓글 시작  -->
             <div class="new_review">
               <div class="course_detail-rating">
                 <span><i class="fas fa-star"></i></span> <span>4.97(206)</span>
                 <span>(후기 206개)</span>
               </div>
+              <c:forEach var="i" items="${commentList}" >
               <div class="course_detail-review_profile_img">
                 <img
                   src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
                   alt="profile"
                 />
-
+                
                 <div class="course_detail-review_user_info">
-                <div class="user_review">
-                  <div class="course_detail-review_user_name">Minh</div>
-                  <div class="course_detail-review_date">2020년8월</div>
-                  <div class="course_detail-review_box">
-                    <span>
-                      수진 언니 결혼 축하해요 제가 춤 춰 드릴게요. 재호님이랑.
-                      우리 엄만 매일 내게 말했어 언제나 남자 조심하라고 사랑은
-                      마치 불장난 같아서 다치니까 Eh
-                    </span>
-                  </div>
-                  </div>
-                   <div class="review_review">
-                    <input type="text" id="comment_text" name="comment" placeholder="답글.." />
-                     <button id="comment_btn">게시</button>
-                  </div>
-                  <div class="comments">
-                    <!-- 답글들 -->
-                    <img alt="comment_user_img" src="${pageContext.request.contextPath}/resources/image/course/profile_face.png">
-                    <div class="comments_box">
-	                    <div class="comment_user_name">변재호</div>
-	                    <div class="user_comment">우리 엄만 매일 내게 말했어 언제나 남자 조심하라고 사랑은
-                      마치 불장난 같아서 다치니까 Eh</div>
-                    </div>
-                  </div>
+	                <div class="user_review">
+	                  <div class="course_detail-review_user_name">${i.uNum}</div>
+	                  <div class="course_detail-review_date">${i.regDate}</div>
+	                  <div class="course_detail-review_box">
+	                    <span> ${i.context}</span>
+	                  </div>
+	                </div>
+	                <div class="show_me_the_comment">
+	                  <i id="show_me_the_comment" class="fas fa-caret-down"></i>
+	                </div>
+	                <div class="hidden_comment">
+	                   <div class="review_review">
+	                    <input type="text" id="comment_text" name="comment" placeholder="답글.." />
+	                     <button id="comment_btn">게시</button>
+	                  </div>
+	                  <div class="comments">
+	                    <!-- 답글들 -->
+	                    <img alt="comment_user_img" src="${pageContext.request.contextPath}/resources/image/course/profile_face.png">
+	                    <div class="comments_box">
+		                    <div class="comment_user_name">변재호</div>
+		                    <div class="user_comment">우리 엄만 매일 내게 말했어 언제나 남자 조심하라고 사랑은
+	                      마치 불장난 같아서 다치니까 Eh</div>
+	                    </div>
+	                  </div>
+	               </div>
                 </div>
+                
               </div>
+              </c:forEach>
               <!-- 댓글 끝 -->
               <div class="more_review_btn">
                 <button id="more_review_btn">후기 206개 모두 보기</button>
               </div>
             </div>
+            
           </div>
           <!-- black_line -->
         </div>
+        
       </div>
+      
       <footer class="footer">
         <div class="footer_section">
           <div class="main-footer_right">
@@ -267,6 +276,7 @@ pageEncoding="UTF-8"%>
           </div>
         </div>
       </footer>
+      
     </main>
   </body>
 </html>
