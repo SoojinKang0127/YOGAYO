@@ -88,17 +88,18 @@
 				<div class="s2_titlebox">
 					<p class="s2_title">선택 된 포즈 리스트</p>
 				</div>
+				
 				<div class="s2_wrapper">
 					<div class="s2_gap">
 						<div class="list_box">
 							<ul id="sortable_list2" class="connectedSortable">
-								<li id="object1">obje1</li>
+								<li id="object1"></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="button_box">
-					<input type="button" class="addItem" value="추가"
+					<input type="button" class="addItem" value="나의 코스목록에 추가"
 						onclick="submit_list()" />
 					<!-- <input type="button" class="submitItem" value="제출" onclick="submitItem();" /> -->
 				</div>

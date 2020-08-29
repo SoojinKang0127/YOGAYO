@@ -1,5 +1,6 @@
 
 $(function () {
+    
 
     var request = new XMLHttpRequest();
 
@@ -63,6 +64,7 @@ $(function () {
                 txt += "</div>"
                 txt += "</div>"
                 txt += "</div>"
+                txt += "<i class='fas fa-trash-alt'></i>"
                 txt += "</li>"
 
             }
@@ -82,7 +84,10 @@ $(function () {
 
         $('#sortable_list2').sortable({
 
+            //connectWith: '.pose_content_box',
+            revert : true,
             connectWith: '.pose_content_box'
+
         });
 
 
@@ -99,17 +104,18 @@ $(function () {
                 }); 
             }
         });
-        $('#sortable_list2 > li')
-            .sortable({
-                connectWith: '.pose_content_box'
-            })
-            .droppable({
-                accept:".sortable_list2",
-            });
 
         $('ul,li').disableSelection();
+
+        const click_obj=$('#object1')
+        $('.pose_content_box').dblclick(function(){
+            $(this).clone().insertAfter(click_obj).hide().show('slow');
+            $('#object1 > .fa-trash-alt').css("visibility", "visible");
+                // $("#sortable_list2").has("li").css("background-color", "lightgreen"); 
+        })
     };
 
+//$(this).slideDown("slow");
 
     //-----------------------------------------------------------------------------------------------------------------------------------------------
     //-----------------------------------------------------------------------------------------------------------------------------------------------
@@ -118,6 +124,5 @@ $(function () {
     //-----------------------------------------------------------------------------------------------------------------------------------------------
     //-----------------------------------------------------------------------------------------------------------------------------------------------
     //-----------------------------------------------------------------------------------------------------------------------------------------------
-
-
+    
 });

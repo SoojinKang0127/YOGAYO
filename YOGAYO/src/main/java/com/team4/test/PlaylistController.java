@@ -61,7 +61,7 @@ public class PlaylistController {
 			HttpSession session, HttpServletRequest req) throws IOException {
 		//pose로 db를 셀렉해오는 dao를 만들어서 그 값들을 json형태로 바꾼다음에 res통해 view로 전달
 		
-		//session = req.getSession();
+		session = req.getSession();
 		
 		PoseService dao = new PoseServiceImpl();
 		JsonArray jsonarr = new JsonArray();
@@ -94,10 +94,6 @@ public class PlaylistController {
 		
 		
 		res.getWriter().write(msg);
-
-		
-		
-		
 	}
 
 	

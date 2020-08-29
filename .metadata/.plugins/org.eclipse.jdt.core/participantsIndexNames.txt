@@ -27,3 +27,5 @@ C:\Users\kosmo_28\Desktop\YOGAYO\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.c
 \YOGAYO\src\main\java
 C:\Users\kosmo_28\Documents\GitHub\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3610453004.index
 \YOGAYO\src\main\java
+/Users/paso/Documents/code/github/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3748728972.index
+/YOGAYO/src/main/java

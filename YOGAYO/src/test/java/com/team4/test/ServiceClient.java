@@ -181,12 +181,12 @@ public class ServiceClient {
 			System.out.println("[SAervu=iceClient / main ]"+ e.toString());
 		}
 		
-			List<CourseVo> courses = cservice.selectAll();
-			System.out.println(courses.get(0).getTitle());
-			System.out.println(courses.get(1).getTitle());
-			System.out.println(courses.get(2).getTitle());
-			System.out.println(courses.get(3).getTitle());
-			System.out.println(courses.get(4).getTitle());
+			//List<CourseVo> courses = cservice.selectAll();
+//			System.out.println(courses.get(0).getTitle());
+//			System.out.println(courses.get(1).getTitle());
+//			System.out.println(courses.get(2).getTitle());
+//			System.out.println(courses.get(3).getTitle());
+//			System.out.println(courses.get(4).getTitle());
 			
 
 		
