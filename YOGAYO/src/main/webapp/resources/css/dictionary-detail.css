@@ -14,12 +14,13 @@ main {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 100px 0px 40px 0px;
+  margin: 70px 0px 30px 0px;
 }
 
 .yoag-dictionary-box-section{
-  width: 56%;
+  width: 36%;
   display: flex;
+  justify-content: center;
   
 }
 
@@ -34,11 +35,13 @@ main {
   justify-content: center;
   width: 100%;
   margin-top: 12px;
+  
 }
 
 .yoga-title-box-section{
   display: flex;
-  width: 56%;
+  justify-content: center;
+  width: 36%;
 }
 
 
@@ -49,22 +52,19 @@ main {
 }  
 
 .search-img-box {
-  border: greenyellow;
   display: flex;
   align-items: center;
  justify-content: center; 
- margin:30px 0px 10px 0px;
+ margin:36px 0px 25px 0px;
 }
 
 .search-img-section {
-  border: green;
   width: 56%;
   display: flex;
   justify-content: center;
 }
 
 .search-img{
-  border: red;
   width: auto;
   height: auto;
   /* width:  800px; */
@@ -82,7 +82,6 @@ main {
 }  
 
 .yoga-second-dificult span{
-	
   margin-right: 5px;
 }
 
@@ -94,7 +93,8 @@ main {
 
 .yoga-second-dificult-box-section{
   display: flex;
-  width: 56%;
+  justify-content: center;
+  width: 30%;
 }
 
 .yoga-second-dificult {
@@ -117,7 +117,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 56%;
+  width: 42%;
 }
 
 .box p{
@@ -133,8 +133,9 @@ main {
 
 .box li{
   list-style: disc;
+  line-height: 1.7;
   color: #0c646f;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   margin: 5px;
 }
@@ -147,13 +148,13 @@ main {
 }
 
 .stepBystep-title{
-  width: 10%; 
+  width: 20%; 
   padding: 22px;
   margin-right: 10px;
 }
 
 .stepBystep-content{
-  width: 90%;
+  width: 80%;
   padding: 22px;
 }
 
@@ -164,13 +165,13 @@ main {
 
 
 .BeginnersTips-title{
-  width: 10%; 
+  width: 20%; 
   padding: 22px;
   margin-right: 10px;
 }
 
 .BeginnersTips-content{
-  width: 90%;
+  width: 80%;
   padding: 22px;
 }
 
@@ -181,13 +182,13 @@ main {
 }
 
 .Benefits-title{
-  width: 10%; 
+  width: 20%; 
   padding: 22px;
   margin-right: 10px;
 }
 
 .Benefits-content{
-  width: 90%;
+  width: 80%;
   padding: 22px;
 }
 
@@ -197,14 +198,14 @@ main {
 }
 
 .watchOutFor-title{
-  width: 10%; 
+  width: 20%; 
   padding: 22px;
   margin-right: 10px;
 }
 
 
 .watchOutFor-content{
-  width: 90%;
+  width: 80%;
   padding: 22px;
 }
 
@@ -215,13 +216,13 @@ main {
 }
 
 .variations-title{
-  width: 10%; 
+  width: 20%; 
   padding: 22px;
   margin-right: 10px;
 }
 
 .variations-content{
-  width: 90%;
+  width: 80%;
   padding: 22px;
 }
 
