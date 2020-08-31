@@ -24,29 +24,63 @@ public class CourseController {
 
 	CourseServiceImpl service = new CourseServiceImpl();
 	PoseServiceImpl pService = new PoseServiceImpl();
+	
+	
+	@RequestMapping(value = "/course-detail-upload-comment", method = RequestMethod.POST)
+	public void uploadComment(CommentVo cvo, Model model, @RequestParam("crsNum") int crsNum,
+			@RequestParam("uNum") int uNum, @RequestParam("comment") String context,
+			@RequestParam("rating") int rate) {
+		System.out.println("들어왔음");
+		
+		System.out.println(uNum);
+		System.out.println(context);
+		System.out.println(rate);
+		System.out.println(crsNum);
+
+		
+	}
 
 	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
 	public String coueseTitle(Model model) throws Exception {
 		List<CourseVo> list = service.selectAll();
 		model.addAttribute("courses", list);
 		return "course-page";
+	}
 
+	@RequestMapping(value = "/addReview", method = RequestMethod.GET)
+	public String addReview(CommentVo cvo, Model model, @RequestParam("uNum") int uNum,
+			@RequestParam("crsNum") int crsNum, @RequestParam("review") String context,
+			@RequestParam("parent") int parent ) {
+		cvo = new CommentVo();
+		cvo.setuNum(uNum);
+		cvo.setCrsNum(crsNum);
+		cvo.setContext(context);
+		cvo.setParent(parent);
+		try {
+			service.addReview(cvo);
+		} catch (Exception e) {
+			System.out.println("[CourseController /  addReview]" + e.toString());
+		}
+
+		return "redirect:/course-detail?crsNum=" + crsNum;
 	}
 
 	@RequestMapping(value = "/addComment", method = RequestMethod.GET)
 	public String addComment(CommentVo cvo, Model model, @RequestParam("crsNum") int crsNum,
-			@RequestParam("uNum") int uNum, @RequestParam("review") String context) {
+			@RequestParam("uNum") int uNum, @RequestParam("comment") String context,
+			@RequestParam("rating3") int rate) {
 		cvo = new CommentVo();
 		cvo.setCrsNum(crsNum);
 		cvo.setuNum(uNum);
 		cvo.setContext(context);
+		cvo.setRate(rate);
 		try {
 			service.addComment(cvo);
 		} catch (Exception e) {
 			System.out.println("[CourseController /  addComment]" + e.toString());
 		}
-		
-		return "redirect:/course-detail?crsNum="+crsNum;
+
+		return "redirect:/course-detail?crsNum=" + crsNum;
 	}
 
 	@RequestMapping(value = "/course-detail", method = RequestMethod.GET)
@@ -61,22 +95,27 @@ public class CourseController {
 
 		vo.setCrsNum(crsNum);
 		model.addAttribute("crsNum", crsNum);
-
 		CourseVo course;
 		CoursePosesVo cpv;
 		List<CommentVo> commentList;
+		List<CommentVo> reviewList;
 
 		try {
-			
+
 			course = service.selectOne(vo);
 			model.addAttribute("course", course);
 
 			cpv = service.coursePoses(vo);
 			model.addAttribute("coursePoses", cpv);
 
-			commentList = service.commentAll();
+			commentList = service.commentAll(vo);
 			model.addAttribute("commentList", commentList);
+
+			reviewList = service.reviewAll(vo);
+			model.addAttribute("reviewList", reviewList);
+
 			System.out.println(commentList.get(0).getContext());
+			
 			int[] timeArr = { Integer.parseInt(cpv.getTime1()), Integer.parseInt(cpv.getTime2()),
 					Integer.parseInt(cpv.getTime3()), Integer.parseInt(cpv.getTime4()),
 					Integer.parseInt(cpv.getTime5()), Integer.parseInt(cpv.getTime6()),
@@ -128,13 +167,3 @@ public class CourseController {
 	}
 
 }
-//		CourseVo vo=service.selectOne(vo);
-//		int seq1=vo.getSeq1()
-//				=>포즈를 불러올수 있다
-//			PoseVO posevo=servicePose.selcetPose(new PoseVo(seq1))
-//			posevo.getTime
-//			posevo.gettitle
-/*
- * HttpSession session = req.getSession(); CourseVo course =
- * service.selectOne(vo); session.setAttribute("course", course);
- */

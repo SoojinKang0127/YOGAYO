@@ -41,8 +41,19 @@ public class CourseServiceImpl implements CourseService {
 	}
 
 	@Override
-	public List<CommentVo> commentAll() throws Exception {
-		return dao.commentAll();
+	public List<CommentVo> commentAll(CourseVo vo) throws Exception {
+		return dao.commentAll(vo);
+	}
+
+	@Override
+	public void addReview(CommentVo cvo) throws Exception {
+		dao.addReview(cvo);
+		
+	}
+
+	@Override
+	public List<CommentVo> reviewAll(CourseVo vo) throws Exception {
+		return dao.reviewAll(vo);
 	}
 	
 

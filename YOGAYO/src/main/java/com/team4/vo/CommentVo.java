@@ -8,6 +8,7 @@ public class CommentVo {
 	int crsNum;
 	int rate;
 	String context;
+	int parent;
 	Date regDate;
 
 	public int getCmtNum() {
@@ -50,7 +51,13 @@ public class CommentVo {
 		this.context = context;
 	}
 
+	public int getParent() {
+		return parent;
+	}
 
+	public void setParent(int parent) {
+		this.parent = parent;
+	}
 
 	public Date getRegDate() {
 		return regDate;
@@ -63,6 +70,7 @@ public class CommentVo {
 	@Override
 	public String toString() {
 		return "CommentVo [cmtNum=" + cmtNum + ", uNum=" + uNum + ", crsNum=" + crsNum + ", rate=" + rate + ", context="
-				+ context + ", regDate=" + regDate + "]";
+				+ context + ", parent=" + parent + ", regDate=" + regDate + "]";
 	}
+
 }

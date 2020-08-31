@@ -14,7 +14,9 @@ public interface CourseDAO {
 	public CourseVo selectOne(CourseVo vo) throws Exception;
 	public CoursePosesVo coursePoses(CourseVo vo) throws Exception;
 	public void addComment(CommentVo cvo) throws Exception;
-	public List<CommentVo> commentAll() throws Exception;
+	public List<CommentVo> commentAll(CourseVo vo) throws Exception;
+	public void addReview(CommentVo cvo) throws Exception;
+	public List<CommentVo> reviewAll(CourseVo vo) throws Exception;
 	
 }
 	

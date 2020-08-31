@@ -173,7 +173,7 @@ pageEncoding="UTF-8"%>
                 />
               </div>
               
-              <form action="addComment" class="form" method="get">
+            <!--   <form  class="form" >  -->
 	              <div class="text_box">
 	                <div id="full-stars-example-two">
 					    <div class="rating-group">
@@ -190,16 +190,40 @@ pageEncoding="UTF-8"%>
 					        <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
 					    </div>
 					</div>
-	                <input type="text" id="text_box" name="review" placeholder="댓글 달기..." />
+	                <input type="text" id="text_box" name="comment" placeholder="댓글 달기..." />
 	                <input type="hidden" name="uNum" value="${user.uNum}"/>
 	                <input type="hidden" name="crsNum" value="${crsNum}"/>
+	                <input type="hidden" id='rating3' name="rating3" value="${rate}"/>
+	                
+	               
 	              </div>
+	               <!-- </form>  -->
 	              <div class="review_btn">
-	                <input type="submit" id="review_btn"/>
+	                <button id="review_btn">게시</button>
 	              </div>
-	              </form>
-	             
-            
+	            
+	              <script>
+	               
+	             $('#review_btn').click(function(){
+	            	 console.log('review 눌림')
+	            	
+	            	 var request= new XMLHttpRequest();
+		                var uNum=encodeURIComponent("${user.uNum}");
+		                var crsNum=encodeURIComponent("${crsNum}");
+		                var rating3=encodeURIComponent($('input[name="rating3"]:checked').val());
+		                var comment=encodeURIComponent(document.getElementById('text_box').value);
+		                console.log(uNum)
+		                console.log(crsNum)
+		                console.log(rating3)
+		                console.log(comment)
+		                request.open("POST","./course-detail-upload-comment?uNum="+uNum+"&crsNum="+crsNum+"&rating="+rating3+"&comment="+comment,true)
+		             	request.onreadystatechange=function(){
+		                	
+		                }
+		                request.send(null)   
+	             })
+	               
+            </script>
             </div><!-- end of review text box -->
             
           <!-- 댓글 시작  -->
@@ -227,20 +251,31 @@ pageEncoding="UTF-8"%>
 	                  <i id="show_me_the_comment" class="fas fa-caret-down"></i>
 	                </div>
 	                <div class="hidden_comment">
+	               <form action="addReview">
 	                   <div class="review_review">
-	                    <input type="text" id="comment_text" name="comment" placeholder="답글.." />
-	                     <button id="comment_btn">게시</button>
+	                    <input type="text" id="comment_text" name="review" placeholder="답글.." />
+		                <input type="hidden" name="uNum" value="${i.uNum}"/>
+		                <input type="hidden" name="parent" value="${i.cmtNum}"/>
+		                <input type="hidden" name="crsNum" value="${crsNum}"/>
+		                <input type="submit" id="comment_btn" value="답글"/>
 	                  </div>
-	                  <div class="comments">
+	               </form>
+	            
+	              <c:forEach var="j" items="${reviewList}">
+	                <c:if test="${i.cmtNum eq j.parent}">
+						<div class="comments">
 	                    <!-- 답글들 -->
 	                    <img alt="comment_user_img" src="${pageContext.request.contextPath}/resources/image/course/profile_face.png">
 	                    <div class="comments_box">
-		                    <div class="comment_user_name">변재호</div>
-		                    <div class="user_comment">우리 엄만 매일 내게 말했어 언제나 남자 조심하라고 사랑은
-	                      마치 불장난 같아서 다치니까 Eh</div>
+		                    <div class="comment_user_name">${j.uNum}</div>
+		                    <div class="user_comment">${j.context}</div>
 	                    </div>
 	                  </div>
+  
+				   </c:if>
+	                    </c:forEach>
 	               </div>
+	             
                 </div>
                 
               </div>

@@ -450,7 +450,7 @@ main {
 }
 
 .hidden_comment{
-	border:1px solid blue; 
+	/* border:1px solid blue;  */
 	display:none;
 }
 
@@ -476,7 +476,7 @@ main {
 }
 
 .review_review{
-	border:1px solid red; 
+	/* border:1px solid red;  */
 }
 
 .review_review #comment_text{
@@ -488,13 +488,13 @@ main {
   all: unset;
   cursor: pointer;
   text-align: center;
-  border:1px solid black;
   border-radius:5px;
   font-size: 11pt;
   background-color: white;
   box-shadow: var(--light-shadow);
   width:7%;
-  height:21px;
+  height:22px;
+  background-color: var(--theme-color);
 }
 
 .more_review_btn {
