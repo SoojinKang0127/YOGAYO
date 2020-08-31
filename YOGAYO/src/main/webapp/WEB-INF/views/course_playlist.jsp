@@ -98,7 +98,7 @@
 				</div>
 				<div class="button_box">
 					<input type="button" class="addItem" value="나의 코스목록에 추가"
-						onclick="submit_list()" />
+						>
 					<!-- <input type="button" class="submitItem" value="제출" onclick="submitItem();" /> -->
 				</div>
 			</div>

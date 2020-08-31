@@ -363,6 +363,10 @@ i {
 .difficulty {
     margin-left: 3px;
 }
+
+.pNum {
+    visibility: hidden; 
+}
 /* 
 #sortable_list2 > .pose_content_box {
 	

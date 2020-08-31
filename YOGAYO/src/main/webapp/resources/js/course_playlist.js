@@ -65,6 +65,7 @@ $(function () {
                 txt += "</div>"
                 txt += "</div>"
                 txt += "<img src='${pageContext.request.contextPath}../../resources/image/playlist/trash.jpg' class='trashBtn' ></img>"
+                txt += "<span class='pnum'>"+pnum[r]+"</span>"
                 txt += "</li>"
 
             }
@@ -115,20 +116,18 @@ $(function () {
         })
 
         
-        
+     $('.addItem').click(function(){
+        var a =$('.pnum').innerHTML();
+        console.log(a);
+        })   
         
         
         
         
     }
     
-    $('.trashBtn').click(function(){
-        console.log('ddddddddd');
-    })   
 
-    $('.s2_title').click(function(){
-        console.log('ddddddddd');
-    })   
+
 })
 
     //$(this).slideDown("slow");
