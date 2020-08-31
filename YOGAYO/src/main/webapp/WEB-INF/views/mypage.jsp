@@ -2,6 +2,8 @@
 <%@page import="org.springframework.web.context.WebApplicationContext"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
    
 <!DOCTYPE html>
 <html lang="en">
@@ -141,42 +143,21 @@
           </div>
           <div class="content_bottom_myCrs need_scrollbar">
             <div class="myCrs_title">나만의 코스 리스트</div>
+            
+            <c:forEach var="i" items="${crsList }">
             <div class="myCrs_box">
               <div class="myCrs_top">
-                <div class="myCrs_top_img"></div>
-                <div class="myCrs_top_title">허리에 좋은 코스</div>
+                <div class="myCrs_top_img">
+                	<img class="forImg" alt="오류!" src="${i.imgPath}">
+                </div>
+                <div class="myCrs_top_title">${i.title}</div>
               </div>
               <div class="myCrs_bottom">
-                <div class="myCrs_bottom_content">이 코스는 허리에 즈으으응ㅇ말 좋습니다</div>
+                <div class="myCrs_bottom_content">${i.dscrt}</div>
               </div>
             </div>
-            <div class="myCrs_box">
-              <div class="myCrs_top">
-                <div class="myCrs_top_img"></div>
-                <div class="myCrs_top_title">허리에 좋은 코스</div>
-              </div>
-              <div class="myCrs_bottom">
-                <div class="myCrs_bottom_content">이 코스는 허리에 즈으으응ㅇ말 좋습니다</div>
-              </div>
-            </div>
-            <div class="myCrs_box">
-              <div class="myCrs_top">
-                <div class="myCrs_top_img"></div>
-                <div class="myCrs_top_title">허리에 좋은 코스</div>
-              </div>
-              <div class="myCrs_bottom">
-                <div class="myCrs_bottom_content">이 코스는 허리에 즈으으응ㅇ말 좋습니다</div>
-              </div>
-            </div>
-            <div class="myCrs_box">
-              <div class="myCrs_top">
-                <div class="myCrs_top_img"></div>
-                <div class="myCrs_top_title">허리에 좋은 코스</div>
-              </div>
-              <div class="myCrs_bottom">
-                <div class="myCrs_bottom_content">이 코스는 허리에 즈으으응ㅇ말 좋습니다</div>
-              </div>
-            </div>
+           </c:forEach>
+            
           </div>
           <div class="content_bottom_likes need_scrollbar">
             <div class="likes_title">좋아요한 코스 리스트</div>

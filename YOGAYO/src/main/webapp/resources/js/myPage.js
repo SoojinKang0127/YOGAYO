@@ -82,19 +82,7 @@ $(function() {
 			
 
 		}
-		
-		// --------------- start of 나만의 요가 -----------------
-		
-		
-		var gol2 = request.responseText;
-		console.log(gol2);
-		if (request.readyState == 4 && request.status == 200) {
-			var list2 = JSON.parse(gol2)
-			console.log(list2);
-			var keyLength2 = Object.keys(list2).length;
 
-		}
-		
 	}
 	
 

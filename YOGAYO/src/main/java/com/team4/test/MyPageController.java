@@ -42,6 +42,8 @@ public class MyPageController {
 		vo.setuNum(uNum);
 		
 		System.out.println(uNum);
+		
+		List<CourseVo> crsList = null;
 
 		int cWeight =0;
 		int tWeight1 =0;
@@ -52,7 +54,7 @@ public class MyPageController {
 		int count3week = 0;
 		int count4week = 0;
 	
-
+		
 		
 		try {
 			cWeight = service.cWeight(vo);
@@ -63,6 +65,9 @@ public class MyPageController {
 			count2week = service.count2week(vo);
 			count3week = service.count3week(vo);
 			count4week = service.count4week(vo);
+			crsList = service.selectAllCrs(vo);
+			
+			System.out.println(crsList);
 	
 		} catch (Exception e) {
 			System.out.println("[MyPageController / myPage]" + e.toString());
@@ -78,6 +83,7 @@ public class MyPageController {
 		model.addAttribute("count2week", count2week);
 		model.addAttribute("count3week", count3week);
 		model.addAttribute("count4week", count4week);
+		model.addAttribute("crsList", crsList);
 		
 		
 		
@@ -86,7 +92,7 @@ public class MyPageController {
 	}
 	
 	@RequestMapping(value = "/myPage", method = RequestMethod.POST) 
-	public void playListAJAX(@RequestParam("feed") String feed, HttpServletResponse res) throws IOException {
+	public void myFeed(@RequestParam("feed") String feed, HttpServletResponse res) throws IOException {
 		
 		
 		
@@ -121,44 +127,12 @@ public class MyPageController {
 		String msg= listObj.toString();
 		
 		res.getWriter().write(msg);
+		
 
-//		System.out.println(msg);
-
-		
-		
-		
-	// ----------------- end of 내 요가 후기 -------------------
 	
-	// -------------- start of 나만의 코스 리스트 -------------------
-	
-		
-		List<CourseVo> list2 =null;
-		
-		try {
-			list2=dao.selectAllCrs(vo);
-		} catch (Exception e) {
-			System.out.println("MyPageController/ajax" + e.toString());
-		}
-		JSONObject listObj2= new JSONObject();
-
-		int l=0;
-		for(CourseVo vo:list2) {
-			JSONObject obj2 = new JSONObject();
-			obj2.put("crsNum", vo.getCrsNum());
-			obj2.put("title", vo.getTitle());
-			obj2.put("mNum", vo.getuNum());
-			obj2.put("dscrt", vo.getDscrt());
-			obj2.put("imgPath", vo.getImgPath());
-
-			listObj2.put(Integer.toString(l),obj2);
-			l++;
-		}
-		
-		String msg2= listObj2.toString();
-		
-		System.out.println(msg2);
-		
 
 	}
 
+	
+	
 }
