@@ -83,14 +83,12 @@
                                                             <a href="#" class="add_pose">추가하기</a>
                                                         </div> -->
 			</div>
-
 			<div id="s2_container">
+				<div class="s2_wrapper">
+					<div class="s2_gap">
 				<div class="s2_titlebox">
 					<p class="s2_title">선택 된 포즈 리스트</p>
 				</div>
-				
-				<div class="s2_wrapper">
-					<div class="s2_gap">
 						<div class="list_box">
 							<ul id="sortable_list2" class="connectedSortable">
 								<li id="object1"></li>

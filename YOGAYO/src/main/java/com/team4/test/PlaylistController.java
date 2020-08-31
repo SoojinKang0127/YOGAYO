@@ -89,17 +89,16 @@ public class PlaylistController {
 			obj.put("difficulty", vo.getDifficulty());
 			listObj.put(Integer.toString(k),obj);
 			k++;
-		}
+		}	
 		String msg= listObj.toString();
 		
 		
 		res.getWriter().write(msg);
+		
 	}
-
-	
 	
 }
-			
+				
 	
 	
 	

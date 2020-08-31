@@ -180,12 +180,13 @@ li {
 }
 
 .pose_title {
-    margin-top:25px;
+    margin-top:15px;
     font-weight: bolder;
     font-size: 16x;
     text-align: center;
     width:100%;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    margin-left: 10px;
 }
 
 
@@ -267,7 +268,6 @@ i {
     border: 1px solid red;
 }
 .s2_titlebox {
-    margin-top: 30px;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -284,6 +284,7 @@ i {
     text-align: center;
     line-height: 45px;
     /* padding-top: 50px; */
+    margin-bottom:65px;
 }
 
 .s2_gap {
@@ -293,21 +294,20 @@ i {
     margin-top: 70px;
     display: flex;
     justify-content: center;
-    height: 567px;
 }
 
 .list_box {
     position: relative;
-    height: 510px;
+    height: 547px;
     overflow: scroll;
-    width: 400px;
+    overscroll-behavior-x: unset;
+    width: 404px;
     /* margin-bottom: 40px; */
 }
 
 #sortable_list2{
     width: 400px;
-    height: 400px;
-    border:2px solid black;
+    height: 547px;
 }
 
 
@@ -341,16 +341,51 @@ i {
     box-sizing: border-box;
     transition: 0.3s;
     text-align: center;
-    margin-bottom: 10px;
     color: #febe2e;
     background-color: white;
 }
 
-.pose_content_box > .fa-trash-alt {
-    visibility: hidden;
+#sortable_list1 > .pose_content_box > .trashBtn {
+    /*visibility: hidden;*/ 
 }
 
-#object1 > .fa-trash-alt {
-    visibility: visible;
+
+.trashBtn {
+   width: 20px;
+   height: 20px;
+   display: inline-block;
+   line-height: 165px;
+   margin-top : 82.5px;
 }
 
+
+
+.difficulty {
+    margin-left: 3px;
+}
+/* 
+#sortable_list2 > .pose_content_box {
+	
+	height: 120px;
+	
+}
+
+#sortable_list2 > .pose_content_box .s1_img {
+	
+	height: 120px;
+	width : 200px;
+}
+
+#sortable_list2 > .pose_content_box .pose_textarea {
+	
+	height: 118px;
+	
+}
+
+#sortable_list2 > .pose_content_box > .trashBtn {
+	
+	line-height : 60px;
+	margin-top: 60px;
+	margin-left:15px;
+	
+} */
