@@ -58,11 +58,13 @@ timeArr.push('${pose8.time}'*100);
 					$("#pop3").hide()
 					$(display).text(num[0].value + " kg")
 				})
-				
+				$('body').append('<audio id="audio" src="${pageContext.request.contextPath}/resources/audio/pose0.mp3" allow="autoplay"></audio>')
+				audio=document.getElementById('audio').play();
 			});
 </script>
 </head>
 <body>
+
 	<form action="feedupload" method="POST" enctype="multipart/form-data"
 		name="feed" id="feed">
 		<input type="hidden" name="course" value="" id="course"> <input
@@ -353,7 +355,7 @@ timeArr.push('${pose8.time}'*100);
 	
 	for(var i=0;i<timeArr.length;i++){
 		minute=parseInt(timeArr[i]/6000)
-		second=timeArr[i]%6000
+		second=parseInt((timeArr[i]%6000)/100)
 		if(second<10)
 		second="0"+second
 		var timer = document.querySelector(

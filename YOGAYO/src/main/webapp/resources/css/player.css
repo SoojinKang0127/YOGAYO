@@ -686,6 +686,7 @@ input {
 
 
 
+
 .container input[type="file"]{
 	position: absolute;
     width: 0px;
@@ -715,4 +716,8 @@ input {
 	height: 100%;
 	
 	
+}
+
+.far.fa-heart{
+color:  #fb3958;
 }

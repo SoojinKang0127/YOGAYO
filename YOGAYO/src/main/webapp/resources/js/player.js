@@ -1,20 +1,22 @@
-barArr = document.getElementsByClassName("order-progress-bar")
-bar = barArr[0]
-play = document.getElementsByClassName("play-button")
-p_btn = document.getElementsByClassName("fas fa-pause btn")
-document.get
-index = 0
-time = timeArr[index]
-console.log(timeArr)
-timer = document.querySelector(
-  "div.scroll-overflow > ul > li:nth-child(" +
-    (index + 1) +
-    ") > div.order-wrapper > div.order-title > div:nth-child(2)"
-)
-interval = null
-heart = document.getElementsByClassName("fa-heart")
+
 
 document.addEventListener("DOMContentLoaded", function () {
+	barArr = document.getElementsByClassName("order-progress-bar")
+	bar = barArr[0]
+	play = document.getElementsByClassName("play-button")
+	p_btn = document.getElementsByClassName("fas fa-pause btn")
+	document.get
+	index = 0
+	time = timeArr[index]
+	timer = document.querySelector(
+	  "div.scroll-overflow > ul > li:nth-child(" +
+	    (index + 1) +
+	    ") > div.order-wrapper > div.order-title > div:nth-child(2)"
+	)
+	interval = null
+	heart = document.getElementsByClassName("fa-heart")
+	
+	
   bar.style.animationDuration = time / 100 + "s"
   bar.style.animationName = "progress"
   bar.style.animationTimingFunction = "linear"
@@ -38,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
           time = timeArr[index]
         }
         bar = barArr[index]
-        bar.style.animationDuration = time / 100 + "s"
+        bar.style.animationDuration = parseInt(time / 100) + "s"
         bar.style.animationName = "progress"
         bar.style.animationTimingFunction = "linear"
         bar.style.animationPlayState = "running"
@@ -68,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
       p_btn = document.getElementsByClassName("fas fa-play btn")
       barArr[index].style.animationPlayState = "paused"
       clearInterval(interval)
+      document.getElementById('audio').pause()
     } else {
       p_btn[0].className = "fas fa-pause btn"
       p_btn = document.getElementsByClassName("fas fa-pause btn")
@@ -101,27 +104,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  like = document.getElementsByClassName("leftwrapper")
+	check_like=0
+  $('.leftwrapper').click(function(){
+	  if(check_like==0){
+	  $('.far.fa-heart').attr('class','fas fa-heart');
+	  check_like++;}
+	  else{
+		  $('.fas.fa-heart').attr('class','far fa-heart')
+		  check_like--;
+		  console.log(1)
+	  }	
+  })
 
   /*
-    console.log(p_btn)
-    length=0
-    velocity=1.28
-    pixel=0
-    max_pixel=380
-    interval=setInterval(() => { 
-        if(pixel<=max_pixel){
-        bar[0].style.width=length+"px"
-        length+=velocity
-        pixel=bar[0].style.width
-        pixel=pixel.split("px")
-        pixel=Number(pixel[0])
-        }else{
-            bar[0].style.width=384+"px"
-            clearInterval(interval)
-
-        }
-        
-    }, 100);
-    */
+	 * console.log(p_btn) length=0 velocity=1.28 pixel=0 max_pixel=380
+	 * interval=setInterval(() => { if(pixel<=max_pixel){
+	 * bar[0].style.width=length+"px" length+=velocity pixel=bar[0].style.width
+	 * pixel=pixel.split("px") pixel=Number(pixel[0]) }else{
+	 * bar[0].style.width=384+"px" clearInterval(interval)
+	 *  }
+	 *  }, 100);
+	 */
 })
