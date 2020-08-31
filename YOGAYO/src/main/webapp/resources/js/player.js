@@ -23,9 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   interval = setInterval(() => {
     if (time > 0) {
-      if (time > 1000) timer.innerText = "0:" + Math.round(time / 100)
+      minute=parseInt (time/6000)
+      if (time%6000 > 1000) timer.innerText = minute+":" + parseInt(time%6000 / 100)
       else {
-        timer.innerText = "0:0" + Math.round(time / 100)
+        timer.innerText = minute+":0" + parseInt(time%6000 / 100)
       }
       time--
     } else {
@@ -57,6 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 10)
 
+
+
+  
   play[0].onclick = function a() {
     current_name = p_btn[0].className
     if (current_name == "fas fa-pause btn") {

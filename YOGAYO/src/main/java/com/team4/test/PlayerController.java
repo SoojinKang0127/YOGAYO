@@ -49,7 +49,6 @@ public class PlayerController {
 			e.printStackTrace();
 		}
 		
-		System.out.println("result: "+resultCvo.toString());
 
 		int poseNo1 = resultCvo.getSeq1();
 		int poseNo2 = resultCvo.getSeq2();

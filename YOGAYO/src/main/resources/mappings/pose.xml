@@ -38,7 +38,7 @@
  -->
 	<update id="poseUpdate" parameterType="PoseVo">
 		UPDATE POSE
-		SET AUDIO_PATH=#{audio_Path}, TIME=#{time}
+		SET AUDIO_PATH=#{audio_Path}
 		WHERE PNUM=#{pNum}
 	</update>
 	

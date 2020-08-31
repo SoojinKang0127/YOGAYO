@@ -31,11 +31,11 @@ timeArr.push('${pose5.time}'*100);
 timeArr.push('${pose6.time}'*100);
 timeArr.push('${pose7.time}'*100);
 timeArr.push('${pose8.time}'*100);
+
+
 	
 	$(document).ready(function() {
 				window.onload = function() {
-					a=<c:out value='${pose1.time}'/>;
-					console.log(a)
 					$("#pop1").hide()
 					$("#pop2").css("visibility", "hidden")
 					$("#pop3").hide()
@@ -154,7 +154,7 @@ timeArr.push('${pose8.time}'*100);
 								<div class="order-progress-bar"></div>
 								<div class="order-wrapper">
 									<div class="order-number">
-										<div>1</div>
+										<div>3</div>
 									</div>
 									<div class="order-image">
 										<image src="${pose3.img_Path}"> </image>
@@ -169,7 +169,7 @@ timeArr.push('${pose8.time}'*100);
 								<div class="order-progress-bar"></div>
 								<div class="order-wrapper">
 									<div class="order-number">
-										<div>1</div>
+										<div>4</div>
 									</div>
 									<div class="order-image">
 										<image src="${pose4.img_Path}"> </image>
@@ -184,7 +184,7 @@ timeArr.push('${pose8.time}'*100);
 								<div class="order-progress-bar"></div>
 								<div class="order-wrapper">
 									<div class="order-number">
-										<div>1</div>
+										<div>5</div>
 									</div>
 									<div class="order-image">
 										<image src="${pose5.img_Path}"> </image>
@@ -199,7 +199,7 @@ timeArr.push('${pose8.time}'*100);
 								<div class="order-progress-bar"></div>
 								<div class="order-wrapper">
 									<div class="order-number">
-										<div>1</div>
+										<div>6</div>
 									</div>
 									<div class="order-image">
 										<image src="${pose6.img_Path}"> </image>
@@ -214,7 +214,7 @@ timeArr.push('${pose8.time}'*100);
 								<div class="order-progress-bar"></div>
 								<div class="order-wrapper">
 									<div class="order-number">
-										<div>1</div>
+										<div>7</div>
 									</div>
 									<div class="order-image">
 										<image src="${pose7.img_Path}"> </image>
@@ -229,7 +229,7 @@ timeArr.push('${pose8.time}'*100);
 								<div class="order-progress-bar"></div>
 								<div class="order-wrapper">
 									<div class="order-number">
-										<div>1</div>
+										<div>8</div>
 									</div>
 									<div class="order-image">
 										<image src="${pose8.img_Path}"> </image>
@@ -350,6 +350,20 @@ timeArr.push('${pose8.time}'*100);
 					}
 				</script>
 	<script type="text/javascript">
+	
+	for(var i=0;i<timeArr.length;i++){
+		minute=parseInt(timeArr[i]/6000)
+		second=timeArr[i]%6000
+		if(second<10)
+		second="0"+second
+		var timer = document.querySelector(
+	  "div.scroll-overflow > ul > li:nth-child(" +
+	    (i + 1) +
+	    ") > div.order-wrapper > div.order-title > div:nth-child(2)"
+	)
+	console.log(timer)
+	timer.innerText=minute+":"+second
+	}
 	
 		var form = document.feed;
 		var course = document.getElementById("course");
