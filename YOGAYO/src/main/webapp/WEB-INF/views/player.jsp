@@ -114,7 +114,7 @@
 											<div>1</div>
 										</div>
 										<div class="order-image">
-											<image src="boat.webp"> </image>
+											<image src="${pageContext.request.contextPath}/resources/image/boat.webp"> </image>
 										</div>
 										<div class="order-title">
 											<div>배 자세</div>
@@ -129,7 +129,7 @@
 											<div>2</div>
 										</div>
 										<div class="order-image">
-											<image src="chair.webp"> </image>
+											<image src="${pageContext.request.contextPath}/resources/image/chair.webp"> </image>
 										</div>
 										<div class="order-title">
 											<div>의자 자세</div>

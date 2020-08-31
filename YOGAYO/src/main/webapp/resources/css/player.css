@@ -182,7 +182,7 @@ header>nav_bar {
 	width: 400px;
 	border: 1px solid #dddddd;
 	background-color: white;
-	box-shadow: var(- -light-shadow);
+	box-shadow: var(--light-shadow);
 	border-radius: 10px;
 }
 
@@ -231,8 +231,8 @@ header>nav_bar {
 	background-color: #febe2e;
 }
 
-@
-keyframes progress {from { width:0px;
+@keyframes progress {
+	from { width:0px;
 	
 }
 
@@ -241,6 +241,8 @@ to {
 }
 
 }
+
+
 .order-li {
 	list-style: none;
 	/* padding-left: 0; */
