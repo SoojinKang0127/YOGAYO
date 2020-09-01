@@ -47,8 +47,16 @@ public class ServiceClient {
 	
 	
 	public static void main(String[] args) {
-		String os = System.getProperty("os.name").toLowerCase();
-		System.out.println(os);
+		UserServiceImpl service = new UserServiceImpl();
+		List<UserVo> list=null;
+		try {
+			list = service.selectAllUser();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		System.out.println(list.get(0));
 	}
 
 }

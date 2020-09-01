@@ -59,6 +59,11 @@ public class UserServiceImpl implements UserService {
 		return dao.getUNum(vo);
 	}
 
+	@Override
+	public List<UserVo> selectAllUser() throws Exception {
+		return dao.selectAllUser();
+	}
+
 
 	
 	
