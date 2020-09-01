@@ -24,7 +24,6 @@ public class UpdateController {
 	UserServiceImpl service = new UserServiceImpl();
 	UserDAO dao = new UserDAOImpl();
 	
-	
 	@RequestMapping(value="/update", method = RequestMethod.GET)
 	public String update() {
 		
@@ -46,12 +45,10 @@ public class UpdateController {
 		UserVo user = (UserVo)session.getValue("user");
 		String id = user.getId();
 		
-		
 //		String name = req.getParameter("userName");
 //		Date date = (String)req.getParameter("userBirthDay");
 //		String pwd = req.getParameter("password1");
 //		String gender = req.getParameter("gender");
-		
 		
 		System.out.println(name);
 		System.out.println(date);

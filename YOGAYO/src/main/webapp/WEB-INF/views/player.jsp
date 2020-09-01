@@ -32,6 +32,7 @@ timeArr.push('${pose6.time}'*100);
 timeArr.push('${pose7.time}'*100);
 timeArr.push('${pose8.time}'*100);
 
+$('body').append('<audio id="audio" src="${pageContext.request.contextPath}/resources/audio/pose0.mp3" allow="autoplay"></audio>')
 
 	
 	$(document).ready(function() {
@@ -58,7 +59,6 @@ timeArr.push('${pose8.time}'*100);
 					$("#pop3").hide()
 					$(display).text(num[0].value + " kg")
 				})
-				$('body').append('<audio id="audio" src="${pageContext.request.contextPath}/resources/audio/pose0.mp3" allow="autoplay"></audio>')
 				audio=document.getElementById('audio').play();
 			});
 </script>
