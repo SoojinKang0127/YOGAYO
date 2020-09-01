@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -27,15 +28,55 @@ public class CourseController {
 	
 	
 	@RequestMapping(value = "/course-detail-upload-comment", method = RequestMethod.POST)
-	public void uploadComment(CommentVo cvo, Model model, @RequestParam("crsNum") int crsNum,
+	public void uploadComment(Model model, @RequestParam("crsNum") int crsNum,
 			@RequestParam("uNum") int uNum, @RequestParam("comment") String context,
-			@RequestParam("rating") int rate) {
-		System.out.println("들어왔음");
+			@RequestParam("rating") int rate, HttpServletResponse res) {
 		
-		System.out.println(uNum);
-		System.out.println(context);
-		System.out.println(rate);
-		System.out.println(crsNum);
+		
+		// 새 댓글 db에 넣는 작업
+		CommentVo cvo = new CommentVo();
+		cvo.setCrsNum(crsNum);
+		cvo.setuNum(uNum);
+		cvo.setContext(context);
+		cvo.setRate(rate);
+		try {
+			service.addComment(cvo);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		
+		// 새 댓글을 포함한 코스에 관련된 댓글들을 다시  jsp 쏴줘야됨
+		
+		CourseVo crsVo= new CourseVo();
+		crsVo.setCrsNum(crsNum);
+		List<CommentVo> commentList;
+		List<CommentVo> reviewList;
+		
+		try {
+		commentList = service.commentAll(crsVo);
+		reviewList = service.reviewAll(crsVo);
+		String json="{\"comment\":{";
+		
+		for(int i=0; i< commentList.size();i++) {
+			json=json+"\""+i+"\":"+commentList.get(i).toString()+",";
+		}
+		json=json+"}, \"review\":{";
+		
+		
+		for(int i=0;i<reviewList.size();i++) {
+			json=json+"\""+i+"\":"+reviewList.get(i).toString()+",";
+		}
+		
+		json=json+"}}";
+		
+		System.out.println(json);
+		res.getWriter().write(json);
+		
+		
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 		
 	}
@@ -108,13 +149,15 @@ public class CourseController {
 			cpv = service.coursePoses(vo);
 			model.addAttribute("coursePoses", cpv);
 
-			commentList = service.commentAll(vo);
-			model.addAttribute("commentList", commentList);
+			/*
+			 * commentList = service.commentAll(vo); model.addAttribute("commentList",
+			 * commentList);
+			 * 
+			 * reviewList = service.reviewAll(vo); model.addAttribute("reviewList",
+			 * reviewList);
+			 */
 
-			reviewList = service.reviewAll(vo);
-			model.addAttribute("reviewList", reviewList);
-
-			System.out.println(commentList.get(0).getContext());
+			/* System.out.println(commentList.get(0).getContext()); */
 			
 			int[] timeArr = { Integer.parseInt(cpv.getTime1()), Integer.parseInt(cpv.getTime2()),
 					Integer.parseInt(cpv.getTime3()), Integer.parseInt(cpv.getTime4()),

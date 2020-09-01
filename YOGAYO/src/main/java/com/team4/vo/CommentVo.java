@@ -69,8 +69,8 @@ public class CommentVo {
 
 	@Override
 	public String toString() {
-		return "CommentVo [cmtNum=" + cmtNum + ", uNum=" + uNum + ", crsNum=" + crsNum + ", rate=" + rate + ", context="
-				+ context + ", parent=" + parent + ", regDate=" + regDate + "]";
+		return "{\"cmtNum\":" + cmtNum + ", \"uNum\":" + uNum + ", \"crsNum\":" + crsNum + ", \"rate\":" + rate + ", \"context\":"
+				+ "\""+context+"\"" + ", \"parent\":" + parent + ", \"regDate\":" +"\""+ regDate+"\"" + "}";
 	}
 
 }
