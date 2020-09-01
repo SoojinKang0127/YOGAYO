@@ -32,8 +32,15 @@ timeArr.push('${pose6.time}'*100);
 timeArr.push('${pose7.time}'*100);
 timeArr.push('${pose8.time}'*100);
 
-$('body').append('<audio id="audio" src="${pageContext.request.contextPath}/resources/audio/pose0.mp3" allow="autoplay"></audio>')
-
+audioArr= new Array();
+audioArr.push('${pageContext.request.contextPath}/${pose1.audioPath}')
+audioArr.push('${pageContext.request.contextPath}/${pose2.audioPath}')
+audioArr.push('${pageContext.request.contextPath}/${pose3.audioPath}')
+audioArr.push('${pageContext.request.contextPath}/${pose4.audioPath}')
+audioArr.push('${pageContext.request.contextPath}/${pose5.audioPath}')
+audioArr.push('${pageContext.request.contextPath}/${pose6.audioPath}')
+audioArr.push('${pageContext.request.contextPath}/${pose7.audioPath}')
+audioArr.push('${pageContext.request.contextPath}/${pose8.audioPath}')
 	
 	$(document).ready(function() {
 				window.onload = function() {
@@ -59,6 +66,7 @@ $('body').append('<audio id="audio" src="${pageContext.request.contextPath}/reso
 					$("#pop3").hide()
 					$(display).text(num[0].value + " kg")
 				})
+$('body').append('<audio id="audio" src='+audioArr[0]+' allow="autoplay"></audio>')
 				audio=document.getElementById('audio').play();
 			});
 </script>

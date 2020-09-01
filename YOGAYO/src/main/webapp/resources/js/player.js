@@ -50,6 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
             (index + 1) +
             ") > div.order-wrapper > div.order-title > div:nth-child(2)"
         )
+        $('audio').remove("#audio")
+        $('body').append('<audio id="audio" src='+audioArr[index+1]+'></audio>')
+				audio=document.getElementById('audio').play();
       } else if (barArr.length == index) {
         index++
         var popup2 = document.getElementById("pop2")
@@ -69,13 +72,13 @@ document.addEventListener("DOMContentLoaded", function () {
       p_btn[0].className = "fas fa-play btn"
       p_btn = document.getElementsByClassName("fas fa-play btn")
       barArr[index].style.animationPlayState = "paused"
-      clearInterval(interval)
       document.getElementById('audio').pause()
+      clearInterval(interval)
     } else {
       p_btn[0].className = "fas fa-pause btn"
       p_btn = document.getElementsByClassName("fas fa-pause btn")
       barArr[index].style.animationPlayState = "running"
-
+      document.getElementById('audio').play()
       interval = setInterval(() => {
         if (time > 0) {
           if (time > 1000) timer.innerText = "0:" + Math.round(time / 100)
