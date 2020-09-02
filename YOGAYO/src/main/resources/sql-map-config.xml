@@ -15,6 +15,7 @@
 		
 		<typeAlias type="com.team4.vo.FeedVo" alias="FeedVo"></typeAlias>
 		<typeAlias type="com.team4.vo.PoseVo" alias="PoseVo"></typeAlias>
+		<typeAlias type="com.team4.vo.AdminVo" alias="AdminVo"></typeAlias>
 	</typeAliases>
 
 	<environments default="development">
@@ -37,6 +38,8 @@
 		<mapper resource="mappings/course.xml" />
 		<mapper resource="mappings/feed.xml" />
 		<mapper resource="mappings/pose.xml"/>
+		<mapper resource="mappings/admin.xml"/>
+		
 	</mappers>
 
 </configuration>

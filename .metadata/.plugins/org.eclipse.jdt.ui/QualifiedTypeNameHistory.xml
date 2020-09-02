@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartRequest"/>
 <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartHttpServletRequest"/>
 <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
@@ -16,4 +15,8 @@
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="com.github.scribejava.core.oauth.OAuth20Service"/>
 <fullyQualifiedTypeName name="com.github.scribejava.core.builder.ServiceBuilder"/>
+<fullyQualifiedTypeName name="com.team4.user.dao.UserServiceImpl"/>
+<fullyQualifiedTypeName name="com.team4.test.AdminPageController"/>
+<fullyQualifiedTypeName name="com.team4.vo.UserVo"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

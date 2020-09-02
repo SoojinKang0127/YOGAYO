@@ -140,6 +140,9 @@ main {
   padding-top: 300px;
   margin-left: 250px;
   margin-right: 250px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .list_container{
@@ -152,7 +155,7 @@ main {
   border-radius: 50%;
 }
 
-.member_list {
+.comment_list {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -162,7 +165,7 @@ main {
 .member_list:hover {
   background-color: rgba(244, 244, 252, 0.664);
 }
-.member_list div {
+.comment_list div {
   border-bottom: 1px solid black;
   padding: 10px;
   display: flex;
@@ -175,36 +178,24 @@ main {
   width: 70px;
 }
 
-.user_avatar {
-  width: 100px;
-}
-.user_number {
-  width: 120px;
-}
-.user_id {
-  width: 235px;
+.comment_date{
+	width:100px;
 }
 
-.user_name {
-  width: 125px;
+.comment_profile{
+	width:100px;
 }
-.user_birthday {
-  width: 160px;
-}
-.user_gender {
-  width: 110px;
-}
-.user_profi {
-  width: 80px;
+.comment_user{
+	width:100px;
 }
 
-.user_feed {
-  width: 100px;
+.comment_couse{
+	width:100px;
 }
 
-.user_comment {
-  width: 100px;
+.comment_content{
+	width:700px;
 }
-.user_regdate{
-	width: 140px;
+.comment_delete{
+	width:100px;
 }

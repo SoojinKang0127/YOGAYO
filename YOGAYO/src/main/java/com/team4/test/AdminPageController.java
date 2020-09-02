@@ -17,7 +17,7 @@ public class AdminPageController {
 	
 	
 	@RequestMapping(value = "/admin/member", method = RequestMethod.GET)
-	public String home(Model model) throws Exception {
+	public String member(Model model) throws Exception {
 		
 		
 		
@@ -27,6 +27,20 @@ public class AdminPageController {
 		model.addAttribute("userList", list);
 		
 		return "/admin/admin-member";
+	};
+	
+	
+	@RequestMapping(value = "/admin/comment", method = RequestMethod.GET)
+	public String home(Model model) throws Exception {
+		
+		
+		
+		UserServiceImpl service = new UserServiceImpl();
+		List<UserVo> list = service.selectAllUser();
+		
+		model.addAttribute("userList", list);
+		
+		return "/admin/admin-comment";
 	};
 	
 	
