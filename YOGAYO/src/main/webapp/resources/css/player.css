@@ -153,10 +153,9 @@ header>nav_bar {
 	width: 60px;
 	height: 60px;
 	border-radius: 30px;
-	background-image: url("user.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 120px;
+	background-size: cover;
 }
 
 .user-detail {
@@ -513,7 +512,6 @@ to {
 	margin-left: 20px;
 	margin-top: 20px;
 	border-radius: 70px;
-	background-image: url("./user.png");
 	background-size: 90px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -725,3 +723,5 @@ color:  #fb3958;
 .fas.fa-heart{
 	color:  #fb3958;
 	}
+
+

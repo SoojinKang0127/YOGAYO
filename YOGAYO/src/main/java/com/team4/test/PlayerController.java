@@ -21,9 +21,11 @@ import org.springframework.web.multipart.MultipartRequest;
 
 import com.team4.dao.course.CourseServiceImpl;
 import com.team4.dao.feed.FeedServiceImpl;
+import com.team4.dao.like.LikeServiceImpl;
 import com.team4.dao.pose.PoseServiceImpl;
 import com.team4.vo.CourseVo;
 import com.team4.vo.FeedVo;
+import com.team4.vo.LikeVo;
 import com.team4.vo.PoseVo;
 import com.team4.vo.UserVo;
 
@@ -34,14 +36,31 @@ public class PlayerController {
 	FeedServiceImpl fservice = new FeedServiceImpl();
 	CourseServiceImpl cservice = new CourseServiceImpl();
 	PoseServiceImpl pservice = new PoseServiceImpl();
-
+	LikeServiceImpl lservice = new LikeServiceImpl();
+	
 	@RequestMapping(value = "/player", method = RequestMethod.GET)
 	public String player(HttpServletRequest req, @RequestParam("course") String course, Model model) {
-
+		
 		int no = Integer.parseInt(course);
 		CourseVo cvo = new CourseVo();
 		cvo.setCrsNum(no);
 		CourseVo resultCvo = null;
+		UserVo uvo=(UserVo)req.getSession().getValue("user");
+		LikeVo lvo= new LikeVo();
+		lvo.setCrsNum(no);
+		lvo.setuNum(uvo.getuNum());
+		int likeFlag=0;
+		try {
+			likeFlag = lservice.likeOrNot(lvo);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+		
+		if(likeFlag==1) {
+			model.addAttribute("like","fas fa-heart");
+		}else {
+			model.addAttribute("like","far fa-heart");
+		}
 		
 		try {
 			resultCvo = cservice.selectOne(cvo);

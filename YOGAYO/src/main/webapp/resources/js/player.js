@@ -51,7 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
             ") > div.order-wrapper > div.order-title > div:nth-child(2)"
         )
         $('audio').remove("#audio")
-        $('body').append('<audio id="audio" src='+audioArr[index+1]+'></audio>')
+        $('body').append('<audio id="audio" src='+audioArr[index]+'></audio>')
+        console.log(audioArr[index])
 				audio=document.getElementById('audio').play();
       } else if (barArr.length == index) {
         index++
