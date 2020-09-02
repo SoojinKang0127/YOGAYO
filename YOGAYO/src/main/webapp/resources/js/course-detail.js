@@ -1,4 +1,10 @@
 $(window).ready(function() {
+	$('#review_btn').click(function(){
+		$('#text_box').val("");
+		$('input[name=rating3]').removeAttr('checked');
+		$('input[name=rating3]')[0].checked=true;
+	});
+	
 	$("#heart").click(function() {
 		if ($(this).attr('class') == 'far fa-heart') {
 			$(this).attr('class', 'fas fa-heart');
@@ -31,8 +37,8 @@ $(window).ready(function() {
 		var scrollTop = $(document).scrollTop();
 		if (scrollTop < 530) {
 			scrollTop = 530;
-		} else if (scrollTop > 850) {
-			scrollTop = 850;
+		} else if (scrollTop > 800) {
+			scrollTop = 800;
 		}
 		$(".course_detail-mini_view").stop();
 		$(".course_detail-mini_view").animate({

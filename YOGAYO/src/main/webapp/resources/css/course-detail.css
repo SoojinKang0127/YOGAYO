@@ -328,12 +328,13 @@ main {
    /* border:1px solid orange; */
   width: 90%;
   margin-right:10px;
+  margin-left:20px;
 }
 
-.review_text_box .text_box #text_box {
+.text_box #text_box {
   border: 1px solid #dddddd;
   border-radius: 8px;
-  width: 100%;
+  width: 98%;
   height: 40px;
   font-size: 13pt;
   box-shadow: var(--light-shadow);

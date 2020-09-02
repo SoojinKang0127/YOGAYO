@@ -11,12 +11,15 @@
 	</insert>
 
 	<insert id="addReview" parameterType="CommentVo">
-		INSERT INTO COMMENT(UNUM,CRSNUM,CONTEXT,PARENT)
+		INSERT INTO
+		COMMENT(UNUM,CRSNUM,CONTEXT,PARENT)
 		VALUES(#{uNum},#{crsNum},#{context},#{parent})
 	</insert>
-	
-	<select id="reviewAll" parameterType="CommentVo" resultType="CommentVo">
-	SELECT * FROM COMMENT WHERE PARENT IS NOT NULL AND CRSNUM=#{crsNum}
+
+	<select id="reviewAll" parameterType="CommentVo"
+		resultType="CommentVo">
+		SELECT * FROM COMMENT WHERE PARENT IS NOT NULL AND
+		CRSNUM=#{crsNum}
 	</select>
 
 	<insert id="addComment" parameterType="CommentVo">
@@ -27,7 +30,18 @@
 
 	<select id="commentAll" parameterType="CommentVo"
 		resultType="CommentVo">
-		SELECT * FROM COMMENT WHERE CRSNUM=#{crsNum} AND PARENT IS NULL order by CMTNUM desc 
+		SELECT * FROM COMMENT WHERE CRSNUM=#{crsNum} AND PARENT IS
+		NULL order by CMTNUM desc LIMIT 6
+	</select>
+
+	<select id="commentCount" parameterType="CommentVo"
+		resultType="int">
+		SELECT COUNT(*) FROM COMMENT WHERE CRSNUM=#{crsNum} AND PARENT IS NULL;
+	</select>
+
+	<select id="commentAvg" parameterType="CommentVo"
+		resultType="double">
+		SELECT AVG(RATE) FROM COMMENT WHERE CRSNUM=#{crsNum} AND PARENT IS NULL
 	</select>
 
 	<select id="selectAll" resultType="CourseVo">

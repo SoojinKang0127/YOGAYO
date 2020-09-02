@@ -55,6 +55,16 @@ public class CourseServiceImpl implements CourseService {
 	public List<CommentVo> reviewAll(CourseVo vo) throws Exception {
 		return dao.reviewAll(vo);
 	}
+
+	@Override
+	public int commentCount(CourseVo vo) throws Exception {
+		return dao.commentCount(vo);
+	}
+
+	@Override
+	public double commentAvg(CourseVo vo) throws Exception {
+		return dao.commentAvg(vo);
+	}
 	
 
 }

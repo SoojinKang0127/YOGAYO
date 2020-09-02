@@ -50,8 +50,8 @@
 						<div class="title">
 							<p>${course.title}</p>
 							<div class="course_detail-star_rating">
-								<span><i class="fas fa-star"></i></span> <span id="rating">4.97</span>
-								<span>(206)</span> <span>·</span> <span>(만든사람)</span>
+								<span><i class="fas fa-star"></i></span> <span id="rating"></span>
+								<span id="cmc"></span> <span>·</span> <span>(만든사람)</span>
 							</div>
 						</div>
 					</div>
@@ -162,42 +162,96 @@
 						<div class="text_box">
 							<div id="full-stars-example-two">
 								<div class="rating-group">
-									<input disabled checked
-										class="rating__input rating__input--none" name="rating3"
-										id="rating3-none" value="0" type="radio" /> <label
-										aria-label="1 star" class="rating__label" for="rating3-1"><i
-										class="rating__icon rating__icon--star fa fa-star"></i></label> <input
-										class="rating__input" name="rating3" id="rating3-1" value="1"
-										type="radio" /> <label aria-label="2 stars"
-										class="rating__label" for="rating3-2"><i
-										class="rating__icon rating__icon--star fa fa-star"></i></label> <input
-										class="rating__input" name="rating3" id="rating3-2" value="2"
-										type="radio" /> <label aria-label="3 stars"
-										class="rating__label" for="rating3-3"><i
-										class="rating__icon rating__icon--star fa fa-star"></i></label> <input
-										class="rating__input" name="rating3" id="rating3-3" value="3"
-										type="radio" /> <label aria-label="4 stars"
-										class="rating__label" for="rating3-4"><i
-										class="rating__icon rating__icon--star fa fa-star"></i></label> <input
-										class="rating__input" name="rating3" id="rating3-4" value="4"
-										type="radio" /> <label aria-label="5 stars"
-										class="rating__label" for="rating3-5"><i
-										class="rating__icon rating__icon--star fa fa-star"></i></label> <input
-										class="rating__input" name="rating3" id="rating3-5" value="5"
-										type="radio" />
+										<input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio" />
+										
+										<label aria-label="1 star" class="rating__label" for="rating3-1">
+										<i class="rating__icon rating__icon--star fa fa-star"></i></label>
+										<input	class="rating__input" name="rating3" id="rating3-1" value="1" type="radio" />
+										
+										<label aria-label="2 stars"	class="rating__label" for="rating3-2">
+										<i	class="rating__icon rating__icon--star fa fa-star"></i></label>
+										<input	class="rating__input" name="rating3" id="rating3-2" value="2" type="radio" />
+										
+										<label aria-label="3 stars"	class="rating__label" for="rating3-3">
+										<i	class="rating__icon rating__icon--star fa fa-star"></i></label>
+										<input	class="rating__input" name="rating3" id="rating3-3" value="3" type="radio" />
+										
+										<label aria-label="4 stars"	class="rating__label" for="rating3-4">
+										<i	class="rating__icon rating__icon--star fa fa-star"></i></label>
+										<input	class="rating__input" name="rating3" id="rating3-4" value="4" type="radio" />
+										
+										<label aria-label="5 stars"	class="rating__label" for="rating3-5">
+										<i	class="rating__icon rating__icon--star fa fa-star"></i></label>
+										<input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio" />
 								</div>
 							</div>
-							<input type="text" id="text_box" name="comment"
-								placeholder="댓글 달기..." /> <input type="hidden" name="uNum"
-								value="${user.uNum}" /> <input type="hidden" name="crsNum"
-								value="${crsNum}" /> <input type="hidden" id="rating3"
-								name="rating3" value="${rate}" />
+							<input type="text" id="text_box" name="comment"	placeholder="댓글 달기..." />
+							<input type="hidden" name="uNum" value="${user.uNum}" />
+							<input type="hidden" name="crsNum" value="${crsNum}" />
+							<input type="hidden" id="rating3" name="rating3" value="${rate}" />
 						</div>
 						<div class="review_btn">
 							<button id="review_btn">게시</button>
 						</div>
 						<!-- </form>  -->
+					</div>
+					<!-- end of review text box -->
 
+					<!-- 댓글 시작  -->
+					<div class="new_review">
+						<div class="course_detail-rating">
+							<span><i class="fas fa-star"></i></span>
+							<span>${cmavg}</span>
+							<span>${cmc}</span>
+						</div>
+						<div class="ajax">
+							<c:forEach var="i" items="${commentList}">
+								<div class="course_detail-review_profile_img">
+									<img
+										src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+										alt="profile" />
+
+									<div class="course_detail-review_user_info">
+										<div class="user_review">
+											<div class="course_detail-review_user_name">${i.uNum}</div>
+											<div class="course_detail-review_date">${i.regDate}</div>
+											<div class="course_detail-review_box">
+												<span>${i.context}</span>
+											</div>
+										</div>
+										<div class="show_me_the_comment">
+											<i id="show_me_the_comment" class="fas fa-caret-down"></i>
+										</div>
+										<div class="hidden_comment">
+											<form action="addReview">
+												<div class="review_review">
+													<input type="text" id="comment_text" name="review"
+														placeholder="답글.." /> <input type="hidden" name="uNum"
+														value="${i.uNum}" /> <input type="hidden" name="parent"
+														value="${i.cmtNum}" /> <input type="hidden" name="crsNum"
+														value="${crsNum}" /> <input type="submit"
+														id="comment_btn" value="답글" />
+												</div>
+											</form>
+
+											<c:forEach var="j" items="${reviewList}">
+												<c:if test="${i.cmtNum eq j.parent}">
+													<div class="comments">
+														<!-- 답글들 -->
+														<img alt="comment_user_img"
+															src="${pageContext.request.contextPath}/resources/image/course/profile_face.png" />
+														<div class="comments_box">
+															<div class="comment_user_name">${j.uNum}</div>
+															<div class="user_comment">${j.context}</div>
+														</div>
+													</div>
+												</c:if>
+											</c:forEach>
+										</div>
+									</div>
+								</div>
+							</c:forEach>
+						</div>
 						<script>
 							var request = new XMLHttpRequest();
 							$("#review_btn")
@@ -299,70 +353,45 @@
 												+ comment_suffix;
 										$('.ajax').append(fin_string)
 									}
+									$('#rating').html(object.avg.toFixed(2)+"")
+									$('.course_detail-rating span:nth-child(2)').html(object.avg.toFixed(2))
+									
+									$('#cmc').html();
+									$('.course_detail-rating span:nth-child(3)').html("(댓글"+rate_people_num+"개)")
+									
+									$(".fas").click(function() {
+										if ($(this).attr('class') == 'fas fa-caret-down') {
+											$(this).attr('class', 'fas fa-caret-left');
+											$(this).parent().next().show();
+										} else {
+											$(this).attr('class', 'fas fa-caret-down');
+											$(this).parent().next().hide();
+										}
+									});
+									$("#show_me_the_comment").hover(function() {
+										$(this).css({
+											color : "black"
+										});
+									}, function() {
+										$(this).css({
+											color : "#C0C0C0"
+										});
+									});
 								}
 							}
-						</script>
-					</div>
-					<!-- end of review text box -->
-
-					<!-- 댓글 시작  -->
-					<div class="new_review">
-						<div class="course_detail-rating">
-							<span><i class="fas fa-star"></i></span> <span>4.97(206)</span> <span>(후기
-								206개)</span>
-						</div>
-						<div class="ajax">
-							<c:forEach var="i" items="${commentList}">
-								<div class="course_detail-review_profile_img">
-									<img
-										src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
-										alt="profile" />
-
-									<div class="course_detail-review_user_info">
-										<div class="user_review">
-											<div class="course_detail-review_user_name">${i.uNum}</div>
-											<div class="course_detail-review_date">${i.regDate}</div>
-											<div class="course_detail-review_box">
-												<span>${i.context}</span>
-											</div>
-										</div>
-										<div class="show_me_the_comment">
-											<i id="show_me_the_comment" class="fas fa-caret-down"></i>
-										</div>
-										<div class="hidden_comment">
-											<form action="addReview">
-												<div class="review_review">
-													<input type="text" id="comment_text" name="review"
-														placeholder="답글.." /> <input type="hidden" name="uNum"
-														value="${i.uNum}" /> <input type="hidden" name="parent"
-														value="${i.cmtNum}" /> <input type="hidden" name="crsNum"
-														value="${crsNum}" /> <input type="submit"
-														id="comment_btn" value="답글" />
-												</div>
-											</form>
-
-											<c:forEach var="j" items="${reviewList}">
-												<c:if test="${i.cmtNum eq j.parent}">
-													<div class="comments">
-														<!-- 답글들 -->
-														<img alt="comment_user_img"
-															src="${pageContext.request.contextPath}/resources/image/course/profile_face.png" />
-														<div class="comments_box">
-															<div class="comment_user_name">${j.uNum}</div>
-															<div class="user_comment">${j.context}</div>
-														</div>
-													</div>
-												</c:if>
-											</c:forEach>
-											<!-- </script> -->
-										</div>
-									</div>
-								</div>
-							</c:forEach>
-						</div>
+							rate_num=${cmavg}
+							rate_people_num=${cmc}
+							$('#rating').html(rate_num.toFixed(2)+"")
+							$('.course_detail-rating span:nth-child(2)').html(rate_num.toFixed(2))
+							
+							$('#cmc').html("("+rate_people_num+")");
+							$('.course_detail-rating span:nth-child(3)').html("(댓글"+rate_people_num+"개)")
+							
+						</script> 
 						<!-- 댓글 끝 -->
+						
 						<div class="more_review_btn">
-							<button id="more_review_btn">후기 206개 모두 보기</button>
+							<button id="more_review_btn">후기 ${cmc}개 모두 보기</button>
 						</div>
 					</div>
 				</div>

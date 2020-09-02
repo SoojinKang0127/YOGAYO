@@ -46,15 +46,16 @@ public class ServiceClient {
 		
 	public static void main(String[] args) throws Exception {
 		
-		UserServiceImpl service = new UserServiceImpl();
+		CourseVo cv = new CourseVo();
+		cv.setCrsNum(19);
 		
-		UserVo vo = new UserVo();
-		vo.setId("iamhajaml@naver.com");
 		
-		UserVo result = new UserVo();
-		result = service.checkDuplication(vo);
-		System.out.println(result);
+		CourseServiceImpl service = new CourseServiceImpl();
 		
+		service.commentCount(cv);
+		
+		System.out.println(service.commentCount(cv));
 	}
 
 }
+
