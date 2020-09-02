@@ -22,8 +22,9 @@ public interface UserDAO {
 	public int count4week(UserVo vo) throws Exception;
 	public List<FeedVo> selectAll(UserVo vo) throws Exception;
 	public List<CourseVo> selectAllCrs(UserVo vo) throws Exception;
-
-
+	public String thisday();
+	public String thismonth();
+	public int thisdate();
 	
 	public List<String> selectAllId() throws Exception;
 

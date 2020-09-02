@@ -36,7 +36,7 @@
 		AND
 			(LAST_DAY(NOW()) >  f.REGDATE 
 		AND 
-			LAST_DAY(NOW() - INTERVAL 1 MONTH) + INTERVAL 1 DAY < f.REGDATE)
+			LAST_DAY(NOW() - INTERVAL 1 MONTH) + INTERVAL 1 DAY <= f.REGDATE)
 		ORDER BY 
 			f.REGDATE LIMIT 1
 		]]>
@@ -176,9 +176,37 @@
 		JOIN
 			USER u
 		ON
-			(c.MNUM = u.UNUM)
+			(c.UNUM = u.UNUM)
 		WHERE
 			u.UNUM=#{uNum};
+  	</select>
+  	
+  	<select id="thisday" resultType="String">
+  		SELECT CASE 
+  			WEEKDAY(NOW())
+		WHEN '0' THEN 'Monday'
+		WHEN '1' THEN 'Tuesday'
+		WHEN '2' THEN 'Wednesday'
+		WHEN '3' THEN 'Thursday'
+		WHEN '4' THEN 'Friday'
+		WHEN '5' THEN 'Saturday'
+		WHEN '6' THEN 'Sunday'
+		END;
+  	</select>
+  	
+  	<select id="thisdate" resultType="int">
+  		SELECT
+  			DAYOFMONTH(NOW());
+  	</select>
+  	
+  	<select id="thismonth" resultType="String">
+  		SELECT
+  			MONTHNAME(NOW());
+  	</select>
+  	
+  	<select id="crsTitle">
+  		SELECT
+  		
   	</select>
   
   	

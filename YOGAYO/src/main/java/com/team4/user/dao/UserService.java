@@ -21,10 +21,9 @@ public interface UserService {
 	public int count4week(UserVo vo) throws Exception;
 	public List<FeedVo> selectAll(UserVo vo) throws Exception;
 	public List<CourseVo> selectAllCrs(UserVo vo) throws Exception;
-
-
-
-
+	public String thisday() throws Exception;
+	public int thisdate() throws Exception;
+	public String thismonth() throws Exception;
 
 	
 	public List<String> selectAllid() throws Exception;

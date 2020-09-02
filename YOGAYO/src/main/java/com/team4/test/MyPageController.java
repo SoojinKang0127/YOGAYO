@@ -38,12 +38,13 @@ public class MyPageController {
 		HttpSession session = req.getSession();
 		UserVo user = (UserVo)session.getValue("user");
 		int uNum = user.getuNum();
-			
+		
 		vo.setuNum(uNum);
 		
 		System.out.println(uNum);
 		
 		List<CourseVo> crsList = null;
+		List<FeedVo> feList = null;
 
 		int cWeight =0;
 		int tWeight1 =0;
@@ -53,9 +54,10 @@ public class MyPageController {
 		int count2week = 0;
 		int count3week = 0;
 		int count4week = 0;
+		int thisdate = 0;
+		String thismonth = "";
+		String thisday ="";
 	
-		
-		
 		try {
 			cWeight = service.cWeight(vo);
 			tWeight1 = service.tWeight1(vo);
@@ -66,8 +68,13 @@ public class MyPageController {
 			count3week = service.count3week(vo);
 			count4week = service.count4week(vo);
 			crsList = service.selectAllCrs(vo);
+			feList = service.selectAll(vo);
+			thisday = service.thisday();
+			thisdate = service.thisdate();
+			thismonth = service.thismonth();
 			
-			System.out.println(crsList);
+			System.out.println("crsList: " + crsList);
+			System.out.println("feList" + feList);
 	
 		} catch (Exception e) {
 			System.out.println("[MyPageController / myPage]" + e.toString());
@@ -84,55 +91,16 @@ public class MyPageController {
 		model.addAttribute("count3week", count3week);
 		model.addAttribute("count4week", count4week);
 		model.addAttribute("crsList", crsList);
-		
-		
-		
-		
+		model.addAttribute("thisday", thisday);
+		model.addAttribute("thisdate", thisdate);
+		model.addAttribute("thismonth", thismonth);
+		model.addAttribute("feList", feList);
+			
 		return "mypage";
 	}
 	
 	@RequestMapping(value = "/myPage", method = RequestMethod.POST) 
 	public void myFeed(@RequestParam("feed") String feed, HttpServletResponse res) throws IOException {
 		
-		
-		
-// ----------------- start of 내 요가 후기 -------------------
-		
-		UserService dao = new UserServiceImpl();
-		
-		List<FeedVo> list =null;
-		
-		try {
-			list=dao.selectAll(vo);
-			System.out.println(list);
-			} catch (Exception e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		JSONObject listObj= new JSONObject();
-		int k=0;
-		for(FeedVo vo:list) {
-			JSONObject obj = new JSONObject();
-			obj.put("uNum", vo.getuNum());
-			obj.put("fNum", vo.getfNum());
-			obj.put("crsNum", vo.getCrsNum());
-			obj.put("sLevel", vo.getsLevel());
-			obj.put("context", vo.getContext());
-			obj.put("uImg1", vo.getuImg1());
-			obj.put("regDate", vo.getRegDate());
-
-			listObj.put(Integer.toString(k),obj);
-			k++;
-		}
-		String msg= listObj.toString();
-		
-		res.getWriter().write(msg);
-		
-
-	
-
-	}
-
-	
-	
+	}	
 }

@@ -103,6 +103,24 @@ public class UserDAOImpl implements UserDAO {
 		return mybatis.selectList("UserDao.selectAllCrs", vo);
 	}
 
+
+	@Override
+	public String thisday() {
+		return mybatis.selectOne("UserDao.thisday");
+	}
+
+
+	@Override
+	public String thismonth() {
+		return mybatis.selectOne("UserDao.thismonth");
+	}
+
+
+	@Override
+	public int thisdate() {
+		return mybatis.selectOne("UserDao.thisdate");
+	}
+
 	
 
 
