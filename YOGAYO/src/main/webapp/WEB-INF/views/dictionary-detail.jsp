@@ -44,7 +44,7 @@
 		<div class="yoga-second-dificult-box">
 			<div class="yoga-second-dificult-box-section">
 				<div class="yoga-second-dificult">
-					<i class="far fa-clock"></i><span> ${minu2}  ${second}초 </span>
+					<span><i class="far fa-clock"></i>${minu2} ${second}초</span>
 					<span>Level:${pose.difficulty}</span>
 				</div>
 			</div>

@@ -18,16 +18,17 @@ main {
 }
 
 .yoag-dictionary-box-section{
-  width: 36%;
+  width: 47%;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   
 }
 
 .yoag-dictionary{
-  font-size: 24px;
+  font-size: 25px;
   font-weight: 700;
-  color: #0c646f; 
+  color: var(--theme-color); 
+
 }
 
 .yoga-title-box{
@@ -45,7 +46,7 @@ main {
 }
 
 
-.yoga-stitle {
+.yoga-title {
   font-weight: 700;
   line-height: 48px;
   color: #545554;
@@ -94,16 +95,22 @@ main {
 .yoga-second-dificult-box-section{
   display: flex;
   justify-content: center;
-  width: 30%;
+  width: 20%;
+  padding-left: 15px;
 }
 
 .yoga-second-dificult {
+  display: flex;
+  justify-content: space-around;
+  width: 73%;
   font-size: 20px;
   font-weight: 700;
   line-height: 48px;
   color: #545554;
 }
-
+.yoga-second-dificult i{
+  margin-top: 10px;
+}
 
 .box{
   display: flex;
@@ -123,7 +130,7 @@ main {
 .box p{
   font-size: 18px;
   font-weight: 400;
-  color: #545554;
+  color: black;
 }
 
 .box ul{
@@ -134,7 +141,7 @@ main {
 .box li{
   list-style: disc;
   line-height: 1.7;
-  color: #0c646f;
+   color: gray;
   font-size: 16px;
   font-weight: 400;
   margin: 5px;
