@@ -10,16 +10,19 @@
 	crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/main.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+	
 </head>
 <body>
 	<header class="header">
 		<div class="main-status_bar">
 			<div class="main-logo_wrapper">
-				<a href="main_page.html"> <img
-					src="${pageContext.request.contextPath}/resources/image/course/logo.jpg"
-					alt="logo" />
-				</a>
-				<div class="box-div"></div>
+				<!-- <a href="main_page.html">  -->
+					<div class="logo-wrapper">
+						<span>YOGAYO</span>
+						<div class="box-div"></div>
+					</div>
+				<!-- </a> -->
 			</div>
 			<div class="main-status_categories">
 				<span class="recommand">추천</span> <span class="course"><a
