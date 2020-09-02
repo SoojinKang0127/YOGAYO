@@ -2,6 +2,7 @@
 
 /* add class css */
 
+ 
 
 
 main {
@@ -38,11 +39,6 @@ li {
 
 }
 
-.s1_gap {
-
-
-}
-
 
 .s1_wrapper {
     justify-content: center;
@@ -65,7 +61,7 @@ li {
     background-color: white;
 }
 
-/*
+
 
 버튼 디자인 
 .textbox:hover {
@@ -80,7 +76,7 @@ li {
   margin-bottom: 10px;
   color: white;
   background-color: #febe2e;
-} */
+} 
 
 
 
@@ -92,6 +88,10 @@ li {
     border-color: #febe2e;
     box-shadow: var(--light-shadow);
 }
+
+.textbox:focus::-webkit-input-placeholder {  color:transparent; }
+
+
 
 .course_title {
  	margin-top: 30px;
@@ -346,7 +346,7 @@ i {
 }
 
 #sortable_list1 > .pose_content_box > .trashBtn {
-    /*visibility: hidden;*/ 
+    visibility: hidden; 
 }
 
 
@@ -364,7 +364,7 @@ i {
     margin-left: 3px;
 }
 
-.pNum {
+.pnum {
     visibility: hidden; 
 }
 /* 

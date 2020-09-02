@@ -24,4 +24,11 @@ public class CourseServiceImpl implements CourseService {
 		return dao.selectOne(vo);
 	}
 
+	public int getLastCnum() throws Exception {
+		
+		return dao.getLastCnum();
+	}
+
+
+
 }

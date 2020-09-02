@@ -53,6 +53,11 @@ public class PlaylistController {
 			HttpServletResponse res
 			) throws IOException {
 		
+		
+		
+		
+		
+		
 		return "course_playlist";
 	}
 	

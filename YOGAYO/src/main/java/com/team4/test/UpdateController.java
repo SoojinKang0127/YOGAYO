@@ -66,7 +66,6 @@ public class UpdateController {
 		vo.setPwd(pwd);
 		vo.setGender(gender);
 		vo.setId(id);
-		
 		try {
 			service.update(vo);
 		} catch (Exception e) {
@@ -76,9 +75,5 @@ public class UpdateController {
 		
 		return "update";
 	}
-	
-	
-	
-	
 
 }

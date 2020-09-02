@@ -29,6 +29,11 @@ public class CourseDAOImpl implements CourseDAO {
 	public CourseVo selectOne(CourseVo vo) throws Exception {
 		return mybatis.selectOne("CourseDao.selectOne",vo);
 	}
+
+	@Override
+	public int getLastCnum() throws Exception {
+		return mybatis.selectOne("CourseDao.getLastCnum");
+	}
 	
 	
 

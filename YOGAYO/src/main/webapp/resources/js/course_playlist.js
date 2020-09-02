@@ -65,7 +65,7 @@ $(function () {
                 txt += "</div>"
                 txt += "</div>"
                 txt += "<img src='${pageContext.request.contextPath}../../resources/image/playlist/trash.jpg' class='trashBtn' ></img>"
-                txt += "<span class='pnum'>"+pnum[r]+"</span>"
+                txt += "<span class='pnum'>" + pnum[r] + "</span>"
                 txt += "</li>"
 
             }
@@ -110,25 +110,52 @@ $(function () {
         const click_obj = $('#object1')
         $('.pose_content_box').dblclick(function () {
             var clone = $(this).clone()
-            clone.insertAfter(click_obj).hide().show('slow');
-        
+            clone.insertBefore(click_obj).hide().show('slow');
+            $('#sortable_list2 .trashBtn').click(function () {
+                $(this).parent().remove();
+            })
             // $("#sortable_list2").has("li").css("background-color", "lightgreen"); 
         })
 
-        
-     $('.addItem').click(function(){
-        var a =$('.pnum').innerHTML();
-        console.log(a);
-        })   
-        
-        
-        
+
+
+
+
+    }
+
+
+   $('.button_box').click(function(){
+
+    var index;
+    var indexarr = [];
+   // var ele = $('#sortable_list2 .pose_content_box').children('img');
+    //console.log(ele)
+    var list_num = $('#sortable_list2').find('.pose_content_box');
+    for (var i = 0; i < list_num.length; i++) {
+        index = $('#sortable_list2 .pnum').eq(i).text();
+        indexarr.push(index);
         
     }
+
+    console.log(indexarr);
+    
+
+    // for (var i = 0; i <list_num.length; i++) {
+        
+    //     var shift_num = indexarr.shift()
+    //     document.getElementById('mypage_container').innerHTML += "<input type=\"hidden\" name=\"seq" + i + "\" value=\""+shift_num+"\"><br>";
+    //     console.log(shift_num);
+    // }
+
+    
+}) 
+
+
     
 
 
-})
+
+}) //end of ready
 
     //$(this).slideDown("slow");
 

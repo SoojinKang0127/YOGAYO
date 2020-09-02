@@ -8,4 +8,5 @@ public interface CourseService {
 	public void makeCourse(CourseVo vo) throws Exception;
 	public List<CourseVo> selectAll() throws Exception;
 	public CourseVo selectOne(CourseVo vo) throws Exception;
+	public int getLastCnum() throws Exception;
 }

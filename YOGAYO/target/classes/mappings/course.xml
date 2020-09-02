@@ -5,7 +5,7 @@
 <mapper namespace="CourseDao">
 
 	<insert id="makeCourse" parameterType="CourseVo">
-	INSERT INTO COURSE(TITLE,MNUM,DSCRT,MATERIAL,IMGPATH,SEQ1,SEQ2,SEQ3,SEQ4,SEQ5,SEQ6,SEQ7,SEQ8)
+	INSERT INTO COURSE(TITLE,UNUM,DSCRT,MATERIAL,IMGPATH,SEQ1,SEQ2,SEQ3,SEQ4,SEQ5,SEQ6,SEQ7,SEQ8)
 	values(#{title},#{uNum},#{dscrt},#{material},#{imgPath},#{seq1},#{seq2},#{seq3},#{seq4},#{seq5},#{seq6},#{seq7},#{seq8});
 	</insert>
 	
@@ -20,5 +20,9 @@
 		SELECT * FROM COURSE WHERE CRSNUM=#{crsNum}
 	</select>
 	
+	
+	<select id="getLastCnum" resultType="Integer">
+	 	SELECT MAX(CRSNUM) FROM COURSE
+	</select>
 	
 </mapper>

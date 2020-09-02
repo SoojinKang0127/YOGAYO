@@ -29,7 +29,7 @@
           </div>
           <div class="content_top_btn">
             <button class="content_top_btn_edit" onclick="location.href='update'">정보 수정</button>
-            <button class="content_top_btn_addCrs">코스 추가</button>
+            <button class="content_top_btn_addCrs"><a href="${pageContext.request.contextPath}/course_playlist">코스 추가</a></button>
           </div>
         </div>
         <div class="content_front">
