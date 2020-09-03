@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">무릎을 굽히고 발을 바닥에 대고 앉으세요. 손을 무릎 뒤에 놓고 가슴을 들어 올려 숨을들이 쉴 때 등 근육을 사용하세요<break time="700"/>허벅지 안쪽을 잡아 당기고 아랫배를 안팎으로 끌어 올립니다<break time="700"/>앉은 뼈 뒤쪽을 뒤로 젖히고 발을 무릎 높이까지 들어 올리세요. 발가락은 펴질 수도 있습니다<break time="700"/>팔을 바닥에 평행하게 만드세요<break time="700"/>더 나아가려면 다리를 곧게 펴세요<break time="700"/>2-5 회 호흡을 유지하고 최대 10 회 호흡을 하세요<break time="700"/>운동을 끝내려면 숨을 내쉴 때 발을 아래로 내리고 척추를 곧게 펴고 앉아 두 번의 숨을 쉬세요.<break time="700"/></prosody></speak>' > pose1.mp3
