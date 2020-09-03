@@ -42,8 +42,6 @@
 		WHERE PNUM=#{pNum}
 	</update>
 	
-<<<<<<< HEAD
-=======
 	<select id="poseSelectJSON" parameterType="PoseVo" resultType="PoseVo">
 		select JSON_OBJECT(
     'pNum', pNum,
@@ -55,7 +53,6 @@
     'date', REGDATE
            ) FROM POSE;
 	</select>
->>>>>>> master
 
 	<!-- <delete id="delete"> DELETE FROM test WHERE no=#{no} </delete> <update 
 		id="update"> UPDATE test SET no=${no}, name=#{name} WHERE no=#{no} </update> -->

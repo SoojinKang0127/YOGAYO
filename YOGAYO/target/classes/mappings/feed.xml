@@ -6,11 +6,6 @@
 
 	<insert id="upload" parameterType="FeedVo">
 		INSERT INTO
-<<<<<<< HEAD
-		FEED(UNUM, CRSNUM, SLEVEL, DLEVEL, CONTEXT, UIMG1, UIMG2, UIMG3, WEIGHT)
-		VALUES(#{uNum},#{crsNum},#{sLevel},#{dLevel},#{context},#{uImg1},#{uImg2},#{uImg3}, #{Weight});
-	</insert>
-=======
 		FEED(UNUM, CRSNUM, SLEVEL, DLEVEL, CONTEXT, UIMG1, WEIGHT)
 		VALUES(#{uNum},#{crsNum},#{sLevel},#{dLevel},#{context},#{uImg1}, #{weight});
 	</insert>
@@ -18,7 +13,6 @@
 	<select id="getLastFnum" resultType="Integer">
 	 	SELECT MAX(FNUM) FROM FEED
 	</select>
->>>>>>> master
 
 
 </mapper>

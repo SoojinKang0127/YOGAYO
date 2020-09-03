@@ -2,6 +2,7 @@ package com.team4.user.dao;
 
 import java.util.List;
 
+import com.team4.vo.CourseVo;
 import com.team4.vo.FeedVo;
 import com.team4.vo.UserVo;
 

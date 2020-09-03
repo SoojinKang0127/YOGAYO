@@ -27,18 +27,11 @@ import com.team4.user.dao.UserDAO;
 import com.team4.user.dao.UserDAOImpl;
 import com.team4.user.dao.UserServiceImpl;
 import com.team4.user.dao.UserDAO;
-<<<<<<< HEAD
-import com.team4.user.dao.UserDAOImpl;
-import com.team4.dao.course.CourseDAO;
-import com.team4.dao.course.CourseService;
-import com.team4.dao.course.CourseServiceImpl;
-=======
 import com.team4.dao.admin.AdminServiceImpl;
 import com.team4.dao.course.CourseDAO;
 import com.team4.dao.course.CourseService;
 import com.team4.dao.course.CourseServiceImpl;
 import com.team4.vo.AdminVo;
->>>>>>> master
 import com.team4.vo.CourseVo;
 import com.team4.dao.feed.FeedServiceImpl;
 import com.team4.vo.FeedVo;
@@ -51,26 +44,6 @@ import com.team4.vo.UserVo;
 //import com.team4.vo.Vo;
 
 public class ServiceClient {
-<<<<<<< HEAD
-		
-	public static void main(String[] args) {
-		
-		UserVo vo = new UserVo();
-		vo.setuNum(1008);
-
-		
-		UserServiceImpl service = new UserServiceImpl();
-		try {
-//			System.out.println(	service.tWeight(vo));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	}
-
-}
-=======
 	
 	public static void test2(String[] args) throws Exception {
 		
@@ -138,4 +111,3 @@ public class ServiceClient {
 	
 }
 
->>>>>>> master

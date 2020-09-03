@@ -1,6 +1,8 @@
 /.metadata/
-<<<<<<< HEAD
-=======
 /target/
 /YOGAYO/target/
->>>>>>> master
+
+*.class
+*.xml
+*.MF
+*.properties
