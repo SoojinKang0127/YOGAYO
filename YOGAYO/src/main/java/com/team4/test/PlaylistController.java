@@ -100,7 +100,7 @@ public class PlaylistController {
 		for(PoseVo vo:list) {
 			JSONObject obj = new JSONObject();
 			obj.put("pnum", vo.getpNum());
-			obj.put("imgPath", vo.getImgPath());
+			obj.put("imgPath", vo.getImg_Path());
 			obj.put("title", vo.getTitle());
 			obj.put("audioPath", vo.getAudioPath());
 			obj.put("time", vo.getTime());
