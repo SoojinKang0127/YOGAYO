@@ -85,7 +85,7 @@ public class CourseController {
 
 	}
 
-	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
+	@RequestMapping(value = "/	", method = RequestMethod.GET)
 	public String coueseTitle(Model model) throws Exception {
 		List<CourseVo> list = service.selectAll();
 		model.addAttribute("courses", list);
