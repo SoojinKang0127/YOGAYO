@@ -7,23 +7,12 @@ public class PoseVo {
 	String img_Path;
 	String title;
 	String audio_Path;
-	String time;
+	int time;
 	int difficulty;
 	Date regDate;
 	
 	
 	public PoseVo() {}
-
-
-	public PoseVo(int pNum, String img_Path, String title, String audioPath, String time, int difficulty, Date regDate) {
-		this.pNum = pNum;
-		this.img_Path = img_Path;
-		this.title = title;
-		this.audio_Path = audioPath;
-		this.time = time;
-		this.difficulty = difficulty;
-		this.regDate = regDate;
-	}
 
 
 	public int getpNum() {
@@ -41,7 +30,7 @@ public class PoseVo {
 	}
 
 
-	public void setImgPath(String img_Path) {
+	public void setImg_Path(String img_Path) {
 		this.img_Path = img_Path;
 	}
 
@@ -61,17 +50,17 @@ public class PoseVo {
 	}
 
 
-	public void setAudioPath(String audioPath) {
-		this.audio_Path = audioPath;
+	public void setAudioPath(String audio_Path) {
+		this.audio_Path = audio_Path;
 	}
 
 
-	public String getTime() {
+	public int getTime() {
 		return time;
 	}
 
 
-	public void setTime(String time) {
+	public void setTime(int time) {
 		this.time = time;
 	}
 
@@ -96,12 +85,25 @@ public class PoseVo {
 	}
 
 
+	public PoseVo(int pNum, String img_Path, String title, String audio_Path, int time, int difficulty, Date regDate) {
+		super();
+		this.pNum = pNum;
+		this.img_Path = img_Path;
+		this.title = title;
+		this.audio_Path = audio_Path;
+		this.time = time;
+		this.difficulty = difficulty;
+		this.regDate = regDate;
+	}
+
+
 	@Override
 	public String toString() {
-		return "PoseVo [pNum=" + pNum + ", imgPath=" + img_Path + ", title=" + title + ", audioPath=" + audio_Path
+		return "PoseVo [pNum=" + pNum + ", img_Path=" + img_Path + ", title=" + title + ", audio_Path=" + audio_Path
 				+ ", time=" + time + ", difficulty=" + difficulty + ", regDate=" + regDate + "]";
 	}
 
+	
 	
 	
 	
