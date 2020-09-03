@@ -57,6 +57,10 @@ public class ServiceClient {
 		
 		
 		
+		service.commentCount(cv);
+		
+		System.out.println(service.commentCount(cv));
 	}
 	
 }
+
