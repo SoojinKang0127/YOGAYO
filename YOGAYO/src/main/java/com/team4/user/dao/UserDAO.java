@@ -13,14 +13,8 @@ public interface UserDAO {
 	public void update(UserVo vo) throws Exception;
 	public int tWeight() throws Exception;
 	public int lWeight() throws Exception;
-<<<<<<< HEAD
 	public List<String> selectAllId() throws Exception;
 	public UserVo checkDuplication(UserVo vo) throws Exception;
 	public int getUNum(UserVo vo);
 	public List<UserVo> selectAllUser() throws Exception;
-=======
-	
-	public List<String> selectAllId() throws Exception;
-
->>>>>>> master
 }

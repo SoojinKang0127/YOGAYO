@@ -12,10 +12,7 @@ public class UserVo {
 	char gender;
 	String img;
 	Date regDate;
-<<<<<<< HEAD
 	int profiLevel;
-=======
->>>>>>> master
 	
 	public UserVo() {
 	}
@@ -108,7 +105,6 @@ public class UserVo {
 
 
 
-<<<<<<< HEAD
 	public int getProfiLevel() {
 		return profiLevel;
 	}
@@ -124,6 +120,4 @@ public class UserVo {
 	
 	
 
-=======
->>>>>>> master
 }
