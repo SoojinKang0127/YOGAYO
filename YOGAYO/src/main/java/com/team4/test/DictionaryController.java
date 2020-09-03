@@ -55,7 +55,7 @@ public class DictionaryController {
 				model.addAttribute("pose" , pose);
 				
 				
-				int minu = Integer.parseInt(pose.getTime()) / 60;
+				int minu = pose.getTime() / 60;
 				if (minu!=0) {
 					String minu2 = Integer.toString(minu)+"분";
 					System.out.println(minu2);
@@ -63,7 +63,7 @@ public class DictionaryController {
 				}else {
 					
 				}
-				int second = Integer.parseInt(pose.getTime()) % 60;
+				int second = pose.getTime() % 60;
 				
 				
 				model.addAttribute("second",second);
