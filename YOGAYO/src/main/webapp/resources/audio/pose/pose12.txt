@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">개 자세에서 시작하세요.<break time="700"/>숨을 들이 쉬며 오른발을 뒤로 들어 올린 다음 오른발을 두 손 사이로 앞으로 밟으면 서 숨을 내쉬세요.<break time="700"/>오른쪽 무릎이 오른쪽 발목 위에 정렬되었는지 확인하세요.<break time="700"/>발로 땅을 밟고 숨을 내쉴 때 아래 복근을 안으로 당긴 다음, 숨을들이 마시면서 팔을 바깥쪽으로 위로 쓸어 올리세요. 손바닥은 서로를 향해야 합니다.<break time="700"/>등 무릎을 약간 구부리고 꼬리뼈를 바닥쪽으로 늘린 다음 뒷다리를 통해 확장하여 발바닥을 열고 늘립니다.<break time="700"/>가슴을 열고 앞쪽 갈비뼈를 몸통 아래로 당깁니다.<break time="700"/>5번 숨을 쉬세요.<break time="700"/>숨을 내쉴 때 오른발로 손을 바닥에 대세요.<break time="700"/>오른쪽 발을 아래로 향하는 개 자세로 되돌리세요.<break time="700"/>왼발을 앞으로 내밀면서 반복하세요.<break time="700"/></prosody></speak>' > pose12.mp3

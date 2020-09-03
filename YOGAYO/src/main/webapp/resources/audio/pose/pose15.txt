@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">손과 무릎 (네 발 모두)으로 오세요. 팔뚝은 바닥에, 팔꿈치는 어깨 바로 아래에 놓으세요. 팔뚝을 서로 평행하게하여 손바닥을 아래로 내리거나 손가락을 끼워 넣어서 아래쪽 작은 손가락을 넣습니다. <break time="700"/>숨을 내쉴 때 발가락을 아래로 구부리세요. 아랫배를 묶고 무릎을 바닥에서 들어 올리세요.<break time="700"/>앉은 뼈를 들어 올리고 다리를 곧게 펴고 뒤꿈치를 바닥쪽으로 내릴 때 꼬리뼈를 늘립니다. 바닥에 닿을 필요가 없습니다.<break time="700"/>허벅지 근육을 사용하고 아랫배를 끌어 당기고 팔뚝을 바닥으로 적극적으로 누르세요.<break time="700"/>견갑골 사이에 공간을 유지하면서 등뼈를 등 아래로 고정하세요. 척추를 길게하세요. 머리를 팔 사이로 잡고 바닥에서 떨어지세요.<break time="700"/>5-20 번 숨을 쉬세요.<break time="700"/>포즈에서 나오려면 숨을 내쉬고 어린이 자세에서 쉬면서 무릎이 바닥으로 돌아 오도록하세요.<break time="700"/></prosody></speak>' > pose15.mp3

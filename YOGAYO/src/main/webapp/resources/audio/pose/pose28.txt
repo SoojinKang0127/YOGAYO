@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">스탠딩 포워드 벤드 / 우타 나사 나에서 시작합니다.<break time="700"/>발을 통해 뿌리를 내리고, 다리를 묶고, 아랫배를 안팎으로 당기고, 등 근육을 사용하여 상체를 바닥과 거의 평행하게 만듭니다.<break time="700"/>견갑골을 아래로 그리고 척추를 통해 꼬리뼈에서 머리 꼭대기까지의 길이를 만듭니다.<break time="700"/>정강이에 손을 대거나 바닥에 손끝을 대십시오. 블록을 사용할 수도 있습니다.<break time="700"/>앞으로 목 뒤를 길게 유지하면서 가슴 앞쪽을여십시오.<break time="700"/></prosody></speak>' > pose28.mp3

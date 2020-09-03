@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">배 위에, 팔을 옆으로, 이마 또는 턱을 매트 위에 올려 놓으세요.<break time="700"/>치골을 바닥으로 부드럽게 눌러 허리를 늘이고 숨을 내쉴 때 배꼽을 척추쪽으로 당깁니다.<break time="700"/>다리 근육을 사용하세요.<break time="700"/>숨을들이 쉴 때 머리, 가슴, 팔, 다리를 바닥에서 들어 올려 어깨 뼈를 등에 펴고 가슴을 넓히세요. 누군가가 손을 잡고 부드럽게 뒤로 당겨서 위로 올라 온다고 생각해보세요 .<break time="700"/>발은 중간 선을 향해 그려 지지만 만질 필요는 없습니다. 엉덩이 너비를 벌리면됩니다.<break time="700"/>호흡이 차분하고 안정적으로 유지되도록 5 번 숨을 쉬세요.<break time="700"/>숨을 내쉬면서 자세를 낮추고 다시 두 번 반복하세요.<break time="700"/>팔로 뺨을위한 베개를 만들고 뒤꿈치가 서로 떨어지도록하여 각 포즈 사이에 휴식을 취하세요.<break time="700"/></prosody></speak>' > pose37.mp3

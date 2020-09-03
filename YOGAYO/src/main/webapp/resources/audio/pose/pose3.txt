@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">손을 옆에두고 손바닥을 위로 향하게하여 배가 바닥을 향하게 하여 누웁니다<break time="700"/>무릎을 구부리고 손으로 발목을 잡습니다<break time="700"/>치골을 아래로 누르고 아랫배를 안팎으로 당겨주세요<break time="700"/>시 손으로 발목을 누르고 가슴과 허벅지를 들어 올립니다<break time="700"/>어깨 뼈를 아래로 내려놓고 서로를 향해 밀어 가슴을 엽니다<break time="700"/>가슴과 갈비뼈로 숨을 쉰다 생각하며 몇 번 숨을 쉬세요.<break time="700"/>숨을 내쉴 때 발목을 떼고 부드럽게 누워 몇 번 숨을 쉬세요.<break time="700"/></prosody></speak>' > pose3.mp3

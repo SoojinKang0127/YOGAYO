@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">발 뒤꿈치에 앉아 무릎사이를 벌리고 머리를 바닥으로 가져갑니다<break time="700"/>팔은 앞쪽, 옆구리 또는 이마 아래 손으로 뻗을 수 있습니다.<break time="700"/>허리로 숨을 쉰다는 느낌으로 숨을 쉽니다.<break time="700"/>휴식 자세로 30 초에서 몇 분 동안 유지합니다.<break time="700"/>나오려면 숨을 내쉬고 곧은 자세로 앉으세요.<break time="700"/></prosody></speak>' > pose8.mp3

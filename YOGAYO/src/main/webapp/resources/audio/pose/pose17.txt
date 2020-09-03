@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">단단한 쿠션이나 접힌 담요의 앞쪽 가장자리에 앉은 뼈가있는 매트에 앉기 시작합니다.<break time="700"/>매트와 평행하게 정강이를 교차하여 각 발을 반대쪽 무릎 아래로 가져가세요.<break time="700"/>앉은 뼈를 아래로 눌러 척추의 길이를 찾으세요. 견갑골을 단단히 고정하세요.<break time="700"/>손을 무릎이나 무릎 위에 올려 놓고 손바닥을 위로 올리거나 (더 크게 벌리거나) 아래로 내리세요.<break time="700"/>포즈를 할 때마다 다리의 십자가를 바꾸세요.<break time="700"/></prosody></speak>' > pose17.mp3

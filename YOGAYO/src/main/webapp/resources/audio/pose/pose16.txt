@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">엉덩이는 무릎 위로, 어깨는 손목 위로 올립니다.<break time="700"/>손을 어깨에서 약간 앞으로 가져 가고 가운데 손가락은 앞으로 향하게하고 손가락을 벌립니다.<break time="700"/>손바닥의 바깥 쪽 가장자리, 손가락 바닥 및 손가락 끝을 눌러 손바닥 중앙에 흡입 컵을 만드는 것에 대해 생각해보세요. 이것이 Hasta Bandha입니다.<break time="700"/>상완을 몸에서 멀리 굴리고 팔뚝을 안쪽으로 나선형으로 굴려서 팔에 나선형 동작을 만듭니다.<break time="700"/>발가락을 아래로 내리고 숨을 내쉴 때 배꼽을 척추로 다시 끌어 당깁니다. 손으로 눌러 엉덩이를 위로 올리면 거꾸로 된 V 자세가 됩니다.<break time="700"/>척추에서 길이를 찾을 때 처음에는 무릎을 구부리세요.<break time="700"/>견갑골을 척추를 따라 아래로 밀면 쇄골이 펼쳐집니다. 목 밑 부분이 이완됩니다.<break time="700"/>척추 길이 유지, 다리를 번갈아 구부리고 곧게 피고 결국 두 발 뒤꿈치를 바닥으로 가져옵니다. 바닥에 닿을 필요가 없습니다.<break time="700"/>5 번 숨을 쉬세요.<break time="700"/>포즈에서 나오려면 무릎을 바닥으로 다시 내려 놓고 한 발을 손으로 밟아서 어린이 포즈로 전환하거나 런지로 전환하세요.<break time="700"/></prosody></speak>' > pose16.mp3

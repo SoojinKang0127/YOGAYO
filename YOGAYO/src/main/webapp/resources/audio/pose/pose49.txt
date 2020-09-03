@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">우측 무릎을 구부린 상태로 Warrior 2에서 시작하여 오른손 손바닥을 천장을 향하도록 돌립니다.<break time="700"/>숨을들이 쉴 때 오른팔을 천장까지 올립니다. 동시에 왼손을 내리고 왼 다리 아래로 미세요. 양쪽 허리는 길게 뻗어 유지합니다.<break time="700"/>견갑골을 등에 고정하고 코어 근육을 약간 끌어 당깁니다. 등을 부드럽게 구부릴 때 가슴을 들어 올립니다. 목이나 균형 문제가있는 경우 손을 들거나 발을 바라보세요. . <break time="700"/>최대 5 회 호흡하며 자세를 유지합니다.<break time="700"/>숨을 내쉬면서 전사 2로 돌아 오십시오.<break time="700"/></prosody></speak>' > pose49.mp3

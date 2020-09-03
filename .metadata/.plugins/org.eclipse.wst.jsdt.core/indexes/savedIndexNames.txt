@@ -1,9 +1,0 @@
-INDEX VERSION 1.4+/Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-3600318202.index
-2604520585.index
-2939829699.index
-422180748.index
-1878283676.index
-405649730.index
-2687038020.index
-1440474290.index
