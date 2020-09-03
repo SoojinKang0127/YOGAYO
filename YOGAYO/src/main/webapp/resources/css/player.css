@@ -231,7 +231,7 @@ header>nav_bar {
 }
 
 @keyframes progress {
-from { width:0px;
+	from { width:0px;
 	
 }
 
@@ -240,6 +240,8 @@ to {
 }
 
 }
+
+
 .order-li {
 	list-style: none;
 	/* padding-left: 0; */

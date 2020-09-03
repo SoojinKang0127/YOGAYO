@@ -135,7 +135,7 @@
 											<div>1</div>
 										</div>
 										<div class="order-image">
-											<image src="${pose1.img_Path}"> </image>
+											<image src="${pageContext.request.contextPath}/resources/image/boat.webp"> </image>
 										</div>
 										<div class="order-title">
 											<div>${pose1.title}</div>
@@ -150,7 +150,7 @@
 											<div>2</div>
 										</div>
 										<div class="order-image">
-											<image src="${pose2.img_Path}"> </image>
+											<image src="${pageContext.request.contextPath}/resources/image/chair.webp"> </image>
 										</div>
 										<div class="order-title">
 											<div>${pose2.title}</div>
