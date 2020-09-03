@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">Adho Mukha Svanasana에서 시작 / 아래쪽을 향한 개.<break time="700"/>숨을 내쉴 때 오른발을 앞쪽으로, 양손 사이로 밟으세요. 왼쪽 무릎을 바닥으로 내리고, 왼쪽 엉덩이와 허벅지가 잘 펴지는 느낌이들 때까지 발을 뒤로 미세요.<break time="700"/>엉덩이를 낮게 유지하고 서로 수평을 유지하세요.<break time="700"/>숨을들이 쉴 때 아랫배를 잡고 허벅지에서 가슴을 들어 올려 귀를 따라 팔을 쓸어 올리세요.<break time="700"/>앞을 똑바로 쳐다 보거나 엄지 손가락을 응시하면서 부드럽게 뒤로 구부리세요.<break time="700"/>숨을 내쉴 때 손을 아래로 내리고 아래쪽을 향한 개에게 뒤로 물러나세요.<break time="700"/></prosody></speak>' > pose39.mp3

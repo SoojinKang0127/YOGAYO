@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">등을 대고 누워서 엉덩이에서 거리를두고 바닥에 발을 평평하게 놓으세요.<break time="700"/>팔을 흉곽 옆에 놓으십시오. 손가락이 천장을 가리 키도록 팔꿈치를 90도 구부리거나 매트의 바깥 쪽 가장자리를 잡으세요.<break time="700"/>당길시 어깨와 발을 바닥에 대고 엉덩이를 들어 올리십시오<break time="700"/>안쪽 발을 아래로 누르고 허벅지 안쪽을 맞물려 무릎이 넓게 펼쳐지지 않도록합니다.<break time="700"/>꼬리뼈를 늘이고 어깨 뼈를 등 아래로 밀고 목을 중립으로 유지하십시오<break time="700"/>등 뒤로 손을 잡으세요<break time="700"/>5 ~ 15 회 호흡 유지<break time="700"/>포즈를 끝내려면 팔을 떼고 숨을 내쉬며 척추가 아래로 향하게 합니다.<break time="700"/></prosody></speak>' > pose4.mp3

@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">앉은 자세에서 무릎을 오른쪽으로 구부리고 발을 왼쪽으로 이동하여 왼쪽 발목이 오른발 아치에 놓이도록합니다.<break time="700"/>앉아있는 뼈를 매트에 대고 눌러 숨을들이 마시면서 척추를 늘립니다. 그런 다음 팔을지지하면서 숨을 내쉴 때 팔을 오른쪽으로 비틀어 놓으면 왼쪽 엉덩이가 약간 올라갑니다.<break time="700"/>머리와 목을 마지막에 돌리고 오른손의 손가락 끝을 바닥에 단단히 누르십시오<break time="700"/>숨을 들이 마시면서 척추를 길게 늘리고 숨을 내쉴 때 척추가 비틀린 정도를 확인한 후 몇 번 숨을 쉬십시오.<break time="700"/>이 포즈를 끝내려면 손을 떼고 몸통을 앞으로 가져와 다리를 곧게 펴세요<break time="700"/>반대쪽으로 반복하세요<break time="700"/></prosody></speak>' > pose0.mp3

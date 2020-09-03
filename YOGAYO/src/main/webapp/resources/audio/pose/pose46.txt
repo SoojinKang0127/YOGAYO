@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">바닥에 앉아 다리를 펴세요. 무릎과 함께 발바닥을 옆으로 가져와 다리에 다이아몬드 모양을 만드세요.<break time="700"/>바닥이나 받침에 등을 대세요. 손은 배 위나 바깥 쪽으로 두세요.<break time="700"/>5 ~ 10 번 심호흡을 하세요. 음과 회복의 일부인 경우 더 오래 기다리십시오.<break time="700"/>나오려면 옆으로 구르고 손을 사용하여 다시 앉을 수 있도록 도와주세요.<break time="700"/></prosody></speak>' > pose46.mp3

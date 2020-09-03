@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">단다 사나에서 앉은 다리를 부드럽게 누르고 허리를 숙입니다.<break time="700"/>숨을 들이 쉴 때 척추를 늘이십시오.<break time="700"/>숨을 내쉴 때 고관절을 앞으로 접으세요. 등을 곧게 펴고 할 수있는 만큼만 숙입니다.<break time="700"/>배에서 흉곽, 가슴, 이마를 통해 다리쪽으로 이동하면서 몸의 앞쪽 길이를 유지하십시오.<break time="700"/>팔은 바닥을 따라 다리를 통해 아래로 미끄러 져 내려갑니다. 손이 발에 닿으면 처음 두 손가락과 엄지 손가락으로 엄지 발가락을 감쌉니다. 팔꿈치를 구부리고 바닥에서 옆으로 들어 올려 어깨를 멀리 유지합니다. 발을 잡을 수없는 경우 최대한 발 가까이를 잡고 팔을 똑바로 유지하세요. <break time="700"/>더 깊이 들어가려면 숨을들이 쉴 때마다 몸통 앞쪽을 통해 계속 길어지면서 머리를 약간 들어 올립니다. 숨을들이 쉴 때마다 자세로 더 깊게 접을 수 있는지 확인하고 척추를 길게 유지하면서 엉덩이. 목과 척추를 일직선으로 유지하세요. <break time="700"/></prosody></speak>' > pose52.mp3

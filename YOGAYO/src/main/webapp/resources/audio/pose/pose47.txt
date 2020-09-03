@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">등을 대고 누워서 다리를 펴고 발끝을 안 쪽으로 당겨줍니다.<break time="700"/>숨을 내쉴 때 오른쪽 무릎을 가슴으로 당기거나, 오른쪽 발 아치 주위에 스트랩을 감거나, 엄지 발가락에 처음 두 손가락을 연결합니다.<break time="700"/>오른쪽 다리를 천장까지 펴세요. 팔을 곧게 펴고 양 어깨는 매트 위에 두세요.<break time="700"/>왼쪽 다리를 계속 사용하고 왼쪽 허벅지 위쪽을 손으로 아래로 누르세요. 오른쪽 뒤꿈치를 확장하여 햄스트링을 편안하게 펴세요.<break time="700"/>5 번 숨을 쉬었다가 오른쪽 다리를 벌려 오른쪽 바닥을 향하도록 합니다. 왼쪽 엉덩이를 바닥에 붙이세요. 5 번 더 숨을 쉬십시오.<break time="700"/>다리를 다시 중앙으로 가져간 다음 다시 매트에 내려 놓으세요. 반대쪽에서도 반복하세요.<break time="700"/></prosody></speak>' > pose47.mp3

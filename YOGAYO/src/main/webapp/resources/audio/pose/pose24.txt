@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">플랭크 자세에서 시작하여 어깨 뼈를 등에 평평하게 펴고 등 근육을 튼튼하게 만드십시오. 아랫배를 척추쪽으로 당기고 꼬리뼈가 발을 향하도록 생각하십시오.<break time="700"/>발가락 위로 약간 앞으로 돌면 몸이 앞으로 돌출됩니다.<break time="700"/>목을 길게 유지하려면 약간 앞을보십시오.<break time="700"/>숨을 내쉴 때, 상완이 바닥과 평행을 유지하고 팔꿈치의 각도가 90 °가 되도록 지금까지만 판자처럼 몸 전체를 낮춥니다. 팔꿈치는 전체를 가리키는 갈비뼈에 가깝게 유지합니다.<break time="700"/>가슴과 어깨가 팔꿈치보다 아래로 떨어지지 않도록하십시오. 어깨 앞쪽을 바닥에서 항상 들어 올리십시오.<break time="700"/>이 포즈는 일반적으로 Sun Salutations 또는 Vinyasas에서와 같이 다른 포즈 사이의 전환입니다. 혼자서 연습하고 10 ~ 30 초 동안 유지할 수도 있습니다.<break time="700"/>숨을 들이 마시면서 위로 향하는 개 자세로 전환 할 때. 허리가 무너지는 것을 방지 할 수 있다면 숨을 내쉴 때 플랭크 자세로 다시 밀어 올릴 수도 있습니다.<break time="700"/></prosody></speak>' > pose24.mp3

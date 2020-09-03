@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">무릎을 가슴쪽으로 구부린 채 등을 대고 누우십시오.<break time="700"/>숨을들이 쉴 때 발 안쪽이나 바깥 쪽을 잡으세요.<break time="700"/>무릎을 몸통보다 넓게 벌리고 겨드랑이 옆 바닥으로 가져 오십시오.<break time="700"/>발목을 무릎 바로 위에 놓습니다 (90 ° ).<break time="700"/>굽을 굽히고 발을 부드럽게 손으로 밀고 손을 아래로 당겨 저항을 만듭니다.<break time="700"/>꼬리뼈를 늘려서 척추를 확장하고 배를 약간 안으로 당깁니다.<break time="700"/>목 뒤의 길이를 유지하십시오.<break time="700"/>30 ~ 60 초 동안 기다리십시오.<break time="700"/>포즈에서 나오려면 숨을 내쉴 때 발을 바닥에 다시 대십시오.<break time="700"/></prosody></speak>' > pose31.mp3

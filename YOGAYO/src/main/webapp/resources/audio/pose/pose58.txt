@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">우타나사나 자세 혹은 스탠딩 포워드 벤드 자세에서 시작하세요.<break time="700"/>숨을들이 마시면서 허리와 팔을 쭉 펴세요.<break time="700"/>무게중심을 왼발로 옮깁니다.<break time="700"/>숨을 들이마시면서 오른쪽 다리를 바닥과 평행하게 뒤로 들어 올립니다.<break time="700"/>오른쪽 안쪽 허벅지를 위로 굴려 오른쪽 다리를 안쪽으로 회전시킵니다.<break time="700"/>당신이 서있는 다리 위로 숨을 내쉬면서 손을 발의 양쪽으로 가져 오면서 오른쪽 다리를 더 높이 들어 올립니다.<break time="700"/>허벅지 앞쪽과 무릎에 힘을 주어 서있는 다리를 유지하세요<break time="700"/>올린 발의 발꿈치로 뭔가를 누르는 느낌으로 발을 더 쭉 펴주세요.<break time="700"/>다리를 다시 우타 나사 나로 내려 포즈에서 나옵니다.<break time="700"/>다른 쪽에서 반복하기 전에 호흡을 가다듬으세요.<break time="700"/></prosody></speak>' > pose58.mp3

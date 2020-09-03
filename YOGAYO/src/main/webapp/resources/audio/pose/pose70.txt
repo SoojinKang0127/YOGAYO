@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">단다 사나 / 다음 포즈에서는 다리를 넓게 벌리고 스트레칭이 좋다고 느껴지지만 여전히 자세를 유지할 수 있고 척추를 똑바로 유지하고 뒤로 넘어지지 않게 해야 합니다.<break time="700"/>발을 구부리고 무릎과 발가락이 천장을 향하도록 유지하십시오. 다리와 앉은 뼈를 아래로 누르고 척추를 통해 길게 늘이십시오.<break time="700"/>긴 척추를 사용하여 엉덩이에서 구부립니다. 바닥에있는 다리 사이에 손을 놓고 손을 앞으로 걷기 시작할 때 천천히 숨을 내쉬십시오.<break time="700"/>앞쪽으로 구부러 질수록 몸의 앞쪽을 따라 길이를 유지하십시오. 등을 구부리기 시작한다고 느끼면 더 이상 낮추지 마십시오.<break time="700"/>이 자세를 5 ~ 10 회 동안 유지하세요.<break time="700"/>포즈에서 나오려면 숨을 내쉬면서 앉은 뼈를 아래로 누르고 등을 똑바로 세우십시오.<break time="700"/></prosody></speak>' > pose70.mp3

@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">오른쪽 발을 앞으로 내밀고 엉덩이가 매트 앞쪽을 향하고 양팔이 귀 양쪽에 있고 어깨가 떨어져 있거나 손바닥이 닿은 상태에서 하이 런지에서 시작합니다.<break time="700"/>골반저 근육 (Mula Bandha) 을 들어 올리고 아랫배를 안팎으로 끌어 올려 (Uddiyana Bandha) 코어를 활성화합니다.<break time="700"/>숨을 내쉴 때 엉덩이부터 접어 몸통과 팔이 바닥과 대각선이되도록 약간 아래로 내립니다.<break time="700"/>매트 바로 앞 바닥의 한 지점에 초점을 맞 춥니 다.<break time="700"/>숨을 들이 쉴 때 앞발을 바닥에 고정하고 체중을 앞쪽으로 옮기면서 뒷발을 바닥에서 들어 올리십시오.<break time="700"/>상체와 왼쪽 다리를 바닥과 평행하게 할 때 서있는 다리를 곧게 펴십시오. 발가락이 바닥을 향하도록하십시오.<break time="700"/>무릎을 고정하지 않고 서있는 다리를 묶고 엉덩이를 수평으로 유지하십시오.<break time="700"/>올린 발과 손을 통해 펴십시오.<break time="700"/>5 번 숨을 쉬세요.<break time="700"/>포즈에서 나오려면 숨을 내쉴 때 서있는 다리를 구부린 다음 컨트롤을 사용하여 하이 런지로 돌아갑니다. 숨을들이 마시면서 마운틴 포즈 / 타다 사나로 나아갑니다.<break time="700"/></prosody></speak>' > pose66.mp3

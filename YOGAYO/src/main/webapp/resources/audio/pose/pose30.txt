@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">타다 사나 / 산 자세에서 시작하여 발 엉덩이 너비를 벌리고. 숨을들이 쉴 때 손을 엉덩이로 가져 가십시오.<break time="700"/>숨을 내쉴 때 엉덩이에서 경첩을 앞으로 구부립니다. 몸통 앞쪽과 다리 길이를 똑바로 유지하십시오.<break time="700"/>첫 두 손가락을 엄지 발가락에 감고 엄지로 닫습니다.<break time="700"/>흡입시 등을 평평하게하고 팔을 곧게 펴고 앞을 바라보며 가슴을 벌리고 척추를 따라 어깨 뼈를 아래로 내립니다.<break time="700"/>숨을 내쉴 때 앞쪽으로 구부려서 엉덩이에서 길어지고, 손가락과 엄지 손가락으로 몸통을 다리에 가깝게 당기면 팔꿈치가 옆으로 움직입니다. 발가락을 통해 누르십시오.<break time="700"/>5 번 숨을 쉬세요.<break time="700"/>포즈에서 나오려면 발가락을 떼고 척추로 척추를 굴 리거나 엉덩이에 손을 대고 발로 땅을 펴고 척추를 곧게 만듭니다.<break time="700"/></prosody></speak>' > pose30.mp3
