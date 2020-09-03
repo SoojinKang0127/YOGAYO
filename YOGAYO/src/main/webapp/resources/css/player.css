@@ -94,7 +94,6 @@ header>nav_bar {
 	background-position-y: -600px;
 	display: block;
 	margin: auto;
-	background-image: url("boat.webp");
 }
 
 .info-wrapper {
@@ -154,10 +153,9 @@ header>nav_bar {
 	width: 60px;
 	height: 60px;
 	border-radius: 30px;
-	background-image: url("user.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: 120px;
+	background-size: cover;
 }
 
 .user-detail {
@@ -182,7 +180,7 @@ header>nav_bar {
 	width: 400px;
 	border: 1px solid #dddddd;
 	background-color: white;
-	box-shadow: var(- -light-shadow);
+	box-shadow: var(--light-shadow);
 	border-radius: 10px;
 }
 
@@ -229,10 +227,11 @@ header>nav_bar {
 	position: absolute;
 	height: 70px;
 	background-color: #febe2e;
+	
 }
 
-@
-keyframes progress {from { width:0px;
+@keyframes progress {
+from { width:0px;
 	
 }
 
@@ -316,7 +315,6 @@ to {
 	left: 50%;
 	color: black;
 	font-size: 18px;
-	z-index: 1;
 }
 
 .list-footer {
@@ -514,7 +512,6 @@ to {
 	margin-left: 20px;
 	margin-top: 20px;
 	border-radius: 70px;
-	background-image: url("./user.png");
 	background-size: 90px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -687,6 +684,7 @@ input {
 
 
 
+
 .container input[type="file"]{
 	position: absolute;
     width: 0px;
@@ -717,3 +715,13 @@ input {
 	
 	
 }
+
+.far.fa-heart{
+color:  #fb3958;
+}
+
+.fas.fa-heart{
+	color:  #fb3958;
+	}
+
+
