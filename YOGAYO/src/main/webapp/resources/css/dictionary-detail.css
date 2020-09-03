@@ -14,19 +14,21 @@ main {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 100px 0px 40px 0px;
+  margin: 70px 0px 30px 0px;
 }
 
 .yoag-dictionary-box-section{
-  width: 56%;
+  width: 47%;
   display: flex;
+  /* justify-content: center; */
   
 }
 
 .yoag-dictionary{
-  font-size: 24px;
+  font-size: 25px;
   font-weight: 700;
-  color: #0c646f; 
+  color: var(--theme-color); 
+
 }
 
 .yoga-title-box{
@@ -34,11 +36,13 @@ main {
   justify-content: center;
   width: 100%;
   margin-top: 12px;
+  
 }
 
 .yoga-title-box-section{
   display: flex;
-  width: 56%;
+  justify-content: center;
+  width: 36%;
 }
 
 
@@ -53,18 +57,21 @@ main {
   display: flex;
   align-items: center;
  justify-content: center; 
- margin:20px 0px 20px 0px;
+ margin:36px 0px 25px 0px;
 }
 
 .search-img-section {
   width: 56%;
+  display: flex;
+  justify-content: center;
 }
 
 .search-img{
   width: auto;
   height: auto;
-  max-width:  810px;
-  max-height: 4100px;
+  /* width:  800px; */
+   height: 400px;
+  margin-left: 20px;
 }
 
 .search-img img{
@@ -115,16 +122,20 @@ main {
 
 .yoga-second-dificult-box-section{
   display: flex;
-  width: 56%;
+  justify-content: center;
+  width: 20%;
+  padding-left: 15px;
 }
 
 .yoga-second-dificult {
+  display: flex;
+  justify-content: space-around;
+  width: 73%;
   font-size: 20px;
   font-weight: 700;
   line-height: 48px;
   color: #545554;
 }
-
 
 .box{
   display: flex;
@@ -138,13 +149,13 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 56%;
+  width: 42%;
 }
 
 .box p{
   font-size: 18px;
   font-weight: 400;
-  color: #545554;
+  color: black;
 }
 
 .box ul{
@@ -154,8 +165,9 @@ main {
 
 .box li{
   list-style: disc;
-  color: #0c646f;
-  font-size: 17px;
+  line-height: 1.7;
+   color: gray;
+  font-size: 16px;
   font-weight: 400;
   margin: 5px;
 }
@@ -168,13 +180,13 @@ main {
 }
 
 .stepBystep-title{
-  width: 10%; 
+  width: 20%; 
   padding: 22px;
   margin-right: 10px;
 }
 
 .stepBystep-content{
-  width: 90%;
+  width: 80%;
   padding: 22px;
 }
 
@@ -185,13 +197,13 @@ main {
 
 
 .BeginnersTips-title{
-  width: 10%; 
+  width: 20%; 
   padding: 22px;
   margin-right: 10px;
 }
 
 .BeginnersTips-content{
-  width: 90%;
+  width: 80%;
   padding: 22px;
 }
 
@@ -202,13 +214,13 @@ main {
 }
 
 .Benefits-title{
-  width: 10%; 
+  width: 20%; 
   padding: 22px;
   margin-right: 10px;
 }
 
 .Benefits-content{
-  width: 90%;
+  width: 80%;
   padding: 22px;
 }
 
@@ -218,14 +230,14 @@ main {
 }
 
 .watchOutFor-title{
-  width: 10%; 
+  width: 20%; 
   padding: 22px;
   margin-right: 10px;
 }
 
 
 .watchOutFor-content{
-  width: 90%;
+  width: 80%;
   padding: 22px;
 }
 
@@ -236,13 +248,13 @@ main {
 }
 
 .variations-title{
-  width: 10%; 
+  width: 20%; 
   padding: 22px;
   margin-right: 10px;
 }
 
 .variations-content{
-  width: 90%;
+  width: 80%;
   padding: 22px;
 }
 
