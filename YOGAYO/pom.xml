@@ -221,10 +221,7 @@
             <artifactId>commons-io</artifactId>
             <version>2.5</version>
         </dependency>
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 	</dependencies>
 	<build>
 		<plugins>
