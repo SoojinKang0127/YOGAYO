@@ -1,7 +1,10 @@
 package com.team4.user.dao;
 
+<<<<<<< HEAD
 import java.util.List;
 
+=======
+>>>>>>> master
 import org.apache.ibatis.session.SqlSession;
 import com.team4.util.SqlSessionFactoryBean;
 import com.team4.vo.FeedVo;
@@ -57,6 +60,7 @@ public class UserDAOImpl implements UserDAO {
 
 	}
 
+<<<<<<< HEAD
 
 	@Override
 	public UserVo checkDuplication(UserVo vo) throws Exception {
@@ -75,6 +79,8 @@ public class UserDAOImpl implements UserDAO {
 		return mybatis.selectList("UserDao.selectAllUser");
 	}
 
+=======
+>>>>>>> master
 	
 
 

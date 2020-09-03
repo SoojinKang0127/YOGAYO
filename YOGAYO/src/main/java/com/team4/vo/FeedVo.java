@@ -15,7 +15,10 @@ public class FeedVo {
 	String uImg3;
 	int weight;
 	String regDate;
+<<<<<<< HEAD
 	
+=======
+>>>>>>> master
 	public int getfNum() {
 		return fNum;
 	}

@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
+<<<<<<< HEAD
 <entry loc="/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home" stamp="1592463872000"/>
+=======
+<entry loc="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home" stamp="1596185832000"/>
+<entry loc="/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home" stamp="1595218541000"/>
+>>>>>>> master
 </dirs>

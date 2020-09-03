@@ -12,14 +12,20 @@
 
 	<insert id="signup" parameterType="UserVo">
 		INSERT INTO
+<<<<<<< HEAD
 		USER(ID, PWD, NAME, BDATE, GENDER, PROFILEVEL)
 		VALUES(#{id},#{pwd},#{name},#{bDate},#{gender}, #{profiLevel});
+=======
+		USER(ID,PWD,NAME,BDATE,GENDER)
+		VALUES(#{id},#{pwd},#{name},#{bDate},#{gender});
+>>>>>>> master
 	</insert>
 
 
 	<select id="selectAllId" resultType="String">
 		SELECT ID FROM USER
 	</select>
+<<<<<<< HEAD
 	
 	<select id="checkDuplication" parameterType="UserVo" resultType="UserVo">
 		SELECT * FROM USER WHERE ID=#{id}
@@ -33,5 +39,7 @@
 	<select id="selectAllUser" resultType="UserVo">
 		SELECT * FROM USER
 	</select>
+=======
+>>>>>>> master
 </mapper>
 

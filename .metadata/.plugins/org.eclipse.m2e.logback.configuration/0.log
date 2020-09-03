@@ -2258,6 +2258,7 @@ java.io.FileNotFoundException: C:\Users\kosmo_28\.m2\repository\org\springframew
 2020-08-25 13:11:32,434 [Worker-14: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2020-08-25 13:11:32,441 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 >>>>>>> master
+<<<<<<< HEAD
 2020-08-26 15:58:39,075 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2020-08-26 16:10:26,454 [Worker-20: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.team4:test:1.0.0-BUILD-SNAPSHOT @ /Users/soo/Documents/YOGAYO/YOGAYO/YOGAYO/pom.xml.
 2020-08-26 16:10:38,596 [Worker-12: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
@@ -5376,3 +5377,5 @@ Caused by: java.io.FileNotFoundException: /Users/soo/Documents/YOGAYO/YOGAYO/.me
 2020-09-03 23:56:49,134 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 12 resources
 2020-09-03 23:56:49,138 [Worker-11: Building workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2020-09-03 23:56:49,139 [Worker-11: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+=======
+>>>>>>> master

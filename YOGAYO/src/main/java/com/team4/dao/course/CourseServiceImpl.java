@@ -15,7 +15,6 @@ public class CourseServiceImpl implements CourseService {
 	@Override
 	public void makeCourse(CourseVo vo) throws Exception {
 		dao.makeCourse(vo);
-
 	}
 
 	@Override

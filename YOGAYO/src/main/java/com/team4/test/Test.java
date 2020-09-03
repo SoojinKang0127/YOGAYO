@@ -91,6 +91,13 @@ public class Test {
            collection.insertOne(doc);
            System.out.println("성공");
    }
+<<<<<<< HEAD
+=======
+   
+
+
+
+>>>>>>> master
 
    @Override
    public String toString() {

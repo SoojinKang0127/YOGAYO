@@ -15,9 +15,15 @@ public class PoseVo {
 	public PoseVo() {}
 
 
+<<<<<<< HEAD
 	public PoseVo(int pNum, String img_Path, String title, String audioPath, int time, int difficulty, Date regDate) {
 		this.pNum = pNum;
 		this.img_Path = img_Path;
+=======
+	public PoseVo(int pNum, String imgPath, String title, String audioPath, int time, int difficulty, Date regDate) {
+		this.pNum = pNum;
+		this.img_Path = imgPath;
+>>>>>>> master
 		this.title = title;
 		this.audio_Path = audioPath;
 		this.time = time;
@@ -36,7 +42,11 @@ public class PoseVo {
 	}
 
 
+<<<<<<< HEAD
 	public String getImg_Path() {
+=======
+	public String getImgPath() {
+>>>>>>> master
 		return img_Path;
 	}
 

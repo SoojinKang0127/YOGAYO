@@ -42,12 +42,17 @@ main {
 }
 
 
+<<<<<<< HEAD
 .yoga-stitle {
+=======
+.yoga-title {
+>>>>>>> master
   font-weight: 700;
   line-height: 48px;
   color: #545554;
 }  
 
+<<<<<<< HEAD
 .search-img-box {
   display: flex;
   align-items: center;
@@ -69,6 +74,33 @@ main {
 .search-img img{
   width: 800px;
   height: 410px;
+=======
+.search-img_yoga-title {
+  display: flex;
+  margin: 40px 428px 40px 428px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.search-img {
+  padding: 0;
+  margin-right: 50px;
+}
+
+.search-img img{
+  width: 500px;
+  height: 300px;
+ 
+  
+}
+
+.search-img2 img{
+  width: 500px;
+  height: 300px;
+ 
+  
+>>>>>>> master
 }
 
 .yoga-title h2{
@@ -76,7 +108,10 @@ main {
 }  
 
 .yoga-second-dificult span{
+<<<<<<< HEAD
 	
+=======
+>>>>>>> master
   margin-right: 5px;
 }
 

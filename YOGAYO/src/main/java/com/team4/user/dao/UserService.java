@@ -12,14 +12,20 @@ public interface UserService {
 	public void update(UserVo vo) throws Exception;
 	public int tWeight() throws Exception;
 	public int lWeight() throws Exception;
+<<<<<<< HEAD
 	public UserVo checkDuplication(UserVo vo) throws Exception;
+=======
+>>>>>>> master
 
 
 	
 	public List<String> selectAllid() throws Exception;
+<<<<<<< HEAD
 	
 	public int getUNum(UserVo vo);
 	
 	public List<UserVo> selectAllUser() throws Exception;
+=======
+>>>>>>> master
 
 }
