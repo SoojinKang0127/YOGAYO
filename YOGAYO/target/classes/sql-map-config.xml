@@ -7,7 +7,7 @@
 	<!--Properties 파일 설정 -->
 	<properties resource="db.properties" />
 
-	<!-- 이걸 해줬기 때문에 result-type을 짧게 줄일 수 있었던 것 -->
+	<!-- 이걸 해줬기 때문에 result-type을 짧게 줄일 수 있었던 것  -->
 	<typeAliases>
 		<typeAlias type="com.team4.vo.UserVo" alias="UserVo"></typeAlias>
 		<typeAlias type="com.team4.vo.CourseVo" alias="CourseVo"></typeAlias>
