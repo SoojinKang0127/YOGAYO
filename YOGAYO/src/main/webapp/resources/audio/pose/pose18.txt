@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">타다 사나에서 시작 / 산 포즈<break time="700"/>부드러운 시선으로 초점을 맞추기 위해 눈높이에서 포인트를 잡으세요.<break time="700"/>숨을 내쉴 때 왼발에 체중을 올리고 오른쪽 무릎을 들어 올리세요. 오른손으로 엄지 발가락을 잡으세요.<break time="700"/>왼쪽 엉덩이를 고정하고 척추를 늘이세요. 어깨 뼈를 뒤쪽에 단단히 유지하고 가슴을 벌리세요. 흡입 할 때 척추 길이를 손상시키지 않고 오른쪽 다리를 앞쪽으로 확장하세요.<break time="700"/>약 5 번 숨을들이 쉬고 숨을들이 쉴 때 다리를 오른쪽으로 내밀고 5 번 더 숨을 쉬세요.<break time="700"/>포즈에서 나오려면 숨을들이 마시고 다리를 중앙으로 가져 오세요. 숨을 내쉴 때 발을 바닥으로 내리세요.<break time="700"/>반복한다.<break time="700"/></prosody></speak>' > pose18.mp3

@@ -28,5 +28,10 @@
 	<select id="getUnum" parameterType="UserVo" resultType="int">
 	 SELECT UNUM FROM USER WHERE ID=#{id} AND NAME=#{name} AND BDATE=#{bDate}
 	</select>
+	
+	
+	<select id="selectAllUser" resultType="UserVo">
+		SELECT * FROM USER
+	</select>
 </mapper>
 

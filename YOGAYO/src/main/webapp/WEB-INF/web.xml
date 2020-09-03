@@ -50,4 +50,18 @@
 		<servlet-class>com.team4.resource.Rcontroller</servlet-class>
 		<load-on-startup>2</load-on-startup>
 	</servlet>
+
+
+<!-- 	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/views/error/404error.jsp</location>
+	</error-page>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/views/error/500error.jsp</location>
+	</error-page> -->
+
+
+
 </web-app>

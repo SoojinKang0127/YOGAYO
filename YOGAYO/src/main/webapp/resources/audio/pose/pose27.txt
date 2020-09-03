@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">스탭 포즈 / 단다 사나에서 다리를 쭉 뻗고 앉으세요.<break time="700"/>오른쪽 다리를 들어 올려 왼쪽 무릎 바깥쪽에 오른쪽 발을 올려 놓습니다. 왼쪽 다리를 구부리고 오른쪽 엉덩이 바깥쪽에 왼쪽 발을 놓습니다.<break time="700"/>숨을들이 쉴 때 앉아있는 뼈를 아래로 누르고 척추를 길게하십시오. 오른팔을 뒤로 놓고 왼팔을 위로 펴십시오.<break time="700"/>숨을 내쉴 때 몸을 오른쪽으로 비틀거나 왼팔로 무릎을 껴안거나 왼쪽 무릎 뒤에 팔꿈치를 구부립니다.<break time="700"/>숨을들이 쉴 때 척추를 계속 늘리고 숨을 쉴 때 배에서 비틀어보십시오.<break time="700"/>거의 눈에 띄지 않는 맥박으로 안팎으로 움직여 그 자세에서 편안함과 적절한 가장자리를 찾으십시오. 엉덩이가 어느 정도 척추의 움직임을 따르도록하십시오.<break time="700"/>5-8 번 숨을 쉬세요.<break time="700"/>포즈에서 나오려면 숨을 내쉬면서 트위스트에서 벗어나 단다 사나로 돌아갑니다.<break time="700"/>반복한다.<break time="700"/></prosody></speak>' > pose27.mp3

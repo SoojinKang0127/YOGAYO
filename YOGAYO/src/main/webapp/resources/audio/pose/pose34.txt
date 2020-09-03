@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">네 발 모두에서 무릎을 모으고 엉덩이 간격보다 약간 넓게 발을 벌립니다.<break time="700"/>발 윗부분을 아래로 누르고 결국 발 뒤꿈치 사이의 매트 (또는 소품)에 앉을 때까지 천천히 엉덩이를 뒤로 내립니다.<break time="700"/>손을 사용하여 송아지 살을 빼내고 배꼽을 위아래로 당기고 앉아있는 뼈를 통해 갈아서 머리 꼭대기까지 뻗으십시오.<break time="700"/>5-10 번 숨을 쉬세요.<break time="700"/>당신의 앞에 손을 대고 엉덩이를 다시 네 발로 들어 올림으로써 당신이 들어온 것처럼 포즈에서 나오십시오.<break time="700"/></prosody></speak>' > pose34.mp3

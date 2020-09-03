@@ -69,6 +69,12 @@ public class UserDAOImpl implements UserDAO {
 		return mybatis.selectOne("UserDao.getUnum",vo);
 	}
 
+
+	@Override
+	public List<UserVo> selectAllUser() throws Exception {
+		return mybatis.selectList("UserDao.selectAllUser");
+	}
+
 	
 
 

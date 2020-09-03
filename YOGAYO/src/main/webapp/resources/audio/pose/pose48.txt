@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">비라 사나 / 히어로 포즈에서 시작합니다. 혹은, 무릎을 꿇고 앉습니다.<break time="700"/>손을 몸뒤쪽으로 가져 가 매트를 짚습니다.<break time="700"/>발등을 매트에 대고 발목을 고정시킵니다.<break time="700"/>숨을 내쉬며 팔꿈치를 구부리고, 천천히 몸을 뒤로 젖힙니다. 무릎과 허리가 괜찮다면 그대로 눕습니다.<break time="700"/>무릎 근육의 당김 보다 허벅지 근육의 중간 지점에서 스트레칭이 되는 것을 느껴야합니다.<break time="700"/>등이 매트 위에 완전히 닿으면 귀를 따라 팔을 옆으로 가져 오거나 손을 배에 올려 놓습니다.<break time="700"/>여기에서 10 번 호흡하세요.<break time="700"/>자세의 순서를 기억하며 역으로 자세를 푸세요. 숨을들이 쉴 때 복부 근육을 사용하고 손이나 팔꿈치를 매트에 대고 비라 사나 자세로 다시 돌아옵니다.<break time="700"/></prosody></speak>' > pose48.mp3

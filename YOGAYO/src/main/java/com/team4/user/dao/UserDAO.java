@@ -16,4 +16,5 @@ public interface UserDAO {
 	public List<String> selectAllId() throws Exception;
 	public UserVo checkDuplication(UserVo vo) throws Exception;
 	public int getUNum(UserVo vo);
+	public List<UserVo> selectAllUser() throws Exception;
 }

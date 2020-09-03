@@ -49,7 +49,7 @@
 		SELECT * FROM COURSE ORDER BY CRSNUM DESC
 	</select>
 
-	<select id="selectOne" resultType="CourseVo">
+	<select id="selectOne" parameterType="CourseVo" resultType="CourseVo">
 		<!-- 테이블명 대소문자 구분 -->
 		SELECT * FROM COURSE WHERE CRSNUM=#{crsNum}
 	</select>

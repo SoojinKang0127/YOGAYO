@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 
@@ -96,7 +95,7 @@ $(document).ready(function(){
 
 
 		<div id="signUpBtn">
-			<input type="submit" value="가입하기" disabled="disabled" id="submitBtn"
+			<input type="submit" value="가입하기" disabled="disabled" id="submitBtn" onclick="alert('회원가입되었습니다.')" 
 				class="submitBtn">
 		</div>
 		</form>
@@ -107,6 +106,14 @@ $(document).ready(function(){
 		src="${pageContext.request.contextPath}/resources/js/sign_up_vaild_check.js"></script>
 	<script>
 		function goToStep2() {
+			
+			console.log(emailDuplCheck())
+			console.log(nameVaildCheck())
+			console.log(birthdayVaildCheck())
+			console.log(password1VaildCheck())
+			console.log(password2VaildCheck())
+			
+			
 			if (emailDuplCheck() && nameVaildCheck() && birthdayVaildCheck()
 					&& password1VaildCheck() && password2VaildCheck()) {
 				$('.down-btn i').css({
