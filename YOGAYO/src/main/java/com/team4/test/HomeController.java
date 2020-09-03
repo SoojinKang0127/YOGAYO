@@ -50,7 +50,17 @@ public class HomeController {
 //		return "course-page";
 //	}
 //	
+<<<<<<< HEAD
 
+=======
+//
+//	
+//	@RequestMapping(value = "/course-detail", method = RequestMethod.GET)
+//	public String coueseDetail(Model model) {
+//
+//		return "course-detail";
+//	}
+>>>>>>> master
 //	
 //	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
 //	public String couesePage(Model model) {

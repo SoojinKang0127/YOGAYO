@@ -4,6 +4,7 @@
   
   <mapper namespace="UserDao">
   
+<<<<<<< HEAD
   	<select id="tWeight1" resultType="int">
   	
   		SELECT
@@ -145,6 +146,38 @@
   	
   	
   	
+=======
+  	<select id="tWeight" resultType="int">
+  	
+  		<![CDATA[ 
+  		SELECT TRUNCATE((SELECT 
+  			AVG(WEIGHT) 
+		FROM 
+			FEED 
+		WHERE 
+			(LAST_DAY(NOW()) >  REGDATE 
+		AND 
+			LAST_DAY(NOW() - INTERVAL 1 MONTH) + INTERVAL 1 DAY < REGDATE)),0)
+  		 ]]>
+  	
+  	</select>
+  	
+  	<select id="lWeight" resultType="int">
+  	
+  		<![CDATA[ 
+  		SELECT TRUNCATE((SELECT 
+  			AVG(WEIGHT) 
+		FROM 
+			FEED 
+		WHERE 
+			(LAST_DAY(NOW() - INTERVAL 1 MONTH) >  REGDATE 
+		AND 
+			LAST_DAY(NOW() - INTERVAL 2 MONTH) + INTERVAL 1 DAY < REGDATE)),0)
+  		 ]]>
+  	
+  	</select>
+  	
+>>>>>>> master
   	<select id="review" resultType="UserVo">
   		SELECT
   			FNUM, SLEVEL, CONTEXT, UIMG1, REGDATE
@@ -153,6 +186,7 @@
   		WHERE
   			UNUM=#{uNum}
   	</select>
+<<<<<<< HEAD
   	
   	<select id="selectAll" resultType="FeedVo">
   		SELECT
@@ -208,6 +242,8 @@
   		SELECT
   		
   	</select>
+=======
+>>>>>>> master
   
   	
   </mapper>

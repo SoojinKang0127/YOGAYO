@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: minjae
 Build-Jdk: 1.8.0_251
+=======
+Built-By: HUND
+Build-Jdk: 13.0.1
+>>>>>>> master
 Created-By: Maven Integration for Eclipse
 

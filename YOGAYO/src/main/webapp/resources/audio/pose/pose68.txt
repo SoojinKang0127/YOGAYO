@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">타다 사나에서 발을 넓게 벌리고 편안하게 평행에 가깝게 발을 떼십시오. 그리고 안정감과 접지점를 찾아야 합니다.<break time="700"/>안쪽 발목을 위로 당겨 안쪽 아치를 들어 올립니다. 발의 바깥 쪽 가장자리와 엄지 발가락을 바닥에 단단히 고정합니다. 허벅지를 위로 당겨서 맞 춥니 다. 손가락을 등 뒤로 맞물립니다.<break time="700"/>숨을들이 쉴 때 척추를 펴고 가슴을 벌리십시오.<break time="700"/>어깨를 등 아래로 잡고 허리를 아래로 접어 어깨 뼈를 당기고 손을 위로 올리십시오.<break time="700"/>등을 똑바로 유지하고 머리를 바닥쪽으로 내려 놓으십시오. 어깨 뼈를 모으는 데 초점을 유지하여 가슴을 열어두고 손을 약간 더 머리 위로 향하게하여 편안하게 팔을 똑바로 유지하십시오.<break time="700"/>이 자세를 5 번에서 10 번 정도 유지하세요.<break time="700"/>이 자세에서 나오려면 숨을들이 마시고 발을 밟으면 서 위로 들어 올리십시오. Mountain Pose로 돌아 오십시오.<break time="700"/></prosody></speak>' > pose68.mp3

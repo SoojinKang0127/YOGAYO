@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">단다 사나/막대 자세에서 시작.<break time="700"/>왼쪽 무릎을 구부려 뒤꿈치를 엉덩이에 최대한 가깝게하고 발은 바닥에 평평하게 붙이고 무릎이 위로 가도록 하세요. 왼쪽 발과 오른쪽 허벅지 사이에 공간을 유지하세요.<break time="700"/>오른쪽 다리를 곧게 펴고 허벅지에 힘을 줘서 발가락이 천장을 향하도록 하세요.<break time="700"/>숨을들이 쉬고 왼팔을 위로 뻗어 척추에 곧게 펴고, 앉아있는 뼈를 접지하세요.<break time="700"/>숨을 내쉬면서 앞으로 접어 왼쪽 허벅지 안쪽에서 왼팔을 앞으로 뻗으세요.<break time="700"/>손바닥을 몸에서 멀리 돌려서 어깨를 안쪽으로 돌리세요. 팔꿈치를 구부리고 구부러진 다리에 팔을 감아 손등을 허벅지 또는 엉덩이쪽으로 가져 오세요.<break time="700"/>오른쪽 팔을 등 뒤로 감아 두 손을 서로 마주 보게하고, 왼손이나 손목이 닿으면 잡으세요.<break time="700"/>숨을 내쉬면서 더 허리를 숙이세요. 아랫배는 맞 물리고 오른쪽 다리는 활동적으로 유지하고 발가락은 위로 향하게하세요.<break time="700"/></prosody></speak>' > pose44.mp3
