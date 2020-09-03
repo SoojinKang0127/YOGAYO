@@ -2,6 +2,8 @@
 
 body {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -794,6 +796,7 @@ h1 { font-size: 1.5em; margin: 10px; }
 
 
 =======
+>>>>>>> master
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
@@ -1191,5 +1194,9 @@ main {
 .main-footer_sns_list li {
 	font-size: 15pt;
 	margin-left: 29px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master
 >>>>>>> master

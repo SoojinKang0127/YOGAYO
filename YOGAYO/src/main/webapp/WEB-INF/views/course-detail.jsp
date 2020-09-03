@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<<<<<<< HEAD
+=======
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+>>>>>>> master
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +13,17 @@
 <script src="https://kit.fontawesome.com/54919de5bd.js"
 	crossorigin="anonymous"></script>
 <script src="http://code.jquery.com/jquery.js"></script>
+<<<<<<< HEAD
+<script language=JavaScript
+	src="${pageContext.request.contextPath}/resources/js/course-detail.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/course-detail.css">
+=======
 <script language="JavaScript"
 	src="${pageContext.request.contextPath}/resources/js/course-detail.js"></script>
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/course-detail.css" />
+>>>>>>> master
 </head>
 <body>
 	<header></header>
@@ -27,12 +37,32 @@
 					</div>
 					<div class="like">
 						<div class="like_icon">
+<<<<<<< HEAD
+							<i class="far fa-heart"></i>
+=======
 							<i id="heart" class="far fa-heart"></i>
+>>>>>>> master
 						</div>
 						<div class="like_btn">찜하기</div>
 					</div>
 				</div>
 			</div>
+<<<<<<< HEAD
+			<div class="course_detail-second">
+				<div class="section">
+					<div class="course_detail-img_section">
+						<img
+							src="${pageContext.request.contextPath}/resources/image/course/course_detail.jpg"
+							alt="course_detail" /> <img
+							src="${pageContext.request.contextPath}/resources/image/course/course_detail.jpg"
+							alt="course_detail" /> <img
+							src="${pageContext.request.contextPath}/resources/image/course/course_detail.jpg"
+							alt="course_detail" />
+					</div>
+				</div>
+			</div>
+			
+=======
 
 			<div class="course_detail-second">
 				<div class="section">
@@ -44,28 +74,45 @@
 				</div>
 			</div>
 
+>>>>>>> master
 			<div class="course_detail-third">
 				<div class="section">
 					<div class="title_section">
 						<div class="title">
 							<p>${course.title}</p>
 							<div class="course_detail-star_rating">
+<<<<<<< HEAD
+								<span><i class="fas fa-star"></i></span> <span id="rating">4.97</span>
+								<span>(206)</span> <span>·</span> <span>전예슬</span>
+=======
 								<span><i class="fas fa-star"></i></span> <span id="rating"></span>
 								<span id="cmc"></span> <span>·</span> <span>(만든사람)</span>
+>>>>>>> master
 							</div>
 						</div>
 					</div>
 					<div class="course_detail-info_section">
 						<div class="course_detail-info_title_section">
+<<<<<<< HEAD
+							<div class="course_detail-info_title">!!안 불러와 짐!! 님이구성한 명상
+								코스</div>
+							<!-- <img src="./images/profile_face.png" alt="profile" /> -->
+							${course.imgPath}
+=======
 							<div class="course_detail-info_title">(만든사람)님이구성한 명상 코스</div>
 							<img
 								src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
 								alt="profile" />
+>>>>>>> master
 						</div>
 						<div class="course_detail-info_icon_section">
 							<div class="first_line">
 								<div class="course_detail-info_time">
+<<<<<<< HEAD
+									<i class="far fa-clock"></i> 30min
+=======
 									<i class="far fa-clock"></i> ${totalMin}min
+>>>>>>> master
 								</div>
 								<div class="course_detail-why">
 									<i class="fas fa-child"></i>정신 건강을 위한 명상
@@ -90,8 +137,13 @@
 							<div class="coures_detail-coures_materials_title">준비물</div>
 							<div class="coures_detail-coures_materials_list">
 								<ul>
+<<<<<<< HEAD
+									<li><i class="far fa-check-circle"></i>
+										${course.material}</li>
+=======
 									<li><i class="far fa-check-circle"></i> ${course.material}
 									</li>
+>>>>>>> master
 								</ul>
 							</div>
 						</div>
@@ -103,6 +155,44 @@
 						<div class="title">코스 개요</div>
 						<div class="poses">
 							<div class="pose">
+<<<<<<< HEAD
+								<div class="pose_title">${course.seq1}</div>
+								<div class="time">45:00</div>
+							</div>
+							<div class="pose">
+								<div class="pose_title">${course.seq2}</div>
+								<div class="time">45:00</div>
+							</div>
+							<div class="pose">
+								<div class="pose_title">${course.seq3}</div>
+								<div class="time">45:00</div>
+							</div>
+							<div class="pose">
+								<div class="pose_title">${course.seq4}</div>
+								<div class="time">45:00</div>
+							</div>
+							<div class="pose">
+								<div class="pose_title">${course.seq5}</div>
+								<div class="time">45:00</div>
+							</div>
+							<div class="pose">
+								<div class="pose_title">${course.seq6}</div>
+								<div class="time">45:00</div>
+							</div>
+							<div class="pose">
+								<div class="pose_title">${course.seq7}</div>
+								<div class="time">45:00</div>
+							</div>
+							<div class="pose">
+								<div class="pose_title">${course.seq8}</div>
+								<div class="time">45:00</div>
+							</div>
+						</div>
+						<div class="btn">
+							<div class="time">총 10분</div>
+							<div class="start_btn">
+								<button id="btn_to_start">시작하기</button>
+=======
 								<div class="pose_title">${coursePoses.pose1}</div>
 								<div class="time">${mins[0]}:${seconds[0]}</div>
 							</div>
@@ -141,11 +231,118 @@
 								<a href="${pageContext.request.contextPath}/course_playlist">
 									<button id="btn_to_start">시작하기</button>
 								</a>
+>>>>>>> master
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+<<<<<<< HEAD
+			
+			<div class="course_detail-fourth_section">
+				<div class="course_detail-review_section">
+					<div class="course_detail-rating">
+						<span><i class="fas fa-star"></i></span> <span>4.97(206)</span> <span>(후기
+							206개)</span>
+					</div>
+					<div class="course_detail-review_sec">
+						<div class="course_detail-review">
+							<div class="course_detail-review_container">
+								<div class="course_detail-review_profile_img">
+									<img
+										src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+										alt="profile" />
+									<div class="course_detail-review_user_info">
+										<div class="course_detail-review_user_name">Minh</div>
+										<div class="course_detail-review_date">2020년8월</div>
+									</div>
+								</div>
+								<div class="course_detail-review_box">
+									<span> 다른 게스트 없이 가족이나 친구들과만 체험을 즐기고 싶으세요? Fragiskos님은 최대
+										100명까지의 일행에게 시작 요금 ₩174,403에 프라이빗 예약을 제공합니다. </span>
+								</div>
+							</div>
+						</div>
+						<div class="course_detail-review">
+							<div class="course_detail-review_container">
+								<div class="course_detail-review_profile_img">
+									<img
+										src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+										alt="profile" />
+									<div class="course_detail-review_user_info">
+										<div class="course_detail-review_user_name">Minh</div>
+										<div class="course_detail-review_date">2020년8월</div>
+									</div>
+								</div>
+								<div class="course_detail-review_box">
+									<span> 수진 언니 결혼 축하해요 제가 춤 춰 드릴게요. 재호님이랑 </span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="course_detail-review_sec">
+						<div class="course_detail-review">
+							<div class="course_detail-review_container">
+								<div class="course_detail-review_profile_img">
+									<img
+										src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+										alt="profile" />
+									<div class="course_detail-review_user_info">
+										<div class="course_detail-review_user_name">Minh</div>
+										<div class="course_detail-review_date">2020년8월</div>
+									</div>
+								</div>
+								<div class="course_detail-review_box">
+									<span> The host really let the team interact to figure
+										everything out, chiming in when we needed the help. It felt as
+										close to an in-person escape room as we could really get
+										virtually. Def recommend! </span>
+								</div>
+							</div>
+						</div>
+						<div class="course_detail-review">
+							<div class="course_detail-review_container">
+								<div class="course_detail-review_profile_img">
+									<img
+										src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+										alt="profile" />
+									<div class="course_detail-review_user_info">
+										<div class="course_detail-review_user_name">Minh</div>
+										<div class="course_detail-review_date">2020년8월</div>
+									</div>
+								</div>
+								<div class="course_detail-review_box">
+									<span> The host really let the team interact to figure
+										everything out, chiming in when we needed the help. It felt as
+										close to an in-person escape room as we could really get
+										virtually. Def recommend! </span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="course_detail-review_sec">
+						<div class="course_detail-review">
+							<div class="course_detail-review_container">
+								<div class="course_detail-review_profile_img">
+									<img
+										src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+										alt="profile" />
+									<div class="course_detail-review_user_info">
+										<div class="course_detail-review_user_name">Minh</div>
+										<div class="course_detail-review_date">2020년8월</div>
+									</div>
+								</div>
+								<div class="course_detail-review_box">
+									<span> The host really let the team interact to figure
+										everything out, chiming in when we needed the help. It felt as
+										close to an in-person escape room as we could really get
+										virtually. Def recommend! </span>
+								</div>
+							</div>
+						</div>
+						<div class="course_detail-review">
+							<div class="course_detail-review_container">
+=======
 
 			<div class="course_detail-fourth_section">
 				<!-- black_line -->
@@ -206,10 +403,33 @@
 						</div>
 						<div class="ajax">
 							<c:forEach var="i" items="${commentList}">
+>>>>>>> master
 								<div class="course_detail-review_profile_img">
 									<img
 										src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
 										alt="profile" />
+<<<<<<< HEAD
+									<div class="course_detail-review_user_info">
+										<div class="course_detail-review_user_name">Minh</div>
+										<div class="course_detail-review_date">2020년8월</div>
+									</div>
+								</div>
+								<div class="course_detail-review_box">
+									<span> The host really let the team interact to figure
+										everything out, chiming in when we needed the help. It felt as
+										close to an in-person escape room as we could really get
+										virtually. Def recommend! </span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="more_review_btn">
+						<button id="more_review_btn">후기 206개 모두 보기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+=======
 
 									<div class="course_detail-review_user_info">
 										<div class="user_review">
@@ -399,6 +619,7 @@
 			</div>
 		</div>
 
+>>>>>>> master
 		<footer class="footer">
 			<div class="footer_section">
 				<div class="main-footer_right">

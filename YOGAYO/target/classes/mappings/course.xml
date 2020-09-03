@@ -5,6 +5,19 @@
 <mapper namespace="CourseDao">
 
 	<insert id="makeCourse" parameterType="CourseVo">
+<<<<<<< HEAD
+	INSERT INTO COURSE(TITLE,MNUM,DSCRT,MATERIAL,IMGPATH,SEQ1,SEQ2,SEQ3,SEQ4,SEQ5,SEQ6,SEQ7,SEQ8)
+	values(#{title},#{uNum},#{dscrt},#{material},#{imgPath},#{seq1},#{seq2},#{seq3},#{seq4},#{seq5},#{seq6},#{seq7},#{seq8});
+	</insert>
+	
+	<select id="selectAll" resultType="CourseVo">
+		<!-- 테이블명 대소문자 구분 -->
+		SELECT * FROM COURSE
+	</select>
+	
+	
+	<select id="selectOne" resultType="CourseVo">
+=======
 		INSERT INTO
 		COURSE(TITLE,UNUM,DSCRT,MATERIAL,IMGPATH,SEQ1,SEQ2,SEQ3,SEQ4,SEQ5,SEQ6,SEQ7,SEQ8)
 		values(#{title},#{uNum},#{dscrt},#{material},#{imgPath},#{seq1},#{seq2},#{seq3},#{seq4},#{seq5},#{seq6},#{seq7},#{seq8})
@@ -50,11 +63,14 @@
 	</select>
 
 	<select id="selectOne" parameterType="CourseVo" resultType="CourseVo">
+>>>>>>> master
 		<!-- 테이블명 대소문자 구분 -->
 		SELECT * FROM COURSE WHERE CRSNUM=#{crsNum}
 	</select>
 	
 	
+<<<<<<< HEAD
+=======
 	<select id="getLastCnum" resultType="Integer">
 	 	SELECT MAX(CRSNUM) FROM COURSE
 	</select>
@@ -148,4 +164,5 @@
 	</select>
 
 
+>>>>>>> master
 </mapper>

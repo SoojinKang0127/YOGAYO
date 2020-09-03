@@ -1,6 +1,9 @@
 eclipse.preferences.version=1
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 encoding//src/main/webapp/WEB-INF/views/admin/admin-member.jsp=UTF-8
 =======
+>>>>>>> master
 >>>>>>> master
 encoding//src/main/webapp/WEB-INF/views/course_playlist.jsp=UTF-8

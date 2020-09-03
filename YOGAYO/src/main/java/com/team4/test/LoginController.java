@@ -28,6 +28,10 @@ public class LoginController {
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Locale locale, Model model) {
+<<<<<<< HEAD
+		
+=======
+>>>>>>> master
 		return "login";
 	};
 	

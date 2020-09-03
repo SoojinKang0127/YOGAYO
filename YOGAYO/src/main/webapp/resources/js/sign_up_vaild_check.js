@@ -1,4 +1,6 @@
 var emailCheck = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+<<<<<<< HEAD
+=======
 var signUpBtn = document.getElementById("signUpBtn");
 var submitBtn = document.getElementById("submitBtn");
 
@@ -134,11 +136,16 @@ document.addEventListener("mouseover", function() {
 	
 
 })
+>>>>>>> master
 
 $(document).ready(
 		function() {
 			/* 이메일 유효성 */
 			$("#email").keyup(function() {
+<<<<<<< HEAD
+				if ($("#email").val().length != 0) {
+					if (emailCheck.test($("#email").val())) {
+=======
 				request.open("Post", "./checkDuplication?email="
 						+ encodeURIComponent(email[0].value), true);
 				request.onreadystatechange = after_ajax;
@@ -146,13 +153,17 @@ $(document).ready(
 								
 				if ($("#email").val().length != 0) {
 					if (emailDuplCheck()) {
+>>>>>>> master
 						$("#email").css({
 							"border-bottom" : "2px solid",
 							color : "green",
 						});
+<<<<<<< HEAD
+=======
 						$(".msgContainer").css({
 							"display" : "none"
 						});
+>>>>>>> master
 
 					} else {
 						$("#email").css({
@@ -160,19 +171,25 @@ $(document).ready(
 							color : "red",
 						});
 
+<<<<<<< HEAD
+=======
 						$(".msgContainer").css({
 							"display" : "block"
 						});
 
+>>>>>>> master
 					}
 				} else {
 					$("#email").css({
 						"border-bottom" : "1px solid black",
 						color : "black",
 					});
+<<<<<<< HEAD
+=======
 					$(".msgContainer").css({
 						"display" : "none"
 					});
+>>>>>>> master
 
 				}
 			});
@@ -181,7 +198,11 @@ $(document).ready(
 			$("#name").keyup(function() {
 
 				if ($("#name").val().length != 0) {
+<<<<<<< HEAD
+			if ($("#name").val().length > 1) {
+=======
 					if ($("#name").val().length > 1) {
+>>>>>>> master
 						$("#name").css({
 							color : "green",
 							"border-bottom" : "2px solid green",

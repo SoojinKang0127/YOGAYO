@@ -1,5 +1,148 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TaeGyum</title>
+
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/player.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/player-rSlider.min.css">
+
+<script src="https://kit.fontawesome.com/7bad96e258.js"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script language=JavaScript
+	src="${pageContext.request.contextPath}/resources/js/player-rSlider.min.js"></script>
+
+<script>
+	$(document).ready(
+			function() {
+				window.onload = function() {
+					$("#pop1").hide()
+					$("#pop2").css("visibility", "hidden")
+					$("#pop3").hide()
+				}
+
+				var mySlider = new rSlider({
+					target : "#slider1",
+					values : [ 1, 2, 3, 4, 5 ],
+					range : false,
+					set : [ 5 ],
+					tooltip : false,
+				})
+
+				var mySlider2 = new rSlider({
+					target : "#slider2",
+					values : [ 1, 2, 3, 4, 5 ],
+					range : false,
+					set : [ 5 ],
+					tooltip : false,
+				})
+
+				$(".end-btn").click(function() {
+					$("#pop1").show()
+					$(".play-button").click()
+				})
+
+				var num = document.getElementsByClassName("pop3-top-input")
+				var display = document
+						.getElementsByClassName("main-bottom-btn2")
+
+				$(display).click(function() {
+					$("#pop3").show()
+				})
+
+				$(".pop3-bottom").click(function() {
+					$("#pop3").hide()
+					$(display).text(num[0].value + " kg")
+				})
+
+				function getParam(sname) {
+
+					var params = location.search.substr(location.search
+							.indexOf("?") + 1);
+
+					var sval = "";
+
+					params = params.split("&");
+
+					for (var i = 0; i < params.length; i++) {
+
+						temp = params[i].split("=");
+
+						if ([ temp[0] ] == sname) {
+							sval = temp[1];
+						}
+
+					}
+
+					return sval;
+
+				}
+
+				$(".pop2-btn")
+						.click(
+								function() {
+
+									var method = "POST";
+									var path = "feed";
+									var crsNum = getParam("course");
+
+									var form = document.createElement("form");
+									form.setAttribute("method", method);
+									form.setAttribute("action", path);
+									form.setAttribute("enctype",
+											"multipart/form-data");
+									document.body.appendChild(form);
+
+									var keys = [ "course", "slevel", "dlevel",
+											"context", "weight" ];
+									var values = [ crsNum,
+											(mySlider.values.end + 1),
+											(mySlider2.values.end + 1),
+											$(".main-top-text").val(),
+											num[0].value ];
+
+									for (var i = 0; i < 5; i++) {
+										var hiddenField = document
+												.createElement("input");
+										hiddenField.setAttribute("type",
+												"hidden");
+										hiddenField.setAttribute("name",
+												keys[i]);
+										hiddenField.setAttribute("value",
+												values[i]);
+
+										form.appendChild(hiddenField);
+									}
+
+									form.submit();
+
+								})
+
+			})
+</script>
+</head>
+<body>
+
+
+	<form action="feed" method="POST" enctype="multipart/form-data">
+		<input type="hidden" name="course" value=""> <input
+			type="hidden" name="slevel" value=""> <input type="hidden"
+			name="dlevel" value=""> <input type="hidden" name="context"
+			value=""> <input type="hidden" name="weight" value="">
+
+
+
+
+
+=======
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,6 +221,7 @@
 		<input type="hidden" name="course" value="" id="course"> <input type="hidden" name="slevel" value=""
 			id="slevel"> <input type="hidden" name="dlevel" value="" id="dlevel"> <input type="hidden" name="context"
 			value="" id="context"> <input type="hidden" name="weight" value="" id="weight">
+>>>>>>> master
 
 		<div class="all-wrapper">
 			<header>
@@ -98,16 +242,26 @@
 							<div class="course-image"></div>
 						</div>
 						<div class="info-wrapper">
+<<<<<<< HEAD
+							<div class="course-title"></div>
+							<div class="course-info">
+								<div class="main-course-title">코스 A: 허리에 좋은 기초 요가 클래스</div>
+=======
 							<div class="course-title">${course.title}</div>
 							<div class="course-info">
 								<div class="main-course-title"></div>
+>>>>>>> master
 								<div class="main-course-info">
 									<div class="rightwrapper">
 										<span>누적 플레이 수</span> <span class="accumulate-number">
 											160회</span> <span>•</span> <span class="reg-date"> 2020.08.19</span>
 									</div>
 									<div class="leftwrapper">
+<<<<<<< HEAD
+										<span class="like"><i class="far fa-heart"></i></span> <span
+=======
 										<span class="like"><i class="${like}"></i></span> <span
+>>>>>>> master
 											class="like-number">34</span>
 									</div>
 								</div>
@@ -123,8 +277,13 @@
 					</div>
 					<div class="course-list">
 						<div class="list-header">
+<<<<<<< HEAD
+							<div class="list-header-title">COURSE A</div>
+							<div class="list-header-count">코스 1/30</div>
+=======
 							<div class="list-header-title">${course.title}</div>
 							<div class="list-header-count">코스 1/8</div>
+>>>>>>> master
 						</div>
 						<div class="scroll-overflow">
 							<ul class="order-ul">
@@ -135,10 +294,17 @@
 											<div>1</div>
 										</div>
 										<div class="order-image">
+<<<<<<< HEAD
+											<image src="boat.webp"> </image>
+										</div>
+										<div class="order-title">
+											<div>배 자세</div>
+=======
 											<image src="${pageContext.request.contextPath}/resources/image/boat.webp"> </image>
 										</div>
 										<div class="order-title">
 											<div>${pose1.title}</div>
+>>>>>>> master
 											<div></div>
 										</div>
 									</div>
@@ -150,14 +316,23 @@
 											<div>2</div>
 										</div>
 										<div class="order-image">
+<<<<<<< HEAD
+											<image src="chair.webp"> </image>
+										</div>
+										<div class="order-title">
+											<div>의자 자세</div>
+=======
 											<image src="${pageContext.request.contextPath}/resources/image/chair.webp"> </image>
 										</div>
 										<div class="order-title">
 											<div>${pose2.title}</div>
+>>>>>>> master
 											<div>0:30</div>
 										</div>
 									</div>
 								</li>
+<<<<<<< HEAD
+=======
 								<li class="order-li">
 									<div class="order-progress-bar"></div>
 									<div class="order-wrapper">
@@ -248,6 +423,7 @@
 										</div>
 									</div>
 								</li>
+>>>>>>> master
 							</ul>
 						</div>
 						<div class="list-footer">
@@ -259,7 +435,12 @@
 					</div>
 				</div>
 			</main>
+<<<<<<< HEAD
+			<script language=JavaScript
+				src="${pageContext.request.contextPath}/resources/js/player.js"></script>
+=======
 			<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/player.js"></script>
+>>>>>>> master
 		</div>
 		<div id="pop1">
 			<div class="pop1-txt">
@@ -291,12 +472,23 @@
 				<div class="pop2-main">
 					<div class="pop2-main-top">
 						<div class="main-top-pic"></div>
+<<<<<<< HEAD
+						<input type="text" class="main-top-text"
+							placeholder="오늘의 운동은 어떠셨나요?" />
+					</div>
+					<div class="pop2-main-bottom">
+						<div class="main-bottom-btn1">
+						<label for="file1">사진 업로드</label>
+						<input type="file" id="file1"
+								name="file" onchange="setThumbnailMulti(event);" multiple />
+=======
 						<input type="text" class="main-top-text" placeholder="오늘의 운동은 어떠셨나요?" />
 					</div>
 					<div class="pop2-main-bottom">
 						<div class="container">
 							<label for="file" class="main-bottom-btn1">사진 업로드</label> <input type="file" id="file"
 								name="file" onchange="setThumbnail(event);" />
+>>>>>>> master
 						</div>
 						<div class="main-bottom-btn2">몸무게</div>
 					</div>
@@ -304,11 +496,70 @@
 				<div class="userImageContainer">
 					<div class="userImage img1">
 						<div class="btnContainer btn1">
+<<<<<<< HEAD
+							
+						</div>
+					</div>
+					<div class="userImage img2">
+					</div>
+					<div class="userImage img3">
+					</div>
+				</div>
+				<script>
+				
+				var userImages = document.querySelectorAll(".userImage");
+				var btns = document.querySelectorAll(".btnContainer");
+				
+				
+				function setThumbnailMulti(event) { 
+					
+					for (var image of event.target.files) { 
+					no =1;
+						var reader = new FileReader(); 
+						reader.onload = function(event) {
+							console.log(no);
+							//console.log(className);
+							className = "." + userImages[no-1].classList[1];
+							console.log(userImages[no-1].classList[1]);
+							var img = document.createElement("img"); 
+							img.setAttribute("src", event.target.result); 
+							document.querySelector(className).appendChild(img);
+							no++;
+							}; 
+							
+							console.log(image); 
+							reader.readAsDataURL(image);
+					};
+					};
+
+
+				
+				
+					function setThumbnail(event, no) {
+						var reader = new FileReader();
+						console.log();
+						className = "." + userImages[no-1].classList[1];
+						btnName = "." + btns[no-1].classList[1];
+						reader.onload = function(event) {
+							var img = document.createElement("img");
+							img.setAttribute("src", event.target.result);
+							document.querySelector(className).appendChild(img);
+							document.querySelector(btnName).style.display = "none";
+							console.log(event.target.result);
+					
+							
+						};
+						reader.readAsDataURL(event.target.files[0]);
+					}
+				</script>
+				<div class="pop2-btn">게시하기</div>
+=======
 							<i class="fas fa-image" id="icon"></i>
 						</div>
 					</div>
 				</div>
 				<div class="pop2-btn" id="submit" onclick="submit();">게시하기</div>
+>>>>>>> master
 			</div>
 		</div>
 		<div id="pop3">
@@ -318,6 +569,11 @@
 			</div>
 			<div class="pop3-bottom">입력</div>
 		</div>
+<<<<<<< HEAD
+
+	</form>
+</body>
+=======
 	</form>
 	<script>
 		var userImages = document.querySelectorAll(".userImage");
@@ -428,4 +684,5 @@
 	</script>
 </body>
 
+>>>>>>> master
 </html>

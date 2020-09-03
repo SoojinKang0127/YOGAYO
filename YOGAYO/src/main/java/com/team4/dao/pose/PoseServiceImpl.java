@@ -1,6 +1,10 @@
 package com.team4.dao.pose;
 
 import java.util.List;
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
 import com.team4.user.dao.UserDAOImpl;
 import com.team4.vo.PoseVo;
 
@@ -19,7 +23,11 @@ public class PoseServiceImpl implements PoseService {
 	}
 
 	@Override
+<<<<<<< HEAD
+	public List<String> poseSelectAll() throws Exception {
+=======
 	public List<PoseVo> poseSelectAll() throws Exception {
+>>>>>>> master
 		return dao.poseSelectAll();
 	}
 
@@ -33,9 +41,12 @@ public class PoseServiceImpl implements PoseService {
 		dao.poseUpdate(vo);
 	}
 
+<<<<<<< HEAD
+=======
 	public List<String> poseSelectJSON(String string) throws Exception {
 		// TODO Auto-generated method stub
 		return dao.poseSelectJSON(string);
 	}
 
+>>>>>>> master
 }
