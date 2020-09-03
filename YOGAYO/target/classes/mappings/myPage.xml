@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="UserDao">
+  
+  	<select id="tWeight1" resultType="int">
+  	
+  		SELECT
+  			WEIGHT 
+  		FROM 
+  			FEED f
+  		JOIN
+  			USER u
+  		ON
+			(f.UNUM = u.UNUM)
+		WHERE
+			u.UNUM=#{uNum}
+  		ORDER BY 
+  			f.REGDATE DESC limit 1;
+  	
+  	</select>
+  	
+  	<select id="tWeight2" resultType="int">
+  		<![CDATA[ 
+  		SELECT
+			WEIGHT
+		FROM 
+			FEED f		
+		JOIN
+			USER u
+		ON
+			(f.UNUM = u.UNUM)
+		WHERE 
+			u.UNUM=#{uNum}
+		AND
+			(LAST_DAY(NOW()) >  f.REGDATE 
+		AND 
+			LAST_DAY(NOW() - INTERVAL 1 MONTH) + INTERVAL 1 DAY <= f.REGDATE)
+		ORDER BY 
+			f.REGDATE LIMIT 1
+		]]>
+			
+  	</select>
+  	
+  	<select id="lWeight" resultType="int">
+  	
+  		SELECT
+  			WEIGHT 
+  		FROM 
+  			FEED f
+  		JOIN
+  			USER u
+  		ON
+  			(f.UNUM = u.UNUM)
+  		WHERE
+  			u.UNUM = #{uNum}
+  		ORDER BY 
+  			f.REGDATE DESC LIMIT 1;
+  	
+  	</select>
+  	
+  	<select id="cWeight" resultType="int">
+  	
+   	 	SELECT 
+  			WEIGHT
+  		FROM
+  			FEED f  		
+  		JOIN
+  			USER u
+  		ON
+  			(f.UNUM = u.UNUM)
+  		WHERE
+  			u.UNUM = #{uNum}
+  		ORDER BY 
+  			f.REGDATE DESC LIMIT 1  
+
+  	</select>
+  	
+  	<select id="count1week" resultType="int">
+  	<![CDATA[ 
+		SELECT 
+			COUNT(FNUM)
+		FROM
+			FEED f
+		JOIN
+			USER u
+		WHERE
+			u.UNUM=#{uNum}
+		AND
+			NOW() - INTERVAL 1 WEEK < f.REGDATE
+  		]]>
+  	</select>
+  	
+  	<select id="count2week" resultType="int">
+  	<![CDATA[ 
+		SELECT 
+			COUNT(FNUM)
+		FROM
+			FEED f
+		JOIN
+			USER u
+		WHERE
+			u.UNUM=#{uNum}
+		AND
+			NOW() - INTERVAL 1 WEEK >f.REGDATE
+		AND
+			NOW() - INTERVAL 2 WEEK < f.REGDATE;
+  		]]>
+  	</select>
+  	
+  	<select id="count3week" resultType="int">
+  	<![CDATA[ 
+		SELECT 
+			COUNT(FNUM)
+		FROM
+			FEED f
+		JOIN
+			USER u
+		WHERE
+			u.UNUM=#{uNum}
+		AND
+			NOW() - INTERVAL 2 WEEK >f.REGDATE
+		AND
+			NOW() - INTERVAL 3 WEEK < f.REGDATE;
+  		]]>
+  	</select>
+  	
+  	<select id="count4week" resultType="int">
+  	<![CDATA[ 
+		SELECT 
+			COUNT(FNUM)
+		FROM
+			FEED f
+		JOIN
+			USER u
+		WHERE
+			u.UNUM=#{uNum}
+		AND
+			NOW() - INTERVAL 3 WEEK >f.REGDATE
+		AND
+			NOW() - INTERVAL 4 WEEK < f.REGDATE;
+  		]]>
+  	</select>
+  	
+  	
+  	
+  	<select id="review" resultType="UserVo">
+  		SELECT
+  			FNUM, SLEVEL, CONTEXT, UIMG1, REGDATE
+  		FROM
+  			FEED
+  		WHERE
+  			UNUM=#{uNum}
+  	</select>
+  	
+  	<select id="selectAll" resultType="FeedVo">
+  		SELECT
+  			*
+  		FROM
+  			FEED f
+  		JOIN
+  			USER u
+  		ON
+  			(f.UNUM = u.UNUM)
+  		WHERE
+  			u.UNUM=#{uNum}
+  			
+  	</select>
+  	
+  	<select id="selectAllCrs" resultType="CourseVo">
+  		SELECT
+			*
+		FROM
+			COURSE c 
+		JOIN
+			USER u
+		ON
+			(c.UNUM = u.UNUM)
+		WHERE
+			u.UNUM=#{uNum};
+  	</select>
+  	
+  	<select id="thisday" resultType="String">
+  		SELECT CASE 
+  			WEEKDAY(NOW())
+		WHEN '0' THEN 'Monday'
+		WHEN '1' THEN 'Tuesday'
+		WHEN '2' THEN 'Wednesday'
+		WHEN '3' THEN 'Thursday'
+		WHEN '4' THEN 'Friday'
+		WHEN '5' THEN 'Saturday'
+		WHEN '6' THEN 'Sunday'
+		END;
+  	</select>
+  	
+  	<select id="thisdate" resultType="int">
+  		SELECT
+  			DAYOFMONTH(NOW());
+  	</select>
+  	
+  	<select id="thismonth" resultType="String">
+  		SELECT
+  			MONTHNAME(NOW());
+  	</select>
+  	
+  	<select id="crsTitle">
+  		SELECT
+  		
+  	</select>
+  
+  	
+  </mapper>
