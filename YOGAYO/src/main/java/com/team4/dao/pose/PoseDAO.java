@@ -12,6 +12,7 @@ public interface PoseDAO {
 	public void poseUpdate(PoseVo vo) throws Exception;
 	
 	public List<PoseVo> poseSelectAll() throws Exception;
+	public List<String> poseSelectJSON(String string) throws Exception;
 	
 
 	

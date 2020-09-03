@@ -1,5 +1,61 @@
 INDEX VERSION 1.131
+<<<<<<< HEAD
+C:\Users\Kosmo_23\Desktop\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3984184740.index
+\YOGAYO\src\main\java
+/Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3572079652.index
+/YOGAYO/src/main/java
+=======
+/Users/paso/Documents/code/github/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3572079652.index
+/YOGAYO/src/main/java
+C:\Users\Kosmo_23\Desktop\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3984184740.index
+\YOGAYO\src\main\java
+>>>>>>> master
+C:\Users\Kosmo_23\Desktop\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3610453004.index
+\YOGAYO\src\main\java
+<<<<<<< HEAD
+/Users/minjae/Documents/GitHub/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3572079652.index
+C:\Users\kosmo_28\Desktop\YOGAYO\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4054100279.index
+\05_Test_SPRING_MVC\src\main\java
 C:\Users\kosmo_28\Documents\GitHub\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3984184740.index
 \YOGAYO\src\main\java
+<<<<<<< HEAD
+C:\Users\kosmo_28\Desktop\YOGAYO\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2562703763.index
+\05_Test_SPRING_MVC\src\main\java
+C:\Users\kosmo_28\Documents\GitHub\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4054100279.index
+\05_Test_SPRING_MVC\src\main\java
+=======
+C:\Users\kosmo_28\Documents\GitHub\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4054100279.index
+\05_Test_SPRING_MVC\src\main\java
+C:\Users\kosmo_28\Desktop\YOGAYO\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2562703763.index
+\05_Test_SPRING_MVC\src\main\java
+>>>>>>> master
+>>>>>>> master
+
+C:\Users\kosmo_28\Desktop\YOGAYO\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3610453004.index
+\YOGAYO\src\main\java
+C:\Users\kosmo_28\Documents\GitHub\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2562703763.index
+\05_Test_SPRING_MVC\src\main\java
+<<<<<<< HEAD
+/Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3748728972.index
+/YOGAYO/src/main/java
+/Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1979401027.index
+/YOGAYO/src/main/java
+=======
+>>>>>>> master
+/YOGAYO/src/main/java
+=======
+C:\Users\kosmo_28\Desktop\YOGAYO\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3984184740.index
+\YOGAYO\src\main\java
+<<<<<<< HEAD
+/Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2687038020.index
+/YOGAYO/src/main/java
+/Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2604520585.index
+/YOGAYO/src/main/java
 C:\Users\kosmo_28\Documents\GitHub\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3610453004.index
 \YOGAYO\src\main\java
+=======
+C:\Users\kosmo_28\Documents\GitHub\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3610453004.index
+\YOGAYO\src\main\java
+/Users/paso/Documents/code/github/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3748728972.index
+/YOGAYO/src/main/java
+>>>>>>> master

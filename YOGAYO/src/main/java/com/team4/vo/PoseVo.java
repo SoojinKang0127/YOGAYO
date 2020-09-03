@@ -64,6 +64,7 @@ public class PoseVo {
 	public void setAudioPath(String audioPath) {
 		this.audio_Path = audioPath;
 	}
+	
 
 
 	public String getTime() {

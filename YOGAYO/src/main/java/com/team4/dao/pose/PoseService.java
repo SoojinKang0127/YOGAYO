@@ -11,5 +11,5 @@ public interface PoseService {
 	public void poseDefaultSet(PoseVo vo) throws Exception;
 	public List<PoseVo> poseSelectAll() throws Exception;
 	public void update(PoseVo vo) throws Exception;
-
+	public List<String> poseSelectJSON(String string) throws Exception;
 }

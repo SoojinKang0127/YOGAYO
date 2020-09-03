@@ -15,6 +15,7 @@ public class FeedVo {
 	String uImg3;
 	int weight;
 	String regDate;
+	
 	public int getfNum() {
 		return fNum;
 	}

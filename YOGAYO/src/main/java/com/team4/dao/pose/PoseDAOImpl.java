@@ -44,4 +44,9 @@ public class PoseDAOImpl implements PoseDAO {
 		mybatis.commit();
 	}
 
+
+	public List<String> poseSelectJSON(String string) throws Exception {
+		return mybatis.selectList("PoseDao.poseSelectJSON");
+	}
+
 }

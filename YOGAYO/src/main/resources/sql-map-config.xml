@@ -11,10 +11,12 @@
 	<typeAliases>
 		<typeAlias type="com.team4.vo.UserVo" alias="UserVo"></typeAlias>
 		<typeAlias type="com.team4.vo.CourseVo" alias="CourseVo"></typeAlias>
+		<typeAlias type="com.team4.vo.CommentVo" alias="CommentVo"></typeAlias>
 		<typeAlias type="com.team4.vo.CoursePosesVo" alias="CoursePosesVo"/>
-		
+		<typeAlias type="com.team4.vo.LikeVo" alias="LikeVo"/>
 		<typeAlias type="com.team4.vo.FeedVo" alias="FeedVo"></typeAlias>
 		<typeAlias type="com.team4.vo.PoseVo" alias="PoseVo"></typeAlias>
+		<typeAlias type="com.team4.vo.AdminVo" alias="AdminVo"></typeAlias>
 	</typeAliases>
 
 	<environments default="development">
@@ -32,11 +34,13 @@
 	<!-- Sql Mapper 설정 : 여러개 가능 -->
 	<mappers>
 		<mapper resource="mappings/login.xml" />
-		<mapper resource="mappings/update.xml"/>
-		<mapper resource="mappings/myPage.xml"/>
+		<mapper resource="mappings/update.xml" />
+		<mapper resource="mappings/myPage.xml" />
 		<mapper resource="mappings/course.xml" />
 		<mapper resource="mappings/feed.xml" />
 		<mapper resource="mappings/pose.xml"/>
+		<mapper resource="mappings/admin.xml"/>
+		<mapper resource="mappings/like.xml"/>
 	</mappers>
 
 </configuration>
