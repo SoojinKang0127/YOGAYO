@@ -1,9 +1,11 @@
 package com.team4.test;
 
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -16,12 +18,17 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.team4.dao.course.CourseDAO;
 import com.team4.dao.course.CourseDAOImpl;
 import com.team4.dao.course.CourseServiceImpl;
+import com.team4.dao.pose.PoseServiceImpl;
+import com.team4.vo.CoursePosesVo;
 import com.team4.vo.CourseVo;
+import com.team4.vo.PagingVo;
+import com.team4.vo.PoseVo;
 
 @Controller
 public class CourseController {
 
 	CourseServiceImpl service = new CourseServiceImpl();
+	PoseServiceImpl pService = new PoseServiceImpl();
 
 	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
 	public String coueseTitle(Model model) throws Exception {
@@ -32,17 +39,71 @@ public class CourseController {
 	}
 
 	@RequestMapping(value = "/course-detail", method = RequestMethod.GET)
-	public String makeCourse(CourseVo vo, HttpServletRequest req, RedirectAttributes rttr, Model model,
-			@RequestParam("crsNum") int crsNum) throws Exception {
+	public String makeCourse(CourseVo vo, CoursePosesVo cpvo, HttpServletRequest req, RedirectAttributes rttr,
+			Model model, @RequestParam("crsNum") int crsNum) throws Exception {
+		int totalTime = 0;
+		int totalMin = 0;
+		int totalSec = 0;
 
 		vo = new CourseVo();
+		cpvo = new CoursePosesVo();
+
 		vo.setCrsNum(crsNum);
+
 		CourseVo course;
+		CoursePosesVo cpv;
+
 		try {
 			course = service.selectOne(vo);
 			model.addAttribute("course", course);
+
+			cpv = service.coursePoses(vo);
+			model.addAttribute("coursePoses", cpv);
+
+			int[] timeArr = { Integer.parseInt(cpv.getTime1()), Integer.parseInt(cpv.getTime2()),
+					Integer.parseInt(cpv.getTime3()), Integer.parseInt(cpv.getTime4()),
+					Integer.parseInt(cpv.getTime5()), Integer.parseInt(cpv.getTime6()),
+					Integer.parseInt(cpv.getTime7()), Integer.parseInt(cpv.getTime8()) };
+
+			ArrayList mins = new ArrayList();
+			ArrayList seconds = new ArrayList();
+			String minute;
+			String second;
+
+			for (int i = 0; i < timeArr.length; i++) {
+				int min = timeArr[i] / 60;
+				int sec = timeArr[i] % 60;
+
+				if (min < 10) {
+					minute = "0" + Integer.toString(min);
+				} else {
+					minute = Integer.toString(min);
+				}
+				if (sec < 10) {
+					second = "0" + Integer.toString(sec);
+				} else {
+					second = Integer.toString(sec);	
+				}
+				
+				mins.add(minute);
+				seconds.add(second);
+			}
+			model.addAttribute("mins", mins);
+			model.addAttribute("seconds", seconds);
+
+			totalTime = Integer.parseInt(cpv.getTime1()) + Integer.parseInt(cpv.getTime2())
+					+ Integer.parseInt(cpv.getTime3()) + Integer.parseInt(cpv.getTime4())
+					+ Integer.parseInt(cpv.getTime5()) + Integer.parseInt(cpv.getTime6())
+					+ Integer.parseInt(cpv.getTime7()) + Integer.parseInt(cpv.getTime8());
+
+			totalMin = totalTime / 60;
+			totalSec = totalTime % 60;
+
+			model.addAttribute("totalMin", totalMin);
+			model.addAttribute("totalSec", totalSec);
+
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("[CourseController /  makeCourse]" + e.toString());
 		}
 
 		return "course-detail";

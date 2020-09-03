@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">타다 사나에서 시작 / 산 포즈.<break time="700"/>발을 통해 단단하고 균등하게 누르고 눈높이에 초점을 맞추세요.<break time="700"/>숨을 내쉬고 왼쪽 무릎을 구부리고 왼발을 엉덩이에 대고 왼손으로 왼발 바깥 쪽을 잡으세요. 오른쪽 엉덩이를 단단히 잡고 오른쪽 허벅지와 무릎을 맞물려 서있는 다리를 튼튼하게 만드세요.<break time="700"/>몸통을 똑바로 세우고 가슴을 벌리고 꼬리뼈를 아래로 늘립니다. 숨을들이 쉴 때 왼발을 다시 손으로 밀고 다리를 들어 올려 허벅지 뼈가 바닥과 평행을 이루고 다리 아래쪽이 직각이 되도록합니다. 허벅지 뼈와 바닥과 수직입니다. 오른팔을 앞쪽, 바닥과 평행하게 또는 귀 옆에 약간 더 높이 들어 올릴 수 있습니다.<break time="700"/>5-10번 숨을 쉬세요.<break time="700"/>포즈에서 나오려면 숨을 내쉴 때 다리를 떼세요. 반대쪽에서도 반복하세요.<break time="700"/></prosody></speak>' > pose14.mp3

@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">두손과 두발을 바닥에 둡니다. 무릎은 엉덩이 아래, 손목은 어깨 아래 또는 약간 앞쪽으로 위치합니다.<break time="700"/>손가락을 펴고 손가락 바닥에 곧게 접지한 후, 매트를 향해 손가락을 누르십시오.<break time="700"/>숨을 들이 마시면 ​​배를 내리고 가슴을 들어 꼬리뼈가 위를 향하게 하고 위를 봅니다.<break time="700"/>숨을 내쉬고 처음 자세로 돌아옵니다.<break time="700"/></prosody></speak>' > pose11.mp3

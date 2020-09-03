@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">두 발을 엉덩이만큼 벌리고 서세요.<break time="700"/>발을 느끼고 발가락을 들어 올려 벌린 다음 다시 아래로 내리고 땅에 연결하세요.<break time="700"/>무릎을 뒤로 잠그지 않고 무릎 캡을 들어 올립니다.<break time="700"/>허벅지 근육을 위아래로 들어 올립니다. 안쪽 허벅지가 약간 안쪽으로 들어갑니다.<break time="700"/>허리의 피부와 엉덩이의 살을 부드럽게하여 (꼬리뼈를 아래로 집어 넣지 않고 떨어 뜨리는) 골반이 중립 위치에 놓이는 것을 상상해보세요.<break time="700"/>골반저 근육을 함께 그리고 복부를 약간 위아래로 당겨 Mula Bandha (골반저 근육)와 Uddiyana Bandha (횡경막까지의 복부)를 맞물립니다.<break time="700"/>가슴을 열고 흉골 상단이 천장을 향해 들어 올립니다. 갈비뼈를 부드럽게 유지하세요.<break time="700"/>쇄골을 넓히고 어깨 뼈를 등에 단단히 고정하세요.<break time="700"/>어깨 너머로 귀, 머리의 왕관을 들어 올리세요.<break time="700"/>얼굴, 특히 눈과 턱을 부드럽게하세요.<break time="700"/></prosody></speak>' > pose40.mp3

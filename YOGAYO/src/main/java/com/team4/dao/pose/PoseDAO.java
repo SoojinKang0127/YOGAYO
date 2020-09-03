@@ -11,7 +11,7 @@ public interface PoseDAO {
 	public void poseDefaultSet(PoseVo vo) throws Exception;
 	public void poseUpdate(PoseVo vo) throws Exception;
 	
-	public List<String> poseSelectAll() throws Exception;
+	public List<PoseVo> poseSelectAll() throws Exception;
 	
 
 	

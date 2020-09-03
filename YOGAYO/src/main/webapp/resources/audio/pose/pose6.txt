@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">손과 무릎 (네 발 모두)에서 시작하여 무릎은 엉덩이 아래, 손목은 어깨 아래 또는 약간 앞으로 둡니다.<break time="700"/>손가락을 펴고 손가락 밑 부분과 손가락 끝을 누릅니다.<break time="700"/>숨을 내쉴 때 배를 당기고 옆쪽 허리를 들어 올리고 척추를 둥글게하고 머리를 바닥쪽으로 뗍니다<break time="700"/>바닥을 눌러서 몸통이 늘어나게끔 합니다.<break time="700"/>숨을들이 마시고 시작자세로 돌아오세요.<break time="700"/></prosody></speak>' > pose6.mp3

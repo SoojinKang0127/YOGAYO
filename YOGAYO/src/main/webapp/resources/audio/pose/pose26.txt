@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">배 위에 누워 스핑크스 자세로 팔뚝에 쉬고, 어깨 아래 팔꿈치.<break time="700"/>치골을 아래로 펴고 배를 끌어 당깁니다.<break time="700"/>몸 앞에서 왼쪽 팔뚝을 교차합니다. 오른쪽 무릎을 구부리고 오른손으로 뒤로 뻗어 발 윗부분을 잡고 오른쪽 엉덩이쪽으로 발을 당깁니다.<break time="700"/>오른쪽 허벅지 상단을 부드럽게합니다.<break time="700"/>발이 엉덩이에 가까우면 손의 뒤꿈치가 발 윗부분을 누르고 손가락이 앞을 향하고 팔꿈치가 위쪽을 향하도록 손을 돌리십시오.<break time="700"/>상체를 편안하게 앞을 향하고 가슴을 열고 앞팔을 맞 물리십시오.<break time="700"/>발을 천천히 떼기 전에 5 번 숨을 쉬십시오. 반대쪽에서도 반복하십시오.<break time="700"/></prosody></speak>' > pose26.mp3

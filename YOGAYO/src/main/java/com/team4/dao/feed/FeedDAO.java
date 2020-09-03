@@ -6,6 +6,8 @@ public interface FeedDAO {
 	
 	public void upload(FeedVo vo) throws Exception;
 	
+	public int getLastFnum() throws Exception;
+	
 
 }
  

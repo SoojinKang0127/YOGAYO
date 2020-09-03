@@ -15,9 +15,9 @@ public class PoseVo {
 	public PoseVo() {}
 
 
-	public PoseVo(int pNum, String imgPath, String title, String audioPath, int time, int difficulty, Date regDate) {
+	public PoseVo(int pNum, String img_Path, String title, String audioPath, int time, int difficulty, Date regDate) {
 		this.pNum = pNum;
-		this.img_Path = imgPath;
+		this.img_Path = img_Path;
 		this.title = title;
 		this.audio_Path = audioPath;
 		this.time = time;
@@ -36,7 +36,7 @@ public class PoseVo {
 	}
 
 
-	public String getImgPath() {
+	public String getImg_Path() {
 		return img_Path;
 	}
 

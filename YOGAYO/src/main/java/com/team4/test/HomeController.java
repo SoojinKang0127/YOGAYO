@@ -44,12 +44,7 @@ public class HomeController {
 	}
 	
 	
-//	
-//	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
-//	public String couesePage(Model model) {
-//		return "course-page";
-//	}
-//	
+	
 
 //	
 //	@RequestMapping(value = "/course-page", method = RequestMethod.GET)

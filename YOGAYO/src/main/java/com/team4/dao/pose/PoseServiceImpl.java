@@ -1,7 +1,6 @@
 package com.team4.dao.pose;
 
 import java.util.List;
-
 import com.team4.user.dao.UserDAOImpl;
 import com.team4.vo.PoseVo;
 
@@ -20,7 +19,7 @@ public class PoseServiceImpl implements PoseService {
 	}
 
 	@Override
-	public List<String> poseSelectAll() throws Exception {
+	public List<PoseVo> poseSelectAll() throws Exception {
 		return dao.poseSelectAll();
 	}
 
