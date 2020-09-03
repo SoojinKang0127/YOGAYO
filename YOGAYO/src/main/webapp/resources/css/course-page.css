@@ -170,22 +170,28 @@ main {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 .course_container a{
 	color:black;
 }
 
 =======
 >>>>>>> master
+>>>>>>> master
 .course_container .course_star_rating {
 	font-size: 11pt;
 }
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 .course_star_rating i{
 	color:var(--theme-color);
 }
 
 =======
+>>>>>>> master
 >>>>>>> master
 .footer {
 	width: 100%;

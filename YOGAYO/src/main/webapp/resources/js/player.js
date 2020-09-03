@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	bar = barArr[0]
 	play = document.getElementsByClassName("play-button")
 	p_btn = document.getElementsByClassName("fas fa-pause btn")
-	document.get
 	index = 0
 	time = timeArr[index]
 	timer = document.querySelector(

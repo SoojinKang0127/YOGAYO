@@ -117,6 +117,8 @@ input:focus {
   border: none;
   outline: none;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
   padding-left: 130px;
   padding-bottom: 10px;
 }
@@ -129,18 +131,11 @@ input:focus {
   margin-bottom: 10px;
   border: none;
   outline: none;
-=======
 >>>>>>> master
   padding-left: 135px;
   padding-bottom: 10px;
 }
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> master
 .down-btn,
 .up-btn {
   cursor: pointer;
@@ -220,13 +215,10 @@ input:focus {
   transition: all 0.3s ease-in-out 0s;
 }
 
-<<<<<<< HEAD
-=======
 .submitBtn:hover {
   color: black;
   border: 1px solid black;
 }
->>>>>>> master
 
 .vaild {
   background-color: green;
@@ -236,6 +228,7 @@ input:focus {
   background-color: rgba(211, 211, 211, 0.516);
 }
 <<<<<<< HEAD
+=======
 
 .msgContainer{
 	display:none;
@@ -248,5 +241,4 @@ input:focus {
 	color:red;
 	font-size:14px;
 }
-=======
 >>>>>>> master

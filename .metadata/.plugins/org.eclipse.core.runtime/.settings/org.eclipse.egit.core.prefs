@@ -1,9 +1,14 @@
 <<<<<<< HEAD
+GitRepositoriesView.GitDirectories=/Users/minjae/Documents/GitHub/YOGAYO/\\Users\\kosmo_28\\Documents\\GitHub\\YOGAYO\\.git;\:/Users/minjae/Documents/GitHub/YOGAYO/.git\:/Users/minjae/Documents/GitHub/YOGAYO/.git;C\:
+GitRepositoriesView.GitDirectories.relative=\\Users\\kosmo_28\\Documents\\GitHub\\YOGAYO\\.git;\:.git\:.git;C\:
+=======
+<<<<<<< HEAD
 GitRepositoriesView.GitDirectories=/Users/soo/Documents/YOGAYO/YOGAYO/\\Users\\kosmo_28\\Documents\\GitHub\\YOGAYO\\.git;\:/Users/soo/Documents/YOGAYO/YOGAYO/.git\:/Users/soo/Documents/YOGAYO/YOGAYO/.git;C\:
 GitRepositoriesView.GitDirectories.relative=\\Users\\kosmo_28\\Documents\\GitHub\\YOGAYO\\.git;\:.git\:.git;C\:
 =======
 GitRepositoriesView.GitDirectories=/Users/paso/Documents/code/github/YOGAYO/.git;C\:/Users/paso/Documents/code/github/YOGAYO/\\Users\\kosmo_28\\Documents\\GitHub\\YOGAYO\\.git;\:/Users/paso/Documents/code/github/YOGAYO/.git\:
 GitRepositoriesView.GitDirectories.relative=.git;C\:\\Users\\kosmo_28\\Documents\\GitHub\\YOGAYO\\.git;\:.git\:
+>>>>>>> master
 >>>>>>> master
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

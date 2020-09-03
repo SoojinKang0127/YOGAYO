@@ -1,0 +1,8 @@
+/.metadata/
+/target/
+/YOGAYO/target/
+
+*.class
+*.xml
+*.MF
+*.properties

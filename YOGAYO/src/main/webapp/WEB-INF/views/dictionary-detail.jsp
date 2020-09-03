@@ -53,8 +53,6 @@
 		
 		
 		
-		
-		
 		<div class="box">
 			<div class="box_section">
 				<div class="box-stepBystep">

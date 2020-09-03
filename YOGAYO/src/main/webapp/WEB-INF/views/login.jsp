@@ -41,13 +41,10 @@
               
             </div>
             <div class="withgoogle">
-<<<<<<< HEAD
 				<a href="sign-up"><div class="sign-up-btn naverBtn">네이버로 로그인</div></a>
-=======
               <div></div>
               <div></div>
               <div></div>
->>>>>>> master
             </div>
             <a href="sign-up"><div class="sign-up-btn">회원가입</div></a>
           </div>
