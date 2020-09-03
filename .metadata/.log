@@ -2360,3 +2360,9 @@ java.io.FileNotFoundException: /Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plu
 
 !ENTRY org.eclipse.jst.server.tomcat.core 4 0 2020-09-03 23:45:25.601
 !MESSAGE The Tomcat server configuration at /Servers/Tomcat v8.5 Server at localhost-config is missing. Check the server for errors.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-09-03 23:56:49.106
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-09-03 23:56:49.138
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
