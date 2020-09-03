@@ -18,13 +18,6 @@
 	</bean>
 	-->
 
-
-	<!-- Controller 등록 -->
-
-	<bean id="login" class="com.team4.test.LoginController"></bean>
-
-
-
 	<!-- datasource 등록 -->
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">

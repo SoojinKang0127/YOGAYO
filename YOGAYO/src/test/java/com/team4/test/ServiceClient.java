@@ -28,9 +28,11 @@ import com.team4.user.dao.UserDAOImpl;
 import com.team4.user.dao.UserServiceImpl;
 import com.team4.user.dao.UserDAO;
 import com.team4.user.dao.UserDAOImpl;
+import com.team4.dao.admin.AdminServiceImpl;
 import com.team4.dao.course.CourseDAO;
 import com.team4.dao.course.CourseService;
 import com.team4.dao.course.CourseServiceImpl;
+import com.team4.vo.AdminVo;
 import com.team4.vo.CourseVo;
 import com.team4.dao.feed.FeedServiceImpl;
 import com.team4.vo.FeedVo;
@@ -43,21 +45,18 @@ import com.team4.vo.UserVo;
 //import com.team4.vo.Vo;
 
 public class ServiceClient {
+	
+	public static void main(String[] args) throws Exception {
 		
-	public static void main(String[] args) {
+		AdminServiceImpl service = new AdminServiceImpl();
 		
-		UserVo vo = new UserVo();
-		vo.setuNum(1008);
-
+		List<AdminVo> list = service.getAllComment();
 		
-		UserServiceImpl service = new UserServiceImpl();
-		try {
-//			System.out.println(	service.tWeight(vo));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		System.out.println(list.get(5));
+		
+		
+		
 		
 	}
-
+	
 }

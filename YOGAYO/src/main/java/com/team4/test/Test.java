@@ -91,10 +91,6 @@ public class Test {
            collection.insertOne(doc);
            System.out.println("성공");
    }
-   
-
-
-
 
    @Override
    public String toString() {

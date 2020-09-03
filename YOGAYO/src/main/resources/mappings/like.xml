@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="LikeDAO">
+
+	<insert id="like" parameterType="LikeVo">
+		INSERT LIKEY(CRSNUM,UNUM)
+		VALUES(#{crsNum},#{uNum})
+	</insert>
+
+	<select id="likeOrNot" parameterType="LikeVo" resultType="int">
+		select EXISTS (select * FROM LIKEY WHERE CRSNUM=#{crsNum} AND UNUM=#{uNum})
+		as success;
+	</select>
+
+	<delete id="dislike" parameterType="LikeVo">
+		DELETE FROM LIKEY CRSNUM=#{crsNum} AND UNUM=#{uNum};
+	</delete>
+
+
+</mapper>

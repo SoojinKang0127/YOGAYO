@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<header>
-<base href="/" /> 
-</header>
 <%response.sendRedirect("/test"); %>
 </body>
 </html>

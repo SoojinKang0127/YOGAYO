@@ -5,7 +5,10 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.team4.util.SqlSessionFactoryBean;
+import com.team4.vo.CoursePosesVo;
 import com.team4.vo.CourseVo;
+import com.team4.vo.PagingVo;
+import com.team4.vo.PoseVo;
 
 public class CourseDAOImpl implements CourseDAO {
 	
@@ -29,6 +32,12 @@ public class CourseDAOImpl implements CourseDAO {
 	public CourseVo selectOne(CourseVo vo) throws Exception {
 		return mybatis.selectOne("CourseDao.selectOne",vo);
 	}
+
+	@Override
+	public CoursePosesVo coursePoses(CourseVo vo) throws Exception {
+		return mybatis.selectOne("CourseDao.coursePoses",vo);
+	}
+
 	
 	
 

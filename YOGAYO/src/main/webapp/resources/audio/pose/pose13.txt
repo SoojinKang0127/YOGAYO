@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">말라 사나 / 스쿼트 자세로 시작하여 발을 벌리고 무릎이 엉덩이보다 넓습니다.<break time="700"/>바닥에 손을 평평하게 놓으세요. 가운데 손가락은 앞을 가리키고 손가락은 벌리세요.<break time="700"/>손을 아래로 펴고 손 전체와 손가락 끝을 누르세요.<break time="700"/>팔꿈치를 구부린 상태로 엉덩이를 높이 들어 올리세요.<break time="700"/>무릎을 가능한 한 높이 위로 올리거나 팔뚝 바깥 쪽을 꽉 쥐세요. 무릎과 팔꿈치를 중간 선으로 껴안고, 숨을 내쉬고 등 위쪽을 통해 강하게 둥글게 둥글게 만듭니다. 복부를 사용하여 허리를 위로 올리세요. <break time="700"/>그런 다음 꽉 쥐고 위로 당기면서 무게를 앞으로 가져와 팔꿈치가 손목 위로 곧게 펴지고 90 도로 구부러집니다.<break time="700"/>숨을들이 마시고, 심장을 앞으로 뻗고 한 발을 위로 올린 다음, 가능하면 다른 발을 가져와 맞춥니다. 발 뒤꿈치와 엄지 발가락을 함께 가져 오세요.<break time="700"/>리바운드 리프트를 느끼기 위해 손으로 단단히 눌러 항상 약 5~10초간 호흡을 유지하세요.<break time="700"/>숨을 내쉬고 준비가되면 스쿼트 자세로 돌아오세요.<break time="700"/></prosody></speak>' > pose13.mp3

@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">플랭크 자세에서 시작합니다.<break time="700"/>코어 근육과 다리를 유지하면서 양쪽 뒤꿈치를 오른쪽으로 돌립니다.<break time="700"/>왼발을 오른쪽 위에 올려 놓습니다.<break time="700"/>다리를 모으고 발 끝까지 쭉 폅니다.<break time="700"/>오른손으로 바닥을 짚어 몸을 지탱하고 왼손을 들어올리세요.<break time="700"/>윗 쪽 손을 쳐다보거나 정면을 바라보세요.<break time="700"/>5번의 호흡을 하는 동안에 자세를 유지하세요.<break time="700"/>나오려면 왼손을 내리면서 숨을 내쉬고 발을 플랭크 위치로 되돌립니다.<break time="700"/>반복합니다.<break time="700"/></prosody></speak>' > pose54.mp3
