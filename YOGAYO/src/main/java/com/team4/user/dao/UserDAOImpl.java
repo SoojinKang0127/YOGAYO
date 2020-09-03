@@ -90,11 +90,6 @@ public class UserDAOImpl implements UserDAO {
 	public int count4week(UserVo vo) throws Exception {
 		return mybatis.selectOne("UserDao.count4week", vo);
 	}
-	@Override
-	public int tWeight() throws Exception {
-		return mybatis.selectOne("UserDao.tWeight");
-		
-	}
 
 
 	@Override
@@ -106,11 +101,6 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public List<CourseVo> selectAllCrs(UserVo vo) throws Exception {
 		return mybatis.selectList("UserDao.selectAllCrs", vo);
-
-	}
-	public int lWeight() throws Exception {
-		return mybatis.selectOne("UserDao.lWeight");
-
 	}
 
 
@@ -118,26 +108,17 @@ public class UserDAOImpl implements UserDAO {
 	public String thisday() {
 		return mybatis.selectOne("UserDao.thisday");
 	}
-	public UserVo checkDuplication(UserVo vo) throws Exception {
-		return mybatis.selectOne("UserDao.checkDuplication", vo);
-	}
 
 
 	@Override
 	public String thismonth() {
 		return mybatis.selectOne("UserDao.thismonth");
 	}
-	public int getUNum(UserVo vo) {
-		return mybatis.selectOne("UserDao.getUnum",vo);
-	}
 
 
 	@Override
 	public int thisdate() {
 		return mybatis.selectOne("UserDao.thisdate");
-	}
-	public List<UserVo> selectAllUser() throws Exception {
-		return mybatis.selectList("UserDao.selectAllUser");
 	}
 
 	

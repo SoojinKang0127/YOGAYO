@@ -116,22 +116,6 @@ input:focus {
   margin-bottom: 10px;
   border: none;
   outline: none;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  padding-left: 130px;
-  padding-bottom: 10px;
-}
-
-#profiLevel {
-  width: 300px;
-  font-size: 17px;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: none;
-  outline: none;
->>>>>>> master
   padding-left: 135px;
   padding-bottom: 10px;
 }
@@ -227,18 +211,3 @@ input:focus {
 .invaild {
   background-color: rgba(211, 211, 211, 0.516);
 }
-<<<<<<< HEAD
-=======
-
-.msgContainer{
-	display:none;
-}
-
-.emailVaildMsg {
-	display:inline-block;
-	width: 300px;
-	text-align: center;
-	color:red;
-	font-size:14px;
-}
->>>>>>> master

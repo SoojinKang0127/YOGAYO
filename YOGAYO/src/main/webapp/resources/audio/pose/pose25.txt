@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">무릎을 꿇고 매트의 긴 쪽을 향합니다. 왼쪽 다리를 옆으로 펴고 다리를 바깥쪽으로 돌려 발 뒤꿈치가 무릎과 발가락 (발이 구부러진 상태)이 위를 향하도록하여 매트 위에 있도록합니다.<break time="700"/>부드럽게 오른쪽 엉덩이를 앞으로 누르고 팔을 바닥과 평행하게 펴고 손바닥을 위로 향하게합니다. 숨을들이 쉬고 옆쪽 허리를 늘이고 숨을 내쉬고 왼쪽 몸을 왼쪽 다리로 내리고 손을 다리에 내려 놓습니다. . 오른쪽 무릎을 통해 접지하십시오. <break time="700"/>숨을들이 쉴 때 오른팔을 위로 그리고 왼쪽으로 들어 올리면서 오른쪽 엉덩이를 앞으로 누르고 갈비뼈를 편직하고 흉곽을 천장쪽으로 돌립니다. 위, 오른쪽 팔 아래 또는 앞쪽을보십시오.<break time="700"/>5-10 번 숨을 쉬세요.<break time="700"/>나오려면 윗팔을 쭉 뻗고 숨을들이 쉬면서 중앙으로 돌아 오세요.<break time="700"/>무릎을 다시 나란히 놓고 반대쪽으로 반복하십시오.<break time="700"/></prosody></speak>' > pose25.mp3

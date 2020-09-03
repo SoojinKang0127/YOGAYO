@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-@import url("style.css");
->>>>>>> master
 @import url("../set_0815/style.css");
 
 body {
@@ -98,10 +94,7 @@ header>nav_bar {
 	background-position-y: -600px;
 	display: block;
 	margin: auto;
-<<<<<<< HEAD
 	background-image: url("boat.webp");
-=======
->>>>>>> master
 }
 
 .info-wrapper {
@@ -161,16 +154,10 @@ header>nav_bar {
 	width: 60px;
 	height: 60px;
 	border-radius: 30px;
-<<<<<<< HEAD
 	background-image: url("user.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 120px;
-=======
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
->>>>>>> master
 }
 
 .user-detail {
@@ -195,11 +182,7 @@ header>nav_bar {
 	width: 400px;
 	border: 1px solid #dddddd;
 	background-color: white;
-<<<<<<< HEAD
 	box-shadow: var(- -light-shadow);
-=======
-	box-shadow: var(--light-shadow);
->>>>>>> master
 	border-radius: 10px;
 }
 
@@ -246,18 +229,10 @@ header>nav_bar {
 	position: absolute;
 	height: 70px;
 	background-color: #febe2e;
-<<<<<<< HEAD
 }
 
 @
 keyframes progress {from { width:0px;
-=======
-	
-}
-
-@keyframes progress {
-	from { width:0px;
->>>>>>> master
 	
 }
 
@@ -266,11 +241,6 @@ to {
 }
 
 }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> master
 .order-li {
 	list-style: none;
 	/* padding-left: 0; */
@@ -346,10 +316,7 @@ to {
 	left: 50%;
 	color: black;
 	font-size: 18px;
-<<<<<<< HEAD
 	z-index: 1;
-=======
->>>>>>> master
 }
 
 .list-footer {
@@ -464,29 +431,17 @@ to {
 
 .pop2-stat-hr {
 	width: 90%;
-<<<<<<< HEAD
 	margin-bottom: 50px;
-=======
-	margin-bottom: 20px;
->>>>>>> master
 }
 
 .pop2-stat {
 	/* border: 1px solid blue; */
-<<<<<<< HEAD
 	height: 170px;
-=======
-	height: 150px;
->>>>>>> master
 }
 
 .stat-1 {
 	display: flex;
 	margin: 50px;
-<<<<<<< HEAD
-=======
-	margin-top: 20px;
->>>>>>> master
 }
 
 .stat-1-status {
@@ -513,10 +468,6 @@ to {
 .stat-2 {
 	display: flex;
 	margin: 50px;
-<<<<<<< HEAD
-=======
-	margin-bottom:20px;
->>>>>>> master
 }
 
 .stat-2-status {
@@ -561,10 +512,7 @@ to {
 	margin-left: 20px;
 	margin-top: 20px;
 	border-radius: 70px;
-<<<<<<< HEAD
 	background-image: url("./user.png");
-=======
->>>>>>> master
 	background-size: 90px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -588,11 +536,6 @@ to {
 
 .pop2-main-bottom {
 	display: flex;
-<<<<<<< HEAD
-=======
-	justify-content: space-around;
-	align-items: center;
->>>>>>> master
 }
 
 .main-bottom-btn1 {
@@ -609,7 +552,6 @@ to {
 }
 
 .main-bottom-btn1:hover {
-<<<<<<< HEAD
 	background-color: white;
 	border: 1px solid black;
 	width: 150px;
@@ -620,10 +562,6 @@ to {
 	line-height: 40px;
 	color: black;
 	font-size: 15px;
-=======
-	border: 1px solid black;
-
->>>>>>> master
 }
 
 .main-bottom-btn2 {
@@ -631,11 +569,8 @@ to {
 	background-color: white;
 	width: 150px;
 	height: 40px;
-<<<<<<< HEAD
 	margin-left: 50px;
 	margin-top: 20px;
-=======
->>>>>>> master
 	border-radius: 10px;
 	line-height: 40px;
 	color: black;
@@ -644,7 +579,6 @@ to {
 
 .main-bottom-btn2:hover {
 	border: 1px solid black;
-<<<<<<< HEAD
 	background-color: white;
 	width: 150px;
 	height: 40px;
@@ -661,50 +595,16 @@ to {
 	padding:0 30px 0 30px;
 	display: flex;
 	justify-content: space-between;
-=======
-}
-
-.userImageContainer {
-	margin-top:20px;
-	height: 200px;
-	padding:0 30px 0 30px;
-	display: flex;
-	justify-content: center;
->>>>>>> master
 	align-items: center;
 }
 
 
-<<<<<<< HEAD
-=======
-.userImage {
-	width: 260px;
-	height:200px;
-	border-radius:10px;
-	box-shadow: var(--light-shadow);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	overflow:hidden;
-}
-
-
-.userImage i{
-	color: #febe2e;
-	font-size: 40px;
-}
-
->>>>>>> master
 
 .pop2-btn {
 	border: 1px solid #febe2e;
 	width: 400px;
 	height: 40px;
-<<<<<<< HEAD
 	margin-top: 20px;
-=======
-	margin-top: 30px;
->>>>>>> master
 	margin-left: 50px;
 	line-height: 40px;
 	border-radius: 10px;
@@ -712,7 +612,6 @@ to {
 }
 
 .pop2-btn:hover {
-<<<<<<< HEAD
 	border: 1px solid #febe2e;
 	background-color: #febe2e;
 	width: 400px;
@@ -722,10 +621,6 @@ to {
 	line-height: 40px;
 	border-radius: 10px;
 	color: white;
-=======
-	background-color: #febe2e;
-	color:white;
->>>>>>> master
 }
 
 #pop3 {
@@ -737,11 +632,7 @@ to {
 	left: 1200px;
 	text-align: center;
 	/* border: 1px solid #febe2e; */
-<<<<<<< HEAD
 	box-shadow: var(- -dark-shadow);
-=======
-	box-shadow: var(--dark-shadow);
->>>>>>> master
 	border-radius: 30px;
 }
 
@@ -798,7 +689,6 @@ input {
 }
 
 
-<<<<<<< HEAD
 .userImage {
 	width: 120px;
 	height:100px;
@@ -806,12 +696,6 @@ input {
 }
 
 .main-bottom-btn1 input[type="file"]{
-=======
-
-
-
-.container input[type="file"]{
->>>>>>> master
 	position: absolute;
     width: 0px;
     height: 0px;
@@ -820,26 +704,15 @@ input {
     border: 0;
 }
 
-<<<<<<< HEAD
 .main-bottom-btn1 label {
 	display: inline-block;
     padding: 10px 20px;
-=======
-.container label {
-	display: inline-block;
->>>>>>> master
     color: #999;
     vertical-align: middle;
     background-color: #fdfdfd;
     cursor: pointer;
-<<<<<<< HEAD
     border: 1px solid #ebebeb;
     border-radius: 5px;
-=======
-    margin-left:0;
-    margin-top:0;
-
->>>>>>> master
 }
 
 .hiding{
@@ -852,16 +725,3 @@ input {
 	
 	
 }
-<<<<<<< HEAD
-=======
-
-.far.fa-heart{
-color:  #fb3958;
-}
-
-.fas.fa-heart{
-	color:  #fb3958;
-	}
-
-
->>>>>>> master

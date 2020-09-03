@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">타다사나(산 자세)에서 왼쪽 다리로 크게 뒤로 뻗고 발가락이 약간 안쪽을 향하도록합니다.<break time="700"/>발을 아래로 누르고 다리를 위로 펴십시오.<break time="700"/>숨을 들이 쉴 때 팔을 바닥과 평행하게 들어 올리고 어깨는 아래로 내리고 목은 길게 유지하십시오.<break time="700"/>숨을 내쉴 때 오른쪽 무릎을 구부리고 무릎을 발목 위에 두십시오. 필요한 경우 발과 다리의 위치를 ​​약간 조정하여 자세의 안정성을 찾으십시오.<break time="700"/>오른쪽 바닥에 대퇴부 끝을 대고 엄지발가락을 눌러 그 동작의 균형을 잡으세요.<break time="700"/>왼쪽 허벅지 윗면 뒷쪽을 누르고, 당신의 왼쪽 발 바깥쪽을 바닥에 접지시킵니다.<break time="700"/>하복부를 위로 올리고 척추를 늘이십시오. 쇄골과 손가락 끝을 통해 쭉 뻗어주세요. 턱을 약간 안 뒤로 가져와 목과 척추를 정렬하십시오. 오른손을 살펴보십시오.<break time="700"/>이 자세에서 5 번 숨을 쉬십시오. 자세에서 나오려면 발을 누르고 숨을들이 쉴 때 다리를 곧게 펴십시오. 발의 방향을 바꾸고 반대쪽에서도 반복하십시오.<break time="700"/></prosody></speak>' > pose65.mp3

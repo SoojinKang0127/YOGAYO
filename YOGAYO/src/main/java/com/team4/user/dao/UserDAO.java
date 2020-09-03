@@ -26,11 +26,6 @@ public interface UserDAO {
 	public String thismonth();
 	public int thisdate();
 	
-
-	public int tWeight() throws Exception;
-	public int lWeight() throws Exception;
 	public List<String> selectAllId() throws Exception;
-	public UserVo checkDuplication(UserVo vo) throws Exception;
-	public int getUNum(UserVo vo);
-	public List<UserVo> selectAllUser() throws Exception;
+
 }

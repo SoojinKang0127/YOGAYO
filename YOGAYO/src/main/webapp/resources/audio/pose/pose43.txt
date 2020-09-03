@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">Supported Shoulderstand / Salamba Sarvangasana에서 시작하여 엉덩이에서 경첩으로 바닥까지 발을 내립니다.<break time="700"/>또는 튼튼하게 접힌 담요 위에 등을 대고 등을 대고 머리를 매트 위에 올려 놓고 담요가 목의 움푹 패인 곳에서 끝나도록 눕습니다. 숨을 내쉴 때 아랫배를 척추로 당기고 등을 바닥에 붙이세요. <break time="700"/>팔을 바닥에 대고 숨을들이 마시고 다리를 머리 위로 바닥을 향해 들어 올리십시오. 뒤꿈치를 통해 펴세요.<break time="700"/>어깨를 서로를 향해 걷고, 턱을 약간 위로 유지하고 손을 허리에 대고지지를 받으세요.<break time="700"/>팔, 어깨, 발이 바닥에 있으면 눌러주세요.<break time="700"/>척추는 길게 유지하고 꼬리뼈는 천장까지, 엉덩이는 어깨 위로 유지하세요.<break time="700"/>5-10 번 숨을 쉬세요.<break time="700"/>포즈에서 나오려면 손을 떼고 팔을 옆 바닥에 다시 대고 손바닥을 아래로 내리고 숨을 내쉬면서 포즈에서 나오세요.<break time="700"/></prosody></speak>' > pose43.mp3

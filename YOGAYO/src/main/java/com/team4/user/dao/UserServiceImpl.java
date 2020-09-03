@@ -1,7 +1,8 @@
-package com.team4.user.dao;
+	package com.team4.user.dao;
 
 import java.util.List;
 
+import com.team4.vo.CourseVo;
 import com.team4.vo.FeedVo;
 import com.team4.vo.UserVo;
 
@@ -98,39 +99,6 @@ public class UserServiceImpl implements UserService {
 	public String thismonth() throws Exception {
 		return dao.thismonth();
 	}
-	public int tWeight() throws Exception {	
-		
-		return dao.tWeight();
-	}
-
-	@Override
-	public int lWeight() throws Exception {
-		
-		System.out.println(dao.lWeight());
-		
-		return dao.lWeight();
-	}
-
-	@Override
-	public UserVo checkDuplication(UserVo vo) throws Exception {
-		
-		
-		return dao.checkDuplication(vo);
-	}
-
-	@Override
-	public int getUNum(UserVo vo) {
-		return dao.getUNum(vo);
-	}
-
-	@Override
-	public List<UserVo> selectAllUser() throws Exception {
-		return dao.selectAllUser();
-	}
-
-
-	
-	
 
 
 

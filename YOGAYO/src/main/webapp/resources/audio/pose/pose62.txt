@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">Baddha Konasana / Bound Angle 포즈로 앉아 시작하십시오.<break time="700"/>첫 두 손가락을 엄지 발가락에 감습니다.<break time="700"/>숨을 내쉬고 뒤로 젖히고 앉은 뼈에 균형을 잡습니다.<break time="700"/>다리를들이 마시고 곧게 펴십시오.<break time="700"/>다리를 활동적으로 유지하고 슬개골을 위로 올리십시오.<break time="700"/>가슴을 들어 올리고 벌리고, 어깨를 아래로 내리고 척추를 펴십시오.<break time="700"/></prosody></speak>' > pose62.mp3

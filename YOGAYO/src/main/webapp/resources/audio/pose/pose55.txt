@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">앞으로 눕고 어깨를 팔꿈치 위로 올립니다.<break time="700"/>어깨를 쭉 펴 가슴 뼈가 들리는 느낌이 들게합니다.<break time="700"/>허리와 복부쪽으로 호흡을 넘기세요.<break time="700"/>포즈에서 나오려면 팔꿈치를 옆으로 가져오고 손에 이마를 갖다 댑니다.<break time="700"/></prosody></speak>' > pose55.mp3

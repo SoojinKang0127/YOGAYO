@@ -5,7 +5,6 @@
 <mapper namespace="CourseDao">
 
 	<insert id="makeCourse" parameterType="CourseVo">
-<<<<<<< HEAD
 	INSERT INTO COURSE(TITLE,MNUM,DSCRT,MATERIAL,IMGPATH,SEQ1,SEQ2,SEQ3,SEQ4,SEQ5,SEQ6,SEQ7,SEQ8)
 	values(#{title},#{uNum},#{dscrt},#{material},#{imgPath},#{seq1},#{seq2},#{seq3},#{seq4},#{seq5},#{seq6},#{seq7},#{seq8});
 	</insert>
@@ -17,152 +16,9 @@
 	
 	
 	<select id="selectOne" resultType="CourseVo">
-=======
-		INSERT INTO
-		COURSE(TITLE,UNUM,DSCRT,MATERIAL,IMGPATH,SEQ1,SEQ2,SEQ3,SEQ4,SEQ5,SEQ6,SEQ7,SEQ8)
-		values(#{title},#{uNum},#{dscrt},#{material},#{imgPath},#{seq1},#{seq2},#{seq3},#{seq4},#{seq5},#{seq6},#{seq7},#{seq8})
-	</insert>
-
-	<insert id="addReview" parameterType="CommentVo">
-		INSERT INTO
-		COMMENT(UNUM,CRSNUM,CONTEXT,PARENT)
-		VALUES(#{uNum},#{crsNum},#{context},#{parent})
-	</insert>
-
-	<select id="reviewAll" parameterType="CommentVo"
-		resultType="CommentVo">
-		SELECT * FROM COMMENT WHERE PARENT IS NOT NULL AND
-		CRSNUM=#{crsNum}
-	</select>
-
-	<insert id="addComment" parameterType="CommentVo">
-		INSERT INTO
-		COMMENT(UNUM,CRSNUM,RATE,CONTEXT)
-		VALUES(#{uNum},#{crsNum},#{rate},#{context})
-	</insert>
-
-	<select id="commentAll" parameterType="CommentVo"
-		resultType="CommentVo">
-		SELECT * FROM COMMENT WHERE CRSNUM=#{crsNum} AND PARENT IS
-		NULL order by CMTNUM desc LIMIT 6
-	</select>
-
-	<select id="commentCount" parameterType="CommentVo"
-		resultType="int">
-		SELECT COUNT(*) FROM COMMENT WHERE CRSNUM=#{crsNum} AND PARENT IS NULL;
-	</select>
-
-	<select id="commentAvg" parameterType="CommentVo"
-		resultType="double">
-		SELECT AVG(RATE) FROM COMMENT WHERE CRSNUM=#{crsNum} AND PARENT IS NULL
-	</select>
-
-	<select id="selectAll" resultType="CourseVo">
-		<!-- 테이블명 대소문자 구분 -->
-		SELECT * FROM COURSE ORDER BY CRSNUM DESC
-	</select>
-
-	<select id="selectOne" parameterType="CourseVo" resultType="CourseVo">
->>>>>>> master
 		<!-- 테이블명 대소문자 구분 -->
 		SELECT * FROM COURSE WHERE CRSNUM=#{crsNum}
 	</select>
 	
 	
-<<<<<<< HEAD
-=======
-	<select id="getLastCnum" resultType="Integer">
-	 	SELECT MAX(CRSNUM) FROM COURSE
-	</select>
-	
-
-	<select id="coursePoses" resultType="CoursePosesVo"
-		parameterType="CourseVo">
-		select
-		(select P.IMG_PATH from POSE P, COURSE C
-		where
-		P.PNUM=C.SEQ1 and C.CRSNUM=#{crsNum}) AS IMG1,
-		(select P.TITLE from
-		POSE P, COURSE C
-		where
-		P.PNUM=C.SEQ1 and C.CRSNUM=#{crsNum}) AS POSE1,
-		(select P.TIME from
-		POSE P, COURSE C
-		where P.PNUM=C.SEQ1 and
-		C.CRSNUM=#{crsNum}) AS TIME1,
-		(select P.IMG_PATH from POSE P, COURSE C
-		where P.PNUM=C.SEQ2 and C.CRSNUM=#{crsNum}) AS IMG2,
-		(select P.TITLE
-		from POSE P, COURSE C
-		where P.PNUM=C.SEQ2 and
-		C.CRSNUM=#{crsNum}) AS
-		POSE2,
-		(select P.TIME
-		from POSE P, COURSE C
-		where P.PNUM=C.SEQ2 and
-		C.CRSNUM=#{crsNum}) AS
-		TIME2,
-		(select P.IMG_PATH from POSE P, COURSE C
-		where P.PNUM=C.SEQ3 and C.CRSNUM=#{crsNum}) AS IMG3,
-		(select P.TITLE
-		from POSE P, COURSE C
-		where P.PNUM=C.SEQ3 and
-		C.CRSNUM=#{crsNum}) AS
-		POSE3,
-		(select P.TIME from POSE P, COURSE C
-		where
-		P.PNUM=C.SEQ3 and
-		C.CRSNUM=#{crsNum}) AS TIME3,
-		(select P.TITLE from
-		POSE P, COURSE C
-		where P.PNUM=C.SEQ4 and C.CRSNUM=#{crsNum}) AS POSE4,
-		(select P.TIME
-		from POSE P, COURSE C
-		where P.PNUM=C.SEQ4 and
-		C.CRSNUM=#{crsNum}) AS
-		TIME4,
-		(select P.TITLE from POSE P, COURSE C
-		where P.PNUM=C.SEQ5 and
-		C.CRSNUM=#{crsNum}) AS POSE5,
-		(select P.TIME
-		from POSE P, COURSE C
-		where
-		P.PNUM=C.SEQ5 and C.CRSNUM=#{crsNum}) AS
-		TIME5,
-		(select P.TITLE
-		from POSE
-		P, COURSE C
-		where P.PNUM=C.SEQ6 and
-		C.CRSNUM=#{crsNum}) AS
-		POSE6,
-		(select
-		P.TIME from POSE P, COURSE C
-		where
-		P.PNUM=C.SEQ6 and
-		C.CRSNUM=#{crsNum})
-		AS TIME6,
-		(select P.TITLE from
-		POSE P, COURSE C
-		where P.PNUM=C.SEQ7 and
-		C.CRSNUM=#{crsNum}) AS POSE7,
-		(select P.TIME
-		from POSE P, COURSE C
-		where
-		P.PNUM=C.SEQ7 and
-		C.CRSNUM=#{crsNum}) AS
-		TIME7,
-		(select P.TITLE from POSE
-		P, COURSE C
-		where P.PNUM=C.SEQ8 and
-		C.CRSNUM=#{crsNum}) AS POSE8,
-		(select P.TIME
-		from POSE P, COURSE C
-		where P.PNUM=C.SEQ8 and
-		C.CRSNUM=#{crsNum}) AS
-		TIME8
-		from dual
-	</select>
-
-
->>>>>>> master
 </mapper>

@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<<<<<<< HEAD
 	
-=======
->>>>>>> master
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 
@@ -23,28 +20,6 @@
 
 
 <body>
-<<<<<<< HEAD
-=======
-<script>
-<%Object[] keyword = (Object[]) request.getAttribute("keyword");
-			Integer length = (Integer) request.getAttribute("length");%>
-	var numArr=new Array();
-$(document).ready(function(){
-		<%for (int i = 0; i < length; i++) {%>
-		numArr.push("<%=keyword[i]%>")
-<%}%>
-	let randomNums = [];
-				while (numArr.length > 0) { // 추출을 원하는 갯수
-					let target = numArr.splice(Math.floor(Math.random()* numArr.length), 1)[0];
-					randomNums.push(target);
-				}
-	for(var i=0; i<23;i++){			
-	$(".interests").append('<span class="interest">'+randomNums[i]+'</span>')		
-	}
-			})
-</script>
-	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/sign_up_interests.js"></script>
->>>>>>> master
 	<main>
 		<section id="step_1">
 			<header>
@@ -57,7 +32,6 @@ $(document).ready(function(){
 				있습니다.</span> <span class="step_1">1. 회원가입을 위한 정보를 입력해주세요.</span>
 			<div class="sign-up-form">
 				<form action="sign-up" method="POST">
-<<<<<<< HEAD
 					<input type="hidden" name="interest_1" id="interest_1" value="false">
 						
 						 <input type="hidden" name="interest_2"
@@ -89,20 +63,12 @@ $(document).ready(function(){
 						value="false"> <input type="hidden" name="interest_22"
 						id="interest_22" value="false"> <input type="hidden"
 						name="interest_23" id="interest_23" value="false"> 
-=======
-					<input type="hidden" name="keyword" id="keyword" value="false">
-				
->>>>>>> master
 						
 						
 						
 						<label for="">이메일</label>
 						<input type="text" name="id" id="email" placeholder="johndoe@example.com" /> <br /> 
-<<<<<<< HEAD
 						
-=======
-						<div class="msgContainer"><label for=""></label><span class="emailVaildMsg" >이미 사용중이거나 올바르지 않은 이메일입니다.</span><br /></div>
->>>>>>> master
 						<label for="">이름</label>
 						<input type="text" name="name" id="name" placeholder="3자 이상" /><br /> 
 						
@@ -111,7 +77,6 @@ $(document).ready(function(){
 						<option value="M">남성</option>
 						<option value="F">여성</option>
 					</select> <br /> 
-<<<<<<< HEAD
 					<label for="">비밀번호</label><input type="password" name="pwd" id="pwd1" placeholder="7자 이상" /><br /> 
 					<label for="">비밀번호 확인</label><input type="password" name="password2" id="pwd2" placeholder="7자 이상" />
 					<div class="alert-pwd alert"></div>
@@ -207,57 +172,6 @@ $(document).ready(function(){
 		function goToStep2() {
 
 			if (emailVaildCheck() && nameVaildCheck() && birthdayVaildCheck()
-=======
-					<label for="">숙련도</label> 
-				 <select name="profiLevel" id="profiLevel">
-					<option value="5">상</option>
-					<option value="3" selected>중</option>
-					<option value="1">하</option>
-				</select> <br /> <label for="">비밀번호</label><input type="password" name="pwd"
-					id="pwd1" placeholder="7자 이상" /><br /> <label for="">비밀번호
-					확인</label><input type="password" name="password2" id="pwd2"
-					placeholder="7자 이상" />
-				<div class="alert-pwd alert"></div>
-				<br />
-		</div>
-		<div class="down-btn" onclick="goToStep2()">
-			<i class="fas fa-arrow-down"></i>
-		</div>
-	</section>
-	<section id="step_2">
-		<div class="up-btn" onclick="goToStep1()">
-			<i class="fas fa-arrow-up"></i>
-		</div>
-		<span class="step_1">2. 우리에게 당신의 관심사를 모두 알려주세요.</span> <span
-			class="step_1">YOGAYO만의 맞춤 코스를 추천해드리겠습니다.</span>
-		<div class="interests">
-		
-			
-		</div>
-
-
-		<div id="signUpBtn">
-			<input type="submit" value="가입하기" disabled="disabled" id="submitBtn" onclick="alert('회원가입되었습니다.')" 
-				class="submitBtn">
-		</div>
-		</form>
-
-	</section>
-	</main>
-	<script language=JavaScript
-		src="${pageContext.request.contextPath}/resources/js/sign_up_vaild_check.js"></script>
-	<script>
-		function goToStep2() {
-			
-			console.log(emailDuplCheck())
-			console.log(nameVaildCheck())
-			console.log(birthdayVaildCheck())
-			console.log(password1VaildCheck())
-			console.log(password2VaildCheck())
-			
-			
-			if (emailDuplCheck() && nameVaildCheck() && birthdayVaildCheck()
->>>>>>> master
 					&& password1VaildCheck() && password2VaildCheck()) {
 				$('.down-btn i').css({
 					color : "green",
@@ -267,28 +181,13 @@ $(document).ready(function(){
 					top : 1080,
 					behavior : "smooth"
 				});
-<<<<<<< HEAD
-=======
-				$("#profiLevel").css({
-					color : "green",
-					"border-bottom" : "2px solid green",
-				});
->>>>>>> master
 			} else {
 				$('.down-btn i').css({
 					color : "red",
 					"border" : "1px solid red"
 				});
-<<<<<<< HEAD
 			}
 
-=======
-				$("#profiLevel").css({
-					color : "green",
-					"border-bottom" : "2px solid green",
-				});
-			}
->>>>>>> master
 		}
 
 		function goToStep1() {
@@ -297,7 +196,6 @@ $(document).ready(function(){
 				behavior : "smooth"
 			});
 		}
-<<<<<<< HEAD
 
 		function infoAllVaildCheck() {
 			if (emailVaildCheck() && nameVaildCheck() && birthdayVaildCheck()
@@ -337,8 +235,6 @@ $(document).ready(function(){
 		
 		
 		;
-=======
->>>>>>> master
 	</script>
 </body>
 </html>

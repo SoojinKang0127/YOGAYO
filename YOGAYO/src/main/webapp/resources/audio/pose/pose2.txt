@@ -1,4 +1,0 @@
-curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
--H "Content-Type: application/xml" \
--H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
--d '<speak><prosody rate="slow">앉은 자세에서 발바닥을 골반 가까이로 모아 무릎이 옆으로 빠질 수 있도록 합니다.<break time="700"/>앉은 뼈를 붙이고 척추를 길게하세요<break time="700"/>발 바깥 쪽을 잡고 발바닥을 서로를 향해 누르세요.<break time="700"/>가능하다면, 당신의 척추를 길게 유지하고 당신의 쇄골이 벌어지는 것을 유지하면서 앞으로 접으세요<break time="700"/>5 ~ 10 회 호흡 유지하세요<break time="700"/>포즈를 끝내려면 다시 똑바로 앉아 무릎을 들어 다리를 곧게 펴세요<break time="700"/></prosody></speak>' > pose2.mp3
