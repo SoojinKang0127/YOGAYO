@@ -169,10 +169,24 @@ main {
 	margin-left:10px;
 }
 
+<<<<<<< HEAD
+.course_container a{
+	color:black;
+}
+
+=======
+>>>>>>> master
 .course_container .course_star_rating {
 	font-size: 11pt;
 }
 
+<<<<<<< HEAD
+.course_star_rating i{
+	color:var(--theme-color);
+}
+
+=======
+>>>>>>> master
 .footer {
 	width: 100%;
 	height: 70px;

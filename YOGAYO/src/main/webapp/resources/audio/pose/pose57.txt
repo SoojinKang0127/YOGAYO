@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">타다 사나 / 산 자세로 시작합니다.<break time="700"/>팔을 들면서 숨을들이 마 십니다.<break time="700"/>숨을 내쉴 때 다리를 모으고, 배를 앞으로 구부리면서 엉덩이를 들어올립니다.<break time="700"/>손을 바닥, 발 앞 또는 발 옆에 놓거나 발목이나 종아리 뒤쪽을 붙잡으세요.<break time="700"/>뒤꿈치를 바닥으로 누를 때 엉덩이를 뒤꿈치 위로 유지하십시오. 안쪽 허벅지 상단을 약간 안으로 굴립니다.<break time="700"/>목을 편안하게 유지하면서 머리를 숙이십시오.<break time="700"/>숨을들이 마시면서 허리를 늘이십시오. 숨을 내쉴 때 자세를 더 부드럽게 하세요.<break time="700"/></prosody></speak>' > pose57.mp3

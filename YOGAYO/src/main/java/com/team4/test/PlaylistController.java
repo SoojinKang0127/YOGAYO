@@ -49,9 +49,22 @@ public class PlaylistController {
 	
 	
 	@RequestMapping(value = "/course_playlist", method = RequestMethod.GET)
-	public String course_playlist(Model model,
-			HttpServletResponse res
-			) throws IOException {
+	public String course_playlist(Model model
+			) {
+		
+		PoseService dao = new PoseServiceImpl();
+		List<PoseVo> list = null;
+		
+		try {
+			System.out.println(list.toString());
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		
+		
+	
 		
 		
 		
@@ -87,7 +100,7 @@ public class PlaylistController {
 		for(PoseVo vo:list) {
 			JSONObject obj = new JSONObject();
 			obj.put("pnum", vo.getpNum());
-			obj.put("imgPath", vo.getImgPath());
+			obj.put("imgPath", vo.getImg_Path());
 			obj.put("title", vo.getTitle());
 			obj.put("audioPath", vo.getAudioPath());
 			obj.put("time", vo.getTime());

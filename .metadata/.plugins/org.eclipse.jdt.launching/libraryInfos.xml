@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
+<<<<<<< HEAD
+=======
 <libraryInfo home="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home" version="1.8.0_262">
 <bootpath>
 <entry path="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/resources.jar"/>
@@ -23,6 +25,7 @@
 <entry path="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/endorsed"/>
 </endorsedDirs>
 </libraryInfo>
+>>>>>>> master
 <libraryInfo home="/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home" version="1.8.0_261">
 <bootpath>
 <entry path="/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home/jre/lib/resources.jar"/>
@@ -35,7 +38,11 @@
 <entry path="/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home/jre/classes"/>
 </bootpath>
 <extensionDirs>
+<<<<<<< HEAD
+<entry path="/Users/soo/Library/Java/Extensions"/>
+=======
 <entry path="/Users/paso/Library/Java/Extensions"/>
+>>>>>>> master
 <entry path="/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home/jre/lib/ext"/>
 <entry path="/Library/Java/Extensions"/>
 <entry path="/Network/Library/Java/Extensions"/>

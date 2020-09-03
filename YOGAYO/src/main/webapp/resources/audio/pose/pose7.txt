@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">무릎을 구부리면서 숨을 내쉬고 의자에 앉은 것처럼 엉덩이를 뒤로 젖히세요. 허리를 지지하기 위해 하복부를 안팎으로 당기세요<break time="700"/>발가락을 볼 수 있도록 무릎이 아닌 엉덩이를 뒤로 뺍니다.<break time="700"/>팔을 귀 주위로 들어 올리고 어깨를 부드럽게들어 올립니다.<break time="700"/>계속 더 높이 뻗고, 낮게 앉아 5 ~ 10 회 호흡합니다<break time="700"/>포즈를 그만하려면 숨을 내쉬세요. 발을 아래로 눌러 다리를 곧게 펴고 팔을 옆으로 내립니다.<break time="700"/></prosody></speak>' > pose7.mp3

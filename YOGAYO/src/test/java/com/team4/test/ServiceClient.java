@@ -28,9 +28,17 @@ import com.team4.user.dao.UserDAOImpl;
 import com.team4.user.dao.UserServiceImpl;
 import com.team4.user.dao.UserDAO;
 import com.team4.user.dao.UserDAOImpl;
+<<<<<<< HEAD
+import com.team4.dao.admin.AdminServiceImpl;
 import com.team4.dao.course.CourseDAO;
 import com.team4.dao.course.CourseService;
 import com.team4.dao.course.CourseServiceImpl;
+import com.team4.vo.AdminVo;
+=======
+import com.team4.dao.course.CourseDAO;
+import com.team4.dao.course.CourseService;
+import com.team4.dao.course.CourseServiceImpl;
+>>>>>>> master
 import com.team4.vo.CourseVo;
 import com.team4.dao.feed.FeedServiceImpl;
 import com.team4.vo.FeedVo;
@@ -43,6 +51,14 @@ import com.team4.vo.UserVo;
 //import com.team4.vo.Vo;
 
 public class ServiceClient {
+<<<<<<< HEAD
+	
+	public static void main(String[] args) throws Exception {
+		
+		AdminServiceImpl service = new AdminServiceImpl();
+		
+		List<AdminVo> list = service.getAllComment();
+=======
 		
 	public static void main(String[] args) {
 		PoseServiceImpl service= new PoseServiceImpl();
@@ -171,6 +187,7 @@ public class ServiceClient {
 		 * System.out.println(list.getTitle()); } catch (Exception e) { // TODO
 		 * Auto-generated catch block e.printStackTrace(); }
 		 */
+>>>>>>> master
 		
 	
 		try {
@@ -190,6 +207,18 @@ public class ServiceClient {
 			
 
 		
+<<<<<<< HEAD
+		
+		
+		
+		service.commentCount(cv);
+		
+		System.out.println(service.commentCount(cv));
+	}
+	
+}
+
+=======
 //		List<String> list = null;
 //		
 //		try {
@@ -247,3 +276,4 @@ public class ServiceClient {
 	}
 
 }
+>>>>>>> master

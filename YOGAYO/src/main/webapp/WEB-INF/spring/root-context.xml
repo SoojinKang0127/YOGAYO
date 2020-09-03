@@ -18,6 +18,8 @@
 	</bean>
 	-->
 
+<<<<<<< HEAD
+=======
 
 	<!-- Controller 등록 -->
 
@@ -25,6 +27,7 @@
 
 
 
+>>>>>>> master
 	<!-- datasource 등록 -->
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
