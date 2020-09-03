@@ -37,6 +37,7 @@ public class CourseDAOImpl implements CourseDAO {
 	@Override
 	public int getLastCnum() throws Exception {
 		return mybatis.selectOne("CourseDao.getLastCnum");
+	}
 	public CoursePosesVo coursePoses(CourseVo vo) throws Exception {
 		return mybatis.selectOne("CourseDao.coursePoses",vo);
 	}
