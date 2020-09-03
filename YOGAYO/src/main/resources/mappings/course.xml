@@ -6,7 +6,7 @@
 
 	<insert id="makeCourse" parameterType="CourseVo">
 		INSERT INTO
-		COURSE(TITLE,MNUM,DSCRT,MATERIAL,IMGPATH,SEQ1,SEQ2,SEQ3,SEQ4,SEQ5,SEQ6,SEQ7,SEQ8)
+		COURSE(TITLE,UNUM,DSCRT,MATERIAL,IMGPATH,SEQ1,SEQ2,SEQ3,SEQ4,SEQ5,SEQ6,SEQ7,SEQ8)
 		values(#{title},#{uNum},#{dscrt},#{material},#{imgPath},#{seq1},#{seq2},#{seq3},#{seq4},#{seq5},#{seq6},#{seq7},#{seq8});
 	</insert>
 
@@ -19,7 +19,7 @@
 		SELECT * FROM COURSE ORDER BY CRSNUM DESC
 	</select>
 
-	<select id="selectOne" resultType="CourseVo">
+	<select id="selectOne" parameterType="CourseVo" resultType="CourseVo">
 		<!-- 테이블명 대소문자 구분 -->
 		SELECT * FROM COURSE WHERE CRSNUM=#{crsNum}
 	</select>
