@@ -2661,6 +2661,7 @@ java.net.UnknownHostException: spring.io: nodename nor servname provided, or not
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2020-09-02 11:58:27.487
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+<<<<<<< HEAD
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2020-09-02 12:23:39.631
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
@@ -2700,3 +2701,5 @@ org.eclipse.debug.core.DebugException: Terminate failed
 	at java.lang.Thread.run(Thread.java:748)
 !SUBENTRY 1 org.eclipse.debug.core 4 5010 2020-09-02 18:28:30.956
 !MESSAGE Terminate failed
+=======
+>>>>>>> parent of 2f24da9... commit
