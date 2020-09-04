@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.team4.login.auth.SNS&apos; to &apos;SnsValue&apos;&#x0A;- Original project: &apos;YOGAYO&apos;&#x0A;- Original element: &apos;com.team4.login.auth.SNS&apos;&#x0A;- Renamed element: &apos;com.team4.login.auth.SnsValue&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SNS&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.team4.login.auth{SNS.java[SNS" matchStrategy="1" name="SnsValue" qualified="false" references="true" similarDeclarations="false" stamp="1598839029260" textual="false" version="1.0"/>
+</session>

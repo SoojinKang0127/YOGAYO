@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">단다 사나에서 시작합니다. 오른쪽 무릎을 구부리고 엉덩이에서 편안한 거리를두고 발을 매트 위에 평평하게 놓습니다.<break time="700"/>앉아있는 두 뼈를 모두 접지하고 척추를 곧게 펴세요.<break time="700"/>지원을 받으려면 오른손이나 손가락 끝을 뒤에 둡니다.<break time="700"/>숨을들이 쉴 때 왼팔을 들어 올립니다. 숨을 내쉬고 윗부분을 오른쪽으로 비트세요.<break time="700"/>왼쪽 팔을 오른쪽 다리에 대고 왼쪽 위쪽 팔을 바깥 쪽 오른쪽 무릎에 대고 누르세요. 왼쪽 팔꿈치를 구부리고 손가락 끝이 천장을 향하도록하고 그 손을 계속 당기는 느낌으로 뻗어주세요.<break time="700"/>흡입 할 때마다 앉아있는 뼈를 바닥에 대고 척추를 길게하십시오.<break time="700"/>숨을 내쉴 때마다 오른쪽으로 조금 더 비틀 수 있는지 확인하세요. 부드럽게하세요.<break time="700"/>뻗은 다리를 활동적으로 유지하세요.<break time="700"/>심호흡을 5번 하세요.<break time="700"/>포즈를 풀 때는 숨을들이 마시면서 시선을 앞으로 가져오고, 숨을 내쉴 때 팔을 떼고 양 다리를 곧게 펴세요.<break time="700"/>반대쪽을 하기 전에 잠시 멈추거나 빈야사를 가지세요.<break time="700"/></prosody></speak>' > pose45.mp3

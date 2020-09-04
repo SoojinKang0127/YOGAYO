@@ -1,0 +1,16 @@
+package com.team4.dao.admin;
+
+import com.team4.vo.AdminVo;
+
+public class AdminServiceImpl implements AdminService {
+
+	AdminDAOImpl dao = new AdminDAOImpl();
+	
+	
+	@Override
+	public AdminVo getAllComment() throws Exception {
+		return dao.getAllComment();
+	}
+
+	 
+}

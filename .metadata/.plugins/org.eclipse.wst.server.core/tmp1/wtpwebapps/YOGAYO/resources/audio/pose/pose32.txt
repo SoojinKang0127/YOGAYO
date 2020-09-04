@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">다리를 쭉 펴고 앉으세요. (Staff Pose / Dandasana).<break time="700"/>오른쪽 무릎을 구부리고 오른쪽 발을 왼쪽 허벅지 안쪽에 대고 무릎을 아래로 이완합니다.<break time="700"/>숨을들이 쉴 때 왼발을 구부리고 허벅지 위쪽을 아래로 누르고 척추를 길게하고 팔을 머리 양쪽으로 들어 올립니다.<break time="700"/>왼쪽 다리를 향하도록 상체를 약간 회전 한 다음 숨을 내쉴 때 엉덩이에서 앞으로 접습니다.<break time="700"/>척추를 길게 유지하고 가슴을 벌리고 어깨를 이완하십시오.<break time="700"/>손을 내리고, 왼쪽 다리를 틀거나, 발목이나 발을 잡으십시오.<break time="700"/>5-10 번 숨을 쉬세요.<break time="700"/>포즈에서 나올 때 숨을들이 마시십시오.<break time="700"/></prosody></speak>' > pose32.mp3

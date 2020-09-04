@@ -1,0 +1,210 @@
+@import url("reset.css");
+
+body {
+  width: 100vw;
+  height: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-wrapper {
+  width: 150px;
+  height: 150px;
+  padding: 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box-div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(0, 0, 0);
+  transition: all 0.3s linear;
+  box-shadow: var(--light-shadow);
+  transform: perspective(400px) rotateX(80deg);
+}
+
+.logo-wrapper:hover .box-div {
+  transform: none;
+}
+
+.logo-wrapper span {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  top: 46px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out 0s;
+  display: block;
+}
+
+.logo-wrapper:hover span {
+  opacity: 0;
+  top: 46px;
+}
+
+.login_title {
+  margin-top: 100px;
+  font-size: 400px;
+  font-weight: 800;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  -webkit-text-stroke-width: 2px;
+  line-height: 250px;
+  margin-bottom: 100px;
+  transition: all 0.6s ease-in-out;
+}
+
+.login_title:hover {
+  line-height: 180px;
+}
+
+.login_form {
+  width: 500px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login_form input[type="text"],
+.login_form input[type="password"] {
+  text-align: center;
+  width: 400px;
+  height: 50px;
+  font-size: 23px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+input:focus {
+  outline: none;
+}
+.login_form input[type="submit"] {
+  width: 400px;
+  height: 50px;
+  margin-top: 30px;
+  font-size: 23px;
+  border: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  background-color: white;
+}
+
+.menu_list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.menu_list li {
+  font-weight: 300;
+  font-size: 20px;
+  border-top: 0.5px dotted black;
+  border-left: 0.5px dotted black;
+  border-bottom: 0.5px dotted black;
+  padding: 30px 50px 30px 50px;
+  transition: all 0.2s ease-in-out;
+}
+.menu_list li:nth-last-child(1) {
+  border-right: 0.5px dotted black;
+}
+
+.menu_list li:hover {
+  background-color: black;
+  color: white;
+}
+
+/*여기서 부터 */
+main {
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  padding-top: 300px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.list_container{
+	
+	
+}
+
+.user_avatar img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.member_list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 75px;
+}
+
+.member_list:hover {
+  background-color: rgba(244, 244, 252, 0.664);
+}
+.member_list div {
+  border-bottom: 1px solid black;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+}
+
+.idx {
+  width: 70px;
+}
+
+.user_avatar {
+  width: 150px;
+}
+.user_number {
+  width: 120px;
+}
+.user_id {
+  width: 235px;
+}
+
+.user_name {
+  width: 125px;
+}
+.user_birthday {
+  width: 160px;
+}
+.user_gender {
+  width: 110px;
+}
+.user_profi {
+  width: 100px;
+}
+
+.user_feed {
+  width: 100px;
+}
+
+.user_comment {
+  width: 100px;
+}
+.user_regdate{
+	width: 100px;
+}

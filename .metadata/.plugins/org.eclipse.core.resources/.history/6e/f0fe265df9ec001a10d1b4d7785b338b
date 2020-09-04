@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="AdminDAO">
+
+	<select id="getAllComment" resultType="AdminVo">
+		INSERT INTO
+		FEED(UNUM, CRSNUM, SLEVEL, DLEVEL, CONTEXT, UIMG1, WEIGHT)
+		VALUES(#{uNum},#{crsNum},#{sLevel},#{dLevel},#{context},#{uImg1}, #{weight});
+	</select>
+	
+
+
+</mapper>

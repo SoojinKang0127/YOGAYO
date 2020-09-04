@@ -1,0 +1,8 @@
+package com.team4.dao.admin;
+
+import com.team4.vo.AdminVo;
+
+public interface AdminDAO {
+	public AdminVo getAllComment() throws Exception;
+
+}

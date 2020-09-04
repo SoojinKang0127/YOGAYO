@@ -1,0 +1,23 @@
+package com.team4.dao.admin;
+
+import org.apache.ibatis.session.SqlSession;
+
+import com.team4.util.SqlSessionFactoryBean;
+import com.team4.vo.AdminVo;
+
+public class AdminDAOImpl implements AdminDAO{
+	
+	
+	private SqlSession mybatis;
+	
+	
+	public AdminDAOImpl() {
+		mybatis = SqlSessionFactoryBean.getSqlSessionInstance();
+	}
+
+	@Override
+	public AdminVo getAllComment() throws Exception {
+		return null;
+	}
+
+}

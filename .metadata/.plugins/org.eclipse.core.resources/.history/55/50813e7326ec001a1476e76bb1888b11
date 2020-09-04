@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="UserDao">
+
+	<select id="login" resultType="UserVo">
+		<!-- 테이블명 대소문자 구분 -->
+		SELECT * FROM USER WHERE ID=#{id} AND PWD=#{pwd}
+	</select>
+
+
+	<insert id="signup" parameterType="UserVo">
+		INSERT INTO
+		USER(ID, PWD, NAME, BDATE, GENDER, PROFILEVEL)
+		VALUES(#{id},#{pwd},#{name},#{bDate},#{gender}, #{profiLevel});
+	</insert>
+
+
+	<select id="selectAllId" resultType="String">
+		SELECT ID FROM USER
+	</select>
+	
+	<select id="checkDuplication" parameterType="UserVo" resultType="UserVo">
+		SELECT * FROM USER WHERE ID=#{id}
+	</select>
+	
+	<select id="getUnum" parameterType="UserVo" resultType="int">
+	 SELECT UNUM FROM USER WHERE ID=#{id} AND NAME=#{name} AND BDATE=#{bDate}
+	</select>
+</mapper>
+

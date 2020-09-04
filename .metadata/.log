@@ -2706,3 +2706,25 @@ org.eclipse.debug.core.DebugException: Terminate failed
 >>>>>>> parent of 2f24da9... commit
 =======
 >>>>>>> parent of 2f24da9... commit
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-09-04 00:29:49.512
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-09-04 00:29:49.518
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-09-04 00:29:56.453
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2020-09-04 00:29:56.455
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-09-04 00:29:59.073
+!MESSAGE An internal error occurred during: "populate auto detected configs".
+!STACK 0
+java.lang.IllegalMonitorStateException
+	at java.util.concurrent.locks.ReentrantReadWriteLock$Sync.tryRelease(ReentrantReadWriteLock.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.release(AbstractQueuedSynchronizer.java:1261)
+	at java.util.concurrent.locks.ReentrantReadWriteLock$WriteLock.unlock(ReentrantReadWriteLock.java:1131)
+	at org.springframework.ide.eclipse.beans.core.internal.model.BeansProject$1.run(BeansProject.java:1128)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
