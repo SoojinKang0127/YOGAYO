@@ -286,3 +286,66 @@ org.xml.sax.SAXParseException; lineNumber: 6; columnNumber: 2; 요소 콘텐츠�
 	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:163)
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-09-04 12:26:12.289
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-09-04 12:26:12.291
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-09-04 12:29:54.388
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.eclipse.wst.html.ui 1 1 2020-09-04 12:29:54.391
+!MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:13.856
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:13.857
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@66790851[org.springframework.tooling.boot.ls:1.20.0.202007271426(id=628)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:13.861
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:13.906
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:17.827
+!MESSAGE Boot LS startup time from start to initialized: 3956ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:17.894
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.SNGtoImYisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:17.897
+!MESSAGE Creating project sorter...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:17.899
+!MESSAGE Creating project sorter... DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:17.902
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:17.906
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:17.907
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:17.907
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.SNGtoImY => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:17.908
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:17.916
+!MESSAGE classpath=57 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:17.918
+!MESSAGE buffering callback sts4.classpath.SNGtoImY YOGAYO false 57
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:17.918
+!MESSAGE executing callback sts4.classpath.SNGtoImY 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-09-04 12:34:17.975
+!MESSAGE executing callback sts4.classpath.SNGtoImY SUCCESS [done]

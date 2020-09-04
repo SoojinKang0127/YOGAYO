@@ -27,7 +27,7 @@ public class MkCourseController {
 	
 	CourseServiceImpl service = new CourseServiceImpl();
 	CourseDAO dao = new CourseDAOImpl();
-
+	CourseVo vo = new CourseVo();
 	
 	
 	
@@ -44,8 +44,7 @@ public class MkCourseController {
 			String dscrt = multi.getParameter("dscrt");
 			String material = multi.getParameter("material");
 			
-			System.out.println((multi.getParameter("seq1")));
-			
+		try {
 			int seq1 = Integer.parseInt(multi.getParameter("seq1")); 
 			int seq2 = Integer.parseInt(multi.getParameter("seq2"));
 			int seq3 = Integer.parseInt(multi.getParameter("seq3"));
@@ -53,21 +52,35 @@ public class MkCourseController {
 			int seq5 = Integer.parseInt(multi.getParameter("seq5"));
 			int seq6 = Integer.parseInt(multi.getParameter("seq6"));
 			int seq7 = Integer.parseInt(multi.getParameter("seq7"));
-			int seq8 = Integer.parseInt(multi.getParameter("seq8"));
-			
+			System.out.println(title);
+			System.out.println(dscrt);
+			System.out.println(material);
 			System.out.println(seq1);
 			System.out.println(seq2);
 			System.out.println(seq3);
 			System.out.println(seq4);
 			System.out.println(seq5);
 			System.out.println(seq6);
+			System.out.println(seq7);
+			vo.setSeq1(seq1);
+			vo.setSeq2(seq2);
+			vo.setSeq3(seq3);
+			vo.setSeq4(seq4);
+			vo.setSeq5(seq5);
+			vo.setSeq6(seq6);
+			vo.setSeq7(seq7);
+//			vo.setSeq8(seq8);
 			
-			
+		} catch(NullPointerException e) {
+			System.out.println(e + "err");
+		}
+		
+		
 			MultipartFile mf = multi.getFile("coursethumbnail");
+			//String originalFileName = mf.getOriginalFilename();
+			//System.out.println(originalFileName);
 			
-			String originalFileName = mf.getOriginalFilename();
-			String fileType=originalFileName.substring(originalFileName.lastIndexOf('.'), originalFileName.length());
-			
+			//String fileType=originalFileName.substring(originalFileName.lastIndexOf('.'), originalFileName.length());
 			
 			String realPath = multi.getRealPath("/");
 			String curUserPath=realPath.substring(0, realPath.indexOf(".metadata"));
@@ -80,20 +93,20 @@ public class MkCourseController {
 		          path = curUserPath + "YOGAYO/src/main/webapp/resources/image/coursethumbnail/";
 		      }
 			String projectPath = "resources/image/coursethumbnail/";
-			
+		
 			int no=0;
 			try {
 				no = service.getLastCnum() + 1;
 			} catch (Exception e1) {
 				e1.printStackTrace();
 			}
-			String safeFile = path + "coursethumbnail"+Integer.toString(no)+fileType;
-			String prjPathandName = projectPath + "coursethumbnail"+Integer.toString(no)+fileType;
+			//String safeFile = path + "coursethumbnail"+Integer.toString(no)+fileType;
+			//String prjPathandName = projectPath + "coursethumbnail"+Integer.toString(no)+fileType;
 			
-			
+			String test = path + "test.png";
 			
 			try {
-				mf.transferTo(new File(safeFile));
+				mf.transferTo(new File(test));
 				System.out.println("파일 들어감");
 			} catch (IllegalStateException e) {
 				e.printStackTrace();
@@ -104,22 +117,14 @@ public class MkCourseController {
 
 			
 			
-			CourseVo vo = new CourseVo();
+			
 			
 			vo.setuNum(uNum);
 			vo.setTitle(title);
 			vo.setDscrt(dscrt);
-			vo.setImgPath(prjPathandName);
+			vo.setImgPath("test");
 			vo.setMaterial(material);
-			vo.setSeq1(seq1);
-			vo.setSeq2(seq2);
-			vo.setSeq3(seq3);
-			vo.setSeq4(seq4);
-			vo.setSeq5(seq5);
-			vo.setSeq6(seq6);
-			vo.setSeq7(seq7);
-			vo.setSeq8(seq8);
-			
+
 			try {
 				service.makeCourse(vo);
 				System.out.println("들어감");

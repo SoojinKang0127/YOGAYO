@@ -48,12 +48,12 @@
                                 <div class='row1_wrap'>
                                     <div class='row1_img'>
                                         <span><a href="${pageContext.request.contextPath}/library?pNum=${i.pNum}">
-                                        <img src="${i.imgPath}" alt=""></a></span>
+                                        <img src="${i.img_Path}" alt=""></a></span>
                                     </div>
                                     <div class='row1_text'>
                                         <div class='text_gap'>
                                             <h2 class='pose_title'>${i.title}</h2>
-                                            <p class='pose_desc'>설명없음</p>
+                                            <p class='pose_desc'></p>
                                         </div>
                                     </div>
                                 </div>
