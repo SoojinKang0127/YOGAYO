@@ -10,13 +10,16 @@
 	</insert>
 
 	<select id="likeOrNot" parameterType="LikeVo" resultType="int">
-		select EXISTS (select * FROM LIKEY WHERE CRSNUM=#{crsNum} AND UNUM=#{uNum})
-		as success;
+		SELECT COUNT(*) FROM LIKEY WHERE CRSNUM=#{crsNum} AND UNUM=#{uNum};
 	</select>
 
 	<delete id="dislike" parameterType="LikeVo">
-		DELETE FROM LIKEY CRSNUM=#{crsNum} AND UNUM=#{uNum};
+		DELETE FROM LIKEY WHERE CRSNUM=#{crsNum} AND UNUM=#{uNum};
 	</delete>
+	
+	<select id="likeCount" parameterType="LikeVo" resultType="int">
+		SELECT COUNT(*) FROM LIKEY WHERE CRSNUM=#{crsNum}
+	</select>
 
 
 </mapper>

@@ -27,5 +27,11 @@ public class LikeServiceImpl implements LikeService {
 		
 	}
 
+	@Override
+	public int likeCount(LikeVo vo) throws Exception {
+		return dao.likeCount(vo);
+		
+	}
+
 
 }

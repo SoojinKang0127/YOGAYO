@@ -129,6 +129,12 @@ public class UserServiceImpl implements UserService {
 		return dao.selectAllUser();
 	}
 
+	@Override
+	public String getUName(CourseVo vo) throws Exception {
+		
+		return dao.getUName(vo);
+	}
+
 
 	
 	

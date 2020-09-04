@@ -33,5 +33,9 @@
 	<select id="selectAllUser" resultType="UserVo">
 		SELECT * FROM USER
 	</select>
+	
+	<select id="getUName" parameterType="CourseVo" resultType="String">
+		SELECT NAME FROM USER WHERE UNUM=#{uNum};
+	</select>
 </mapper>
 

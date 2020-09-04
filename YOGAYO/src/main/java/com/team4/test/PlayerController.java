@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,7 @@ import com.team4.dao.course.CourseServiceImpl;
 import com.team4.dao.feed.FeedServiceImpl;
 import com.team4.dao.like.LikeServiceImpl;
 import com.team4.dao.pose.PoseServiceImpl;
+import com.team4.user.dao.UserServiceImpl;
 import com.team4.vo.CourseVo;
 import com.team4.vo.FeedVo;
 import com.team4.vo.LikeVo;
@@ -37,37 +39,44 @@ public class PlayerController {
 	CourseServiceImpl cservice = new CourseServiceImpl();
 	PoseServiceImpl pservice = new PoseServiceImpl();
 	LikeServiceImpl lservice = new LikeServiceImpl();
-	
+	UserServiceImpl uservice = new UserServiceImpl();
+
 	@RequestMapping(value = "/player", method = RequestMethod.GET)
 	public String player(HttpServletRequest req, @RequestParam("course") String course, Model model) {
-		
+
 		int no = Integer.parseInt(course);
 		CourseVo cvo = new CourseVo();
 		cvo.setCrsNum(no);
 		CourseVo resultCvo = null;
-		UserVo uvo=(UserVo)req.getSession().getValue("user");
-		LikeVo lvo= new LikeVo();
+		UserVo uvo = (UserVo) req.getSession().getValue("user");
+		LikeVo lvo = new LikeVo();
 		lvo.setCrsNum(no);
 		lvo.setuNum(uvo.getuNum());
-		int likeFlag=0;
+		int likeFlag = 0;
+		int likeCount = 0;
+		String userName="";
+		int playTotal=0;
+		
 		try {
 			likeFlag = lservice.likeOrNot(lvo);
+			likeCount = lservice.likeCount(lvo);
+			playTotal=fservice.playTotal(cvo);
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
-		
-		if(likeFlag==1) {
-			model.addAttribute("like","fas fa-heart");
-		}else {
-			model.addAttribute("like","far fa-heart");
+		if (likeFlag == 1) {
+			model.addAttribute("like", "fas fa-heart");
+		} else {
+			model.addAttribute("like", "far fa-heart");
 		}
-		
+		model.addAttribute("likeCount", likeCount);
+
 		try {
 			resultCvo = cservice.selectOne(cvo);
+			userName=uservice.getUName(resultCvo);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 
 		int poseNo1 = resultCvo.getSeq1();
 		int poseNo2 = resultCvo.getSeq2();
@@ -95,7 +104,7 @@ public class PlayerController {
 		PoseVo resultPvo6 = null;
 		PoseVo resultPvo7 = null;
 		PoseVo resultPvo8 = null;
-		
+
 		pose1.setpNum(poseNo1);
 		pose2.setpNum(poseNo2);
 		pose3.setpNum(poseNo3);
@@ -104,7 +113,7 @@ public class PlayerController {
 		pose6.setpNum(poseNo6);
 		pose7.setpNum(poseNo7);
 		pose8.setpNum(poseNo8);
-		
+
 		try {
 			resultPvo1 = pservice.poseSelect(pose1);
 			resultPvo2 = pservice.poseSelect(pose2);
@@ -117,7 +126,7 @@ public class PlayerController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		model.addAttribute("course", resultCvo);
 		model.addAttribute("pose1", resultPvo1);
 		model.addAttribute("pose2", resultPvo2);
@@ -127,7 +136,11 @@ public class PlayerController {
 		model.addAttribute("pose6", resultPvo6);
 		model.addAttribute("pose7", resultPvo7);
 		model.addAttribute("pose8", resultPvo8);
-		
+		model.addAttribute("uvo",uvo);
+		model.addAttribute("crsNum", course);
+		model.addAttribute("userName",userName);
+		model.addAttribute("playTotal",playTotal);
+
 		return "player";
 	}
 
@@ -196,5 +209,44 @@ public class PlayerController {
 
 		return "mypage";
 	}
-
+	
+	@RequestMapping(value = "/likeCourse", method = RequestMethod.POST)
+	public void likeCourse(HttpServletResponse res,@RequestParam("uNum") int uNum, @RequestParam("crsNum") int crsNum ) {
+		LikeVo lvo = new LikeVo();
+		lvo.setuNum(uNum);
+		lvo.setCrsNum(crsNum);
+		int count=0;
+		try {
+			int flag=lservice.likeOrNot(lvo);
+			if(flag==0) {
+				lservice.like(lvo);
+			}
+			 count =lservice.likeCount(lvo);
+			 res.getWriter().write(Integer.toString(count));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	@RequestMapping(value = "/dislikeCourse", method = RequestMethod.POST)
+	public void dislikeCourse(HttpServletResponse res,@RequestParam("uNum") int uNum, @RequestParam("crsNum") int crsNum ) {
+		
+		LikeVo lvo = new LikeVo();
+		lvo.setuNum(uNum);
+		lvo.setCrsNum(crsNum);
+		int count=0;
+		try {
+			int flag=lservice.likeOrNot(lvo);
+			if(flag==1) {
+				lservice.dislike(lvo);
+			}
+			 count=lservice.likeCount(lvo);
+			 res.getWriter().write(Integer.toString(count));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 }

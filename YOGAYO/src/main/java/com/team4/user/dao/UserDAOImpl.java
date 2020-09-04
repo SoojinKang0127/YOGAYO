@@ -140,6 +140,13 @@ public class UserDAOImpl implements UserDAO {
 		return mybatis.selectList("UserDao.selectAllUser");
 	}
 
+
+	@Override
+	public String getUName(CourseVo vo) throws Exception {
+		
+		return mybatis.selectOne("UserDao.getUName", vo);
+	}
+
 	
 
 
