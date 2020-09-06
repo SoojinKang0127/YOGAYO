@@ -15,12 +15,10 @@
     <title> YOGAYO | Library </title>
     <script src="https://kit.fontawesome.com/54919de5bd.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-   <script language=JavaScript
-	src="${pageContext.request.contextPath}/resources/js/library.js"></script>
+    <script language=JavaScript
+	src="${pageContext.request.contextPath}/resources/js/dictionary.js"></script>
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/library.css">
+	href="${pageContext.request.contextPath}/resources/css/dictionary.css">
 </head>
 
 <body>
@@ -41,28 +39,34 @@
                             </div>
                         </div>
 
-<div class='list_wrap'>
-                        <ul id='#list1'>
-						<c:forEach var="i" items="${pose}" begin="0" end="70" step="1">
+                    <div class='list_wrap'>
+                        <ul id='list1'>
+                        <c:forEach var="i" items="${pose}">
                             <li class='s1_content_row1'>
                                 <div class='row1_wrap'>
                                     <div class='row1_img'>
-                                        <span><a href="${pageContext.request.contextPath}/library?pNum=${i.pNum}">
-                                        <img src="${i.img_Path}" alt=""></a></span>
+                                        <span>
+                                            <a href="${pageContext.request.contextPath}/dictionary-detail?pnum=${i.pNum}">
+                                            <img src="${i.img_Path}" alt="">
+                                        </span>
                                     </div>
                                     <div class='row1_text'>
                                         <div class='text_gap'>
                                             <h2 class='pose_title'>${i.title}</h2>
-                                            <p class='pose_desc'></p>
+                                            <p class='pose_tips'></p>
+                                            
+                                            <br />
+                                            
+                                            <p class='pose_benefit'></p>
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            </c:forEach>
-                            </ul>
+                            </a>
+                        </c:forEach>
+                        </ul>
 </div>
 
-                           
                     </div>
                 </div>
             </div>

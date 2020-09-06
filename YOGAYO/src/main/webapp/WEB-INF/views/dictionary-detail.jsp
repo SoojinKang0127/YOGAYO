@@ -23,7 +23,7 @@
 		<div class="yoag-dictionary-box">
 			<div class="yoag-dictionary-box-section">
 				<div class="yoag-dictionary">
-					<p>&#60; Yoga Dictionary</p>
+					<a href="${pageContext.request.contextPath}/dictionary"><p>&#60; Yoga Dictionary</p></a>
 				</div>
 			</div>
 		</div>

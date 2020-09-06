@@ -64,7 +64,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               <div class="lWeight_value">${lWeight}kg</div>
               <div class="btns">
                 <div class="btn1">정보수정</div>
-                <div class="btn2">코스추가</div>
+                <div class="btn2"><a href="${pageContext.request.contextPath}/course_playlist">코스추가</a></div>
               </div>
             </div>
           </div>

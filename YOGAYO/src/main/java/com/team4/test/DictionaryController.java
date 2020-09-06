@@ -47,8 +47,6 @@ public class DictionaryController {
 		vo= new PoseVo();
 			vo.setpNum(num);
 			PoseVo pose ;
-		
-			
 			
 			try {
 				pose = service.poseSelect(vo);				
@@ -129,6 +127,7 @@ public class DictionaryController {
 //				System.out.println(variation);
 //				}
 				
+		
 				
 //			}catch (FileNotFoundException e) {
 //				e.printStackTrace();

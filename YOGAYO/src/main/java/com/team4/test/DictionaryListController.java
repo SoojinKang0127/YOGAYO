@@ -1,8 +1,10 @@
 package com.team4.test;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
@@ -16,7 +18,7 @@ import com.team4.dao.pose.PoseServiceImpl;
 import com.team4.vo.PoseVo;
 
 @Controller
-public class LibraryController {
+public class DictionaryListController {
 
 	private static final Logger logger = LoggerFactory.getLogger(PlaylistController.class);
 
@@ -24,17 +26,11 @@ public class LibraryController {
 	PoseServiceImpl service = new PoseServiceImpl();
 	
 	
-	@RequestMapping(value = "/library", method = RequestMethod.GET)
-	public String library(Model model,
-			HttpServletResponse res
-			) throws Exception {
-		
+	@RequestMapping(value = "/dictionary", method = RequestMethod.GET)
+	public String library(Model model, HttpServletResponse res, HttpServletRequest req, PoseVo vo) throws Exception {
 		List<PoseVo> list = service.poseSelectAll();
 		model.addAttribute("pose", list);
-		
-		
-		System.out.println(list);
-		
-		return "library";
+
+		return "dictionary";
 	}
 }
