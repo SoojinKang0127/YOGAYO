@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -106,7 +107,7 @@
 								<div class="main-course-info">
 									<div class="rightwrapper">
 										<span>누적 플레이 수</span> <span class="accumulate-number">
-											${playTotal}회</span> <span>•</span> <span class="reg-date"> 2020.08.19</span>
+											${playTotal}회</span> <span>•</span> <span class="reg-date"> <fmt:formatDate value="${regDate}" pattern="yyyy.MM.dd"/></span>
 									</div>
 									<div class="leftwrapper">
 										<span class="like"><i class="${like}"></i></span> <span

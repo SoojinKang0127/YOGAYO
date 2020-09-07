@@ -135,6 +135,11 @@ public class UserServiceImpl implements UserService {
 		return dao.getUName(vo);
 	}
 
+	@Override
+	public List<Integer> selectExceptMe(UserVo vo) throws Exception {
+		return dao.selectExceptMe(vo);
+	}
+
 
 	
 	
