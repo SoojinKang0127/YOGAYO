@@ -35,10 +35,46 @@ uri="http://java.sun.com/jsp/jstl/core" %>
       var data2 = ${count2week};
       var data3 = ${count3week};
       var data4 = ${count4week};
+      var data5 = ${count1week2};
+      var data6 = ${count2week2};
+      var data7 = ${count3week2};
+      var data8 = ${count4week2};
+      console.log(data1);
+      console.log(data2);
+      console.log(data3);
+      console.log(data4);
+      console.log(data5);
+      console.log(data6);
+      console.log(data7);
+      console.log(data8);
+      
     </script>
   </head>
   <body>
-    <header></header>
+     <header class="header">
+      <div class="main-status_bar">
+         <div class="main-logo_wrapper">
+            <a href="main_page.html"> 
+               <div class="logo-wrapper">
+               <span>YOGAYO</span>
+                  <div class="box-div"></div>
+               </div>
+            </a>
+         </div>
+         <div class="main-status_categories">
+            <span class="recommand"><a href="${pageContext.request.contextPath}/main">추천</a></span> 
+            <span class="course"><a href="${pageContext.request.contextPath}/course-page">코스</a></span>
+            <span class="dictionary"><a href="${pageContext.request.contextPath}/my-page">자세 사전</a></span> 
+            <span class="my_page"><a href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
+         </div>
+         <div class="main-profile">
+            <div class="welcome_user">안녕하세요. ${user.name}님</div>
+            <a href="myPage"><img
+               src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+               class="profile_img" /></a>
+         </div>
+      </div>
+   </header>
     <main>
       <div id="content">
         <div class="content_1">
@@ -71,9 +107,9 @@ uri="http://java.sun.com/jsp/jstl/core" %>
         </div>
         <div class="content_2">
           <div class="head_2">
-            <div class="feed1_head">Feed1</div>
-            <div class="feed2_head">Feed2</div>
-            <div class="feed3_head">Feed3</div>
+            <div class="feed1_head">Feed</div>
+            <div class="feed2_head">My Course</div>
+            <div class="feed3_head">Liked Course</div>
           </div>
           <div class="main_2">
             <div class="feed1">
@@ -81,7 +117,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
 	              <div class="feed1_content">
 	                <div class="feed1_info">
 	                  <div class="feed1_date">${f.regDate }</div>
-	                  <div class="feed1_title">${f.crsNum } 코스</div>
+	                  <div class="feed1_title">${f.title } 코스</div>
 	                  <div class="feed1_text">${f.context }</div>
 	                  <div class="feed1_crsName">만족 : ${f.sLevel}</div>
 	                  <div class="feed1_stat">난이도 : ${f.dLevel }</div>
@@ -99,37 +135,19 @@ uri="http://java.sun.com/jsp/jstl/core" %>
                   <div class="feed2_text">${c.dscrt }</div>
                   <div class="feed2_need">need : ${c.material }</div>
                 </div>
-                <img src="${pageContext.request.contextPath}${c.imgPath}" alt="사진없음" class="feed2_img" />
+                <img src="${pageContext.request.contextPath}/${c.imgPath}" alt="사진없음" class="feed2_img" />
               </div>
               <div class="hr"></div>
              </c:forEach>
             </div>
             <div class="feed3">
+            <c:forEach var="l" items="${likeList }">
               <div class="feed3_content">
-                <div class="feed3_title">Course good for health</div>
-                <img src="face.jpg" alt="사진없음" class="feed3_img" />
+                <div class="feed3_title">${l.title}</div>
+                <img src="${pageContext.request.contextPath}/${l.imgPath}" alt="사진없음" class="feed3_img" />
               </div>
               <div class="hr"></div>
-              <div class="feed3_content">
-                <div class="feed3_title">Course good for health</div>
-                <img src="face.jpg" alt="사진없음" class="feed3_img" />
-              </div>
-              <div class="hr"></div>
-              <div class="feed3_content">
-                <div class="feed3_title">Course good for health</div>
-                <img src="face.jpg" alt="사진없음" class="feed3_img" />
-              </div>
-              <div class="hr"></div>
-              <div class="feed3_content">
-                <div class="feed3_title">Course good for health</div>
-                <img src="face.jpg" alt="사진없음" class="feed3_img" />
-              </div>
-              <div class="hr"></div>
-              <div class="feed3_content">
-                <div class="feed3_title">Course good for health</div>
-                <img src="face.jpg" alt="사진없음" class="feed3_img" />
-              </div>
-              <div class="hr"></div>
+             </c:forEach>
             </div>
           </div>
         </div>
@@ -142,7 +160,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               <canvas id="stat1_data"></canvas>
             </div>
             <div class="stat2">
-              <div class="stat2_title">피드 올린 횟수</div>
+              <div class="stat2_title">좋아요 누른 횟수</div>
               <canvas id="stat2_data"></canvas>
             </div>
           </div>

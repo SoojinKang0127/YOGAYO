@@ -19,6 +19,10 @@ public interface UserService {
 	public int count2week(UserVo vo) throws Exception;
 	public int count3week(UserVo vo) throws Exception;
 	public int count4week(UserVo vo) throws Exception;
+	public int count1week2(UserVo vo) throws Exception;
+	public int count2week2(UserVo vo) throws Exception;
+	public int count3week2(UserVo vo) throws Exception;
+	public int count4week2(UserVo vo) throws Exception;
 	public List<FeedVo> selectAll(UserVo vo) throws Exception;
 	public List<CourseVo> selectAllCrs(UserVo vo) throws Exception;
 	public String thisday() throws Exception;
@@ -37,5 +41,7 @@ public interface UserService {
 	public int getUNum(UserVo vo);
 	
 	public List<UserVo> selectAllUser() throws Exception;
+	
+	public List<CourseVo> allLikey(UserVo vo) throws Exception;
 
 }
