@@ -23,4 +23,9 @@ public class AdminDAOImpl implements AdminDAO{
 		return mybatis.selectList("AdminDAO.getAllComment");
 	}
 
+	@Override
+	public void deleteComment(AdminVo vo) throws Exception {
+		mybatis.delete("AdminDAO.deleteComment", vo);
+	}
+
 }

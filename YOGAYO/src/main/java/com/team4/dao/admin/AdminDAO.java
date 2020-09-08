@@ -6,5 +6,6 @@ import com.team4.vo.AdminVo;
 
 public interface AdminDAO {
 	public List<AdminVo> getAllComment() throws Exception;
+	public void deleteComment(AdminVo vo) throws Exception;
 
 }

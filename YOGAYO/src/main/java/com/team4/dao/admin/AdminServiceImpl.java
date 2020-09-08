@@ -14,5 +14,11 @@ public class AdminServiceImpl implements AdminService {
 		return dao.getAllComment();
 	}
 
+
+	@Override
+	public void deleteComment(AdminVo vo) throws Exception {
+		dao.deleteComment(vo);
+	}
+
 	 
 }

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/admin/admin_member.css">
-    <title>YOGAYO 회원관리</title>
+    <title>ADMIN MEMBER</title>
   </head>
   <body>
     <header>

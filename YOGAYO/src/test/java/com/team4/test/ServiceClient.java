@@ -53,59 +53,9 @@ public class ServiceClient {
 	}
 		
 	public static void main(String[] args) {
-		PoseServiceImpl service= new PoseServiceImpl();
-		for(int i=0;i<71;i++) {
-		File file = new File("C:\\audio\\pose"+i+".mp3");
-		String path="C:\\audio\\pose"+i+".mp3";
-		PoseVo vo= new PoseVo();
 		
-		try {
-			MP3File mp3 = (MP3File) AudioFileIO.read(file);
-			mp3.getAudioHeader().getTrackLength();
-			vo.setAudioPath(path);
-			vo.setTime(mp3.getAudioHeader().getTrackLength());
-			vo.setpNum(i);
-			try {
-				service.update(vo);
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			System.out.println(mp3.getAudioHeader().getTrackLength());
-		} catch (CannotReadException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (TagException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (ReadOnlyFileException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (InvalidAudioFrameException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		}
-
-//		FileInputStream fileInputStream = null;
-//		long duration = 0;
-//
-//		try {
-//		    fileInputStream = new FileInputStream(file);
-//		} catch (FileNotFoundException e) {
-//		    e.printStackTrace();
-//		}
-//
-//		try {
-//		    duration = Objects.requireNonNull(fileInputStream).getChannel().size() / 128;
-//		} catch (IOException e) {
-//		    e.printStackTrace();
-//		}
-//		long size= file.length();
-	  
+			
+	
 	}
 	
 	

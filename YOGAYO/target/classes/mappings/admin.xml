@@ -5,10 +5,12 @@
 <mapper namespace="AdminDAO">
 
 	<select id="getAllComment" resultType="AdminVo">
-		SELECT c.CMTNUM, c.REGDATE, u.IMG, c.UNUM ,u.NAME, c.CRSNUM, c.RATE,
-		c.context
+		SELECT c.CMTNUM, c.REGDATE, u.IMG, c.UNUM ,u.NAME, c.CRSNUM, c.RATE, c.PARENT, c.context
 		FROM COMMENT c, USER u
-		WHERE c.UNUM = u.UNUM;
+		WHERE c.UNUM = u.UNUM order by REGDATE desc;
 	</select>
 
+	<delete id="deleteComment">
+		DELETE FROM COMMENT WHERE CMTNUM = #{cmtNum} OR PARENT = #{parent};
+	</delete>
 </mapper>
