@@ -70,7 +70,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
          <div class="main-profile">
             <div class="welcome_user">안녕하세요. ${user.name}님</div>
             <a href="myPage"><img
-               src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+               src="${pageContext.request.contextPath}/${user.img}"
                class="profile_img" /></a>
          </div>
       </div>
@@ -84,7 +84,7 @@ uri="http://java.sun.com/jsp/jstl/core" %>
           </div>
           <div class="main_1">
             <div class="info">
-              <div class="u_name">Welcome ${user.id}</div>
+              <div class="u_name">Welcome ${user.name}</div>
               <div class="date1">${thisday}</div>
               <div class="date2">
                 <div class="date2_day">${thisdate}</div>
@@ -116,15 +116,19 @@ uri="http://java.sun.com/jsp/jstl/core" %>
             	<c:forEach var="f" items="${feList }">
 	              <div class="feed1_content">
 	                <div class="feed1_info">
-	                  <div class="feed1_date">${f.regDate }</div>
-	                  <div class="feed1_title">${f.title } 코스</div>
-	                  <div class="feed1_text">${f.context }</div>
-	                  <div class="feed1_crsName">만족 : ${f.sLevel}</div>
-	                  <div class="feed1_stat">난이도 : ${f.dLevel }</div>
+	                  <div class="feed1_title">
+	                  	<img class="feed1_uimg" alt="사진오류" src="${pageContext.request.contextPath}/${user.img}">
+	                  	<div class="feed1_name">${user.name }</div>
+	                  	<div class="feed1_date">${f.regDate }</div>
+	                  </div>
+	                  <img class="feed1_img" alt="사진 없음" src="${pageContext.request.contextPath}/${f.uImg1 }">
+	                  	<div class="feed1_context">${f.context }</div>
+	                  	<div class="feed1_level">
+	                  	 <div class="feed1_sLevel">만족도 : ${f.sLevel }</div>
+	                  	 <div class="feed1_dLevel">난이도 : ${f.dLevel }</div>
+	                  	</div>
 	                </div>
-	                <img class="feed1_img" src="${pageContext.request.contextPath}${f.uImg1}" alt="사진 없음" />
 	              </div>
-	              <div class="hr"></div>
               	</c:forEach>
             </div>
             <div class="feed2">
@@ -132,21 +136,21 @@ uri="http://java.sun.com/jsp/jstl/core" %>
               <div class="feed2_content">
                 <div class="feed2_info">
                   <div class="feed2_title">${c.title }</div>
-                  <div class="feed2_text">${c.dscrt }</div>
-                  <div class="feed2_need">need : ${c.material }</div>
+                  <img class="feed2_img" alt="사진없음" src="${pageContext.request.contextPath}/${c.imgPath }">
+                  <div class="feed2_context">${c.dscrt }</div>
+                  <div class="feed2_material">필요한 물품: ${c.material }</div>
                 </div>
-                <img src="${pageContext.request.contextPath}/${c.imgPath}" alt="사진없음" class="feed2_img" />
               </div>
-              <div class="hr"></div>
              </c:forEach>
             </div>
             <div class="feed3">
             <c:forEach var="l" items="${likeList }">
               <div class="feed3_content">
-                <div class="feed3_title">${l.title}</div>
-                <img src="${pageContext.request.contextPath}/${l.imgPath}" alt="사진없음" class="feed3_img" />
+                <div class="feed3_info">
+                  <img class="feed3_img" alt="사진없음" src="${pageContext.request.contextPath}/${l.imgPath }">
+                  <div class="feed3_title">${l.title }</div>
+                </div>
               </div>
-              <div class="hr"></div>
              </c:forEach>
             </div>
           </div>

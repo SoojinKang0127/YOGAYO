@@ -83,9 +83,10 @@ public class MyPageController {
 			thismonth = service.thismonth();
 			likeList = service.allLikey(vo);
 			
-			//System.out.println("crsList: " + crsList);
+			System.out.println("crsList: " + crsList);
 			System.out.println("feList" + feList);
 			System.out.println("likeList" + likeList);
+						
 	
 		} catch (Exception e) {
 			System.out.println("[MyPageController / myPage]" + e.toString());
