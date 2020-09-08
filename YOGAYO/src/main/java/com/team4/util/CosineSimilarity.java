@@ -18,13 +18,13 @@ public class CosineSimilarity implements R{
 	
 	public static void main(String[] args) {
 	
-		List<Integer> list=null;
+		List<Integer> listExceptMe=null;
 		UserVo vo = new UserVo();
 		vo.setuNum(1048);
 		UserDAOImpl uservice= new UserDAOImpl();
 		BasicDBObject field = new BasicDBObject("keyword", 1);
 		try {
-			 list=uservice.selectExceptMe(vo);
+			 listExceptMe=uservice.selectExceptMe(vo);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -45,13 +45,13 @@ public class CosineSimilarity implements R{
 			int index= keywordList.indexOf(key);
 			myintlist.set(index+2,1);
 		}
-		for(int i=0;i<list.size();i++) {
-			BasicDBObject userQuery = new BasicDBObject("_id",list.get(i));
+		for(int i=0;i<listExceptMe.size();i++) {
+			BasicDBObject userQuery = new BasicDBObject("_id",listExceptMe.get(i));
 			DBCursor userCursor=userDB.find(userQuery,field);
 			DBObject obj=userCursor.next();
 			List<String> userList = (List<String>) obj.get("keyword");
 			ArrayList<Integer> intlist = new ArrayList<Integer>(Collections.nCopies(keywordList.size()+2, 0));
-			intlist.set(0,list.get(i));
+			intlist.set(0,listExceptMe.get(i));
 			intlist.set(1,userList.size());
 			for(int j=0; j<userList.size();j++) {
 				String key=userList.get(j);
@@ -71,8 +71,10 @@ public class CosineSimilarity implements R{
 			System.out.print(csList.get(0)+"의 코사인 유사도는");
 			System.out.print(total/(Math.sqrt(csList.get(1))*Math.sqrt(myintlist.get(1))));
 			System.out.println();
-			
 		}
+		
+		
+		
 		
 	}
 
