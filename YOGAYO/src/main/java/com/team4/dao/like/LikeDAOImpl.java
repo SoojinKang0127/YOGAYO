@@ -41,4 +41,14 @@ public class LikeDAOImpl implements LikeDAO {
 		return mybatis.selectOne("LikeDAO.likeCount", vo);
 	}
 
+	@Override
+	public List<Integer> countCourse(LikeVo vo) throws Exception {
+		return mybatis.selectList("LikeDAO.countCourse", vo);
+	}
+
+	@Override
+	public List<Integer> courseAll() throws Exception {
+		return mybatis.selectList("LikeDAO.selectAllCousre");
+	}
+
 }

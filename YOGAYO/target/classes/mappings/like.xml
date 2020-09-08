@@ -20,6 +20,13 @@
 	<select id="likeCount" parameterType="LikeVo" resultType="int">
 		SELECT COUNT(*) FROM LIKEY WHERE CRSNUM=#{crsNum}
 	</select>
-
+	
+	<select id="countCourse" parameterType="LikeVo" resultType="int">
+		SELECT CRSNUM FROM LIKEY WHERE UNUM=#{uNum}
+	</select>
+	
+	<select id="selectAllCousre" parameterType="LikeVo" resultType="int">
+		SELECT CRSNUM FROM LIKEY
+	</select>
 
 </mapper>

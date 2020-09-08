@@ -71,6 +71,11 @@ public class CourseServiceImpl implements CourseService {
 		return dao.getLastCnum();
 	}
 
+	@Override
+	public List<Integer> courseAll() throws Exception {
+		return dao.courseAll();
+	}
+
 
 
 }
