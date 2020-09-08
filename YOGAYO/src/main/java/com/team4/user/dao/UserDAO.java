@@ -33,4 +33,6 @@ public interface UserDAO {
 	public UserVo checkDuplication(UserVo vo) throws Exception;
 	public int getUNum(UserVo vo);
 	public List<UserVo> selectAllUser() throws Exception;
+	public String getUName(CourseVo vo) throws Exception;
+	public List<Integer> selectExceptMe(UserVo vo) throws Exception;
 }

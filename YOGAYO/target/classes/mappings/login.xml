@@ -33,5 +33,13 @@
 	<select id="selectAllUser" resultType="UserVo">
 		SELECT * FROM USER
 	</select>
+	
+	<select id="selectExceptMe" parameterType="UserVo" resultType="int">
+		SELECT UNUM FROM USER WHERE UNUM NOT IN(#{uNum}, 101) 
+	</select>
+	
+	<select id="getUName" parameterType="CourseVo" resultType="String">
+		SELECT NAME FROM USER WHERE UNUM=#{uNum};
+	</select>
 </mapper>
 

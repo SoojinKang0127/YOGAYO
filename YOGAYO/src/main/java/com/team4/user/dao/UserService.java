@@ -37,5 +37,7 @@ public interface UserService {
 	public int getUNum(UserVo vo);
 	
 	public List<UserVo> selectAllUser() throws Exception;
+	public String getUName(CourseVo vo) throws Exception;
+	public List<Integer> selectExceptMe(UserVo vo) throws Exception;
 
 }
