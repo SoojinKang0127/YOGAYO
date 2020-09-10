@@ -29,6 +29,8 @@ C:\Users\kosmo_28\Desktop\YOGAYO\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.c
 <<<<<<< HEAD
 C:\Users\Kosmo_23\Desktop\YOGAYO\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3610453004.index
 \YOGAYO\src\main\java
+/Users/paso/Documents/code/github/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2939829699.index
+/YOGAYO/src/main/java
 \YOGAYO\src\main\java
 /Users/paso/Documents/code/github/YOGAYO/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3748728972.index
 

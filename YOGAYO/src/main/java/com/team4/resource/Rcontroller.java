@@ -1,6 +1,8 @@
 package com.team4.resource;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
@@ -26,80 +28,82 @@ import com.mongodb.client.MongoDatabase;
 import com.team4.dao.feed.FeedServiceImpl;
 
 public class Rcontroller extends HttpServlet implements R {
-	private static final long serialVersionUID = 1L;
-	MongoClientURI uri = new MongoClientURI(
-			"mongodb+srv://user:12345@cluster0.9bcza.mongodb.net/test?retryWrites=true&w=majority");
-	MongoClient mongoClient = new MongoClient(uri);
-	MongoDatabase database = mongoClient.getDatabase("project");
-	DB db= mongoClient.getDB("project");
-	FeedServiceImpl fservice= new FeedServiceImpl();
+   private static final long serialVersionUID = 1L;
+   MongoDatabase database = mongoClient.getDatabase("project");
+   FeedServiceImpl fservice= new FeedServiceImpl();
     
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-	}
+   protected void doGet(HttpServletRequest request, HttpServletResponse response)
+         throws ServletException, IOException {
+   }
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-	}
+   protected void doPost(HttpServletRequest request, HttpServletResponse response)
+         throws ServletException, IOException {
+   }
 
-	@Override
-	public void init(ServletConfig config) throws ServletException {
+   @Override
+   public void init(ServletConfig config) throws ServletException {
 
-		getListFromCourse();
-		getListFromPose();
-		getLastFnum();
-		System.out.println("Keyword Hashset initialized success [size: "+this.keyword.size()+"]");
-		System.out.println(this.keyword.toString());
-	}
+      updateKeyword();
+      
+   } 
+   
+   public void updateKeyword() {
+      getListFromCourse();
+      getListFromPose();
+      getLastFnum();
+      this.keywordList.addAll(this.keywordAll);
+      System.out.println("Keyword Hashset initialized success [size: "+this.keywordAll.size()+"]");
+      System.out.println(this.keywordList.toString());
+   }
 
-	public void getListFromPose() {
-		 DBCollection collection = db.getCollection("POSE");
-	      BasicDBObject allquery = new BasicDBObject();
-	      BasicDBObject fields = new BasicDBObject();
-	      DBCursor cursor = collection.find(allquery,fields);
-	      while(cursor.hasNext()) {
-	    	  DBObject obj = cursor.next();
-	    	  List<String> list = (List<String>) obj.get("keyword");
-	    	  for(String s:list) {
-	    		  this.keyword.add(s);
-	    	  }
-	      }
-	      
-	}
+   public void getListFromPose() {
+       DBCollection collection = mongoDBf.getCollection("POSE");
+         BasicDBObject allquery = new BasicDBObject();
+         BasicDBObject fields = new BasicDBObject();
+         DBCursor cursor = collection.find(allquery,fields);
+         while(cursor.hasNext()) {
+            DBObject obj = cursor.next();
+            List<String> list = (List<String>) obj.get("keyword");
+            for(String s:list) {
+               this.keywordAll.add(s);
+            }
+         }
+         
+   }
 
-	public void getListFromCourse() {
-		 DBCollection collection = db.getCollection("COURSE");
-	      BasicDBObject allquery = new BasicDBObject();
-	      BasicDBObject fields = new BasicDBObject();
-	      DBCursor cursor = collection.find(allquery,fields);
-	      while(cursor.hasNext()) {
-	    	  DBObject obj = cursor.next();
-	    	  List<String> list = (List<String>) obj.get("keyword");
-	    	  for(String s:list) {
-	    		  this.keyword.add(s);
-	    	  }
-	      }
-	}
-	
-	public void addKeyword(String keyword) {
-		this.keyword.add(keyword);
-	}
-	
-	public void removeKeyword(String keyword) {
-		this.keyword.remove(keyword);
-	}
-	
-	public HashSet<String> getKeywordList(){
-		return this.keyword;
-	}
-	
-	public void getLastFnum() {
-	}
-	
-	public void plusLastFnum() {
-	}
-	
-	
+   public void getListFromCourse() {
+       DBCollection collection = mongoDBf.getCollection("COURSE");
+         BasicDBObject allquery = new BasicDBObject();
+         BasicDBObject fields = new BasicDBObject();
+         DBCursor cursor = collection.find(allquery,fields);
+         while(cursor.hasNext()) {
+            DBObject obj = cursor.next();
+            List<String> list = (List<String>) obj.get("keyword");
+            for(String s:list) {
+               this.keywordAll.add(s);
+            }
+         }
+   }
+   
+   public void addKeyword(String keyword) {
+      this.keywordAll.add(keyword);
+   }
+   
+   public void removeKeyword(String keyword) {
+      this.keywordAll.remove(keyword);
+   }
+   
+   public HashSet<String> getKeywordList(){
+      return this.keywordAll;
+   }
+   
+   public void getLastFnum() {
+   }
+   
+   public void plusLastFnum() {
+   }
+   
+   
 
 }

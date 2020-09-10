@@ -46,7 +46,6 @@ li {
     display: flex;
     text-align: center;
 }
-
 .textbox {
     width: 50%;
     border: 2px solid #febe2e;
@@ -90,6 +89,139 @@ li {
 }
 
 .textbox:focus::-webkit-input-placeholder {  color:transparent; }
+
+
+.textbox1 {
+    width: 50%;
+    border: 2px solid #febe2e;
+    border-radius: 4px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #febe2e;
+    background-color: white;
+}
+
+
+
+버튼 디자인 
+.textbox1:hover {
+  width: 50%;
+  border: 2px solid white;
+  border-radius: 4px;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+  background-color: #febe2e;
+} 
+
+
+
+.textbox1::placeholder {
+    color: black;
+}
+
+.textbox1:focus {
+    border-color: #febe2e;
+    box-shadow: var(--light-shadow);
+}
+
+.textbox1:focus::-webkit-input-placeholder {  color:transparent; }
+
+.textbox2 {
+    width: 50%;
+    border: 2px solid #febe2e;
+    border-radius: 4px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #febe2e;
+    background-color: white;
+}
+
+
+
+.textbox2:hover {
+  width: 50%;
+  border: 2px solid white;
+  border-radius: 4px;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+  background-color: #febe2e;
+} 
+
+
+
+.textbox2::placeholder {
+    color: black;
+}
+
+.textbox2:focus {
+    border-color: #febe2e;
+    box-shadow: var(--light-shadow);
+}
+
+.textbox2:focus::-webkit-input-placeholder {  color:transparent; }
+
+
+.textbox3 {
+    width: 50%;
+    border: 2px solid #febe2e;
+    border-radius: 4px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #febe2e;
+    background-color: white;
+}
+
+
+
+버튼 디자인 
+.textbox3:hover {
+  width: 50%;
+  border: 2px solid white;
+  border-radius: 4px;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+  background-color: #febe2e;
+} 
+
+
+
+.textbox3::placeholder {
+    color: black;
+}
+
+.textbox3:focus {
+    border-color: #febe2e;
+    box-shadow: var(--light-shadow);
+}
+
+.textbox3:focus::-webkit-input-placeholder {  color:transparent; }
 
 
 

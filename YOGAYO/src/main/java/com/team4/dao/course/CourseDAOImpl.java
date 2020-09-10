@@ -15,6 +15,19 @@ public class CourseDAOImpl implements CourseDAO {
 	
 	private SqlSession mybatis;
 	
+	@Override
+	public int getLastCnum() throws Exception {
+		// TODO Auto-generated method stub
+		return mybatis.selectOne("CourseDao.getLastCnum");
+	}
+
+	@Override
+	public int get_auto_incrm() throws Exception {
+		return mybatis.selectOne("CourseDao.get_auto_incrm");
+	
+				
+	}
+
 	public CourseDAOImpl() {
 		mybatis = SqlSessionFactoryBean.getSqlSessionInstance();
 	}
@@ -34,10 +47,6 @@ public class CourseDAOImpl implements CourseDAO {
 		return mybatis.selectOne("CourseDao.selectOne",vo);
 	}
 
-	@Override
-	public int getLastCnum() throws Exception {
-		return mybatis.selectOne("CourseDao.getLastCnum");
-	}
 	public CoursePosesVo coursePoses(CourseVo vo) throws Exception {
 		return mybatis.selectOne("CourseDao.coursePoses",vo);
 	}

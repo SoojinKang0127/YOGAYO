@@ -13,7 +13,6 @@ public interface CourseDAO {
 	public List<CourseVo> selectAll() throws Exception;
 	public CourseVo selectOne(CourseVo vo) throws Exception;
 	public int getLastCnum() throws Exception;
-
 	public CoursePosesVo coursePoses(CourseVo vo) throws Exception;
 	public void addComment(CommentVo cvo) throws Exception;
 	public List<CommentVo> commentAll(CourseVo vo) throws Exception;
@@ -21,6 +20,7 @@ public interface CourseDAO {
 	public double commentAvg(CourseVo vo) throws Exception;
 	public void addReview(CommentVo cvo) throws Exception;
 	public List<CommentVo> reviewAll(CourseVo vo) throws Exception;
+	public int get_auto_incrm() throws Exception;
 	
 }
 	

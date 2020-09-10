@@ -20,4 +20,5 @@ public interface CourseService {
 	public double commentAvg(CourseVo vo) throws Exception;
 	public void addReview(CommentVo cvo) throws Exception;
 	public List<CommentVo> reviewAll(CourseVo vo) throws Exception;
+	public int get_auto_incrm() throws Exception;
 }

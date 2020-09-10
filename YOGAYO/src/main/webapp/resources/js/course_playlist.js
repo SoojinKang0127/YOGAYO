@@ -1,6 +1,15 @@
 $(function () {
 
 
+    $('.testbutton').click(function () {
+        $('.textbox1').val()
+        $('.textbox2').val()
+
+        document.createElement('input')
+
+
+    })
+
     var request = new XMLHttpRequest();
 
     var arr = $('.course_search > .textbox')
@@ -105,40 +114,84 @@ $(function () {
         $('ul,li').disableSelection();
 
         const click_obj = $('#object1')
+
+
+
+
         $('.pose_content_box').dblclick(function () {
+            var index;
+            var indexarr = [];
             var clone = $(this).clone()
             clone.insertBefore(click_obj).hide().show('slow');
             $('#sortable_list2 .trashBtn').click(function () {
                 $(this).parent().remove();
+                // document.getElementById('mypage_container').innerHTML += "<input type=\"hidden\" name=\"seq" + i + "\" value=\"" + shift_num + "\"><br>";
             })
-        })
-
-    }
-
-
-   $('.button_box').click(function(){
-
-    var index;
-    var indexarr = [];
-    var list_num = $('#sortable_list2').find('.pose_content_box');
-    for (var i = 0; i < list_num.length; i++) {
-        index = $('#sortable_list2 .pnum').eq(i).text();
-        indexarr.push(index);
-    }
-
-    console.log(indexarr);
-    
- 
-    for (var i = 1; i <=list_num.length; i++) {
-        var shift_num = indexarr.shift()
-        document.getElementById('mypage_container').innerHTML += "<input type=\"hidden\" name=\"seq" + i + "\" value=\""+shift_num+"\"><br>";
-    }
-
-    
-}) 
+            var a = document.getElementById('object1')
+            var formTag = document.getElementById('form_tag')
 
 
-    
+            a.innerHTML += '<input type="hidden" name="seq' + $('#sortable_list2').length + '" value="' + $(this.pnum).val() + '">';
+
+            console.log(a)
+        })//end of dbclick
+
+    }//end of ajax
+
+
+
+
+
+
+    $('.addItem').click(function () {
+        var list_num = $('#sortable_list2').find('.pose_content_box');
+
+
+        indexarr = [];
+        for (var i = 0; i < list_num.length; i++) {
+            index = $('#sortable_list2 .pnum').eq(i).text();
+            indexarr.push(index);
+        }
+
+        console.log(indexarr);
+
+
+
+        for (var i = 1; i <= list_num.length; i++) {
+            
+            var shift_num = indexarr.shift()
+
+            
+
+            if(i == 1){
+                seq = $('#seq1');
+            }else if(i ==2){
+                seq = $('#seq2');
+            }else if(i ==3){
+                seq = $('#seq3');
+            }else if(i ==4){
+                seq = $('#seq4');
+            }else if(i ==5){
+                seq = $('#seq5');
+            }else if(i ==6){
+                seq = $('#seq6');
+            }else if(i ==7){
+                seq = $('#seq7');
+            }else if(i ==8){
+                seq = $('#seq8');
+            }
+
+
+            seq.attr("value", shift_num);
+
+            //document.getElementById('mypage_container').innerHTML += "<input type=\"hidden\" name=\"seq" + i + "\" value=\"" + shift_num + "\"><br>";
+        }
+
+
+    })
+
+
+
 
 
 
