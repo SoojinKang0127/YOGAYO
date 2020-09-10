@@ -27,8 +27,8 @@
 			<div class="main-status_categories">
 				<span class="recommand"><a href="${pageContext.request.contextPath}/main">추천</a></span> 
 				<span class="course"><a href="${pageContext.request.contextPath}/course-page">코스</a></span>
-				 <span class="dictionary"><a href="${pageContext.request.contextPath}/my-page">자세 사전</a></span> 
-				 <span class="my_page"><a href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
+				<span class="dictionary"><a href="${pageContext.request.contextPath}/my-page">자세 사전</a></span> 
+				<span class="my_page"><a href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
 			</div>
 			<div class="main-profile">
 				<div class="welcome_user">안녕하세요. ${user.name}님</div>

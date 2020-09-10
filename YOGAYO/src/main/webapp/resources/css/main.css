@@ -77,6 +77,7 @@ main {
   justify-content: space-between;
   align-items: center;
   color: white;
+  margin-top: 10px;
 }
 
 .main-status_categories span {
@@ -225,6 +226,7 @@ main {
 .main-profile {
   display: flex;
   align-items: center;
+  margin-top: 5px;
 }
 
 .main-profile .welcome_user {

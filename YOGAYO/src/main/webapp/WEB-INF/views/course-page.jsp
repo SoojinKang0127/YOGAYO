@@ -20,15 +20,24 @@
 </head>
 <body>
 	<header class="header">
-		<div class="status_bar">
-			<div class="logo_wrapper">
-				<a href="${pageContext.request.contextPath}/main"><img
-					src="${pageContext.request.contextPath}/resources/image/course/logo.jpg"
-					alt="logo" /> </a>
-				<div class="box-div"></div>
+		<div class="main-status_bar">
+			<div class="main-logo_wrapper">
+				<a href="main_page.html"> 
+					<div class="logo-wrapper">
+					<span>YOGAYO</span>
+						<div class="box-div"></div>
+					</div>
+				</a>
 			</div>
-			<div class="profile">
-				<a href="${pageContext.request.contextPath}/my-page"><img
+			<div class="main-status_categories">
+				<span class="recommand"><a href="${pageContext.request.contextPath}/main">추천</a></span> 
+				<span class="course"><a href="${pageContext.request.contextPath}/course-page">코스</a></span>
+				<span class="dictionary"><a href="${pageContext.request.contextPath}/my-page">자세 사전</a></span> 
+				<span class="my_page"><a href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
+			</div>
+			<div class="main-profile">
+				<div class="welcome_user">안녕하세요. ${user.name}님</div>
+				<a href="myPage"><img
 					src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
 					class="profile_img" /></a>
 			</div>
