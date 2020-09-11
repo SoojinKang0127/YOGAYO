@@ -31,7 +31,7 @@
 	<select id="commentAll" parameterType="CommentVo"
 		resultType="CommentVo">
 		SELECT * FROM COMMENT WHERE CRSNUM=#{crsNum} AND PARENT IS
-		NULL order by CMTNUM desc LIMIT 6
+		NULL order by CMTNUM desc
 	</select>
 
 	<select id="commentCount" parameterType="CommentVo"
