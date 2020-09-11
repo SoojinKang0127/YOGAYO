@@ -33,5 +33,15 @@ public class LikeServiceImpl implements LikeService {
 		
 	}
 
+	@Override
+	public List<Integer> countCourse(LikeVo vo) throws Exception {
+		return dao.countCourse(vo);
+	}
+
+	@Override
+	public List<Integer> courseAll() throws Exception {
+		return dao.courseAll();
+	}
+
 
 }

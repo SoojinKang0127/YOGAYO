@@ -21,6 +21,7 @@ public interface CourseDAO {
 	public double commentAvg(CourseVo vo) throws Exception;
 	public void addReview(CommentVo cvo) throws Exception;
 	public List<CommentVo> reviewAll(CourseVo vo) throws Exception;
+	public List<Integer> courseAll() throws Exception;
 	
 }
 	

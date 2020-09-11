@@ -74,6 +74,11 @@ public class CourseDAOImpl implements CourseDAO {
 	public double commentAvg(CourseVo vo) throws Exception {
 		return mybatis.selectOne("CourseDao.commentAvg",vo);
 	}
+
+	@Override
+	public List<Integer> courseAll() throws Exception {
+		return mybatis.selectList("CourseDao.courseAll");
+	}
 	
 	
 

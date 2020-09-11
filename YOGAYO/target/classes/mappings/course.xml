@@ -31,7 +31,7 @@
 	<select id="commentAll" parameterType="CommentVo"
 		resultType="CommentVo">
 		SELECT * FROM COMMENT WHERE CRSNUM=#{crsNum} AND PARENT IS
-		NULL order by CMTNUM desc LIMIT 6
+		NULL order by CMTNUM desc
 	</select>
 
 	<select id="commentCount" parameterType="CommentVo"
@@ -48,6 +48,7 @@
 		<!-- 테이블명 대소문자 구분 -->
 		SELECT * FROM COURSE ORDER BY CRSNUM DESC
 	</select>
+	
 
 	<select id="selectOne" parameterType="CourseVo" resultType="CourseVo">
 		<!-- 테이블명 대소문자 구분 -->
@@ -56,7 +57,7 @@
 	
 	
 	<select id="getLastCnum" resultType="Integer">
-	 	SELECT MAX(CRSNUM) FROM COURSE
+	 	SELECT CRSNUM FROM COURSE WHERE TITLE=#{title} AND DSCRT=#{dscrt} AND UNUM=#{uNum}
 	</select>
 	
 
@@ -147,6 +148,9 @@
 		from dual
 	</select>
 	
+	<select id="courseAll" resultType="int">
+	SELECT CRSNUM FROM COURSE
+	</select>
 	
 
 </mapper>
