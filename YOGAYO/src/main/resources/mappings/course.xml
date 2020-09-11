@@ -57,7 +57,7 @@
 	
 	
 	<select id="getLastCnum" resultType="Integer">
-	 	SELECT MAX(CRSNUM) FROM COURSE
+	 	SELECT CRSNUM FROM COURSE WHERE TITLE=#{title} AND DSCRT=#{dscrt} AND UNUM=#{uNum}
 	</select>
 	
 
