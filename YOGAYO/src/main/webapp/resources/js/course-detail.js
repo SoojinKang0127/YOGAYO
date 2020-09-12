@@ -1,4 +1,33 @@
 $(window).ready(function() {
+	if (rate_people_num < 7) {
+		$('#more_btn').hide();
+	} else {
+		$('#more_btn').show();
+	}
+
+	$('#more_review_btn').on("click", function() {
+		$.ajax({
+			type:"post",
+			async : true,
+			url : "comment_more.do",
+			contentType : 'application/x-www-form-urlencoded;charset=UTF-8',
+			data : {"commentMore":"commentMore",
+				"crsNum":$('#crsNum').val()},
+			dataType : "json",			
+			success : function(resultData) {
+				$('.ajax').empty();
+				for(i in resultData.result){
+					var list = "<div class=course_detail-review_profile_img>"
+					
+				}
+			},
+			error : function(request, status, error) {
+				console.log("code:" + request.status + "\n" + "message:"
+						+ request.responseText + "\n" + "error:" + error);
+			}
+		});
+	})
+	
 	$('#review_btn').click(function(){
 		$('#text_box').val("");
 		$('input[name=rating3]').removeAttr('checked');

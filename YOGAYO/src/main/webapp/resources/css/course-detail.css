@@ -134,14 +134,16 @@ main {
 }
 
 .course_detail-info_time,
-.course_detail-why {
+.course_detail-difficulty{
+  /* border:1px solid red; */
   width: 50%;
   font-size: 15pt;
   align-items: center;
+   margin-top: 26px;
 }
 
-.course_detail-users,
-.course_detail-difficulty {
+.course_detail-users,{
+  /* border:1px solid red; */
   width: 50%;
   font-size: 15pt;
   align-items: center;

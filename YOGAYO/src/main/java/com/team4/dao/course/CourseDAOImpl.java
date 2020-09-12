@@ -8,8 +8,10 @@ import com.team4.util.SqlSessionFactoryBean;
 import com.team4.vo.CommentVo;
 import com.team4.vo.CoursePosesVo;
 import com.team4.vo.CourseVo;
+import com.team4.vo.DiffiVo;
 import com.team4.vo.PagingVo;
 import com.team4.vo.PoseVo;
+import com.team4.vo.UserVo;
 
 public class CourseDAOImpl implements CourseDAO {
 	
@@ -78,6 +80,41 @@ public class CourseDAOImpl implements CourseDAO {
 	@Override
 	public List<Integer> courseAll() throws Exception {
 		return mybatis.selectList("CourseDao.courseAll");
+	}
+
+	@Override
+	public List<CourseVo> searchCourse(int uNum,String sort) throws Exception{	
+		if(uNum == 101 && sort==null) {
+			return mybatis.selectList("CourseDao.searchCourse");				
+		}else if(uNum != 101 && sort == null) {	
+			return mybatis.selectList("CourseDao.searchCourse_user");		
+		}else if(sort.equals("date")) {
+			return mybatis.selectList("CourseDao.searchCourse_date");
+		}else if(sort.equals("total")) {
+			return mybatis.selectList("CourseDao.searchCourse_total");
+		}else/* if(sort.equals("totalComment"))*/ {
+			return mybatis.selectList("CourseDao.searchCourse_totalComment");
+		}
+	}
+
+	@Override
+	public UserVo makerInfo(CourseVo vo) throws Exception {
+		return mybatis.selectOne("CourseDao.userThing", vo);
+	}
+
+	@Override
+	public int userCount(CourseVo vo) throws Exception {
+		return mybatis.selectOne("CourseDao.userCount",vo);
+	}
+
+	@Override
+	public DiffiVo courseDiffi(CourseVo vo) throws Exception {
+		return mybatis.selectOne("CourseDao.courseDiffi", vo);
+	}
+
+	@Override
+	public List<CommentVo> commentAllMore(CourseVo vo) throws Exception {
+		return mybatis.selectList("CourseDao.commentAllMore",vo);
 	}
 	
 	
