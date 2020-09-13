@@ -37,11 +37,11 @@
 									type="hidden" id="seq8" name="seq8" value="">
 
 								<div class="course_title">
-									<input type="text" name="title" class="textbox1"
+									<input type="text" name="title" class="title_box"
 										placeholder="코스의 제목을 입력하세요">
 								</div>
 								<div class="course_explain">
-									<input type="text" name="dscrt" class="textbox2"
+									<input type="text" name="dscrt" class="description_box"
 										placeholder="설명추가">
 								</div>
 								<div class="course_upload">
@@ -53,11 +53,11 @@
 								</select>
 
 								<div class="course_search">
-									<input type="text" id="searching_box" class="textbox3"
+									<input type="text" id="searching_box" class="search"
 										placeholder="원하는 포즈명을 검색해보세요">
 								</div>
-								<div class="">
-									<input type="text" id="keyword_box" name="keywordBox" placeholder="키우드를 입력하세">
+								<div class="course_keyword">
+									<input type="text" class="keyword_box" name="keywordBox" placeholder="키우드를 입력하세">
 								</div>
 						</div>
 						<div class="pose_info_box">
@@ -81,10 +81,12 @@
 				</div>
 			</div>
 		</div>
-		<input type="submit" class="addItem" value="나의 코스목록에 추가">
+		<input type="button" class="addItem" value="나의 코스목록에 추가">
 		</form>
 	</main>
 	<footer> </footer>
+<script>
 
+</script>
 </body>
 </html>

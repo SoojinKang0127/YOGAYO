@@ -1,17 +1,6 @@
 $(function () {
 
-
-    $('.testbutton').click(function () {
-        $('.textbox1').val()
-        $('.textbox2').val()
-
-        document.createElement('input')
-
-
-    })
-
     var request = new XMLHttpRequest();
-
     var arr = $('.course_search > .textbox')
     var box = arr[0]
     var doc = $('body')
@@ -108,25 +97,26 @@ $(function () {
                     left: Math.floor(this.clientWidth / 2),
                     top: Math.floor(this.clientHeight / 2)
                 });
+            }, stop: function (params) {
+                $('#sortable_list2 .trashBtn').click(function () {
+                    $(this).parent().remove();
+                })
             }
+            
         });
 
         $('ul,li').disableSelection();
 
         const click_obj = $('#object1')
-
+       
+       
+       
 
 
 
         $('.pose_content_box').dblclick(function () {
-            var index;
-            var indexarr = [];
             var clone = $(this).clone()
             clone.insertBefore(click_obj).hide().show('slow');
-            $('#sortable_list2 .trashBtn').click(function () {
-                $(this).parent().remove();
-                // document.getElementById('mypage_container').innerHTML += "<input type=\"hidden\" name=\"seq" + i + "\" value=\"" + shift_num + "\"><br>";
-            })
             var a = document.getElementById('object1')
             var formTag = document.getElementById('form_tag')
 
@@ -134,65 +124,73 @@ $(function () {
             a.innerHTML += '<input type="hidden" name="seq' + $('#sortable_list2').length + '" value="' + $(this.pnum).val() + '">';
 
             console.log(a)
+            $('#sortable_list2 .trashBtn').click(function () {
+                $(this).parent().remove();
         })//end of dbclick
-
+        
+        })
     }//end of ajax
 
 
 
-
+var form = $("#form_tag");
 
 
     $('.addItem').click(function () {
-        var list_num = $('#sortable_list2').find('.pose_content_box');
+
+        var title = $(".title_box").val();
+        var desc = $('.description_box').val();
+        var coursethumbnail = document.getElementById('coursethumbnail');
+    
+        if(title.length == 0 || desc.length == 0){
+            alert("제대로 입력해주세요");
+            return;
+        } else if(coursethumbnail.files.length == 0 ){
+            alert("사진을 등록해주세요")
+            return;
+        } 
+        else {
+            alert("코스를 등록했음")
+
+            var list_num = $('#sortable_list2').find('.pose_content_box');
 
 
-        indexarr = [];
-        for (var i = 0; i < list_num.length; i++) {
-            index = $('#sortable_list2 .pnum').eq(i).text();
-            indexarr.push(index);
-        }
-
-        console.log(indexarr);
-
-
-
-        for (var i = 1; i <= list_num.length; i++) {
-            
-            var shift_num = indexarr.shift()
-
-            
-
-            if(i == 1){
-                seq = $('#seq1');
-            }else if(i ==2){
-                seq = $('#seq2');
-            }else if(i ==3){
-                seq = $('#seq3');
-            }else if(i ==4){
-                seq = $('#seq4');
-            }else if(i ==5){
-                seq = $('#seq5');
-            }else if(i ==6){
-                seq = $('#seq6');
-            }else if(i ==7){
-                seq = $('#seq7');
-            }else if(i ==8){
-                seq = $('#seq8');
+            indexarr = [];
+            for (var i = 0; i < list_num.length; i++) {
+                index = $('#sortable_list2 .pnum').eq(i).text();
+                indexarr.push(index);
             }
-
-
-            seq.attr("value", shift_num);
-
-            //document.getElementById('mypage_container').innerHTML += "<input type=\"hidden\" name=\"seq" + i + "\" value=\"" + shift_num + "\"><br>";
+    
+            console.log(indexarr);
+    
+    
+    
+            for (var i = 1; i <= list_num.length; i++) {
+                
+                var shift_num = indexarr.shift()
+    
+                if(i == 1){
+                    seq = $('#seq1');
+                }else if(i ==2){
+                    seq = $('#seq2');
+                }else if(i ==3){
+                    seq = $('#seq3');
+                }else if(i ==4){
+                    seq = $('#seq4');
+                }else if(i ==5){
+                    seq = $('#seq5');
+                }else if(i ==6){
+                    seq = $('#seq6');
+                }else if(i ==7){
+                    seq = $('#seq7');
+                }else if(i ==8){
+                    seq = $('#seq8');
+                }
+                seq.attr("value", shift_num);
+            }
+            form.submit();
         }
-
-
+//////////////////////////////////////////////////////
     })
-
-
-
-
-
 
 }) //end of ready

@@ -62,7 +62,8 @@ li {
 
 
 
-버튼 디자인 
+
+
 .textbox:hover {
   width: 50%;
   border: 2px solid white;
@@ -89,7 +90,6 @@ li {
 }
 
 .textbox:focus::-webkit-input-placeholder {  color:transparent; }
-
 
 .textbox1 {
     width: 50%;
@@ -491,7 +491,6 @@ i {
 }
 
 
-
 .difficulty {
     margin-left: 3px;
 }
@@ -499,29 +498,3 @@ i {
 .pnum {
     visibility: hidden; 
 }
-/* 
-#sortable_list2 > .pose_content_box {
-	
-	height: 120px;
-	
-}
-
-#sortable_list2 > .pose_content_box .s1_img {
-	
-	height: 120px;
-	width : 200px;
-}
-
-#sortable_list2 > .pose_content_box .pose_textarea {
-	
-	height: 118px;
-	
-}
-
-#sortable_list2 > .pose_content_box > .trashBtn {
-	
-	line-height : 60px;
-	margin-top: 60px;
-	margin-left:15px;
-	
-} */

@@ -1,12 +1,9 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=master
 AbstractTextEditor.Color.Background.SystemDefault=false
 AbstractTextEditor.Color.SelectionBackground.SystemDefault=false
 AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 STS4BootMarkerIndicationColor=56,84,26
->>>>>>> master
->>>>>>> master
 eclipse.preferences.version=1
 overviewRuler_migration=migrated_3.1
