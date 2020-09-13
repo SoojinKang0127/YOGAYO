@@ -74,7 +74,7 @@
 	<select id="commentAll" parameterType="CommentVo"
 		resultType="CommentVo">
 		SELECT * FROM COMMENT WHERE CRSNUM=#{crsNum} AND PARENT IS
-		NULL order by CMTNUM desc
+		NULL order by CMTNUM DESC
 	</select>
 
 	<select id="commentCount" parameterType="CommentVo"
@@ -93,7 +93,7 @@
 		NULL ORDER BY CMTNUM DESC
 	</select>
 
-	<select id="selectAll" resultType="CourseVo" parameterType="map">
+	<select id="selectAll" resultType="CourseVo" parameterType="int">
 		<!-- 테이블명 대소문자 구분 -->
 		SELECT C.CRSNUM, C.TITLE, C.UNUM, C.DSCRT, C.MATERIAL, C.IMGPATH,
 		C.REGDATE, IFNULL(R.TOTAL,0) as total, IFNULL(R.TOTALCOMMENT,0) as
@@ -104,8 +104,10 @@
 		ON C.CRSNUM = R.CRSNUM
 		ORDER BY
 		CRSNUM DESC
+		LIMIT #{startNum},16
 	</select>
-	<select id="searchCourse" parameterType="map"
+	
+	<select id="searchCourse" parameterType="int"
 		resultType="CourseVo">
 		<!-- 테이블명 대소문자 구분 -->
 		SELECT C.CRSNUM, C.TITLE, C.UNUM, C.IMGPATH, C.REGDATE,
@@ -116,9 +118,10 @@
 		ON C.CRSNUM = R.CRSNUM
 		WHERE C.UNUM=101
 		ORDER BY CRSNUM DESC
+		LIMIT #{startNum},16
 		<!--SELECT * FROM COURSE WHERE UNUM=101 ORDER BY CRSNUM DESC -->
 	</select>
-	<select id="searchCourse_user" parameterType="map"
+	<select id="searchCourse_user" parameterType="int"
 		resultType="CourseVo">
 		<!-- 테이블명 대소문자 구분 -->
 		<!--SELECT * FROM COURSE WHERE UNUM!=101 ORDER BY CRSNUM DESC -->
@@ -130,9 +133,10 @@
 		ON C.CRSNUM = R.CRSNUM
 		WHERE C.UNUM!=101
 		ORDER BY CRSNUM DESC
+		LIMIT #{startNum},16
 	</select>
 
-	<select id="searchCourse_date" parameterType="map"
+	<select id="searchCourse_date" parameterType="int"
 		resultType="CourseVo">
 		<!-- 테이블명 대소문자 구분 -->
 		<!--SELECT * FROM COURSE WHERE UNUM!=101 ORDER BY CRSNUM DESC -->
@@ -144,9 +148,10 @@
 		ON C.CRSNUM = R.CRSNUM
 		ORDER BY REGDATE
 		DESC
+		LIMIT #{startNum},16
 	</select>
 
-	<select id="searchCourse_total" parameterType="map"
+	<select id="searchCourse_total" parameterType="int"
 		resultType="CourseVo">
 		<!-- 테이블명 대소문자 구분 -->
 		<!--SELECT * FROM COURSE WHERE UNUM!=101 ORDER BY CRSNUM DESC -->
@@ -158,9 +163,10 @@
 		ON C.CRSNUM = R.CRSNUM
 		ORDER BY TOTAL
 		DESC
+		LIMIT #{startNum},16
 	</select>
 
-	<select id="searchCourse_totalComment" parameterType="map"
+	<select id="searchCourse_totalComment" parameterType="int"
 		resultType="CourseVo">
 		<!-- 테이블명 대소문자 구분 -->
 		<!--SELECT * FROM COURSE WHERE UNUM!=101 ORDER BY CRSNUM DESC -->
@@ -172,6 +178,7 @@
 		ON C.CRSNUM = R.CRSNUM
 		ORDER BY
 		TOTALCOMMENT DESC
+		LIMIT #{startNum},16
 	</select>
 
 	<!-- <select id="searchCourse_more" resultType="CourseVo"

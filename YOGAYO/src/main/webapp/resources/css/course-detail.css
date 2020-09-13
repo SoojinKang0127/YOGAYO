@@ -142,7 +142,7 @@ main {
    margin-top: 26px;
 }
 
-.course_detail-users,{
+.course_detail-users{
   /* border:1px solid red; */
   width: 50%;
   font-size: 15pt;
@@ -401,6 +401,7 @@ main {
 }
 
 .course_detail-review_profile_img {
+	/* border:1px solid red; */
   display: flex;
   flex-direction: row;
   margin-bottom: 24px;
@@ -408,10 +409,10 @@ main {
 }
 
 .course_detail-review_profile_img img {
+	/* border:1px solid red; */
   width: 54px;
   height: 54px;
-  border-radius: 50px;
-  
+  border-radius: 50px; 
 }
 
 .course_detail-review_user_info {
@@ -483,14 +484,17 @@ main {
 
 .review_review{
 	/* border:1px solid red;  */
+	width:100%;
 }
 
 .review_review #comment_text{
-	width:90%;
+	width:89%;
 	height:23px;
+	margin-right:15px;
 }
 
 .review_review #comment_btn{
+	border:1px solid red;
   all: unset;
   cursor: pointer;
   text-align: center;
@@ -1113,12 +1117,26 @@ main {
 	flex-direction: row;
 	align-items: center;
 	margin-bottom: 24px;
+	/* border:1px solid red; */
 }
+
+.course_detail-review_profile_img div{
+   /*  border:1px solid red; */
+	}
+	
+.course_detail-review_profile_img .nothing{
+	/* border:1px solid blue; */
+	display:flex;
+	align-items:flex-start;
+}	
+	
 
 .course_detail-review_profile_img img {
 	width: 54px;
 	height: 54px;
 	border-radius: 50px;
+	/* border:1px solid red; */
+	margin-top:0px;
 }
 
 .course_detail-review_user_info {

@@ -10,8 +10,8 @@ import com.team4.vo.UserVo;
 
 public interface CourseDAO {
 	public void makeCourse(CourseVo vo) throws Exception;
-	public List<CourseVo> selectAll() throws Exception;
-	public List<CourseVo> searchCourse(int uNum, String sort) throws Exception;
+	public List<CourseVo> selectAll(int startNum) throws Exception;
+	public List<CourseVo> searchCourse(int uNum, String sort, int StartNum) throws Exception;
 	public CourseVo selectOne(CourseVo vo) throws Exception;
 	public int getLastCnum() throws Exception;
 	public CoursePosesVo coursePoses(CourseVo vo) throws Exception;

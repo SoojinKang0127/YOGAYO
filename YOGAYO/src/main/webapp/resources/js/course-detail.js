@@ -1,11 +1,13 @@
 $(window).ready(function() {
-	if (rate_people_num < 7) {
-		$('#more_btn').hide();
+		
+	if ( rate_people_num< 7) {
+		$('#more_review_btn').hide();
 	} else {
-		$('#more_btn').show();
+		$('#more_review_btn').show();
 	}
 
-	$('#more_review_btn').on("click", function() {
+	/*$('#more_review_btn').on("click", function() {
+		alert('더보여주라');
 		$.ajax({
 			type:"post",
 			async : true,
@@ -26,7 +28,7 @@ $(window).ready(function() {
 						+ request.responseText + "\n" + "error:" + error);
 			}
 		});
-	})
+	})*/
 	
 	$('#review_btn').click(function(){
 		$('#text_box').val("");

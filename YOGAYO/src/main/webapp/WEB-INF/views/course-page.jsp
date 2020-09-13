@@ -73,7 +73,7 @@
 		<!-- <form id="searchTxtForm">  -->
 			<div class="course-courses_container">
 				<div class="courses_first_line">
-					<c:forEach var="i" items="${courses}" begin="1" end="16">
+					<c:forEach var="i" items="${courses}" varStatus="status" >
 						<div class="up-on-scroll">
 							<div class="course_container">
 								<a

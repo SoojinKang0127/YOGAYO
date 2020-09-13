@@ -18,8 +18,8 @@ public class CourseServiceImpl implements CourseService {
 	}
 
 	@Override
-	public List<CourseVo> selectAll() throws Exception {
-		return dao.selectAll();
+	public List<CourseVo> selectAll(int startNum) throws Exception {
+		return dao.selectAll(startNum);
 	}
 
 	@Override
@@ -77,8 +77,8 @@ public class CourseServiceImpl implements CourseService {
 	}
 
 	@Override
-	public List<CourseVo> searchCourse(int uNum, String sort) throws Exception {
-		return dao.searchCourse(uNum, sort);
+	public List<CourseVo> searchCourse(int uNum, String sort, int startNum) throws Exception {
+		return dao.searchCourse(uNum, sort, startNum);
 	}
 
 	@Override

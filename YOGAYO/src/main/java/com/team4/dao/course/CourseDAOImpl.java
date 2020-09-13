@@ -27,8 +27,8 @@ public class CourseDAOImpl implements CourseDAO {
 		mybatis.commit();
 	}
 	
-	public List<CourseVo> selectAll() throws Exception{
-		return mybatis.selectList("CourseDao.selectAll");
+	public List<CourseVo> selectAll(int startNum) throws Exception{
+		return mybatis.selectList("CourseDao.selectAll" , startNum);
 	}
 
 	@Override
@@ -83,17 +83,22 @@ public class CourseDAOImpl implements CourseDAO {
 	}
 
 	@Override
-	public List<CourseVo> searchCourse(int uNum,String sort) throws Exception{	
+	public List<CourseVo> searchCourse(int uNum,String sort, int startNum) throws Exception{	
 		if(uNum == 101 && sort==null) {
-			return mybatis.selectList("CourseDao.searchCourse");				
+			System.out.println("Dao : CourseDao.searchCourse");
+			return mybatis.selectList("CourseDao.searchCourse", startNum);				
 		}else if(uNum != 101 && sort == null) {	
-			return mybatis.selectList("CourseDao.searchCourse_user");		
+			System.out.println("Dao : CourseDao.searchCourse_user");
+			return mybatis.selectList("CourseDao.searchCourse_user", startNum);		
 		}else if(sort.equals("date")) {
-			return mybatis.selectList("CourseDao.searchCourse_date");
+			System.out.println("Dao : CourseDao.searchCourse_date");
+			return mybatis.selectList("CourseDao.searchCourse_date", startNum);
 		}else if(sort.equals("total")) {
-			return mybatis.selectList("CourseDao.searchCourse_total");
+			System.out.println("Dao : CourseDao.searchCourse_total");
+			return mybatis.selectList("CourseDao.searchCourse_total", startNum);
 		}else/* if(sort.equals("totalComment"))*/ {
-			return mybatis.selectList("CourseDao.searchCourse_totalComment");
+			System.out.println("Dao : CourseDao.searchCourse_totalComment");
+			return mybatis.selectList("CourseDao.searchCourse_totalComment", startNum);
 		}
 	}
 

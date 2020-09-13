@@ -85,6 +85,7 @@ public class CourseController {
 				json = json + "\"" + i + "\":" + reviewList.get(i).toString() + "\"name\":" + "\"" + uvo.getName()
 						+ "\"," + "\"img\":" + "\"" + uvo.getImg() + "\"" + "},";
 			}
+			
 			json = json + "}, \"avg\":" + Double.toString(cmavg);
 			json = json + "}";
 
@@ -149,17 +150,24 @@ public class CourseController {
 	}
 
 	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
-	public String coueseTitle(Model model) throws Exception {
-		List<CourseVo> list = service.selectAll();
+	public String coueseTitle(Model model,  @RequestParam(value="startNum", required=false, defaultValue="0") int startNum) throws Exception {
+		if(startNum!=0) {
+			startNum = startNum+1;
+		}
+		List<CourseVo> list = service.selectAll(startNum);
 		model.addAttribute("courses", list);
 		return "course-page";
 	}
 	
 	@ResponseBody
 	@RequestMapping(value = "/course-page-ajax", method = RequestMethod.POST)
-	public Map courseTitleAjax(Model model) throws Exception {
-		List<CourseVo> list = service.selectAll();
-		model.addAttribute("courses", list);
+	public Map courseTitleAjax(@RequestParam(value="startNum", required=false, defaultValue="0") int startNum) throws Exception {
+		if(startNum!=0) {
+			startNum = startNum+1;
+		}
+		System.out.println(startNum);
+		List<CourseVo> list = service.selectAll(startNum);
+		
 		Map searchMap = new HashMap();
 		searchMap.put("result", list);
 		return searchMap;
@@ -168,20 +176,23 @@ public class CourseController {
 	@ResponseBody
 	@RequestMapping(value = "/search-course", method = RequestMethod.POST)
 	public Map searchCourse(@RequestParam(value = "searchType", required = false) String searchType,
-			@RequestParam(value = "sort", required = false) String sort) throws Exception {
+			@RequestParam(value = "sort", required = false) String sort,
+			@RequestParam(value="startNum", required=false, defaultValue="0") int startNum) throws Exception {
 		System.out.println("searchType : " + searchType);
 		System.out.println("sort : " + sort);
+		if(startNum!=0) {
+			startNum = startNum+1;
+		}
+		System.out.println(startNum);
 		Map searchMap = new HashMap();
 		int uNum = 0;
 		if (searchType.equals("pro")) {
 			uNum = 101;
-		}
-		;
+		};
 		if (sort != null) {
-
 			uNum = 0;
-		}
-		List<CourseVo> list = service.searchCourse(uNum, sort);
+		};
+		List<CourseVo> list = service.searchCourse(uNum, sort, startNum);
 		searchMap.put("result", list);
 		return searchMap;
 	}
@@ -190,6 +201,7 @@ public class CourseController {
 	public String addReview(CommentVo cvo, Model model, @RequestParam("uNum") int uNum,
 			@RequestParam("crsNum") int crsNum, @RequestParam("review") String context,
 			@RequestParam("parent") int parent) {
+		System.out.println(crsNum + " + addReview");
 		cvo = new CommentVo();
 		cvo.setuNum(uNum);
 		cvo.setCrsNum(crsNum);
