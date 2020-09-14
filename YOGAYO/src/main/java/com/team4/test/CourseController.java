@@ -1,7 +1,9 @@
 package com.team4.test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,19 +13,25 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.team4.dao.course.CourseServiceImpl;
 import com.team4.dao.pose.PoseServiceImpl;
+import com.team4.user.dao.UserServiceImpl;
 import com.team4.vo.CommentVo;
 import com.team4.vo.CoursePosesVo;
 import com.team4.vo.CourseVo;
+import com.team4.vo.DiffiVo;
+import com.team4.vo.FeedVo;
+import com.team4.vo.UserVo;
 
 @Controller
 public class CourseController {
 
 	CourseServiceImpl service = new CourseServiceImpl();
 	PoseServiceImpl pService = new PoseServiceImpl();
+	UserServiceImpl uService = new UserServiceImpl();
 
 	@RequestMapping(value = "/course-detail-upload-comment", method = RequestMethod.POST)
 	public void uploadComment(Model model, @RequestParam("crsNum") int crsNum, @RequestParam("uNum") int uNum,
@@ -56,7 +64,6 @@ public class CourseController {
 		try {
 			cmavg = service.commentAvg(crsvo);
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 
@@ -64,14 +71,71 @@ public class CourseController {
 			commentList = service.commentAll(crsVo);
 			reviewList = service.reviewAll(crsVo);
 			String json = "{\"comment\":{";
-
+			UserVo uvo = new UserVo();
 			for (int i = 0; i < commentList.size(); i++) {
-				json = json + "\"" + i + "\":" + commentList.get(i).toString() + ",";
+				uvo = uService.getUserByCommentVo(commentList.get(i));
+				json = json + "\"" + i + "\":" + commentList.get(i).toString() + "\"name\":" + "\"" + uvo.getName()
+						+ "\"," + "\"img\":" + "\"" + uvo.getImg() + "\"" + "},";
+
 			}
 			json = json + "}, \"review\":{";
 
 			for (int i = 0; i < reviewList.size(); i++) {
-				json = json + "\"" + i + "\":" + reviewList.get(i).toString() + ",";
+				uvo = uService.getUserByCommentVo(reviewList.get(i));
+				json = json + "\"" + i + "\":" + reviewList.get(i).toString() + "\"name\":" + "\"" + uvo.getName()
+						+ "\"," + "\"img\":" + "\"" + uvo.getImg() + "\"" + "},";
+			}
+			
+			json = json + "}, \"avg\":" + Double.toString(cmavg);
+			json = json + "}";
+
+			System.out.println(json);
+			res.getWriter().write(json);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	@RequestMapping(value = "/course-detail", method = RequestMethod.POST)
+	public void ajaxCourse(Model model, @RequestParam("crsNum") int crsNum, HttpServletResponse res) {
+
+		CourseVo crsvo = new CourseVo();
+		crsvo.setCrsNum(crsNum);
+		double cmavg = 0.0;
+
+		// 새 댓글을 포함한 코스에 관련된 댓글들을 다시 jsp 쏴줘야됨
+
+		CourseVo crsVo = new CourseVo();
+		crsVo.setCrsNum(crsNum);
+		List<CommentVo> commentList;
+		List<CommentVo> reviewList;
+
+		// 평점 추가하는 부분
+		try {
+			cmavg = service.commentAvg(crsvo);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+
+		try {
+			commentList = service.commentAll(crsVo);
+			reviewList = service.reviewAll(crsVo);
+			String json = "{\"comment\":{";
+			UserVo uvo = new UserVo();
+			for (int i = 0; i < commentList.size(); i++) {
+				uvo = uService.getUserByCommentVo(commentList.get(i));
+				json = json + "\"" + i + "\":" + commentList.get(i).toString() + "\"name\":" + "\"" + uvo.getName()
+						+ "\"," + "\"img\":" + "\"" + uvo.getImg() + "\"" + "},";
+
+			}
+			json = json + "}, \"review\":{";
+
+			for (int i = 0; i < reviewList.size(); i++) {
+				uvo = uService.getUserByCommentVo(reviewList.get(i));
+				json = json + "\"" + i + "\":" + reviewList.get(i).toString() + "\"name\":" + "\"" + uvo.getName()
+						+ "\"," + "\"img\":" + "\"" + uvo.getImg() + "\"" + "},";
 			}
 			json = json + "}, \"avg\":" + Double.toString(cmavg);
 			json = json + "}";
@@ -86,16 +150,58 @@ public class CourseController {
 	}
 
 	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
-	public String coueseTitle(Model model) throws Exception {
-		List<CourseVo> list = service.selectAll();
+	public String coueseTitle(Model model,  @RequestParam(value="startNum", required=false, defaultValue="0") int startNum) throws Exception {
+		if(startNum!=0) {
+			startNum = startNum+1;
+		}
+		List<CourseVo> list = service.selectAll(startNum);
 		model.addAttribute("courses", list);
 		return "course-page";
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/course-page-ajax", method = RequestMethod.POST)
+	public Map courseTitleAjax(@RequestParam(value="startNum", required=false, defaultValue="0") int startNum) throws Exception {
+		if(startNum!=0) {
+			startNum = startNum+1;
+		}
+		System.out.println(startNum);
+		List<CourseVo> list = service.selectAll(startNum);
+		
+		Map searchMap = new HashMap();
+		searchMap.put("result", list);
+		return searchMap;
+	}
+
+	@ResponseBody
+	@RequestMapping(value = "/search-course", method = RequestMethod.POST)
+	public Map searchCourse(@RequestParam(value = "searchType", required = false) String searchType,
+			@RequestParam(value = "sort", required = false) String sort,
+			@RequestParam(value="startNum", required=false, defaultValue="0") int startNum) throws Exception {
+		System.out.println("searchType : " + searchType);
+		System.out.println("sort : " + sort);
+		if(startNum!=0) {
+			startNum = startNum+1;
+		}
+		System.out.println(startNum);
+		Map searchMap = new HashMap();
+		int uNum = 0;
+		if (searchType.equals("pro")) {
+			uNum = 101;
+		};
+		if (sort != null) {
+			uNum = 0;
+		};
+		List<CourseVo> list = service.searchCourse(uNum, sort, startNum);
+		searchMap.put("result", list);
+		return searchMap;
 	}
 
 	@RequestMapping(value = "/addReview", method = RequestMethod.GET)
 	public String addReview(CommentVo cvo, Model model, @RequestParam("uNum") int uNum,
 			@RequestParam("crsNum") int crsNum, @RequestParam("review") String context,
 			@RequestParam("parent") int parent) {
+		System.out.println(crsNum + " + addReview");
 		cvo = new CommentVo();
 		cvo.setuNum(uNum);
 		cvo.setCrsNum(crsNum);
@@ -127,10 +233,29 @@ public class CourseController {
 
 		return "redirect:/course-detail?crsNum=" + crsNum;
 	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/comment_more", method = RequestMethod.POST)
+	public Map comment_more(CommentVo cvo, CourseVo vo, Model model,
+			@RequestParam(value = "crsNum", required = false) int crsNum,
+			@RequestParam(value = "commentMore", required = false) String commentMore) {
+
+		List<CommentVo> commentList = new ArrayList();
+		vo.setCrsNum(crsNum);
+		Map result = new HashMap();
+		try {
+			commentList = service.commentAllMore(vo);
+			System.out.println(commentList.get(0).getContext());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		result.put("result", commentList);
+		return result;
+	}
 
 	@RequestMapping(value = "/course-detail", method = RequestMethod.GET)
-	public String makeCourse(CourseVo vo, CoursePosesVo cpvo, HttpServletRequest req, RedirectAttributes rttr,
-			Model model, @RequestParam("crsNum") int crsNum) throws Exception {
+	public String makeCourse(CourseVo vo, CoursePosesVo cpvo, UserVo uv, FeedVo fv, HttpServletRequest req,
+			RedirectAttributes rttr, Model model, @RequestParam("crsNum") int crsNum) throws Exception {
 		int totalTime = 0;
 		int totalMin = 0;
 		int totalSec = 0;
@@ -147,15 +272,49 @@ public class CourseController {
 		List<CommentVo> reviewList;
 		int cmc;
 		double cmavg;
+		int userCount;
+		DiffiVo dv;
+		String diffi;
 
 		try {
+
+			dv = service.courseDiffi(vo);
+			model.addAttribute("diffi", dv);
+
+			int[] diffiArr = { Integer.parseInt(dv.getDiff1()), Integer.parseInt(dv.getDiff2()),
+					Integer.parseInt(dv.getDiff3()), Integer.parseInt(dv.getDiff4()), Integer.parseInt(dv.getDiff5()),
+					Integer.parseInt(dv.getDiff6()), Integer.parseInt(dv.getDiff7()), Integer.parseInt(dv.getDiff8()) };
+			int sum = 0;
+			double totalDiffi = 0;
+			String difficulty = "";
+			for (int i = 0; i < diffiArr.length; i++) {
+				sum += diffiArr[i];
+				// System.out.println(sum);
+				totalDiffi = sum / 8;
+				if (totalDiffi < 2) {
+					diffi = "쉬움";
+				} else if (totalDiffi > 2 || totalDiffi < 4) {
+					diffi = "보통";
+				} else {
+					diffi = "어려움";
+				}
+				difficulty = diffi;
+			}
+
+			model.addAttribute("difficulty", difficulty);
+
+			userCount = service.userCount(vo);
+			model.addAttribute("userCount", userCount);
+
+			uv = service.makerInfo(vo);
+			model.addAttribute("makerInfo", uv);
 
 			course = service.selectOne(vo);
 			model.addAttribute("course", course);
 
 			cpv = service.coursePoses(vo);
 			model.addAttribute("coursePoses", cpv);
-			
+
 			int[] timeArr = { Integer.parseInt(cpv.getTime1()), Integer.parseInt(cpv.getTime2()),
 					Integer.parseInt(cpv.getTime3()), Integer.parseInt(cpv.getTime4()),
 					Integer.parseInt(cpv.getTime5()), Integer.parseInt(cpv.getTime6()),
@@ -209,9 +368,6 @@ public class CourseController {
 
 			reviewList = service.reviewAll(vo);
 			model.addAttribute("reviewList", reviewList);
-
-	
-			
 
 		} catch (Exception e) {
 			System.out.println("[CourseController /  makeCourse]" + e.toString());

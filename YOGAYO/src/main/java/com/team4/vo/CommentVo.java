@@ -70,7 +70,7 @@ public class CommentVo {
 	@Override
 	public String toString() {
 		return "{\"cmtNum\":" + cmtNum + ", \"uNum\":" + uNum + ", \"crsNum\":" + crsNum + ", \"rate\":" + rate + ", \"context\":"
-				+ "\""+context+"\"" + ", \"parent\":" + parent + ", \"regDate\":" +"\""+ regDate+"\"" + "}";
+				+ "\""+context+"\"" + ", \"parent\":" + parent + ", \"regDate\":" +"\""+ regDate+"\"" + ",";
 	}
 
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import com.team4.util.SqlSessionFactoryBean;
+import com.team4.vo.CommentVo;
 import com.team4.vo.CourseVo;
 import com.team4.vo.FeedVo;
 import com.team4.vo.UserVo;
@@ -140,6 +141,25 @@ public class UserDAOImpl implements UserDAO {
 		return mybatis.selectList("UserDao.selectAllUser");
 	}
 
+
+	@Override
+	public String getUName(CourseVo vo) throws Exception {
+		
+		return mybatis.selectOne("UserDao.getUName", vo);
+	}
+
+
+	@Override
+	public List<Integer> selectExceptMe(UserVo vo) throws Exception {
+		return mybatis.selectList("UserDao.selectExceptMe", vo);
+	}
+
+
+	@Override
+	public UserVo getUserByCommentVo(CommentVo vo) throws Exception {
+		return mybatis.selectOne("UserDao.getUserByCommentVo", vo);
+	}
+	
 	
 
 
