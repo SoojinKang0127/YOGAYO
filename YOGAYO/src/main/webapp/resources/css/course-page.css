@@ -152,47 +152,75 @@ main {
 	padding-top: 60px;
 }
 
+.course-courses_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-item: center;
+}
+
+.more_course_btn {
+	display: flex;
+	justify-content: center;
+	align-item: center;
+	margin-bottom:50px;
+}
+
+.more_course_btn #more_course_btn {
+	all: unset;
+	cursor: pointer;
+	width: 20%;
+	height: 48px;
+	text-align: center;
+	border-radius: 10px;
+	font-size: 13pt;
+	background-color: white;
+	border: 1px solid black;
+	margin-bottom: 50px;
+	box-shadow: var(- -light-shadow);
+}
+
 .course-courses_container .course_container img {
 	width: 100%;
 	height: 330px;
 }
 
-.up-on-scroll{
+.up-on-scroll {
 	font-weight: 400;
-	width:25%;
+	width: 25%;
 }
 
 .course_container {
 	font-weight: 400;
 	margin-bottom: 110px;
-	width:95%;
-	margin-left:10px;
+	width: 95%;
+	margin-left: 10px;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-.course_container a{
-	color:black;
+<<<<<<<
+HEAD
+ ======= <<<<<<< HEAD
+.course_container a {
+	color: black;
 }
 
 =======
->>>>>>> master
->>>>>>> master
+>>>>>>>
+master> >>>>>> master
 .course_container .course_star_rating {
 	font-size: 11pt;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-.course_star_rating i{
-	color:var(--theme-color);
+<<<<<<<
+HEAD
+ ======= <<<<<<< HEAD
+.course_star_rating i {
+	color: var(- -theme-color);
 }
 
 =======
->>>>>>> master
->>>>>>> master
+>>>>>>>
+master> >>>>>> master
 .footer {
 	width: 100%;
 	height: 70px;

@@ -5,51 +5,10 @@
 <mapper namespace="AdminDAO">
 
 	<select id="getAllComment" resultType="AdminVo">
-		SELECT c.CMTNUM,
-		c.REGDATE, u.IMG, c.UNUM ,u.NAME, c.CRSNUM, c.RATE, c.PARENT,
+		SELECT c.CMTNUM, c.REGDATE, u.IMG, c.UNUM ,u.NAME, c.CRSNUM, c.RATE,
 		c.context
 		FROM COMMENT c, USER u
-		WHERE c.UNUM = u.UNUM order by REGDATE
-		DESC;
-	</select>
-
-	<delete id="deleteComment">
-		DELETE FROM COMMENT WHERE CMTNUM = #{cmtNum} OR
-		PARENT = #{parent};
-	</delete>
-
-	<select id="getAllCourse" resultType="AdminVo">
-		SELECT c.CRSNUM, u.NAME,
-		c.TITLE AS crsTitle, c.DSCRT AS crsDscrt, c.MATERIAL, c.IMGPATH AS
-		img, c.SEQ1 AS seq1Num, c.SEQ2 AS seq2Num, c.SEQ3 AS seq3Num,
-		c.SEQ4 AS
-		seq4Num, c.SEQ5 AS seq5Num, c.SEQ6 AS seq6Num, c.SEQ7 AS seq7Num,
-		c.SEQ8 AS seq8Num
-		FROM COURSE c, USER u
 		WHERE c.UNUM = u.UNUM;
 	</select>
-
-	<select id="getOneCourseByCrsnum" resultType="AdminVo">
-		SELECT c.CRSNUM,
-		u.NAME, c.UNUM,
-		c.TITLE AS crsTitle, c.DSCRT AS crsDscrt, c.MATERIAL,
-		c.IMGPATH AS
-		img, c.SEQ1 AS seq1Num, c.SEQ2 AS seq2Num, c.SEQ3 AS
-		seq3Num,
-		c.SEQ4 AS
-		seq4Num, c.SEQ5 AS seq5Num, c.SEQ6 AS seq6Num, c.SEQ7
-		AS seq7Num,
-		c.SEQ8 AS seq8Num
-		FROM COURSE c, USER u
-		WHERE c.UNUM = u.UNUM
-		AND c.CRSNUM = #{crsNum};
-	</select>
-
-	<update id="courseUpdate" parameterType="AdminVo">
-		UPDATE COURSE SET TITLE
-		= #{crsTitle}, DSCRT = #{crsDscrt}, MATERIAL = #{material}, SEQ1 = #{seq1Num}, SEQ2 = #{seq2Num}, SEQ3 = #{seq3Num},
-		SEQ4 = #{seq4Num}, SEQ5 = #{seq5Num}, SEQ6 = #{seq6Num}, SEQ7 = #{seq7Num}, SEQ8 = #{seq8Num}
-		WHERE CRSNUM = #{crsNum};
-	</update>
 
 </mapper>

@@ -18,7 +18,24 @@ public class CourseVo {
 	int seq7;
 	int seq8;
 	Date regDate;
+	String total;
+	String totalComment;
+	
+	public String getTotal() {
+		return total;
+	}
 
+	public void setTotal(String total) {
+		this.total = total;
+	}
+
+	public String getTotalComment() {
+		return totalComment;
+	}
+
+	public void setTotalComment(String totalComment) {
+		this.totalComment = totalComment;
+	}
 	public int getCrsNum() {
 		return crsNum;
 	}
@@ -141,10 +158,11 @@ public class CourseVo {
 
 	@Override
 	public String toString() {
-		return "CourseVo [crsNum=" + crsNum + ", title=" + title + ", uNum=" + uNum + ", dscrt=" + dscrt + ", material="
-				+ material + ", imgPath=" + imgPath + ", seq1=" + seq1 + ", seq2=" + seq2 + ", seq3=" + seq3 + ", seq4="
-				+ seq4 + ", seq5=" + seq5 + ", seq6=" + seq6 + ", seq7=" + seq7 + ", seq8=" + seq8 + ", regDate="
-				+ regDate + "]";
+		return "{\"crsNum\":" + crsNum + ", \"title\":" + title + ", \"uNum\":" + uNum + ", \"dscrt\":" + dscrt
+				+ ", \"material\":" + material + ", \"imgPath\":" + imgPath + ", \"seq1\":" + seq1 + ", \"seq2\":"
+				+ seq2 + ", \"seq3\":" + seq3 + ", \"seq4\":" + seq4 + ", \"seq5\":" + seq5 + ", \"seq6\":" + seq6
+				+ ", \"seq7\":" + seq7 + ", \"seq8\":" + seq8 + ", \"regDate\":" + regDate + "}";
+
 	}
 
 }

@@ -38,7 +38,7 @@ public class LoginController {
 		HttpSession session = req.getSession();	
 		UserVo login = service.login(vo);
 		
-		List<CourseVo> courses = cService.selectAll();
+		List<CourseVo> courses = cService.selectAll(0);
 		
 		if(login == null) {
 			session.setAttribute("user", null);

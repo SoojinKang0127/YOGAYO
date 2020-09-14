@@ -5,8 +5,8 @@ import java.util.List;
 import com.team4.vo.CommentVo;
 import com.team4.vo.CoursePosesVo;
 import com.team4.vo.CourseVo;
-import com.team4.vo.PagingVo;
-import com.team4.vo.PoseVo;
+import com.team4.vo.DiffiVo;
+import com.team4.vo.UserVo;
 
 public class CourseServiceImpl implements CourseService {
 
@@ -18,8 +18,8 @@ public class CourseServiceImpl implements CourseService {
 	}
 
 	@Override
-	public List<CourseVo> selectAll() throws Exception {
-		return dao.selectAll();
+	public List<CourseVo> selectAll(int startNum) throws Exception {
+		return dao.selectAll(startNum);
 	}
 
 	@Override
@@ -76,6 +76,30 @@ public class CourseServiceImpl implements CourseService {
 		return dao.courseAll();
 	}
 
+	@Override
+	public List<CourseVo> searchCourse(int uNum, String sort, int startNum) throws Exception {
+		return dao.searchCourse(uNum, sort, startNum);
+	}
 
+	@Override
+	public UserVo makerInfo(CourseVo vo) throws Exception {
+		return dao.makerInfo(vo);
+	}
+
+	@Override
+	public int userCount(CourseVo vo) throws Exception {
+		return dao.userCount(vo);
+	}
+
+	@Override
+	public DiffiVo courseDiffi(CourseVo vo) throws Exception {
+		return dao.courseDiffi(vo);
+	}
+
+	@Override
+	public List<CommentVo> commentAllMore(CourseVo vo) throws Exception {
+		return dao.commentAllMore(vo);
+	
+	}
 
 }

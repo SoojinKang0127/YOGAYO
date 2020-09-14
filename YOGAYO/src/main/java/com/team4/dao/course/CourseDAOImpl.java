@@ -8,8 +8,10 @@ import com.team4.util.SqlSessionFactoryBean;
 import com.team4.vo.CommentVo;
 import com.team4.vo.CoursePosesVo;
 import com.team4.vo.CourseVo;
+import com.team4.vo.DiffiVo;
 import com.team4.vo.PagingVo;
 import com.team4.vo.PoseVo;
+import com.team4.vo.UserVo;
 
 public class CourseDAOImpl implements CourseDAO {
 	
@@ -25,8 +27,8 @@ public class CourseDAOImpl implements CourseDAO {
 		mybatis.commit();
 	}
 	
-	public List<CourseVo> selectAll() throws Exception{
-		return mybatis.selectList("CourseDao.selectAll");
+	public List<CourseVo> selectAll(int startNum) throws Exception{
+		return mybatis.selectList("CourseDao.selectAll" , startNum);
 	}
 
 	@Override
@@ -78,6 +80,46 @@ public class CourseDAOImpl implements CourseDAO {
 	@Override
 	public List<Integer> courseAll() throws Exception {
 		return mybatis.selectList("CourseDao.courseAll");
+	}
+
+	@Override
+	public List<CourseVo> searchCourse(int uNum,String sort, int startNum) throws Exception{	
+		if(uNum == 101 && sort==null) {
+			System.out.println("Dao : CourseDao.searchCourse");
+			return mybatis.selectList("CourseDao.searchCourse", startNum);				
+		}else if(uNum != 101 && sort == null) {	
+			System.out.println("Dao : CourseDao.searchCourse_user");
+			return mybatis.selectList("CourseDao.searchCourse_user", startNum);		
+		}else if(sort.equals("date")) {
+			System.out.println("Dao : CourseDao.searchCourse_date");
+			return mybatis.selectList("CourseDao.searchCourse_date", startNum);
+		}else if(sort.equals("total")) {
+			System.out.println("Dao : CourseDao.searchCourse_total");
+			return mybatis.selectList("CourseDao.searchCourse_total", startNum);
+		}else/* if(sort.equals("totalComment"))*/ {
+			System.out.println("Dao : CourseDao.searchCourse_totalComment");
+			return mybatis.selectList("CourseDao.searchCourse_totalComment", startNum);
+		}
+	}
+
+	@Override
+	public UserVo makerInfo(CourseVo vo) throws Exception {
+		return mybatis.selectOne("CourseDao.userThing", vo);
+	}
+
+	@Override
+	public int userCount(CourseVo vo) throws Exception {
+		return mybatis.selectOne("CourseDao.userCount",vo);
+	}
+
+	@Override
+	public DiffiVo courseDiffi(CourseVo vo) throws Exception {
+		return mybatis.selectOne("CourseDao.courseDiffi", vo);
+	}
+
+	@Override
+	public List<CommentVo> commentAllMore(CourseVo vo) throws Exception {
+		return mybatis.selectList("CourseDao.commentAllMore",vo);
 	}
 	
 	
