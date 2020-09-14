@@ -10,19 +10,10 @@ import com.team4.vo.UserVo;
 
 public class CourseServiceImpl implements CourseService {
 
-	@Override
-	public int getLastCnum() throws Exception {
-		// TODO Auto-generated method stub
-		return dao.getLastCnum();
-	}
 
 
 	CourseDAO dao = new CourseDAOImpl();
 
-	@Override
-	public int get_auto_incrm() throws Exception {
-		return dao.get_auto_incrm();
-	}
 
 	@Override
 	public void makeCourse(CourseVo vo) throws Exception {

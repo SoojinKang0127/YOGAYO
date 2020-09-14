@@ -22,7 +22,6 @@ public interface CourseDAO {
 	public double commentAvg(CourseVo vo) throws Exception;
 	public void addReview(CommentVo cvo) throws Exception;
 	public List<CommentVo> reviewAll(CourseVo vo) throws Exception;
-	public int get_auto_incrm() throws Exception;
 	
 	public List<CommentVo> commentAllMore(CourseVo vo) throws Exception;
 	

@@ -23,12 +23,6 @@ public class CourseDAOImpl implements CourseDAO {
 		return mybatis.selectOne("CourseDao.getLastCnum");
 	}
 
-	@Override
-	public int get_auto_incrm() throws Exception {
-		return mybatis.selectOne("CourseDao.get_auto_incrm");
-	
-				
-	}
 
 	public CourseDAOImpl() {
 		mybatis = SqlSessionFactoryBean.getSqlSessionInstance();

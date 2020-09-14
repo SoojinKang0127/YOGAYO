@@ -155,23 +155,12 @@
 
 	<!-- <select id="selectOne" parameterType="CourseVo" resultType="CourseVo"> 
 		테이블명 대소문자 구분 SELECT * FROM COURSE WHERE CRSNUM=#{crsNum} </select> -->
-	<select id="selectOne" 
-		resultType="CourseVo">
-		<!-- 테이블명 대소문자 구분 -->
-		SELECT * FROM COURSE WHERE CRSNUM=#{crsNum}
-	</select>
 
 	<select id="getLastCnum" parameterType="CourseVo"
 		resultType="Integer">
 		SELECT MAX(CRSNUM) FROM COURSE
 	</select>
 
-	<select id="get_auto_incrm" resultType="Integer">
-		SELECT `AUTO_INCREMENT`
-		FROM INFORMATION_SCHEMA.TABLES
-		WHERE TABLE_SCHEMA = 'project'
-		AND
-		TABLE_NAME = 'COURSE';
 	<select id="searchCourse_total" parameterType="int"
 		resultType="CourseVo">
 		<!-- 테이블명 대소문자 구분 -->
