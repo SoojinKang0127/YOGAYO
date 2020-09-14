@@ -2,6 +2,7 @@ package com.team4.user.dao;
 
 import java.util.List;
 
+import com.team4.vo.CommentVo;
 import com.team4.vo.CourseVo;
 import com.team4.vo.FeedVo;
 import com.team4.vo.UserVo;
@@ -43,5 +44,8 @@ public interface UserService {
 	public List<UserVo> selectAllUser() throws Exception;
 	
 	public List<CourseVo> allLikey(UserVo vo) throws Exception;
+	public String getUName(CourseVo vo) throws Exception;
+	public List<Integer> selectExceptMe(UserVo vo) throws Exception;
+	public UserVo getUserByCommentVo(CommentVo vo) throws Exception;
 
 }

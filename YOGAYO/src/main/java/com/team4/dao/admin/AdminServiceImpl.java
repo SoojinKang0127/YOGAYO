@@ -14,5 +14,27 @@ public class AdminServiceImpl implements AdminService {
 		return dao.getAllComment();
 	}
 
+
+	@Override
+	public void deleteComment(AdminVo vo) throws Exception {
+		dao.deleteComment(vo);
+	}
+
+
+	@Override
+	public List<AdminVo> getAllCourse() throws Exception {
+		return dao.getAllCourse();
+	}
+
+
+	@Override
+	public AdminVo getOneCourseByCrsnum(AdminVo vo) throws Exception {
+		return dao.getOneCourseByCrsnum(vo);
+	}
+
+	public void courseUpdate(AdminVo vo) throws Exception {
+		dao.courseUpdate(vo);
+	}
+
 	 
 }

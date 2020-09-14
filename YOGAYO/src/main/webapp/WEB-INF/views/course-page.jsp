@@ -20,15 +20,24 @@
 </head>
 <body>
 	<header class="header">
-		<div class="status_bar">
-			<div class="logo_wrapper">
-				<a href="${pageContext.request.contextPath}/main"><img
-					src="${pageContext.request.contextPath}/resources/image/course/logo.jpg"
-					alt="logo" /> </a>
-				<div class="box-div"></div>
+		<div class="main-status_bar">
+			<div class="main-logo_wrapper">
+				<a href="main_page.html"> 
+					<div class="logo-wrapper">
+					<span>YOGAYO</span>
+						<div class="box-div"></div>
+					</div>
+				</a>
 			</div>
-			<div class="profile">
-				<a href="${pageContext.request.contextPath}/my-page"><img
+			<div class="main-status_categories">
+				<span class="recommand"><a href="${pageContext.request.contextPath}/main">추천</a></span> 
+				<span class="course"><a href="${pageContext.request.contextPath}/course-page">코스</a></span>
+				<span class="dictionary"><a href="${pageContext.request.contextPath}/my-page">자세 사전</a></span> 
+				<span class="my_page"><a href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
+			</div>
+			<div class="main-profile">
+				<div class="welcome_user">안녕하세요. ${user.name}님</div>
+				<a href="myPage"><img
 					src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
 					class="profile_img" /></a>
 			</div>
@@ -61,34 +70,41 @@
 				<button id="courses_sort">정렬 ▼</button>
 				<div class="sort_menu">
 					<ul>
-						<li><input type="radio" name="menu" value="like" />추천순</li>
-						<li><input type="radio" name="menu" value="date" />날짜순</li>
-						<li><input type="radio" name="menu" value="user" />사용자 많은 순
+						<li><input type="radio" name="menu" value="date" id="date" />최신순</li>
+						<li><input type="radio" name="menu" value="total" id="like" />별점순</li>
+						<li><input type="radio" name="menu" value="totalComment" id="comment"/>리뷰 많은 순
 						</li>
 					</ul>
+					
 				</div>
 			</div>
 		</div>
-		<div class="course-courses_container">
-			<div class="courses_first_line">
-				<c:forEach var="i" items="${courses}" >
-					<div class="up-on-scroll">
-						<div class="course_container">
-							<a
-								href="${pageContext.request.contextPath}/course-detail?crsNum=${i.crsNum}">
-								<img
-								src="${pageContext.request.contextPath}/resources/image/${i.imgPath}" alt="course" />
-								<div class="course_star_rating">
-									<i class="far fa-star"></i>4.83(6)
-									<div class="course_title">${i.title}</div>
-								</div>
-							</a>
+		<!-- <form id="searchTxtForm">  -->
+			<div class="course-courses_container">
+				<div class="courses_first_line">
+					<c:forEach var="i" items="${courses}" varStatus="status" >
+						<div class="up-on-scroll">
+							<div class="course_container">
+								<a
+									href="${pageContext.request.contextPath}/course-detail?crsNum=${i.crsNum}">
+									<img
+									src="${pageContext.request.contextPath}/${i.imgPath}"
+									alt="course" />
+									<div class="course_star_rating">
+										<i class="far fa-star"></i>${i.total}(${i.totalComment})
+										<div class="course_title">${i.title}</div>
+									</div>
+								</a>
+							</div>
 						</div>
-					</div>
-				</c:forEach>
+					</c:forEach>
+				</div>
+				<div class="more_course_btn">
+					<button id="more_course_btn">더보기(More)</button>
+				</div>
 			</div>
-			
-		</div>
+		<!-- </form>  -->
+
 
 		<footer class="footer">
 			<div class="main-footer_right">

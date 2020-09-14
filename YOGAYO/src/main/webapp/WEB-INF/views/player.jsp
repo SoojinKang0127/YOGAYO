@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +19,9 @@
 	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/player-rSlider.min.js"></script>
 
 	<script>
-
+		var uNum = encodeURIComponent("${uvo.uNum}");
+		var crsNum = encodeURIComponent("${crsNum}");
+		console.log(crsNum)
 		timeArr = new Array();
 		timeArr.push('${pose1.time}' * 100);
 		timeArr.push('${pose2.time}' * 100);
@@ -39,14 +42,14 @@
 		audioArr.push('${pageContext.request.contextPath}/${pose7.audioPath}')
 		audioArr.push('${pageContext.request.contextPath}/${pose8.audioPath}')
 		console.log(audioArr)
-		
+
 		$(document).ready(function () {
 			window.onload = function () {
 				$("#pop1").hide()
 				$("#pop2").css("visibility", "hidden")
 				$("#pop3").hide()
 			}
- 
+
 			$(".end-btn").click(function () {
 				$("#pop1").show()
 				$(".play-button").click()
@@ -64,8 +67,8 @@
 				$("#pop3").hide()
 				$(display).text(num[0].value + " kg")
 			})
-			
-			$('.user-image').css("background-image","URL(${pageContext.request.contextPath}/resources/image/profile/default_profile.png)")
+
+			$('.user-image').css("background-image", "URL(${pageContext.request.contextPath}/resources/image/profile/default_profile.png)")
 			$('body').append('<audio id="audio" src=' + audioArr[0] + ' allow="autoplay"></audio>')
 			audio = document.getElementById('audio').play();
 		});
@@ -104,18 +107,18 @@
 								<div class="main-course-info">
 									<div class="rightwrapper">
 										<span>누적 플레이 수</span> <span class="accumulate-number">
-											160회</span> <span>•</span> <span class="reg-date"> 2020.08.19</span>
+											${playTotal}회</span> <span>•</span> <span class="reg-date"> <fmt:formatDate value="${regDate}" pattern="yyyy.MM.dd"/></span>
 									</div>
 									<div class="leftwrapper">
 										<span class="like"><i class="${like}"></i></span> <span
-											class="like-number">34</span>
-									</div>
+											class="like-number">${likeCount}</span>
+									</div> 
 								</div>
 							</div>
 							<div class="user-info">
 								<div class="user-image"></div>
 								<div class="user-detail">
-									<div class="user-name">태겸</div>
+									<div class="user-name">${userName}</div>
 									<div class="user-introduction">안녕하세요!</div>
 								</div>
 							</div>
@@ -135,7 +138,7 @@
 											<div>1</div>
 										</div>
 										<div class="order-image">
-											<image src="${pageContext.request.contextPath}/resources/image/boat.webp"> </image>
+											<image src="${pose1.img_Path}"> </image>
 										</div>
 										<div class="order-title">
 											<div>${pose1.title}</div>
@@ -150,7 +153,7 @@
 											<div>2</div>
 										</div>
 										<div class="order-image">
-											<image src="${pageContext.request.contextPath}/resources/image/chair.webp"> </image>
+											<image src="${pose2.img_Path}"> </image>
 										</div>
 										<div class="order-title">
 											<div>${pose2.title}</div>

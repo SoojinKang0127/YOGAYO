@@ -9,9 +9,14 @@ import com.team4.vo.LikeVo;
 import com.team4.vo.PoseVo;
 
 public class LikeDAOImpl implements LikeDAO {
-
+	
+	
 	private SqlSession mybatis;
 
+	public LikeDAOImpl() {
+		mybatis = SqlSessionFactoryBean.getSqlSessionInstance();
+	}
+	
 	@Override
 	public void like(LikeVo vo) throws Exception {
 		mybatis.insert("LikeDAO.like", vo);
@@ -21,12 +26,7 @@ public class LikeDAOImpl implements LikeDAO {
 
 	@Override
 	public int likeOrNot(LikeVo vo) throws Exception {
-		List<LikeVo> list=null;
-		list = mybatis.selectList("LikeDAO.likeOrNot", vo);
-		if (list!=null) {
-			return 1;
-		}
-		return 0;
+		return mybatis.selectOne("LikeDAO.likeOrNot", vo);
 	}
 
 	@Override
@@ -34,6 +34,21 @@ public class LikeDAOImpl implements LikeDAO {
 		mybatis.selectList("LikeDAO.dislike", vo);
 		mybatis.commit();
 
+	}
+
+	@Override
+	public int likeCount(LikeVo vo) throws Exception {
+		return mybatis.selectOne("LikeDAO.likeCount", vo);
+	}
+
+	@Override
+	public List<Integer> countCourse(LikeVo vo) throws Exception {
+		return mybatis.selectList("LikeDAO.countCourse", vo);
+	}
+
+	@Override
+	public List<Integer> courseAll() throws Exception {
+		return mybatis.selectList("LikeDAO.selectAllCousre");
 	}
 
 }

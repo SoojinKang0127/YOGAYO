@@ -44,13 +44,45 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 30px;
 }
 
 .box-div {
-  width: 100px;
-  height: 100px;
+	width: 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid rgb(255, 255, 255);
+	/* transition: all 0.3s linear; */
+	box-shadow: var(- -light-shadow);
+	transform: perspective(400px) rotateX(80deg);
+}
+
+/* .logo-wrapper:hover .box-div {
+	transform: none;
+} */
+
+.logo-wrapper span {
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	font-weight: 600;
+	position: absolute;
+	top: 20px;
+	opacity: 1;
+	/* transition: opacity 0.3s ease-in-out 0s; */
+  display: block;
+}
+
+/* .logo-wrapper:hover span {
+	opacity: 0;
+	top: 46px;
+} */
+
+.main-status_categories {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   border: 2px solid rgb(0, 0, 0);
   transition: all 0.3s linear;
@@ -65,14 +97,45 @@ main {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 300;
   margin-left: 50px;
-  
+  position: relative;
+  height: 35px;
 }
 
 .main-status_categories span a {
   color: black;
 }
 
-.recommand::after {
+.main-status_categories span:nth-child(1)::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 3px;
+  background: white;
+  /* transition: all .2s ease-out; */
+}
+
+.main-status_categories span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: white;
+  transition: all .2s ease-out;
+}
+
+.main-status_categories span:hover::after {
+  width: 100%;
+}
+
+
+
+
+/* .recommand a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -117,7 +180,7 @@ main {
   background: white;
 }
 
-.recommand:hover::after {
+.recommand a:hover::after {
  content: "";
   position: absolute;
   bottom: 0;
@@ -164,13 +227,14 @@ main {
   height: 3px;
   background: white;
   transition: all 0.2s ease-out;
-}
+} */
 
 
 
 .main-profile {
   display: flex;
   align-items: center;
+  margin-top: 5px;
 }
 
 .main-profile .welcome_user {
