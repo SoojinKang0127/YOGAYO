@@ -48,17 +48,17 @@
 									<input type="file" name="coursethumbnail" class="textbox"
 										id="coursethumbnail" placeholder="사진추가">
 								</div>
-								<select name="material" id="material">
-									<option value="요가매트">요가 매트</option>
-								</select>
-
+								<div class="course_keyword">
+									<input type="text" class="keyword_box" name="keywordBox"
+										placeholder="키워드를 입력하세요">
+								</div>
 								<div class="course_search">
 									<input type="text" id="searching_box" class="search"
 										placeholder="원하는 포즈명을 검색해보세요">
 								</div>
-								<div class="course_keyword">
-									<input type="text" class="keyword_box" name="keywordBox" placeholder="키우드를 입력하세">
-								</div>
+								<label>준비물</label> <select name="material" id="material">
+									<option value="요가매트">요가 매트</option>
+								</select>
 						</div>
 						<div class="pose_info_box">
 							<ul id="sortable_list1"></ul>
@@ -70,7 +70,7 @@
 				<div class="s2_wrapper">
 					<div class="s2_gap">
 						<div class="s2_titlebox">
-							<p class="s2_title">선택 된 포즈 리스트</p>
+							<p class="s2_title">포즈를 더블클릭하거나 드래그하세요</p>
 						</div>
 						<div class="list_box">
 							<ul id="sortable_list2">
@@ -81,12 +81,17 @@
 				</div>
 			</div>
 		</div>
-		<input type="button" class="addItem" value="나의 코스목록에 추가">
+		<div class="addItem_box">
+			<input type="button" class="addItem" value="나의 코스목록에 추가">
+			<div class="backBtn">
+				<a href="${pageContext.request.contextPath}/myPage">뒤로가기</a>
+			</div>
+		</div>
 		</form>
 	</main>
 	<footer> </footer>
-<script>
-
-</script>
+	<script>
+		
+	</script>
 </body>
 </html>
