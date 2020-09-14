@@ -15,7 +15,7 @@ public class FeedVo {
 	String uImg3;
 	int weight;
 	String regDate;
-	
+	String title;
 	public int getfNum() {
 		return fNum;
 	}
@@ -82,15 +82,20 @@ public class FeedVo {
 	public void setRegDate(String regDate) {
 		this.regDate = regDate;
 	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	@Override
 	public String toString() {
 		return "FeedVo [fNum=" + fNum + ", uNum=" + uNum + ", crsNum=" + crsNum + ", sLevel=" + sLevel + ", dLevel="
 				+ dLevel + ", context=" + context + ", uImg1=" + uImg1 + ", uImg2=" + uImg2 + ", uImg3=" + uImg3
-				+ ", weight=" + weight + ", regDate=" + regDate + "]";
+				+ ", weight=" + weight + ", regDate=" + regDate + ", title=" + title + "]";
 	}
 	
 	
-
 }
 
 

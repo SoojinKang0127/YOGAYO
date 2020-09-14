@@ -131,6 +131,34 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
+	public List<CourseVo> allLikey(UserVo vo) throws Exception {
+		return dao.allLikey(vo);
+	}
+
+	@Override
+	public int count1week2(UserVo vo) throws Exception {
+		return dao.count1week2(vo);
+	}
+
+	@Override
+	public int count2week2(UserVo vo) throws Exception {
+		return dao.count2week2(vo);
+
+	}
+
+	@Override
+	public int count3week2(UserVo vo) throws Exception {
+		return dao.count3week2(vo);
+
+	}
+
+	@Override
+	public int count4week2(UserVo vo) throws Exception {
+		return dao.count4week2(vo);
+	}
+
+	
+
 	public String getUName(CourseVo vo) throws Exception {
 		
 		return dao.getUName(vo);
