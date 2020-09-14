@@ -28,9 +28,9 @@ import com.mongodb.client.MongoDatabase;
 import com.team4.dao.feed.FeedServiceImpl;
 
 public class Rcontroller extends HttpServlet implements R {
-   private static final long serialVersionUID = 1L;
-   MongoDatabase database = mongoClient.getDatabase("project");
-   FeedServiceImpl fservice= new FeedServiceImpl();
+	private static final long serialVersionUID = 1L;
+	MongoDatabase database = mongoClient.getDatabase("project");
+	FeedServiceImpl fservice= new FeedServiceImpl();
     
 
    protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -44,66 +44,66 @@ public class Rcontroller extends HttpServlet implements R {
    @Override
    public void init(ServletConfig config) throws ServletException {
 
-      updateKeyword();
-      
-   } 
-   
-   public void updateKeyword() {
-      getListFromCourse();
-      getListFromPose();
-      getLastFnum();
-      this.keywordList.addAll(this.keywordAll);
-      System.out.println("Keyword Hashset initialized success [size: "+this.keywordAll.size()+"]");
-      System.out.println(this.keywordList.toString());
-   }
+		updateKeyword();
+		
+	} 
+	
+	public void updateKeyword() {
+		getListFromCourse();
+		getListFromPose();
+		getLastFnum();
+		this.keywordList.addAll(this.keywordAll);
+		System.out.println("Keyword Hashset initialized success [size: "+this.keywordAll.size()+"]");
+		System.out.println(this.keywordList.toString());
+	}
 
-   public void getListFromPose() {
-       DBCollection collection = mongoDBf.getCollection("POSE");
-         BasicDBObject allquery = new BasicDBObject();
-         BasicDBObject fields = new BasicDBObject();
-         DBCursor cursor = collection.find(allquery,fields);
-         while(cursor.hasNext()) {
-            DBObject obj = cursor.next();
-            List<String> list = (List<String>) obj.get("keyword");
-            for(String s:list) {
-               this.keywordAll.add(s);
-            }
-         }
-         
-   }
+	public void getListFromPose() {
+		 DBCollection collection = mongoDBf.getCollection("POSE");
+	      BasicDBObject allquery = new BasicDBObject();
+	      BasicDBObject fields = new BasicDBObject();
+	      DBCursor cursor = collection.find(allquery,fields);
+	      while(cursor.hasNext()) {
+	    	  DBObject obj = cursor.next();
+	    	  List<String> list = (List<String>) obj.get("keyword");
+	    	  for(String s:list) {
+	    		  this.keywordAll.add(s);
+	    	  }
+	      }
+	      
+	}
 
-   public void getListFromCourse() {
-       DBCollection collection = mongoDBf.getCollection("COURSE");
-         BasicDBObject allquery = new BasicDBObject();
-         BasicDBObject fields = new BasicDBObject();
-         DBCursor cursor = collection.find(allquery,fields);
-         while(cursor.hasNext()) {
-            DBObject obj = cursor.next();
-            List<String> list = (List<String>) obj.get("keyword");
-            for(String s:list) {
-               this.keywordAll.add(s);
-            }
-         }
-   }
-   
-   public void addKeyword(String keyword) {
-      this.keywordAll.add(keyword);
-   }
-   
-   public void removeKeyword(String keyword) {
-      this.keywordAll.remove(keyword);
-   }
-   
-   public HashSet<String> getKeywordList(){
-      return this.keywordAll;
-   }
-   
-   public void getLastFnum() {
-   }
-   
-   public void plusLastFnum() {
-   }
-   
-   
+	public void getListFromCourse() {
+		 DBCollection collection = mongoDBf.getCollection("COURSE");
+	      BasicDBObject allquery = new BasicDBObject();
+	      BasicDBObject fields = new BasicDBObject();
+	      DBCursor cursor = collection.find(allquery,fields);
+	      while(cursor.hasNext()) {
+	    	  DBObject obj = cursor.next();
+	    	  List<String> list = (List<String>) obj.get("keyword");
+	    	  for(String s:list) {
+	    		  this.keywordAll.add(s);
+	    	  }
+	      }
+	}
+	
+	public void addKeyword(String keyword) {
+		this.keywordAll.add(keyword);
+	}
+	
+	public void removeKeyword(String keyword) {
+		this.keywordAll.remove(keyword);
+	}
+	
+	public HashSet<String> getKeywordList(){
+		return this.keywordAll;
+	}
+	
+	public void getLastFnum() {
+	}
+	
+	public void plusLastFnum() {
+	}
+	
+	
 
 }

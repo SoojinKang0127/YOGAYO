@@ -132,6 +132,8 @@ header {
   color: white;
 }
 
+
+
 /*여기서 부터 */
 main {
   width: 100%;
@@ -145,80 +147,108 @@ main {
   align-items: center;
 }
 
-.list_container{
-	
-	
-}
-
-.user_avatar img {
-  width: 50px;
-  border-radius: 50%;
-}
-
-.comment_list {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  height: 75px;
-}
-
-.member_list:hover {
-  background-color: rgba(244, 244, 252, 0.664);
-}
-.comment_list div {
-  border-bottom: 1px solid black;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70px;
-}
-
-.idx {
-  width: 100px;
-}
-
-.comment_date{
-	width:150px;
-}
-
-.user_avatar{
-	width:100px;
-}
-.comment_profile{
-	width:100px;
-}
-.comment_user{
-	width:100px;
-}
-
-.comment_couse{
-	width:90px;
-}
-
-.comment_content{
-	width:600px;
-	font-size:15px;
-}
-.comment_delete{
-	width:100px;
-}
-
-.comment_type{
-	width:120px;
-}
 
 
-.deleteBtn{
-	padding:9px;
-	color:black;
-	background-color: #ff715d;
-	border: none;
-	border-radius:8px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-	transition: 0.3s ease-in-out;
+.wrapper {
+	width: 1500px;
+	display: grid;
+	grid-template-columns: 100px;
+	margin-bottom: 30px;
+	grid-gap: 1px;
 }
 
-.deleteBtn:hover{
-	background-color: #ff998d;
+.wrapper div {
+	border: 1px solid #979797;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 5px 10px 5px;
 }
+
+.th {
+	color: #979797;
+}
+.courseNum_ {
+	grid-column: 1/2;
+}
+
+.createdBy_ {
+	grid-column: 2/3;
+}
+
+.title_ {
+	grid-column: 3/7;
+}
+
+.desc_ {
+	grid-column: 7/12;
+}
+
+.modify_ {
+	grid-row: 1/5;
+	grid-column: 12/13;
+	background-color: black;
+	color: white;
+}
+
+.courseNum {
+	grid-column: 1/2;
+	grid-row: 2/5;
+}
+
+.createdBy {
+	grid-column: 2/3;
+}
+
+.title {
+	grid-column: 3/7;
+}
+
+.desc {
+	grid-column: 7/12;
+}
+
+.metarial_ {
+	grid-column: 2/3;
+}
+
+.imgPath {
+	grid-column: 3/4;
+}
+
+.course_title{
+	width: 300px;
+	font-size:17px;
+	text-align:center;
+}
+
+.course_dscrt{
+	width:500px;
+	font-size:17px;
+	text-align:center;
+}
+
+
+.material_option{
+	font-size:17px;
+}
+
+.seq {
+	width:35px;
+	font-size:17px;
+	text-align:center;
+}
+
+.modify_btn{
+	border: 1px solid black;
+	padding: 20px 30px 20px 30px;
+	display:flex;
+	justify-content: center;
+	align-items: center; 
+	background-color: black;
+	color:white;
+}
+
+
+
+

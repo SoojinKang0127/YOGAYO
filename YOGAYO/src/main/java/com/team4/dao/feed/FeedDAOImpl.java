@@ -3,6 +3,7 @@ package com.team4.dao.feed;
 import org.apache.ibatis.session.SqlSession;
 
 import com.team4.util.SqlSessionFactoryBean;
+import com.team4.vo.CourseVo;
 import com.team4.vo.FeedVo;
 
 public class FeedDAOImpl implements FeedDAO{
@@ -29,6 +30,12 @@ public class FeedDAOImpl implements FeedDAO{
 	public int getLastFnum() throws Exception {
 		
 		return mybatis.selectOne("FeedDAO.getLastFnum");
+	}
+
+
+	@Override
+	public int playTotal(CourseVo vo) throws Exception {
+		return mybatis.selectOne("FeedDAO.playTotal", vo);
 	}
 	
 }

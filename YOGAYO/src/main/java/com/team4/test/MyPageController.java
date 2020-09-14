@@ -45,6 +45,7 @@ public class MyPageController {
 		
 		List<CourseVo> crsList = null;
 		List<FeedVo> feList = null;
+		List<CourseVo> likeList = null;
 
 		int cWeight =0;
 		int tWeight1 =0;
@@ -54,6 +55,10 @@ public class MyPageController {
 		int count2week = 0;
 		int count3week = 0;
 		int count4week = 0;
+		int count1week2 = 0;
+		int count2week2 = 0;
+		int count3week2 = 0;
+		int count4week2 = 0;
 		int thisdate = 0;
 		String thismonth = "";
 		String thisday ="";
@@ -67,14 +72,21 @@ public class MyPageController {
 			count2week = service.count2week(vo);
 			count3week = service.count3week(vo);
 			count4week = service.count4week(vo);
+			count1week2 = service.count1week2(vo);
+			count2week2 = service.count2week2(vo);
+			count3week2 = service.count3week2(vo);
+			count4week2 = service.count4week2(vo);
 			crsList = service.selectAllCrs(vo);
 			feList = service.selectAll(vo);
 			thisday = service.thisday();
 			thisdate = service.thisdate();
 			thismonth = service.thismonth();
+			likeList = service.allLikey(vo);
 			
 			System.out.println("crsList: " + crsList);
 			System.out.println("feList" + feList);
+			System.out.println("likeList" + likeList);
+						
 	
 		} catch (Exception e) {
 			System.out.println("[MyPageController / myPage]" + e.toString());
@@ -90,11 +102,16 @@ public class MyPageController {
 		model.addAttribute("count2week", count2week);
 		model.addAttribute("count3week", count3week);
 		model.addAttribute("count4week", count4week);
+		model.addAttribute("count1week2", count1week2);
+		model.addAttribute("count2week2", count2week2);
+		model.addAttribute("count3week2", count3week2);
+		model.addAttribute("count4week2", count4week2);
 		model.addAttribute("crsList", crsList);
 		model.addAttribute("thisday", thisday);
 		model.addAttribute("thisdate", thisdate);
 		model.addAttribute("thismonth", thismonth);
 		model.addAttribute("feList", feList);
+		model.addAttribute("likeList", likeList);
 			
 		return "mypage";
 	}
