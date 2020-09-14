@@ -15,15 +15,18 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.team4.dao.course.CourseServiceImpl;
 import com.team4.dao.pose.PoseServiceImpl;
+import com.team4.user.dao.UserServiceImpl;
 import com.team4.vo.CommentVo;
 import com.team4.vo.CoursePosesVo;
 import com.team4.vo.CourseVo;
+import com.team4.vo.UserVo;
 
 @Controller
 public class CourseController {
 
 	CourseServiceImpl service = new CourseServiceImpl();
 	PoseServiceImpl pService = new PoseServiceImpl();
+	UserServiceImpl uService = new UserServiceImpl();
 
 	@RequestMapping(value = "/course-detail-upload-comment", method = RequestMethod.POST)
 	public void uploadComment(Model model, @RequestParam("crsNum") int crsNum, @RequestParam("uNum") int uNum,
@@ -56,7 +59,6 @@ public class CourseController {
 		try {
 			cmavg = service.commentAvg(crsvo);
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 
@@ -64,14 +66,72 @@ public class CourseController {
 			commentList = service.commentAll(crsVo);
 			reviewList = service.reviewAll(crsVo);
 			String json = "{\"comment\":{";
-
+			UserVo uvo = new UserVo();
 			for (int i = 0; i < commentList.size(); i++) {
-				json = json + "\"" + i + "\":" + commentList.get(i).toString() + ",";
+				uvo = uService.getUserByCommentVo(commentList.get(i));
+				json = json + "\"" + i + "\":" + commentList.get(i).toString() + "\"name\":" + "\"" + uvo.getName()
+						+ "\"," + "\"img\":" + "\"" + uvo.getImg() + "\"" + "},";
+
 			}
 			json = json + "}, \"review\":{";
 
 			for (int i = 0; i < reviewList.size(); i++) {
-				json = json + "\"" + i + "\":" + reviewList.get(i).toString() + ",";
+				uvo = uService.getUserByCommentVo(reviewList.get(i));
+				json = json + "\"" + i + "\":" + reviewList.get(i).toString() + "\"name\":" + "\"" + uvo.getName()
+						+ "\"," + "\"img\":" + "\"" + uvo.getImg() + "\"" + "},";
+			}
+			json = json + "}, \"avg\":" + Double.toString(cmavg);
+			json = json + "}";
+
+			System.out.println(json);
+			res.getWriter().write(json);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+	
+	@RequestMapping(value = "/course-detail", method = RequestMethod.POST)
+	public void ajaxCourse(Model model, @RequestParam("crsNum") int crsNum, HttpServletResponse res) {
+
+		CourseVo crsvo = new CourseVo();
+		crsvo.setCrsNum(crsNum);
+		double cmavg = 0.0;
+
+	
+
+		// 새 댓글을 포함한 코스에 관련된 댓글들을 다시 jsp 쏴줘야됨
+
+		CourseVo crsVo = new CourseVo();
+		crsVo.setCrsNum(crsNum);
+		List<CommentVo> commentList;
+		List<CommentVo> reviewList;
+
+		// 평점 추가하는 부분
+		try {
+			cmavg = service.commentAvg(crsvo);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
+
+		try {
+			commentList = service.commentAll(crsVo);
+			reviewList = service.reviewAll(crsVo);
+			String json = "{\"comment\":{";
+			UserVo uvo = new UserVo();
+			for (int i = 0; i < commentList.size(); i++) {
+				uvo = uService.getUserByCommentVo(commentList.get(i));
+				json = json + "\"" + i + "\":" + commentList.get(i).toString() + "\"name\":" + "\"" + uvo.getName()
+						+ "\"," + "\"img\":" + "\"" + uvo.getImg() + "\"" + "},";
+
+			}
+			json = json + "}, \"review\":{";
+
+			for (int i = 0; i < reviewList.size(); i++) {
+				uvo = uService.getUserByCommentVo(reviewList.get(i));
+				json = json + "\"" + i + "\":" + reviewList.get(i).toString() + "\"name\":" + "\"" + uvo.getName()
+						+ "\"," + "\"img\":" + "\"" + uvo.getImg() + "\"" + "},";
 			}
 			json = json + "}, \"avg\":" + Double.toString(cmavg);
 			json = json + "}";
@@ -155,7 +215,7 @@ public class CourseController {
 
 			cpv = service.coursePoses(vo);
 			model.addAttribute("coursePoses", cpv);
-			
+
 			int[] timeArr = { Integer.parseInt(cpv.getTime1()), Integer.parseInt(cpv.getTime2()),
 					Integer.parseInt(cpv.getTime3()), Integer.parseInt(cpv.getTime4()),
 					Integer.parseInt(cpv.getTime5()), Integer.parseInt(cpv.getTime6()),
@@ -209,9 +269,6 @@ public class CourseController {
 
 			reviewList = service.reviewAll(vo);
 			model.addAttribute("reviewList", reviewList);
-
-	
-			
 
 		} catch (Exception e) {
 			System.out.println("[CourseController /  makeCourse]" + e.toString());

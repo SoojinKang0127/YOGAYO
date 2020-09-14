@@ -1,6 +1,8 @@
 package com.team4.resource;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
@@ -27,11 +29,7 @@ import com.team4.dao.feed.FeedServiceImpl;
 
 public class Rcontroller extends HttpServlet implements R {
 	private static final long serialVersionUID = 1L;
-	MongoClientURI uri = new MongoClientURI(
-			"mongodb+srv://user:12345@cluster0.9bcza.mongodb.net/test?retryWrites=true&w=majority");
-	MongoClient mongoClient = new MongoClient(uri);
 	MongoDatabase database = mongoClient.getDatabase("project");
-	DB db= mongoClient.getDB("project");
 	FeedServiceImpl fservice= new FeedServiceImpl();
     
 
@@ -46,15 +44,21 @@ public class Rcontroller extends HttpServlet implements R {
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 
+		updateKeyword();
+		
+	} 
+	
+	public void updateKeyword() {
 		getListFromCourse();
 		getListFromPose();
 		getLastFnum();
-		System.out.println("Keyword Hashset initialized success [size: "+this.keyword.size()+"]");
-		System.out.println(this.keyword.toString());
+		this.keywordList.addAll(this.keywordAll);
+		System.out.println("Keyword Hashset initialized success [size: "+this.keywordAll.size()+"]");
+		System.out.println(this.keywordList.toString());
 	}
 
 	public void getListFromPose() {
-		 DBCollection collection = db.getCollection("POSE");
+		 DBCollection collection = mongoDBf.getCollection("POSE");
 	      BasicDBObject allquery = new BasicDBObject();
 	      BasicDBObject fields = new BasicDBObject();
 	      DBCursor cursor = collection.find(allquery,fields);
@@ -62,14 +66,14 @@ public class Rcontroller extends HttpServlet implements R {
 	    	  DBObject obj = cursor.next();
 	    	  List<String> list = (List<String>) obj.get("keyword");
 	    	  for(String s:list) {
-	    		  this.keyword.add(s);
+	    		  this.keywordAll.add(s);
 	    	  }
 	      }
 	      
 	}
 
 	public void getListFromCourse() {
-		 DBCollection collection = db.getCollection("COURSE");
+		 DBCollection collection = mongoDBf.getCollection("COURSE");
 	      BasicDBObject allquery = new BasicDBObject();
 	      BasicDBObject fields = new BasicDBObject();
 	      DBCursor cursor = collection.find(allquery,fields);
@@ -77,21 +81,21 @@ public class Rcontroller extends HttpServlet implements R {
 	    	  DBObject obj = cursor.next();
 	    	  List<String> list = (List<String>) obj.get("keyword");
 	    	  for(String s:list) {
-	    		  this.keyword.add(s);
+	    		  this.keywordAll.add(s);
 	    	  }
 	      }
 	}
 	
 	public void addKeyword(String keyword) {
-		this.keyword.add(keyword);
+		this.keywordAll.add(keyword);
 	}
 	
 	public void removeKeyword(String keyword) {
-		this.keyword.remove(keyword);
+		this.keywordAll.remove(keyword);
 	}
 	
 	public HashSet<String> getKeywordList(){
-		return this.keyword;
+		return this.keywordAll;
 	}
 	
 	public void getLastFnum() {

@@ -2,6 +2,7 @@ package com.team4.user.dao;
 
 import java.util.List;
 
+import com.team4.vo.CommentVo;
 import com.team4.vo.CourseVo;
 import com.team4.vo.FeedVo;
 import com.team4.vo.UserVo;
@@ -127,6 +128,22 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public List<UserVo> selectAllUser() throws Exception {
 		return dao.selectAllUser();
+	}
+
+	@Override
+	public String getUName(CourseVo vo) throws Exception {
+		
+		return dao.getUName(vo);
+	}
+
+	@Override
+	public List<Integer> selectExceptMe(UserVo vo) throws Exception {
+		return dao.selectExceptMe(vo);
+	}
+
+	@Override
+	public UserVo getUserByCommentVo(CommentVo vo) throws Exception {
+		return dao.getUserByCommentVo(vo);
 	}
 
 

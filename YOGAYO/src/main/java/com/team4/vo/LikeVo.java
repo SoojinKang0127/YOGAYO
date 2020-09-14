@@ -6,6 +6,7 @@ public class LikeVo {
 	int uNum;
 	int crsNum;
 	String regDate;
+	
 	public int getlNum() {
 		return lNum;
 	}

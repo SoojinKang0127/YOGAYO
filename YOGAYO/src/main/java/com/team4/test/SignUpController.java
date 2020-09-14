@@ -22,6 +22,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import com.team4.resource.R;
 import com.team4.resource.Rcontroller;
 import com.team4.user.dao.UserDAO;
 import com.team4.user.dao.UserDAOImpl;
@@ -29,7 +30,7 @@ import com.team4.user.dao.UserServiceImpl;
 import com.team4.vo.UserVo;
 
 @Controller
-public class SignUpController {
+public class SignUpController implements R {
 
 	UserServiceImpl service = new UserServiceImpl();
 	UserDAO dao = new UserDAOImpl();
@@ -69,11 +70,7 @@ public class SignUpController {
 		for(String s:keywordArr) {
 			mongoList.add(s);
 		}
-		MongoClientURI uri = new MongoClientURI(
-	            "mongodb+srv://user:12345@cluster0.9bcza.mongodb.net/test?retryWrites=true&w=majority");
-	    MongoClient mongoClient = new MongoClient(uri);
-		MongoDatabase project = mongoClient.getDatabase("project");
-		MongoCollection<Document> collection = project.getCollection("USER");
+		MongoCollection<Document> collection = mongoDBi.getCollection("USER");
 		Document doc= new Document("_id",i).append("keyword", mongoList  );
         collection.insertOne(doc);
 		
