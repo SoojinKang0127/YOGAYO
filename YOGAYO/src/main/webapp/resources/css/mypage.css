@@ -411,7 +411,7 @@ footer {
 .feed1_name {
 	/* border: 1px solid red; */
 	margin-right: 220px;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .feed1_date {
@@ -429,7 +429,7 @@ footer {
 	/* border: 1px solid red;  */
 	height: 80px;
 	padding: 20px;
-	font-size: 20px;	
+	font-size: 18px;	
 	text-align: left;
 	padding-top: 25px;
 }
