@@ -49,26 +49,9 @@ public class PlaylistController {
 	
 	
 	@RequestMapping(value = "/course_playlist", method = RequestMethod.GET)
-	public String course_playlist(Model model
-			) {
-		
-		PoseService dao = new PoseServiceImpl();
-		List<PoseVo> list = null;
-		
-		try {
-			System.out.println(list.toString());
-		} catch (Exception e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		
-		
-		
-	
-		
-		
-		
-		
+	public String course_playlist(Model model,
+			HttpServletResponse res
+			) throws IOException {
 		
 		
 		return "course_playlist";

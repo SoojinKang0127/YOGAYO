@@ -79,12 +79,14 @@
 
 	<select id="commentCount" parameterType="CommentVo"
 		resultType="int">
-		SELECT COUNT(*) FROM COMMENT WHERE CRSNUM=#{crsNum} AND PARENT IS NULL;
+		SELECT COUNT(*) FROM COMMENT WHERE CRSNUM=#{crsNum} AND
+		PARENT IS NULL;
 	</select>
 
 	<select id="commentAvg" parameterType="CommentVo"
 		resultType="double">
-		SELECT AVG(RATE) FROM COMMENT WHERE CRSNUM=#{crsNum} AND PARENT IS NULL
+		SELECT AVG(RATE) FROM COMMENT WHERE CRSNUM=#{crsNum} AND
+		PARENT IS NULL
 	</select>
 	
 	<select id="commentAllMore" parameterType="CommentVo"
@@ -151,6 +153,25 @@
 		LIMIT #{startNum},16
 	</select>
 
+	<!-- <select id="selectOne" parameterType="CourseVo" resultType="CourseVo"> 
+		테이블명 대소문자 구분 SELECT * FROM COURSE WHERE CRSNUM=#{crsNum} </select> -->
+	<select id="selectOne" 
+		resultType="CourseVo">
+		<!-- 테이블명 대소문자 구분 -->
+		SELECT * FROM COURSE WHERE CRSNUM=#{crsNum}
+	</select>
+
+	<select id="getLastCnum" parameterType="CourseVo"
+		resultType="Integer">
+		SELECT MAX(CRSNUM) FROM COURSE
+	</select>
+
+	<select id="get_auto_incrm" resultType="Integer">
+		SELECT `AUTO_INCREMENT`
+		FROM INFORMATION_SCHEMA.TABLES
+		WHERE TABLE_SCHEMA = 'project'
+		AND
+		TABLE_NAME = 'COURSE';
 	<select id="searchCourse_total" parameterType="int"
 		resultType="CourseVo">
 		<!-- 테이블명 대소문자 구분 -->
@@ -202,11 +223,11 @@
 		SELECT * FROM COURSE WHERE CRSNUM=#{crsNum}
 	</select>
 	
-	
+	<!--
 	<select id="getLastCnum" resultType="Integer">
 	 	SELECT CRSNUM FROM COURSE WHERE TITLE=#{title} AND DSCRT=#{dscrt} AND UNUM=#{uNum}
 	</select>
-	
+-->
 
 	<select id="coursePoses" resultType="CoursePosesVo"
 		parameterType="CourseVo">

@@ -1,36 +1,29 @@
-<%@page import="org.springframework.web.context.ContextLoader"%> <%@page
-import="org.springframework.web.context.WebApplicationContext"%> <%@ page language="java"
-contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ taglib prefix="c"
-uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page import="org.springframework.web.context.ContextLoader"%>
+<%@page import="org.springframework.web.context.WebApplicationContext"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YOGAYO | MY PAGE</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="${pageContext.request.contextPath}/resources/css/mypage.css"
-    />
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
-    ></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/myPage.js"></script>
-    <script language="JavaScript"
-      src="${pageContext.request.contextPath}/resources/js/graph.js"></script>
-    <script>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>YOGAYO | MY PAGE</title>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/mypage.css" />
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<link
+	href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap"
+	rel="stylesheet" />
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/myPage.js"></script>
+<script language="JavaScript"
+	src="${pageContext.request.contextPath}/resources/js/graph.js"></script>
+<script>
       var data1 = ${count1week};
       var data2 = ${count2week};
       var data3 = ${count3week};

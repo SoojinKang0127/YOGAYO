@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">산 자세에서 시작합니다.<break time="700"/>균형을 유지할 수 있도록 정면의 한 곳을 바라보세요<break time="700"/>체중을 왼쪽 다리로 옮기십시오. 왼쪽 발의 네 모서리를 통해 접지하십시오.<break time="700"/>오른쪽 무릎을 구부리고 오른손으로 뻗어 발목을 잡으세요.<break time="700"/>오른쪽 무릎을 구부리고 오른쪽 발을 무릎 관절 위 또는 아래 왼쪽 다리 안쪽에 놓습니다. 무릎이 옆을 가리키고 있습니다.<break time="700"/>발을 허벅지 안쪽에 대고 안쪽 허벅지로 발을 지탱합니다.<break time="700"/>코어 근육을 계속 사용하세요.<break time="700"/>왼쪽 엉덩이를 단단히 고정하고, 허리를 길게하고, 어깨에 힘을 빼고, 턱을 약간 당겨줍니다.<break time="700"/>Anjali Mudra (기도 위치)에서 심장 앞으로 손을 가져 오거나 팔을 천장까지 올릴 수 있습니다. 손은 어깨 너비로 벌릴 수 있습니다.<break time="700"/>30 초에서 1 분 동안 이 자세를 유지하세요.<break time="700"/>숨을 내쉴 때 다리와 팔을 아래로 내리고 Tadasana에서 잠시 시간을 내십시오.<break time="700"/>반복한다.<break time="700"/></prosody></speak>' > pose59.mp3

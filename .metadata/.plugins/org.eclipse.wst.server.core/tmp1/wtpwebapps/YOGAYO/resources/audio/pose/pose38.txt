@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">앉은 다리를 꼬고 앉은 자세에서 엉덩이를 바닥에 붙이세요. 숨을들이 마시고 척추를 곧게 펴세요..<break time="700"/>숨을 내쉴 때 오른쪽 다리를 최대한 오른쪽으로 가져오고 허벅지와 종아리를 모아 무릎을 닫습니다.<break time="700"/>숨을들이 쉴 때 발을 구부리고 오른발 바깥 쪽을 왼쪽 사타구니 안쪽에 놓으세요. 회전이 무릎 관절이 아닌 엉덩이에서 나오는지 확인하세요.<break time="700"/>이제 왼쪽 다리를 집어 올리세요. 엉덩이에서 다리를 회전시키고 왼쪽 다리를 오른쪽 사타구니에 왼발로 밀어 넣으세요.<break time="700"/>편안하게 무릎을 가깝게 그립니다.<break time="700"/>Jnana mudra에서 손가락으로 손등을 무릎에 대세요. 엄지와 첫 번째 손가락이 닿습니다.<break time="700"/>척추를 길게 유지하십시오. drishti (초점 지점)는 앞쪽 바닥에 있습니다.<break time="700"/>포즈를 10 회 이상 유지하세요.<break time="700"/>한 다리를 조심스럽게 풀고 다음 다리를 조심스럽게 풀어서 반대 방향으로 포즈에서 나오세요. 반대편도 해주세요.<break time="700"/></prosody></speak>' > pose38.mp3

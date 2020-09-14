@@ -1,7 +1,10 @@
-/.metadata/
 /target/
 /YOGAYO/target/
+**/.metadata/
+.metadata/
+.metadata/.plugins
 
+**/.DS_Store
 *.class
 *.MF
 *.properties

@@ -1,0 +1,4 @@
+curl -v -X POST "https://kakaoi-newtone-openapi.kakao.com/v1/synthesize" \
+-H "Content-Type: application/xml" \
+-H "Authorization: KakaoAK b32dd9d64c8963d1e7d858bde854d640" \
+-d '<speak><prosody rate="slow">단다 사나에서 시작하세요.<break time="700"/>오른쪽 다리를 옆으로 벌립니다. 왼쪽 무릎을 구부리고 뒤꿈치를 사타구니쪽으로 가져 옵니다.<break time="700"/>다리를 단단히 고정하고 숨을들이 쉴 때 머리의 정수리 너머로 팔을 쭉 뻗습니다. 숨을 내쉴 때 상체를 왼쪽으로 비틀고 측면을 오른쪽 다리쪽으로 구부립니다.<break time="700"/>아래쪽 갈비뼈를 짜고 부드럽게 위쪽으로 갈비뼈를 돌립니다.<break time="700"/>오른쪽 팔꿈치를 오른쪽 무릎이나 바닥으로 가져 오세요.<break time="700"/>왼팔을 들어 머리 위로 가져 오세요. 무리없이 닿을 수 있다면 양손으로 오른발을 잡으세요.<break time="700"/>턱을 살짝 집어 넣고 머리를 천장쪽으로 돌립니다.<break time="700"/>5 번의 심호흡을 위해 자세를 유지하십시오. 자세에서 나오려면 단계를 반대로하십시오.<break time="700"/>단다 사나에 잠시 머물러 다리를 전환하기 전에 몸이 안정되도록하고 반대쪽에서도 반복하십시오.<break time="700"/></prosody></speak>' > pose50.mp3
