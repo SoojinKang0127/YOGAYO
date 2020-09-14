@@ -22,9 +22,7 @@ import com.team4.vo.UserVo;
 @Controller
 public class LoginController {
 	
-	UserServiceImpl service = new UserServiceImpl();
-	CourseServiceImpl cService = new CourseServiceImpl();
-	CourseDAOImpl courseDao = new CourseDAOImpl();
+
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Locale locale, Model model) {
@@ -34,7 +32,9 @@ public class LoginController {
 	
 	@RequestMapping(value="/login", method = RequestMethod.POST)
 	public String login(CourseVo cvo,UserVo vo, HttpServletRequest req, RedirectAttributes rttr, Model model ) throws Exception{
-			
+		UserServiceImpl service = new UserServiceImpl();
+		CourseServiceImpl cService = new CourseServiceImpl();
+		
 		HttpSession session = req.getSession();	
 		UserVo login = service.login(vo);
 		

@@ -31,7 +31,6 @@ public class HomeController {
 	
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public String main(Model model, HttpServletRequest req) {
-		
 		HttpSession session = req.getSession();	
 		
 		Object user = session.getAttribute("user");
