@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
+<qualifiedTypeNameHistroy/>
+=======
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="com.team4.dao.admin.AdminServiceImpl"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
@@ -6,3 +9,4 @@
 <fullyQualifiedTypeName name="com.team4.test.AdminPageController"/>
 <fullyQualifiedTypeName name="com.team4.vo.AdminVo"/>
 </qualifiedTypeNameHistroy>
+>>>>>>> master

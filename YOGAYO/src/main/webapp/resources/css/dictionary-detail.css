@@ -45,8 +45,6 @@ main {
   width: 36%;
 }
 
-
-.yoga-stitle {}
 .yoga-title {
   font-weight: 700;
   line-height: 48px;
@@ -57,18 +55,20 @@ main {
   display: flex;
   align-items: center;
  justify-content: center; 
- margin:36px 0px 25px 0px;
+ margin:40px 0px 30px 0px;
+ height: 300px;
 }
 
 .search-img-section {
   width: 56%;
   display: flex;
   justify-content: center;
+  height: 300px;
 }
 
 .search-img{
   width: auto;
-  height: auto;
+  
   /* width:  800px; */
    height: 400px;
   margin-left: 20px;
