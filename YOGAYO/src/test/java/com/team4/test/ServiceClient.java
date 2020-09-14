@@ -49,13 +49,19 @@ public class ServiceClient {
 		
 		AdminServiceImpl service = new AdminServiceImpl();
 		
-		List<AdminVo> list = service.getAllComment();
+		
 	}
 		
 	public static void main(String[] args) {
 		
+		AdminServiceImpl service = new AdminServiceImpl();
 			
-	
+		try {
+			System.out.println(service.getAllCourse());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	

@@ -19,10 +19,10 @@
 			</div> </a>
 		<ul class="menu_list">
 			<li class="menu	">통계</li>
-			<li class="menu ">회원 관리</li>
-			<li class="menu">코멘트 관리</li>
+			<a href="/test/admin/member"><li class="menu ">회원 관리</li></a>
+			<a href="/test/admin/comment"><li class="menu">코멘트 관리</li></a>
 			<li class="menu">뉴스레터 전송</li>
-			<li class="menu">코스 관리</li>
+			<a href="/test/admin/course"><li class="menu">코스 관리</li></a>
 			<li class="menu">포즈 관리</li>
 			<li class="menu">포즈 관리</li>
 			<li class="menu">LOG OUT</li>
@@ -30,8 +30,8 @@
 	</header>
 	<main>
 		<div class="search_container">
-			<input type="button" id="filter" value="비속어 포함 댓글 검색"> <input type="text"
-				id="search" placeholder="키워드로 검색">
+			<input type="button" id="filter" value="비속어 포함 댓글 검색"> <input
+				type="text" id="search" placeholder="키워드로 검색">
 		</div>
 		<div class="comment_table">
 			<ul>
@@ -47,27 +47,36 @@
 					<div class="comment_delete">댓글삭제</div>
 				</li>
 				<c:forEach var="i" items="${commentList }">
-				<li class="comment_list">
-					<div class="idx">${i.cmtNum }</div>
-					<div class="comment_date">${i.regDate }</div>
-					<div class="user_avatar"><img src="${pageContext.request.contextPath}/${i.img}"></div>
-					<div class="comment_user">${i.name }</div>
-					<div class="comment_couse"><a href="">${i.crsNum }</a></div>
-					<div class="comment_couse"><a href="">${i.rate }</a></div>
-					<div class="comment_type">
-					<c:if test="${i.parent == '0'}">댓글</c:if>
-					<c:if test="${i.parent != '0'}">${i.parent }번 대댓글</c:if>
-					
-					
-					</div>
-					<div class="comment_content">${i.context }</div>
-					<div class="comment_delete"><input type="button" class="deleteBtn" onclick="confirmDelete(${i.cmtNum });" value="삭제"></div>
-				</li>
+					<li class="comment_list">
+						<div class="idx">${i.cmtNum }</div>
+						<div class="comment_date">${i.regDate }</div>
+						<div class="user_avatar">
+							<img src="${pageContext.request.contextPath}/${i.img}">
+						</div>
+						<div class="comment_user">${i.name }</div>
+						<div class="comment_couse">
+							<a href="">${i.crsNum }</a>
+						</div>
+						<div class="comment_couse">
+							<a href="">${i.rate }</a>
+						</div>
+						<div class="comment_type">
+							<c:if test="${i.parent == '0'}">댓글</c:if>
+							<c:if test="${i.parent != '0'}">${i.parent }번 대댓글</c:if>
+
+
+						</div>
+						<div class="comment_content">${i.context }</div>
+						<div class="comment_delete">
+							<input type="button" class="deleteBtn"
+								onclick="confirmDelete(${i.cmtNum });" value="삭제">
+						</div>
+					</li>
 				</c:forEach>
 			</ul>
 		</div>
 	</main>
-	
+
 	<script type="text/javascript">
 	
 	function confirmDelete(cmtNum){

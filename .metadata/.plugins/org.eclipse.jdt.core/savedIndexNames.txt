@@ -51,6 +51,5 @@ INDEX VERSION 1.131+/Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plugins/org.ec
 2473055855.index
 863586778.index
 4286084566.index
-275976719.index
 2780693214.index
 2281817916.index

@@ -63,6 +63,7 @@ public class SignUpController {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 		int i=service.getUNum(vo);
 		List<String> mongoList= new ArrayList<String>();
 		for(String s:keywordArr) {
