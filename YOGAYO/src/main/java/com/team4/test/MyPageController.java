@@ -26,15 +26,12 @@ import com.team4.vo.UserVo;
 @Controller
 public class MyPageController {
 	
-	UserServiceImpl service = new UserServiceImpl();
-	UserDAO dao = new UserDAOImpl();
-	UserVo vo = new UserVo();
-	FeedVo fvo = new FeedVo();
-	CourseVo cvo = new CourseVo();
 	
 	@RequestMapping(value="/myPage", method = RequestMethod.GET)
 	public String myPage(Model model,HttpServletRequest req, HttpServletResponse res) 
 			 {
+		UserServiceImpl service = new UserServiceImpl();
+		UserVo vo = new UserVo();
 		HttpSession session = req.getSession();
 		UserVo user = (UserVo)session.getValue("user");
 		int uNum = user.getuNum();

@@ -419,10 +419,21 @@ footer {
 	color: #BFBFBF;
 }
 
+.feed1_img_wrapper{
+  width: 570px;
+  height: 450px;
+  overflow: hidden;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  background-color: black;
+}
+
 .feed1_img {
 	/* border: 1px solid red; */
-	width: 100%;
-	height: 450px;
+	width: auto;
+  height: 450px;
+ image
 }
 
 .feed1_context {
@@ -539,9 +550,16 @@ footer {
 	font-size: 20px;
 }
 
+.feed2_img_wrapper{
+  width:570px;
+  height: 300px;
+  overflow: hidden;
+}
+
+
 .feed2_img {
-	width: 100%;
-	height: 300px;
+  width:570px;
+  height: auto;
 	/* border: 1px solid red; */
 }
 

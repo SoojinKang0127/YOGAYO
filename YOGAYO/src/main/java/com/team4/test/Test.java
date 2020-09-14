@@ -20,6 +20,9 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
+import com.team4.user.dao.UserServiceImpl;
+import com.team4.vo.CourseVo;
+import com.team4.vo.UserVo;
 
 
 
@@ -36,21 +39,30 @@ public class Test {
    
    
    public static void main(String[] args) {
-	   MongoClientURI uri = new MongoClientURI(
-	             "mongodb+srv://user:12345@cluster0.9bcza.mongodb.net/test?retryWrites=true&w=majority");
+//	   MongoClientURI uri = new MongoClientURI(
+//	             "mongodb+srv://user:12345@cluster0.9bcza.mongodb.net/test?retryWrites=true&w=majority");
 
-	         MongoClient mongoClient = new MongoClient(uri);
-	         MongoDatabase database = mongoClient.getDatabase("test");
-      MongoClient  mongo = new MongoClient("192.168.56.1",27017);
-      MongoDatabase test = mongo.getDatabase("test");
+//	         MongoClient mongoClient = new MongoClient(uri);
+//	         MongoDatabase database = mongoClient.getDatabase("test");
+//      MongoClient  mongo = new MongoClient("192.168.56.1",27017);
+//      MongoDatabase test = mongo.getDatabase("test");
         //3. 컬렉션 가져오기(Bson 형태)
-        MongoCollection<Document> collection = database.getCollection("user");
-        String b="안녕하세요!!";
-        insert(collection);
-        DB db = mongo.getDB("test");
-        DBCollection cltn=db.getCollection("user");
+//        MongoCollection<Document> collection = database.getCollection("user");
+//        String b="안녕하세요!!";
+//        insert(collection);
+//        DB db = mongo.getDB("test");
+//        DBCollection cltn=db.getCollection("user");
        // find(cltn);
-      
+	   UserServiceImpl service = new UserServiceImpl();
+	  UserVo vo= new UserVo();
+	  vo.setuNum(1048);
+	   try {
+		List<CourseVo> crsList = service.selectAllCrs(vo);
+		System.out.println(crsList.toString());
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
       
    
    }

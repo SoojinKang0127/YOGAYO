@@ -136,7 +136,7 @@
 						<div class="btn">
 							<div class="time">총 ${totalMin}분 ${totalSec} 초</div>
 							<div class="start_btn">
-								<a href="${pageContext.request.contextPath}/course_playlist">
+								<a href="${pageContext.request.contextPath}/player?course=${crsNum }">
 									<button id="btn_to_start">시작하기</button>
 								</a>
 							</div>

@@ -45,29 +45,29 @@
   </head>
   <body>
      <header class="header">
-      <div class="main-status_bar">
-         <div class="main-logo_wrapper">
-            <a href="main_page.html"> 
-               <div class="logo-wrapper">
-               <span>YOGAYO</span>
-                  <div class="box-div"></div>
-               </div>
-            </a>
-         </div>
-         <div class="main-status_categories">
-            <span class="recommand"><a href="${pageContext.request.contextPath}/main">추천</a></span> 
-            <span class="course"><a href="${pageContext.request.contextPath}/course-page">코스</a></span>
-            <span class="dictionary"><a href="${pageContext.request.contextPath}/my-page">자세 사전</a></span> 
-            <span class="my_page"><a href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
-         </div>
-         <div class="main-profile">
-            <div class="welcome_user">안녕하세요. ${user.name}님</div>
-            <a href="myPage"><img
-               src="${pageContext.request.contextPath}/${user.img}"
-               class="profile_img" /></a>
-         </div>
-      </div>
-   </header>
+		<div class="main-status_bar">
+			<div class="main-logo_wrapper">
+				<a href="main_page.html"> 
+					<div class="logo-wrapper">
+					<span>YOGAYO</span>
+						<div class="box-div"></div>
+					</div>
+				</a>
+			</div>
+			<div class="main-status_categories">
+				<span class="recommand"><a href="${pageContext.request.contextPath}/main">추천</a></span> 
+				<span class="course"><a href="${pageContext.request.contextPath}/course-page">코스</a></span>
+				<span class="dictionary"><a href="${pageContext.request.contextPath}/my-page">자세 사전</a></span> 
+				<span class="my_page"><a href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
+			</div>
+			<div class="main-profile">
+				<div class="welcome_user">안녕하세요. ${user.name}님</div>
+				<a href="myPage"><img
+					src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+					class="profile_img" /></a>
+			</div>
+		</div>
+	</header>
     <main>
       <div id="content">
         <div class="content_1">
@@ -113,8 +113,9 @@
 	                  	<img class="feed1_uimg" alt="사진오류" src="${pageContext.request.contextPath}/${user.img}">
 	                  	<div class="feed1_name">${user.name }</div>
 	                  	<div class="feed1_date">${f.regDate }</div>
-	                  </div>
-	                  <img class="feed1_img" alt="사진 없음" src="${pageContext.request.contextPath}/${f.uImg1 }">
+                    </div>
+                    <div class="feed1_img_wrapper">
+	                  <img class="feed1_img" alt="사진 없음" src="${pageContext.request.contextPath}/${f.uImg1 }"></div>
 	                  	<div class="feed1_context">${f.context }</div>
 	                  	<div class="feed1_level">
 	                  	 <div class="feed1_sLevel">만족도 : ${f.sLevel }</div>
@@ -129,7 +130,7 @@
               <div class="feed2_content">
                 <div class="feed2_info">
                   <div class="feed2_title">${c.title }</div>
-                  <img class="feed2_img" alt="사진없음" src="${pageContext.request.contextPath}/${c.imgPath }">
+                  <div class="feed2_img_wrapper"><img class="feed2_img" alt="사진없음" src="${pageContext.request.contextPath}/${c.imgPath }"></div>
                   <div class="feed2_context">${c.dscrt }</div>
                   <div class="feed2_material">필요한 물품: ${c.material }</div>
                 </div>
