@@ -5,7 +5,20 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2020-09-11T15:00:00Z</updated>
+  <updated>2020-09-14T12:00:00Z</updated>
+  <entry>
+    <title>Azure in the Enterprise: Azure Cosmos DB and Spring Boot</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/09/14/azure-in-the-enterprise-azure-cosmos-db-and-spring-boot" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2020-09-02:4185</id>
+    <updated>2020-09-14T12:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! I was on the Microsoft Azure YouTube show &lt;em&gt;Azure in the Enterprise&lt;/em&gt; with Lyle Dodge where I did a quick demonstration introducing the Spring for Microsoft Azure support for the Microsoft Azure Cosmos DB. Check it out!&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/IWQboyBohEI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>You spoke, we listened: State of Spring 2020 report is here!</title>
     <link rel="alternate" href="https://spring.io/blog/2020/09/11/you-spoke-we-listened-state-of-spring-2020-report-is-here" />
@@ -17,7 +30,7 @@
     <updated>2020-09-11T15:00:00Z</updated>
     <content type="html">&lt;p&gt;&lt;img src="https://github.com/spring-io/spring-io-static/raw/master/blog/bwilcock/20201011/state-of-spring-2020.png" alt="headline" /&gt;&lt;/p&gt;
 &lt;p&gt;Back in July the Spring team asked for your input on a range of Spring-related topics. And wow! What a response!&lt;/p&gt;
-&lt;p&gt;Thank you to the 1024 developers, architects, and managers across the globe that took time out of their day to complete the survey. We‚Äôve crunched the numbers, filtered &amp;amp; mashed up the results to distill the most compelling insights into the State of Spring 2020 report.&lt;/p&gt;
+&lt;p&gt;Thank you to the 1024 developers, architects, and managers across the globe that took time out of their day to complete the survey. We°Øve crunched the numbers, filtered &amp;amp; mashed up the results to distill the most compelling insights into the State of Spring 2020 report.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://github.com/spring-io/spring-io-static/raw/master/blog/bwilcock/20201011/state-of-spring-2020-key-findings.png" alt="overview" /&gt;&lt;/p&gt;
 &lt;p&gt;Thanks to everyone that completed the survey. We look forward to making this report an annual event, following the growth, success, and evolution of our community.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href="https://tanzu.vmware.com/content/ebooks/state-of-spring-2020"&gt;Download your copy of &amp;lsquo;The State Of Spring 2020&amp;rsquo; NOW!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
@@ -182,7 +195,7 @@ Supplier&amp;lt;Flux&amp;lt;Message&amp;lt;?&amp;gt;&amp;gt;&amp;gt; jdbcSupplie
 &lt;h2 id="file-consumer"&gt;&lt;a class="anchor" href="#file-consumer"&gt;&lt;/a&gt;File Consumer&lt;/h2&gt;
 &lt;div class="sectionbody"&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Similar to the File Supplier we saw in the &lt;a href="https://spring.io/blog/2020/08/25/case-study-reading-from-a-file-and-writing-to-mongodb"&gt;previous blog&lt;/a&gt;, the &lt;a href="https://github.com/spring-cloud/stream-applications/tree/master/functions/consumer/file-consumer"&gt;File Consumer&lt;/a&gt; is also a reusable bean that we can inject into our custom applications and use it to create new files in a directory. The bean is implemented as a &lt;code&gt;java.util.function.Consumer&lt;/code&gt;.  Often it might lead to some confusion for the novice reader, why it is called a consumer, but not actually consuming anything from a file. Although named and implemented as a consumer, file consumer is not a consumer of files in which it polls or reads files, but a consumer that accepts data and then writes to files.  The use case of ‚Äúconsuming‚Äù files is handled by the file supplier.&lt;/p&gt;
+&lt;p&gt;Similar to the File Supplier we saw in the &lt;a href="https://spring.io/blog/2020/08/25/case-study-reading-from-a-file-and-writing-to-mongodb"&gt;previous blog&lt;/a&gt;, the &lt;a href="https://github.com/spring-cloud/stream-applications/tree/master/functions/consumer/file-consumer"&gt;File Consumer&lt;/a&gt; is also a reusable bean that we can inject into our custom applications and use it to create new files in a directory. The bean is implemented as a &lt;code&gt;java.util.function.Consumer&lt;/code&gt;.  Often it might lead to some confusion for the novice reader, why it is called a consumer, but not actually consuming anything from a file. Although named and implemented as a consumer, file consumer is not a consumer of files in which it polls or reads files, but a consumer that accepts data and then writes to files.  The use case of °∞consuming°± files is handled by the file supplier.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;Here is the type signature for the file consumer.&lt;/p&gt;
@@ -199,7 +212,7 @@ Supplier&amp;lt;Flux&amp;lt;Message&amp;lt;?&amp;gt;&amp;gt;&amp;gt; jdbcSupplie
 &lt;p&gt;There are several enterprise use cases, where a file consumer is useful. A file consumer is useful for any business case that creates, or appends to a file whenever new data becomes available.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;When using the file consumer, we can provide it with a directory and name of the file to write using the properties, &lt;code&gt;file.consumer.directory&lt;/code&gt; and &lt;code&gt;file.consumer.name&lt;/code&gt; respectively. If we don‚Äôt set them, it will use the defaults set by the consumer. By default, the data will be appended to the file which can be changed through the property &lt;code&gt;file.consumer.mode&lt;/code&gt;. For more details, see configuration options for &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/functions/consumer/file-consumer/src/main/java/org/springframework/cloud/fn/consumer/file/FileConsumerProperties.java"&gt;FileConsumerProperties&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;When using the file consumer, we can provide it with a directory and name of the file to write using the properties, &lt;code&gt;file.consumer.directory&lt;/code&gt; and &lt;code&gt;file.consumer.name&lt;/code&gt; respectively. If we don°Øt set them, it will use the defaults set by the consumer. By default, the data will be appended to the file which can be changed through the property &lt;code&gt;file.consumer.mode&lt;/code&gt;. For more details, see configuration options for &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/functions/consumer/file-consumer/src/main/java/org/springframework/cloud/fn/consumer/file/FileConsumerProperties.java"&gt;FileConsumerProperties&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -240,7 +253,7 @@ Supplier&amp;lt;Flux&amp;lt;Message&amp;lt;?&amp;gt;&amp;gt;&amp;gt; jdbcSupplie
 &lt;p&gt;Do &lt;code&gt;docker ps&lt;/code&gt; and make sure that you see all three components are up and running (Kafka, Zookeeper, and MySQL).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Now that we have the necessary infrastructure ready, let‚Äôs go ahead and setup our MySQL database before we run our applications.&lt;/p&gt;
+&lt;p&gt;Now that we have the necessary infrastructure ready, let°Øs go ahead and setup our MySQL database before we run our applications.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="listingblock"&gt;
 &lt;div class="content"&gt;
@@ -274,7 +287,7 @@ CREATE TABLE IF NOT EXISTS People (
 &lt;div class="sect2"&gt;
 &lt;h3 id="running-file-sink-as-standalone"&gt;&lt;a class="anchor" href="#running-file-sink-as-standalone"&gt;&lt;/a&gt;Running file sink as standalone&lt;/h3&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Let‚Äôs run the out of the box file sink stand-alone.&lt;/p&gt;
+&lt;p&gt;Let°Øs run the out of the box file sink stand-alone.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="listingblock"&gt;
 &lt;div class="content"&gt;
@@ -290,7 +303,7 @@ CREATE TABLE IF NOT EXISTS People (
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Let‚Äôs go over the details about what we are trying to do. We are asking the file sink application to consume data from a kafka topic &lt;code&gt;jdbc-file-demo&lt;/code&gt; and then generate a file named &lt;code&gt;output.txt&lt;/code&gt; in the directory &lt;code&gt;/tmp/processed-file&lt;/code&gt; on the file system. By default, each incoming Kafka topic record is appended to the file as a new line. If you enable, &lt;code&gt;file.consumer.binary&lt;/code&gt; value to &lt;code&gt;true&lt;/code&gt;, then the file is written as binary. You can find all the available configurations &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/applications/sink/file-sink/README.adoc"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Let°Øs go over the details about what we are trying to do. We are asking the file sink application to consume data from a kafka topic &lt;code&gt;jdbc-file-demo&lt;/code&gt; and then generate a file named &lt;code&gt;output.txt&lt;/code&gt; in the directory &lt;code&gt;/tmp/processed-file&lt;/code&gt; on the file system. By default, each incoming Kafka topic record is appended to the file as a new line. If you enable, &lt;code&gt;file.consumer.binary&lt;/code&gt; value to &lt;code&gt;true&lt;/code&gt;, then the file is written as binary. You can find all the available configurations &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/applications/sink/file-sink/README.adoc"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="sect2"&gt;
@@ -346,7 +359,7 @@ CREATE TABLE IF NOT EXISTS People (
 &lt;div class="sect2"&gt;
 &lt;h3 id="verify-the-flow"&gt;&lt;a class="anchor" href="#verify-the-flow"&gt;&lt;/a&gt;Verify the flow&lt;/h3&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Now that we are running both applications, let‚Äôs insert data into the table.&lt;/p&gt;
+&lt;p&gt;Now that we are running both applications, let°Øs insert data into the table.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;Go to your MySQL terminal session and enter the following insert statement.&lt;/p&gt;
@@ -357,7 +370,7 @@ CREATE TABLE IF NOT EXISTS People (
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Now go the directory &lt;code&gt;/tmp/processed-file&lt;/code&gt; where the file-sink is writing the file and look for a file named &lt;code&gt;output.txt&lt;/code&gt;. Open the file and verify it‚Äôs content. It should contain the following.&lt;/p&gt;
+&lt;p&gt;Now go the directory &lt;code&gt;/tmp/processed-file&lt;/code&gt; where the file-sink is writing the file and look for a file named &lt;code&gt;output.txt&lt;/code&gt;. Open the file and verify it°Øs content. It should contain the following.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="listingblock"&gt;
 &lt;div class="content"&gt;
@@ -388,10 +401,10 @@ mysql&amp;gt; insert into People values (3, 'Mary', 'First Street', 'First City'
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;As we have seen in the &lt;a href="https://spring.io/blog/2020/07/20/introducing-java-functions-for-spring-cloud-stream-applications-part-1"&gt;prior blogs&lt;/a&gt; and as explained &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/docs/FunctionComposition.adoc"&gt;here&lt;/a&gt;, all the out of the box sources are autoconfigured with many useful functions so that you can activate them through a property. While running with the new configuration options above, we are composing the &lt;a href="https://github.com/spring-cloud/stream-applications/tree/master/functions/function/filter-function"&gt;filterFunction&lt;/a&gt; with &lt;code&gt;jdbcSupplier&lt;/code&gt;, thus adding filtering capabilities to the data produced by JDBC Supplier. We are composing it using the property, &lt;code&gt;spring.cloud.stream.function.definition&lt;/code&gt; and give it the value &lt;code&gt;jdbcSupplier|filterFunction&lt;/code&gt;. Then through the property, &lt;code&gt;filter.function.expression&lt;/code&gt;, we provide a &lt;a href="https://github.com/json-path/JsonPath"&gt;JSONPath&lt;/a&gt; expression to filter out all even id‚Äôs.&lt;/p&gt;
+&lt;p&gt;As we have seen in the &lt;a href="https://spring.io/blog/2020/07/20/introducing-java-functions-for-spring-cloud-stream-applications-part-1"&gt;prior blogs&lt;/a&gt; and as explained &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/docs/FunctionComposition.adoc"&gt;here&lt;/a&gt;, all the out of the box sources are autoconfigured with many useful functions so that you can activate them through a property. While running with the new configuration options above, we are composing the &lt;a href="https://github.com/spring-cloud/stream-applications/tree/master/functions/function/filter-function"&gt;filterFunction&lt;/a&gt; with &lt;code&gt;jdbcSupplier&lt;/code&gt;, thus adding filtering capabilities to the data produced by JDBC Supplier. We are composing it using the property, &lt;code&gt;spring.cloud.stream.function.definition&lt;/code&gt; and give it the value &lt;code&gt;jdbcSupplier|filterFunction&lt;/code&gt;. Then through the property, &lt;code&gt;filter.function.expression&lt;/code&gt;, we provide a &lt;a href="https://github.com/json-path/JsonPath"&gt;JSONPath&lt;/a&gt; expression to filter out all even id°Øs.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Now, if you insert more data into the table, you will see only records with odd ID‚Äôs are written to the file.&lt;/p&gt;
+&lt;p&gt;Now, if you insert more data into the table, you will see only records with odd ID°Øs are written to the file.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;Try entering these records into the table.&lt;/p&gt;
@@ -407,7 +420,7 @@ mysql&amp;gt; insert into People values (205, 'Doe', 'First Street', 'First City
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;We will see that the file does not contain records with ID‚Äôs 200, 202 and 204 since they got filtered out.&lt;/p&gt;
+&lt;p&gt;We will see that the file does not contain records with ID°Øs 200, 202 and 204 since they got filtered out.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -416,7 +429,7 @@ mysql&amp;gt; insert into People values (205, 'Doe', 'First Street', 'First City
 &lt;h2 id="running-jdbc-source-with-other-databases"&gt;&lt;a class="anchor" href="#running-jdbc-source-with-other-databases"&gt;&lt;/a&gt;Running JDBC Source with other databases.&lt;/h2&gt;
 &lt;div class="sectionbody"&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;JDBC supplier is shipped with popular open source JDBC drivers. Currently, it contains drivers for MySQL, PostgreSQL, and Microsoft SQL Server databases. This gives us the ability to quickly switch the same JDBC Source application that is running against a particular database, say MySQL to run against PostgreSQL without making any code changes, but only configuration changes at deployment. Let‚Äôs take our JDBC Source that we ran against MySQL and run this time against PostgreSQL.&lt;/p&gt;
+&lt;p&gt;JDBC supplier is shipped with popular open source JDBC drivers. Currently, it contains drivers for MySQL, PostgreSQL, and Microsoft SQL Server databases. This gives us the ability to quickly switch the same JDBC Source application that is running against a particular database, say MySQL to run against PostgreSQL without making any code changes, but only configuration changes at deployment. Let°Øs take our JDBC Source that we ran against MySQL and run this time against PostgreSQL.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;First, we will run PostgreSQL in a docker container.&lt;/p&gt;
@@ -463,7 +476,7 @@ PRIMARY KEY (id));&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This pretty much follows the same configuration options as the second time we ran the JDBC source against MySQL, but this time the datasource properties are changed for running against the PostgreSQL database.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Insert the same data as before with MySQL at the psql prompt. You will notice that only ID‚Äôs with odd numbers are getting appended to the file.&lt;/p&gt;
+&lt;p&gt;Insert the same data as before with MySQL at the psql prompt. You will notice that only ID°Øs with odd numbers are getting appended to the file.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -555,7 +568,7 @@ PRIMARY KEY (id));&lt;/code&gt;&lt;/pre&gt;
   &lt;li&gt;&lt;a href="https://searchapparchitecture.techtarget.com/news/252488508/Microsoft-VMware-make-Azure-Spring-Cloud-GA?amp=1&amp;__twitter_impression=true"&gt;Microsoft, VMware make Azure Spring Cloud GA&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/09/03/spring-tools-4-7-2-released"&gt;Spring Tools 4.7.2 released&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://www.linkedin.com/pulse/super-charge-your-spring-boot-apps-azure-cloud-kylie-liang"&gt;Super Charge Your Spring Boot Apps with Azure Spring Cloud&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/content/blog/the-state-of-spring-2020-report-is-now-available-learn-how-your-java-development-compares"&gt;The State of Spring 2020 Report Is Now Available‚ÄîLearn How Your Java Development Compares&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/content/blog/the-state-of-spring-2020-report-is-now-available-learn-how-your-java-development-compares"&gt;The State of Spring 2020 Report Is Now Available?Learn How Your Java Development Compares&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;This is pretty crazy: the JDK has officialyl moved to Github! &lt;a href="https://inside.java/2020/09/05/skara-transition-done/"&gt;jdk/jdk repository transition to Git, GitHub and Skara is done&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
@@ -709,10 +722,10 @@ class HelloController {&#xD;
   &lt;li&gt;&lt;a href="https://twitter.com/java/status/1298667300183146496"&gt;Huzzah! Good news everyone! Jackson will support Java 14 records (a preview feature at the moment..)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/08/26/heap-snapshotting/"&gt;Interesting post over on the Inside Java blog: Heap Snapshotting&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://youtrack.jetbrains.com/issue/IDEABKL-708#focus=Comments-27-4365766.0-0"&gt;It&amp;rsquo;s finally here! Collaborative development for IntelliJ, after &lt;em&gt;years&lt;/em&gt; of people asking for it!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://cloud.google.com/run/docs/tips/java#appcds"&gt;Optimizing Java applications for Cloud Run ¬†|¬† Cloud Run Documentation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://cloud.google.com/run/docs/tips/java#appcds"&gt;Optimizing Java applications for Cloud Run ?|? Cloud Run Documentation&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://tanzu.vmware.com/developer/tv/code/0001/"&gt;Orchestration for Reactive Spring with Josh Long | Tanzu.TV | VMware Tanzu Developer&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/28/spring-cloud-hoxton-sr8-has-been-released"&gt;Spring Cloud Hoxton.SR8 has been released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/content/blog/the-state-of-spring-2020-report-is-now-available-learn-how-your-java-development-compares"&gt;The State of Spring 2020 Report Is Now Available‚ÄîLearn How Your Java Development Compares&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://tanzu.vmware.com/content/blog/the-state-of-spring-2020-report-is-now-available-learn-how-your-java-development-compares"&gt;The State of Spring 2020 Report Is Now Available?Learn How Your Java Development Compares&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/VMwareTanzu/status/1298717862173974530"&gt;The new Cloud Service Broker for Cloud Foundry offers a new way to CF users to consume public cloud services. Read our blog for a technical deep dive.&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/springcloud/status/1300874401576034304"&gt;The state of Spring report is now available! Check it out.&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://www.cloudfoundry.org/usn-4436-2/"&gt;USN-4436-2: librsvg regression&lt;/a&gt;&lt;/li&gt;
@@ -886,13 +899,13 @@ dependencies {&#xD;
 &lt;p&gt;Alright my friends, let&amp;rsquo;s get into it. We&amp;rsquo;ve got a ton of stuff to go through so onward! &lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/liangkylie/status/1296682854194327552?s=12"&gt;Azure Spring Cloud now supports autoscale!&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://techcommunity.microsoft.com/t5/spring-on-azure/azure-spring-integrations-august-update/ba-p/1595105"&gt;Azure Spring Integrations ‚Äì August update - Microsoft Tech Community - 1595105&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://techcommunity.microsoft.com/t5/spring-on-azure/azure-spring-integrations-august-update/ba-p/1595105"&gt;Azure Spring Integrations ? August update - Microsoft Tech Community - 1595105&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/21/bootiful-podcast-google-cloud-s-elena-felder-on-spring-cloud-gcp-reactor-and-more"&gt;Bootiful Podcast: Google Cloud&amp;rsquo;s Elena Felder on Spring Cloud GCP, Reactor, and More&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://www.youtube.com/watch?feature=youtu.be&amp;v=PR6Gw4Ca-sE&amp;app=desktop"&gt;Build a Secure CRUD Application with React, Spring Boot, and Kotlin - YouTube&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/25/case-study-reading-from-a-file-and-writing-to-mongodb"&gt;Case Study: Reading from a file and writing to MongoDB&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/21/get-the-very-first-bits-of-spring-authorization-server-0-0-1"&gt;Get the very first bits of Spring Authorization Server 0.0.1 !&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/08/20/jep338-proposed-to-target-jdk16/"&gt;JEP proposed to target JDK 16: 338: Vector API (Incubator)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blog.jetbrains.com/kotlin/2020/08/kotlin-1-4-released-with-a-focus-on-quality-and-performance/"&gt;Kotlin 1.4 Released with a Focus on Quality and Performance ‚Äì Kotlin Blog | JetBrains&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://blog.jetbrains.com/kotlin/2020/08/kotlin-1-4-released-with-a-focus-on-quality-and-performance/"&gt;Kotlin 1.4 Released with a Focus on Quality and Performance ? Kotlin Blog | JetBrains&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://jax.de/spring-boot-cheat-sheet/"&gt;Spring Boot Cheat Sheet | W-JAX |&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/22/spring-boot-for-apache-geode-vmware-gemfire-1-4-0-m2-and-1-3-3-release-available"&gt;Spring Boot for Apache Geode &amp;amp; VMware GemFire 1.4.0-M2 and 1.3.3.RELEASE Available&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/spencerbgibb/status/1296904539300388873?s=12"&gt;The RSocket routing broker roadmap is now available&lt;/a&gt;&lt;/li&gt;
@@ -946,7 +959,7 @@ dependencies {&#xD;
 &lt;h2 id="file-reading-and-processing-use-cases"&gt;&lt;a class="anchor" href="#file-reading-and-processing-use-cases"&gt;&lt;/a&gt;File reading and processing use cases&lt;/h2&gt;
 &lt;div class="sectionbody"&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;File ingestion and reading data from those files is a classic enterprise use case. Many businesses have been relying on varying levels of file facilities for many decades to carry out mission-critical systems. Terabytes of data travel through the interwebs and enterprise intranets as files. For example, imagine a banking data center where it receives data from all its branches, ATMs, and POS transactions as files every second which then needs to be processed and placed into other systems. This is just one domain, but there are hundreds of thousands of examples out there in which file processing is on the critical path of many businesses. There are a lot of legacy systems in which many custom applications were written each employing its own ways of handling these use cases. Spring Integration has been providing &lt;a href="https://docs.spring.io/spring-integration/reference/html/file.html"&gt;file support&lt;/a&gt; as channel adapters for many years. These components can be realized as functions and in the case of reading from files, we can provide a generic &lt;code&gt;Supplier&lt;/code&gt; function that is reusable and injected in end-user applications. In the following sections, we will see more details about this functional abstraction and it‚Äôs various usage scenarios.&lt;/p&gt;
+&lt;p&gt;File ingestion and reading data from those files is a classic enterprise use case. Many businesses have been relying on varying levels of file facilities for many decades to carry out mission-critical systems. Terabytes of data travel through the interwebs and enterprise intranets as files. For example, imagine a banking data center where it receives data from all its branches, ATMs, and POS transactions as files every second which then needs to be processed and placed into other systems. This is just one domain, but there are hundreds of thousands of examples out there in which file processing is on the critical path of many businesses. There are a lot of legacy systems in which many custom applications were written each employing its own ways of handling these use cases. Spring Integration has been providing &lt;a href="https://docs.spring.io/spring-integration/reference/html/file.html"&gt;file support&lt;/a&gt; as channel adapters for many years. These components can be realized as functions and in the case of reading from files, we can provide a generic &lt;code&gt;Supplier&lt;/code&gt; function that is reusable and injected in end-user applications. In the following sections, we will see more details about this functional abstraction and it°Øs various usage scenarios.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -999,7 +1012,7 @@ public void consumeDataAndSendEmail() {
 &lt;h2 id="running-a-standalone-file-source-that-uses-the-file-supplier"&gt;&lt;a class="anchor" href="#running-a-standalone-file-source-that-uses-the-file-supplier"&gt;&lt;/a&gt;Running a standalone file source that uses the file supplier&lt;/h2&gt;
 &lt;div class="sectionbody"&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;File supplier becomes more powerful when it is combined with Spring Cloud Stream to make it a &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/applications/source/file-source/README.adoc"&gt;file source&lt;/a&gt;. As we have seen in the earlier blogs, this supplier is already prepackaged with both &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/file-source-kafka/3.0.0-SNAPSHOT/"&gt;Kafka&lt;/a&gt; and &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/file-source-rabbit/3.0.0-SNAPSHOT/"&gt;RabbitMQ&lt;/a&gt; binders in Spring Cloud Stream to make them uber jars which are runnable as Spring Boot applications. Let‚Äôs see how we can take this uber jar and run it as standalone.&lt;/p&gt;
+&lt;p&gt;File supplier becomes more powerful when it is combined with Spring Cloud Stream to make it a &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/applications/source/file-source/README.adoc"&gt;file source&lt;/a&gt;. As we have seen in the earlier blogs, this supplier is already prepackaged with both &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/file-source-kafka/3.0.0-SNAPSHOT/"&gt;Kafka&lt;/a&gt; and &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/file-source-rabbit/3.0.0-SNAPSHOT/"&gt;RabbitMQ&lt;/a&gt; binders in Spring Cloud Stream to make them uber jars which are runnable as Spring Boot applications. Let°Øs see how we can take this uber jar and run it as standalone.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;As a first step, go ahead and grab this file source with the Apache Kafa variant.&lt;/p&gt;
@@ -1071,7 +1084,7 @@ public void consumeDataAndSendEmail() {
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Once injected into a custom application, users can directly invoke the &lt;code&gt;accept&lt;/code&gt; method of the consumer and provide a &lt;code&gt;Message&amp;lt;?&amp;gt;&lt;/code&gt; object to send it‚Äôs payload to a MongoDB collection.&lt;/p&gt;
+&lt;p&gt;Once injected into a custom application, users can directly invoke the &lt;code&gt;accept&lt;/code&gt; method of the consumer and provide a &lt;code&gt;Message&amp;lt;?&amp;gt;&lt;/code&gt; object to send it°Øs payload to a MongoDB collection.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;When using the MongoDB consumer, the collection is a required property and it must be configured through &lt;code&gt;mongodb.consumer.collection&lt;/code&gt;.&lt;/p&gt;
@@ -1085,7 +1098,7 @@ public void consumeDataAndSendEmail() {
 &lt;p&gt;As in the case of File Source, Spring Cloud Stream out of the box applications already provide a MongoDB sink using the MongoDB consumer. The sink is available for both &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/mongodb-sink-kafka/3.0.0-SNAPSHOT/"&gt;Kafka&lt;/a&gt; and &lt;a href="https://repo.spring.io/libs-snapshot-local/org/springframework/cloud/stream/app/mongodb-sink-rabbit/3.0.0-SNAPSHOT/"&gt;RabbitMQ&lt;/a&gt; binder variants. When used as a Spring Cloud Stream sink, the MongoDB consumer is automatically configured to accept data from the respective middleware system, for example, from a Kafka topic or RabbitMQ exchange.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Let‚Äôs take a few minutes and verify that we can run the MongoDB sink standalone.&lt;/p&gt;
+&lt;p&gt;Let°Øs take a few minutes and verify that we can run the MongoDB sink standalone.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="sect2"&gt;
 &lt;h3 id="setting-up-mongodb-for-testing-the-sink-using-docker"&gt;&lt;a class="anchor" href="#setting-up-mongodb-for-testing-the-sink-using-docker"&gt;&lt;/a&gt;Setting up MongoDB for testing the sink using Docker&lt;/h3&gt;
@@ -1117,12 +1130,12 @@ public void consumeDataAndSendEmail() {
 
 &amp;gt; db.auth('mongoadmin','secret')
 1
-&amp;gt; db.createCollection('test_collection‚Äô')
+&amp;gt; db.createCollection('test_collection°Ø')
 { "ok" : 1 }&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Now that we have our MongoDB setup, let‚Äôs run the sink standalone.&lt;/p&gt;
+&lt;p&gt;Now that we have our MongoDB setup, let°Øs run the sink standalone.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="listingblock"&gt;
 &lt;div class="content"&gt;
@@ -1214,10 +1227,10 @@ export STREAM_APPS_URI=https://repo.spring.io/libs-snapshot-local/org/springfram
 &lt;p&gt;&lt;span class="image"&gt;&lt;img src="https://github.com/spring-cloud/stream-applications/blob/gh-pages/img/file-mongo/file-mongo-scdf-blog.png?raw=true" alt="File to MongoDB SCDF Blog Pipeline"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Name the stream as file-source-filter-mongo and then click on Create the Stream. Once it&amp;#8217;s created, click on ‚ÄúDeploy the Stream‚Äù. Accept all the default options and click on ‚ÄúDeploy Stream‚Äù at the bottom of the screen.&lt;/p&gt;
+&lt;p&gt;Name the stream as file-source-filter-mongo and then click on Create the Stream. Once it&amp;#8217;s created, click on °∞Deploy the Stream°±. Accept all the default options and click on °∞Deploy Stream°± at the bottom of the screen.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;Once the stream is deployed, go ahead and create a directory called &lt;code&gt;source-files&lt;/code&gt; in the same directory where the Spring Cloud Data Flow docker-compose script was invoked. This directory is already mounted by the docker container that is running one of the Spring Cloud Data Flow components (Skipper) and seen by the container. Ensure that this &lt;code&gt;source-files&lt;/code&gt; directory has the right access levels, especially, since the docker container will run the applications as root and you will most likely run as a non-root user on your local machine. Watch the file source application‚Äôs logs on the UI for any permission errors. If you see any, address those issues.&lt;/p&gt;
+&lt;p&gt;Once the stream is deployed, go ahead and create a directory called &lt;code&gt;source-files&lt;/code&gt; in the same directory where the Spring Cloud Data Flow docker-compose script was invoked. This directory is already mounted by the docker container that is running one of the Spring Cloud Data Flow components (Skipper) and seen by the container. Ensure that this &lt;code&gt;source-files&lt;/code&gt; directory has the right access levels, especially, since the docker container will run the applications as root and you will most likely run as a non-root user on your local machine. Watch the file source application°Øs logs on the UI for any permission errors. If you see any, address those issues.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;Prepare a new terminal session with &lt;code&gt;mongo&lt;/code&gt; CLI tool.&lt;/p&gt;
@@ -1233,9 +1246,9 @@ export STREAM_APPS_URI=https://repo.spring.io/libs-snapshot-local/org/springfram
 
 &amp;gt; use admin
 
-&amp;gt; db.auth(‚Äòmongoadmin‚Äô,'secret')
+&amp;gt; db.auth(°Æmongoadmin°Ø,'secret')
 1
-&amp;gt; db.createCollection(‚Äòmongo_data‚Äô')
+&amp;gt; db.createCollection(°Æmongo_data°Ø')
 { "ok" : 1 }&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1275,7 +1288,7 @@ export STREAM_APPS_URI=https://repo.spring.io/libs-snapshot-local/org/springfram
 &lt;h2 id="summary"&gt;&lt;a class="anchor" href="#summary"&gt;&lt;/a&gt;Summary&lt;/h2&gt;
 &lt;div class="sectionbody"&gt;
 &lt;div class="paragraph"&gt;
-&lt;p&gt;In this blog, we took a whirlwind tour through File Supplier and it‚Äôs Spring Cloud Stream source counterpart. We also saw the MongoDB consumer and the corresponding Spring Cloud Stream sink application. We looked at how the function components can be injected into custom applications. After that, we saw how to run the Spring Cloud Stream applications for both file source and MongoDB sink standalone. Finally, we delved into Spring Cloud Data Flow and orchestrated a pipeline that goes from File Source to MongoDB sink, on its way filtering some data out.&lt;/p&gt;
+&lt;p&gt;In this blog, we took a whirlwind tour through File Supplier and it°Øs Spring Cloud Stream source counterpart. We also saw the MongoDB consumer and the corresponding Spring Cloud Stream sink application. We looked at how the function components can be injected into custom applications. After that, we saw how to run the Spring Cloud Stream applications for both file source and MongoDB sink standalone. Finally, we delved into Spring Cloud Data Flow and orchestrated a pipeline that goes from File Source to MongoDB sink, on its way filtering some data out.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="sect2"&gt;
 &lt;h3 id="stay-tuned"&gt;&lt;a class="anchor" href="#stay-tuned"&gt;&lt;/a&gt;Stay tuned&lt;/h3&gt;
@@ -1601,7 +1614,7 @@ When most people think of caching, they are technically referring to the &lt;em&
   &lt;li&gt;&lt;a href="https://twitter.com/cloudfoundry/status/1295762491503292417"&gt;How &lt;code&gt;cf-for-k8s&lt;/code&gt; Reinvents Cloud Foundry as a Native Kubernetes App Platform&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/08/07/loom-performance/"&gt;Interesting post on the performance of user-mode threads and coroutines&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring-gcp.saturnism.me/"&gt;Introduction - Spring Boot on GCP&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://m.facebook.com/355408241562041/videos/708422819736807"&gt;Microsoft&amp;rsquo;s Rory Preddy on Integrating ‚ÄúReactive‚Äù APIs to traditional relational databases&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://m.facebook.com/355408241562041/videos/708422819736807"&gt;Microsoft&amp;rsquo;s Rory Preddy on Integrating °∞Reactive°± APIs to traditional relational databases&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/08/18/foreign-api-jep/"&gt;New candidate JEP: 389: Foreign Linker API (Incubator)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/13/premiering-the-rsocket-revolution"&gt;Premiering: The RSocket Revolution&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/08/13/spring-batch-4-3-0-m2-is-out"&gt;Spring Batch 4.3.0-M2 is out!&lt;/a&gt;&lt;/li&gt;
@@ -1619,252 +1632,6 @@ When most people think of caching, they are technically referring to the &lt;em&
   &lt;li&gt;&lt;a href="https://twitter.com/springcentral/status/1295765410655207428"&gt;What is Spring? A nice 4 minute explainer by Mark Heckler&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/08/12/skara-repos-transitions/"&gt;jdk/jdk repository transitions to Git, GitHub and Skara: September 5&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Case Study: HTTP Request Function and Processor</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/08/17/case-study-http-request-function-and-processor" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>David Turanski</name>
-    </author>
-    <id>tag:spring.io,2020-08-15:4172</id>
-    <updated>2020-08-17T20:34:36Z</updated>
-    <content type="html">&lt;div class="sect2"&gt;
-&lt;h3 id="introduction"&gt;&lt;a class="anchor" href="#introduction"&gt;&lt;/a&gt;Introduction&lt;/h3&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We began this series by introducing the new &lt;a href="https://spring.io/blog/2020/07/13/introducing-java-functions-for-spring-cloud-stream-applications-part-0"&gt;stream applications based on Java functions&lt;/a&gt;, and &lt;a href="https://spring.io/blog/2020/07/20/introducing-java-functions-for-spring-cloud-stream-applications-part-1"&gt;function composition&lt;/a&gt;.  The &lt;a href="https://spring.io/blog/2020/08/10/case-study-build-and-run-a-streaming-application-using-an-http-source-and-a-jdbc-sink"&gt;previous entry&lt;/a&gt; presented a tutorial for building a simple stream application and running it in Spring Cloud Data Flow.  Today we explore the &lt;a href="https://github.com/spring-cloud/stream-applications/tree/master/functions/function/http-request-function"&gt;HTTP Request Function &lt;/a&gt;and present examples of how to use it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In case you missed it, the prior posts in this series are:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://spring.io/blog/2020/07/13/introducing-java-functions-for-spring-cloud-stream-applications-part-0"&gt;Introducing Function Based Streaming Applications&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://spring.io/blog/2020/07/20/introducing-java-functions-for-spring-cloud-stream-applications-part-1"&gt;Function Composition with Streaming Applications&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://spring.io/blog/2020/07/27/creating-a-supplier-function-and-generating-spring-cloud-stream-source"&gt;How to Build a Supplier and Source Application&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://spring.io/blog/2020/08/03/creating-a-function-for-consuming-data-and-generating-spring-cloud-stream-sink-applications"&gt;How to Build a Consumer and Sink Application&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://spring.io/blog/2020/08/10/case-study-build-and-run-a-streaming-application-using-an-http-source-and-a-jdbc-sink"&gt;Build and Run a Simple Stream Application&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="sect3"&gt;
-&lt;h4 id="the-http-request-function"&gt;&lt;a class="anchor" href="#the-http-request-function"&gt;&lt;/a&gt;The HTTP Request Function&lt;/h4&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;This is an updated implementation of the legacy &lt;a href="https://github.com/spring-cloud-stream-app-starters/httpclient/blob/master/spring-cloud-starter-stream-processor-httpclient/README.adoc"&gt;HTTP Client Processor&lt;/a&gt; Stream App Starter, based on the reactive Spring &lt;a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/reactive/function/client/WebClient.html"&gt;WebClient&lt;/a&gt;.  The function is an all purpose web client that submits HTTP requests to a URL and returns the response. Designed primarily for streaming applications, it is able to extract the URL, HTTP method, request body, desired response type, and contents, using configured &lt;a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#expressions"&gt;SpEL expressions&lt;/a&gt;  evaluated against each incoming Message. Also, to support efficient stream processing, the function uses reactive streams. Its signature is:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="literalblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre&gt;Function&amp;lt;Flux&amp;lt;Message&amp;lt;?&amp;gt;&amp;gt;, Flux&amp;lt;?&amp;gt;&amp;gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;That is, it accepts a &lt;a href="https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html"&gt;Flux&lt;/a&gt; (stream) of Messages and returns a Flux of any type.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect3"&gt;
-&lt;h4 id="configuration-properties"&gt;&lt;a class="anchor" href="#configuration-properties"&gt;&lt;/a&gt;Configuration Properties&lt;/h4&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The HttpRequestFunction is configured through the following &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/functions/function/http-request-function/src/main/java/org/springframework/cloud/fn/http/request/HttpRequestFunctionProperties.java"&gt;configuration properties&lt;/a&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;em&gt;http.request.body-expression&lt;/em&gt;&lt;br&gt;
-A SpEL expression to derive the request body from the incoming message. (Expression, default: &amp;lt;none&amp;gt;)&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;em&gt;http.request.expected-response-type&lt;/em&gt;&lt;br&gt;
-The type used to interpret the response. (Class&amp;lt;?&amp;gt;, default: String)&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;em&gt;http.request.headers-expression&lt;/em&gt;&lt;br&gt;
-A SpEL expression used to derive the http headers map to use. (Expression, default: &amp;lt;none&amp;gt;)&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;em&gt;http.request.http-method-expression&lt;/em&gt;&lt;br&gt;
-A SpEL expression to derive the request method from the incoming message. (Expression, default: GET)&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;em&gt;http.request.maximum-buffer-size&lt;/em&gt;&lt;br&gt;
-Maximum buffer size in bytes allocated for input stream buffers. Defaults to 256k. Increase, as necessary, for posting or getting large binary content. (Integer, default: 256 * 1024)&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;em&gt;http.request.reply-expression&lt;/em&gt;&lt;br&gt;
-A SpEL expression used to compute the final result, applied against the whole http {@link org.springframework.http.ResponseEntity}. (Expression, default: ResponseEntity::getBody)&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;em&gt;http.request.timeout&lt;/em&gt;&lt;br&gt;
-Request timeout in milliseconds. (Long, default: 30000)&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;em&gt;http.request.url-expression&lt;/em&gt;&lt;br&gt;
-A SpEL expression against the incoming message to determine the URL to use. (Expression, default: &amp;lt;none&amp;gt;)&lt;br&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The SpEL expressions are applied to the incoming Message.  So fields like &lt;code&gt;body&lt;/code&gt; and &lt;code&gt;headers[name]&lt;/code&gt; can be used to evaluate message contents.  I say "&lt;em&gt;can be‚Ä¶&lt;/em&gt;" because sometimes it is more desirable to use static values. In this case, literal values must be enclosed in single quotes, for example:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre&gt;http.request.url-expression='https://start.spring.io'
-http.request.http-method-expression='POST'&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect3"&gt;
-&lt;h4 id="example-1-using-the-http-request-function-in-a-standalone-application"&gt;&lt;a class="anchor" href="#example-1-using-the-http-request-function-in-a-standalone-application"&gt;&lt;/a&gt;Example 1: Using the HTTP Request Function in a Standalone Application&lt;/h4&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Let‚Äôs look at an example of how to use this function in a simple Spring Boot web application. In this example, we will use it in an app that retrieves an image from a URL and renders a thumbnail of the image. The complete code for this example is &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-web"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We will build the application using Spring Boot and Spring Web Flux, along with our function to retrieve the image, and some code to generate a thumbnail.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The relevant dependencies are:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;org.springframework.cloud.fn:http-request-function - The HTTP request function transitively includes &lt;code&gt;spring-boot-starter-webflux&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;io.spring.example:image-thumbnail-processor - A simple Java function, included in this &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/blob/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-processor/src/main/java/io/spring/example/image/thumbnail/processor/ThumbnailProcessor.java"&gt;example&lt;/a&gt;, that creates thumbnails. We won‚Äôt get into the details here,  just note that it is a separate component which we will reuse in a later example.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We first need to set some configuration properties for our function:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre&gt;http.request.url-expression=payload
-http.request.expected-response-type=byte[]
-http.request.maximum-buffer-size=2097152&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Thus, the message payload contains the target URL, the image(response body) will be returned as a byte array. And since these images might be fairly large, we will increase the size of the buffer holding the response body to 2GB (2 * 1024 * 1024).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Here is the code:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;@SpringBootApplication
-@Controller
-@Import(HttpRequestFunctionConfiguration.class)
-public class ThumbnailStandaloneApplication {
-  private static Logger logger = LoggerFactory.getLogger(ThumbnailStandaloneApplication.class);
-
-  public static void main(String[] args) {
-    SpringApplication.run(ThumbnailStandaloneApplication.class, args);
-  }
-
-  private ThumbnailProcessor thumbnailProcessor = new ThumbnailProcessor();
-
-  @Autowired
-  private HttpRequestFunction httpRequestFunction;
-
-  @Bean
-  RouterFunction&amp;lt;?&amp;gt; routes() {
-    return RouterFunctions.route()
-        .GET("/thumbnail", this::createThumbnail)
-        .build();
-  }
-
-  private Mono&amp;lt;ServerResponse&amp;gt; createThumbnail(ServerRequest serverRequest) {
-    String url = serverRequest.queryParam("url").orElseThrow(
-                           () -&amp;gt; new RuntimeException("URL required"));
-
-    return Mono.from(httpRequestFunction.apply(Flux.just(new GenericMessage&amp;lt;&amp;gt;(url)))
-        .flatMap(image -&amp;gt; {
-          Map&amp;lt;String, Object&amp;gt; model = new HashMap&amp;lt;&amp;gt;();
-          byte[] thumbnail = thumbnailProcessor.apply((byte[]) image);
-          logger.info("creating thumbnail for {}", url);
-          model.put("url", url);
-          model.put("thumb", new String(Base64.getEncoder().encode(thumbnail)));
-          Mono&amp;lt;ServerResponse&amp;gt; serverResponse = ServerResponse.ok()
-              .render("thumbnail", model);
-          return serverResponse;
-        }));
-  }&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We apply the &lt;code&gt;HttpRequestFunction&lt;/code&gt; to retrieve the image. Then we apply the &lt;code&gt;thumbnailProcessor&lt;/code&gt; to the returned byte array and encode it to base 64 so we can render it on the page.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;span class="image"&gt;&lt;img src="https://github.com/spring-cloud/spring-cloud-stream-samples/blob/master/function-based-stream-app-samples/image-thumbnail-samples/img/standalone.png?raw=true" alt="standalone"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect3"&gt;
-&lt;h4 id="example-2-using-the-http-request-processor-in-a-streaming-application"&gt;&lt;a class="anchor" href="#example-2-using-the-http-request-processor-in-a-streaming-application"&gt;&lt;/a&gt;Example 2: Using the HTTP Request Processor in a streaming application&lt;/h4&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Now that we know how our function works, let&amp;#8217;s put together a streaming application, using Spring Cloud Stream, to do something similar.  In this case, we will use the pre-packaged &lt;a href="https://github.com/spring-cloud/stream-applications/tree/master/applications/processor/http-request-processor"&gt;HTTP Request Processor&lt;/a&gt; and &lt;a href="https://github.com/spring-cloud/stream-applications/tree/master/applications/source/file-source"&gt;File Source&lt;/a&gt; stream applications. This processor wraps the HTTP request function in a Spring Cloud Stream processor application that simply invokes the function, binding the input and output to a message broker destination (a Kafka topic, or a Rabbit MQ exchange, for example).  Our application, expressed in stream definition DSL, looks like:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre&gt;file-source | http-request-processor | image-thumbnail-sink&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;where the &lt;code&gt;|&lt;/code&gt; represents I/O using a message broker.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Here, we are using a &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-stream-sample/image-thumbnail-sink"&gt;user-developed sink&lt;/a&gt; that uses the &lt;a href="https://github.com/spring-cloud/stream-applications/tree/master/functions/consumer/file-consumer"&gt;file-consumer&lt;/a&gt; function to write each thumbnail to a file.  The sink uses Spring Cloud Function‚Äôs declarative &lt;a href="https://spring.io/blog/2020/07/20/introducing-java-functions-for-spring-cloud-stream-applications-part-1"&gt;composition&lt;/a&gt; to compose the &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/blob/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-processor/src/main/java/io/spring/example/image/thumbnail/processor/ThumbnailProcessor.java"&gt;thumbnail-processor&lt;/a&gt;, from the previous example, with a header enricher, and finally the  standard &lt;a href="https://github.com/spring-cloud/stream-applications/blob/master/functions/consumer/file-consumer"&gt;fileConsumer&lt;/a&gt;.  So our composed function is defined by:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre&gt;spring.cloud.function.definition=thumbnailProcessor|filenameEnricher|fileConsumer&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;in &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/blob/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-stream-sample/image-thumbnail-sink/src/main/resources/application.properties"&gt;application.properties&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Our composite function definition is conceptually and syntactically similar to the above stream definition. But in this case the &lt;code&gt;|&lt;/code&gt; represents in-process communication.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We will explore the ins and outs of the File Source in a future post. For now, we will use it to poll a source directory and produce messages whenever a new file is added to the directory. In this case, we want to process a text file with an image URL per line. We will configure the source to produce a message per line, containing the URL in the payload.   We already know what the HTTP request processor does. The sink generates a thumbnail and writes it to a file.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;The fully configured stream definition is:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre&gt;file-source --file.consumer.mode=lines --file.consumer.mode=lines --file.supplier.directory=&amp;lt;source-directory&amp;gt; | http-request-processor --http.request.url-expression=payload --http.request.expected-response-type=byte[] --http.request.maximum-buffer-size=2097152| image-thumbnail-sink --file.consumer.directory=&amp;lt;target-directory&amp;gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;If we run this and drop a text file into the source directory, we will see the thumbnails written to the target directory:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;span class="image"&gt;&lt;img src="https://github.com/spring-cloud/spring-cloud-stream-samples/blob/master/function-based-stream-app-samples/image-thumbnail-samples/img/thumbnail-files.png?raw=true" alt="thumbnail files"&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;If you want to run this on your local machine, complete instructions are &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-samples/tree/master/function-based-stream-app-samples/image-thumbnail-samples/image-thumbnail-stream-sample#thumbnail-stream-sample"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect3"&gt;
-&lt;h4 id="summary"&gt;&lt;a class="anchor" href="#summary"&gt;&lt;/a&gt;Summary&lt;/h4&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;We just did a deep dive on the HTTP Request Function, demonstrating how to use it in a standalone web application and in a streaming pipeline to process images. We also used function composition, composing user-written and out of the box functions, to great effect.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect3"&gt;
-&lt;h4 id="stay-tuned"&gt;&lt;a class="anchor" href="#stay-tuned"&gt;&lt;/a&gt;Stay Tuned&amp;#8230;&amp;#8203;&lt;/h4&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In the coming weeks we will present many more case studies for Spring Cloud Stream and Spring Cloud Data Flow, each will highlight different stream applications and capabilities.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

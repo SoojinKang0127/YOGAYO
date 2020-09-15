@@ -17,6 +17,7 @@ main {
 }
 
 .main-status_bar {
+  visibility: hidden;
   display: flex;
   position: absolute;
   flex-direction: row;
@@ -51,9 +52,7 @@ main {
    transform: perspective(400px) rotateX(80deg);
 }
 
-/* .logo-wrapper:hover .box-div {
-   transform: none;
-} */
+
 
 .logo-wrapper span {
    color: rgb(255, 255, 255);
@@ -62,14 +61,8 @@ main {
    position: absolute;
    top: 20px;
    opacity: 1;
-   /* transition: opacity 0.3s ease-in-out 0s; */
   display: block;
 }
-
-/* .logo-wrapper:hover span {
-   opacity: 0;
-   top: 46px;
-} */
 
 .main-status_categories {
   display: flex;
@@ -104,7 +97,6 @@ main {
   width: 100%;
   height: 3px;
   background: white;
-  /* transition: all .2s ease-out; */
 }
 
 .main-status_categories span::after {
@@ -141,32 +133,38 @@ main {
   border-radius: 50px;
 }
 
+
 .main-first_bg {
   position: relative;
   background-image: url("../image/home/header1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 850px;
+  height: 400px;
   /* background-position-y: -100px; */
   z-index: 1;
 }
 
+.main-first_bg img{
+  width: 100%;
+}
+
+
 .main-first_title_section {
   position: absolute;
-  width: 16%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: left;
   text-align: left;
-  margin-top: 330px;
-  margin-left: 195px;
+  margin-top: 100px;
+  margin-left: 100px;
   overflow: hidden;
 }
 
 .main-first_title_section .main-title {
   display: flex;
-  font-size: 30pt;
+  font-size: 20pt;
   line-height: 38px;
   color: white;
 }
@@ -197,6 +195,7 @@ main {
 }
 
 .main-second_bg {
+  
   margin-top: 70px;
   display: flex;
   flex-direction: row;

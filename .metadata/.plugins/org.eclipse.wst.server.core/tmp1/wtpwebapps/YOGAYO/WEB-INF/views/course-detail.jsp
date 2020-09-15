@@ -51,15 +51,16 @@
 							<p>${course.title}</p>
 							<div class="course_detail-star_rating">
 								<span><i class="fas fa-star"></i></span> <span id="rating"></span>
-								<span id="cmc"></span> <span>·</span> <span>(만든사람)</span>
+								<span id="cmc"></span> <span>·</span> <span>${makerInfo.name}</span>
 							</div>
 						</div>
 					</div>
+
 					<div class="course_detail-info_section">
 						<div class="course_detail-info_title_section">
-							<div class="course_detail-info_title">(만든사람)님이구성한 명상 코스</div>
-							<img
-								src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+							<div class="course_detail-info_title">${makerInfo.name}님이구성한
+								명상 코스</div>
+							<img src="${pageContext.request.contextPath}/${makerInfo.img}"
 								alt="profile" />
 						</div>
 						<div class="course_detail-info_icon_section">
@@ -67,16 +68,13 @@
 								<div class="course_detail-info_time">
 									<i class="far fa-clock"></i> ${totalMin}min
 								</div>
-								<div class="course_detail-why">
-									<i class="fas fa-child"></i>정신 건강을 위한 명상
+								<div class="course_detail-difficulty">
+									<i class="far fa-smile-wink"></i>${difficulty}
 								</div>
 							</div>
 							<div class="second_line">
 								<div class="course_detail-users">
-									<i class="fas fa-users"></i> 50명
-								</div>
-								<div class="course_detail-difficulty">
-									<i class="far fa-smile-wink"></i>쉬움
+									<i class="fas fa-users"></i> ${userCount}명
 								</div>
 							</div>
 						</div>
@@ -138,7 +136,7 @@
 						<div class="btn">
 							<div class="time">총 ${totalMin}분 ${totalSec} 초</div>
 							<div class="start_btn">
-								<a href="${pageContext.request.contextPath}/course_playlist">
+								<a href="${pageContext.request.contextPath}/player?course=${crsNum }">
 									<button id="btn_to_start">시작하기</button>
 								</a>
 							</div>
@@ -162,33 +160,36 @@
 						<div class="text_box">
 							<div id="full-stars-example-two">
 								<div class="rating-group">
-										<input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio" />
-										
-										<label aria-label="1 star" class="rating__label" for="rating3-1">
-										<i class="rating__icon rating__icon--star fa fa-star"></i></label>
-										<input	class="rating__input" name="rating3" id="rating3-1" value="1" type="radio" />
-										
-										<label aria-label="2 stars"	class="rating__label" for="rating3-2">
-										<i	class="rating__icon rating__icon--star fa fa-star"></i></label>
-										<input	class="rating__input" name="rating3" id="rating3-2" value="2" type="radio" />
-										
-										<label aria-label="3 stars"	class="rating__label" for="rating3-3">
-										<i	class="rating__icon rating__icon--star fa fa-star"></i></label>
-										<input	class="rating__input" name="rating3" id="rating3-3" value="3" type="radio" />
-										
-										<label aria-label="4 stars"	class="rating__label" for="rating3-4">
-										<i	class="rating__icon rating__icon--star fa fa-star"></i></label>
-										<input	class="rating__input" name="rating3" id="rating3-4" value="4" type="radio" />
-										
-										<label aria-label="5 stars"	class="rating__label" for="rating3-5">
-										<i	class="rating__icon rating__icon--star fa fa-star"></i></label>
-										<input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio" />
+									<input disabled checked
+										class="rating__input rating__input--none" name="rating3"
+										id="rating3-none" value="0" type="radio" /> <label
+										aria-label="1 star" class="rating__label" for="rating3-1">
+										<i class="rating__icon rating__icon--star fa fa-star"></i>
+									</label> <input class="rating__input" name="rating3" id="rating3-1"
+										value="1" type="radio" /> <label aria-label="2 stars"
+										class="rating__label" for="rating3-2"> <i
+										class="rating__icon rating__icon--star fa fa-star"></i>
+									</label> <input class="rating__input" name="rating3" id="rating3-2"
+										value="2" type="radio" /> <label aria-label="3 stars"
+										class="rating__label" for="rating3-3"> <i
+										class="rating__icon rating__icon--star fa fa-star"></i>
+									</label> <input class="rating__input" name="rating3" id="rating3-3"
+										value="3" type="radio" /> <label aria-label="4 stars"
+										class="rating__label" for="rating3-4"> <i
+										class="rating__icon rating__icon--star fa fa-star"></i>
+									</label> <input class="rating__input" name="rating3" id="rating3-4"
+										value="4" type="radio" /> <label aria-label="5 stars"
+										class="rating__label" for="rating3-5"> <i
+										class="rating__icon rating__icon--star fa fa-star"></i>
+									</label> <input class="rating__input" name="rating3" id="rating3-5"
+										value="5" type="radio" />
 								</div>
 							</div>
-							<input type="text" id="text_box" name="comment"	placeholder="댓글 달기..." />
-							<input type="hidden" name="uNum" value="${user.uNum}" />
-							<input type="hidden" name="crsNum" value="${crsNum}" />
-							<input type="hidden" id="rating3" name="rating3" value="${rate}" />
+							<input type="text" id="text_box" name="comment"
+								placeholder="댓글 달기..." /> <input type="hidden" name="uNum"
+								value="${user.uNum}" /> <input type="hidden" name="crsNum"
+								value="${crsNum}" /> <input type="hidden" id="rating3"
+								name="rating3" value="${rate}" />
 						</div>
 						<div class="review_btn">
 							<button id="review_btn">게시</button>
@@ -200,109 +201,71 @@
 					<!-- 댓글 시작  -->
 					<div class="new_review">
 						<div class="course_detail-rating">
-							<span><i class="fas fa-star"></i></span>
-							<span>${cmavg}</span>
-							<span>${cmc}</span>
+							<span><i class="fas fa-star"></i></span> <span>${cmavg}</span> <span>${cmc}</span>
 						</div>
-						<div class="ajax">
-							<c:forEach var="i" items="${commentList}">
-								<div class="course_detail-review_profile_img">
-									<img
-										src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
-										alt="profile" />
-
-									<div class="course_detail-review_user_info">
-										<div class="user_review">
-											<div class="course_detail-review_user_name">${i.uNum}</div>
-											<div class="course_detail-review_date">${i.regDate}</div>
-											<div class="course_detail-review_box">
-												<span>${i.context}</span>
-											</div>
-										</div>
-										<div class="show_me_the_comment">
-											<i id="show_me_the_comment" class="fas fa-caret-down"></i>
-										</div>
-										<div class="hidden_comment">
-											<form action="addReview">
-												<div class="review_review">
-													<input type="text" id="comment_text" name="review"
-														placeholder="답글.." /> <input type="hidden" name="uNum"
-														value="${i.uNum}" /> <input type="hidden" name="parent"
-														value="${i.cmtNum}" /> <input type="hidden" name="crsNum"
-														value="${crsNum}" /> <input type="submit"
-														id="comment_btn" value="답글" />
-												</div>
-											</form>
-
-											<c:forEach var="j" items="${reviewList}">
-												<c:if test="${i.cmtNum eq j.parent}">
-													<div class="comments">
-														<!-- 답글들 -->
-														<img alt="comment_user_img"
-															src="${pageContext.request.contextPath}/resources/image/course/profile_face.png" />
-														<div class="comments_box">
-															<div class="comment_user_name">${j.uNum}</div>
-															<div class="user_comment">${j.context}</div>
-														</div>
-													</div>
-												</c:if>
-											</c:forEach>
-										</div>
-									</div>
-								</div>
-							</c:forEach>
-						</div>
+						<div class="ajax"></div>
 						<script>
-							var request = new XMLHttpRequest();
-							$("#review_btn")
-									.click(
-											function() {
-												var uNum = encodeURIComponent("${user.uNum}");
+							$(document).ready(function() {
 												var crsNum = encodeURIComponent("${crsNum}");
-												var rating3 = encodeURIComponent($(
-														'input[name="rating3"]:checked')
-														.val());
-												var comment = encodeURIComponent(document
-														.getElementById("text_box").value);
-												request
-														.open(
-																"POST",
-																"./course-detail-upload-comment?uNum="
-																		+ uNum
-																		+ "&crsNum="
-																		+ crsNum
-																		+ "&rating="
-																		+ rating3
-																		+ "&comment="
-																		+ comment,
-																true);
+												request.open("POST",
+														"./course-detail?"
+																+ "&crsNum="
+																+ crsNum, true);
 												request.onreadystatechange = refresh_comment;
 												request.send(null);
-											});
+											})
+							function ajax() {
+								var uNum = encodeURIComponent("${user.uNum}");
+								var crsNum = encodeURIComponent("${crsNum}");
+								var rating3 = encodeURIComponent($(
+										'input[name="rating3"]:checked').val());
+								var comment = encodeURIComponent(document
+										.getElementById("text_box").value);
+								request.open("POST",
+										"./course-detail-upload-comment?uNum="
+												+ uNum + "&crsNum=" + crsNum
+												+ "&rating=" + rating3
+												+ "&comment=" + comment, true);
+								request.onreadystatechange = refresh_comment;
+								request.send(null);
+							}
+							var request = new XMLHttpRequest();
+							$("#review_btn").click(function() {
+								ajax();
+
+							});
 							var object = null;
+							//////////////////////////////
 							var comment_prefix = "";
 							var comment_suffix = "";
 							var review_string = "";
 							var fin_string = "";
 							function refresh_comment() {
-								if (request.readyState == 4
-										&& request.status == 200) {
-									object = eval("(" + request.responseText
-											+ ")");
+								if (request.readyState == 4 && request.status == 200) {
+									object = eval("(" + request.responseText + ")");
 									$('.ajax').html("");
-									for (var i = 0; i < Object
-											.keys(object.comment).length; i++) {
+									var commentCount = 0;
+									if (Object.keys(object.comment).length < 6) {
+										commentCount = Object.keys(object.comment).length
+									} else {
+										commentCount = 6
+									}
+									for (var i = 0; i < commentCount; i++) {
 										comment_prefix = "";
 										comment_suffix = "";
 										review_string = "";
 										fin_string = "";
 										comment_prefix = comment_prefix
 												+ '<div class="course_detail-review_profile_img">'
-												+ '<img src="${pageContext.request.contextPath}/resources/image/course/profile_face.png" alt="profile"/>'
+												+'<div class="nothing">'
+												+ '<img src="${pageContext.request.contextPath}/'
+												+ object.comment[parseInt(i)].img
+												+ '" alt="profile"/>'
+												+ '</div>'
 												+ '<div class="course_detail-review_user_info">'
 												+ '<div class="user_review">'
 												+ '<div class="course_detail-review_user_name">'
-												+ object.comment[parseInt(i)].uNum
+												+ object.comment[parseInt(i)].name
 												+ "</div>"
 												+ '<div class="course_detail-review_date">'
 												+ object.comment[parseInt(i)].regDate
@@ -327,17 +290,18 @@
 												+ " />"
 												+ '<input type="hidden" name="crsNum" value='
 												+ object.comment[parseInt(i)].crsNum
-												+ "/>"
+												+ " />"
 												+ '<input type="submit" id="comment_btn" value="답글"/></div></form>';
-										for (var j = 0; j < Object
-												.keys(object.review).length; j++) {
+										for (var j = 0; j < Object.keys(object.review).length; j++) {
 											if (object.comment[parseInt(i)].cmtNum == object.review[parseInt(j)].parent) {
 												review_string = review_string
 														+ '<div class="comments">'
-														+ '<img alt="comment_user_img" src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"/>'
+														+ '<img alt="comment_user_img" src="${pageContext.request.contextPath}/'
+														+ object.comment[parseInt(j)].img
+														+ '"/>'
 														+ '<div class="comments_box">'
 														+ '<div class="comment_user_name">'
-														+ object.review[parseInt(j)].uNum
+														+ object.review[parseInt(j)].name
 														+ '</div>'
 														+ '<div class="user_comment">'
 														+ object.review[parseInt(j)].context
@@ -352,22 +316,22 @@
 												+ review_string
 												+ comment_suffix;
 										$('.ajax').append(fin_string)
-									}
-									$('#rating').html(object.avg.toFixed(2)+"")
+									}////////////////////////////////////
+									$('#rating').html(object.avg.toFixed(2) + "")
 									$('.course_detail-rating span:nth-child(2)').html(object.avg.toFixed(2))
-									
+
 									$('#cmc').html();
-									$('.course_detail-rating span:nth-child(3)').html("(댓글"+rate_people_num+"개)")
-									
+									$('.course_detail-rating span:nth-child(3)').html("(댓글" + rate_people_num+ "개)")
+
 									$(".fas").click(function() {
-										if ($(this).attr('class') == 'fas fa-caret-down') {
-											$(this).attr('class', 'fas fa-caret-left');
-											$(this).parent().next().show();
-										} else {
-											$(this).attr('class', 'fas fa-caret-down');
-											$(this).parent().next().hide();
-										}
-									});
+														if ($(this).attr('class') == 'fas fa-caret-down') {
+															$(this).attr('class','fas fa-caret-left');
+															$(this).parent().next().show();
+														} else {
+															$(this).attr('class','fas fa-caret-down');
+															$(this).parent().next().hide();
+														}
+													});
 									$("#show_me_the_comment").hover(function() {
 										$(this).css({
 											color : "black"
@@ -378,18 +342,125 @@
 										});
 									});
 								}
+								$('.course_detail-rating span:nth-child(3)').html("(댓글"+ Object.keys(object.comment).length+ "개)")
+								$('#more_review_btn').html("후기 "+ Object.keys(object.comment).length+ "개 모두 보기")
 							}
-							rate_num=${cmavg}
-							rate_people_num=${cmc}
-							$('#rating').html(rate_num.toFixed(2)+"")
+							rate_num = ${cmavg}
+							rate_people_num = ${cmc}
+							$('#rating').html(rate_num.toFixed(2) + "")
 							$('.course_detail-rating span:nth-child(2)').html(rate_num.toFixed(2))
+
+							$('#cmc').html("(" + rate_people_num + ")");
+							$('.course_detail-rating span:nth-child(3)').html("(댓글" + rate_people_num + "개)")
 							
-							$('#cmc').html("("+rate_people_num+")");
-							$('.course_detail-rating span:nth-child(3)').html("(댓글"+rate_people_num+"개)")
+								function more_comment(){
+									if (request.readyState == 4 && request.status == 200) {
+										object = eval("(" + request.responseText + ")");
+										$('.ajax').html("");
+										var commentCount = 0;
+											commentCount = Object.keys(object.comment).length
+										for (var i = 0; i < commentCount; i++) {
+											comment_prefix = "";
+											comment_suffix = "";
+											review_string = "";
+											fin_string = "";
+											comment_prefix = comment_prefix
+													+ '<div class="course_detail-review_profile_img">'
+													+'<div class="nothing">'
+													+ '<img src="${pageContext.request.contextPath}/'
+													+ object.comment[parseInt(i)].img
+													+ '" alt="profile"/>'
+													+ '</div>'
+													+ '<div class="course_detail-review_user_info">'
+													+ '<div class="user_review">'
+													+ '<div class="course_detail-review_user_name">'
+													+ object.comment[parseInt(i)].name
+													+ "</div>"
+													+ '<div class="course_detail-review_date">'
+													+ object.comment[parseInt(i)].regDate
+													+ "</div>"
+													+ '<div class="course_detail-review_box">'
+													+ "<span>"
+													+ object.comment[parseInt(i)].context
+													+ "</span>"
+													+ "</div></div>"
+													+ '<div class="show_me_the_comment">'
+													+ '<i id="show_me_the_comment" class="fas fa-caret-down"></i>'
+													+ "</div>"
+													+ '<div class="hidden_comment">'
+													+ '<form action="addReview">'
+													+ '<div class="review_review">'
+													+ '<input type="text" id="comment_text" name="review" placeholder="답글.."/>'
+													+ '<input type="hidden" name="uNum" value='
+													+ object.comment[parseInt(i)].uNum
+													+ " />"
+													+ '<input type="hidden" name="parent" value='
+													+ object.comment[parseInt(i)].cmtNum
+													+ " />"
+													+ '<input type="hidden" name="crsNum" value='
+													+ object.comment[parseInt(i)].crsNum
+													+ " />"
+													+ '<input type="submit" id="comment_btn" value="답글"/></div></form>';
+											for (var j = 0; j < Object.keys(object.review).length; j++) {
+												if (object.comment[parseInt(i)].cmtNum == object.review[parseInt(j)].parent) {
+													review_string = review_string
+															+ '<div class="comments">'
+															+ '<img alt="comment_user_img" src="${pageContext.request.contextPath}/'
+															+ object.comment[parseInt(j)].img
+															+ '"/>'
+															+ '<div class="comments_box">'
+															+ '<div class="comment_user_name">'
+															+ object.review[parseInt(j)].name
+															+ '</div>'
+															+ '<div class="user_comment">'
+															+ object.review[parseInt(j)].context
+															+ '</div>' + "</div>"
+															+ "</div>";
+												}
+											}
 							
-						</script> 
+											comment_suffix = comment_suffix
+													+ " </div></div></div>";
+											fin_string += comment_prefix
+													+ review_string
+													+ comment_suffix;
+											$('.ajax').append(fin_string)
+										}////////////////////////////////////
+										$('#rating').html(object.avg.toFixed(2) + "")
+										$('.course_detail-rating span:nth-child(2)').html(object.avg.toFixed(2))
+							
+										$('#cmc').html();
+										$('.course_detail-rating span:nth-child(3)').html("(댓글" + rate_people_num+ "개)")
+							
+										$(".fas").click(function() {
+															if ($(this).attr('class') == 'fas fa-caret-down') {
+																$(this).attr('class','fas fa-caret-left');
+																$(this).parent().next().show();
+															} else {
+																$(this).attr('class','fas fa-caret-down');
+																$(this).parent().next().hide();
+															}
+														});
+										$("#show_me_the_comment").hover(function() {
+											$(this).css({
+												color : "black"
+											});
+										}, function() {
+											$(this).css({
+												color : "#C0C0C0"
+											});
+										});
+									}
+								}
+	
+							$(document).on("click",'#more_review_btn',function(){
+								more_comment();
+								$('#more_review_btn').hide();
+							});
+							
+						</script>
 						<!-- 댓글 끝 -->
-						
+
 						<div class="more_review_btn">
 							<button id="more_review_btn">후기 ${cmc}개 모두 보기</button>
 						</div>
@@ -398,7 +469,6 @@
 				<!-- black_line -->
 			</div>
 		</div>
-
 		<footer class="footer">
 			<div class="footer_section">
 				<div class="main-footer_right">

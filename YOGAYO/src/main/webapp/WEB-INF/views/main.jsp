@@ -9,7 +9,8 @@
 <script src="https://kit.fontawesome.com/54919de5bd.js"
 	crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/main.css">
+	href="${pageContext.request.contextPath}/resources/css/main.css"  media="all and (min-width:600px) and (max-width:2000px)">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 	
 </head>
@@ -94,7 +95,7 @@
 				</div>
 			</div>
 			<div class="up-on-scroll">
-				<div class="main-second_bg">
+				<!-- <div class="main-second_bg">
 					<div class="main-recommand">
 						<img
 							src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
@@ -122,7 +123,7 @@
 								괜찮으신가요?</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="up-on-scroll">

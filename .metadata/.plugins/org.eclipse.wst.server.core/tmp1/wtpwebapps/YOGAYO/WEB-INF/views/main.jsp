@@ -9,7 +9,8 @@
 <script src="https://kit.fontawesome.com/54919de5bd.js"
 	crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/main.css">
+	href="${pageContext.request.contextPath}/resources/css/main.css"  media="all and (min-width:600px) and (max-width:2000px)">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 	
 </head>
@@ -17,18 +18,18 @@
 	<header class="header">
 		<div class="main-status_bar">
 			<div class="main-logo_wrapper">
-				<!-- <a href="main_page.html">  -->
+				<a href="main_page.html"> 
 					<div class="logo-wrapper">
-						<span>YOGAYO</span>
+					<span>YOGAYO</span>
 						<div class="box-div"></div>
 					</div>
-				<!-- </a> -->
+				</a>
 			</div>
 			<div class="main-status_categories">
-				<span class="recommand">추천</span> <span class="course"><a
-					href="${pageContext.request.contextPath}/course-page">코스</a></span> <span
-					class="dictionary">자세 사전</span> <span class="my_page"><a
-					href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
+				<span class="recommand"><a href="${pageContext.request.contextPath}/main">추천</a></span> 
+				<span class="course"><a href="${pageContext.request.contextPath}/course-page">코스</a></span>
+				<span class="dictionary"><a href="${pageContext.request.contextPath}/my-page">자세 사전</a></span> 
+				<span class="my_page"><a href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
 			</div>
 			<div class="main-profile">
 				<div class="welcome_user">안녕하세요. ${user.name}님</div>
@@ -94,7 +95,7 @@
 				</div>
 			</div>
 			<div class="up-on-scroll">
-				<div class="main-second_bg">
+				<!-- <div class="main-second_bg">
 					<div class="main-recommand">
 						<img
 							src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
@@ -122,7 +123,7 @@
 								괜찮으신가요?</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="up-on-scroll">
