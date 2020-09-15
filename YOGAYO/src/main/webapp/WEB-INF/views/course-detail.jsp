@@ -12,8 +12,8 @@
 <script src="http://code.jquery.com/jquery.js"></script>
 <script language="JavaScript"
 	src="${pageContext.request.contextPath}/resources/js/course-detail.js"></script>
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/course-detail.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/course-detail.css" media="all and (min-width:600px) and (max-width:2000px)"/>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/course-detail_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
 </head>
 <body>
 	<header></header>
@@ -22,8 +22,7 @@
 			<div class="course_detail-first">
 				<div class="section">
 					<div class="to_course">
-						<a href="${pageContext.request.contextPath}/course-page">새로운
-							코스 모두 보기</a>
+						<a href="${pageContext.request.contextPath}/course-page">새로운 코스 모두 보기</a>
 					</div>
 					<div class="like">
 						<div class="like_icon">
@@ -37,9 +36,9 @@
 			<div class="course_detail-second">
 				<div class="section">
 					<div class="course_detail-img_section">
-						<img src="${coursePoses.img1}" alt="course_detail" /> <img
-							src="${coursePoses.img2}" alt="course_detail" /> <img
-							src="${coursePoses.img3}" alt="course_detail" />
+						<img src="${coursePoses.img1}" alt="course_detail" />
+						<img src="${coursePoses.img2}" alt="course_detail" />
+						<img src="${coursePoses.img3}" alt="course_detail" />
 					</div>
 				</div>
 			</div>
@@ -88,8 +87,7 @@
 							<div class="coures_detail-coures_materials_title">준비물</div>
 							<div class="coures_detail-coures_materials_list">
 								<ul>
-									<li><i class="far fa-check-circle"></i> ${course.material}
-									</li>
+									<li><i class="far fa-check-circle"></i> ${course.material}</li>
 								</ul>
 							</div>
 						</div>
@@ -151,7 +149,7 @@
 					<div class="review_text_box">
 						<div class="user_img">
 							<img
-								src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+								src="${pageContext.request.contextPath}/${user.img}"
 								alt="profile" />
 						</div>
 

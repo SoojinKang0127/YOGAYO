@@ -15,8 +15,8 @@
 <script src="http://code.jquery.com/jquery.js"></script>
 <script language=JavaScript
 	src="${pageContext.request.contextPath}/resources/js/course-page.js"></script>
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/course-page.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/course-page.css"  media="all and (min-width:600px) and (max-width:2000px)">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/course-page_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
 </head>
 <body>
 	<header class="header">
@@ -43,13 +43,15 @@
 			</div>
 		</div>
 	</header>
+	<header class="mobile_header"></header>
 	<main>
 		<div class="course-first_container">
 			<div class="course_bg">
 				<div class="course-bg_title_section">
 					<div class="course-bg_title">새로 올라온 코스</div>
 					<div class="course-bg_explain">
-						<p>세계 각지 사람들의 다양한 코스들을 경험 해보세요. 저희 요가요에서 제공하는 코스들도 놓치지 마세요.</p>
+						<p>세계 각지 사람들의 다양한 코스들을 경험 해보세요.</p>
+						 <p>저희 요가요에서 제공하는 코스들도 놓치지 마세요.</p>
 					</div>
 				</div>
 			</div>
@@ -57,13 +59,13 @@
 		<div class="course-categories_container">
 			<div class="course-categories_left">
 				<button id="course-view_all">
-					<span class="course-categories">전체보기</span>
+					<span class="course-categories">전체 보기</span>
 				</button>
 				<button id="course-view_yogayo_course">
 					<span class="course-categories">전문 코스</span>
 				</button>
 				<button id="course-view_user_course">
-					<span class="course-categories">사용자가 만든 코스</span>
+					<span class="course-categories">사용자 코스</span>
 				</button>
 			</div>
 			<div class="course-categories_right">
@@ -72,7 +74,7 @@
 					<ul>
 						<li><input type="radio" name="menu" value="date" id="date" />최신순</li>
 						<li><input type="radio" name="menu" value="total" id="like" />별점순</li>
-						<li><input type="radio" name="menu" value="totalComment" id="comment"/>리뷰 많은 순
+						<li><input type="radio" name="menu" value="totalComment" id="comment"/>리뷰 많은순
 						</li>
 					</ul>
 					
@@ -85,13 +87,10 @@
 					<c:forEach var="i" items="${courses}" varStatus="status" >
 						<div class="up-on-scroll">
 							<div class="course_container">
-								<a
-									href="${pageContext.request.contextPath}/course-detail?crsNum=${i.crsNum}">
-									<img
-									src="${pageContext.request.contextPath}/${i.imgPath}"
-									alt="course" />
+								<a href="${pageContext.request.contextPath}/course-detail?crsNum=${i.crsNum}">
+									<img src="${pageContext.request.contextPath}/${i.imgPath}" alt="course" />
 									<div class="course_star_rating">
-										<i class="far fa-star"></i>${i.total}(${i.totalComment})
+										<div class="rating"><i class="far fa-star"></i>${i.total}(${i.totalComment})</div>
 										<div class="course_title">${i.title}</div>
 									</div>
 								</a>
