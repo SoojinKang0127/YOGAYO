@@ -169,9 +169,16 @@ main {
 	box-shadow: var(- -light-shadow);
 }
 
-.course-courses_container .course_container img {
-	width: 100%;
+.img_wrapper{
+	width: 333px;
 	height: 330px;
+	overflow: hidden;
+	background-color: black;
+	text-align: center;
+}
+
+.course-courses_container .course_container img {
+	height: 350px;
 }
 
 .up-on-scroll {

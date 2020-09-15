@@ -8,6 +8,7 @@ import java.nio.channels.SeekableByteChannel;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.json.simple.JSONArray;
@@ -26,6 +27,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.google.protobuf.Service;
 import com.team4.dao.course.CourseServiceImpl;
 import com.team4.dao.pose.PoseServiceImpl;
+import com.team4.util.UserAuthCheck;
 import com.team4.vo.PoseVo;
 import com.team4.vo.UserVo;
 
@@ -39,7 +41,8 @@ public class DictionaryController {
 	PoseServiceImpl service = new PoseServiceImpl();
 
 	@RequestMapping(value = "/dictionary-detail", method = RequestMethod.GET)
-	public String dictionary( Locale locale, Model model ,PoseVo vo,HttpServletRequest req)throws Exception {
+	public String dictionary( Locale locale, Model model ,PoseVo vo,HttpServletRequest req,HttpServletResponse res)throws Exception {
+		UserAuthCheck.loginCheck(req, res, model);
 		model.addAttribute("user",(UserVo)req.getSession().getAttribute("user"));
 		String pnum=req.getParameter("pnum");
 		

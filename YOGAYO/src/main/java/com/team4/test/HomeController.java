@@ -4,6 +4,7 @@ package com.team4.test;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -13,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.team4.util.UserAuthCheck;
 import com.team4.vo.UserVo;
 
 
@@ -30,15 +32,8 @@ public class HomeController {
 	
 	
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
-	public String main(Model model, HttpServletRequest req) {
-		HttpSession session = req.getSession();	
-		model.addAttribute("user",(UserVo)req.getSession().getAttribute("user"));
-		Object user = session.getAttribute("user");
-		if(user == null) {
-			String errMessage = "로그인 후 이용이 가능합니다.";
-			model.addAttribute("errMessage", errMessage);
-			return "login";
-		}
+	public String main(Model model, HttpServletRequest req,HttpServletResponse res) {
+		UserAuthCheck.loginCheck(req, res, model);
 		return "main";
 	}
 	

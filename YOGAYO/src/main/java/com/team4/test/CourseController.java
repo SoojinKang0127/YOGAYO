@@ -19,6 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.team4.dao.course.CourseServiceImpl;
 import com.team4.dao.pose.PoseServiceImpl;
 import com.team4.user.dao.UserServiceImpl;
+import com.team4.util.UserAuthCheck;
 import com.team4.vo.CommentVo;
 import com.team4.vo.CoursePosesVo;
 import com.team4.vo.CourseVo;
@@ -35,8 +36,8 @@ public class CourseController {
 
 	@RequestMapping(value = "/course-detail-upload-comment", method = RequestMethod.POST)
 	public void uploadComment(Model model, @RequestParam("crsNum") int crsNum, @RequestParam("uNum") int uNum,
-			@RequestParam("comment") String context, @RequestParam("rating") int rate, HttpServletResponse res) {
-
+			@RequestParam("comment") String context, @RequestParam("rating") int rate, HttpServletResponse res,HttpServletRequest req) {
+		UserAuthCheck.loginCheck(req, res, model);
 		CourseVo crsvo = new CourseVo();
 		crsvo.setCrsNum(crsNum);
 		double cmavg = 0.0;
@@ -99,8 +100,7 @@ public class CourseController {
 	}
 
 	@RequestMapping(value = "/course-detail", method = RequestMethod.POST)
-	public void ajaxCourse(Model model, @RequestParam("crsNum") int crsNum, HttpServletResponse res) {
-
+	public void ajaxCourse(Model model, @RequestParam("crsNum") int crsNum, HttpServletResponse res,HttpServletRequest req) {
 		CourseVo crsvo = new CourseVo();
 		crsvo.setCrsNum(crsNum);
 		double cmavg = 0.0;
@@ -150,7 +150,8 @@ public class CourseController {
 	}
 
 	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
-	public String coueseTitle(Model model,  @RequestParam(value="startNum", required=false, defaultValue="0") int startNum) throws Exception {
+	public String coueseTitle(HttpServletRequest req, HttpServletResponse res, Model model,  @RequestParam(value="startNum", required=false, defaultValue="0") int startNum) throws Exception {
+		UserAuthCheck.loginCheck(req, res, model);
 		if(startNum!=0) {
 			startNum = startNum+1;
 		}
@@ -255,7 +256,8 @@ public class CourseController {
 
 	@RequestMapping(value = "/course-detail", method = RequestMethod.GET)
 	public String makeCourse(CourseVo vo, CoursePosesVo cpvo, UserVo uv, FeedVo fv, HttpServletRequest req,
-			RedirectAttributes rttr, Model model, @RequestParam("crsNum") int crsNum) throws Exception {
+			RedirectAttributes rttr, Model model, @RequestParam("crsNum") int crsNum, HttpServletResponse res) throws Exception {
+		UserAuthCheck.loginCheck(req, res, model);
 		int totalTime = 0;
 		int totalMin = 0;
 		int totalSec = 0;

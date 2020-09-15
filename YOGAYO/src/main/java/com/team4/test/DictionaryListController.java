@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.team4.dao.pose.PoseServiceImpl;
+import com.team4.util.UserAuthCheck;
 import com.team4.vo.PoseVo;
 import com.team4.vo.UserVo;
 
@@ -29,6 +30,7 @@ public class DictionaryListController {
 	
 	@RequestMapping(value = "/dictionary", method = RequestMethod.GET)
 	public String library(Model model, HttpServletResponse res, HttpServletRequest req, PoseVo vo) throws Exception {
+		UserAuthCheck.loginCheck(req, res, model);
 		List<PoseVo> list = service.poseSelectAll();
 		model.addAttribute("user",(UserVo)req.getSession().getAttribute("user"));
 		model.addAttribute("pose", list);

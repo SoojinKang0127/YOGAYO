@@ -2,17 +2,18 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>YOGAYO</title>
-<script src="https://kit.fontawesome.com/54919de5bd.js"
-	crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/main.css">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-	
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>YOGAYO</title>
+	<script src="https://kit.fontawesome.com/54919de5bd.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
+		rel="stylesheet">
+
 </head>
+
 <body>
 	<jsp:include page="header/header_white.jsp" />
 	<main>
@@ -37,10 +38,8 @@
 			<div class="up-on-scroll">
 				<div class="main-second_bg">
 					<div class="main-recommand">
-						<a
-							href="${pageContext.request.contextPath}/course-detail?crsNum=1">
-							<img
-							src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
+						<a href="${pageContext.request.contextPath}/course-detail?crsNum=1">
+							<img src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
 							<div class="main-first_course">
 								<div class="main-course_title">${allCourses.get(0).title}
 								</div>
@@ -51,7 +50,7 @@
 					</div>
 					<div class="main-recommand">
 						<a href="${pageContext.request.contextPath}/course-detail"> <img
-							src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
+								src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
 							<div class="main-second_course">
 								<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
 								<div class="main-second_course_explain">예전 같지 않은 허리 이대로
@@ -60,8 +59,7 @@
 						</a>
 					</div>
 					<div class="main-recommand">
-						<img
-							src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
+						<img src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
 						<div class="main-third_course">
 							<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
 							<div class="main-third_course_explain">예전 같지 않은 허리 이대로
@@ -73,8 +71,7 @@
 			<div class="up-on-scroll">
 				<div class="main-second_bg">
 					<div class="main-recommand">
-						<img
-							src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
+						<img src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
 						<div class="main-first_course">
 							<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
 							<div class="main-first_course_explain">예전 같지 않은 허리 이대로
@@ -82,8 +79,7 @@
 						</div>
 					</div>
 					<div class="main-recommand">
-						<img
-							src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
+						<img src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
 						<div class="main-second_course">
 							<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
 							<div class="main-second_course_explain">예전 같지 않은 허리 이대로
@@ -91,8 +87,7 @@
 						</div>
 					</div>
 					<div class="main-recommand">
-						<img
-							src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
+						<img src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
 						<div class="main-third_course">
 							<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
 							<div class="main-third_course_explain">예전 같지 않은 허리 이대로
@@ -120,33 +115,61 @@
 					</div>
 				</div>
 				<div class="main-latest_sections">
+					<a
+									href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(0).crsNum}">
 					<div class="up-on-scroll">
 						<div class="main-latest_section">
-							<img
-								src="${pageContext.request.contextPath}/resources/image/course/latest_course.jpg" />
+							<div class="img_wrapper">
+								<img src="${pageContext.request.contextPath}/${allCourses.get(0).imgPath}" /></div>
 							<div class="main-first_course">
 								<div class="main-first_course_title">
 									${allCourses.get(0).title}</div>
 							</div>
 						</div>
 					</div>
+					</a>
 					<div class="main-latest_section2">
 						<div class="main-latest_section2-1">
 							<div class="main-small_latest_courses">
+								<a
+									href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(1).crsNum}">
 								<div class="up-on-scroll">
 									<div class="main-small_latest1">
-										<img
-											src="${pageContext.request.contextPath}/resources/image/course/latest_course.jpg" />
+										<div class="img_wrapper2">
+											<img
+												src="${pageContext.request.contextPath}/${allCourses.get(1).imgPath}" />
+										</div>
 										<div class="main-first_course">
 											<div class="main-first_course_title">
 												${allCourses.get(1).title}</div>
 										</div>
 									</div>
 								</div>
-								<div class="up-on-scroll">
-									<div class="main-samll_latest2">
-										<img
-											src="${pageContext.request.contextPath}/resources/image/course/latest_course.jpg" />
+								</a>
+								<a
+									href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(2).crsNum}">
+									<div class="up-on-scroll">
+										<div class="main-samll_latest2">
+											<div class="img_wrapper2">
+												<img
+													src="${pageContext.request.contextPath}/${allCourses.get(2).imgPath}" />
+											</div>
+											<div class="main-first_course">
+												<div class="main-first_course_title">
+													${allCourses.get(2).title}</div>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<a href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(3).crsNum}">
+							<div class="up-on-scroll">
+								<div class="main-latest_section2-2">
+									<div class="main-latest">
+										<div class="img_wrapper3"><img
+												src="${pageContext.request.contextPath}/${allCourses.get(3).imgPath}" />
+										</div>
 										<div class="main-first_course">
 											<div class="main-first_course_title">
 												${allCourses.get(3).title}</div>
@@ -154,19 +177,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="up-on-scroll">
-							<div class="main-latest_section2-2">
-								<div class="main-latest">
-									<img
-										src="${pageContext.request.contextPath}/resources/image/course/latest_course.jpg" />
-									<div class="main-first_course">
-										<div class="main-first_course_title">
-											${allCourses.get(4).title}</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -174,7 +185,7 @@
 		<jsp:include page="footer/footer_grey.jsp" />
 	</main>
 	<script src="http://code.jquery.com/jquery.js"></script>
-	<script language=JavaScript
-		src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 </body>
+
 </html>

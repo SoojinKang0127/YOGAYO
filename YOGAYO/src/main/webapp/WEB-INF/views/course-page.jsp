@@ -64,11 +64,13 @@
 							<div class="course_container">
 								<a
 									href="${pageContext.request.contextPath}/course-detail?crsNum=${i.crsNum}">
+									<div class="img_wrapper">
 									<img
 									src="${pageContext.request.contextPath}/${i.imgPath}"
 									alt="course" />
+									</div>
 									<div class="course_star_rating">
-										<i class="far fa-star"></i>${i.total}(${i.totalComment})
+										<i class="fas fa-star"></i>${i.total}(${i.totalComment})
 										<div class="course_title">${i.title}</div>
 									</div>
 								</a>

@@ -36,6 +36,7 @@ import com.team4.dao.like.LikeServiceImpl;
 import com.team4.dao.pose.PoseServiceImpl;
 import com.team4.resource.R;
 import com.team4.user.dao.UserServiceImpl;
+import com.team4.util.UserAuthCheck;
 import com.team4.vo.CourseVo;
 import com.team4.vo.FeedVo;
 import com.team4.vo.LikeVo;
@@ -64,7 +65,8 @@ public class PlayerController implements R {
 	UserVo uvo = null;
 
 	@RequestMapping(value = "/player", method = RequestMethod.GET)
-	public String player(HttpServletRequest req, @RequestParam("course") String course, Model model) {
+	public String player(HttpServletRequest req, @RequestParam("course") String course, Model model,HttpServletResponse res) {
+		UserAuthCheck.loginCheck(req, res, model);
 		cvo = new CourseVo();
 		int no = Integer.parseInt(course);
 		cvo.setCrsNum(no);

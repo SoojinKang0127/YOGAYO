@@ -21,7 +21,7 @@
 
 .footer_section {
 	display: flex;
-	width: 56%;
+	width: 100%;
 	height: 90px;
 	justify-content: space-between;
 	align-items: center;
