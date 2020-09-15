@@ -32,7 +32,7 @@ public class HomeController {
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public String main(Model model, HttpServletRequest req) {
 		HttpSession session = req.getSession();	
-		
+		model.addAttribute("user",(UserVo)req.getSession().getAttribute("user"));
 		Object user = session.getAttribute("user");
 		if(user == null) {
 			String errMessage = "로그인 후 이용이 가능합니다.";
@@ -79,18 +79,8 @@ public class HomeController {
 	
 	
 	
-	@RequestMapping(value = "/my-page", method = RequestMethod.GET)
-	public String myPage(Model model) {
-
-		return "mypage";
-	}
 
 	
-	@RequestMapping(value = "/pose", method = RequestMethod.GET)
-	public String pose(Model model) {
-
-		return "dictionary-detail";
-	}
 	
 	
 

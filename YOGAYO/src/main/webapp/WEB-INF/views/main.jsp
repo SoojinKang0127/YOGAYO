@@ -14,30 +14,7 @@
 	
 </head>
 <body>
-	<header class="header">
-		<div class="main-status_bar">
-			<div class="main-logo_wrapper">
-				<a href="main_page.html"> 
-					<div class="logo-wrapper">
-					<span>YOGAYO</span>
-						<div class="box-div"></div>
-					</div>
-				</a>
-			</div>
-			<div class="main-status_categories">
-				<span class="recommand"><a href="${pageContext.request.contextPath}/main">추천</a></span> 
-				<span class="course"><a href="${pageContext.request.contextPath}/course-page">코스</a></span>
-				<span class="dictionary"><a href="${pageContext.request.contextPath}/my-page">자세 사전</a></span> 
-				<span class="my_page"><a href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
-			</div>
-			<div class="main-profile">
-				<div class="welcome_user">안녕하세요. ${user.name}님</div>
-				<a href="myPage"><img
-					src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
-					class="profile_img" /></a>
-			</div>
-		</div>
-	</header>
+	<jsp:include page="header/header_white.jsp" />
 	<main>
 		<div class="main-first_container">
 			<div class="main-first_bg">
@@ -194,20 +171,7 @@
 				</div>
 			</div>
 		</div>
-		<footer class="footer">
-			<div class="main-footer_right">
-				<i class="far fa-copyright"></i> 2020 Team4,Inc.All rights reserved
-				<span>·</span> <span>개인정보 처리방침</span> <span>·</span> <span>이용약관</span>
-				<span>·</span> <span>사이트 맵</span>
-			</div>
-			<div class="main-footer_left">
-				<ul class="main-footer_sns_list">
-					<li><i class="fab fa-facebook-f"></i></li>
-					<li><i class="fab fa-twitter"></i></li>
-					<li><i class="fab fa-instagram"></i></li>
-				</ul>
-			</div>
-		</footer>
+		<jsp:include page="footer/footer_grey.jsp" />
 	</main>
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script language=JavaScript

@@ -35,6 +35,7 @@ import com.team4.dao.pose.PoseDAOImpl;
 import com.team4.dao.pose.PoseService;
 import com.team4.dao.pose.PoseServiceImpl;
 import com.team4.vo.PoseVo;
+import com.team4.vo.UserVo;
 
 
 
@@ -50,9 +51,9 @@ public class PlaylistController {
 	
 	@RequestMapping(value = "/course_playlist", method = RequestMethod.GET)
 	public String course_playlist(Model model,
-			HttpServletResponse res
+			HttpServletResponse res,HttpServletRequest req
 			) throws IOException {
-		
+		model.addAttribute("user",(UserVo)req.getSession().getAttribute("user"));
 		
 		return "course_playlist";
 	}

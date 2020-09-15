@@ -16,7 +16,7 @@
 	href="${pageContext.request.contextPath}/resources/css/course-detail.css" />
 </head>
 <body>
-	<header></header>
+	<jsp:include page="header/header_black.jsp" />
 	<main>
 		<div class="course_detail-bg">
 			<div class="course_detail-first">
@@ -151,7 +151,7 @@
 					<div class="review_text_box">
 						<div class="user_img">
 							<img
-								src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
+								src="${pageContext.request.contextPath}/${user.img}"
 								alt="profile" />
 						</div>
 
@@ -469,24 +469,7 @@
 				<!-- black_line -->
 			</div>
 		</div>
-		<footer class="footer">
-			<div class="footer_section">
-				<div class="main-footer_right">
-					<i class="far fa-copyright"></i> 2020 Team4,Inc.All rights reserved
-					<div class="footer_right_sub">
-						<span>개인정보 처리방침</span> <span>·</span> <span>이용약관</span> <span>·</span>
-						<span>사이트 맵</span>
-					</div>
-				</div>
-				<div class="main-footer_left">
-					<ul class="main-footer_sns_list">
-						<li><i class="fab fa-facebook-f"></i></li>
-						<li><i class="fab fa-twitter"></i></li>
-						<li><i class="fab fa-instagram"></i></li>
-					</ul>
-				</div>
-			</div>
-		</footer>
+		<jsp:include page="footer/footer_white.jsp" />
 	</main>
 </body>
 </html>

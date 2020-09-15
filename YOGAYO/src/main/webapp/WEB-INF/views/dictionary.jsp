@@ -22,7 +22,7 @@
 </head>
 
 <body>
-              <header></header>
+    <jsp:include page="header/header_black.jsp" />
 
 
     <main>
@@ -35,7 +35,7 @@
                                 <h1>logo</h1>
                             </div>
                             <div class='upper_search'>
-                                <input type="text" placeholder="검색어를 입력하세요" class="searching_bar">
+                                <input type="text" placeholder="검색어를 입력하세요" class="searching_bar">
                             </div>
                         </div>
 
@@ -74,7 +74,7 @@
 
 
     </main>
-    <footer></footer>
+    <jsp:include page="footer/footer_white.jsp" />
 </body>
 
 </html>

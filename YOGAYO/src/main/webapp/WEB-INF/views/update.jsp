@@ -17,12 +17,7 @@
 <body>
 	<main>
 		<section id="step_1">
-			<header>
-				<a href="/test/"><div class="logo-wrapper">
-						<span>YOGAYO</span>
-						<div class="box-div"></div>
-					</div> </a>
-			</header>
+			<jsp:include page="header/header_black.jsp" />
 			<span class="welcome">회원정보 수정</span> <span class="step_1">정보를 수정해주세요</span>
 			<div class="sign-up-form">
 				<form action="update" method="POST">

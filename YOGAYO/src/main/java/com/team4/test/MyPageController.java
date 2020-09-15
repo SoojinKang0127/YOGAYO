@@ -30,6 +30,7 @@ public class MyPageController {
 	@RequestMapping(value="/myPage", method = RequestMethod.GET)
 	public String myPage(Model model,HttpServletRequest req, HttpServletResponse res) 
 			 {
+		model.addAttribute("user",(UserVo)req.getSession().getAttribute("user"));
 		UserServiceImpl service = new UserServiceImpl();
 		UserVo vo = new UserVo();
 		HttpSession session = req.getSession();

@@ -27,6 +27,7 @@ import com.google.protobuf.Service;
 import com.team4.dao.course.CourseServiceImpl;
 import com.team4.dao.pose.PoseServiceImpl;
 import com.team4.vo.PoseVo;
+import com.team4.vo.UserVo;
 
 
 
@@ -39,7 +40,7 @@ public class DictionaryController {
 
 	@RequestMapping(value = "/dictionary-detail", method = RequestMethod.GET)
 	public String dictionary( Locale locale, Model model ,PoseVo vo,HttpServletRequest req)throws Exception {
-	
+		model.addAttribute("user",(UserVo)req.getSession().getAttribute("user"));
 		String pnum=req.getParameter("pnum");
 		
 		int num=Integer.parseInt(pnum);  

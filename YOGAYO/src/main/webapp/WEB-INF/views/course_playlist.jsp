@@ -90,7 +90,7 @@
 		</div>
 		</form>
 	</main>
-	<footer> </footer>
+	<jsp:include page="footer/footer_white.jsp" />
 	<script>
 		
 	</script>

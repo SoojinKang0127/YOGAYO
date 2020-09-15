@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import org.bson.Document;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -32,8 +33,7 @@ public class MkCourseController implements R {
 	CourseVo vo = new CourseVo();
 
 	@RequestMapping(value = "/mkcourse", method = RequestMethod.POST)
-	public String mkcourse(MultipartHttpServletRequest multi, HttpServletRequest req) throws Exception {
-
+	public String mkcourse(MultipartHttpServletRequest multi, HttpServletRequest req,Model model) throws Exception {
 		HttpSession session = req.getSession();
 		UserVo user = (UserVo) session.getValue("user");
 		int uNum = user.getuNum();

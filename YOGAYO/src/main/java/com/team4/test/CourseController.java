@@ -259,7 +259,9 @@ public class CourseController {
 		int totalTime = 0;
 		int totalMin = 0;
 		int totalSec = 0;
-
+		
+		model.addAttribute("user",(UserVo)req.getSession().getAttribute("user"));
+		
 		vo = new CourseVo();
 		cpvo = new CoursePosesVo();
 
