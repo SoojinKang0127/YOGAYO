@@ -57,6 +57,10 @@
 				</div>
 			</div>
 		</div>
+		<!-- -------------end 첫번째 세션------------ -->
+		
+		
+		<!-- -------------두번째 세션------------ -->
 		<div class="main-second_container">
 			<div class="up-on-scroll">
 				<div class="main-second_bg">
@@ -95,6 +99,7 @@
 				</div>
 			</div>
 			<div class="up-on-scroll">
+			
 				<!-- <div class="main-second_bg">
 					<div class="main-recommand">
 						<img
@@ -124,25 +129,44 @@
 						</div>
 					</div>
 				</div> -->
+
+				<!--------------- 두번째 세션-------------->
+
+				<!-- -----------------세번째 세션 ------------->
 			</div>
 		</div>
 		<div class="up-on-scroll">
 			<div class="main-third_container">
-				<div class="up-on-scroll">
-					<div class="main-third_bg">
+
+
+
+
+
+
+
+
+					<div class="main-third_bg up-on-scroll">
 						<div class="main-latest_title_section">
-							<div class="main-latest_courses_title">새로 올라운 코스</div>
+							<div class="main-latest_courses_title">새로 올라온 코스</div>
 							<div class="main-latest_courses_explain">
 								<p>세계 각지 사람들의 다양한 코스들을 경험해보세요. 저희 요가요에서 제공하는 코스들도 놓치지 마세요.</p>
 							</div>
 						</div>
 						<div class="main-to_course_btn_section">
-							<a href="${pageContext.request.contextPath}/course-page">
-								<button id="main-to_course_btn">모두 둘러보기</button>
-							</a>
+							
+								<button id="main-to_course_btn"><a href="${pageContext.request.contextPath}/course-page">모두 둘러보기</a></button>
+							
 						</div>
 					</div>
-				</div>
+			
+			
+
+
+
+
+
+
+
 				<div class="main-latest_sections">
 					<div class="up-on-scroll">
 						<div class="main-latest_section">
@@ -168,7 +192,7 @@
 									</div>
 								</div>
 								<div class="up-on-scroll">
-									<div class="main-samll_latest2">
+									<div class="main-samll_latest2 ">
 										<img
 											src="${pageContext.request.contextPath}/resources/image/course/latest_course.jpg" />
 										<div class="main-first_course">

@@ -1,15 +1,10 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=master
 IMPORT_FILES_AND_FOLDERS_RELATIVE=true
 IMPORT_FILES_AND_FOLDERS_TYPE=23,1
 PROBLEMS_FILTERS_MIGRATE=true
 eclipse.preferences.version=1
-<<<<<<< HEAD
-platformState=1593680533577
-=======
-<<<<<<< HEAD
-platformState=1597106435460
-=======
-platformState=1596588130231
->>>>>>> master
->>>>>>> master
+platformState=1587603167396
 quickStart=false
 tipsAndTricks=true
