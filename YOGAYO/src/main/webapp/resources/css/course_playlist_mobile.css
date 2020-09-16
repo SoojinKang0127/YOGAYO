@@ -1,0 +1,354 @@
+@import url("style.css");
+
+/* add class css */
+main {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	height: 60px;
+}
+
+footer {
+	height: 100px;
+}
+
+a {
+	color: #febe2e;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:link {
+	color: #febe2e;
+	text-decoration: none;
+}
+
+a:visit {
+	text-decoration: none;
+}
+
+#mypage_container {
+	position: relative;
+	width: 100%;
+	
+}
+
+li {
+	list-style: none;
+}
+
+#s1_container {
+	width: 410px;
+}
+
+.s1_wrapper {
+	justify-content: center;
+	flex-direction: column;
+	display: flex;
+	text-align: center;
+}
+
+input {
+	width: 200px;
+	border: 2px solid #febe2e;
+	border-radius: 4px;
+	outline: none;
+	padding: 8px;
+	box-sizing: border-box;
+	transition: 0.3s;
+	text-align: center;
+	margin-bottom: 10px;
+	color: #febe2e;
+	background-color: white;
+}
+
+input:hover {
+	width: 50%;
+	border: 2px solid white;
+	border-radius: 4px;
+	outline: none;
+	padding: 8px;
+	box-sizing: border-box;
+	transition: 0.3s;
+	text-align: center;
+	margin-bottom: 10px;
+	color: white;
+	background-color: #febe2e;
+}
+
+input::placeholder {
+	color: black;
+}
+
+input::placeholder:focus {
+	color: transparent;
+}
+
+input:focus {
+	border-color: #febe2e;
+	box-shadow: var(- -light-shadow);
+}
+
+input:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+.course_title {
+	margin-top: 30px;
+	width: 100%;
+	height: 10%;
+}
+
+.course_search {
+	width: 100%;
+	height: 30px;
+	margin-bottom: 20px;
+	/* border: 1px solid red; */
+}
+
+.pose_info_box {
+	display: flex;
+	justify-content: center;
+	/* height: 547px; */
+	text-align: center;
+	overflow-x: scroll;
+	margin-top: 40px;
+}
+
+#sortable_list1 {
+	display: flex;
+}
+
+.pose_content_box {
+	display: flex;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	box-shadow: var(- -light-shadow);
+	background-color: white;
+	user-select: none;
+	width: 400px;
+	height: 165px;
+}
+
+.pose_picture {
+	
+}
+
+.info_box {
+	height: 165px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.s1_img {
+	width: 250px;
+	height: 165px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+img {
+	-webkit-perspective: 1;
+	display: block;
+	margin: 0 auto; /* you probably only want to center it horizontally */
+	max-width: 100%;
+	height: auto;
+}
+
+.pose_textarea {
+	text-align: center;
+	width: 150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.pose_title {
+	margin-top: 15px;
+	font-weight: bolder;
+	font-size: 16px;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 8px;
+	margin-left: 10px;
+}
+
+.pose_time {
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	line-height: 29px;
+	font-size: 12px;
+}
+
+i {
+	margin-top: 2.5px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+	text-align: 29px;
+}
+
+.pose_tag {
+	display: flex;
+	flex-direction: row;
+	line-height: 29px;
+	text-align: center;
+	font-size: 12px;
+	justify-content: center;
+}
+
+.difficulty {
+	display: flex;
+	flex-direction: row;
+	line-height: 29px;
+	text-align: center;
+	font-size: 12px;
+	justify-content: center;
+}
+
+/* s2 */
+#s2_container {
+	width: 410px;
+}
+
+.s2_wrapper {
+	margin-top: 70px;
+	display: flex;
+	justify-content: center;
+}
+
+.s2_gap {
+	
+}
+
+.s2_titlebox {
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.s2_title {
+	font-size: 0px;
+}
+
+.s2_title:before {
+	border: 2px solid #febe2e;
+	color: black;
+	border-radius: 10px;
+	text-align: center;
+	margin-bottom: 35px;
+	padding: 20px;
+	content: "더블클릭하여 원하는 동작을 추가해주세요";
+	display: block;
+	font-size: 13px;
+}
+
+.list_box {
+	position: relative;
+	height: 547px;
+	overflow: scroll;
+	overscroll-behavior-x: unset;
+	width: 404px;
+	/* margin-bottom: 40px; */
+}
+
+#sortable_list2 {
+	width: 400px;
+	height: 547px;
+}
+
+.addItem_box {
+	margin-top: 2rem;
+	text-align: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.addItem:hover {
+	border: 2px solid white;
+	border-radius: 4px;
+	outline: none;
+	padding: 8px;
+	box-sizing: border-box;
+	transition: 0.3s;
+	text-align: center;
+	margin-bottom: 10px;
+	color: white;
+	background-color: #febe2e;
+}
+
+.addItem {
+	position: relative;
+	left: 10px;
+	border: 2px solid #febe2e;
+	border-radius: 4px;
+	outline: none;
+	padding: 8px;
+	box-sizing: border-box;
+	transition: 0.3s;
+	text-align: center;
+	color: #febe2e;
+	background-color: white;
+}
+
+.backBtn {
+	position: relative;
+	left: 115px;
+	width: 200px;
+	border: 2px solid #febe2e;
+	border-radius: 4px;
+	outline: none;
+	padding: 8px;
+	box-sizing: border-box;
+	transition: 0.3s;
+	text-align: center;
+	color: #febe2e;
+	background-color: white;
+}
+
+.backBtn:hover {
+	width: 50%;
+	border: 2px solid white;
+	border-radius: 4px;
+	outline: none;
+	padding: 8px;
+	box-sizing: border-box;
+	transition: 0.3s;
+	text-align: center;
+	margin-bottom: 10px;
+	color: white;
+	background-color: #febe2e;
+}
+
+#sortable_list1>.pose_content_box>.trashBtn {
+	visibility: hidden;
+}
+
+.trashBtn {
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	line-height: 165px;
+	margin-top: 82.5px;
+}
+
+.difficulty {
+	margin-left: 3px;
+}
+
+.pnum {
+	visibility: hidden;
+}

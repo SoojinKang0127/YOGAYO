@@ -12,6 +12,7 @@ $(window).ready(function() {
 	$.getJSON('./resources/json/pose.json', function(data) {
 
 		var pnum = getParameterByName("pnum")
+
 		var stepbystep = [];
 		var tips = [];
 		var benefit = [];

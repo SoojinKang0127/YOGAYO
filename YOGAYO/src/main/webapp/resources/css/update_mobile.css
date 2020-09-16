@@ -4,12 +4,12 @@
 
 body {
   width: 100%;
-  height: 200vh;
+  height: 100vh;
 }
 
 main {
   width: 100%;
-  height: 200vh;
+  height: 100vh;
   position: relative;
 }
 
@@ -22,32 +22,24 @@ main {
 }
 
 header {
-  margin-top: 40px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 1px solid red; */
 }
 
 .logo-wrapper {
   width: 150px;
-  height: 200px;
-  padding: 25px;
+  height: 60px;
+  padding: 0px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .box-div {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid rgb(0, 0, 0);
-  transition: all 0.3s linear;
-  box-shadow: var(--light-shadow);
-  transform: perspective(400px) rotateX(80deg);
+  
 }
 
 .logo-wrapper:hover .box-div {
@@ -59,7 +51,7 @@ header {
   font-size: 20px;
   font-weight: 600;
   position: absolute;
-  top: 46px;
+  top: 20px;
   opacity: 1;
   transition: opacity 0.3s ease-in-out 0s;
   display: block;
@@ -71,18 +63,19 @@ header {
 }
 
 .welcome {
-  font-size: 30px;
+  padding-top: 20px;
+  font-size: 25px;
   font-weight: 200;
 }
 
 .step_1 {
   margin-top: 40px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 300;
 }
 
 .sign-up-form {
-  margin-top: 70px;
+  margin-top: 40px;
   width: 500px;
 }
 
@@ -90,14 +83,16 @@ label {
   text-align: right;
   display: inline-block;
   width: 100px;
-  margin-right: 10px;
+  margin-right: 15px;
+  margin-left: 40px;
+  font-size: 14px;
 }
 
 input {
   font-size: 17px;
   text-align: center;
   line-height: 50px;
-  width: 300px;
+  width: 250px;
   height: 50px;
   border: none;
   border-bottom: 1px solid black;
@@ -109,26 +104,14 @@ input:focus {
 }
 
 #gender {
-  width: 300px;
+  width: 250px;
   font-size: 17px;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
   border: none;
   outline: none;
-  padding-left: 130px;
-  padding-bottom: 10px;
-}
-
-#profiLevel {
-  width: 300px;
-  font-size: 17px;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: none;
-  outline: none;
-  padding-left: 135px;
+  padding-left: 100px;
   padding-bottom: 10px;
 }
 
@@ -152,14 +135,6 @@ input:focus {
   transform: none;
 }
 
-#step_2 {
-  height: 100vh;
-  background-color: rgba(255, 235, 205, 0.205);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .up-btn i {
   margin-top: 80px;
   font-size: 40px;
@@ -175,65 +150,17 @@ input:focus {
   margin-left: 115px;
 }
 
-.interests {
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 800px;
-  justify-content: center;
-}
 
-.interests .interest {
-  font-weight: 200;
-  /*border: 1px solid rgba(0, 0, 0, 0.349);*/
-  font-size: 30px;
-  margin: 20px;
-  padding: 9px;
-  background-color: white;
-  cursor: pointer;
-  box-shadow: var(--light-shadow);
-  border-radius: var(--border-radius);
-  user-select: none;
-}
-
-.interests .selected {
-  font-weight: 300;
-  background-color: rgb(248, 218, 153);
-  box-shadow: none;
-  /*border: 1px solid rgba(0, 0, 0, 0.68);*/
-}
-
-.submitBtn {
+input[type="submit"] {
   border: none;
   margin-top: 40px;
   color: white;
-  background-color: rgba(211, 211, 211, 0.516);
+  background-color: black;
   transition: all 0.3s ease-in-out 0s;
 }
 
-.submitBtn:hover {
+input[type="submit"]:hover {
   color: black;
   border: 1px solid black;
+  background-color: white;
 }
-
-.vaild {
-  background-color: green;
-}
-
-.invaild {
-  background-color: rgba(211, 211, 211, 0.516);
-}
-
-
-.msgContainer{
-	display:none;
-}
-
-.emailVaildMsg {
-	display:inline-block;
-	width: 300px;
-	text-align: center;
-	color:red;
-	font-size:14px;
-}
-
