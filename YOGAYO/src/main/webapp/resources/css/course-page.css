@@ -175,6 +175,8 @@ main {
 	overflow: hidden;
 	background-color: black;
 	text-align: center;
+	display: flex;
+	justify-content: center;
 }
 
 .course-courses_container .course_container img {

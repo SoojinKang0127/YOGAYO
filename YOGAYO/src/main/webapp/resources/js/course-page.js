@@ -46,9 +46,9 @@ $(window).ready(function () {
 					var list = "<div class=up-on-scroll>" +
 						"<div class=course_container>"+
 							"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
-								"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
+								"<div class='img_wrapper'><img src=/test/"+resultData.result[i].imgPath+" alt=course /></div>"+
 									"<div class=course_star_rating>"+
-										"<div class=rating><i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
+										"<div class=rating><i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
 									"<div class=course_title>"+resultData.result[i].title+"</div>"+
 								"</div></a></div></div>"
 									
@@ -87,9 +87,9 @@ $(window).ready(function () {
 					var list = "<div class=up-on-scroll>" +
 					"<div class=course_container>"+
 					"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
-					"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
+					"<div class='img_wrapper'><img src=/test/"+resultData.result[i].imgPath+" alt=course /></div>"+
 					"<div class=course_star_rating>"+
-					"<div class=rating><i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
+					"<div class=rating><i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
 					"<div class=course_title>"+resultData.result[i].title+"</div>"+
 					"</div></a></div></div>"
 					
@@ -123,9 +123,9 @@ $(window).ready(function () {
 					var list = "<div class=up-on-scroll>" +
 						"<div class=course_container>"+
 							"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
-								"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
+								"<div class='img_wrapper'><img src=/test/"+resultData.result[i].imgPath+" alt=course /></div>"+
 									"<div class=course_star_rating>"+
-										"<div class=rating><i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
+										"<div class=rating><i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
 									"<div class=course_title>"+resultData.result[i].title+"</div>"+
 								"</div></a></div></div>"
 									
@@ -156,9 +156,9 @@ $(window).ready(function () {
 					var list = "<div class=up-on-scroll>" +
 						"<div class=course_container>"+
 							"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
-								"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
+								"<div class='img_wrapper'><img src=/test/"+resultData.result[i].imgPath+" alt=course /></div>"+
 									"<div class=course_star_rating>"+
-										"<div class=rating><i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
+										"<div class=rating><i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
 									"<div class=course_title>"+resultData.result[i].title+"</div>"+
 								"</div></a></div></div>"
 									
@@ -189,9 +189,9 @@ $(window).ready(function () {
 					var list = "<div class=up-on-scroll>" +
 						"<div class=course_container>"+
 							"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
-								"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
+								"<div class='img_wrapper'><img src=/test/"+resultData.result[i].imgPath+" alt=course /></div>"+
 									"<div class=course_star_rating>"+
-										"<div class=rating><i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
+										"<div class=rating><i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
 									"<div class=course_title>"+resultData.result[i].title+"</div>"+
 								"</div></a></div></div>"
 									

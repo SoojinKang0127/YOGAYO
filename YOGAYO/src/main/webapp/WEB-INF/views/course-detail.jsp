@@ -36,9 +36,9 @@
 			<div class="course_detail-second">
 				<div class="section">
 					<div class="course_detail-img_section">
-						<img src="${coursePoses.img1}" alt="course_detail" />
-						<img src="${coursePoses.img2}" alt="course_detail" />
-						<img src="${coursePoses.img3}" alt="course_detail" />
+						<div class="img_wrapper"><img src="${coursePoses.img1}" alt="course_detail" /></div>
+						<div class="img_wrapper"><img src="${coursePoses.img2}" alt="course_detail" /></div>
+						<div class="img_wrapper"><img src="${coursePoses.img3}" alt="course_detail" /></div>
 					</div>
 				</div>
 			</div>
