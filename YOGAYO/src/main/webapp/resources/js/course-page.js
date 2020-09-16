@@ -48,7 +48,7 @@ $(window).ready(function () {
 							"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
 								"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
 									"<div class=course_star_rating>"+
-										"<i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
+										"<i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
 									"<div class=course_title>"+resultData.result[i].title+"</div>"+
 								"</div></a></div></div>"
 									
@@ -89,7 +89,7 @@ $(window).ready(function () {
 					"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
 					"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
 					"<div class=course_star_rating>"+
-					"<i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
+					"<i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
 					"<div class=course_title>"+resultData.result[i].title+"</div>"+
 					"</div></a></div></div>"
 					
@@ -125,7 +125,7 @@ $(window).ready(function () {
 							"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
 								"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
 									"<div class=course_star_rating>"+
-										"<i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
+										"<i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
 									"<div class=course_title>"+resultData.result[i].title+"</div>"+
 								"</div></a></div></div>"
 									
@@ -158,7 +158,7 @@ $(window).ready(function () {
 							"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
 								"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
 									"<div class=course_star_rating>"+
-										"<i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
+										"<i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
 									"<div class=course_title>"+resultData.result[i].title+"</div>"+
 								"</div></a></div></div>"
 									
@@ -191,7 +191,7 @@ $(window).ready(function () {
 							"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
 								"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
 									"<div class=course_star_rating>"+
-										"<i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
+										"<i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
 									"<div class=course_title>"+resultData.result[i].title+"</div>"+
 								"</div></a></div></div>"
 									
