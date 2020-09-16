@@ -1,11 +1,39 @@
-@import url("reset.css");
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/admin/reset.css">
+<style>
 body {
 	width: 100vw;
-	height: 200vh;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.logo {
+	height: 150px;
+	display: flex;
+	align-items: center;
+}
+
+.by {
+	font-size: 30px;
+	font-weight: 700;
+	margin-left: 15px;
+	margin-right: 18px;
+}
+
+.admin {
+	font-size: 48px;
+	font-weight: 800;
+	-webkit-text-fill-color: rgb(255, 255, 255);
+	-webkit-text-stroke-color: rgb(0, 0, 0);
+	-webkit-text-stroke-width: 2px;
 }
 
 .logo-wrapper {
@@ -133,127 +161,29 @@ header {
 	background-color: black;
 	color: white;
 }
+</style>
 
-main {
-	width: 100%;
-	height: 100vh;
-	z-index: 0;
-	padding-top: 300px;
-	margin-left: 250px;
-	margin-right: 250px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.btnMenu{
-	display: flex;
-	margin-bottom: 50px;
-}
-
-
-.create_btn, .admin_btn, .member_btn{
-	border: 1px solid black;
-	padding: 20px 30px 20px 30px;
-	display:flex;
-	justify-content: center;
-	align-items: center;
-	margin:10px;
-	
-}
-
-
-
-.wrapper {
-	width: 1200px;
-	display: grid;
-	grid-template-columns: 100px;
-	margin-bottom: 30px;
- 	grid-gap: 1px; 
-}
-
-.wrapper div {
-	border: 1px solid #979797;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 10px 5px 10px 5px;
-}
-
-.th {
-	color: #979797;
-	width:100px;
-}
-
-
-.courseNum_ {
-	grid-column: 1/2;
-	width:100px;
-}
-
-.createdBy_ {
-	grid-column: 2/3;
-	width:100px;
-}
-
-.title_ {
-	grid-column: 3/7;
-	width:403px;
-}
-
-.desc_ {
-	grid-column: 7/12;
-	width:504px;
-
-}
-
-.modify_ {
-	grid-row: 1/5;
-	grid-column: 12/13;
-	background-color: black;
-	color: white;
-	width:100px;
-	transition: 0.1s all ease-in-out;
-	cursor:pointer;
-}
-
-.modify_:hover{
-	background-color: #febe2e;
-	
-}
-
-
-.courseNum {
-	grid-column: 1/2;
-	grid-row: 2/5;
-	width:100px;
-}
-
-.createdBy {
-	grid-column: 2/3;
-	width:100px;
-}
-
-.title {
-	grid-column: 3/7;
-	width:403px;
-}
-
-.desc {
-	grid-column: 7/12;
-	width:504px;
-	
-}
-
-.metarial_ {
-	grid-column: 2/3;
-	width:100px;
-}
-
-.imgPath {
-	grid-column: 3/4;
-	width:100px;
-}
-
-
-
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="/"><div class="logo-wrapper">
+					<span>YOGAYO</span>
+					<div class="box-div"></div>
+				</div> </a>
+			<div class="by">X</div>
+			<div class="admin">Admin</div>
+		</div>
+		<ul class="menu_list">
+			<a href="/test/admin/"><li class="menu	">통계</li></a>
+			<a href="/test/admin/member"><li class="menu ">회원 관리</li></a>
+			<a href="/test/admin/comment"><li class="menu">코멘트 관리</li></a>
+			<a href="/test/admin/newsletter"><li class="menu">뉴스레터 전송</li></a>
+			<a href="/test/admin/course"><li class="menu">코스 관리</li></a>
+			<li class="menu">포즈 관리</li>
+			<li class="menu">포즈 관리</li>
+			<li class="menu">LOG OUT</li>
+		</ul>
+	</header>
+</body>
+</html>

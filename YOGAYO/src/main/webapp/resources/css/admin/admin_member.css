@@ -140,11 +140,11 @@ main {
   padding-top: 300px;
   margin-left: 250px;
   margin-right: 250px;
+  padding-left: 250px;
+  padding-right: 250px;
 }
 
-.list_container{
-	
-	
+.list_container {
 }
 
 .user_avatar img {
@@ -205,6 +205,6 @@ main {
 .user_comment {
   width: 100px;
 }
-.user_regdate{
-	width: 140px;
+.user_regdate {
+  width: 140px;
 }

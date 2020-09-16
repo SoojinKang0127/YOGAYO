@@ -19,11 +19,19 @@ import com.team4.vo.UserVo;
 public class AdminPageController {
 
 	AdminServiceImpl service = new AdminServiceImpl();
+	
+	
+	@RequestMapping(value = "/admin/", method = RequestMethod.GET)
+	public String adminHome(Model model) throws Exception {
+		
+
+		return "/admin/admin-home";
+	};
 
 	@RequestMapping(value = "/admin/member", method = RequestMethod.GET)
 	public String getMember(Model model) throws Exception {
 
-		UserServiceImpl service = new UserServiceImpl();
+		AdminServiceImpl service = new AdminServiceImpl();
 		List<UserVo> list = service.selectAllUser();
 		model.addAttribute("userList", list);
 
@@ -99,6 +107,7 @@ public class AdminPageController {
 		vo.setSeq7Num(seq7Num);
 		vo.setSeq8Num(seq8Num);
 		
+		
 		try {
 			service.courseUpdate(vo);
 			System.out.println("코스 수정 성공");
@@ -109,5 +118,27 @@ public class AdminPageController {
 		
 		return "redirect:/admin/course";
 	};
+	
+	
+	
+	@RequestMapping(value = "/admin/newsletter", method = RequestMethod.GET)
+	public String newsLetter(Model model) throws Exception {
+		
 
+		AdminServiceImpl service = new AdminServiceImpl();
+		List<UserVo> list = service.selectAllUser();
+		model.addAttribute("userList", list);
+		
+	
+		return "/admin/admin-newsletter";
+	};
+	
+	
+	@RequestMapping(value = "/admin/sendnewsletter", method = RequestMethod.GET)
+	public String sendNewsLetter(Model model) throws Exception {
+		
+		
+	
+		return "/admin/admin-member";
+	};
 }

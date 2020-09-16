@@ -50,7 +50,7 @@ $(document).ready(function(){
 			<span class="welcome">좋아요! 이제 간단한 두 단계만 거치면 YOGAYO와 함께 하실 수
 				있습니다.</span> <span class="step_1">1. 회원가입을 위한 정보를 입력해주세요.</span>
 			<div class="sign-up-form">
-				<form action="sign-up" method="POST">
+				<form action="sign-up" method="POST" enctype="multipart/form-data">
 					<input type="hidden" name="keyword" id="keyword" value="false">
 				
 						

@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.team4.util.SqlSessionFactoryBean;
 import com.team4.vo.AdminVo;
+import com.team4.vo.UserVo;
 
 public class AdminDAOImpl implements AdminDAO{
 	
@@ -42,6 +43,12 @@ public class AdminDAOImpl implements AdminDAO{
 	public void courseUpdate(AdminVo vo) throws Exception {
 		mybatis.update("AdminDAO.courseUpdate", vo);
 		mybatis.commit();
+	}
+
+	@Override
+	public List<UserVo> selectAllUser() throws Exception {
+		
+		return mybatis.selectList("UserDao.selectAllUser");
 	}
 	
 	

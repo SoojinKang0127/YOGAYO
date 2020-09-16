@@ -51,5 +51,7 @@
 		SEQ4 = #{seq4Num}, SEQ5 = #{seq5Num}, SEQ6 = #{seq6Num}, SEQ7 = #{seq7Num}, SEQ8 = #{seq8Num}
 		WHERE CRSNUM = #{crsNum};
 	</update>
+	
+	
 
 </mapper>

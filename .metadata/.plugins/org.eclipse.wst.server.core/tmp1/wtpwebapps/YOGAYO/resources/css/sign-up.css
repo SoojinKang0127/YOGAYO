@@ -116,9 +116,6 @@ input:focus {
   margin-bottom: 10px;
   border: none;
   outline: none;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   padding-left: 130px;
   padding-bottom: 10px;
 }
@@ -131,7 +128,6 @@ input:focus {
   margin-bottom: 10px;
   border: none;
   outline: none;
->>>>>>> master
   padding-left: 135px;
   padding-bottom: 10px;
 }
@@ -227,8 +223,7 @@ input:focus {
 .invaild {
   background-color: rgba(211, 211, 211, 0.516);
 }
-<<<<<<< HEAD
-=======
+
 
 .msgContainer{
 	display:none;
@@ -241,4 +236,4 @@ input:focus {
 	color:red;
 	font-size:14px;
 }
->>>>>>> master
+

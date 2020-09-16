@@ -3,6 +3,7 @@ package com.team4.dao.admin;
 import java.util.List;
 
 import com.team4.vo.AdminVo;
+import com.team4.vo.UserVo;
 
 public class AdminServiceImpl implements AdminService {
 
@@ -34,6 +35,12 @@ public class AdminServiceImpl implements AdminService {
 
 	public void courseUpdate(AdminVo vo) throws Exception {
 		dao.courseUpdate(vo);
+	}
+
+
+	@Override
+	public List<UserVo> selectAllUser() throws Exception {
+		return dao.selectAllUser();
 	}
 
 	 

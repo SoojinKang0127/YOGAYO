@@ -9,26 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/admin/admin_member.css">
-    <title>YOGAYO 회원관리</title>
+    <title>ADMIN MEMBER</title>
   </head>
   <body>
     <header>
-      <a href="/"
-        ><div class="logo-wrapper">
-          <span>YOGAYO</span>
-          <div class="box-div"></div>
-        </div>
-      </a>
-      <ul class="menu_list">
-        <li class="menu	">통계</li>
-        <li class="menu ">회원 관리</li>
-        <li class="menu">코멘트 관리</li>
-        <li class="menu">뉴스레터 전송</li>
-        <li class="menu">코스 관리</li>
-        <li class="menu">포즈 관리</li>
-        <li class="menu">포즈 관리</li>
-        <li class="menu">LOG OUT</li>
-      </ul>
+      <jsp:include page="admin-header.jsp" />
     </header>
     <main>
       <div class="member_table">
@@ -74,11 +59,6 @@
           </li>
           
           </c:forEach>
-          
-          
-   
-          
-          
         </ul>
       </div>
     </main>

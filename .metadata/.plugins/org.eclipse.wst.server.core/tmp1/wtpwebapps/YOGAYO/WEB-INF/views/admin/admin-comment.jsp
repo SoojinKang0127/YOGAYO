@@ -9,45 +9,71 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/admin/admin_comment.css">
-<title>YOGAYO COMMENT</title>
+<title>ADMIN COMMENT</title>
 </head>
 <body>
 	<header>
-		<a href="/"><div class="logo-wrapper">
-				<span>YOGAYO</span>
-				<div class="box-div"></div>
-			</div> </a>
-		<ul class="menu_list">
-			<li class="menu	">통계</li>
-			<li class="menu ">회원 관리</li>
-			<li class="menu">코멘트 관리</li>
-			<li class="menu">뉴스레터 전송</li>
-			<li class="menu">코스 관리</li>
-			<li class="menu">포즈 관리</li>
-			<li class="menu">포즈 관리</li>
-			<li class="menu">LOG OUT</li>
-		</ul>
+		<jsp:include page="admin-header.jsp" />
 	</header>
 	<main>
 		<div class="search_container">
-			<input type="button" id="filter" value="비속어 포함 댓글 검색"> <input type="text"
-				id="search" placeholder="키워드로 검색">
+			<input type="button" id="filter" value="비속어 포함 댓글 검색"> <input
+				type="text" id="search" placeholder="키워드로 검색">
 		</div>
 		<div class="comment_table">
 			<ul>
 				<li class="comment_list">
-					<div class="idx">순번</div>
+					<div class="idx">댓글번호</div>
 					<div class="comment_date">작성일시</div>
 					<div class="user_avatar">프로필사진</div>
 					<div class="comment_user">작성자</div>
 					<div class="comment_couse">코스번호</div>
 					<div class="comment_couse">평점</div>
+					<div class="comment_type">구분</div>
 					<div class="comment_content">내용</div>
-					<div class="comment_delete">삭제</div>
+					<div class="comment_delete">댓글삭제</div>
 				</li>
-				
+				<c:forEach var="i" items="${commentList }">
+					<li class="comment_list">
+						<div class="idx">${i.cmtNum }</div>
+						<div class="comment_date">${i.regDate }</div>
+						<div class="user_avatar">
+							<img src="${pageContext.request.contextPath}/${i.img}">
+						</div>
+						<div class="comment_user">${i.name }</div>
+						<div class="comment_couse">
+							<a href="">${i.crsNum }</a>
+						</div>
+						<div class="comment_couse">
+							<a href="">${i.rate }</a>
+						</div>
+						<div class="comment_type">
+							<c:if test="${i.parent == '0'}">댓글</c:if>
+							<c:if test="${i.parent != '0'}">${i.parent }번 대댓글</c:if>
+
+
+						</div>
+						<div class="comment_content">${i.context }</div>
+						<div class="comment_delete">
+							<input type="button" class="deleteBtn"
+								onclick="confirmDelete(${i.cmtNum });" value="삭제">
+						</div>
+					</li>
+				</c:forEach>
 			</ul>
 		</div>
 	</main>
+
+	<script type="text/javascript">
+	
+	function confirmDelete(cmtNum){
+		var yesOrNo = confirm(cmtNum + "번 댓글을 삭제하시겠습니까?");
+				
+		if(yesOrNo){
+			location.href="commentdelete?cmtnum="+cmtNum;
+		}
+	}
+	
+	</script>
 </body>
 </html>

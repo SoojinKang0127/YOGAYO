@@ -1,6 +1,6 @@
 $(function () {
   $(document).ready(function () {
-    // $(".feed1_head").css("color", "black")
+	  
   })
 
   $(".feed1_head").click(function () {

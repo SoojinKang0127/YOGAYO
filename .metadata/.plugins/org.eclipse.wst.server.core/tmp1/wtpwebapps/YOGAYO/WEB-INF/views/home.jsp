@@ -39,8 +39,6 @@
             </div>
             <div class="withgoogle">
               <div></div>
-              <div></div>
-              <div></div>
             </div>
             <a href="sign-up"><div class="sign-up-btn">회원가입</div></a>
           </div>
