@@ -15,11 +15,18 @@
 <script src="http://code.jquery.com/jquery.js"></script>
 <script language=JavaScript
 	src="${pageContext.request.contextPath}/resources/js/course-page.js"></script>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/course-page.css"  media="all and (min-width:600px) and (max-width:2000px)">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/course-page_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/course-page.css"
+	media="all and (min-width:600px) and (max-width:2000px)">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/course-page_mobile.css"
+	media="all and (min-width:300px) and (max-width:599px)">
 </head>
 <body>
 	<jsp:include page="header/header_white.jsp" />
+	<header>
+	<div class="mobile_header"></div>
+	</header>
 	<main>
 		<div class="course-first_container">
 			<div class="course_bg">
@@ -27,7 +34,7 @@
 					<div class="course-bg_title">새로 올라온 코스</div>
 					<div class="course-bg_explain">
 						<p>세계 각지 사람들의 다양한 코스들을 경험 해보세요.</p>
-						 <p>저희 요가요에서 제공하는 코스들도 놓치지 마세요.</p>
+						<p>저희 요가요에서 제공하는 코스들도 놓치지 마세요.</p>
 					</div>
 				</div>
 			</div>
@@ -50,42 +57,40 @@
 					<ul>
 						<li><input type="radio" name="menu" value="date" id="date" />최신순</li>
 						<li><input type="radio" name="menu" value="total" id="like" />별점순</li>
-						<li><input type="radio" name="menu" value="totalComment" id="comment"/>리뷰 많은순
-						</li>
+						<li><input type="radio" name="menu" value="totalComment"
+							id="comment" />리뷰순</li>
 					</ul>
-					
+
 				</div>
 			</div>
 		</div>
 		<!-- <form id="searchTxtForm">  -->
-			<div class="course-courses_container">
-				<div class="courses_first_line">
-					<c:forEach var="i" items="${courses}" varStatus="status" >
-						<div class="up-on-scroll">
-							<div class="course_container">
-								<a
-									href="${pageContext.request.contextPath}/course-detail?crsNum=${i.crsNum}">
-									<div class="img_wrapper">
-									<img
-									src="${pageContext.request.contextPath}/${i.imgPath}"
-									alt="course" />
-									</div>
-									<div class="course_star_rating">
-										<div class="rating"><i class="fas fa-star"></i>${i.total}(${i.totalComment})</div>
-										<div class="course_title">${i.title}</div>
-									</div>
-								</a>
-							</div>
+		<div class="course-courses_container">
+			<div class="courses_first_line">
+				<c:forEach var="i" items="${courses}" varStatus="status">
+					<div class="up-on-scroll">
+						<div class="course_container">
+							<a
+								href="${pageContext.request.contextPath}/course-detail?crsNum=${i.crsNum}">
+								<div class="img_wrapper">
+									<img src="${pageContext.request.contextPath}/${i.imgPath}"
+										alt="course" />
+								</div>
+								<div class="course_star_rating">
+									<div class="rating">
+										<i class="fas fa-star"></i>${i.total}(${i.totalComment})</div>
+									<div class="course_title">${i.title}</div>
+								</div>
+							</a>
 						</div>
-					</c:forEach>
-				</div>
-				<div class="more_course_btn">
-					<button id="more_course_btn">더보기(More)</button>
-				</div>
+					</div>
+				</c:forEach>
 			</div>
+			<div class="more_course_btn">
+				<button id="more_course_btn">더보기(More)</button>
+			</div>
+		</div>
 		<!-- </form>  -->
-
-
 		<jsp:include page="footer/footer_grey.jsp" />
 	</main>
 </body>
