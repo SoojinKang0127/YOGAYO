@@ -2,8 +2,7 @@
 
 @import url("style.css");
 
-
-body {
+ body {
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
@@ -24,6 +23,7 @@ main {
 	height: 100%;
 	background-color: black;
 	opacity: 0.8;
+	
 }
 
 .background {
@@ -35,13 +35,14 @@ main {
 	height: 100%;
 	background-image: url("../image/home/bg02.jpg");
 	background-size: cover;
+	background-position-x:center;
 	opacity: 0.9;
 }
 
 .logo-wrapper {
 	width: 150px;
-	height: 200px;
-	padding: 25px;
+	height: 170px;
+	padding: 25px 25px 0px 25px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -87,6 +88,7 @@ main {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+	
 }
 
 header {
@@ -94,10 +96,13 @@ header {
 }
 
 .content .text {
-	margin-top: 250px;
-	font-size: 50px;
+	margin-top: 50px;
+	width:60%;
+	font-size: 30px;
 	color: white;
 	font-weight: lighter;
+	text-align:center;
+	line-height:50px;
 }
 
 .start-btn {
@@ -112,6 +117,7 @@ header {
 	font-size: 25px;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out 0s;
+	margin-top:150px;
 }
 
 .start-btn:hover {
@@ -123,16 +129,17 @@ header {
 	transform: none;
 }
 
+/*/////////////////////////////////////////////////////////////////*/
+
 .login-form-wrapper {
 	display: none;
 }
 
 .login-form {
 	border-radius: var(- -border-radius);
-	border: 1px solid white;
 	background-color: rgb(255, 255, 255);
-	width: 500px;
-	height: 500px;
+	width: 400px;
+	height: 400px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -140,10 +147,10 @@ header {
 }
 
 .login-form span {
-	margin-top: 80px;
+	margin-top: 40px;
 	font-size: 35px;
 	font-weight: 200;
-	margin-bottom: 50px;
+	margin-bottom: 40px;
 }
 
 .errMessage {
@@ -156,11 +163,10 @@ header {
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 10px;
-	margin-top:20px;
 }
 
 .form-row input[type="text"], .form-row input[type="password"] {
-	font-size: 17px;
+	font-size: 20px;
 	text-align: center;
 	line-height: 50px;
 	width: 300px;
@@ -170,7 +176,7 @@ header {
 }
 
 .form-row input[type="submit"] {
-	margin-top: 30px;
+	margin-top: 20px;
 	width: 300px;
 	height: 40px;
 	font-size: 17px;
@@ -180,7 +186,6 @@ header {
 	box-shadow: var(--light-shadow);
 	cursor: pointer;
 }
-
 
 
 .withgoogle div {
