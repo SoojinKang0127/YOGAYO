@@ -62,20 +62,22 @@ main {
 }
 
 .course_detail-third {
+  border:1px solid red;
   display: flex;
+  flex-direction : column;
   justify-content: center;
   margin-top: 50px;
-  height: 90vh;
+  height: 1000vh;
 }
 
 .course_detail-third .section {
-  width: 655px;
-  margin-right: 40px;
+  border:1px solid orange;
 }
 
 .course_detail-third .title_section {
   border-bottom: 1px solid #dddddd;
   padding-bottom: 52px;
+  border:1px solid yellow;
 }
 
 .course_detail-third .title p {
@@ -185,13 +187,13 @@ main {
  /* border: 1px solid red; */
 }
 
-.fake_mini_view {
+/* .fake_mini_view {
   width: 372px;
   height: 500px;
   display: flex;
-}
+} */
 
-.course_detail-mini_view {
+/* .course_detail-mini_view {
   position: absolute;
   top: 580px;
   border: 1px solid #dddddd;
@@ -202,7 +204,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .course_detail-mini_view .title {
   text-align: center;
