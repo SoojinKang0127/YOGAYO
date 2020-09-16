@@ -6,10 +6,12 @@ import java.util.ArrayList;
 import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.bson.Document;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,6 +23,7 @@ import com.team4.dao.course.CourseDAO;
 import com.team4.dao.course.CourseDAOImpl;
 import com.team4.dao.course.CourseServiceImpl;
 import com.team4.resource.R;
+import com.team4.util.UserAuthCheck;
 import com.team4.vo.CourseVo;
 import com.team4.vo.UserVo;
 
@@ -32,8 +35,8 @@ public class MkCourseController implements R {
 	CourseVo vo = new CourseVo();
 
 	@RequestMapping(value = "/mkcourse", method = RequestMethod.POST)
-	public String mkcourse(MultipartHttpServletRequest multi, HttpServletRequest req) throws Exception {
-
+	public String mkcourse(MultipartHttpServletRequest multi, HttpServletRequest req,Model model,HttpServletResponse res) throws Exception {
+		UserAuthCheck.loginCheck(req, res, model);
 		HttpSession session = req.getSession();
 		UserVo user = (UserVo) session.getValue("user");
 		int uNum = user.getuNum();

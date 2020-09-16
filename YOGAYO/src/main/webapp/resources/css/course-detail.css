@@ -1,9 +1,6 @@
 @import url("style.css");
 
 body {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -603,7 +600,7 @@ h1 { font-size: 1.5em; margin: 10px; }
 
 
 #full-stars-example-two {
-	
+}
   /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
   .rating-group {
     display: inline-flex;
@@ -668,7 +665,7 @@ h1 { font-size: 1.5em; margin: 10px; }
   .rating__input--none:hover + .rating__label .rating__icon--none {
     color: red;
   }
-}
+
 
 
 
@@ -744,9 +741,10 @@ h1 { font-size: 1.5em; margin: 10px; }
   .rating__input--none:hover + .rating__label .rating__icon--none {
     color: red;
   }
-}
+
 
 #full-stars-example-two {
+}
 
   /* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
   .rating-group {
@@ -800,13 +798,6 @@ h1 { font-size: 1.5em; margin: 10px; }
 
 
 
-
-=======
->>>>>>> master
-	width: 100%;
-	height: 100%;
-	box-sizing: border-box;
-}
 
 main {
 	width: 100%;
@@ -1182,41 +1173,5 @@ main {
 	box-shadow: var(--light-shadow);
 }
 
-.footer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-}
 
-.footer_section {
-	display: flex;
-	width: 56%;
-	height: 90px;
-	justify-content: space-between;
-	align-items: center;
-}
 
-.main-footer_right {
-	font-size: 11pt;
-}
-
-.footer_right_sub {
-	margin-top: 8px;
-	font-size: 11pt;
-}
-
-.main-footer_sns_list {
-	display: flex;
-	flex-direction: row;
-}
-
-.main-footer_sns_list li {
-	font-size: 15pt;
-	margin-left: 29px;
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> master
->>>>>>> master

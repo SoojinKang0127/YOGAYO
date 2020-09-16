@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.team4.user.dao.UserServiceImpl;
+import com.team4.util.UserAuthCheck;
 import com.team4.dao.course.CourseDAOImpl;
 import com.team4.dao.course.CourseServiceImpl;
 import com.team4.vo.CourseVo;
@@ -25,7 +27,8 @@ public class LoginController {
 
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public String login(Locale locale, Model model) {
+	public String login(Locale locale, Model model,HttpServletRequest req,HttpServletResponse res) {
+		UserAuthCheck.sendToMainView(req, res, model);
 		return "login";
 	};
 	
