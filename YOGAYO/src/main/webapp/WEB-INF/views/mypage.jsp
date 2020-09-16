@@ -44,30 +44,7 @@
     </script>
   </head>
   <body>
-     <header class="header">
-		<div class="main-status_bar">
-			<div class="main-logo_wrapper">
-				<a href="main_page.html"> 
-					<div class="logo-wrapper">
-					<span>YOGAYO</span>
-						<div class="box-div"></div>
-					</div>
-				</a>
-			</div>
-			<div class="main-status_categories">
-				<span class="recommand"><a href="${pageContext.request.contextPath}/main">추천</a></span> 
-				<span class="course"><a href="${pageContext.request.contextPath}/course-page">코스</a></span>
-				<span class="dictionary"><a href="${pageContext.request.contextPath}/my-page">자세 사전</a></span> 
-				<span class="my_page"><a href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
-			</div>
-			<div class="main-profile">
-				<div class="welcome_user">안녕하세요. ${user.name}님</div>
-				<a href="myPage"><img
-					src="${pageContext.request.contextPath}/resources/image/course/profile_face.png"
-					class="profile_img" /></a>
-			</div>
-		</div>
-	</header>
+    <jsp:include page="header/header_black.jsp" />
     <main>
       <div id="content">
         <div class="content_1">
@@ -92,17 +69,17 @@
               <div class="lWeight_title">지난달 감량 몸무게</div>
               <div class="lWeight_value">${lWeight}kg</div>
               <div class="btns">
-                <div class="btn1">정보수정</div>
-                <div class="btn2">코스추가</div>
+                <div class="btn1" style='cursor:pointer;'>정보수정</div>
+                <div class="btn2" style='cursor:pointer;'>코스추가</div>
               </div>
             </div>
           </div>
         </div>
         <div class="content_2">
           <div class="head_2">
-            <div class="feed1_head">Feed</div>
-            <div class="feed2_head">My Course</div>
-            <div class="feed3_head">Liked Course</div>
+            <div class="feed1_head" style='cursor:pointer;'>Feed</div>
+            <div class="feed2_head" style='cursor:pointer;'>My Course</div>
+            <div class="feed3_head" style='cursor:pointer;'>Liked Course</div>
           </div>
           <div class="main_2">
             <div class="feed1">
@@ -165,7 +142,7 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <jsp:include page="footer/footer_white.jsp" />
     
   </body>
 </html>
