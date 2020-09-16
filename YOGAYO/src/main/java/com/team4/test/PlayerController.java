@@ -47,11 +47,7 @@ import com.team4.vo.UserVo;
 public class PlayerController implements R {
 	MongoClient mongoClient = new MongoClient(uri);
 	FeedVo vo = new FeedVo();
-	FeedServiceImpl fservice = new FeedServiceImpl();
-	CourseServiceImpl cservice = new CourseServiceImpl();
-	PoseServiceImpl pservice = new PoseServiceImpl();
-	LikeServiceImpl lservice = new LikeServiceImpl();
-	UserServiceImpl uservice = new UserServiceImpl();
+	
 	CourseVo resultCvo = null;
 	CourseVo cvo = null;
 	PoseVo resultPvo1 = null;
@@ -67,6 +63,11 @@ public class PlayerController implements R {
 	@RequestMapping(value = "/player", method = RequestMethod.GET)
 	public String player(HttpServletRequest req, @RequestParam("course") String course, Model model,HttpServletResponse res) {
 		UserAuthCheck.loginCheck(req, res, model);
+		FeedServiceImpl fservice = new FeedServiceImpl();
+		CourseServiceImpl cservice = new CourseServiceImpl();
+		PoseServiceImpl pservice = new PoseServiceImpl();
+		LikeServiceImpl lservice = new LikeServiceImpl();
+		UserServiceImpl uservice = new UserServiceImpl();
 		cvo = new CourseVo();
 		int no = Integer.parseInt(course);
 		cvo.setCrsNum(no);
@@ -160,7 +161,7 @@ public class PlayerController implements R {
 
 	@RequestMapping(value = "/feedupload", method = RequestMethod.POST)
 	public String feedupload(MultipartHttpServletRequest multi, HttpServletRequest req) {
-
+		FeedServiceImpl fservice = new FeedServiceImpl();
 		HttpSession session = req.getSession();
 		UserVo user = (UserVo) session.getValue("user");
 		int uNum = user.getuNum();
@@ -227,6 +228,7 @@ public class PlayerController implements R {
 	@RequestMapping(value = "/likeCourse", method = RequestMethod.POST)
 	public void likeCourse(HttpServletResponse res, @RequestParam("uNum") int uNum,
 			@RequestParam("crsNum") int crsNum) {
+		LikeServiceImpl lservice = new LikeServiceImpl();
 		LikeVo lvo = new LikeVo();
 		lvo.setuNum(uNum);
 		lvo.setCrsNum(crsNum);
@@ -246,6 +248,7 @@ public class PlayerController implements R {
 
 		try {
 			int flag = lservice.likeOrNot(lvo);
+			System.out.println("like"+flag);
 			if (flag == 0) {
 				lservice.like(lvo);
 				DBCollection courseDB = mongoDBf.getCollection("COURSE");
@@ -323,8 +326,11 @@ public class PlayerController implements R {
 
 	@RequestMapping(value = "/dislikeCourse", method = RequestMethod.POST)
 	public void dislikeCourse(HttpServletResponse res, @RequestParam("uNum") int uNum,
-			@RequestParam("crsNum") int crsNum) {
-
+			@RequestParam("crsNum") int crsNum,HttpServletRequest req) {
+		CourseServiceImpl cservice = new CourseServiceImpl();
+		PoseServiceImpl pservice = new PoseServiceImpl();
+		LikeServiceImpl lservice = new LikeServiceImpl();
+		UserServiceImpl uservice = new UserServiceImpl();
 		LikeVo lvo = new LikeVo();
 		lvo.setuNum(uNum);
 		lvo.setCrsNum(crsNum);
@@ -341,8 +347,60 @@ public class PlayerController implements R {
 		BasicDBObject poseQuery6 = new BasicDBObject();
 		BasicDBObject poseQuery7 = new BasicDBObject();
 		BasicDBObject poseQuery8 = new BasicDBObject();
+		cvo = new CourseVo();
+		uvo = (UserVo) req.getSession().getValue("user");
+		cvo.setCrsNum(crsNum);
+		try {
+			resultCvo = cservice.selectOne(cvo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		
+		int poseNo1 = resultCvo.getSeq1();
+		int poseNo2 = resultCvo.getSeq2();
+		int poseNo3 = resultCvo.getSeq3();
+		int poseNo4 = resultCvo.getSeq4();
+		int poseNo5 = resultCvo.getSeq5();
+		int poseNo6 = resultCvo.getSeq6();
+		int poseNo7 = resultCvo.getSeq7();
+		int poseNo8 = resultCvo.getSeq8();
+
+		PoseVo pose1 = new PoseVo();
+		PoseVo pose2 = new PoseVo();
+		PoseVo pose3 = new PoseVo();
+		PoseVo pose4 = new PoseVo();
+		PoseVo pose5 = new PoseVo();
+		PoseVo pose6 = new PoseVo();
+		PoseVo pose7 = new PoseVo();
+		PoseVo pose8 = new PoseVo();
+
+		pose1.setpNum(poseNo1);
+		pose2.setpNum(poseNo2);
+		pose3.setpNum(poseNo3);
+		pose4.setpNum(poseNo4);
+		pose5.setpNum(poseNo5);
+		pose6.setpNum(poseNo6);
+		pose7.setpNum(poseNo7);
+		pose8.setpNum(poseNo8);
+
+		try {
+			resultPvo1 = pservice.poseSelect(pose1);
+			resultPvo2 = pservice.poseSelect(pose2);
+			resultPvo3 = pservice.poseSelect(pose3);
+			resultPvo4 = pservice.poseSelect(pose4);
+			resultPvo5 = pservice.poseSelect(pose5);
+			resultPvo6 = pservice.poseSelect(pose6);
+			resultPvo7 = pservice.poseSelect(pose7);
+			resultPvo8 = pservice.poseSelect(pose8);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		try {
 			int flag = lservice.likeOrNot(lvo);
+			System.out.println("dislike"+flag);
+			
 			if (flag == 1) {
 				lservice.dislike(lvo);
 				DBCollection courseDB = mongoDBf.getCollection("COURSE");

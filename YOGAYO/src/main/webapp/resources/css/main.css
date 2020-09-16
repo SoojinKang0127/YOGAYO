@@ -209,6 +209,12 @@ main {
   margin-right: 17px;
 }
 
+.img_wrapper{
+  width: 700px;
+  height: 700px;
+  overflow: hidden;
+}
+
  .img_wrapper2 {
   width: 328px;
   height: 288px;
