@@ -13,6 +13,12 @@
 	width: 100%;
 }
 
+@media all and (min-width:300px) and (max-width:599px){
+.footer{
+display:none;
+}
+}
+
 .footer_section {
 	display: flex;
 	width: 56%;
