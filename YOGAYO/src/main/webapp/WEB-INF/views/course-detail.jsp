@@ -41,13 +41,13 @@
 						<div class="title">
 							<p>${course.title}</p>
 							<div class="course_detail-star_rating">
-								<span><i class="${like}"></i></span> <span id="rating"></span>
+								<span><i class="fas fa-star"></i></span> <span id="rating"></span>
 								<span id="cmc"></span> <span>·</span> <span>${makerInfo.name}</span>
 							</div>
 						</div>
 						<div class="like">
 							<div class="like_icon">
-								<i id="heart" class="far fa-heart"></i>
+								<i id="heart" class="${like}"></i>
 							</div>
 							<div class="like_btn"></div>
 						</div>
@@ -61,23 +61,23 @@
 						<div class="course_detail-info_icon_section">
 							<div class="first_line">
 								<div class="course_detail-info_time">
-									<i class="fas fa-stopwatch"></i>   ${totalMin}min
+									<i class="fas fa-stopwatch"></i>   <span>${totalMin} 분</span>
 								</div>
 								<div class="course_detail-difficulty">
-									<i class="far fa-smile-wink"></i>${difficulty}
+									<i class="fas fa-certificate"></i><span>${difficulty}</span>
 								</div>
 							</div>
 							<div class="second_line">
 								<div class="course_detail-users">
-									<i class="fas fa-users"></i> ${userCount}명
+									<i class="fas fa-users"></i> <span>${userCount}명</span>
 								</div>
 								<div class="course_detail-tags">
-									<i class="fab fa-slack-hash"></i>${keyword}
+									<i class="fab fa-slack-hash"></i><span>${keyword}</span>
 								</div>
 							</div>
 						</div>
 						<div class="course_detail-coures_explain_section">
-							<div class="course_detail-coures_explain_title">프로그램</div>
+							<div class="course_detail-coures_explain_title">프로그램 설명</div>
 							<div class="course_detail-course_explain">
 								<p>${course.dscrt}</p>
 							</div>
@@ -95,7 +95,7 @@
 				<div class="course_detail-mini_view_section">
 					<div class="fake_mini_view"></div>
 					<div class="course_detail-mini_view">
-						<div class="title">코스 개요</div>
+						<div class="title">코 스</div>
 						<div class="poses">
 							<div class="pose">
 								<div class="pose_title">${coursePoses.pose1}</div>
@@ -265,7 +265,7 @@
 											+ "</span>"
 											+ "</div></div>"
 											+ '<div class="show_me_the_comment">'
-											+ '<i id="show_me_the_comment" class="fas fa-caret-down"></i>'
+											+ '<i id="show_me_the_comment" class="fas fa-caret-down show_me"></i>'
 											+ "</div>"
 											+ '<div class="hidden_comment">'
 											+ '<form action="addReview">'
@@ -312,7 +312,7 @@
 									$('#cmc').html();
 									$('.course_detail-rating span:nth-child(3)').html("(댓글" + rate_people_num + "개)")
 
-									$(".fas").click(function () {
+									$("#show_me_the_comment").click(function () {
 										if ($(this).attr('class') == 'fas fa-caret-down') {
 											$(this).attr('class', 'fas fa-caret-left');
 											$(this).parent().next().show();

@@ -90,13 +90,14 @@
   text-decoration: none;
 }
 
-.main-status_categories span:nth-child(1)::after{
+.main-status_categories span.nowpage::after{
   content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 100%;
-  height: 3px;
+  width: 20px;
+  height: 4px;
+  border-radius: 2px;
   background: black;
   /* transition: all .2s ease-out; */
 }
@@ -108,12 +109,13 @@
   left: 50%;
   transform: translateX(-50%);
   width: 0;
-  height: 3px;
+  height: 4px;
+  border-radius: 2px;
   background: black;
   transition: all .2s ease-out;
 }
 
-.main-status_categories span:hover::after {
+.main-status_categories span.nowmouse:hover::after {
   width: 100%;
 }
 
@@ -136,6 +138,8 @@
 }
 
 </style>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <header class="header">
@@ -163,6 +167,41 @@
          </div>
       </div>
       </div>
-	</header>
+  </header>
+  <script>
+    pathname=window.location.pathname
+    menu_num=0;
+    switch(pathname){
+    case '/test/main':menu_num=1 ;break;
+    case '/test/course-page':
+    case '/test/course-detail':
+    case '/test/player':menu_num=2 ;break;
+    case '/test/dictionary':
+    case '/test/dictionary-detail':menu_num=3 ;break;
+    case '/test/update':
+    case '/test/myPage':
+    case '/test/course_playlist':menu_num=4;break; 
+    }
+
+    function nowPage(a){
+      classname='.main-status_categories span:nth-child('+a+')'
+      $(classname).toggleClass('nowpage')
+    }
+    nowPage(menu_num)
+
+    $('.main-status_categories span').hover(function(){
+      $(this).toggleClass('nowmouse')
+      if($(this)[0]!=$('.main-status_categories span:nth-child('+menu_num+')')[0]){
+        $('.main-status_categories span:nth-child('+menu_num+')').removeClass('nowpage')
+      }
+    },function(){
+      $(this).toggleClass('nowmouse')
+      if($(this)[0]!=$('.main-status_categories span:nth-child('+menu_num+')')[0]){
+        $('.main-status_categories span:nth-child('+menu_num+')').toggleClass('nowpage')
+      }
+    })
+
+    
+  </script>
 </body>
 </html>

@@ -11,6 +11,7 @@ $(window).ready(function () {
 	});
 	
 	var clickMore=0;
+	former_height=2300;
 	$('#more_course_btn').on("click",function(){
 		var controllerUrl="course-page-ajax.do";//ajax url
 		var radioValue = $('input[name=menu]:checked').val(); // data
@@ -33,7 +34,6 @@ $(window).ready(function () {
 				"searchType" : "all",
 				startNum:clickMore}
 		}
-
 		$.ajax({
 			type:"post",
 			async : true,
@@ -61,6 +61,9 @@ $(window).ready(function () {
 						+ request.responseText + "\n" + "error:" + error);
 			}
 		});
+		$(document).scrollTop($(document.body).height()-1920);
+		former_height=$(document.body).height();
+		console.log($(document.body).height())
 	});
 	
 	

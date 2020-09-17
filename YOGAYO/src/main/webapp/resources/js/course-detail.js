@@ -48,12 +48,12 @@ $(window).ready(function() {
 			 request_dislike.send(null);
 		}
 	});
-	$(".fas").click(function() {
-		if ($(this).attr('class') == 'fas fa-caret-down') {
-			$(this).attr('class', 'fas fa-caret-left');
+	$(".show_me").click(function() {
+		if ($(this).attr('class') == 'fas fa-caret-down show_me') {
+			$(this).attr('class', 'fas fa-caret-left show_me');
 			$(this).parent().next().show();
 		} else {
-			$(this).attr('class', 'fas fa-caret-down');
+			$(this).attr('class', 'fas fa-caret-down show_me');
 			//$('.hidden_comment').hide();
 			$(this).parent().next().hide();
 		}

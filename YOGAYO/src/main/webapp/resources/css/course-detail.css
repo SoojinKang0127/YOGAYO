@@ -98,20 +98,20 @@ main {
 
 .course_detail-info_title_section {
 	display: flex;
-	margin-top: 50px;
-  margin-bottom: 25px;
+	margin-top: 25px;
   justify-content: left;
   align-items: center;
 }
 
 .course_detail-info_title_section .course_detail-info_title {
-	font-size: 15pt;
+	font-size: 14pt;
+	margin-left: 13px;
 }
 
 .course_detail-info_title_section img {
-	width: 54px;
-	height: 54px;
-	border-radius: 50px;
+	width: 48px;
+	height: 48px;
+	border-radius: 24px;
 }
 
 .course_detail-info_icon_section {
@@ -119,10 +119,6 @@ main {
 	flex-direction: column;
 	border-bottom: 1px solid #dddddd;
 	padding-bottom: 52px;
-}
-
-.first_line, .second_line {
-	display: flex;
 }
 
 .course_detail-info_icon_section i {
@@ -152,6 +148,7 @@ color:#2196F3;
 	font-size: 15pt;
 	align-items: center;
 	margin-top: 26px;
+	display: flex;
 }
 
 .course_detail-users {
@@ -160,6 +157,7 @@ color:#2196F3;
 	font-size: 15pt;
 	align-items: center;
 	margin-top: 26px;
+	display: flex;
 }
 
 .course_detail-tags {
@@ -168,6 +166,7 @@ color:#2196F3;
 	font-size: 15pt;
 	align-items: center;
 	margin-top: 26px;
+	display: flex;
 }
 
 .course_detail-coures_explain_section {
@@ -193,11 +192,11 @@ color:#2196F3;
 
 .coures_detail-coures_materials_title {
 	font-size: 15pt;
-	margin-bottom: 36px;
+	margin-bottom: 28px;
 }
 
-.coures_detail-coures_materials_list li {
-	font-size: 15pt;
+.coures_detail-coures_materials_list ul li {
+	font-size: 12pt;
 }
 
 .coures_detail-coures_materials_list li i {
@@ -260,11 +259,13 @@ color:#2196F3;
 }
 
 .course_detail-mini_view .poses .pose .pose_title {
-	font-size: 15pt;
+	font-size: 13pt;
+	font-weight: bolder;
 }
 
 .course_detail-mini_view .poses .pose .time {
 	text-align: right;
+
 }
 
 .course_detail-mini_view .btn {
@@ -284,6 +285,7 @@ color:#2196F3;
 	align-items: flex-end;
 	justify-content: flex-end;
 	text-align: right;
+	font-weight: bold;
 }
 
 .course_detail-mini_view .btn #btn_to_start {
@@ -291,6 +293,7 @@ color:#2196F3;
 	cursor: pointer;
 	border-radius: 10px;
 	font-size: 15px;
+	font-weight: bold;
 	background-color: var(--theme-color);
 	width: 50%;
 	height: 25px;
@@ -917,9 +920,6 @@ main {
 }
 
 
-.course_detail-info_title_section .course_detail-info_title {
-	font-size: 15pt;
-}
 
 .course_detail-info_title_section img {
 	width: 54px;
@@ -936,7 +936,22 @@ main {
 
 .first_line, .second_line {
 	display: flex;
+	font-size: 10px;
 }
+
+.first_line div span, .second_line div span{
+	font-size: 17px;
+	font-weight: 500;
+}
+
+.first_line div i{
+	font-size: 30px;
+}
+
+.second_line div i{
+	font-size: 30px;
+}
+
 
 .course_detail-info_icon_section i {
 	font-size: 25pt;
@@ -977,18 +992,8 @@ main {
 	margin-bottom: 53px;
 }
 
-.coures_detail-coures_materials_title {
-	font-size: 15pt;
-	margin-bottom: 36px;
-}
 
-.coures_detail-coures_materials_list li {
-	font-size: 15pt;
-}
 
-.coures_detail-coures_materials_list li i {
-	margin-right: 16px;
-}
 
 .course_detail-mini_view_section {
 	/* border: 1px solid red; */
@@ -1037,41 +1042,8 @@ main {
 	border-top: none;
 }
 
-.course_detail-mini_view .poses .pose .pose_title {
-	font-size: 15pt;
-}
-
-.course_detail-mini_view .poses .pose .time {
-	text-align: right;
-}
 
 
-.course_detail-mini_view .btn .time {
-	width: 300px;
-	margin-bottom: 15px;
-	display: flex;
-	align-items: flex-end;
-	justify-content: flex-end;
-	text-align: right;
-}
-
-.course_detail-mini_view .btn #btn_to_start {
-	all: unset;
-	cursor: pointer;
-	border-radius: 10px;
-	font-size: 15px;
-	background-color: var(--theme-color);
-	width: 50%;
-	height: 25px;
-	box-shadow: var(--light-shadow);
-	text-align: center;
-	width: 150px;
-	height: 40px;
-}
-
-.course_detail-mini_view .btn #btn_to_start:active {
-	transform: scale(0.97);
-}
 
 .course_detail-fourth_section {
 	display: flex;

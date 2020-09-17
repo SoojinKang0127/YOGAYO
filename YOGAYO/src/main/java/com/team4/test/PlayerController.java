@@ -226,13 +226,14 @@ public class PlayerController implements R {
 	}
 
 	@RequestMapping(value = "/likeCourse", method = RequestMethod.POST)
-	public void likeCourse(HttpServletResponse res, @RequestParam("uNum") int uNum,
+	public void likeCourse(HttpServletResponse res,HttpServletRequest req, @RequestParam("uNum") int uNum,
 			@RequestParam("crsNum") int crsNum) {
 		LikeServiceImpl lservice = new LikeServiceImpl();
 		LikeVo lvo = new LikeVo();
 		lvo.setuNum(uNum);
 		lvo.setCrsNum(crsNum);
 		int count = 0;
+		uvo = (UserVo) req.getSession().getValue("user");
 		HashSet<String> userkeyword = new HashSet<String>();
 		BasicDBObject field = new BasicDBObject("keyword", 1);
 		BasicDBObject userQuery = new BasicDBObject();
