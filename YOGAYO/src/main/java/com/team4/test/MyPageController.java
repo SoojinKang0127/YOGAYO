@@ -19,6 +19,7 @@ import com.team4.user.dao.UserDAO;
 import com.team4.user.dao.UserDAOImpl;
 import com.team4.user.dao.UserService;
 import com.team4.user.dao.UserServiceImpl;
+import com.team4.util.UserAuthCheck;
 import com.team4.vo.CourseVo;
 import com.team4.vo.FeedVo;
 import com.team4.vo.UserVo;
@@ -26,15 +27,14 @@ import com.team4.vo.UserVo;
 @Controller
 public class MyPageController {
 	
-	UserServiceImpl service = new UserServiceImpl();
-	UserDAO dao = new UserDAOImpl();
-	UserVo vo = new UserVo();
-	FeedVo fvo = new FeedVo();
-	CourseVo cvo = new CourseVo();
 	
 	@RequestMapping(value="/myPage", method = RequestMethod.GET)
 	public String myPage(Model model,HttpServletRequest req, HttpServletResponse res) 
 			 {
+		UserAuthCheck.loginCheck(req, res, model);
+		model.addAttribute("user",(UserVo)req.getSession().getAttribute("user"));
+		UserServiceImpl service = new UserServiceImpl();
+		UserVo vo = new UserVo();
 		HttpSession session = req.getSession();
 		UserVo user = (UserVo)session.getValue("user");
 		int uNum = user.getuNum();
