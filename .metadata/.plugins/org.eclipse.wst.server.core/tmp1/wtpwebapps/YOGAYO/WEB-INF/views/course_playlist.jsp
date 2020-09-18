@@ -19,7 +19,7 @@
 </head>
 
 <body>
-	<header></header>
+	<jsp:include page="header/header_black.jsp" />
 	<main>
 	<div id="mypage_container">
 		<div id="s1_container">
@@ -90,7 +90,7 @@
 	</div>
 	</form>
 	</main>
-	<footer> </footer>
+	<jsp:include page="footer/footer_white.jsp" />
 	<script>
 		
 	</script>
