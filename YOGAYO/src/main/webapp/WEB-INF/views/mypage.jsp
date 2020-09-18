@@ -11,8 +11,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YOGAYO | MY PAGE</title>
-  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/mypage.css" />
-  <script type="text/javascript"
+<link rel="stylesheet" type="text/css"   href="${pageContext.request.contextPath}/resources/css/mypage.css" media="all and (min-width:600px) and (max-width:2000px)">
+ <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/mypage_mobile.css" media="all and (min-width:400px) and (max-width:599px)">
+   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&display=swap" rel="stylesheet" />
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
@@ -59,12 +60,18 @@
             </div>
           </div>
           <div class="weight">
-            <div class="cWeight_title">현재몸무게</div>
-            <div class="cWeight_value">${cWeight}kg</div>
-            <div class="tWeight_title">이번달 감량 몸무게</div>
-            <div class="tWeight_value">${tWeight}kg</div>
-            <div class="lWeight_title">지난달 감량 몸무게</div>
-            <div class="lWeight_value">${lWeight}kg</div>
+            <div class="w1">
+              <div class="cWeight_title">현재몸무게</div>
+              <div class="cWeight_value">${cWeight}kg</div>
+            </div>
+            <div class="w2">
+              <div class="tWeight_title">이번달 감량 몸무게</div>
+              <div class="tWeight_value">${tWeight}kg</div>
+            </div>
+            <div class="w3">
+              <div class="lWeight_title">지난달 감량 몸무게</div>
+              <div class="lWeight_value">${lWeight}kg</div>
+            </div>
             <div class="btns">
               <a href="${pageContext.request.contextPath}/update">
                 <div class="btn1" style='cursor:pointer;'>정보수정</div>
@@ -130,6 +137,13 @@
                 </div>
               </a>
             </c:forEach>
+            <div class="feed3_content">
+              <div class="feed3_info">
+                <div class="img_wrapper3"><img class="feed3_img" alt="사진없음"
+                    src="${pageContext.request.contextPath}/resources/image/course/yoga.jpg"></div>
+                <div class="feed3_title">테스트입니다.</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

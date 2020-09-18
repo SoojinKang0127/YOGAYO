@@ -1,14 +1,12 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=master
 applyBackground=false
-approved.defs.file.last.changed.time=1594835793000
+approved.defs.file.last.changed.time=1599254320000
 configurationInstallLocation=/Applications/Eclipse.app/Contents/Eclipse/
 eclipse.preferences.version=1
 iconcolormode=primary
-<<<<<<< HEAD
-last.download.attempt.time=1599017775351
-lastConfiguration=1598931360476
-=======
-last.download.attempt.time=1598327918920
-lastConfiguration=1598402306218
->>>>>>> master
+last.download.attempt.time=1600391360366
+lastConfiguration=1600045612822
 newinstall=true
 workbench.theme=Dark Gray
