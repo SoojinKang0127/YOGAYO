@@ -17,14 +17,15 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script language=JavaScript
 	src="${pageContext.request.contextPath}/resources/js/dictionary.js"></script>
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/dictionary.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/dictionary.css" media="all and (min-width:600px) and (max-width:2000px)">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/dictionary_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
 </head>
 
 <body>
     <jsp:include page="header/header_black.jsp" />
-
-
+    <header>
+    <div class="mobile_header"></div>
+    </header>
     <main>
         <section id='section1'>
             <div class='s1_content'>
@@ -40,9 +41,9 @@
                         </div>
 
                     <div class='list_wrap'>
-                        <ul id='list1'>
+                        <div id='list1'>
                         <c:forEach var="i" items="${pose}">
-                            <li class='s1_content_row1'>
+                            <div class='s1_content_row1'>
                                 <div class='row1_wrap'>
                                     <div class='row1_img'>
                                         <span>
@@ -53,25 +54,20 @@
                                     <div class='row1_text'>
                                         <div class='text_gap'>
                                             <h2 class='pose_title'>${i.title}</h2>
-                                            <p class='pose_tips'></p>
-                                            
-                                            <br />
-                                            
                                             <p class='pose_benefit'></p>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
+                            </div>
                             </a>
                         </c:forEach>
-                        </ul>
-</div>
+                        </div>
+					</div>
 
                     </div>
                 </div>
             </div>
         </section>
-
 
     </main>
     <jsp:include page="footer/footer_white.jsp" />

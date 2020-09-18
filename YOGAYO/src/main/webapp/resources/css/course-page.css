@@ -166,7 +166,7 @@ main {
 	background-color: white;
 	border: 1px solid black;
 	margin-bottom: 50px;
-	box-shadow: var(- -light-shadow);
+	box-shadow: var(--light-shadow);
 }
 
 .img_wrapper{
