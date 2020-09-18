@@ -175,13 +175,11 @@ header {
 			<div class="admin">Admin</div>
 		</div>
 		<ul class="menu_list">
-			<a href="/test/admin/"><li class="menu	">통계</li></a>
+			<a href="/test/admin/"><li class="menu	">대시보드</li></a>
 			<a href="/test/admin/member"><li class="menu ">회원 관리</li></a>
-			<a href="/test/admin/comment"><li class="menu">코멘트 관리</li></a>
+			<a href="/test/admin/comment"><li class="menu">댓글 관리</li></a>
 			<a href="/test/admin/newsletter"><li class="menu">뉴스레터 전송</li></a>
 			<a href="/test/admin/course"><li class="menu">코스 관리</li></a>
-			<li class="menu">포즈 관리</li>
-			<li class="menu">포즈 관리</li>
 			<li class="menu">LOG OUT</li>
 		</ul>
 	</header>

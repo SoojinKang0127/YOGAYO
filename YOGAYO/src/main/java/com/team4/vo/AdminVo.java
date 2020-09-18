@@ -11,7 +11,21 @@ public class AdminVo {
 	String context;
 	int parent;
 	int cmtNum;
+	String id;
+	String statement;
 	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getStatement() {
+		return statement;
+	}
+	public void setStatement(String statement) {
+		this.statement = statement;
+	}
 	String img;
 	String name;
 	

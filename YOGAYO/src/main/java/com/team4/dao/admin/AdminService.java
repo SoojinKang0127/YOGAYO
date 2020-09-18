@@ -13,4 +13,8 @@ public interface AdminService {
 	public AdminVo getOneCourseByCrsnum(AdminVo vo) throws Exception;
 	public void courseUpdate(AdminVo vo) throws Exception;
 	public List<UserVo> selectAllUser() throws Exception;
+	public int getLastUnum() throws Exception;
+	public void subscribeNewsletter(AdminVo vo) throws Exception;
+	public List<AdminVo> selectAllNewsletterSubscriber() throws Exception;
+	public int countAllSubscriber() throws Exception;
 }

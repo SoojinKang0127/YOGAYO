@@ -1,4 +1,4 @@
-@import url("reset.css");
+@import url("style.css");
 
 body {
 	width: 100vw;
@@ -146,30 +146,116 @@ main {
 	align-items: center;
 }
 
-.btnMenu{
+main .pose_section {
+	width: 280px;
+	height: 420px;
+	position: fixed;
+	right: 35px;
+	top: 446px;
+	box-shadow: var(--light-shadow);
+	display: flex;
+	/* justify-content: center; */
+	flex-direction: column;
+	border: 1px solid lightgrey;
+}
+
+.pose_section .pose_section_wrapper {
+	width: 100%;
+	height: 400px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	padding: 15px 10px 10px 10px;
+}
+
+.pose_img {
+	background-position-x: center;
+	width: 250px;
+	height: 370px;
+	background-size: cover;
+	background-image:
+		url("https://blobs.ekhartyoga.com/mediauploads/ekhartyoga.com/public_html/img/cache/media_64126_widen_1000_100-Forearm%20Balance%20Pincha%20Mayurasana%20Esther%20Ekhart.jpg");
+	width: 250px;
+}
+
+.pose_section_title {
+	font-size: 18px;
+	margin-bottom: 15px;
+	text-align: center;
+	line-height: 20px;
+}
+
+.pose_desc_wrapper {
+	width: 250px;
+	height: 80px;
+	margin-top: 15px;
+}
+
+.pose_desc_wrapper ul {
+	display: flex;
+	justify-content: center;
+}
+
+.pose_desc_wrapper ul li {
+	border-left: 2px solid lightgrey; 
+	height: 55px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	width: 75px;
+}
+
+.pose_desc_wrapper ul li:nth-child(1){
+	border-left: none; 
+}
+
+.pose_th {
+	font-size: 11px;
+	opacity: 0.5;
+}
+
+.pose_desc_wrapper .value{
+	font-size: 18px;
+}
+
+
+
+.member_title {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 27px;
+}
+
+.underline {
+	border-bottom: 10px solid #febe2e;
+	display: inline-block;
+	line-height: 0.27;
+}
+
+.btnMenu {
 	display: flex;
 	margin-bottom: 50px;
 }
 
-
-.create_btn, .admin_btn, .member_btn{
+.create_btn, .admin_btn, .member_btn {
 	border: 1px solid black;
 	padding: 20px 30px 20px 30px;
-	display:flex;
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin:10px;
-	
+	margin: 10px;
 }
-
-
 
 .wrapper {
 	width: 1200px;
 	display: grid;
 	grid-template-columns: 100px;
 	margin-bottom: 30px;
- 	grid-gap: 1px; 
+	grid-gap: 1px;
 }
 
 .wrapper div {
@@ -182,29 +268,27 @@ main {
 
 .th {
 	color: #979797;
-	width:100px;
+	width: 100px;
 }
-
 
 .courseNum_ {
 	grid-column: 1/2;
-	width:100px;
+	width: 100px;
 }
 
 .createdBy_ {
 	grid-column: 2/3;
-	width:100px;
+	width: 100px;
 }
 
 .title_ {
 	grid-column: 3/7;
-	width:403px;
+	width: 403px;
 }
 
 .desc_ {
 	grid-column: 7/12;
-	width:504px;
-
+	width: 504px;
 }
 
 .modify_ {
@@ -212,48 +296,51 @@ main {
 	grid-column: 12/13;
 	background-color: black;
 	color: white;
-	width:100px;
+	width: 100px;
 	transition: 0.1s all ease-in-out;
-	cursor:pointer;
+	cursor: pointer;
 }
 
-.modify_:hover{
+.modify_:hover {
 	background-color: #febe2e;
-	
 }
-
 
 .courseNum {
 	grid-column: 1/2;
 	grid-row: 2/5;
-	width:100px;
+	width: 100px;
 }
 
 .createdBy {
 	grid-column: 2/3;
-	width:100px;
+	width: 100px;
 }
 
 .title {
 	grid-column: 3/7;
-	width:403px;
+	width: 403px;
 }
 
 .desc {
 	grid-column: 7/12;
-	width:504px;
-	
+	width: 504px;
 }
 
 .metarial_ {
 	grid-column: 2/3;
-	width:100px;
+	width: 100px;
 }
 
 .imgPath {
 	grid-column: 3/4;
-	width:100px;
+	width: 100px;
 }
 
+.seq{
+	cursor:pointer;
+	
+}
 
-
+.seq:hover{
+	background-color:#c6e0ff;
+}

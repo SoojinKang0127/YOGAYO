@@ -52,6 +52,20 @@
 		WHERE CRSNUM = #{crsNum};
 	</update>
 	
+	<select id="getLastUnum" resultType="int">
+		SELECT MAX(UNUM) FROM USER
+	</select>
 	
+	<insert id="subscribeNewsletter" parameterType="AdminVo">
+		INSERT INTO NEWSLETTER(UNUM, NAME, ID, STATEMENT) VALUES(#{uNum}, #{name}, #{id}, 'Y'); 
+	</insert>
+	
+	<select id="selectAllNewsletterSubscriber" resultType="AdminVo">
+		SELECT * FROM NEWSLETTER;
+	</select>
+	
+	<select id="countAllSubscriber" resultType="int">
+		SELECT COUNT(*) FROM NEWSLETTER;
+	</select>
 
 </mapper>

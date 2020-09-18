@@ -50,6 +50,27 @@ public class AdminDAOImpl implements AdminDAO{
 		
 		return mybatis.selectList("UserDao.selectAllUser");
 	}
+
+	@Override
+	public int getLastUnum() throws Exception {
+		return mybatis.selectOne("AdminDAO.getLastUnum");
+	}
+
+	@Override
+	public void subscribeNewsletter(AdminVo vo) throws Exception {
+		mybatis.insert("AdminDAO.subscribeNewsletter", vo);
+		mybatis.commit();
+	}
+
+	@Override
+	public List<AdminVo> selectAllNewsletterSubscriber() throws Exception {
+		return mybatis.selectList("AdminDAO.selectAllNewsletterSubscriber");
+	}
+
+	@Override
+	public int countAllSubscriber() throws Exception {
+		return mybatis.selectOne("AdminDAO.countAllSubscriber");
+	}
 	
 	
 	

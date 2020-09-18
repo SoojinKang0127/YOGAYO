@@ -23,11 +23,11 @@ public class SendNewsLetter {
 		props.put("defaultEncoding", "utf-8");
 		props.put("mail.smtp.auth", "true");
 
-		final String userId = "iamhajaml";
-		final String userPw = "";
+		final String userId = "yogayo_newsletter";
+		final String userPw = "team4team4";
 
 		try {
-			String sender = "iamhajaml@naver.com"; // 보내는사람 메일주소. ex) mailSender@naver.com
+			String sender = "yogayo_newsletter@naver.com"; // 보내는사람 메일주소. ex) mailSender@naver.com
 			//String subject = "메일 테스트"; // 메일 제목
 			//String body = "<h1>메일 테스트</h1>"; // 메일 본문
 
@@ -77,11 +77,11 @@ public class SendNewsLetter {
 		props.put("defaultEncoding", "utf-8");
 		props.put("mail.smtp.auth", "true");
 
-		final String userId = "iamhajaml";
-		final String userPw = "";
+		final String userId = "yogayo_newsletter";
+		final String userPw = "team4team4";
 
 		try {
-			String sender = "iamhajaml@naver.com"; // 보내는사람 메일주소. ex) mailSender@naver.com
+			String sender = "yogayo_newsletter@naver.com"; // 보내는사람 메일주소. ex) mailSender@naver.com
 			String subject = "메일 테스트"; // 메일 제목
 			String body = "<h1>메일 테스트</h1>"; // 메일 본문
 
@@ -101,7 +101,7 @@ public class SendNewsLetter {
 			// 받는 사람 이메일주소 세팅
 			InternetAddress[] toAddr = new InternetAddress[2];
 			toAddr[0] = new InternetAddress("iamhajaml@naver.com");
-			toAddr[1] = new InternetAddress("utiful2004@hotmail.com");		
+			toAddr[1] = new InternetAddress("dp1012@naver.com");		
 			
 			mimeMessage.setRecipients(Message.RecipientType.TO, toAddr); // 수신자 셋팅
 

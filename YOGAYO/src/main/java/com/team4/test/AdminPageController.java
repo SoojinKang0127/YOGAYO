@@ -3,6 +3,10 @@ package com.team4.test;
 import java.util.List;
 import java.util.Locale;
 
+import javax.mail.internet.InternetAddress;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -126,7 +130,7 @@ public class AdminPageController {
 		
 
 		AdminServiceImpl service = new AdminServiceImpl();
-		List<UserVo> list = service.selectAllUser();
+		List<AdminVo> list = service.selectAllNewsletterSubscriber();
 		model.addAttribute("userList", list);
 		
 	
@@ -135,10 +139,55 @@ public class AdminPageController {
 	
 	
 	@RequestMapping(value = "/admin/sendnewsletter", method = RequestMethod.GET)
-	public String sendNewsLetter(Model model) throws Exception {
+	public String sendNewsLetter(Model model, @RequestParam("subject") String subject, @RequestParam("context") String context) throws Exception {
 		
 		
+		System.out.println("메일 제목 => " + subject);
+		System.out.println("메일 내용 => " + context);
+		
+		AdminServiceImpl service = new AdminServiceImpl();
+		List<AdminVo> arrList = service.selectAllNewsletterSubscriber();
+		
+		int subNum = service.countAllSubscriber();
+		InternetAddress[] toAddr = new InternetAddress[subNum];
+		
+		for(int i=0; i<arrList.size();i++) {
+			toAddr[i] = new InternetAddress(arrList.get(i).getId());
+		}
+		
+		SendNewsLetter email = new SendNewsLetter();
+		
+		email.sendNewsLetter(subject, context, toAddr);
+		
+		return "redirect:/admin/newsletter";
+	};
 	
-		return "/admin/admin-member";
+	@RequestMapping(value = "/main/subscribe", method = RequestMethod.GET)
+	public String subscribeNewsletter(Model model, HttpServletRequest req) throws Exception {
+		
+		AdminServiceImpl service = new AdminServiceImpl();
+		
+		HttpSession session = req.getSession();
+		UserVo user = (UserVo) session.getValue("user");
+		
+		int uNum = user.getuNum();
+		String name = user.getName();
+		String id = user.getId();
+		
+		AdminVo vo = new AdminVo();
+		
+		vo.setuNum(uNum);
+		vo.setName(name);
+		vo.setId(id);
+		
+		try {
+			service.subscribeNewsletter(vo);
+			System.out.println("뉴스레터 구독 성공");
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("ERR! 구독 실패");
+		}
+		
+		return "redirect:/main";
 	};
 }

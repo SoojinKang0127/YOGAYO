@@ -16,6 +16,9 @@
 		<jsp:include page="admin-header.jsp" />
 	</header>
 	<main>
+		<div class="member_title">
+			<span class="underline">댓글과 대댓글 목록</span>
+		</div>
 		<div class="search_container">
 			<input type="button" id="filter" value="비속어 포함 댓글 검색"> <input
 				type="text" id="search" placeholder="키워드로 검색">

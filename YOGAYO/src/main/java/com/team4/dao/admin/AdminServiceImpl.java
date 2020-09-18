@@ -43,5 +43,29 @@ public class AdminServiceImpl implements AdminService {
 		return dao.selectAllUser();
 	}
 
+
+	@Override
+	public int getLastUnum() throws Exception {
+		return dao.getLastUnum();
+	}
+
+
+	@Override
+	public void subscribeNewsletter(AdminVo vo) throws Exception {
+		dao.subscribeNewsletter(vo);
+	}
+
+
+	@Override
+	public List<AdminVo> selectAllNewsletterSubscriber() throws Exception {
+		return dao.selectAllNewsletterSubscriber();
+	}
+
+
+	@Override
+	public int countAllSubscriber() throws Exception {
+		return dao.countAllSubscriber();
+	}
+
 	 
 }

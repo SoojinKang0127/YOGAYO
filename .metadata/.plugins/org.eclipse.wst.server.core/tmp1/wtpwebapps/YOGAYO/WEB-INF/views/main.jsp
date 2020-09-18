@@ -10,25 +10,31 @@
 	crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/main.css">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-	
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
+	rel="stylesheet">
+
 </head>
 <body>
 	<header class="header">
 		<div class="main-status_bar">
 			<div class="main-logo_wrapper">
-				<a href="main_page.html"> 
+				<a href="main_page.html">
 					<div class="logo-wrapper">
-					<span>YOGAYO</span>
+						<span>YOGAYO</span>
 						<div class="box-div"></div>
 					</div>
 				</a>
 			</div>
 			<div class="main-status_categories">
-				<span class="recommand"><a href="${pageContext.request.contextPath}/main">추천</a></span> 
-				<span class="course"><a href="${pageContext.request.contextPath}/course-page">코스</a></span>
-				<span class="dictionary"><a href="${pageContext.request.contextPath}/my-page">자세 사전</a></span> 
-				<span class="my_page"><a href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
+				<span class="recommand"><a
+					href="${pageContext.request.contextPath}/main">추천</a></span> <span
+					class="course"><a
+					href="${pageContext.request.contextPath}/course-page">코스</a></span> <span
+					class="dictionary"><a
+					href="${pageContext.request.contextPath}/my-page">자세 사전</a></span> <span
+					class="my_page"><a
+					href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
 			</div>
 			<div class="main-profile">
 				<div class="welcome_user">안녕하세요. ${user.name}님</div>
@@ -194,6 +200,15 @@
 				</div>
 			</div>
 		</div>
+		<div class="newsletter_section">
+			<div class="newsletter">
+				<div class="first">YOGAYO NEWSLETTER</div>
+				<div class="second">
+					요가요 뉴스레터 구독 신청하고 최신 소식과 여러 혜택을 만나보세요! <i
+						class="fas fa-arrow-circle-right" id="arrow"></i>
+				</div>
+			</div>
+		</div>
 		<footer class="footer">
 			<div class="main-footer_right">
 				<i class="far fa-copyright"></i> 2020 Team4,Inc.All rights reserved
@@ -208,9 +223,27 @@
 				</ul>
 			</div>
 		</footer>
+		<div class="newsletter_modal hiding" id="newsletter_modal">
+			<div class="temp">
+				<div class="pop_up">
+					<i class="far fa-envelope"></i>
+					<span class="title">YOGAYO NEWSLETTER</span>
+					<span class="sentence">${user.name}님, 뉴스레터를 구독하고<br>
+					YOGAYO에서 제공하는 최신 정보와<br> 회원님에게 딱 맞는 요가 코스 추천을<br>받아보시겠어요? :)</span>
+					<span class="email">${user.id} 로 메일 수신 동의</span>
+					<div class="btn_area">
+						<div class="no_btn" id="no_btn" >아니요</div>
+						<div class="yes_btn" id="yes_btn">네</div>
+					</div>
+				</div>
+				<div class="black_back"></div>
+			</div>
+		</div>
 	</main>
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script language=JavaScript
 		src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+	<script language=JavaScript
+		src="${pageContext.request.contextPath}/resources/js/main_newsletter.js"></script>
 </body>
 </html>

@@ -15,7 +15,9 @@
 		<jsp:include page="admin-header.jsp" />
 	</header>
 	<main>
-		<div class="member_title"><span class="underline">뉴스레터 수신 동의 회원 목록</span></div>
+		<div class="member_title">
+			<span class="underline">뉴스레터 수신 동의 회원 목록</span>
+		</div>
 		<div class="member_table_wrapper">
 			<div class="member_table">
 				<ul>
@@ -38,31 +40,41 @@
 				</ul>
 			</div>
 		</div>
-		<div class="mail_content_wrapper">
-			<div class="sender">
-				<div class="mail_sender name">보내는 주소</div>
-				<div class="mail_sender_input">
-					<input type="text" value="yogayo@naver.com" name="sender"
-						id="sender">
+		<form action="sendnewsletter" method="GET" id="form">
+			<div class="mail_content_wrapper">
+				<div class="sender">
+					<div class="mail_sender name">보내는 주소</div>
+					<div class="mail_sender_input">
+						<input type="text" value="yogayo_newsletter@naver.com" name="sender"
+							id="sender">
+					</div>
+				</div>
+				<div class="title">
+					<div class="mail_title name">메일 제목</div>
+					<div class="mail_title_input">
+						<input type="text" placeholder="이곳에 제목을 입력하세요. 예) YOGAYO 10월 새소식!"
+							name="subject" id="title">
+					</div>
+				</div>
+				<div class="content">
+					<div class="mail_sender name">메일 내용</div>
+					<div class="mail_sender_input">
+						<textarea name="context" rows="" cols="" class="body"></textarea>
+						<!-- <input type="text" placeholder="" name="sender" id="sender"> -->
+					</div>
 				</div>
 			</div>
-			<div class="title">
-				<div class="mail_title name">메일 제목</div>
-				<div class="mail_title_input">
-					<input type="text" placeholder="이곳에 제목을 입력하세요. 예) YOGAYO 10월 새소식!"
-						name="title" id="title">
-				</div>
-			</div>
-			<div class="content">
-				<div class="mail_sender name">메일 내용</div>
-				<div class="mail_sender_input">
-					<textarea rows="" cols="" class="body">이곳에 메일 내용이 들어갑니다앙</textarea>
-					<!-- <input type="text" placeholder="" name="sender" id="sender"> -->
-				</div>
-			</div>
-		</div>
-		<div class="submit_btn">전송하기!</div>
-
+			<input type="submit" class="submit_btn" onclick="submit();" value="전송하기!">
+		</form>
 	</main>
+	<script type="text/javascript">
+		var 
+	
+		function submit() {
+
+			location.href = "/test/admin/sendnewsletter"
+
+		}
+	</script>
 </body>
 </html>

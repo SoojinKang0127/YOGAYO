@@ -129,10 +129,10 @@ public class UserDAOImpl implements UserDAO {
 	public String thismonth() {
 		return mybatis.selectOne("MyPage.thismonth");
 	}
+		
 	public int getUNum(UserVo vo) {
-		return mybatis.selectOne("MyPage.getUnum",vo);
+		return mybatis.selectOne("UserDao.getUnum",vo);
 	}
-
 
 	@Override
 	public int thisdate() {
