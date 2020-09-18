@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-        webView.loadUrl("http://192.168.219.149:8080/test/");
+        webView.loadUrl("http://192.168.219.133:8088/test/");
         // 192.168.219.149 를 자기 ip주소로 변경해주세요!
         webView.setWebViewClient(new WebViewClient());
     }
