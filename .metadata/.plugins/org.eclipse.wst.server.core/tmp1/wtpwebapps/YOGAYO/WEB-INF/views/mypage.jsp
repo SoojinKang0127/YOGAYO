@@ -10,8 +10,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>YOGAYO | MY PAGE</title>
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/mypage.css" />
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/mypage.css" media="all and (min-width:600px) and (max-width:2000px)">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/mypage_mobile.css" media="all and (min-width:400px) and (max-width:599px)">
 <script type="text/javascript"
 	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
 <link
@@ -44,30 +44,8 @@
     </script>
   </head>
   <body>
-     <header class="header">
-      <div class="main-status_bar">
-         <div class="main-logo_wrapper">
-            <a href="main_page.html"> 
-               <div class="logo-wrapper">
-               <span>YOGAYO</span>
-                  <div class="box-div"></div>
-               </div>
-            </a>
-         </div>
-         <div class="main-status_categories">
-            <span class="recommand"><a href="${pageContext.request.contextPath}/main">추천</a></span> 
-            <span class="course"><a href="${pageContext.request.contextPath}/course-page">코스</a></span>
-            <span class="dictionary"><a href="${pageContext.request.contextPath}/my-page">자세 사전</a></span> 
-            <span class="my_page"><a href="${pageContext.request.contextPath}/my-page">마이 페이지</a></span>
-         </div>
-         <div class="main-profile">
-            <div class="welcome_user">안녕하세요. ${user.name}님</div>
-            <a href="myPage"><img
-               src="${pageContext.request.contextPath}/${user.img}"
-               class="profile_img" /></a>
-         </div>
-      </div>
-   </header>
+    <header class="header">
+    </header>
     <main>
       <div id="content">
         <div class="content_1">
@@ -85,12 +63,18 @@
               </div>
             </div>
             <div class="weight">
-              <div class="cWeight_title">현재몸무게</div>
-              <div class="cWeight_value">${cWeight}kg</div>
-              <div class="tWeight_title">이번달 감량 몸무게</div>
-              <div class="tWeight_value">${tWeight}kg</div>
-              <div class="lWeight_title">지난달 감량 몸무게</div>
-              <div class="lWeight_value">${lWeight}kg</div>
+              <div class="w1">
+                <div class="cWeight_title">현재몸무게</div>
+                <div class="cWeight_value">${cWeight}kg</div>
+              </div>
+              <div class="w2">
+                <div class="tWeight_title">이번달 감량 몸무게</div>
+                <div class="tWeight_value">${tWeight}kg</div>
+              </div>
+              <div class="w3">
+                <div class="lWeight_title">지난달 감량 몸무게</div>
+                <div class="lWeight_value">${lWeight}kg</div>
+              </div>
               <div class="btns">
                 <div class="btn1">정보수정</div>
                 <div class="btn2">코스추가</div>
@@ -145,6 +129,12 @@
                 </div>
               </div>
              </c:forEach>
+             <div class="feed3_content">
+                <div class="feed3_info">
+                  <img class="feed3_img" alt="사진없음" src="/test/resources/image/course/yoga.jpg">
+                  <div class="feed3_title">월경에 좋은 요가</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
