@@ -5,12 +5,15 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>YOGAYO 회원가입</title>
-	<script src="https://kit.fontawesome.com/ae58912594.js" crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/update.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>YOGAYO 회원가입</title>
+<script src="https://kit.fontawesome.com/ae58912594.js"
+	crossorigin="anonymous"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css"   href="${pageContext.request.contextPath}/resources/css/update.css" media="all and (min-width:600px) and (max-width:2000px)">
+ <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/update_mobile.css" media="all and (min-width:400px) and (max-width:599px)">
 </head>
 
 <body>

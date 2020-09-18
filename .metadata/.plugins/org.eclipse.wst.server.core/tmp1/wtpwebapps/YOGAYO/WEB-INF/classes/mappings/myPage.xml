@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-  <mapper namespace="UserDao">
+  <mapper namespace="MyPage">
   
   	<select id="tWeight1" resultType="int">
   	
@@ -143,6 +143,71 @@
   		]]>
   	</select>
   	
+  		<select id="count1week2" resultType="int">
+  	<![CDATA[ 
+		SELECT 
+			COUNT(LNUM)
+		FROM
+			LIKEY L
+		JOIN
+			USER U
+		WHERE
+			U.UNUM=#{uNum}
+		AND
+			NOW() - INTERVAL 1 WEEK < L.REGDATE
+  		]]>
+  	</select>
+  	
+  	<select id="count2week2" resultType="int">
+  	<![CDATA[ 
+		SELECT 
+			COUNT(LNUM)
+		FROM
+			LIKEY L
+		JOIN
+			USER U
+		WHERE
+			U.UNUM=#{uNum}
+		AND
+			NOW() - INTERVAL 1 WEEK >L.REGDATE
+		AND
+			NOW() - INTERVAL 2 WEEK < L.REGDATE;
+  		]]>
+  	</select>
+  	
+  	<select id="count3week2" resultType="int">
+  	<![CDATA[ 
+		SELECT 
+			COUNT(LNUM)
+		FROM
+			LIKEY L
+		JOIN
+			USER U
+		WHERE
+			U.UNUM=#{uNum}
+		AND
+			NOW() - INTERVAL 2 WEEK > L.REGDATE
+		AND
+			NOW() - INTERVAL 3 WEEK < L.REGDATE;
+  		]]>
+  	</select>
+  	
+  	<select id="count4week2" resultType="int">
+  	<![CDATA[ 
+		SELECT 
+			COUNT(LNUM)
+		FROM
+			LIKEY L
+		JOIN
+			USER U
+		WHERE
+			U.UNUM=#{uNum}
+		AND
+			NOW() - INTERVAL 3 WEEK > L.REGDATE
+		AND
+			NOW() - INTERVAL 4 WEEK < L.REGDATE;
+  		]]>
+  	</select>
   	
   	
   	<select id="review" resultType="UserVo">
@@ -156,15 +221,15 @@
   	
   	<select id="selectAll" resultType="FeedVo">
   		SELECT
-  			*
-  		FROM
-  			FEED f
-  		JOIN
-  			USER u
-  		ON
-  			(f.UNUM = u.UNUM)
-  		WHERE
-  			u.UNUM=#{uNum}
+			*
+		FROM
+			FEED F
+		JOIN
+			COURSE C
+		ON
+			(C.CRSNUM = F.CRSNUM)
+		WHERE
+			F.UNUM = #{uNum};
   			
   	</select>
   	
@@ -207,6 +272,19 @@
   	<select id="crsTitle">
   		SELECT
   		
+  	</select>
+  	
+  	<select id="allLikey" resultType="CourseVo">
+  		SELECT
+			*
+		FROM
+			COURSE C
+		JOIN
+			LIKEY L
+		ON
+			(C.CRSNUM = L.CRSNUM)
+		WHERE
+			C.UNUM = #{uNum};
   	</select>
   
   	
