@@ -132,19 +132,12 @@
 
 				<!--------------- 두번째 세션-------------->
 
-				<!-- -----------------세번째 세션 ------------->
 			</div>
 		</div>
+				<!-- -----------------세번째 세션 ------------->
 		<div class="up-on-scroll">
 			<div class="main-third_container">
-
-
-
-
-
-
-
-
+			
 					<div class="main-third_bg up-on-scroll">
 						<div class="main-latest_title_section">
 							<div class="main-latest_courses_title">새로 올라온 코스</div>
@@ -153,21 +146,12 @@
 							</div>
 						</div>
 						<div class="main-to_course_btn_section">
-							
 								<button id="main-to_course_btn"><a href="${pageContext.request.contextPath}/course-page">모두 둘러보기</a></button>
-							
 						</div>
 					</div>
 			
-			
-
-
-
-
-
-
-
 				<div class="main-latest_sections">
+				
 					<div class="up-on-scroll">
 						<div class="main-latest_section">
 							<img
@@ -178,7 +162,9 @@
 							</div>
 						</div>
 					</div>
+					
 					<div class="main-latest_section2">
+					
 						<div class="main-latest_section2-1">
 							<div class="main-small_latest_courses">
 								<div class="up-on-scroll">
@@ -203,6 +189,7 @@
 								</div>
 							</div>
 						</div>
+						
 						<div class="up-on-scroll">
 							<div class="main-latest_section2-2">
 								<div class="main-latest">
@@ -215,8 +202,11 @@
 								</div>
 							</div>
 						</div>
+						
 					</div>
+					
 				</div>
+				
 			</div>
 		</div>
 		<footer class="footer">

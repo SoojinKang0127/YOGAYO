@@ -22,7 +22,7 @@ main {
 }
 
 .header {
-  display: none;
+  display: none;/
 }
 
 
@@ -212,71 +212,99 @@ main {
 
 /* --------------------두번째 세션--------------------- */
 .main-second_bg {
-  border: 2px solid springgreen;
-  margin-top: 70px;
+  /* border: 2px solid springgreen; */
+  height: 300px;
   display: flex;
   flex-direction: row;
   /* justify-content: center;  */
   /* width: 300%; */
   overflow-x: scroll;
   overflow-y: unset;
+  scrollbar-width: none;
 }
-.main-second_bg ::-webkit-scrollbar{
+
+.main-second_bg::-webkit-scrollbar{
   display: none;
 }
 
+.main-second_container .up-on-scroll {
+   
+}
 
 .main-second_container img {
-  width: 411px;
+  height:80%;
+  border-radius: 12px 12px 0px 0px;
 }
 
 .main-recommand {
-  border: 2px solid steelblue;
+  /* border: 2px solid red; */
   box-shadow: var(--light-shadow);
   background-color: white;
   /* margin-left: 20px; */
-  transform: translateY(5rem);
-  animation: up 500ms linear forwards;
-  width: 100%;
+  /* transform: translateY(5rem); */
+  /* animation: up 500ms linear forwards; */
+  width: 70%;
+  height: 80%;
+  margin-left: 20px;
+  margin-top: 30px;
+  border-radius: 12px;
 }
 
 
+.main-recommand .main-first_course{
+  padding: 10px 10px 0px 20px ;
+  height: 20%;
+  width: 100%;
+  /* border: 2px solid red; */
+}
 
-.main-first_course,
 .main-second_course,
 .main-third_course {
-  padding: 10px;
-}
-
-.main-second_course_explain {
-  border: 2px solid tomato;
+  padding: 10px 10px 0px 20px ;
+  height: 20%;
+  width: 100%;
+  /* border: 2px solid red; */
 }
 
 .main-course_title {
-  border: 2px solid violet;
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 10px;
   font-weight: bold;
+  width: 100%;
+  height: 20%;
 }
+
+.main-first_course_explain,
+.main-second_course_explain,
+.main-third_course_explain {
+  display: none;
+}
+
 /* ----------------------두번째 세션------------------ */
 
 
 
 /* ----------------------세번째 세션------------------ */
-.main-third_container {
+
+.main-third_container {       /*-----세번째 세션 전체-------*/
   background-color: black;
   color: white;
-  margin-top: 70px;
+  margin-top: 30px;
   /* display: flex;
   flex-direction: column; */
+  border:1px solid red;
 }
+
+.main-third_container img{       /*----------사진----------*/
+  height:85%;
+  width: 100%;
+} 
 
 .main-third_bg {
   display: flex;
          /* flex-direction: row; */
   justify-content: space-around;
-  padding: 65px 0px 0px 0px;
+  padding: 20px 0px 20px 0px;
   width: 100%;
  /*  border:1px solid white; */
 }
@@ -286,23 +314,22 @@ main {
 }
 
 .main-latest_courses_title {
+	border:1px solid red;
   font-size: 20pt;
-  margin-bottom: 10px;
-  width: 100%
+  margin-top: 3px;
+  width: 100%;
+}
+
+.main-latest_courses_title  p{
+  color: white;
 }
 
 .main-latest_courses_explain{
   display: none;
-  width: 80%;
- 
-}
-
-.main-latest_courses_explain p {
-  width: 100%;
-  line-height: 20px;
 }
 
 .main-to_course_btn_section{
+	border:1px solid red;
 	display: flex;
 	width:30%;
 	height:35px;
@@ -325,91 +352,128 @@ main {
   color: white;
 }
 
-.main-latest_sections {
-  /* justify-content: center; */
-  width: 100%;
-  margin-top: 35px;
-  margin-bottom: 80px;
-  /* padding: 0px 250px 0px 260px; */
+/*//////////////////////////////////////////////////////////////////////////////////*/
+
+
+.main-latest_sections{    /*크게 전체를 감싸는 div*/
+	border:5px solid red;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: unset;
+  scrollbar-width: none;
+  height: 100%;
 }
 
-.main-latest_section {
-  background-color: #222222;
+.main-latest_sections::-webkit-scrollbar{
+  display: none;
+  
 }
 
-.main-latest_section img {
-  width: 100%;
-  height: 285px;
+.main-latest_section2{     /*3개를 감싸는 div*/
+  background-color:black;
+	border:6px solid mediumspringgreen;
+  display:flex;
+  height: 100%;
 }
 
-.main-first_course_title {
-  margin-left: 15px;
-  margin-top: 18px;
-  margin-bottom: 43px;
-}
 
-.main-latest_section2  {
-  /* display: flex; */
+.main-small_latest_courses{    /* 3개중 2개 포함하는 div */
+	border:3px solid lightskyblue;
+	display:flex;
   flex-direction: row;
-  margin-bottom: 17px;
-  justify-content: space-between;
+  height: 80%;
+  box-shadow: var(--light-shadow);
+  background-color:  #222222;
+}
+
+
+
+.main-latest_section{        /*1개만*/
+	border:3px solid orange;
+  width: 300px;
+  overflow:hidden;
+  height: 80%;
+  margin: 20px 20px 0px 25px;
+  box-shadow: var(--light-shadow);
+  border-radius: 12px;
+  background-color:  #222222;
+
+}
+/* ---------------------------제일 큰 틀---------------------------- */
+
+
+
+.main-latest_section .main-first_course {
+  border: 2px solid magenta;
+  width: 100%;
+  height: 0%;
+  padding: 8px 15px 0px 15px ;
+  margin-bottom: 5px;
+}
+
+.main-latest_sections .main-first_course{
+  border: 2px solid magenta;
+  width: 100%;
+  height: 15%;
+  padding: 8px 15px 0px 15px ;
 }
   
-.main-latest_section2 .main-latest_section2-1 img {
+.main-first_course_title {
+  border: 1px solid blue;
   width: 100%;
-  height: 285px;
-} 
-
-.main-small_latest_courses {
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* justify-content: space-between; */
+  height: 100%;
 }
 
-.main-small_latest1,
-.main-samll_latest2 {
-  background-color: #222222;
+
+
+.main-small_latest1{
+	border:1px solid yellow;
+	width: 300px;
+  overflow:hidden;
+  height: 100%;
+  border-radius: 12px;
+  margin: 20px 20px 0px 0px;
 }
 
-.main-small_latest1 {
+.main-samll_latest2{
+	border:1px solid green;
+	width: 300px;
+  overflow:hidden;
+  height: 100%;
+  border-radius: 12px;
+  margin: 20px 20px 0px 0px;
 }
 
-.main-latest_section2 .main-latest_section2-2 {
-  background-color: #222222;
-  width: 100%;
+.main-latest_section2-2 {
+  border:5px solid hotpink;
+  width: 300px;
+  height: 100%;
+  overflow:hidden;
+ 
 }
 
-.main-latest_section2 .main-latest_section2-2 img {
-  width: 100%;
-  height: 300px;
-} 
+.main-latest {
+  border:1px solid salmon;
+  width: 300px;
+  height: 80%;
+  margin: 20px 20px 0px 0px;
+  box-shadow: var(--light-shadow);
+  border-radius: 12px;
+  background-color:  #222222;
+}
+.main-latest img {
+  height: 85%;
+  border-radius: 12px 12px 0px 0px ;
+}
+
+
+
+
+
 /* -----------------세번째 세션--------------------- */
 
 
 
 .footer {
-  width: 100%;
-  height: 70px;
-  display: none;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f7f7f7;
-  padding: 0px 250px 0px 255px;
-  font-size: 11pt;
-}
-
-
-
-.main-footer_right span {
-  margin-left: 5px;
-}
-
-.main-footer_left .main-footer_sns_list {
-  display: flex;
-  font-size: 20px;
-}
-
-.main-footer_left .main-footer_sns_list li {
-  margin-left: 30px;
-}
+ display:none;
+ }
