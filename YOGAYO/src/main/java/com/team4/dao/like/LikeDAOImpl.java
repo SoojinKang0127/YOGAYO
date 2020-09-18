@@ -31,7 +31,7 @@ public class LikeDAOImpl implements LikeDAO {
 
 	@Override
 	public void dislike(LikeVo vo) throws Exception {
-		mybatis.selectList("LikeDAO.dislike", vo);
+		mybatis.delete("LikeDAO.dislike", vo);
 		mybatis.commit();
 
 	}

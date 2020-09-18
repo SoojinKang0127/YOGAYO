@@ -47,6 +47,7 @@ display:none;
 
 }
 </style>
+<script src="https://kit.fontawesome.com/54919de5bd.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<footer class="footer">

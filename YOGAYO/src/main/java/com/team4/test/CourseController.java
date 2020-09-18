@@ -16,8 +16,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.mongodb.BasicDBObject;
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
+import com.mongodb.DBObject;
 import com.team4.dao.course.CourseServiceImpl;
+import com.team4.dao.like.LikeServiceImpl;
 import com.team4.dao.pose.PoseServiceImpl;
+import com.team4.resource.R;
 import com.team4.user.dao.UserServiceImpl;
 import com.team4.util.UserAuthCheck;
 import com.team4.vo.CommentVo;
@@ -25,14 +31,13 @@ import com.team4.vo.CoursePosesVo;
 import com.team4.vo.CourseVo;
 import com.team4.vo.DiffiVo;
 import com.team4.vo.FeedVo;
+import com.team4.vo.LikeVo;
 import com.team4.vo.UserVo;
 
 @Controller
-public class CourseController {
+public class CourseController implements R  {
 
-	CourseServiceImpl service = new CourseServiceImpl();
-	PoseServiceImpl pService = new PoseServiceImpl();
-	UserServiceImpl uService = new UserServiceImpl();
+	
 
 	@RequestMapping(value = "/course-detail-upload-comment", method = RequestMethod.POST)
 	public void uploadComment(Model model, @RequestParam("crsNum") int crsNum, @RequestParam("uNum") int uNum,
@@ -41,7 +46,8 @@ public class CourseController {
 		CourseVo crsvo = new CourseVo();
 		crsvo.setCrsNum(crsNum);
 		double cmavg = 0.0;
-
+		CourseServiceImpl service = new CourseServiceImpl();
+		UserServiceImpl uService = new UserServiceImpl();
 		// 새 댓글 db에 넣는 작업
 		CommentVo cvo = new CommentVo();
 		cvo.setCrsNum(crsNum);
@@ -67,7 +73,7 @@ public class CourseController {
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
-
+	
 		try {
 			commentList = service.commentAll(crsVo);
 			reviewList = service.reviewAll(crsVo);
@@ -104,9 +110,10 @@ public class CourseController {
 		CourseVo crsvo = new CourseVo();
 		crsvo.setCrsNum(crsNum);
 		double cmavg = 0.0;
-
+		CourseServiceImpl service = new CourseServiceImpl();
+		UserServiceImpl uService = new UserServiceImpl();
 		// 새 댓글을 포함한 코스에 관련된 댓글들을 다시 jsp 쏴줘야됨
-
+		
 		CourseVo crsVo = new CourseVo();
 		crsVo.setCrsNum(crsNum);
 		List<CommentVo> commentList;
@@ -152,6 +159,7 @@ public class CourseController {
 	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
 	public String coueseTitle(HttpServletRequest req, HttpServletResponse res, Model model,  @RequestParam(value="startNum", required=false, defaultValue="0") int startNum) throws Exception {
 		UserAuthCheck.loginCheck(req, res, model);
+		CourseServiceImpl service = new CourseServiceImpl();
 		if(startNum!=0) {
 			startNum = startNum+1;
 		}
@@ -163,6 +171,7 @@ public class CourseController {
 	@ResponseBody
 	@RequestMapping(value = "/course-page-ajax", method = RequestMethod.POST)
 	public Map courseTitleAjax(@RequestParam(value="startNum", required=false, defaultValue="0") int startNum) throws Exception {
+		CourseServiceImpl service = new CourseServiceImpl();
 		if(startNum!=0) {
 			startNum = startNum+1;
 		}
@@ -179,6 +188,7 @@ public class CourseController {
 	public Map searchCourse(@RequestParam(value = "searchType", required = false) String searchType,
 			@RequestParam(value = "sort", required = false) String sort,
 			@RequestParam(value="startNum", required=false, defaultValue="0") int startNum) throws Exception {
+		CourseServiceImpl service = new CourseServiceImpl();
 		System.out.println("searchType : " + searchType);
 		System.out.println("sort : " + sort);
 		if(startNum!=0) {
@@ -202,6 +212,7 @@ public class CourseController {
 	public String addReview(CommentVo cvo, Model model, @RequestParam("uNum") int uNum,
 			@RequestParam("crsNum") int crsNum, @RequestParam("review") String context,
 			@RequestParam("parent") int parent) {
+		CourseServiceImpl service = new CourseServiceImpl();
 		System.out.println(crsNum + " + addReview");
 		cvo = new CommentVo();
 		cvo.setuNum(uNum);
@@ -221,6 +232,7 @@ public class CourseController {
 	public String addComment(CommentVo cvo, Model model, @RequestParam("crsNum") int crsNum,
 			@RequestParam("uNum") int uNum, @RequestParam("comment") String context,
 			@RequestParam("rating3") int rate) {
+		CourseServiceImpl service = new CourseServiceImpl();
 		cvo = new CommentVo();
 		cvo.setCrsNum(crsNum);
 		cvo.setuNum(uNum);
@@ -240,7 +252,7 @@ public class CourseController {
 	public Map comment_more(CommentVo cvo, CourseVo vo, Model model,
 			@RequestParam(value = "crsNum", required = false) int crsNum,
 			@RequestParam(value = "commentMore", required = false) String commentMore) {
-
+		CourseServiceImpl service = new CourseServiceImpl();
 		List<CommentVo> commentList = new ArrayList();
 		vo.setCrsNum(crsNum);
 		Map result = new HashMap();
@@ -258,18 +270,35 @@ public class CourseController {
 	public String makeCourse(CourseVo vo, CoursePosesVo cpvo, UserVo uv, FeedVo fv, HttpServletRequest req,
 			RedirectAttributes rttr, Model model, @RequestParam("crsNum") int crsNum, HttpServletResponse res) throws Exception {
 		UserAuthCheck.loginCheck(req, res, model);
+		CourseServiceImpl service = new CourseServiceImpl();
+		LikeServiceImpl lservice = new LikeServiceImpl();
 		int totalTime = 0;
 		int totalMin = 0;
 		int totalSec = 0;
-		
-		model.addAttribute("user",(UserVo)req.getSession().getAttribute("user"));
+		UserVo uvo= (UserVo)req.getSession().getAttribute("user");
+		model.addAttribute("user",uvo);
 		
 		vo = new CourseVo();
 		cpvo = new CoursePosesVo();
 
 		vo.setCrsNum(crsNum);
 		model.addAttribute("crsNum", crsNum);
-
+		
+		DBCollection courseDB = mongoDBf.getCollection("COURSE");
+		BasicDBObject myQuery = new BasicDBObject("_id", crsNum);
+		BasicDBObject field = new BasicDBObject("keyword", 1);
+		DBCursor Cursor = courseDB.find(myQuery, field);
+		DBObject myobj = Cursor.next();
+		List<String> myList = (List<String>) myobj.get("keyword");
+		String keyword =myList.get(0);
+		if(myList.size()>1) {
+			keyword+=", "+myList.get(1);
+		}
+		if(keyword.equals("")) {
+			keyword="해쉬태그 없음";
+		}
+		model.addAttribute("keyword",keyword);
+		
 		CourseVo course;
 		CoursePosesVo cpv;
 		List<CommentVo> commentList;
@@ -372,6 +401,18 @@ public class CourseController {
 
 			reviewList = service.reviewAll(vo);
 			model.addAttribute("reviewList", reviewList);
+			
+			int likeFlag = 0;
+			LikeVo lvo = new LikeVo();
+			lvo.setCrsNum(crsNum);
+			lvo.setuNum(uvo.getuNum());
+			likeFlag = lservice.likeOrNot(lvo);
+			System.out.println(likeFlag);
+			if (likeFlag == 1) {
+				model.addAttribute("like", "fas fa-heart");
+			} else {
+				model.addAttribute("like", "far fa-heart");
+			}
 
 		} catch (Exception e) {
 			System.out.println("[CourseController /  makeCourse]" + e.toString());
