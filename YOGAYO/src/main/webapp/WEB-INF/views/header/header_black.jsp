@@ -7,9 +7,13 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/hamburgers.css"/>
 <style>
+.hamburger{
+  display: none;
+}
 
 .main_wrapper{
   height: 70px;
+  margin-top: 30px;
 }
 
 .main-status_bar {
@@ -41,7 +45,7 @@
    align-items: center;
    border: 2px solid rgb(0, 0, 0);
    /* transition: all 0.3s linear; */
-   box-shadow: var(- -light-shadow);
+   box-shadow: var(--light-shadow);
    transform: perspective(400px) rotateX(80deg);
 }
 
