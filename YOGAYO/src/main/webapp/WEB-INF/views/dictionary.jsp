@@ -52,6 +52,7 @@
                                         <div class='text_gap'>
                                             <h2 class='pose_title'>${i.title}</h2>
                                             <p class='pose_benefit'></p>
+                                            <div class="more">···</div>
                                         </div>
                                     </div>
                                 </div>

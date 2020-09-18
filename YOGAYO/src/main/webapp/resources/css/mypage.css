@@ -669,7 +669,8 @@ footer {
 	/* border: 1px solid red; */
 	width: 50%;
 	line-height: 220px;
-	font-size: 22px;	
+  font-size: 19px;	
+  color: rgb(37, 37, 37);
 }
 
 

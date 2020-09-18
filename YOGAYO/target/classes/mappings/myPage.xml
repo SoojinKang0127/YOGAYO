@@ -229,7 +229,8 @@
 		ON
 			(C.CRSNUM = F.CRSNUM)
 		WHERE
-			F.UNUM = #{uNum};
+			F.UNUM = #{uNum}
+			ORDER BY F.REGDATE DESC;
   			
   	</select>
   	
@@ -243,7 +244,8 @@
 		ON
 			(c.UNUM = u.UNUM)
 		WHERE
-			u.UNUM=#{uNum};
+			u.UNUM=#{uNum}
+			ORDER BY c.REGDATE DESC;
   	</select>
   	
   	<select id="thisday" resultType="String">
@@ -284,7 +286,8 @@
 		ON
 			(C.CRSNUM = L.CRSNUM)
 		WHERE
-			C.UNUM = #{uNum};
+			L.UNUM = #{uNum}
+		ORDER BY L.REGDATE DESC;
   	</select>
   
   	

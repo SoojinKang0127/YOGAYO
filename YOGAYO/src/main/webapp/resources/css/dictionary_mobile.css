@@ -158,9 +158,8 @@ img {
   margin-left: 15px;
 }
 
-.pose_benefit,
-.pose_tips {
-  display: none;
+.pose_benefit, .pose_tips, .more{
+	display: none;
 }
 
 .footer {

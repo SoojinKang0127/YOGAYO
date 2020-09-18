@@ -109,7 +109,6 @@ main {
 
 .main-course_title {
   font-size: 20px;
-  font-weight: 500;
   margin-bottom: 10px;
   font-weight: bold;
 }
@@ -178,6 +177,8 @@ main {
   margin-top: 18px;
   margin-bottom: 43px;
   text-align: left;
+  font-size: 20px;
+  /*  */
 }
 
 .main-latest_section2 .main-latest_section2-1 {
