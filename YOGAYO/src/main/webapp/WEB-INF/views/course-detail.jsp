@@ -61,7 +61,7 @@
 						<div class="course_detail-info_icon_section">
 							<div class="first_line">
 								<div class="course_detail-info_time">
-									<i class="fas fa-stopwatch"></i>   <span>${totalMin} 분</span>
+									<i class="fas fa-stopwatch"></i><span>${totalMin}분</span>
 								</div>
 								<div class="course_detail-difficulty">
 									<i class="fas fa-certificate"></i><span>${difficulty}</span>
@@ -72,7 +72,7 @@
 									<i class="fas fa-users"></i> <span>${userCount}명</span>
 								</div>
 								<div class="course_detail-tags">
-									<i class="fab fa-slack-hash"></i><span>${keyword}</span>
+									<i class="fab fa-slack-hash"></i><div class="key"><span>${keyword}</span></div>
 								</div>
 							</div>
 						</div>
