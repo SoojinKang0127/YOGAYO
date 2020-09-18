@@ -1,4 +1,36 @@
 $(window).ready(function() {
+		
+	if ( rate_people_num< 7) {
+		$('#more_review_btn').hide();
+	} else {
+		$('#more_review_btn').show();
+	}
+
+	/*$('#more_review_btn').on("click", function() {
+		alert('더보여주라');
+		$.ajax({
+			type:"post",
+			async : true,
+			url : "comment_more.do",
+			contentType : 'application/x-www-form-urlencoded;charset=UTF-8',
+			data : {"commentMore":"commentMore",
+				"crsNum":$('#crsNum').val()},
+			dataType : "json",			
+			success : function(resultData) {
+				$('.ajax').empty();
+				for(i in resultData.result){
+					var list = "<div class=course_detail-review_profile_img>"
+					
+				}
+			},
+			error : function(request, status, error) {
+				console.log("code:" + request.status + "\n" + "message:"
+						+ request.responseText + "\n" + "error:" + error);
+			}
+		});
+	})*/
+	var request_like = new XMLHttpRequest();
+	var request_dislike = new XMLHttpRequest();
 	$('#review_btn').click(function(){
 		$('#text_box').val("");
 		$('input[name=rating3]').removeAttr('checked');
@@ -8,16 +40,20 @@ $(window).ready(function() {
 	$("#heart").click(function() {
 		if ($(this).attr('class') == 'far fa-heart') {
 			$(this).attr('class', 'fas fa-heart');
+			request_like.open("POST","./likeCourse?uNum=" + uNum + "&crsNum=" + crsNum, true);
+			 request_like.send(null);
 		} else {
 			$(this).attr('class', 'far fa-heart');
+			request_dislike.open("POST","./dislikeCourse?uNum=" + uNum + "&crsNum=" + crsNum, true);
+			 request_dislike.send(null);
 		}
 	});
-	$(".fas").click(function() {
-		if ($(this).attr('class') == 'fas fa-caret-down') {
-			$(this).attr('class', 'fas fa-caret-left');
+	$(".show_me").click(function() {
+		if ($(this).attr('class') == 'fas fa-caret-down show_me') {
+			$(this).attr('class', 'fas fa-caret-left show_me');
 			$(this).parent().next().show();
 		} else {
-			$(this).attr('class', 'fas fa-caret-down');
+			$(this).attr('class', 'fas fa-caret-down show_me');
 			//$('.hidden_comment').hide();
 			$(this).parent().next().hide();
 		}

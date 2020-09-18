@@ -23,9 +23,6 @@
 
 <body>
     <jsp:include page="header/header_black.jsp" />
-    <header>
-    <div class="mobile_header"></div>
-    </header>
     <main>
         <section id='section1'>
             <div class='s1_content'>

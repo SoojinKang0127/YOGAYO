@@ -6,13 +6,23 @@
 
 	<insert id="upload" parameterType="FeedVo">
 		INSERT INTO
-		FEED(UNUM, CRSNUM, SLEVEL, DLEVEL, CONTEXT, UIMG1, WEIGHT)
-		VALUES(#{uNum},#{crsNum},#{sLevel},#{dLevel},#{context},#{uImg1}, #{weight});
+		FEED(UNUM, CRSNUM,
+		SLEVEL, DLEVEL, CONTEXT, UIMG1, WEIGHT)
+		VALUES(#{uNum},#{crsNum},#{sLevel},#{dLevel},#{context},#{uImg1},
+		#{weight});
 	</insert>
-	
+
 	<select id="getLastFnum" resultType="Integer">
-	 	SELECT MAX(FNUM) FROM FEED
+		SELECT `AUTO_INCREMENT`
+		FROM
+		INFORMATION_SCHEMA.TABLES
+		WHERE TABLE_SCHEMA = 'project'
+		AND TABLE_NAME
+		= 'FEED';
 	</select>
 
+	<select id="playTotal" parameterType="CourseVo" resultType="int">
+		SELECT COUNT(*) FROM FEED WHERE CRSNUM=#{crsNum};
+	</select>
 
 </mapper>

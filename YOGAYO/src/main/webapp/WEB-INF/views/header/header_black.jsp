@@ -5,7 +5,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/hamburgers.css"/>
 <style>
+.hamburger{
+  display: none;
+}
 
 .main_wrapper{
   height: 70px;
@@ -41,7 +45,7 @@
    align-items: center;
    border: 2px solid rgb(0, 0, 0);
    /* transition: all 0.3s linear; */
-   box-shadow: var(- -light-shadow);
+   box-shadow: var(--light-shadow);
    transform: perspective(400px) rotateX(80deg);
 }
 
@@ -137,6 +141,98 @@
   border-radius: 50px;
 }
 
+
+
+
+
+  @media screen and (max-width: 599px) {
+        body {
+          margin: 0px;
+        }
+
+        .main-status_bar {
+          flex-direction: column;
+          position: relative;
+          width: 100%;
+        }
+
+        .main-logo_wrapper {
+          height: 60px;
+          width: 300px;
+        }
+
+        .main_wrapper {
+        }
+
+        .logo-wrapper {
+          height: 60px;
+          margin: 0px;
+          width: 110px;
+        }
+
+        .main-status_categories {
+          margin: 0px;
+          flex-direction: column;
+          display: flex;
+        }
+
+        .main-profile {
+          margin: 0px;
+          justify-content: center;
+          display: flex;
+        }
+
+        .main-profile .welcome_user {
+          font-size: 14px;
+          margin-left: 15px;
+        }
+
+        .header .main-status_bar .main-profile img {
+          width: 40px;
+          height: 40px;
+          border-radius: 40px;
+        }
+
+        .main-status_categories span {
+          font-size: 15px;
+          line-height: 35px;
+          margin: 0px;
+          width: 100%;
+          text-align: center;
+        }
+
+        .main-status_categories span:nth-child(1)::after {
+          display: none;
+        }
+
+        .main-status_categories span::after {
+          display: none;
+        }
+
+        .main-status_categories span:hover::after {
+          display: none;
+        }
+
+        .box-div {
+          display: none;
+        }
+
+        .hamburger {
+          display: block;
+          position: absolute;
+          right: 10px;
+          top: 21px;
+          font-size: 20px;
+          color: black;
+          z-index: 3;
+        }
+
+        .main-status_categories.active,
+        .main-profile.active {
+          display: flex;
+        }
+      }
+
 </style>
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -166,6 +262,11 @@
                class="profile_img" /></a>
          </div>
       </div>
+      </div>
+      <div class="hamburger hamburger--spin">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
       </div>
   </header>
   <script>
@@ -201,6 +302,42 @@
       }
     })
 
+    
+      // hamburger
+    $(function () {
+
+      var forEach = function (t, o, r) {
+        if ("[object Object]" === Object.prototype.toString.call(t))
+          for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t)
+        else for (var e = 0, l = t.length; l > e; e++) o.call(r, t[e], e, t)
+      }
+
+      var hamburgers = document.querySelectorAll(".hamburger")
+      if (hamburgers.length > 0) {
+        forEach(hamburgers, function (hamburger) {
+          hamburger.addEventListener(
+            "click",
+            function () {
+              this.classList.toggle("is-active")
+            },
+            false
+          )
+        })
+      }
+
+      const toggleBtn = document.querySelector(".hamburger")
+      const menu = document.querySelector(".main-status_categories")
+      const icons = document.querySelector(".main-profile")
+
+      //$(menu).hide()
+      //$(icons).hide()
+
+      $(toggleBtn).click(function () {
+        $(menu).slideToggle()
+        $(icons).slideToggle()
+      })
+    })
+    
     
   </script>
 </body>
