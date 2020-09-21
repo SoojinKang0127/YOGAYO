@@ -6,6 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.team4.util.SqlSessionFactoryBean;
 import com.team4.vo.AdminVo;
+import com.team4.vo.PoseVo;
+import com.team4.vo.UserVo;
 
 public class AdminDAOImpl implements AdminDAO{
 	
@@ -42,6 +44,38 @@ public class AdminDAOImpl implements AdminDAO{
 	public void courseUpdate(AdminVo vo) throws Exception {
 		mybatis.update("AdminDAO.courseUpdate", vo);
 		mybatis.commit();
+	}
+
+	@Override
+	public List<UserVo> selectAllUser() throws Exception {
+		
+		return mybatis.selectList("UserDao.selectAllUser");
+	}
+
+	@Override
+	public int getLastUnum() throws Exception {
+		return mybatis.selectOne("AdminDAO.getLastUnum");
+	}
+
+	@Override
+	public void subscribeNewsletter(AdminVo vo) throws Exception {
+		mybatis.insert("AdminDAO.subscribeNewsletter", vo);
+		mybatis.commit();
+	}
+
+	@Override
+	public List<AdminVo> selectAllNewsletterSubscriber() throws Exception {
+		return mybatis.selectList("AdminDAO.selectAllNewsletterSubscriber");
+	}
+
+	@Override
+	public int countAllSubscriber() throws Exception {
+		return mybatis.selectOne("AdminDAO.countAllSubscriber");
+	}
+
+	@Override
+	public List<AdminVo> selectAllPose() throws Exception {
+		return mybatis.selectList("AdminDAO.selectAllPose");
 	}
 	
 	

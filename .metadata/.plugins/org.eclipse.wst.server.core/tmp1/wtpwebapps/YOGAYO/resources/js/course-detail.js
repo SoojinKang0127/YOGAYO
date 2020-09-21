@@ -29,8 +29,7 @@ $(window).ready(function() {
 			}
 		});
 	})*/
-	var request_like = new XMLHttpRequest();
-	var request_dislike = new XMLHttpRequest();
+	
 	$('#review_btn').click(function(){
 		$('#text_box').val("");
 		$('input[name=rating3]').removeAttr('checked');
@@ -40,20 +39,16 @@ $(window).ready(function() {
 	$("#heart").click(function() {
 		if ($(this).attr('class') == 'far fa-heart') {
 			$(this).attr('class', 'fas fa-heart');
-			request_like.open("POST","./likeCourse?uNum=" + uNum + "&crsNum=" + crsNum, true);
-			 request_like.send(null);
 		} else {
 			$(this).attr('class', 'far fa-heart');
-			request_dislike.open("POST","./dislikeCourse?uNum=" + uNum + "&crsNum=" + crsNum, true);
-			 request_dislike.send(null);
 		}
 	});
-	$(".show_me").click(function() {
-		if ($(this).attr('class') == 'fas fa-caret-down show_me') {
-			$(this).attr('class', 'fas fa-caret-left show_me');
+	$(".fas").click(function() {
+		if ($(this).attr('class') == 'fas fa-caret-down') {
+			$(this).attr('class', 'fas fa-caret-left');
 			$(this).parent().next().show();
 		} else {
-			$(this).attr('class', 'fas fa-caret-down show_me');
+			$(this).attr('class', 'fas fa-caret-down');
 			//$('.hidden_comment').hide();
 			$(this).parent().next().hide();
 		}

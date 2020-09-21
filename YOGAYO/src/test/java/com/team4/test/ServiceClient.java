@@ -45,25 +45,19 @@ import com.team4.vo.UserVo;
 
 public class ServiceClient {
 	
-	public static void test2(String[] args) throws Exception {
-		
-		AdminServiceImpl service = new AdminServiceImpl();
-		
-		
-	}
-		
+
 	public static void main(String[] args) {
 		
 		AdminServiceImpl service = new AdminServiceImpl();
 			
 		try {
-			System.out.println(service.getAllCourse());
+			System.out.println(service.getLastUnum());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
 	
 	
 }
 
+}

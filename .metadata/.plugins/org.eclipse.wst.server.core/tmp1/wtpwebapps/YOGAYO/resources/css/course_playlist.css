@@ -11,6 +11,13 @@ body {
 	height: 100%;
 }
 
+header {
+	
+}
+
+footer {
+	height: 100px;
+}
 
 a {
 	color: #febe2e;

@@ -182,6 +182,48 @@
 				</div>
 			</div>
 		</div>
+		<div class="newsletter_section">
+			<div class="newsletter">
+				<div class="first">YOGAYO NEWSLETTER</div>
+				<div class="second">
+					요가요 뉴스레터 구독 신청하고 최신 소식과 여러 혜택을 만나보세요! <i
+						class="fas fa-arrow-circle-right" id="arrow"></i>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="main-footer_right">
+				<i class="far fa-copyright"></i> 2020 Team4,Inc.All rights reserved
+				<span>·</span> <span>개인정보 처리방침</span> <span>·</span> <span>이용약관</span>
+				<span>·</span> <span>사이트 맵</span>
+			</div>
+			<div class="main-footer_left">
+				<ul class="main-footer_sns_list">
+					<li><i class="fab fa-facebook-f"></i></li>
+					<li><i class="fab fa-twitter"></i></li>
+					<li><i class="fab fa-instagram"></i></li>
+				</ul>
+			</div>
+		</footer>
+		<div class="newsletter_modal hiding" id="newsletter_modal">
+			<div class="temp">
+				<div class="pop_up">
+					<i class="far fa-envelope"></i>
+					<span class="title">YOGAYO NEWSLETTER</span>
+					<span class="sentence">${user.name}님, 뉴스레터를 구독하고<br>
+					YOGAYO에서 제공하는 최신 정보와<br> 회원님에게 딱 맞는 요가 코스 추천을<br>받아보시겠어요? :)</span>
+					<span class="email">${user.id} 로 메일 수신 동의</span>
+					<div class="btn_area">
+						<div class="no_btn" id="no_btn" >아니요</div>
+						<div class="yes_btn" id="yes_btn">네</div>
+					</div>
+				</div>
+				<div class="black_back"></div>
+			</div>
+		</div>
+	</main>
+	<script language=JavaScript
+		src="${pageContext.request.contextPath}/resources/js/main_newsletter.js"></script>
 		<jsp:include page="footer/footer_grey.jsp" />
 	</main>
 	<script src="http://code.jquery.com/jquery.js"></script>

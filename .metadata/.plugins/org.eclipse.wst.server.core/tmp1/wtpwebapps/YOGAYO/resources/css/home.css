@@ -2,7 +2,6 @@
 
 @import url("style.css");
 
-
 body {
 	width: 100vw;
 	height: 100vh;
@@ -140,10 +139,10 @@ header {
 }
 
 .login-form span {
-	margin-top: 80px;
+	margin-top: 20px;
 	font-size: 35px;
 	font-weight: 200;
-	margin-bottom: 50px;
+	margin-bottom: 35px;
 }
 
 .errMessage {
@@ -155,8 +154,7 @@ header {
 .form-row {
 	display: flex;
 	flex-direction: column;
-	padding-bottom: 10px;
-	margin-top:20px;
+	padding-bottom: 20px;
 }
 
 .form-row input[type="text"], .form-row input[type="password"] {
@@ -170,7 +168,7 @@ header {
 }
 
 .form-row input[type="submit"] {
-	margin-top: 30px;
+	margin-top: 20px;
 	width: 300px;
 	height: 40px;
 	font-size: 17px;
@@ -192,6 +190,7 @@ header {
 }
 
 .sign-up-btn {
+	margin-top: 30px;
 	width: 300px;
 	height: 40px;
 	font-size: 17px;
@@ -216,4 +215,3 @@ header {
 input:focus {
 	outline: none;
 }
-
