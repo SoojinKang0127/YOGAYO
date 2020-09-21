@@ -204,20 +204,6 @@
 				</div>
 			</div>
 		</div>
-		<footer class="footer">
-			<div class="main-footer_right">
-				<i class="far fa-copyright"></i> 2020 Team4,Inc.All rights reserved
-				<span>·</span> <span>개인정보 처리방침</span> <span>·</span> <span>이용약관</span>
-				<span>·</span> <span>사이트 맵</span>
-			</div>
-			<div class="main-footer_left">
-				<ul class="main-footer_sns_list">
-					<li><i class="fab fa-facebook-f"></i></li>
-					<li><i class="fab fa-twitter"></i></li>
-					<li><i class="fab fa-instagram"></i></li>
-				</ul>
-			</div>
-		</footer>
 		<div class="newsletter_modal hiding" id="newsletter_modal">
 			<div class="temp">
 				<div class="pop_up">
