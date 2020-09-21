@@ -49,6 +49,8 @@ a:hover {
 	font-weight: 700;
 	line-height: 48px;
 	color: #545554;
+	display:flex;
+	justify-content: center;
 }
 
 .search-img-box {
@@ -56,27 +58,23 @@ a:hover {
   align-items: center;
  justify-content: center; 
  margin:40px 0px 30px 0px;
- height: 300px;
 }
 
 .search-img-section {
   width: 56%;
   display: flex;
   justify-content: center;
-  height: 300px;
 }
 
 .search-img{
   width: auto;
   
   /* width:  800px; */
-   height: 400px;
   margin-left: 20px;
 }
 
 .search-img img {
-	width: 800px;
-	height: 410px;
+	height: 350px;
 }
 
 .search-img_yoga-title {
@@ -91,10 +89,6 @@ a:hover {
 	margin-right: 50px;
 }
 
-.search-img img {
-	width: 500px;
-	height: 300px;
-}
 
 .search-img2 img {
 	width: 500px;
@@ -104,7 +98,7 @@ a:hover {
 .yoga-title h2 {
 	font-size: 36px;
 }
-
+ 
 .yoga-second-dificult span {
 	margin-right: 5px;
 }

@@ -145,21 +145,6 @@ main {
   align-items: center;
 }
 
-.member_title {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 27px;
-}
-
-.underline {
-	border-bottom: 10px solid #febe2e;
-	display: inline-block;
-	line-height: 0.27;
-}
-
-
 .list_container{
 	
 	

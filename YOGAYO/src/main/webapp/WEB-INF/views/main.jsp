@@ -4,14 +4,16 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>YOGAYO</title>
-	<script src="https://kit.fontawesome.com/54919de5bd.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
-		rel="stylesheet">
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>YOGAYO</title>
+<script src="https://kit.fontawesome.com/54919de5bd.js"
+	crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/main.css"  media="all and (min-width:600px) and (max-width:2000px)">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+	
 </head>
 
 <body>
@@ -34,6 +36,10 @@
 				</div>
 			</div>
 		</div>
+		<!-- -------------end 첫번째 세션------------ -->
+		
+		
+		<!-- -------------두번째 세션------------ -->
 		<div class="main-second_container">
 			<div class="up-on-scroll">
 				<div class="main-second_bg">
@@ -69,7 +75,8 @@
 				</div>
 			</div>
 			<div class="up-on-scroll">
-				<div class="main-second_bg">
+			
+				<!-- <div class="main-second_bg">
 					<div class="main-recommand">
 						<img src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
 						<div class="main-first_course">
@@ -94,7 +101,11 @@
 								괜찮으신가요?</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
+
+				<!--------------- end 두번째 세션-------------->
+
+				<!-- -----------------세번째 세션 ------------->
 			</div>
 		</div>
 		<div class="up-on-scroll">
@@ -102,22 +113,22 @@
 				<div class="up-on-scroll">
 					<div class="main-third_bg">
 						<div class="main-latest_title_section">
-							<div class="main-latest_courses_title">새로 올라운 코스</div>
+							<div class="main-latest_courses_title">새로 올라온 코스</div>
 							<div class="main-latest_courses_explain">
 								<p>세계 각지 사람들의 다양한 코스들을 경험해보세요. 저희 요가요에서 제공하는 코스들도 놓치지 마세요.</p>
 							</div>
 						</div>
 						<div class="main-to_course_btn_section">
-							<a href="${pageContext.request.contextPath}/course-page">
-								<button id="main-to_course_btn">모두 둘러보기</button>
-							</a>
+								<button id="main-to_course_btn"><a href="${pageContext.request.contextPath}/course-page">모두 둘러보기</a></button>	
 						</div>
 					</div>
 				</div>
+				
 				<div class="main-latest_sections">
 					<a
 									href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(0).crsNum}">
 					<div class="up-on-scroll">
+
 						<div class="main-latest_section">
 							<div class="img_wrapper">
 								<img src="${pageContext.request.contextPath}/${allCourses.get(0).imgPath}" /></div>
@@ -126,6 +137,7 @@
 									${allCourses.get(0).title}</div>
 							</div>
 						</div>
+
 					</div>
 					</a>
 					<div class="main-latest_section2">
@@ -180,6 +192,7 @@
 						</a>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 		<div class="newsletter_section">

@@ -12,8 +12,8 @@
 
 	<insert id="signup" parameterType="UserVo">
 		INSERT INTO
-		USER(ID, PWD, NAME, BDATE, GENDER, PROFILEVEL, IMG)
-		VALUES(#{id},#{pwd},#{name},#{bDate},#{gender}, #{profiLevel}, #{img});
+		USER(ID, PWD, NAME, BDATE, GENDER, PROFILEVEL)
+		VALUES(#{id},#{pwd},#{name},#{bDate},#{gender}, #{profiLevel});
 	</insert>
 
 
