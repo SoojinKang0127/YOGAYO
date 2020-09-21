@@ -1,4 +1,6 @@
 
+<%@page import="com.team4.vo.PoseVo"%>
+<%@page import="java.util.ArrayList"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -11,6 +13,16 @@
 <title>ADMIN COURSE</title>
 </head>
 <body>
+	<script type="text/javascript">
+	
+	var pLIST = "${poseJsonList}";
+	var json = JSON.parse(PLIST);
+	console.log(json[0].pTitle);
+	
+</script>
+
+
+
 	<header>
 		<jsp:include page="admin-header.jsp" />
 	</header>
@@ -93,17 +105,15 @@
 		location.href="courseupdate?crsnum="+crsnum;
 	}
 </script>
-<script type="text/javascript">
+	<script type="text/javascript">
+
 	const seqs = document.querySelectorAll(".seq");
 	var seqNum = 0;
 	seqs.forEach(function(seq){
 		seq.addEventListener("mouseover", function(e){
 			seqNum = e.currentTarget.innerHTML;
 			console.log(seqNum);
-			
-			
-			
-			
+
 		})
 	})
 </script>

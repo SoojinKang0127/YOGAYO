@@ -3,6 +3,7 @@ package com.team4.dao.admin;
 import java.util.List;
 
 import com.team4.vo.AdminVo;
+import com.team4.vo.PoseVo;
 import com.team4.vo.UserVo;
 
 public class AdminServiceImpl implements AdminService {
@@ -65,6 +66,12 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public int countAllSubscriber() throws Exception {
 		return dao.countAllSubscriber();
+	}
+
+
+	@Override
+	public List<AdminVo> selectAllPose() throws Exception {
+		return dao.selectAllPose();
 	}
 
 	 

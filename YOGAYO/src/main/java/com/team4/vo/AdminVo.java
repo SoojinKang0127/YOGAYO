@@ -34,6 +34,30 @@ public class AdminVo {
 	String material;
 	
 	
+	public int getpNum() {
+		return pNum;
+	}
+	public void setpNum(int pNum) {
+		this.pNum = pNum;
+	}
+	public String getpTitle() {
+		return pTitle;
+	}
+	public void setpTitle(String pTitle) {
+		this.pTitle = pTitle;
+	}
+	public int getTime() {
+		return time;
+	}
+	public void setTime(int time) {
+		this.time = time;
+	}
+	public int getDifficulty() {
+		return difficulty;
+	}
+	public void setDifficulty(int difficulty) {
+		this.difficulty = difficulty;
+	}
 	int seq1Num;
 	int seq2Num;
 	int seq3Num;
@@ -51,6 +75,13 @@ public class AdminVo {
 	String seq6Title;
 	String seq7Title;
 	String seq8Title;
+	
+	int pNum;
+	String pTitle;
+	int time;
+	int difficulty;
+	
+	
 	
 	public String getCrsTitle() {
 		return crsTitle;

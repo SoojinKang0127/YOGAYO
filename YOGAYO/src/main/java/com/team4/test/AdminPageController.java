@@ -17,7 +17,10 @@ import org.springframework.web.servlet.ModelAndView;
 import com.team4.dao.admin.AdminServiceImpl;
 import com.team4.user.dao.UserServiceImpl;
 import com.team4.vo.AdminVo;
+import com.team4.vo.PoseVo;
 import com.team4.vo.UserVo;
+
+import net.sf.json.JSONArray;
 
 @Controller
 public class AdminPageController {
@@ -74,6 +77,12 @@ public class AdminPageController {
 
 		List<AdminVo> list = service.getAllCourse();
 		model.addAttribute("courseList", list);
+		
+		List<AdminVo> pList = service.selectAllPose();
+		model.addAttribute("poseList", pList);
+		JSONArray jsonArray = new JSONArray();
+		model.addAttribute("poseJsonList", jsonArray.fromObject(pList));
+		
 
 		return "/admin/admin-course";
 	};

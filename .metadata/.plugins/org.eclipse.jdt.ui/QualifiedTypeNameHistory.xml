@@ -27,4 +27,5 @@
 <fullyQualifiedTypeName name="com.team4.dao.admin.AdminServiceImpl"/>
 <fullyQualifiedTypeName name="javax.mail.internet.InternetAddress"/>
 <fullyQualifiedTypeName name="com.team4.test.SendNewsLetter"/>
+<fullyQualifiedTypeName name="com.team4.vo.PoseVo"/>
 </qualifiedTypeNameHistroy>

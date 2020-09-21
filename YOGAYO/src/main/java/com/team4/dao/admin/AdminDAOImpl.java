@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.team4.util.SqlSessionFactoryBean;
 import com.team4.vo.AdminVo;
+import com.team4.vo.PoseVo;
 import com.team4.vo.UserVo;
 
 public class AdminDAOImpl implements AdminDAO{
@@ -70,6 +71,11 @@ public class AdminDAOImpl implements AdminDAO{
 	@Override
 	public int countAllSubscriber() throws Exception {
 		return mybatis.selectOne("AdminDAO.countAllSubscriber");
+	}
+
+	@Override
+	public List<AdminVo> selectAllPose() throws Exception {
+		return mybatis.selectList("AdminDAO.selectAllPose");
 	}
 	
 	

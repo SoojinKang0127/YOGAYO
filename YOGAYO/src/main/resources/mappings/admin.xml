@@ -67,5 +67,11 @@
 	<select id="countAllSubscriber" resultType="int">
 		SELECT COUNT(*) FROM NEWSLETTER;
 	</select>
+	
+	<select id="selectAllPose" resultType="AdminVo">
+		SELECT PNUM as pNum, IMG_PATH as img, TITLE as pTitle, TIME as time, DIFFICULTY as difficulty FROM POSE;
+	</select>
+	
+	
 
 </mapper>
