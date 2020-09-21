@@ -10,150 +10,15 @@ main {
 	width: 100%;
 	height: 100%;
 }
-.main-status_bar {
-	display: flex;
-	position: absolute;
-	flex-direction: row;
-	justify-content: space-around;
-	background-color: rgba(250, 250, 250, 0);
-	width: 100%;
-	height: 70px;
-	margin-top: 30px;
-	z-index: 2;
-  }
-  
-  .logo-wrapper {
-	  width: 150px;
-	  height: 200px;
-	  /* padding: 25px; */
-	  position: relative;
-	  display: flex;
-	  flex-direction: column;
-	align-items: center;
-	margin-left: 30px;
-  }
-  
-  .box-div {
-	  width: 100px;
-	  height: 100px;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  border: 2px solid rgb(255, 255, 255);
-	  /* transition: all 0.3s linear; */
-	  box-shadow: var(- -light-shadow);
-	  transform: perspective(400px) rotateX(80deg);
-  }
-  
-  /* .logo-wrapper:hover .box-div {
-	  transform: none;
-  } */
-  
-  .logo-wrapper span {
-	  color: rgb(255, 255, 255);
-	  font-size: 20px;
-	  font-weight: 600;
-	  position: absolute;
-	  top: 20px;
-	  opacity: 1;
-	  /* transition: opacity 0.3s ease-in-out 0s; */
-	display: block;
-  }
-  
-  /* .logo-wrapper:hover span {
-	  opacity: 0;
-	  top: 46px;
-  } */
-  
-  .main-status_categories {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	color: white;
-	margin-top: 10px;
-  }
-  
-  .main-status_categories span {
-	margin-right: 30px;
-	align-items: center;
-	font-size: 18pt;
-	font-family: 'Noto Sans KR', sans-serif;
-	font-weight: 300;
-	margin-left: 50px;
-	position: relative;
-	height: 35px;
-  }
-  
-  .main-status_categories  a {
-	color: white;
-	text-decoration: none;
-  }
-  
-  .main-status_categories span:nth-child(2)::after{
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 100%;
-	height: 3px;
-	background: white;
-	/* transition: all .2s ease-out; */
-  }
-  
-  .main-status_categories span::after {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 0;
-	height: 3px;
-	background: white;
-	transition: all .2s ease-out;
-  }
-  
-  .main-status_categories span:hover::after {
-	width: 100%;
-  }
 
-  .main-profile {
-	display: flex;
-	align-items: center;
-	margin-top: 5px;
-  }
-  
-  .main-profile .welcome_user {
-	color: #f7f7f7;
-	margin-right: 30px;
-  }
-  
-  .header .main-status_bar .main-profile img {
-	display: flex;
-	width: 70px;
-	height: 70px;
-	border-radius: 50px;
-  }
-
-.status_bar {
-	display: flex;
-	position: absolute;
-	flex-direction: row;
-	justify-content: space-between;
-	background-color: rgba(250, 250, 250, 0);
-	width: 100%;
-	height: 70px;
-	margin-top: 30px;
-	padding: 0px 250px 0px 250px;
-	z-index: 5;
+.main_wrapper{
+		height: 70px;
+		margin-top: 30px;
+		position: absolute;
+		display: flex;
+		width: 100%;
 }
 
-.header .status_bar .profile img {
-	display: flex;
-	width: 70px;
-	height: 70px;
-	border-radius: 50px;
-}
 
 .course-first_container .course_bg {
 	background-image: url("../image/course/course_bg.jpg");
@@ -186,6 +51,7 @@ main {
 	font-size: 12pt;
 	line-height: 20px;
 	margin-top: 15px;
+	letter-spacing: 1px;
 }
 
 .course-categories_container {
@@ -197,49 +63,64 @@ main {
 	justify-content: space-between;
 	padding: 0px 250px 0px 250px;
 	margin-top: 30px;
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 }
 
 .course-categories_container .course-categories_left {
 	display: flex;
+	width: 350px;
 }
 
 #course-view_all, #course-view_yogayo_course {
 	all: unset;
 	cursor: pointer;
 	text-align: center;
-	border-radius: 50px;
+	border-radius: 10px;
 	font-size: 15px;
-	border: 1px solid gray;
-	background-color: white;
 	width: 30%;
 	padding: 9px 15px 9px 15px;
 	margin-right: 10px;
+	font-weight: bold;
+	height: 20px;
+	background-color: white;
+	color: rgb(22, 22, 22);
+	border: solid 1px #cecece;
+
+}
+
+#course-view_all{
+	border: solid 1px grey;
 }
 
 #course-view_user_course {
 	all: unset;
 	cursor: pointer;
 	text-align: center;
-	border-radius: 50px;
+	border-radius: 10px;
 	font-size: 15px;
-	border: 1px solid gray;
 	background-color: white;
 	width: 40%;
 	padding: 9px 15px 9px 15px;
 	margin-right: 10px;
+	font-weight: bold;
+	height: 20px;
+	color: rgb(22, 22, 22);
+	border: solid 1px #cecece;
+	
 }
 
 #courses_sort {
 	all: unset;
 	cursor: pointer;
 	text-align: center;
-	border-radius: 50px;
+	border-radius: 10px;
 	font-size: 15px;
-	border: 1px solid gray;
+	border: 1px solid#cecece;
 	background-color: white;
 	padding: 9px 17px 9px 17px;
 	position: relative;
+	font-weight: bold;
+	height: 20px;
 }
 
 .sort_menu {
@@ -272,7 +153,6 @@ main {
 	align-item: center;
 	margin: 0px 250px 0px 250px;
 	line-height: 20px;
-	margin-top: 20px;
 	padding-top: 60px;
 }
 
@@ -286,8 +166,9 @@ main {
 .more_course_btn {
 	display: flex;
 	justify-content: center;
-	align-item: center;
+	align-items: center;
 	margin-bottom:50px;
+	
 }
 
 .more_course_btn #more_course_btn {
@@ -296,17 +177,34 @@ main {
 	width: 20%;
 	height: 48px;
 	text-align: center;
-	border-radius: 10px;
+	border-radius: 3px;
 	font-size: 13pt;
-	background-color: white;
-	border: 1px solid black;
 	margin-bottom: 50px;
-	box-shadow: var(- -light-shadow);
+	box-shadow: var(--light-shadow);
+	position: relative;
+	overflow: hidden;
+	border: 1px solid rgb(200, 200, 200);
+	display: flex;
+}
+#more_course_btn span{
+	z-index: 10;
+	margin: auto;
+	font-weight: bold;
+}
+.img_wrapper{
+	width: 333px;
+	height: 330px;
+	overflow: hidden;
+	background-color: black;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .course-courses_container .course_container img {
-	width: 100%;
-	height: 330px;
+	height: 350px;
+	transition: 0.5s ease-in-out;
 }
 
 .up-on-scroll {
@@ -319,53 +217,56 @@ main {
 	margin-bottom: 110px;
 	width: 95%;
 	margin-left: 10px;
+	box-shadow: var(--light-shadow);
+
 }
 
-<<<<<<<
-HEAD
- ======= <<<<<<< HEAD
+
 .course_container a {
 	color: black;
 }
 
-=======
->>>>>>>
-master> >>>>>> master
+
 .course_container .course_star_rating {
-	font-size: 11pt;
-}
-
-<<<<<<<
-HEAD
- ======= <<<<<<< HEAD
-.course_star_rating i {
-	color: var(- -theme-color);
-}
-
-=======
->>>>>>>
-master> >>>>>> master
-.footer {
-	width: 100%;
-	height: 70px;
+	font-size: 10pt;
+	padding: 0 0 0 10px;
+	height: 75px;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 	align-items: center;
-	background-color: #f7f7f7;
-	padding: 0px 250px 0px 255px;
-	font-size: 11pt;
+	color: rgb(27, 27, 27);
+	font-weight: bold;
 }
 
-.main-footer_right span {
-	margin-left: 5px;
+.course_title{
+	margin-left: 10px;
+	font-size: 17px;
+	font-weight: bold;
+	letter-spacing: 1px;
 }
 
-.main-footer_left .main-footer_sns_list {
+
+.course_star_rating i {
+	color: var(--theme-color);
+}
+
+.course_star_rating #text {
+	color: var(--theme-color);
+}
+
+.rating{
+margin-top: 4px;	
+
+}
+
+.more_course_btn_background{
 	display: flex;
-	font-size: 20px;
-}
-
-.main-footer_left .main-footer_sns_list li {
-	margin-left: 30px;
+	width: 0px;
+	height: 0px;
+	background-color: red;
+	position: absolute;
+	transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+	border-radius: 400px;
+	z-index: 1;
+	background-color: var(--theme-color);
+	transform: translate(-50%, -50%);
 }

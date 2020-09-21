@@ -150,7 +150,7 @@ main {
 
 
 .wrapper {
-	width: 1500px;
+	width: 1100px;
 	display: grid;
 	grid-template-columns: 100px;
 	margin-bottom: 30px;
@@ -167,21 +167,27 @@ main {
 
 .th {
 	color: #979797;
+	width:100px;
+	
 }
 .courseNum_ {
 	grid-column: 1/2;
+	width:100px;
 }
 
 .createdBy_ {
 	grid-column: 2/3;
+	width:100px;
 }
 
 .title_ {
 	grid-column: 3/7;
+	width:403px;
 }
 
 .desc_ {
 	grid-column: 7/12;
+	width:504px;
 }
 
 .modify_ {
@@ -189,31 +195,38 @@ main {
 	grid-column: 12/13;
 	background-color: black;
 	color: white;
+	width:100px;
 }
 
 .courseNum {
 	grid-column: 1/2;
 	grid-row: 2/5;
+	width:100px;
 }
 
 .createdBy {
 	grid-column: 2/3;
+	width:100px;
 }
 
 .title {
 	grid-column: 3/7;
+	width:403px;
 }
 
 .desc {
 	grid-column: 7/12;
+	width:504px;
 }
 
 .metarial_ {
 	grid-column: 2/3;
+	width:100px;
 }
 
 .imgPath {
 	grid-column: 3/4;
+	width:100px;
 }
 
 .course_title{
@@ -240,15 +253,19 @@ main {
 }
 
 .modify_btn{
-	border: 1px solid black;
 	padding: 20px 30px 20px 30px;
 	display:flex;
 	justify-content: center;
 	align-items: center; 
 	background-color: black;
 	color:white;
+	cursor:pointer;
+	transition: 0.1s all ease-in-out;
 }
 
+.modify_btn:hover{
+	background-color: #febe2e;
+}
 
 
 

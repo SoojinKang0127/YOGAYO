@@ -5,6 +5,7 @@ package com.team4.test;
 import java.sql.Date;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.team4.user.dao.UserDAO;
 import com.team4.user.dao.UserDAOImpl;
 import com.team4.user.dao.UserServiceImpl;
+import com.team4.util.UserAuthCheck;
 import com.team4.vo.UserVo;
 
 @Controller
@@ -26,8 +28,8 @@ public class UpdateController {
 	
 	
 	@RequestMapping(value="/update", method = RequestMethod.GET)
-	public String update() {
-		
+	public String update(Model model, HttpServletRequest req,HttpServletResponse res) {
+		UserAuthCheck.loginCheck(req, res, model);
 		return "update";
 	}
 	
