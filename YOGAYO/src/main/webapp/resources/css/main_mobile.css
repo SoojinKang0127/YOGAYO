@@ -152,7 +152,7 @@ main {
   /* background-size: cover; */
   background-repeat: no-repeat;
   width: 100%;
-  height: 400px;
+  height: 350px;
   /* background-position-y: -100px; */
   z-index: 1;
 }
@@ -292,7 +292,6 @@ main {
   margin-top: 30px;
   /* display: flex;
   flex-direction: column; */
-  border:1px solid red;
 }
 
 .main-third_container img{       /*----------사진----------*/
@@ -314,7 +313,6 @@ main {
 }
 
 .main-latest_courses_title {
-	border:1px solid red;
   font-size: 20pt;
   margin-top: 3px;
   width: 100%;
@@ -329,7 +327,6 @@ main {
 }
 
 .main-to_course_btn_section{
-	border:1px solid red;
 	display: flex;
 	width:30%;
 	height:35px;
@@ -356,7 +353,6 @@ main {
 
 
 .main-latest_sections{    /*크게 전체를 감싸는 div*/
-	border:5px solid red;
   display: flex;
   overflow-x: scroll;
   overflow-y: unset;
@@ -371,28 +367,24 @@ main {
 
 .main-latest_section2{     /*3개를 감싸는 div*/
   background-color:black;
-	border:6px solid mediumspringgreen;
   display:flex;
   height: 100%;
 }
 
 
 .main-small_latest_courses{    /* 3개중 2개 포함하는 div */
-	border:3px solid lightskyblue;
 	display:flex;
   flex-direction: row;
-  height: 80%;
+  height: 86%;
   box-shadow: var(--light-shadow);
-  background-color:  #222222;
 }
 
 
 
 .main-latest_section{        /*1개만*/
-	border:3px solid orange;
   width: 300px;
   overflow:hidden;
-  height: 80%;
+  height: 85%;
   margin: 20px 20px 0px 25px;
   box-shadow: var(--light-shadow);
   border-radius: 12px;
@@ -404,22 +396,23 @@ main {
 
 
 .main-latest_section .main-first_course {
-  border: 2px solid magenta;
   width: 100%;
   height: 0%;
   padding: 8px 15px 0px 15px ;
   margin-bottom: 5px;
+  background-color:  #222222;
+  border-radius: 0px 0px 12px 12px; 
 }
 
 .main-latest_sections .main-first_course{
-  border: 2px solid magenta;
   width: 100%;
   height: 15%;
   padding: 8px 15px 0px 15px ;
+  background-color:  #222222;
+  border-radius: 0px 0px 12px 12px; 
 }
   
 .main-first_course_title {
-  border: 1px solid blue;
   width: 100%;
   height: 100%;
 }
@@ -427,35 +420,34 @@ main {
 
 
 .main-small_latest1{
-	border:1px solid yellow;
 	width: 300px;
   overflow:hidden;
   height: 100%;
   border-radius: 12px;
   margin: 20px 20px 0px 0px;
+  background-color:  #222222;
 }
 
 .main-samll_latest2{
-	border:1px solid green;
 	width: 300px;
   overflow:hidden;
   height: 100%;
   border-radius: 12px;
   margin: 20px 20px 0px 0px;
+  background-color:  #222222;
 }
 
 .main-latest_section2-2 {
-  border:5px solid hotpink;
   width: 300px;
   height: 100%;
   overflow:hidden;
+  
  
 }
 
 .main-latest {
-  border:1px solid salmon;
   width: 300px;
-  height: 80%;
+  height: 85%;
   margin: 20px 20px 0px 0px;
   box-shadow: var(--light-shadow);
   border-radius: 12px;
