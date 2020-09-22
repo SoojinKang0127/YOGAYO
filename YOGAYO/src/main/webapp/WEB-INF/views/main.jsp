@@ -125,28 +125,32 @@
 				</div>
 				
 				<div class="main-latest_sections">
-					<a
-									href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(0).crsNum}">
+					
 					<div class="up-on-scroll">
 
 						<div class="main-latest_section">
+							<a
+									href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(0).crsNum}">
 							<div class="img_wrapper">
 								<img src="${pageContext.request.contextPath}/${allCourses.get(0).imgPath}" /></div>
 							<div class="main-first_course">
 								<div class="main-first_course_title">
 									${allCourses.get(0).title}</div>
 							</div>
+							</a>
 						</div>
 
 					</div>
-					</a>
+					
 					<div class="main-latest_section2">
 						<div class="main-latest_section2-1">
 							<div class="main-small_latest_courses">
-								<a
-									href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(1).crsNum}">
+								
 								<div class="up-on-scroll">
+
 									<div class="main-small_latest1">
+										<a
+									href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(1).crsNum}">
 										<div class="img_wrapper2">
 											<img
 												src="${pageContext.request.contextPath}/${allCourses.get(1).imgPath}" />
@@ -155,13 +159,17 @@
 											<div class="main-first_course_title">
 												${allCourses.get(1).title}</div>
 										</div>
+									</a>
 									</div>
+
 								</div>
-								</a>
-								<a
-									href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(2).crsNum}">
+								
+								
 									<div class="up-on-scroll">
+
 										<div class="main-samll_latest2">
+											<a
+												href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(2).crsNum}">
 											<div class="img_wrapper2">
 												<img
 													src="${pageContext.request.contextPath}/${allCourses.get(2).imgPath}" />
@@ -170,14 +178,17 @@
 												<div class="main-first_course_title">
 													${allCourses.get(2).title}</div>
 											</div>
+											</a>
 										</div>
+
 									</div>
-								</a>
+								
 							</div>
 						</div>
-						<a href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(3).crsNum}">
+						
 							<div class="up-on-scroll">
 								<div class="main-latest_section2-2">
+									<a href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(3).crsNum}"></a>
 									<div class="main-latest">
 										<div class="img_wrapper3"><img
 												src="${pageContext.request.contextPath}/${allCourses.get(3).imgPath}" />
@@ -187,9 +198,10 @@
 												${allCourses.get(3).title}</div>
 										</div>
 									</div>
+									</a>
 								</div>
 							</div>
-						</a>
+						
 					</div>
 				</div>
 				

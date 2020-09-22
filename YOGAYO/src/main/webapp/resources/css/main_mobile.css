@@ -22,7 +22,7 @@ main {
 }
 
 .header {
-  display: none;/
+  display: none;
 }
 
 
@@ -222,6 +222,13 @@ main {
   overflow-y: unset;
   scrollbar-width: none;
 }
+.main-second_bg a:link{
+  color: black;
+}
+
+.main-second_bg a:visited{
+  color: black;
+}
 
 .main-second_bg::-webkit-scrollbar{
   display: none;
@@ -294,9 +301,21 @@ main {
   flex-direction: column; */
 }
 
+.main-third_container a{
+  border:3px solid turquoise;
+}
+
+.main-third_container a:link{
+  color:white;
+}
+.main-third_container a:visited{
+  color: white;
+}
+
 .main-third_container img{       /*----------사진----------*/
-  height:85%;
-  width: 100%;
+  height:300px;
+  max-width: 100%;
+  border: 3px solid blue;
 } 
 
 .main-third_bg {
@@ -358,6 +377,7 @@ main {
   overflow-y: unset;
   scrollbar-width: none;
   height: 100%;
+  border: 5px solid red;
 }
 
 .main-latest_sections::-webkit-scrollbar{
@@ -369,14 +389,16 @@ main {
   background-color:black;
   display:flex;
   height: 100%;
+  border: 3px solid blueviolet;
 }
 
 
 .main-small_latest_courses{    /* 3개중 2개 포함하는 div */
 	display:flex;
   flex-direction: row;
-  height: 86%;
+  height: 100%;
   box-shadow: var(--light-shadow);
+  border: 3px solid steelblue;
 }
 
 
@@ -385,11 +407,10 @@ main {
   width: 300px;
   overflow:hidden;
   height: 85%;
-  margin: 20px 20px 0px 25px;
   box-shadow: var(--light-shadow);
   border-radius: 12px;
   background-color:  #222222;
-
+  border: 5px solid orange;
 }
 /* ---------------------------제일 큰 틀---------------------------- */
 
@@ -413,8 +434,8 @@ main {
 }
   
 .main-first_course_title {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
 }
 
 
@@ -424,8 +445,8 @@ main {
   overflow:hidden;
   height: 100%;
   border-radius: 12px;
-  margin: 20px 20px 0px 0px;
   background-color:  #222222;
+  border:5px solid deeppink
 }
 
 .main-samll_latest2{
@@ -433,28 +454,37 @@ main {
   overflow:hidden;
   height: 100%;
   border-radius: 12px;
-  margin: 20px 20px 0px 0px;
   background-color:  #222222;
+  border:5px solid deeppink
 }
 
 .main-latest_section2-2 {
   width: 300px;
   height: 100%;
   overflow:hidden;
-  
+  border:5px solid deeppink
  
+}
+
+
+.main-latest a{
+  border: 3px solid turquoise;
+  height: 100%;
+  width: 100%;
+  margin: 20px 20px 0px 0px;
 }
 
 .main-latest {
   width: 300px;
   height: 85%;
-  margin: 20px 20px 0px 0px;
   box-shadow: var(--light-shadow);
   border-radius: 12px;
   background-color:  #222222;
+  border: 1px solid greenyellow;
 }
 .main-latest img {
-  height: 85%;
+  max-width: 100%;
+  height: 300px;
   border-radius: 12px 12px 0px 0px ;
 }
 
@@ -464,8 +494,15 @@ main {
 
 /* -----------------세번째 세션--------------------- */
 
+/*-----------------news-----------------------*/
 
+.newsletter_section{
+	display:none;
+}
 
-.footer {
- display:none;
- }
+.newsletter_modal hiding{
+	display:none;
+}
+.temp {
+	display:none;
+}

@@ -10,8 +10,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>course player</title>
 
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player.css"  media="all and (min-width:600px) and (max-width:2000px)">
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player.css"  media="all and (min-width:412px) and (max-width:2000px)">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player_mobile.css" media="all and (min-width:300px) and (max-width:411px)">
 	<link rel="stylesheet" type="text/css"
 		href="${pageContext.request.contextPath}/resources/css/player-rSlider.min.css">
 
@@ -84,15 +84,8 @@
 			value="" id="context"> <input type="hidden" name="weight" value="" id="weight">
 
 		<div class="all-wrapper">
-			<header class="header">
-				<div class="header-wrapper">
-					<div class="logo-wrapper">
-						<a href=""> <span>YOGAYO</span>
-							<div class="box-div"></div>
-						</a>
-					</div>
-					<div class="nav_bar"></div>
-				</div>
+			<header class="header"	>
+				
 			</header>
 			<main>
 				<div class="main-wrapper">
