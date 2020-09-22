@@ -1,24 +1,32 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>course player</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>course player</title>
 
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player.css">
-	<link rel="stylesheet" type="text/css"
-		href="${pageContext.request.contextPath}/resources/css/player-rSlider.min.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/player.css"
+	media="all and (min-width:600px) and (max-width:2000px)">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/player_vertical_mobile.css"
+	media="all and (min-width:300px) and (max-width:599px)">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/player-rSlider.min.css">
 
-	<script src="https://kit.fontawesome.com/7bad96e258.js" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/player-rSlider.min.js"></script>
+<script src="https://kit.fontawesome.com/7bad96e258.js"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script language=JavaScript
+	src="${pageContext.request.contextPath}/resources/js/player-rSlider.min.js"></script>
 
-	<script>
+<script>
 		var uNum = encodeURIComponent("${uvo.uNum}");
 		var crsNum = encodeURIComponent("${crsNum}");
 		console.log(crsNum)
@@ -77,13 +85,16 @@
 
 <body>
 
-	<form action="feedupload" method="POST" enctype="multipart/form-data" name="feed" id="feed">
-		<input type="hidden" name="course" value="" id="course"> <input type="hidden" name="slevel" value=""
-			id="slevel"> <input type="hidden" name="dlevel" value="" id="dlevel"> <input type="hidden" name="context"
-			value="" id="context"> <input type="hidden" name="weight" value="" id="weight">
+	<form action="feedupload" method="POST" enctype="multipart/form-data"
+		name="feed" id="feed">
+		<input type="hidden" name="course" value="" id="course"> <input
+			type="hidden" name="slevel" value="" id="slevel"> <input
+			type="hidden" name="dlevel" value="" id="dlevel"> <input
+			type="hidden" name="context" value="" id="context"> <input
+			type="hidden" name="weight" value="" id="weight">
 
 		<div class="all-wrapper">
-			<header>
+			<header class="header">
 				<div class="header-wrapper">
 					<div class="logo-wrapper">
 						<a href=""> <span>YOGAYO</span>
@@ -107,12 +118,13 @@
 								<div class="main-course-info">
 									<div class="rightwrapper">
 										<span>누적 플레이 수</span> <span class="accumulate-number">
-											${playTotal}회</span> <span>•</span> <span class="reg-date"> <fmt:formatDate value="${regDate}" pattern="yyyy.MM.dd"/></span>
+											${playTotal}회</span> <span>•</span> <span class="reg-date"> <fmt:formatDate
+												value="${regDate}" pattern="yyyy.MM.dd" /></span>
 									</div>
 									<div class="leftwrapper">
 										<span class="like"><i class="${like}"></i></span> <span
 											class="like-number">${likeCount}</span>
-									</div> 
+									</div>
 								</div>
 							</div>
 							<div class="user-info">
@@ -262,7 +274,8 @@
 					</div>
 				</div>
 			</main>
-			<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/player.js"></script>
+			<script language=JavaScript
+				src="${pageContext.request.contextPath}/resources/js/player.js"></script>
 		</div>
 		<div id="pop1">
 			<div class="pop1-txt">
@@ -294,12 +307,14 @@
 				<div class="pop2-main">
 					<div class="pop2-main-top">
 						<div class="main-top-pic"></div>
-						<input type="text" class="main-top-text" placeholder="오늘의 운동은 어떠셨나요?" />
+						<input type="text" class="main-top-text"
+							placeholder="오늘의 운동은 어떠셨나요?" />
 					</div>
 					<div class="pop2-main-bottom">
 						<div class="container">
-							<label for="file" class="main-bottom-btn1">사진 업로드</label> <input type="file" id="file"
-								name="file" onchange="setThumbnail(event);" />
+							<label for="file" class="main-bottom-btn1">사진 업로드</label> <input
+								type="file" id="file" name="file"
+								onchange="setThumbnail(event);" />
 						</div>
 						<div class="main-bottom-btn2">몸무게</div>
 					</div>
