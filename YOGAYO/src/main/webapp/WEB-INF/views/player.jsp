@@ -169,7 +169,7 @@
 										</div>
 										<div class="order-title">
 											<div>${pose2.title}</div>
-											<div>0:30</div>
+											<div></div>
 										</div>
 									</div>
 								</li>

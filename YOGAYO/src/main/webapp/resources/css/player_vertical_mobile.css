@@ -60,7 +60,7 @@ main {
 }
 
 .course-title{
-	margin-left:20px;
+	margin-left:30px;
 }
 
 .main-course-title {
@@ -73,7 +73,7 @@ main {
 	justify-content: space-between;
 	align-items: center;
 	height: 30px;
-	margin-left:20px;
+	margin-left:30px;
 }
 
 
@@ -92,8 +92,8 @@ main {
 
 .user-info {
 	position:relative;
-	height: 70px;
-	width: 230px;
+	height: 60px;
+	width: 130px;
 	border-radius: 25px;
 	border: 1px solid #dddddd;
 	background-color: white;
@@ -101,13 +101,16 @@ main {
 	justify-content: space-evenly;
 	align-items: center;
 	margin-top:10px;
-	margin-left:10px;
+	margin-left:25px;
+	display:flex;
+	justify-content:space-evenly;
+	align-items:center;
 }
 
 .user-image {
 	display: display;
-	width: 60px;
-	height: 60px;
+	width: 40px;
+	height: 40px;
 	border-radius: 30px;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -116,9 +119,6 @@ main {
 
 .user-detail {
 	display: display;
-	width: 130px;
-	height: 70px;
-	padding: 15px 0 0 3px;
 }
 
 .user-name {
@@ -127,6 +127,7 @@ main {
 }
 
 .user-introduction {
+	display:none;
 	margin-top: 7px;
 	font-size: 14px;
 }
@@ -134,8 +135,7 @@ main {
 .course-list {
 	top:300px;
 	position:relative;
-	width: 400px;
-	border: 1px solid #dddddd;
+	width: 350px;
 	background-color: white;
 	box-shadow: var(--light-shadow);
 }
@@ -161,16 +161,12 @@ main {
 }
 
 .scroll-overflow {
-	/* border:1px solid blue; */
+	/*border:1px solid blue; */
+	border: 1px solid #dddddd;
 	position:relative;
-	width:398px;
+	width:350px;
 	height: 562px;
 	background-color: #f9f9f9;
-	border-bottom: 1px solid #dddddd;
-}
-
-.scroll-overflow::-webkit-scrollbar {
-	
 }
 
 .scroll-overflow::-webkit-scrollbar-thumb {
@@ -195,7 +191,7 @@ main {
 }
 
 to {
-	width: 398px;
+	width: 348px;
 }
 
 }
@@ -211,7 +207,7 @@ to {
 }
 
 .order-wrapper {
-	width: 398px;
+	width: 345px;
 	height: 70px;
 	display: flex;
 	justify-content: space-around;
@@ -249,7 +245,7 @@ to {
 
 .order-title {
 	display: inline-block;
-	width: 260px;
+	width: 220px;
 	height: 70px;
 	display: flex;
 	align-items: center;
@@ -641,10 +637,6 @@ to {
 input {
 	outline-style: none;
 }
-
-
-
-
 
 .container input[type="file"]{
 	position: absolute;
