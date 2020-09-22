@@ -77,6 +77,12 @@ public class AdminDAOImpl implements AdminDAO{
 	public List<AdminVo> selectAllPose() throws Exception {
 		return mybatis.selectList("AdminDAO.selectAllPose");
 	}
+
+	@Override
+	public UserVo selectUserByuNum(UserVo vo) throws Exception {
+
+		return mybatis.selectOne("AdminDAO.selectUserByuNum", vo);
+	}
 	
 	
 	

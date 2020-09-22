@@ -44,8 +44,6 @@
 					<div class="user_birthday col">생년월일</div>
 					<div class="user_gender col">성별</div>
 					<div class="user_profi col">숙련도</div>
-					<div class="user_feed col">후기</div>
-					<div class="user_comment col">댓글</div>
 					<div class="user_regdate col">가입일</div>
 				</li>
 				<c:forEach var="i" items="${userList}">
@@ -56,7 +54,7 @@
 						</div>
 						<div class="user_number">${i.uNum }</div>
 						<div class="user_id">${i.id }</div>
-						<div class="user_name">${i.name }</div>
+						<div class="user_name"><a href="memberdetail?usernum=${i.uNum}">${i.name }</a></div>
 						<div class="user_birthday">${i.bDate }</div>
 						<div class="user_gender">
 							<c:set var="gender" value="${i.gender }" />
@@ -67,12 +65,6 @@
 							<c:if test="${i.profiLevel == '5'}">상</c:if>
 							<c:if test="${i.profiLevel == '3'}">중</c:if>
 							<c:if test="${i.profiLevel == '1'}">하</c:if>
-						</div>
-						<div class="user_feed">
-							<a href="memberfeed?usernum=${i.uNum }">후기</a>
-						</div>
-						<div class="user_comment">
-							<a href="membercomment?usernum=${i.uNum }">댓글</a>
 						</div>
 						<div class="user_regdate">${i.regDate }</div>
 					</li>

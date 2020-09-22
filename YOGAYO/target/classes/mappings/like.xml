@@ -10,22 +10,29 @@
 	</insert>
 
 	<select id="likeOrNot" parameterType="LikeVo" resultType="int">
-		SELECT COUNT(*) FROM LIKEY WHERE CRSNUM=#{crsNum} AND UNUM=#{uNum};
+		SELECT
+		COUNT(*) FROM LIKEY WHERE CRSNUM=#{crsNum} AND UNUM=#{uNum};
 	</select>
 
 	<delete id="dislike" parameterType="LikeVo">
-		DELETE FROM LIKEY WHERE CRSNUM=#{crsNum} AND UNUM=#{uNum};
+		DELETE FROM
+		LIKEY
+		WHERE
+		LNUM=(SELECT LNUM FROM (SELECT LNUM FROM LIKEY WHERE CRSNUM=#{crsNum} AND
+		UNUM=#{uNum}) tmp);
 	</delete>
-	
+
 	<select id="likeCount" parameterType="LikeVo" resultType="int">
-		SELECT COUNT(*) FROM LIKEY WHERE CRSNUM=#{crsNum}
+		SELECT
+		COUNT(*) FROM LIKEY WHERE CRSNUM=#{crsNum}
 	</select>
-	
+
 	<select id="countCourse" parameterType="LikeVo" resultType="int">
 		SELECT CRSNUM FROM LIKEY WHERE UNUM=#{uNum}
 	</select>
-	
-	<select id="selectAllCousre" parameterType="LikeVo" resultType="int">
+
+	<select id="selectAllCousre" parameterType="LikeVo"
+		resultType="int">
 		SELECT CRSNUM FROM LIKEY
 	</select>
 

@@ -14,8 +14,8 @@
 	crossorigin="anonymous"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/sign-up.css">
+<link rel="stylesheet" type="text/css"   href="${pageContext.request.contextPath}/resources/css/sign-up.css" media="all and (min-width:600px) and (max-width:2000px)">
+ <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/sign-up-mobile.css" media="all and (min-width:400px) and (max-width:599px)">
 </head>
 
 

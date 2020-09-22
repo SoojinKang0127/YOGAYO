@@ -72,6 +72,9 @@
 		SELECT PNUM as pNum, IMG_PATH as img, TITLE as pTitle, TIME as time, DIFFICULTY as difficulty FROM POSE;
 	</select>
 	
+	<select id="selectUserByuNum" resultType="UserVo">
+		SELECT * FROM USER WHERE UNUM = #{uNum};
+	</select>
 	
 
 </mapper>

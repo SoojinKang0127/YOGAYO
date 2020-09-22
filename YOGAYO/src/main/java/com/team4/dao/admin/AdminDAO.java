@@ -18,5 +18,6 @@ public interface AdminDAO {
 	public List<AdminVo> selectAllNewsletterSubscriber() throws Exception;
 	public int countAllSubscriber() throws Exception;
 	public List<AdminVo> selectAllPose() throws Exception;
+	public UserVo selectUserByuNum(UserVo vo) throws Exception;
 
 }

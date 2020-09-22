@@ -74,5 +74,11 @@ public class AdminServiceImpl implements AdminService {
 		return dao.selectAllPose();
 	}
 
+
+	@Override
+	public UserVo selectUserByuNum(UserVo vo) throws Exception {
+		return dao.selectUserByuNum(vo);
+	}
+
 	 
 }

@@ -21,11 +21,12 @@
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="com.team4.vo.UserVo"/>
 <fullyQualifiedTypeName name="com.team4.user.dao.UserServiceImpl"/>
 <fullyQualifiedTypeName name="com.team4.vo.AdminVo"/>
-<fullyQualifiedTypeName name="com.team4.dao.admin.AdminServiceImpl"/>
 <fullyQualifiedTypeName name="javax.mail.internet.InternetAddress"/>
 <fullyQualifiedTypeName name="com.team4.test.SendNewsLetter"/>
 <fullyQualifiedTypeName name="com.team4.vo.PoseVo"/>
+<fullyQualifiedTypeName name="com.team4.resource.Rcontroller"/>
+<fullyQualifiedTypeName name="com.team4.vo.UserVo"/>
+<fullyQualifiedTypeName name="com.team4.dao.admin.AdminServiceImpl"/>
 </qualifiedTypeNameHistroy>
