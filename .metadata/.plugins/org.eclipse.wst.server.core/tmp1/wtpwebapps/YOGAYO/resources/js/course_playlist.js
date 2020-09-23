@@ -1,5 +1,6 @@
 $(function() {	
 	
+	console.log("aa")
 
 	var request = new XMLHttpRequest();
 	var arr = $('.course_search > .textbox')
@@ -134,22 +135,23 @@ $(function() {
 	
 		
 
-		$('.pose_content_box').dblclick(
-				function() {
-					var clone = $(this).clone()
-					clone.insertAfter(click_obj).hide().show('slow');
-					var a = document.getElementById('object1')
-					var formTag = document.getElementById('form_tag')
-
-					a.innerHTML += '<input type="hidden" name="seq'
-							+ $('#sortable_list2').length + '" value="'
-							+ $(this.pnum).val() + '">';
-
-					console.log(a)
-					$('#sortable_list2 .trashBtn').click(function() {
-						$(this).parent().remove();
-					})
-				})//end of dbclick
+//		$('.pose_content_box').dblclick(
+//				function() {
+//					console.log("140")
+//					var clone = $(this).clone()
+//					clone.insertAfter(click_obj).hide().show('slow');
+//					var a = document.getElementById('object1')
+//					var formTag = document.getElementById('form_tag')
+//
+//					a.innerHTML += '<input type="hidden" name="seq'
+//							+ $('#sortable_list2').length + '" value="'
+//							+ $(this.pnum).val() + '">';
+//
+//					console.log(a)
+//					$('#sortable_list2 .trashBtn').click(function() {
+//						$(this).parent().remove();
+//					})
+//				})//end of dbclick
 				
 				
 
@@ -161,6 +163,7 @@ $(function() {
 		    } else {
 		        // compare first click to this click and see if they occurred within double click threshold
 		        if (((new Date().getTime()) - touchtime) < 800) {
+		        	console.log("!!")
 		            // double click occurred
 		        	var clone = $(this).clone()
 					clone.insertAfter(click_obj).hide().show('slow');
