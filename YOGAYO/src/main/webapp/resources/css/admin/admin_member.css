@@ -8,6 +8,14 @@ body {
 	align-items: center;
 }
 
+a{
+	text-decoration: underline;
+	color:#1363f4;
+	font-weight: 800;
+	
+}
+
+
 .logo-wrapper {
 	width: 150px;
 	height: 150px;
@@ -121,7 +129,7 @@ header {
 	border-top: 0.5px dotted black;
 	border-left: 0.5px dotted black;
 	border-bottom: 0.5px dotted black;
-	padding: 30px 50px 30px 50px;
+/* 	padding: 30px 50px 30px 50px; */
 	transition: all 0.2s ease-in-out;
 }
 
@@ -199,29 +207,32 @@ main {
 	height: 350px;
 }
 
-.user_avatar img {
-	width: 50px;
-	border-radius: 50%;
-}
+
 
 .member_list {
 	display: flex;
-	width: 100%;
-	justify-content: center;
-	height: 75px;
+	width:1160px;
+	border-bottom:1px solid black;
 }
 
-.member_list:hover {
-	background-color: rgba(244, 244, 252, 0.664);
+.member_list:hover{
+	background-color: #eaf0ff;
 }
+
+.member_table{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 
 .member_list div {
-	border-bottom: 1px solid black;
+	/* border-bottom: 1px solid black; */
 	padding: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 75px;
 }
 
 .idx {
@@ -267,3 +278,21 @@ main {
 .user_regdate {
 	width: 140px;
 }
+
+.user_pic{
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	border-bottom:none;
+
+}
+
+.user_pic img {
+	width:100%;
+	min-width: 80px;
+}
+

@@ -50,11 +50,15 @@
 					<li class="member_list">
 						<div class="idx">1</div>
 						<div class="user_avatar">
-							<img src="${pageContext.request.contextPath}/${i.img }" />
+							<div class="user_pic">
+								<img src="${pageContext.request.contextPath}/${i.img }" />
+							</div>
 						</div>
 						<div class="user_number">${i.uNum }</div>
 						<div class="user_id">${i.id }</div>
-						<div class="user_name"><a href="memberdetail?usernum=${i.uNum}">${i.name }</a></div>
+						<div class="user_name">
+							<a href="memberdetail?usernum=${i.uNum}">${i.name }</a>
+						</div>
 						<div class="user_birthday">${i.bDate }</div>
 						<div class="user_gender">
 							<c:set var="gender" value="${i.gender }" />

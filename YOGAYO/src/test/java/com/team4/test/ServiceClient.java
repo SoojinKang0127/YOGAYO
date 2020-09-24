@@ -45,12 +45,11 @@ import com.team4.vo.UserVo;
 //import com.team4.vo.Vo;
 
 public class ServiceClient extends Rcontroller {
-	
 
 	public static void main(String[] args) throws Exception {
-//		Rcontroller rc = new Rcontroller();
-//		System.out.println(rc.getKeywordsByUnum(1058));
-		
-}
+		Rcontroller rc = new Rcontroller();
+		System.out.println(rc.getKeywordsByUnum(1062));
+
+	}
 
 }

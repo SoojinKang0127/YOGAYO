@@ -26,7 +26,7 @@ import net.sf.json.JSONArray;
 @Controller
 public class AdminPageController {
 
-	AdminServiceImpl service = new AdminServiceImpl();
+	
 
 	@RequestMapping(value = "/admin/", method = RequestMethod.GET)
 	public String adminHome(Model model) throws Exception {
@@ -47,19 +47,35 @@ public class AdminPageController {
 	@RequestMapping(value = "/admin/memberdetail", method = RequestMethod.GET)
 	public String getMemberDetail(Model model, @RequestParam("usernum") int uNum) throws Exception {
 
+		AdminServiceImpl service = new AdminServiceImpl();
+		
 		UserVo vo = new UserVo();
 		vo.setuNum(uNum);
-
 		model.addAttribute("user", service.selectUserByuNum(vo));
-
+		model.addAttribute("likeNum", service.countLikeByuNum(vo));
+		model.addAttribute("commentNum", service.countCommentByuNum(vo));
+		model.addAttribute("feedNum", service.countFeedByuNum(vo));
+		model.addAttribute("courseNum", service.countCourseByuNum(vo));
+		model.addAttribute("likeList", service.selectLikeByuNum(vo));
+		model.addAttribute("commentList", service.selectCommentByuNum(vo));
+		model.addAttribute("courseList", service.selectCourseByuNum(vo));
+		model.addAttribute("feedList", service.selectFeedByuNum(vo));
+	
 		Rcontroller rc = new Rcontroller();
-		System.out.println(rc.getKeywordsByUnum(uNum));
+		List<String> keywordList = rc.getKeywordsByUnum(uNum);
+		model.addAttribute("keywordList", keywordList);
+		
+		
+		
+		
 
 		return "/admin/admin-member-detail";
 	};
 
 	@RequestMapping(value = "/admin/comment", method = RequestMethod.GET)
 	public String getComment(Model model) throws Exception {
+		
+		AdminServiceImpl service = new AdminServiceImpl();
 
 		List<AdminVo> list = service.getAllComment();
 		model.addAttribute("commentList", list);
@@ -70,6 +86,8 @@ public class AdminPageController {
 	@RequestMapping(value = "/admin/commentdelete", method = RequestMethod.GET)
 	public String deleteComment(ModelAndView mav, @RequestParam("cmtnum") String cmtnum) throws Exception {
 
+		AdminServiceImpl service = new AdminServiceImpl();
+		
 		AdminVo vo = new AdminVo();
 		vo.setCmtNum(Integer.parseInt(cmtnum));
 		vo.setParent(Integer.parseInt(cmtnum));
@@ -87,6 +105,8 @@ public class AdminPageController {
 
 	@RequestMapping(value = "/admin/course", method = RequestMethod.GET)
 	public String course(Model model) throws Exception {
+		
+		AdminServiceImpl service = new AdminServiceImpl();
 
 		List<AdminVo> list = service.getAllCourse();
 		model.addAttribute("courseList", list);
@@ -102,6 +122,8 @@ public class AdminPageController {
 	@RequestMapping(value = "/admin/courseupdate", method = RequestMethod.GET)
 	public String updateCourse(Model model, @RequestParam("crsnum") String crsnum) throws Exception {
 
+		AdminServiceImpl service = new AdminServiceImpl();
+			
 		AdminVo vo = new AdminVo();
 		vo.setCrsNum(Integer.parseInt(crsnum));
 		AdminVo resultVo = service.getOneCourseByCrsnum(vo);
@@ -117,6 +139,8 @@ public class AdminPageController {
 			@RequestParam("seq2") int seq2Num, @RequestParam("seq3") int seq3Num, @RequestParam("seq4") int seq4Num,
 			@RequestParam("seq5") int seq5Num, @RequestParam("seq6") int seq6Num, @RequestParam("seq7") int seq7Num,
 			@RequestParam("seq8") int seq8Num) throws Exception {
+		
+		AdminServiceImpl service = new AdminServiceImpl();
 
 		AdminVo vo = new AdminVo();
 		vo.setCrsNum(crsNum);

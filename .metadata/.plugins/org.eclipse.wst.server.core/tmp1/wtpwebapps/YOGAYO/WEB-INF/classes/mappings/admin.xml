@@ -47,34 +47,94 @@
 
 	<update id="courseUpdate" parameterType="AdminVo">
 		UPDATE COURSE SET TITLE
-		= #{crsTitle}, DSCRT = #{crsDscrt}, MATERIAL = #{material}, SEQ1 = #{seq1Num}, SEQ2 = #{seq2Num}, SEQ3 = #{seq3Num},
-		SEQ4 = #{seq4Num}, SEQ5 = #{seq5Num}, SEQ6 = #{seq6Num}, SEQ7 = #{seq7Num}, SEQ8 = #{seq8Num}
+		= #{crsTitle}, DSCRT = #{crsDscrt}, MATERIAL = #{material}, SEQ1 =
+		#{seq1Num}, SEQ2 = #{seq2Num}, SEQ3 = #{seq3Num},
+		SEQ4 = #{seq4Num},
+		SEQ5 = #{seq5Num}, SEQ6 = #{seq6Num}, SEQ7 = #{seq7Num}, SEQ8 =
+		#{seq8Num}
 		WHERE CRSNUM = #{crsNum};
 	</update>
-	
+
 	<select id="getLastUnum" resultType="int">
 		SELECT MAX(UNUM) FROM USER
 	</select>
-	
+
 	<insert id="subscribeNewsletter" parameterType="AdminVo">
-		INSERT INTO NEWSLETTER(UNUM, NAME, ID, STATEMENT) VALUES(#{uNum}, #{name}, #{id}, 'Y'); 
+		INSERT INTO
+		NEWSLETTER(UNUM, NAME, ID, STATEMENT) VALUES(#{uNum}, #{name}, #{id},
+		'Y');
 	</insert>
-	
+
 	<select id="selectAllNewsletterSubscriber" resultType="AdminVo">
-		SELECT * FROM NEWSLETTER;
+		SELECT *
+		FROM NEWSLETTER;
 	</select>
-	
+
 	<select id="countAllSubscriber" resultType="int">
-		SELECT COUNT(*) FROM NEWSLETTER;
+		SELECT COUNT(*) FROM
+		NEWSLETTER;
 	</select>
-	
+
 	<select id="selectAllPose" resultType="AdminVo">
-		SELECT PNUM as pNum, IMG_PATH as img, TITLE as pTitle, TIME as time, DIFFICULTY as difficulty FROM POSE;
+		SELECT PNUM as pNum,
+		IMG_PATH as img, TITLE as pTitle, TIME as time, DIFFICULTY as
+		difficulty FROM POSE;
 	</select>
-	
-	<select id="selectUserByuNum" resultType="UserVo">
+
+	<select id="selectUserByuNum" parameterType="UserVo"
+		resultType="UserVo">
 		SELECT * FROM USER WHERE UNUM = #{uNum};
 	</select>
-	
+
+
+	<select id="countLikeByuNum" resultType="int">
+		SELECT COUNT(LNUM)
+		FROM
+		LIKEY WHERE UNUM = #{uNum};
+	</select>
+
+	<select id="countCommentByuNum" resultType="int">
+		SELECT COUNT(CMTNUM)
+		FROM COMMENT WHERE UNUM = #{uNum};
+	</select>
+
+	<select id="countFeedByuNum" resultType="int">
+		SELECT COUNT(FNUM)
+		FROM
+		FEED WHERE UNUM = #{uNum};
+	</select>
+
+	<select id="countCourseByuNum" resultType="int">
+		SELECT COUNT(CRSNUM)
+		FROM COURSE WHERE UNUM = #{uNum};
+	</select>
+
+	<select id="selectLikeByuNum" parameterType="UserVo"
+		resultType="AdminVo">
+		SELECT L.LNUM as lNum, L.UNUM as uNum, L.CRSNUM as crsNum,
+		C.TITLE as crsTitle, C.IMGPATH as img
+		FROM COURSE C JOIN LIKEY L ON C.CRSNUM = L.CRSNUM WHERE L.UNUM = #{uNum};
+	</select>
+
+	<select id="selectCommentByuNum" parameterType="UserVo"
+		resultType="CommentVo">
+		SELECT * FROM COMMENT WHERE UNUM = #{uNum};
+	</select>
+
+	<select id="selectCourseByuNum" parameterType="UserVo"
+		resultType="CourseVo">
+		SELECT * FROM COURSE WHERE UNUM = #{uNum};
+	</select>
+
+	<select id="selectFeedByuNum" parameterType="UserVo"
+		resultType="AdminVo">
+		SELECT
+		F.UNUM as uNum, F.SLEVEL as sLevel, F.DLEVEL as dLevel, F.CONTEXT as
+		context, F.UIMG1 as img, F.WEIGHT as weight, F.REGDATE as regDate,
+		C.TITLE as crsTitle
+		FROM FEED F JOIN COURSE C ON F.CRSNUM = C.CRSNUM WHERE F.UNUM = #{uNum} order by REGDATE desc;
+	</select>
+
+
 
 </mapper>
