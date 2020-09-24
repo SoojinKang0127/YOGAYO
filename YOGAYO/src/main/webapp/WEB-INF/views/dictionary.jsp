@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <jsp:include page="header/header_black.jsp" />
+   <jsp:include page="header/header_black.jsp" />
     <main>
         <section id='section1'>
             <div class='s1_content'>

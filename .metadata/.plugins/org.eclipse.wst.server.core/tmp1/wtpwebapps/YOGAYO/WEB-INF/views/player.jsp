@@ -10,10 +10,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>course player</title>
 
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player.css"  media="all and (min-width:412px) and (max-width:2000px)">
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player_mobile.css" media="all and (min-width:300px) and (max-width:411px)">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player.css"  media="all and (min-width:740px) and (max-width:2000px)">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player_mobile_horizontal.css" media="all and (min-width:600px) and (max-width:739px)">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player-rSlider.min_mobile-horizontal.css" media="all and (min-width:600px) and (max-width:739px)">
 	<link rel="stylesheet" type="text/css"
-		href="${pageContext.request.contextPath}/resources/css/player-rSlider.min.css">
+		href="${pageContext.request.contextPath}/resources/css/player-rSlider.min.css" media="all and (min-width:740px) and (max-width:2000px)">
 
 	<script src="https://kit.fontawesome.com/7bad96e258.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -84,9 +85,9 @@
 			value="" id="context"> <input type="hidden" name="weight" value="" id="weight">
 
 		<div class="all-wrapper">
-			<header class="header"	>
+			<!-- <header class="header"	>
 				
-			</header>
+			</header> -->
 			<main>
 				<div class="main-wrapper">
 					<div class="course-main">

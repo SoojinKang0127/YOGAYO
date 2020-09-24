@@ -12,86 +12,31 @@ main {
 	height: 100%;
 }
 
-.all-wrapper {
-	
-}
-
-.header{
-	display: none;
-}
-
-.logo-wrapper {
-	width: 150px;
-	padding-top: 25px;
-	padding-left: 25px;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.box-div {
-	width: 100px;
-	height: 100px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 2px solid rgb(0, 0, 0);
-	transition: all 0.3s linear;
-	transform: perspective(400px) rotateX(80deg);
-}
-
-.logo-wrapper:hover .box-div {
-	transform: none;
-}
-
-.logo-wrapper span {
-	color: rgb(0, 0, 0);
-	font-size: 20px;
-	font-weight: 600;
-	position: absolute;
-	top: 46px;
-	opacity: 1;
-	transition: opacity 0.3s ease-in-out 0s;
-	display: block;
-}
-
-.logo-wrapper:hover span {
-	opacity: 0;
-	top: 46px;
-}
-
-header>nav_bar {
-	display: inline-block;
-	position: absolute;
-}
-
 .main-wrapper {
 	position: absolute;
-	/* top: 30px; */
-	/* width: 100%; */
-	/* height: 820px; */
+	/* top: 100px; */
+	width: 100%;
+	height: 411px;
 	background-color: #f9f9f9;
 	display: flex;
-	/* padding-left: 95px; */
-	/* padding-right: 80px; */
-   /* -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-    TRANSFORM: ROTATE(90DEG);
-    border: 1px solid red;
-
+	/* padding-left: 95px;
+	padding-right: 80px; */
+	border: 3px solid red;
 }
 
 .course-main {
-	width: 450px;
-	height: 720px;
-	margin: 0px 30px 0px 10px;
+	width: 100%;
+	height: 411px;
+	/* margin: 0px 30px 0px 10px; */
+	border: 3px solid orange;
 }
 
 .image-wrapper {
 	width: inherit;
-	height: 620px;
+	height: 411px;
 	margin-bottom: 7px;
 	overflow: hidden;
+	border: 3px solid yellow;
 }
 
 .course-image {
@@ -103,7 +48,6 @@ header>nav_bar {
 	background-position-y: -600px;
 	display: block;
 	margin: auto;
-	/* border: 1px solid red; */
 }
 
 .info-wrapper {
@@ -111,6 +55,8 @@ header>nav_bar {
 	height: 75px;
 	padding-top: 10px;
 	border-bottom: 1px solid #dddddd;
+	border: 3px solid pink;
+	display: none;
 }
 
 .main-course-title {
@@ -146,6 +92,10 @@ header>nav_bar {
 	font-weight: 500;
 }
 
+
+
+
+/* ---------------------user----------------------- */
 .user-info {
 	height: 100px;
 	width: 240px;
@@ -153,9 +103,10 @@ header>nav_bar {
 	border: 1px solid #dddddd;
 	margin-top: 30px;
 	background-color: white;
-	display: flex;
+	/* display: flex; */
 	justify-content: space-evenly;
 	align-items: center;
+	display: none;
 }
 
 .user-image {
@@ -184,14 +135,20 @@ header>nav_bar {
 	margin-top: 7px;
 	font-size: 14px;
 }
+/* ------------------end user----------------------- */
 
+
+
+/* -------------------course ------------------------ */
 .course-list {
+	display: none;
 	height: inherit;
-	width: 400px;
+	width: 250px;
 	border: 1px solid #dddddd;
 	background-color: white;
 	box-shadow: var(--light-shadow);
 	border-radius: 10px;
+	border: 3px solid green;
 }
 
 .list-header {
@@ -214,10 +171,12 @@ header>nav_bar {
 }
 
 .scroll-overflow {
-	height: 650px;
+	height: 250px;
 	overflow: auto;
 	background-color: #f9f9f9;
 	border-bottom: 1px solid #dddddd;
+	border: 3px solid hotpink;
+	width: 100%;
 }
 
 .scroll-overflow::-webkit-scrollbar {
@@ -255,14 +214,17 @@ to {
 .order-li {
 	list-style: none;
 	/* padding-left: 0; */
+	width: 100%;
 }
 
 .order-ul {
 	padding-left: 0;
+	width: 100%;
+	border: 3px solid aqua;
 }
 
 .order-wrapper {
-	width: 398px;
+	width: 100%;
 	height: 70px;
 	display: flex;
 	justify-content: space-around;
@@ -331,13 +293,14 @@ to {
 
 .list-footer {
 	bottom: 0px;
-	height: 95px;
+	height: 80px;
 	background-color: #f9f9f9;
 	border-radius: 0 0 10px 10px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	padding: 0 15px 0 15px;
+	border:  3px solid purple;
 }
 
 .play-button {
@@ -369,14 +332,18 @@ to {
 	font-weight: 500;
 	font-size: 18px;
 }
+/* -------------------end course------------------ */
+
+
+
 
 #pop1 {
-	width: 300px;
+	width: 340px;
 	height: 80px;
 	background-color: white;
 	position: absolute;
-/* 	top: 400px;
-	left: 700px; */
+	top: 180px;
+	left: 180px;
 	text-align: center;
 	border: 1px solid white;
 	border-radius: 15px;
@@ -415,25 +382,30 @@ to {
 	color: white;
 }
 
+/* ------------------------------------ pop2-------------------------------- */
 #pop2 {
-	width: 400px;
-    height: 850px;
-    top: 100px;
+	width: 340px;
+	height: 375px;
 	background-color: white;
 	position: absolute;
-/* 	top: 100px;
-	left: 600px; */
+	top: 23px;
+	left: 220px;
 	text-align: center;
 	/* border: 1px solid #febe2e; */
 	box-shadow: var(- -dark-shadow);
 	border-radius: 50px;
 }
 
+.pop2-content{
+	height: 100%;
+}
+
 .pop2-welcome {
 	/* border: 1px solid red; */
-	height: 80px;
-	line-height: 80px;
-	font-size: 20px;
+	width: 100%;
+	height: 6%;
+	line-height: 38px;
+	font-size: 11px;
 }
 
 .pop2-welcome-hr {
@@ -442,18 +414,19 @@ to {
 
 .pop2-stat-hr {
 	width: 90%;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .pop2-stat {
 	/* border: 1px solid blue; */
-	height: 150px;
+	height: 18%;
 }
 
 .stat-1 {
 	display: flex;
-	margin: 50px;
-	margin-top: 20px;
+	margin: 0px 50px 0px 50px;
+	height: 50%;
+	/* border: 1px solid pink; */
 }
 
 .stat-1-status {
@@ -462,15 +435,15 @@ to {
 }
 
 .stat-1-txt {
-	/* border: 1px solid red; */
-	width: 20%;
-	font-size: 17px;
+	/* border: 1px solid yellow; */
+	width: 35%;
+	font-size: 14px;
 	line-height: 30px;
-	margin-left: 80px;
+	margin-left: 88px;
 }
 
 .stat-1-num {
-	/* border: 1px solid red; */
+	/* border: 1px solid orange; */
 	height: 20px;
 	font-size: 19px;
 	letter-spacing: 30px;
@@ -479,25 +452,26 @@ to {
 
 .stat-2 {
 	display: flex;
-	margin: 50px;
-	margin-bottom:20px;
+	margin: 0px 50px 0px 50px;
+	height: 50%;
+	/* border: 1px solid red; */
 }
 
 .stat-2-status {
-	/* border: 1px solid red; */
+	/* border: 1px solid yellow; */
 	width: 66.6%;
 }
 
 .stat-2-txt {
-	/* border: 1px solid red; */
-	width: 25%;
-	font-size: 17px;
+	/* border: 1px solid orange; */
+	width: 55%;
+	font-size: 14px;
 	line-height: 30px;
 	margin-left: 60px;
 }
 
 .stat-2-num {
-	/* border: 1px solid red; */
+	/* border: 1px solid pink; */
 	height: 20px;
 	font-size: 19px;
 	letter-spacing: 30px;
@@ -508,8 +482,8 @@ to {
 	border: 1px solid #f6f5f3;
 	background-color: #f6f5f3;
 	box-shadow: var(- -dark-shadow);
-	width: 440px;
-	height: 240px;
+	width: 280px;
+	height: 30%;
 	margin-left: 30px;
 	border-radius: 30px;
 }
@@ -519,25 +493,27 @@ to {
 }
 
 .main-top-pic {
-	/* border: 1px solid red; */
+	/* border: 1px solid red;
 	width: 70px;
-	height: 70px;
+	height: 10px;
 	margin-left: 20px;
 	margin-top: 20px;
 	border-radius: 70px;
 	background-size: 90px;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center; */
 }
 
 .main-top-text {
 	background-color: #f6f5f3;
 	border: 0;
-	margin-left: 30px;
-	margin-top: 10px;
-	height: 150px;
-	width: 300px;
+	/* margin-left: 30px; */
+	/* margin-top: 10px; */
+	height: 80px;
+	width: 100%;
 	border: 150px;
+	padding-left: 20px;
+	border-radius: 30px
 }
 
 .main-top-text::placeholder {
@@ -550,6 +526,9 @@ to {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	width: 100%;
+	height: 0%;
+	padding: 0px 15px;
 }
 
 .main-bottom-btn1 {
@@ -562,7 +541,7 @@ to {
 	border-radius: 10px;
 	line-height: 40px;
 	color: black;
-	font-size: 15px;
+	font-size: 12px;
 }
 
 .main-bottom-btn1:hover {
@@ -578,7 +557,8 @@ to {
 	border-radius: 10px;
 	line-height: 40px;
 	color: black;
-	font-size: 15px;
+	font-size: 12px;
+	width: 32%;
 }
 
 .main-bottom-btn2:hover {
@@ -586,9 +566,9 @@ to {
 }
 
 .userImageContainer {
-	margin-top:20px;
-	height: 200px;
-	padding:0 30px 0 30px;
+	/* margin-top:20px; */
+	height: 22%;
+	/* padding:0 30px 0 30px; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -596,14 +576,15 @@ to {
 
 
 .userImage {
-	width: 260px;
-	height:200px;
+	width: 36%;
+	height:90%;
 	border-radius:10px;
 	box-shadow: var(--light-shadow);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	overflow:hidden;
+	margin-top:2px;
 }
 
 
@@ -615,10 +596,10 @@ to {
 
 .pop2-btn {
 	border: 1px solid #febe2e;
-	width: 400px;
-	height: 40px;
-	margin-top: 30px;
-	margin-left: 50px;
+	width: 30%;
+	height: 11%;
+	margin-top: 5px;
+	margin-left: 120px;
 	line-height: 40px;
 	border-radius: 10px;
 	color: #febe2e;
@@ -628,14 +609,17 @@ to {
 	background-color: #febe2e;
 	color:white;
 }
+/* ---------------------------------end pop2-------------------------------- */
+
+
 
 #pop3 {
 	width: 200px;
 	height: 100px;
 	background-color: white;
 	position: absolute;
-	top: 400px;
-	left: 1200px;
+	top: 180px;
+	left: 250px;
 	text-align: center;
 	/* border: 1px solid #febe2e; */
 	box-shadow: var(--dark-shadow);
@@ -695,7 +679,9 @@ input {
 }
 
 
-
+.container{
+	width: 32%;
+}
 
 
 .container input[type="file"]{
@@ -715,7 +701,8 @@ input {
     cursor: pointer;
     margin-left:0;
     margin-top:0;
-
+	width: 100%;
+	font-size: 12px;
 }
 
 .hiding{
@@ -735,6 +722,4 @@ color:  #fb3958;
 
 .fas.fa-heart{
 	color:  #fb3958;
-	}
-
-
+}
