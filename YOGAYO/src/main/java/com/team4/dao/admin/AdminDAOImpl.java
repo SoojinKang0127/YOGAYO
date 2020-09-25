@@ -128,6 +128,32 @@ public class AdminDAOImpl implements AdminDAO{
 	public List<AdminVo> selectFeedByuNum(UserVo vo) throws Exception {
 		return mybatis.selectList("AdminDAO.selectFeedByuNum", vo);
 	}
+
+	@Override
+	public int countFemaleUser() throws Exception {
+		return mybatis.selectOne("AdminDAO.countFemaleUser");
+	}
+
+	@Override
+	public int countMaleUser() throws Exception {
+		return mybatis.selectOne("AdminDAO.countMaleUser");
+	}
+
+	@Override
+	public AdminVo countByLevel() throws Exception {
+		return mybatis.selectOne("AdminDAO.countByLevel");
+	}
+
+	@Override
+	public AdminVo ratioPerAge() throws Exception {
+		return mybatis.selectOne("AdminDAO.ratioPerAge");
+	}
+
+	@Override
+	public void deleteNewsletterList(UserVo vo) throws Exception {
+		mybatis.delete("AdminDAO.deleteNewsletterList", vo);
+		mybatis.commit();
+	}
 	
 	
 	

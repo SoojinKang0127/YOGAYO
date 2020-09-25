@@ -32,4 +32,9 @@ public interface AdminService {
 	public List<CommentVo> selectCommentByuNum(UserVo vo) throws Exception;
 	public List<CourseVo> selectCourseByuNum(UserVo vo) throws Exception;
 	public List<AdminVo> selectFeedByuNum(UserVo vo) throws Exception;
+	public int countFemaleUser() throws Exception;
+	public int countMaleUser() throws Exception;
+	public AdminVo countByLevel() throws Exception;
+	public AdminVo ratioPerAge() throws Exception;
+	public void deleteNewsletterList(UserVo vo) throws Exception;
 }

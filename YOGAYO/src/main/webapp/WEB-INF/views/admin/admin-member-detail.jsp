@@ -13,6 +13,9 @@
 <script src="https://kit.fontawesome.com/54919de5bd.js"
 	crossorigin="anonymous"></script>
 <title>ADMIN MEMBER</title>
+<script type="text/javascript">
+	console.log(${feedList}.length)
+</script>
 </head>
 <body>
 	<header>
@@ -22,41 +25,41 @@
 		<div class="temp">
 			<i class="fas fa-times"></i>
 			<div class="pop_up">
-				<ul>
-					<c:forEach var="feed" items="${feedList}">
-						<li class="feed">
-							<div class="sec_first">
-								<div class="user_avatar">
-									<img src="${pageContext.request.contextPath}/${user.img}">
-								</div>
-								<div class="content">
-									<div class="first">
-										<span class="user_name">${user.name}</span> <span
-											class="user_id">${user.id }</span> <span class="reg_date">${feed.regDate }</span>
+					<ul>
+						<c:forEach var="feed" items="${feedList}">
+							<li class="feed">
+								<div class="sec_first">
+									<div class="user_avatar">
+										<img src="${pageContext.request.contextPath}/${user.img}">
 									</div>
-									<div class="second">${feed.crsTitle }</div>
-									<div class="third">${feed.context }</div>
+									<div class="content">
+										<div class="first">
+											<span class="user_name">${user.name}</span> <span
+												class="user_id">${user.id }</span> <span class="reg_date">${feed.regDate }</span>
+										</div>
+										<div class="second">${feed.crsTitle }</div>
+										<div class="third">${feed.context }</div>
+									</div>
 								</div>
-							</div>
-							<div class="sec_second">
-								<div class="feed_img">
-									<img src="${pageContext.request.contextPath}/${feed.img}">
+								<div class="sec_second">
+									<div class="feed_img">
+										<img src="${pageContext.request.contextPath}/${feed.img}">
+									</div>
 								</div>
-							</div>
-							<div class="sec_third">
-								<div class="feed_slevel">
-									<span class="th">만족도</span><span class="value">${feed.sLevel }</span>
+								<div class="sec_third">
+									<div class="feed_slevel">
+										<span class="th">만족도</span><span class="value">${feed.sLevel }</span>
+									</div>
+									<div class="feed_dlevel">
+										<span class="th">체감 난이도</span><span class="value">${feed.dLevel }</span>
+									</div>
+									<div class="feed_weight">
+										<span class="th">몸무게</span><span class="value">${feed.weight }kg</span>
+									</div>
 								</div>
-								<div class="feed_dlevel">
-									<span class="th">체감 난이도</span><span class="value">${feed.dLevel }</span>
-								</div>
-								<div class="feed_weight">
-									<span class="th">몸무게</span><span class="value">${feed.weight }kg</span>
-								</div>
-							</div>
-						</li>
-					</c:forEach>
-				</ul>
+							</li>
+						</c:forEach>
+					</ul>
 			</div>
 			<div class="black_back"></div>
 		</div>
@@ -69,6 +72,10 @@
 			<div class="user_pic">
 				<img src="${pageContext.request.contextPath}/${user.img}">
 			</div>
+			<%-- 			<div class="member_title">
+				<span class="underline">${user.name }님의 관심 KEYWORD</span>
+			</div> --%>
+			<div class="keywords_wrapper"></div>
 			<div class="info">
 				<div class="user_no">
 					<div class="th">회원번호</div>
@@ -208,10 +215,6 @@
 				</div>
 			</div>
 
-			<div class="member_title">
-				<span class="underline">${user.name }님의 관심 KEYWORD</span>
-			</div>
-			<div class="keywords_wrapper"></div>
 
 		</div>
 

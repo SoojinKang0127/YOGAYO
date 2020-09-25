@@ -1,4 +1,4 @@
-//1번 차
+//1번 차트
 
 var ctx = document.getElementById("first_chart_").getContext('2d');
 

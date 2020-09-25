@@ -48,8 +48,73 @@ public class AdminVo {
 	int time;
 	int difficulty;
 	
+	int highLevel;
+	int middleLevel;
+	int lowLevel;
+	
+	int age_10;
+	int age_20;
+	int age_30;
+	int age_40;
+	int age_50;
+	int age_60;
 	
 	
+	
+	public int getAge_10() {
+		return age_10;
+	}
+	public void setAge_10(int age_10) {
+		this.age_10 = age_10;
+	}
+	public int getAge_20() {
+		return age_20;
+	}
+	public void setAge_20(int age_20) {
+		this.age_20 = age_20;
+	}
+	public int getAge_30() {
+		return age_30;
+	}
+	public void setAge_30(int age_30) {
+		this.age_30 = age_30;
+	}
+	public int getAge_40() {
+		return age_40;
+	}
+	public void setAge_40(int age_40) {
+		this.age_40 = age_40;
+	}
+	public int getAge_50() {
+		return age_50;
+	}
+	public void setAge_50(int age_50) {
+		this.age_50 = age_50;
+	}
+	public int getAge_60() {
+		return age_60;
+	}
+	public void setAge_60(int age_60) {
+		this.age_60 = age_60;
+	}
+	public int getHighLevel() {
+		return highLevel;
+	}
+	public void setHighLevel(int highLevel) {
+		this.highLevel = highLevel;
+	}
+	public int getMiddleLevel() {
+		return middleLevel;
+	}
+	public void setMiddleLevel(int middleLevel) {
+		this.middleLevel = middleLevel;
+	}
+	public int getLowLevel() {
+		return lowLevel;
+	}
+	public void setLowLevel(int lowLevel) {
+		this.lowLevel = lowLevel;
+	}
 	public int getsLevel() {
 		return sLevel;
 	}
@@ -290,22 +355,11 @@ public class AdminVo {
 				+ seq3Title + ", seq4Title=" + seq4Title + ", seq5Title=" + seq5Title + ", seq6Title=" + seq6Title
 				+ ", seq7Title=" + seq7Title + ", seq8Title=" + seq8Title + ", sLevel=" + sLevel + ", dLevel=" + dLevel
 				+ ", weight=" + weight + ", pNum=" + pNum + ", pTitle=" + pTitle + ", time=" + time + ", difficulty="
-				+ difficulty + "]";
+				+ difficulty + ", highLevel=" + highLevel + ", middleLevel=" + middleLevel + ", lowLevel=" + lowLevel
+				+ ", age_10=" + age_10 + ", age_20=" + age_20 + ", age_30=" + age_30 + ", age_40=" + age_40
+				+ ", age_50=" + age_50 + ", age_60=" + age_60 + "]";
 	}
 
-
-	
-	
-
-
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }

@@ -13,6 +13,23 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
 <script type="text/javascript"
 	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script type="text/javascript">
+
+	var female = ${femaleCount};
+	var male = ${maleCount}; 
+	
+	var highLevel = ${levelCount.highLevel };
+	var middleLevel = ${levelCount.middleLevel };
+	var lowLevel = ${levelCount.lowLevel };
+	
+	var age_10 = ${ratioPerAge.age_10};
+	var age_20 = ${ratioPerAge.age_20};
+	var age_30 = ${ratioPerAge.age_30};
+	var age_40 = ${ratioPerAge.age_40};
+	var age_50 = ${ratioPerAge.age_50};
+	var age_60 = ${ratioPerAge.age_60};
+
+</script>
 <title>ADMIN MEMBER</title>
 </head>
 <body>
@@ -21,7 +38,7 @@
 	</header>
 	<main>
 		<div class="member_title">
-			<span class="underline">전체 회원 조회</span>
+			<span class="underline">전체 회원 조회 | 총 ${userNum }명</span>
 		</div>
 		<div class="member_chart_section">
 			<div class="chart_wrapper">
@@ -30,6 +47,9 @@
 				</div>
 				<div class="second_chart">
 					<canvas id="second_chart_"></canvas>
+				</div>
+				<div class="third_chart">
+					<canvas id="third_chart_"></canvas>
 				</div>
 			</div>
 		</div>
@@ -46,9 +66,9 @@
 					<div class="user_profi col">숙련도</div>
 					<div class="user_regdate col">가입일</div>
 				</li>
-				<c:forEach var="i" items="${userList}">
+				<c:forEach var="i" items="${userList}" varStatus="status">
 					<li class="member_list">
-						<div class="idx">1</div>
+						<div class="idx">${status.count }</div>
 						<div class="user_avatar">
 							<div class="user_pic">
 								<img src="${pageContext.request.contextPath}/${i.img }" />
@@ -57,7 +77,7 @@
 						<div class="user_number">${i.uNum }</div>
 						<div class="user_id">${i.id }</div>
 						<div class="user_name">
-							<a href="memberdetail?usernum=${i.uNum}">${i.name }</a>
+							<a href="memberdetail?usernum=${i.uNum}">${i.name } ${userNum }</a>
 						</div>
 						<div class="user_birthday">${i.bDate }</div>
 						<div class="user_gender">
@@ -71,6 +91,7 @@
 							<c:if test="${i.profiLevel == '1'}">하</c:if>
 						</div>
 						<div class="user_regdate">${i.regDate }</div>
+					
 					</li>
 
 				</c:forEach>

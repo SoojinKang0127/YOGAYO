@@ -250,6 +250,7 @@ main .pose_section {
 	align-items: center;
 	justify-content: center;
 	font-size: 27px;
+	margin-bottom:50px;
 }
 
 .underline {
@@ -376,3 +377,4 @@ main .pose_section {
 }
 
 };
+

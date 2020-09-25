@@ -40,6 +40,10 @@ public class AdminPageController {
 		AdminServiceImpl service = new AdminServiceImpl();
 		List<UserVo> list = service.selectAllUser();
 		model.addAttribute("userList", list);
+		model.addAttribute("femaleCount", service.countFemaleUser());
+		model.addAttribute("maleCount", service.countMaleUser());
+		model.addAttribute("levelCount", service.countByLevel());
+		model.addAttribute("ratioPerAge", service.ratioPerAge());
 
 		return "/admin/admin-member";
 	};
@@ -175,6 +179,25 @@ public class AdminPageController {
 		model.addAttribute("userList", list);
 
 		return "/admin/admin-newsletter";
+	};
+	
+	@RequestMapping(value = "/admin/newsletterdelete", method = RequestMethod.GET)
+	public String deleteNewsletterList(ModelAndView mav, @RequestParam("usernumber") String uNum) throws Exception {
+
+		AdminServiceImpl service = new AdminServiceImpl();
+		
+		UserVo vo = new UserVo();
+		vo.setuNum(Integer.parseInt(uNum));
+		
+		try {
+			service.deleteNewsletterList(vo);
+			System.out.println("뉴스레터 구독 리스트에서 삭제 성공");
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("ERR! 뉴스레터 구독 리스트에서 삭제 실패!");
+		};
+
+		return "redirect:/admin/newsletter";
 	};
 
 	@RequestMapping(value = "/admin/sendnewsletter", method = RequestMethod.GET)

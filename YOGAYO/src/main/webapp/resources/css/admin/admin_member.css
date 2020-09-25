@@ -177,16 +177,17 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-bottom:30px;
 }
 
 .chart_wrapper {
-	width: 900px;
+	width: 1400px;
 	display: flex;
-	justify-content: space-around;
+	justify-content:center;
 	align-items: center;
 }
 
-.first_chart, .second_chart {
+.first_chart, .second_chart, .third_chart {
 	width: 430px;
 	height: 350px;
 	display: flex;
@@ -194,7 +195,7 @@ main {
 	align-items: center;
 	overflow: hidden;
 	position: relative;
-	border: 1px solid lightgrey;
+/* 	border: 1px solid lightgrey; */
 }
 
 #first_chart_ {
@@ -207,6 +208,10 @@ main {
 	height: 350px;
 }
 
+#third_chart_ {
+	position: absolute;
+	height: 350px;
+}
 
 
 .member_list {

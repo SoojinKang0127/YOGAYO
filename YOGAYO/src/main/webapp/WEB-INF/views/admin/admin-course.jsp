@@ -48,11 +48,11 @@
 		<div class="member_title">
 			<span class="underline">YOGAYO 코스 목록</span>
 		</div>
-		<div class="btnMenu">
+<!-- 		<div class="btnMenu">
 			<div class="create_btn">관리자 코스 만들기</div>
 			<div class="admin_btn">관리자 코스 조회</div>
 			<div class="member_btn">회원 코스 조회</div>
-		</div>
+		</div> -->
 		<div class="course_table">
 			<ul>
 				<c:forEach var="i" items="${courseList }">

@@ -132,5 +132,35 @@ public class AdminServiceImpl implements AdminService {
 		return dao.selectFeedByuNum(vo);
 	}
 
+
+	@Override
+	public int countFemaleUser() throws Exception {
+		return dao.countFemaleUser();
+	}
+
+
+	@Override
+	public int countMaleUser() throws Exception {
+		return dao.countMaleUser();
+	}
+
+
+	@Override
+	public AdminVo countByLevel() throws Exception {
+		return dao.countByLevel();
+	}
+
+
+	@Override
+	public AdminVo ratioPerAge() throws Exception {
+		return dao.ratioPerAge();
+	}
+
+
+	@Override
+	public void deleteNewsletterList(UserVo vo) throws Exception {
+		dao.deleteNewsletterList(vo);
+	}
+
 	 
 }
