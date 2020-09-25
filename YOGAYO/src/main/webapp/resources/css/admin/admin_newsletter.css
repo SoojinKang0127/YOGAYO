@@ -1,4 +1,4 @@
-@import url("reset.css");
+@import url("style.css");
 
 body {
 	width: 100vw;
@@ -268,6 +268,26 @@ main {
 	width: 140px;
 }
 
+.user_delete {
+	width: 70px;
+}
+
+.deleteBtn{
+	color:black;
+	background-color: #ff715d;
+	border-radius:8px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	transition: 0.3s ease-in-out;
+	font-size: 12px;
+	padding: 8px;
+	cursor:pointer;
+
+}
+
+.deleteBtn:hover{
+	background-color: #ff998d;
+}
+
 .mail_content_wrapper {
 	margin-top: 40px;
 	width: 700px;
@@ -303,6 +323,13 @@ main {
 	color: white;
 	cursor: pointer;
 	margin-bottom: 30px;
+	border:none;
+	transition: 0.2s ease-in-out;
+	box-shadow: var(--dark-shadow);
+}
+
+.submit_btn:hover{
+	background-color: #febe2e;
 }
 
 .body {

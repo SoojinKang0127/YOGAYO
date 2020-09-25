@@ -3,6 +3,10 @@ package com.team4.dao.admin;
 import java.util.List;
 
 import com.team4.vo.AdminVo;
+import com.team4.vo.CommentVo;
+import com.team4.vo.CourseVo;
+import com.team4.vo.FeedVo;
+import com.team4.vo.LikeVo;
 import com.team4.vo.PoseVo;
 import com.team4.vo.UserVo;
 
@@ -72,6 +76,90 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public List<AdminVo> selectAllPose() throws Exception {
 		return dao.selectAllPose();
+	}
+
+
+	@Override
+	public UserVo selectUserByuNum(UserVo vo) throws Exception {
+		return dao.selectUserByuNum(vo);
+	}
+
+
+	@Override
+	public int countLikeByuNum(UserVo vo) throws Exception {
+		return dao.countLikeByuNum(vo);
+	}
+
+
+	@Override
+	public int countCommentByuNum(UserVo vo) throws Exception {
+		return dao.countCommentByuNum(vo);
+	}
+
+
+	@Override
+	public int countFeedByuNum(UserVo vo) throws Exception {
+		return dao.countFeedByuNum(vo);
+	}
+
+
+	@Override
+	public int countCourseByuNum(UserVo vo) throws Exception {
+		return dao.countCourseByuNum(vo);
+	}
+
+
+	@Override
+	public List<AdminVo> selectLikeByuNum(UserVo vo) throws Exception {
+		return dao.selectLikeByuNum(vo);
+	}
+
+
+	@Override
+	public List<CommentVo> selectCommentByuNum(UserVo vo) throws Exception {
+		return dao.selectCommentByuNum(vo);
+	}
+
+
+	@Override
+	public List<CourseVo> selectCourseByuNum(UserVo vo) throws Exception {
+		return dao.selectCourseByuNum(vo);
+	}
+
+
+	@Override
+	public List<AdminVo> selectFeedByuNum(UserVo vo) throws Exception {
+		return dao.selectFeedByuNum(vo);
+	}
+
+
+	@Override
+	public int countFemaleUser() throws Exception {
+		return dao.countFemaleUser();
+	}
+
+
+	@Override
+	public int countMaleUser() throws Exception {
+		return dao.countMaleUser();
+	}
+
+
+	@Override
+	public AdminVo countByLevel() throws Exception {
+		return dao.countByLevel();
+	}
+
+
+	@Override
+	public AdminVo ratioPerAge() throws Exception {
+		return dao.ratioPerAge();
+	}
+
+
+	@Override
+	public void deleteNewsletterList(UserVo vo) throws Exception {
+		dao.deleteNewsletterList(vo);
 	}
 
 	 

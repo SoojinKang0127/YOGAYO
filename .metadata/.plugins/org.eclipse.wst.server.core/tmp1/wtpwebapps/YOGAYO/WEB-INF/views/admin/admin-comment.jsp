@@ -13,29 +13,19 @@
 </head>
 <body>
 	<header>
-		<a href="/"><div class="logo-wrapper">
-				<span>YOGAYO</span>
-				<div class="box-div"></div>
-			</div> </a>
-		<ul class="menu_list">
-			<li class="menu	">통계</li>
-			<a href="/test/admin/member"><li class="menu ">회원 관리</li></a>
-			<a href="/test/admin/comment"><li class="menu">코멘트 관리</li></a>
-			<li class="menu">뉴스레터 전송</li>
-			<a href="/test/admin/course"><li class="menu">코스 관리</li></a>
-			<li class="menu">포즈 관리</li>
-			<li class="menu">포즈 관리</li>
-			<li class="menu">LOG OUT</li>
-		</ul>
+		<jsp:include page="admin-header.jsp" />
 	</header>
 	<main>
-		<div class="search_container">
+		<div class="member_title">
+			<span class="underline">댓글과 대댓글 목록</span>
+		</div>
+<!-- 		<div class="search_container">
 			<input type="button" id="filter" value="비속어 포함 댓글 검색"> <input
 				type="text" id="search" placeholder="키워드로 검색">
-		</div>
+		</div> -->
 		<div class="comment_table">
 			<ul>
-				<li class="comment_list">
+				<li class="comment_list comment_list_th">
 					<div class="idx">댓글번호</div>
 					<div class="comment_date">작성일시</div>
 					<div class="user_avatar">프로필사진</div>
@@ -46,7 +36,7 @@
 					<div class="comment_content">내용</div>
 					<div class="comment_delete">댓글삭제</div>
 				</li>
-				<c:forEach var="i" items="${commentList }">
+				<c:forEach var="i" items="${commentList }" varStatus="status">
 					<li class="comment_list">
 						<div class="idx">${i.cmtNum }</div>
 						<div class="comment_date">${i.regDate }</div>

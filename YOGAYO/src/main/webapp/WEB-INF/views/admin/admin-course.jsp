@@ -13,38 +13,30 @@
 <title>ADMIN COURSE</title>
 </head>
 <body>
-	<script type="text/javascript">
-	
-	var pLIST = "${poseJsonList}";
-	var json = JSON.parse(PLIST);
-	console.log(json[0].pTitle);
-	
-</script>
-
-
-
 	<header>
 		<jsp:include page="admin-header.jsp" />
 	</header>
 	<main>
 		<div class="pose_section">
 			<div class="pose_section_wrapper">
-				<div class="pose_section_title">Upward Facing Wide-Angle
-					Seated Pose</div>
+				<div class="pose_section_cover">
+					<div>동작 번호에 마우스를 올리면 <br> 설명이 나타납니다.</div>
+				</div>
+				<div class="pose_section_title">Boat Pose</div>
 				<div class="pose_img"></div>
 				<div class="pose_desc_wrapper">
 					<ul>
 						<li class="section">
 							<div class="pose_th">No.</div>
-							<div class="number value">56</div>
+							<div class="number value">1</div>
 						</li>
 						<li class="section">
 							<div class="pose_th">시간(초)</div>
-							<div class="second value">47</div>
+							<div class="second value">44</div>
 						</li>
 						<li class="section">
 							<div class="pose_th">난이도</div>
-							<div class="diffi value">5</div>
+							<div class="diffi value">2</div>
 						</li>
 
 					</ul>
@@ -56,11 +48,11 @@
 		<div class="member_title">
 			<span class="underline">YOGAYO 코스 목록</span>
 		</div>
-		<div class="btnMenu">
+<!-- 		<div class="btnMenu">
 			<div class="create_btn">관리자 코스 만들기</div>
 			<div class="admin_btn">관리자 코스 조회</div>
 			<div class="member_btn">회원 코스 조회</div>
-		</div>
+		</div> -->
 		<div class="course_table">
 			<ul>
 				<c:forEach var="i" items="${courseList }">
@@ -106,16 +98,46 @@
 	}
 </script>
 	<script type="text/javascript">
+	
+	var title = document.querySelector(".pose_section_title");
+	var img = document.querySelector(".pose_img");
+	var number = document.querySelector(".number");
+	var second = document.querySelector(".second");
+	var difficulty = document.querySelector(".diffi");
+	
+	var card = document.querySelector(".pose_section");
+	
+	
+	var pLIST = `${poseJsonList}`;
+	var json = JSON.parse(pLIST);
+	console.log(json);
+	
 
 	const seqs = document.querySelectorAll(".seq");
 	var seqNum = 0;
 	seqs.forEach(function(seq){
 		seq.addEventListener("mouseover", function(e){
 			seqNum = e.currentTarget.innerHTML;
-			console.log(seqNum);
+			
+			title.innerText = json[seqNum].pTitle;
+			img.style.backgroundImage = "url("+json[seqNum].img+")";
+			number.innerText = json[seqNum].pNum;
+			second.innerText = json[seqNum].time;
+			difficulty.innerText = json[seqNum].difficulty;
+			
+			card.style.backgroundColor = "#fff1ae";
+			document.querySelector(".pose_section_cover").style.opacity = '0';
+			
 
+		});
+		
+		seq.addEventListener("mouseleave", function(){
+			card.style.backgroundColor = "white";
 		})
-	})
+	});
+	
+
+	
 </script>
 </body>
 </html>

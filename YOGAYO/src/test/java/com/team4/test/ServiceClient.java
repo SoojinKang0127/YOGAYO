@@ -36,6 +36,7 @@ import com.team4.vo.CourseVo;
 import com.team4.dao.feed.FeedServiceImpl;
 import com.team4.vo.FeedVo;
 import com.team4.dao.pose.PoseServiceImpl;
+import com.team4.resource.Rcontroller;
 import com.team4.vo.PoseVo;
 
 import com.team4.vo.UserVo;
@@ -43,21 +44,12 @@ import com.team4.vo.UserVo;
 //import com.team4.dao.Dao;
 //import com.team4.vo.Vo;
 
-public class ServiceClient {
-	
+public class ServiceClient extends Rcontroller {
 
-	public static void main(String[] args) {
-		
-		AdminServiceImpl service = new AdminServiceImpl();
-			
-		try {
-			System.out.println(service.getLastUnum());
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	
-	
-}
+	public static void main(String[] args) throws Exception {
+		Rcontroller rc = new Rcontroller();
+		System.out.println(rc.getKeywordsByUnum(1062));
+
+	}
 
 }

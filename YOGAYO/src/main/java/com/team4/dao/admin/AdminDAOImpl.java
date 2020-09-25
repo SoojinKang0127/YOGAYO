@@ -6,6 +6,10 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.team4.util.SqlSessionFactoryBean;
 import com.team4.vo.AdminVo;
+import com.team4.vo.CommentVo;
+import com.team4.vo.CourseVo;
+import com.team4.vo.FeedVo;
+import com.team4.vo.LikeVo;
 import com.team4.vo.PoseVo;
 import com.team4.vo.UserVo;
 
@@ -28,6 +32,7 @@ public class AdminDAOImpl implements AdminDAO{
 	@Override
 	public void deleteComment(AdminVo vo) throws Exception {
 		mybatis.delete("AdminDAO.deleteComment", vo);
+		mybatis.commit();
 	}
 
 	public List<AdminVo> getAllCourse() throws Exception {
@@ -76,6 +81,78 @@ public class AdminDAOImpl implements AdminDAO{
 	@Override
 	public List<AdminVo> selectAllPose() throws Exception {
 		return mybatis.selectList("AdminDAO.selectAllPose");
+	}
+
+	@Override
+	public UserVo selectUserByuNum(UserVo vo) throws Exception {
+
+		return mybatis.selectOne("AdminDAO.selectUserByuNum", vo);
+	}
+
+	@Override
+	public int countLikeByuNum(UserVo vo) throws Exception {
+		return mybatis.selectOne("AdminDAO.countLikeByuNum", vo);
+	}
+
+	@Override
+	public int countCommentByuNum(UserVo vo) throws Exception {
+		return mybatis.selectOne("AdminDAO.countCommentByuNum", vo);
+	}
+
+	@Override
+	public int countFeedByuNum(UserVo vo) throws Exception {
+		return mybatis.selectOne("AdminDAO.countFeedByuNum", vo);
+	}
+
+	@Override
+	public int countCourseByuNum(UserVo vo) throws Exception {
+		return mybatis.selectOne("AdminDAO.countCourseByuNum", vo);
+	}
+
+	@Override
+	public List<AdminVo> selectLikeByuNum(UserVo vo) throws Exception {
+		return mybatis.selectList("AdminDAO.selectLikeByuNum", vo);
+	}
+
+	@Override
+	public List<CommentVo> selectCommentByuNum(UserVo vo) throws Exception {
+		return mybatis.selectList("AdminDAO.selectCommentByuNum", vo);
+	}
+
+	@Override
+	public List<CourseVo> selectCourseByuNum(UserVo vo) throws Exception {
+		return mybatis.selectList("AdminDAO.selectCourseByuNum", vo);
+	}
+
+	@Override
+	public List<AdminVo> selectFeedByuNum(UserVo vo) throws Exception {
+		return mybatis.selectList("AdminDAO.selectFeedByuNum", vo);
+	}
+
+	@Override
+	public int countFemaleUser() throws Exception {
+		return mybatis.selectOne("AdminDAO.countFemaleUser");
+	}
+
+	@Override
+	public int countMaleUser() throws Exception {
+		return mybatis.selectOne("AdminDAO.countMaleUser");
+	}
+
+	@Override
+	public AdminVo countByLevel() throws Exception {
+		return mybatis.selectOne("AdminDAO.countByLevel");
+	}
+
+	@Override
+	public AdminVo ratioPerAge() throws Exception {
+		return mybatis.selectOne("AdminDAO.ratioPerAge");
+	}
+
+	@Override
+	public void deleteNewsletterList(UserVo vo) throws Exception {
+		mybatis.delete("AdminDAO.deleteNewsletterList", vo);
+		mybatis.commit();
 	}
 	
 	

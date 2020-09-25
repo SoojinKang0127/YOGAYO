@@ -27,14 +27,16 @@
 						<div class="user_name col">이름</div>
 						<div class="user_id col">E-MAIL</div>
 						<div class="user_regdate col">수신동의일</div>
+						<div class="user_delete">삭제</div>
 					</li>
-					<c:forEach var="i" items="${userList}">
+					<c:forEach var="i" items="${userList}" varStatus="status">
 						<li class="member_list">
-							<div class="idx">1</div>
+							<div class="idx">${status.count }</div>
 							<div class="user_number">${i.uNum }</div>
 							<div class="user_name">${i.name }</div>
 							<div class="user_id">${i.id }</div>
 							<div class="user_regdate">${i.regDate }</div>
+							<div class="user_delete"><span class="deleteBtn" onclick="confirmDelete(${i.uNum }, '${i.name }');">삭제</span></div>
 						</li>
 					</c:forEach>
 				</ul>
@@ -63,17 +65,23 @@
 						<!-- <input type="text" placeholder="" name="sender" id="sender"> -->
 					</div>
 				</div>
-			</div>
 			<input type="submit" class="submit_btn" onclick="submit();" value="전송하기!">
+			</div>
 		</form>
 	</main>
 	<script type="text/javascript">
-		var 
+
+	
+	function confirmDelete(uNum, name){
+		var yesOrNo = confirm(name + " 회원을 구독 목록에서 삭제하시겠습니까?");
+				
+		if(yesOrNo){
+			location.href="newsletterdelete?usernumber="+uNum;
+		}
+	}
 	
 		function submit() {
-
 			location.href = "/test/admin/sendnewsletter"
-
 		}
 	</script>
 </body>
