@@ -166,7 +166,7 @@
 
         .logo-wrapper {
           height: 60px;
-          margin: 0px;
+          margin-left: 10px;
           width: 110px;
         }
 
@@ -235,10 +235,10 @@
         }
       }
     </style>
-<!--     <script
+    <script
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script> -->
+    ></script>
   </head>
   <body>
     <header class="header">
