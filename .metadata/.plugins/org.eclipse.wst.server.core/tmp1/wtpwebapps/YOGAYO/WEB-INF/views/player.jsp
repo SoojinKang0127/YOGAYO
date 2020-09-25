@@ -95,6 +95,7 @@
 							<div class="image-progress-bar"></div>
 							<div class="course-image"></div>
 						</div>
+						<div class="web-cam"></div>
 						<div class="info-wrapper">
 							<div class="course-title">${course.title}</div>
 							<div class="course-info">
