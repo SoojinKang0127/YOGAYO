@@ -430,6 +430,9 @@
 		}
 
 	</script>
+	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/adapter-latest.js"></script>
+	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/ga.js"></script>
+	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/capture.js"></script>
 </body>
 
 </html>
