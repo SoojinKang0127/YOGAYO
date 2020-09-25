@@ -45,7 +45,7 @@
                                     <div class='row1_img'>
                                         <span>
                                             <a href="${pageContext.request.contextPath}/dictionary-detail?pnum=${i.pNum}">
-                                            <img src="${i.img_Path}" alt="">
+                                          <div class="img_wrapper">  <img src="${i.img_Path}" alt=""></div>
                                         </span>
                                     </div>
                                     <div class='row1_text'>

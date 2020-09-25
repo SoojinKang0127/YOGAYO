@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   bar.style.animationTimingFunction = "linear";
   bar.style.animationPlayState = "running";
   bar.style.animationFillMode = "forwards";
-
+  $("#pose_big_img").attr("src", poseArr[0]);
   interval = setInterval(() => {
     if (time > 0) {
       minute = parseInt(time / 6000);
@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       if (barArr.length > index) {
         index++;
+        $("#pose_big_img").attr("src", poseArr[index]);
+
         if (barArr.length - 1 == index) {
           time = 0;
         } else {
@@ -53,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         );
         console.log(audioArr[index]);
         audio = document.getElementById("audio").play();
-        $('.list-header-count').html("코스 "+(index+1)+"/8");
+        $(".list-header-count").html("코스 " + (index + 1) + "/8");
       } else if (barArr.length == index) {
         index++;
         var popup2 = document.getElementById("pop2");
@@ -107,34 +109,43 @@ document.addEventListener("DOMContentLoaded", function () {
   var request_like = new XMLHttpRequest();
   var request_dislike = new XMLHttpRequest();
 
-
-  request_like.onreadystatechange =function(){
+  request_like.onreadystatechange = function () {
     if (request_like.readyState == 4 && request_like.status == 200) {
-    var count = eval(request_like.responseText);
-    $('.like-number').text(count.toString())
+      var count = eval(request_like.responseText);
+      $(".like-number").text(count.toString());
     }
-  }
+  };
 
-  request_dislike.onreadystatechange=function(){
+  request_dislike.onreadystatechange = function () {
     if (request_dislike.readyState == 4 && request_dislike.status == 200) {
-     var count = eval(request_dislike.responseText);
-    $('.like-number').text(count.toString())
-
+      var count = eval(request_dislike.responseText);
+      $(".like-number").text(count.toString());
     }
-  }
+  };
 
   $(".leftwrapper").click(function () {
     if ($(".far.fa-heart").length) {
       $(".far.fa-heart").attr("class", "fas fa-heart");
-      request_like.open("POST","./likeCourse?uNum=" + uNum + "&crsNum=" + crsNum, true);
+      request_like.open(
+        "POST",
+        "./likeCourse?uNum=" + uNum + "&crsNum=" + crsNum,
+        true
+      );
       request_like.send(null);
     } else {
       $(".fas.fa-heart").attr("class", "far fa-heart");
-      request_dislike.open("POST","./dislikeCourse?uNum=" + uNum + "&crsNum=" + crsNum, true);
+      request_dislike.open(
+        "POST",
+        "./dislikeCourse?uNum=" + uNum + "&crsNum=" + crsNum,
+        true
+      );
       request_dislike.send(null);
     }
   });
 
+  $(".pop1-btn").click((e) => {
+    location.href = "course-page";
+  });
   /*
    * console.log(p_btn) length=0 velocity=1.28 pixel=0 max_pixel=380
    * interval=setInterval(() => { if(pixel<=max_pixel){

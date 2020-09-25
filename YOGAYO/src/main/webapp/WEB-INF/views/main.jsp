@@ -10,11 +10,10 @@
 <script src="https://kit.fontawesome.com/54919de5bd.js"
 	crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/main.css">
-<link
-	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
-	rel="stylesheet">
-
+	href="${pageContext.request.contextPath}/resources/css/main.css"  media="all and (min-width:600px) and (max-width:2000px)">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+	
 </head>
 
 <body>
@@ -106,7 +105,11 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
+
+				<!--------------- end 두번째 세션-------------->
+
+				<!-- -----------------세번째 세션 ------------->
 			</div>
 		</div>
 		<div class="newsletter_section">
@@ -138,6 +141,7 @@
 				<a
 					href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(0).crsNum}">
 					<div class="up-on-scroll">
+
 						<div class="main-latest_section">
 							<div class="img_wrapper">
 								<img
@@ -148,6 +152,7 @@
 									${allCourses.get(0).title}</div>
 							</div>
 						</div>
+
 					</div>
 				</a>
 				<div class="main-latest_section2">
@@ -202,6 +207,7 @@
 						</div>
 					</a>
 				</div>
+				
 			</div>
 		</div>
 		<div class="newsletter_modal hiding" id="newsletter_modal">
