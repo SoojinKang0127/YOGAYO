@@ -10,8 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>course player</title>
 
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player.css"  media="all and (min-width:600px) and (max-width:2000px)">
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player.css">
 	<link rel="stylesheet" type="text/css"
 		href="${pageContext.request.contextPath}/resources/css/player-rSlider.min.css">
 
@@ -84,7 +83,7 @@
 			value="" id="context"> <input type="hidden" name="weight" value="" id="weight">
 
 		<div class="all-wrapper">
-			<header class="header">
+			<header>
 				<div class="header-wrapper">
 					<div class="logo-wrapper">
 						<a href=""> <span>YOGAYO</span>

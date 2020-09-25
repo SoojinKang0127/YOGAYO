@@ -11,6 +11,7 @@ $(window).ready(function () {
 	});
 	
 	var clickMore=0;
+	former_height=2300;
 	$('#more_course_btn').on("click",function(){
 		var controllerUrl="course-page-ajax.do";//ajax url
 		var radioValue = $('input[name=menu]:checked').val(); // data
@@ -33,7 +34,6 @@ $(window).ready(function () {
 				"searchType" : "all",
 				startNum:clickMore}
 		}
-
 		$.ajax({
 			type:"post",
 			async : true,
@@ -46,9 +46,9 @@ $(window).ready(function () {
 					var list = "<div class=up-on-scroll>" +
 						"<div class=course_container>"+
 							"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
-								"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
+								"<div class='img_wrapper'><img src=/test/"+resultData.result[i].imgPath+" alt=course /></div>"+
 									"<div class=course_star_rating>"+
-										"<i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
+										"<div class=rating><i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
 									"<div class=course_title>"+resultData.result[i].title+"</div>"+
 								"</div></a></div></div>"
 									
@@ -61,6 +61,9 @@ $(window).ready(function () {
 						+ request.responseText + "\n" + "error:" + error);
 			}
 		});
+		$(document).scrollTop($(document.body).height()-1920);
+		former_height=$(document.body).height();
+		console.log($(document.body).height())
 	});
 	
 	
@@ -87,9 +90,9 @@ $(window).ready(function () {
 					var list = "<div class=up-on-scroll>" +
 					"<div class=course_container>"+
 					"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
-					"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
+					"<div class='img_wrapper'><img src=/test/"+resultData.result[i].imgPath+" alt=course /></div>"+
 					"<div class=course_star_rating>"+
-					"<i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
+					"<div class=rating><i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
 					"<div class=course_title>"+resultData.result[i].title+"</div>"+
 					"</div></a></div></div>"
 					
@@ -123,9 +126,9 @@ $(window).ready(function () {
 					var list = "<div class=up-on-scroll>" +
 						"<div class=course_container>"+
 							"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
-								"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
+								"<div class='img_wrapper'><img src=/test/"+resultData.result[i].imgPath+" alt=course /></div>"+
 									"<div class=course_star_rating>"+
-										"<i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
+										"<div class=rating><i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
 									"<div class=course_title>"+resultData.result[i].title+"</div>"+
 								"</div></a></div></div>"
 									
@@ -156,9 +159,9 @@ $(window).ready(function () {
 					var list = "<div class=up-on-scroll>" +
 						"<div class=course_container>"+
 							"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
-								"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
+								"<div class='img_wrapper'><img src=/test/"+resultData.result[i].imgPath+" alt=course /></div>"+
 									"<div class=course_star_rating>"+
-										"<i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
+										"<div class=rating><i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
 									"<div class=course_title>"+resultData.result[i].title+"</div>"+
 								"</div></a></div></div>"
 									
@@ -189,9 +192,9 @@ $(window).ready(function () {
 					var list = "<div class=up-on-scroll>" +
 						"<div class=course_container>"+
 							"<a href=/test/course-detail?crsNum="+resultData.result[i].crsNum+">"+
-								"<img src=/test/"+resultData.result[i].imgPath+" alt=course />"+
+								"<div class='img_wrapper'><img src=/test/"+resultData.result[i].imgPath+" alt=course /></div>"+
 									"<div class=course_star_rating>"+
-										"<i class='far fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)"+
+										"<div class=rating><i class='fas fa-star'></i><span class=rateNum>"+resultData.result[i].total+"</span>(<span id=totalComment>"+resultData.result[i].totalComment+"</span>)</div>"+
 									"<div class=course_title>"+resultData.result[i].title+"</div>"+
 								"</div></a></div></div>"
 									

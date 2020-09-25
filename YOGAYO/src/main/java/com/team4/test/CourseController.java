@@ -37,8 +37,6 @@ import com.team4.vo.UserVo;
 @Controller
 public class CourseController implements R  {
 
-	
-
 	@RequestMapping(value = "/course-detail-upload-comment", method = RequestMethod.POST)
 	public void uploadComment(Model model, @RequestParam("crsNum") int crsNum, @RequestParam("uNum") int uNum,
 			@RequestParam("comment") String context, @RequestParam("rating") int rate, HttpServletResponse res,HttpServletRequest req) {

@@ -21,14 +21,6 @@ main {
   align-items: center;
 }
 
-header {
-  margin-top: 40px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .logo-wrapper {
   width: 150px;
   height: 200px;

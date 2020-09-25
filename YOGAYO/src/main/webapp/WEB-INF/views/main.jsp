@@ -44,8 +44,10 @@
 			<div class="up-on-scroll">
 				<div class="main-second_bg">
 					<div class="main-recommand">
-						<a href="${pageContext.request.contextPath}/course-detail?crsNum=1">
-							<img src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
+						<a
+							href="${pageContext.request.contextPath}/course-detail?crsNum=1">
+							<img
+							src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
 							<div class="main-first_course">
 								<div class="main-course_title">${allCourses.get(0).title}
 								</div>
@@ -56,7 +58,7 @@
 					</div>
 					<div class="main-recommand">
 						<a href="${pageContext.request.contextPath}/course-detail"> <img
-								src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
+							src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
 							<div class="main-second_course">
 								<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
 								<div class="main-second_course_explain">예전 같지 않은 허리 이대로
@@ -65,7 +67,8 @@
 						</a>
 					</div>
 					<div class="main-recommand">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
+						<img
+							src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
 						<div class="main-third_course">
 							<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
 							<div class="main-third_course_explain">예전 같지 않은 허리 이대로
@@ -78,7 +81,8 @@
 			
 				<!-- <div class="main-second_bg">
 					<div class="main-recommand">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
+						<img
+							src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
 						<div class="main-first_course">
 							<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
 							<div class="main-first_course_explain">예전 같지 않은 허리 이대로
@@ -86,7 +90,8 @@
 						</div>
 					</div>
 					<div class="main-recommand">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
+						<img
+							src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
 						<div class="main-second_course">
 							<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
 							<div class="main-second_course_explain">예전 같지 않은 허리 이대로
@@ -94,7 +99,8 @@
 						</div>
 					</div>
 					<div class="main-recommand">
-						<img src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
+						<img
+							src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
 						<div class="main-third_course">
 							<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
 							<div class="main-third_course_explain">예전 같지 않은 허리 이대로
@@ -145,20 +151,19 @@
 							<div class="main-small_latest_courses">
 								<a
 									href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(1).crsNum}">
-								<div class="up-on-scroll">
-									<div class="main-small_latest1">
-										<div class="img_wrapper2">
-											<img
-												src="${pageContext.request.contextPath}/${allCourses.get(1).imgPath}" />
-										</div>
-										<div class="main-first_course">
-											<div class="main-first_course_title">
-												${allCourses.get(1).title}</div>
+									<div class="up-on-scroll">
+										<div class="main-small_latest1">
+											<div class="img_wrapper2">
+												<img
+													src="${pageContext.request.contextPath}/${allCourses.get(1).imgPath}" />
+											</div>
+											<div class="main-first_course">
+												<div class="main-first_course_title">
+													${allCourses.get(1).title}</div>
+											</div>
 										</div>
 									</div>
-								</div>
-								</a>
-								<a
+								</a> <a
 									href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(2).crsNum}">
 									<div class="up-on-scroll">
 										<div class="main-samll_latest2">
@@ -175,11 +180,13 @@
 								</a>
 							</div>
 						</div>
-						<a href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(3).crsNum}">
+						<a
+							href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(3).crsNum}">
 							<div class="up-on-scroll">
 								<div class="main-latest_section2-2">
 									<div class="main-latest">
-										<div class="img_wrapper3"><img
+										<div class="img_wrapper3">
+											<img
 												src="${pageContext.request.contextPath}/${allCourses.get(3).imgPath}" />
 										</div>
 										<div class="main-first_course">
@@ -226,7 +233,8 @@
 		<jsp:include page="footer/footer_grey.jsp" />
 	</main>
 	<script src="http://code.jquery.com/jquery.js"></script>
-	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+	<script language=JavaScript
+		src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 </body>
 
 </html>
