@@ -44,6 +44,17 @@
 		audioArr.push('${pageContext.request.contextPath}/${pose8.audioPath}')
 		console.log(audioArr)
 
+		poseArr=new Array();
+		poseArr.push('${pose1.img_Path}')
+		poseArr.push('${pose2.img_Path}')
+		poseArr.push('${pose3.img_Path}')
+		poseArr.push('${pose4.img_Path}')
+		poseArr.push('${pose5.img_Path}')
+		poseArr.push('${pose6.img_Path}')
+		poseArr.push('${pose7.img_Path}')
+		poseArr.push('${pose8.img_Path}')
+
+		
 		$(document).ready(function () {
 			window.onload = function () {
 				$("#pop1").hide()
@@ -87,7 +98,7 @@
 			<header class="header">
 				<div class="header-wrapper">
 					<div class="logo-wrapper">
-						<a href=""> <span>YOGAYO</span>
+						<a href="${pageContext.request.contextPath}/main"> <span>YOGAYO</span>
 							<div class="box-div"></div>
 						</a>
 					</div>
@@ -99,7 +110,7 @@
 					<div class="course-main">
 						<div class="image-wrapper">
 							<div class="image-progress-bar"></div>
-							<div class="course-image"><div class="gumandimage_wrapper"><div class="cam"><video id="gum"></video></div><div class="pose_big_img_wrapper"><img id="pose_big_img"></div></div></div>
+							<div class="course-image"><div class="gumandimage_wrapper"><div class="cam"><video id="gum" height="100%" width="150%"></video></div><div class="pose_big_img_wrapper"><img id="pose_big_img"></div></div></div>
 						</div>
 						<div class="info-wrapper">
 							<div class="course-title">${course.title}</div>
