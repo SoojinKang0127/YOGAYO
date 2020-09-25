@@ -1,6 +1,5 @@
 INDEX VERSION 1.4+C:\Users\kosmo_28\Documents\GitHub\YOGAYO\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 1775709318.index
-2271818853.index
 393630637.index
 3820759927.index
 1965381019.index

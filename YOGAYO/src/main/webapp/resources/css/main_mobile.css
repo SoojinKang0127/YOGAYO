@@ -190,7 +190,7 @@ main {
 
 .main-third_container img{       /*----------사진----------*/
   height:100%;
-  width: 100%;
+  width: auto;
 } 
 
 .main-third_bg {
@@ -364,16 +364,22 @@ main {
 .img_wrapper{
   height: 85%;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .img_wrapper2{
   height: 85%;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .img_wrapper3{
   height: 85%;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 
