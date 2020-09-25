@@ -18,7 +18,7 @@
 	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/dictionary-detail.js"></script>
 </head>
 <body>
-	<jsp:include page="header/header_black.jsp" />
+	<div class="header"><jsp:include page="header/header_black.jsp" /></div>
 	<main>
 	<div class="yoag-dictionary-box">
 		<div class="yoag-dictionary-box-section">

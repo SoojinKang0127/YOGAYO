@@ -166,7 +166,7 @@
 
         .logo-wrapper {
           height: 60px;
-          margin: 0px;
+          margin-left: 10px;
           width: 110px;
         }
 

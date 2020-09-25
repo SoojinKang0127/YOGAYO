@@ -13,15 +13,6 @@ main {
 	height: 100%;
 }
 
-.header {
-	display: none;
-}
-
-.mobile_header {
-	display: flex;
-	height: 60px;
-}
-
 .course-first_container .course_bg {
 	background-image: url("../image/course/course_bg.jpg");
 	background-repeat: no-repeat;

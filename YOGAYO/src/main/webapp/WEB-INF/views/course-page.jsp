@@ -23,9 +23,9 @@
 	media="all and (min-width:300px) and (max-width:599px)">
 </head>
 <body>
-	<jsp:include page="header/header_white.jsp" />
+	
 	<header>
-	<div class="mobile_header"></div>
+		<div class="mobile_header"><jsp:include page="header/header_white.jsp" /></div> 
 	</header>
 	<main>
 		<div class="course-first_container">
