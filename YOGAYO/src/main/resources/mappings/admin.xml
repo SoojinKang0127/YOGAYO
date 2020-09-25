@@ -51,5 +51,27 @@
 		SEQ4 = #{seq4Num}, SEQ5 = #{seq5Num}, SEQ6 = #{seq6Num}, SEQ7 = #{seq7Num}, SEQ8 = #{seq8Num}
 		WHERE CRSNUM = #{crsNum};
 	</update>
+	
+	<select id="getLastUnum" resultType="int">
+		SELECT MAX(UNUM) FROM USER
+	</select>
+	
+	<insert id="subscribeNewsletter" parameterType="AdminVo">
+		INSERT INTO NEWSLETTER(UNUM, NAME, ID, STATEMENT) VALUES(#{uNum}, #{name}, #{id}, 'Y'); 
+	</insert>
+	
+	<select id="selectAllNewsletterSubscriber" resultType="AdminVo">
+		SELECT * FROM NEWSLETTER;
+	</select>
+	
+	<select id="countAllSubscriber" resultType="int">
+		SELECT COUNT(*) FROM NEWSLETTER;
+	</select>
+	
+	<select id="selectAllPose" resultType="AdminVo">
+		SELECT PNUM as pNum, IMG_PATH as img, TITLE as pTitle, TIME as time, DIFFICULTY as difficulty FROM POSE;
+	</select>
+	
+	
 
 </mapper>

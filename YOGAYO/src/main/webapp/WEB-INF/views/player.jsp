@@ -6,27 +6,20 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>course player</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>course player</title>
 
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/player.css"
-	media="all and (min-width:600px) and (max-width:2000px)">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/player_vertical_mobile.css"
-	media="all and (min-width:300px) and (max-width:599px)">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/player-rSlider.min.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player.css"  media="all and (min-width:600px) and (max-width:2000px)">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
+	<link rel="stylesheet" type="text/css"
+		href="${pageContext.request.contextPath}/resources/css/player-rSlider.min.css">
 
-<script src="https://kit.fontawesome.com/7bad96e258.js"
-	crossorigin="anonymous"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script language=JavaScript
-	src="${pageContext.request.contextPath}/resources/js/player-rSlider.min.js"></script>
+	<script src="https://kit.fontawesome.com/7bad96e258.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/player-rSlider.min.js"></script>
 
-<script>
+	<script>
 		var uNum = encodeURIComponent("${uvo.uNum}");
 		var crsNum = encodeURIComponent("${crsNum}");
 		console.log(crsNum)
@@ -51,6 +44,17 @@
 		audioArr.push('${pageContext.request.contextPath}/${pose8.audioPath}')
 		console.log(audioArr)
 
+		poseArr=new Array();
+		poseArr.push('${pose1.img_Path}')
+		poseArr.push('${pose2.img_Path}')
+		poseArr.push('${pose3.img_Path}')
+		poseArr.push('${pose4.img_Path}')
+		poseArr.push('${pose5.img_Path}')
+		poseArr.push('${pose6.img_Path}')
+		poseArr.push('${pose7.img_Path}')
+		poseArr.push('${pose8.img_Path}')
+
+		
 		$(document).ready(function () {
 			window.onload = function () {
 				$("#pop1").hide()
@@ -97,7 +101,7 @@
 			<header class="header">
 				<div class="header-wrapper">
 					<div class="logo-wrapper">
-						<a href=""> <span>YOGAYO</span>
+						<a href="${pageContext.request.contextPath}/main"> <span>YOGAYO</span>
 							<div class="box-div"></div>
 						</a>
 					</div>
@@ -109,7 +113,7 @@
 					<div class="course-main">
 						<div class="image-wrapper">
 							<div class="image-progress-bar"></div>
-							<div class="course-image"></div>
+							<div class="course-image"><div class="gumandimage_wrapper"><div class="cam"><video id="gum" height="100%" width="150%"></video></div><div class="pose_big_img_wrapper"><img id="pose_big_img"></div></div></div>
 						</div>
 						<div class="info-wrapper">
 							<div class="course-title">${course.title}</div>
@@ -444,6 +448,9 @@
 		}
 
 	</script>
+	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/adapter-latest.js"></script>
+	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/ga.js"></script>
+	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/capture.js"></script>
 </body>
 
 </html>

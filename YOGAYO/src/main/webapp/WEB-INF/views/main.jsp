@@ -10,11 +10,10 @@
 <script src="https://kit.fontawesome.com/54919de5bd.js"
 	crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/main.css">
-<link
-	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
-	rel="stylesheet">
-
+	href="${pageContext.request.contextPath}/resources/css/main.css"  media="all and (min-width:600px) and (max-width:2000px)">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+	
 </head>
 
 <body>
@@ -37,6 +36,10 @@
 				</div>
 			</div>
 		</div>
+		<!-- -------------end 첫번째 세션------------ -->
+		
+		
+		<!-- -------------두번째 세션------------ -->
 		<div class="main-second_container">
 			<div class="up-on-scroll">
 				<div class="main-second_bg">
@@ -75,7 +78,8 @@
 				</div>
 			</div>
 			<div class="up-on-scroll">
-				<div class="main-second_bg">
+			
+				<!-- <div class="main-second_bg">
 					<div class="main-recommand">
 						<img
 							src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
@@ -103,7 +107,11 @@
 								괜찮으신가요?</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
+
+				<!--------------- end 두번째 세션-------------->
+
+				<!-- -----------------세번째 세션 ------------->
 			</div>
 		</div>
 		<div class="up-on-scroll">
@@ -111,33 +119,32 @@
 				<div class="up-on-scroll">
 					<div class="main-third_bg">
 						<div class="main-latest_title_section">
-							<div class="main-latest_courses_title">새로 올라운 코스</div>
+							<div class="main-latest_courses_title">새로 올라온 코스</div>
 							<div class="main-latest_courses_explain">
 								<p>세계 각지 사람들의 다양한 코스들을 경험해보세요. 저희 요가요에서 제공하는 코스들도 놓치지 마세요.</p>
 							</div>
 						</div>
 						<div class="main-to_course_btn_section">
-							<a href="${pageContext.request.contextPath}/course-page">
-								<button id="main-to_course_btn">모두 둘러보기</button>
-							</a>
+								<button id="main-to_course_btn"><a href="${pageContext.request.contextPath}/course-page">모두 둘러보기</a></button>	
 						</div>
 					</div>
 				</div>
+				
 				<div class="main-latest_sections">
 					<a
-						href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(0).crsNum}">
-						<div class="up-on-scroll">
-							<div class="main-latest_section">
-								<div class="img_wrapper">
-									<img
-										src="${pageContext.request.contextPath}/${allCourses.get(0).imgPath}" />
-								</div>
-								<div class="main-first_course">
-									<div class="main-first_course_title">
-										${allCourses.get(0).title}</div>
-								</div>
+									href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(0).crsNum}">
+					<div class="up-on-scroll">
+
+						<div class="main-latest_section">
+							<div class="img_wrapper">
+								<img src="${pageContext.request.contextPath}/${allCourses.get(0).imgPath}" /></div>
+							<div class="main-first_course">
+								<div class="main-first_course_title">
+									${allCourses.get(0).title}</div>
 							</div>
 						</div>
+
+					</div>
 					</a>
 					<div class="main-latest_section2">
 						<div class="main-latest_section2-1">
@@ -192,8 +199,37 @@
 						</a>
 					</div>
 				</div>
+				
 			</div>
 		</div>
+		<div class="newsletter_section">
+			<div class="newsletter">
+				<div class="first">YOGAYO NEWSLETTER</div>
+				<div class="second">
+					요가요 뉴스레터 구독 신청하고 최신 소식과 여러 혜택을 만나보세요! <i
+						class="fas fa-arrow-circle-right" id="arrow"></i>
+				</div>
+			</div>
+		</div>
+		<div class="newsletter_modal hiding" id="newsletter_modal">
+			<div class="temp">
+				<div class="pop_up">
+					<i class="far fa-envelope"></i>
+					<span class="title">YOGAYO NEWSLETTER</span>
+					<span class="sentence">${user.name}님, 뉴스레터를 구독하고<br>
+					YOGAYO에서 제공하는 최신 정보와<br> 회원님에게 딱 맞는 요가 코스 추천을<br>받아보시겠어요? :)</span>
+					<span class="email">${user.id} 로 메일 수신 동의</span>
+					<div class="btn_area">
+						<div class="no_btn" id="no_btn" >아니요</div>
+						<div class="yes_btn" id="yes_btn">네</div>
+					</div>
+				</div>
+				<div class="black_back"></div>
+			</div>
+		</div>
+	</main>
+	<script language=JavaScript
+		src="${pageContext.request.contextPath}/resources/js/main_newsletter.js"></script>
 		<jsp:include page="footer/footer_grey.jsp" />
 	</main>
 	<script src="http://code.jquery.com/jquery.js"></script>
