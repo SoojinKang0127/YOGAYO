@@ -73,7 +73,7 @@
 							<a
 								href="${pageContext.request.contextPath}/course-detail?crsNum=${i.crsNum}">
 								<div class="img_wrapper">
-									<img src="${pageContext.request.contextPath}/${i.imgPath}"
+									<img class="course_container_img" src="${pageContext.request.contextPath}/${i.imgPath}"
 										alt="course" />
 								</div>
 								<div class="course_star_rating">
@@ -87,7 +87,7 @@
 				</c:forEach>
 			</div>
 			<div class="more_course_btn">
-				<button id="more_course_btn">더보기(More)</button>
+				<button id="more_course_btn"><div class="more_course_btn_background"></div><span>더 보기</span></button>
 			</div>
 		</div>
 		<!-- </form>  -->

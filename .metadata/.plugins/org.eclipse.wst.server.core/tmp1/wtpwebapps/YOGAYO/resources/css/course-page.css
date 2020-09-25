@@ -51,6 +51,7 @@ main {
 	font-size: 12pt;
 	line-height: 20px;
 	margin-top: 15px;
+	letter-spacing: 1px;
 }
 
 .course-categories_container {
@@ -62,49 +63,64 @@ main {
 	justify-content: space-between;
 	padding: 0px 250px 0px 250px;
 	margin-top: 30px;
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 }
 
 .course-categories_container .course-categories_left {
 	display: flex;
+	width: 350px;
 }
 
 #course-view_all, #course-view_yogayo_course {
 	all: unset;
 	cursor: pointer;
 	text-align: center;
-	border-radius: 50px;
+	border-radius: 10px;
 	font-size: 15px;
-	border: 1px solid gray;
-	background-color: white;
 	width: 30%;
 	padding: 9px 15px 9px 15px;
 	margin-right: 10px;
+	font-weight: bold;
+	height: 20px;
+	background-color: white;
+	color: rgb(22, 22, 22);
+	border: solid 1px #cecece;
+
+}
+
+#course-view_all{
+	border: solid 1px grey;
 }
 
 #course-view_user_course {
 	all: unset;
 	cursor: pointer;
 	text-align: center;
-	border-radius: 50px;
+	border-radius: 10px;
 	font-size: 15px;
-	border: 1px solid gray;
 	background-color: white;
 	width: 40%;
 	padding: 9px 15px 9px 15px;
 	margin-right: 10px;
+	font-weight: bold;
+	height: 20px;
+	color: rgb(22, 22, 22);
+	border: solid 1px #cecece;
+	
 }
 
 #courses_sort {
 	all: unset;
 	cursor: pointer;
 	text-align: center;
-	border-radius: 50px;
+	border-radius: 10px;
 	font-size: 15px;
-	border: 1px solid gray;
+	border: 1px solid#cecece;
 	background-color: white;
 	padding: 9px 17px 9px 17px;
 	position: relative;
+	font-weight: bold;
+	height: 20px;
 }
 
 .sort_menu {
@@ -137,7 +153,6 @@ main {
 	align-item: center;
 	margin: 0px 250px 0px 250px;
 	line-height: 20px;
-	margin-top: 20px;
 	padding-top: 60px;
 }
 
@@ -151,8 +166,9 @@ main {
 .more_course_btn {
 	display: flex;
 	justify-content: center;
-	align-item: center;
+	align-items: center;
 	margin-bottom:50px;
+	
 }
 
 .more_course_btn #more_course_btn {
@@ -161,14 +177,20 @@ main {
 	width: 20%;
 	height: 48px;
 	text-align: center;
-	border-radius: 10px;
+	border-radius: 3px;
 	font-size: 13pt;
-	background-color: white;
-	border: 1px solid black;
 	margin-bottom: 50px;
 	box-shadow: var(--light-shadow);
+	position: relative;
+	overflow: hidden;
+	border: 1px solid rgb(200, 200, 200);
+	display: flex;
 }
-
+#more_course_btn span{
+	z-index: 10;
+	margin: auto;
+	font-weight: bold;
+}
 .img_wrapper{
 	width: 333px;
 	height: 330px;
@@ -177,10 +199,12 @@ main {
 	text-align: center;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 .course-courses_container .course_container img {
 	height: 350px;
+	transition: 0.5s ease-in-out;
 }
 
 .up-on-scroll {
@@ -193,6 +217,8 @@ main {
 	margin-bottom: 110px;
 	width: 95%;
 	margin-left: 10px;
+	box-shadow: var(--light-shadow);
+
 }
 
 
@@ -202,7 +228,20 @@ main {
 
 
 .course_container .course_star_rating {
-	font-size: 11pt;
+	font-size: 10pt;
+	padding: 0 0 0 10px;
+	height: 75px;
+	display: flex;
+	align-items: center;
+	color: rgb(27, 27, 27);
+	font-weight: bold;
+}
+
+.course_title{
+	margin-left: 10px;
+	font-size: 17px;
+	font-weight: bold;
+	letter-spacing: 1px;
 }
 
 
@@ -210,3 +249,24 @@ main {
 	color: var(--theme-color);
 }
 
+.course_star_rating #text {
+	color: var(--theme-color);
+}
+
+.rating{
+margin-top: 4px;	
+
+}
+
+.more_course_btn_background{
+	display: flex;
+	width: 0px;
+	height: 0px;
+	background-color: red;
+	position: absolute;
+	transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+	border-radius: 400px;
+	z-index: 1;
+	background-color: var(--theme-color);
+	transform: translate(-50%, -50%);
+}

@@ -15,7 +15,9 @@
         android:usesCleartextTraffic="true">
 
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="sensor"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
 
         </activity>
 
