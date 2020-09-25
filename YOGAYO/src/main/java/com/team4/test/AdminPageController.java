@@ -3,6 +3,10 @@ package com.team4.test;
 import java.util.List;
 import java.util.Locale;
 
+import javax.mail.internet.InternetAddress;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,17 +17,28 @@ import org.springframework.web.servlet.ModelAndView;
 import com.team4.dao.admin.AdminServiceImpl;
 import com.team4.user.dao.UserServiceImpl;
 import com.team4.vo.AdminVo;
+import com.team4.vo.PoseVo;
 import com.team4.vo.UserVo;
+
+import net.sf.json.JSONArray;
 
 @Controller
 public class AdminPageController {
 
 	AdminServiceImpl service = new AdminServiceImpl();
+	
+	
+	@RequestMapping(value = "/admin/", method = RequestMethod.GET)
+	public String adminHome(Model model) throws Exception {
+		
+
+		return "/admin/admin-home";
+	};
 
 	@RequestMapping(value = "/admin/member", method = RequestMethod.GET)
 	public String getMember(Model model) throws Exception {
 
-		UserServiceImpl service = new UserServiceImpl();
+		AdminServiceImpl service = new AdminServiceImpl();
 		List<UserVo> list = service.selectAllUser();
 		model.addAttribute("userList", list);
 
@@ -62,6 +77,12 @@ public class AdminPageController {
 
 		List<AdminVo> list = service.getAllCourse();
 		model.addAttribute("courseList", list);
+		
+		List<AdminVo> pList = service.selectAllPose();
+		model.addAttribute("poseList", pList);
+		JSONArray jsonArray = new JSONArray();
+		model.addAttribute("poseJsonList", jsonArray.fromObject(pList));
+		
 
 		return "/admin/admin-course";
 	};
@@ -99,6 +120,7 @@ public class AdminPageController {
 		vo.setSeq7Num(seq7Num);
 		vo.setSeq8Num(seq8Num);
 		
+		
 		try {
 			service.courseUpdate(vo);
 			System.out.println("코스 수정 성공");
@@ -109,5 +131,72 @@ public class AdminPageController {
 		
 		return "redirect:/admin/course";
 	};
+	
+	
+	
+	@RequestMapping(value = "/admin/newsletter", method = RequestMethod.GET)
+	public String newsLetter(Model model) throws Exception {
+		
 
+		AdminServiceImpl service = new AdminServiceImpl();
+		List<AdminVo> list = service.selectAllNewsletterSubscriber();
+		model.addAttribute("userList", list);
+		
+	
+		return "/admin/admin-newsletter";
+	};
+	
+	
+	@RequestMapping(value = "/admin/sendnewsletter", method = RequestMethod.GET)
+	public String sendNewsLetter(Model model, @RequestParam("subject") String subject, @RequestParam("context") String context) throws Exception {
+		
+		
+		System.out.println("메일 제목 => " + subject);
+		System.out.println("메일 내용 => " + context);
+		
+		AdminServiceImpl service = new AdminServiceImpl();
+		List<AdminVo> arrList = service.selectAllNewsletterSubscriber();
+		
+		int subNum = service.countAllSubscriber();
+		InternetAddress[] toAddr = new InternetAddress[subNum];
+		
+		for(int i=0; i<arrList.size();i++) {
+			toAddr[i] = new InternetAddress(arrList.get(i).getId());
+		}
+		
+		SendNewsLetter email = new SendNewsLetter();
+		
+		email.sendNewsLetter(subject, context, toAddr);
+		
+		return "redirect:/admin/newsletter";
+	};
+	
+	@RequestMapping(value = "/main/subscribe", method = RequestMethod.GET)
+	public String subscribeNewsletter(Model model, HttpServletRequest req) throws Exception {
+		
+		AdminServiceImpl service = new AdminServiceImpl();
+		
+		HttpSession session = req.getSession();
+		UserVo user = (UserVo) session.getValue("user");
+		
+		int uNum = user.getuNum();
+		String name = user.getName();
+		String id = user.getId();
+		
+		AdminVo vo = new AdminVo();
+		
+		vo.setuNum(uNum);
+		vo.setName(name);
+		vo.setId(id);
+		
+		try {
+			service.subscribeNewsletter(vo);
+			System.out.println("뉴스레터 구독 성공");
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("ERR! 구독 실패");
+		}
+		
+		return "redirect:/main";
+	};
 }

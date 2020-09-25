@@ -1,0 +1,471 @@
+@import url("style.css");
+
+@keyframes up {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  display: none;/
+}
+
+
+
+.main-status_bar {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgba(250, 250, 250, 0);
+  width: 100%;
+  height: 70px;
+  margin-top: 30px;
+  z-index: 2;
+}
+
+.logo-wrapper {
+   width: 150px;
+   height: 200px;
+   /* padding: 25px; */
+   position: relative;
+   display: flex;
+   flex-direction: column;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.box-div {
+   width: 100px;
+   height: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 2px solid rgb(255, 255, 255);
+   /* transition: all 0.3s linear; */
+   box-shadow: var(- -light-shadow);
+   transform: perspective(400px) rotateX(80deg);
+}
+
+
+
+.logo-wrapper span {
+   color: rgb(255, 255, 255);
+   font-size: 20px;
+   font-weight: 600;
+   position: absolute;
+   top: 20px;
+   opacity: 1;
+  display: block;
+}
+
+.main-status_categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-top: 10px;
+}
+
+.main-status_categories span {
+  margin-right: 30px;
+  align-items: center;
+  font-size: 18pt;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+  margin-left: 50px;
+  position: relative;
+  height: 35px;
+}
+
+.main-status_categories  a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-status_categories span:nth-child(1)::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 3px;
+  background: white;
+}
+
+.main-status_categories span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: white;
+  transition: all .2s ease-out;
+}
+
+.main-status_categories span:hover::after {
+  width: 100%;
+}
+
+.main-profile {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.main-profile .welcome_user {
+  color: #f7f7f7;
+  margin-right: 30px;
+}
+
+.header .main-status_bar .main-profile img {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+}
+/* -------------------------헤더---------------------- */
+
+
+/* --------------------첫번째 세션--------------------- */
+.main-first_bg {
+  position: relative;
+  background-image: url("../image/home/header1.jpg");
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 350px;
+  /* background-position-y: -100px; */
+  z-index: 1;
+}
+
+.main-first_bg img{
+  width: 100%;
+}
+
+
+.main-first_title_section {
+  position: absolute;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  margin-top: 100px;
+  margin-left: 100px;
+  overflow: hidden;
+}
+
+.main-first_title_section .main-title {
+  display: flex;
+  font-size: 20pt;
+  line-height: 38px;
+  color: white;
+}
+
+.main-first_title_section .main-sub_title {
+  display: flex;
+  font-size: 12pt;
+  color: white;
+  margin-top: 16px;
+  line-height: 140%;
+}
+
+#main-start_btn {
+  all: unset;
+  cursor: pointer;
+  padding: 9px 10px 9px 10px;
+  width: 80px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: white;
+  margin-top: 17px;
+}
+
+
+/* .up-on-scroll {
+  transition: transform 0.7s, opacity 1s;
+  width: 100%;
+} */
+
+/* --------------------첫번째 세션--------------------- */
+
+
+/* --------------------두번째 세션--------------------- */
+.main-second_bg {
+  /* border: 2px solid springgreen; */
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center;  */
+  /* width: 300%; */
+  overflow-x: scroll;
+  overflow-y: unset;
+  scrollbar-width: none;
+}
+
+.main-second_bg::-webkit-scrollbar{
+  display: none;
+}
+
+.main-second_container .up-on-scroll {
+   
+}
+
+.main-second_container img {
+  height:80%;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.main-recommand {
+  /* border: 2px solid red; */
+  box-shadow: var(--light-shadow);
+  background-color: white;
+  /* margin-left: 20px; */
+  /* transform: translateY(5rem); */
+  /* animation: up 500ms linear forwards; */
+  width: 70%;
+  height: 80%;
+  margin-left: 20px;
+  margin-top: 30px;
+  border-radius: 12px;
+}
+
+
+.main-recommand .main-first_course{
+  padding: 10px 10px 0px 20px ;
+  height: 20%;
+  width: 100%;
+  /* border: 2px solid red; */
+}
+
+.main-second_course,
+.main-third_course {
+  padding: 10px 10px 0px 20px ;
+  height: 20%;
+  width: 100%;
+  /* border: 2px solid red; */
+}
+
+.main-course_title {
+  font-size: 20px;
+  font-weight: 500;
+  font-weight: bold;
+  width: 100%;
+  height: 20%;
+}
+
+.main-first_course_explain,
+.main-second_course_explain,
+.main-third_course_explain {
+  display: none;
+}
+
+/* ----------------------두번째 세션------------------ */
+
+
+
+/* ----------------------세번째 세션------------------ */
+
+.main-third_container {       /*-----세번째 세션 전체-------*/
+  background-color: black;
+  color: white;
+  margin-top: 30px;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.main-third_container img{       /*----------사진----------*/
+  height:85%;
+  width: 100%;
+} 
+
+.main-third_bg {
+  display: flex;
+         /* flex-direction: row; */
+  justify-content: space-around;
+  padding: 20px 0px 20px 0px;
+  width: 100%;
+ /*  border:1px solid white; */
+}
+
+.main-latest_title_section {
+  width:50% ;
+}
+
+.main-latest_courses_title {
+  font-size: 20pt;
+  margin-top: 3px;
+  width: 100%;
+}
+
+.main-latest_courses_title  p{
+  color: white;
+}
+
+.main-latest_courses_explain{
+  display: none;
+}
+
+.main-to_course_btn_section{
+	display: flex;
+	width:30%;
+	height:35px;
+}
+
+.main-to_course_btn_section a {
+  color: white;
+}
+
+#main-to_course_btn {
+  all: unset;
+  cursor: pointer;
+  padding: 9px 10px 9px 10px; 
+  width: 100%;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: rgba(250, 250, 250, 0);
+  color: white;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////*/
+
+
+.main-latest_sections{    /*크게 전체를 감싸는 div*/
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: unset;
+  scrollbar-width: none;
+  height: 100%;
+}
+
+.main-latest_sections::-webkit-scrollbar{
+  display: none;
+  
+}
+
+.main-latest_section2{     /*3개를 감싸는 div*/
+  background-color:black;
+  display:flex;
+  height: 100%;
+}
+
+
+.main-small_latest_courses{    /* 3개중 2개 포함하는 div */
+	display:flex;
+  flex-direction: row;
+  height: 86%;
+  box-shadow: var(--light-shadow);
+}
+
+
+
+.main-latest_section{        /*1개만*/
+  width: 300px;
+  overflow:hidden;
+  height: 85%;
+  margin: 20px 20px 0px 25px;
+  box-shadow: var(--light-shadow);
+  border-radius: 12px;
+  background-color:  #222222;
+
+}
+/* ---------------------------제일 큰 틀---------------------------- */
+
+
+
+.main-latest_section .main-first_course {
+  width: 100%;
+  height: 0%;
+  padding: 8px 15px 0px 15px ;
+  margin-bottom: 5px;
+  background-color:  #222222;
+  border-radius: 0px 0px 12px 12px; 
+}
+
+.main-latest_sections .main-first_course{
+  width: 100%;
+  height: 15%;
+  padding: 8px 15px 0px 15px ;
+  background-color:  #222222;
+  border-radius: 0px 0px 12px 12px; 
+}
+  
+.main-first_course_title {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.main-small_latest1{
+	width: 300px;
+  overflow:hidden;
+  height: 100%;
+  border-radius: 12px;
+  margin: 20px 20px 0px 0px;
+  background-color:  #222222;
+}
+
+.main-samll_latest2{
+	width: 300px;
+  overflow:hidden;
+  height: 100%;
+  border-radius: 12px;
+  margin: 20px 20px 0px 0px;
+  background-color:  #222222;
+}
+
+.main-latest_section2-2 {
+  width: 300px;
+  height: 100%;
+  overflow:hidden;
+  
+ 
+}
+
+.main-latest {
+  width: 300px;
+  height: 85%;
+  margin: 20px 20px 0px 0px;
+  box-shadow: var(--light-shadow);
+  border-radius: 12px;
+  background-color:  #222222;
+}
+.main-latest img {
+  height: 85%;
+  border-radius: 12px 12px 0px 0px ;
+}
+
+
+
+
+
+/* -----------------세번째 세션--------------------- */
+
+
+
+.footer {
+ display:none;
+ }
