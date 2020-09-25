@@ -231,16 +231,18 @@ to {
 }
 
 .order-image {
-	display: inline-block;
-	width: 100px;
+	display: flex;
+	width: 60px;
 	height: 60px;
 	overflow: hidden;
 	z-index: 1;
+	align-items: center;
+	justify-content: center;
 }
 
 .order-image img {
-	max-width: 100px;
-	top: -20;
+	height: 60px;
+	
 }
 
 .order-title {

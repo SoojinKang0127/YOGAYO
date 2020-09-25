@@ -11,7 +11,7 @@
 	<title>course player</title>
 
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player.css"  media="all and (min-width:600px) and (max-width:2000px)">
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player_vertical_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
 	<link rel="stylesheet" type="text/css"
 		href="${pageContext.request.contextPath}/resources/css/player-rSlider.min.css">
 
@@ -58,7 +58,7 @@
 		$(document).ready(function () {
 			window.onload = function () {
 				$("#pop1").hide()
-				$("#pop2").css("visibility", "visible")
+				$("#pop2").css("visibility", "hidden")
 				$("#pop3").hide()
 			}
 
