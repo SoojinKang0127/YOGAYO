@@ -124,6 +124,13 @@ public class CourseDAOImpl implements CourseDAO {
 	public List<CommentVo> commentAllMore(CourseVo vo) throws Exception {
 		return mybatis.selectList("CourseDao.commentAllMore",vo);
 	}
+
+
+	@Override
+	public CourseVo selectCourseByCrsNum(Integer crsNum) throws Exception {
+		
+		return mybatis.selectOne("CourseDao.selectCourseByCrsNum",crsNum);
+	}
 	
 	
 

@@ -32,7 +32,9 @@
 						</p>
 					</div>
 					<div class="main-btn">
+						<a href="${pageContext.request.contextPath}/course-page"> 
 						<button id="main-start_btn">시작하기</button>
+					</a>
 					</div>
 				</div>
 			</div>
@@ -42,198 +44,195 @@
 				<div class="up-on-scroll">
 					<div class="main-second_bg">
 						<div class="main-recommand">
-							<a
-								href="${pageContext.request.contextPath}/course-detail?crsNum=1">
-								<img
-								src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(0).crsNum}">
+								<img src="${pageContext.request.contextPath}/${rec.get(0).imgPath}"/>
 								<div class="main-first_course">
-									<div class="main-course_title">${allCourses.get(0).title}
+									<div class="main-course_title">${rec.get(0).title}
 									</div>
 									<div class="main-first_course_explain">
-										${allCourses.get(0).dscrt}</div>
+										${rec.get(0).dscrt}</div>
 								</div>
 							</a>
 						</div>
 						<div class="main-recommand">
-							<a href="${pageContext.request.contextPath}/course-detail"> <img
-								src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(1).crsNum}"> <img
+								src="${pageContext.request.contextPath}/${rec.get(1).imgPath}" />
 								<div class="main-second_course">
-									<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
-									<div class="main-second_course_explain">예전 같지 않은 허리 이대로
-										괜찮으신가요?</div>
+									<div class="main-course_title">${rec.get(1).title}</div>
+									<div class="main-second_course_explain">${rec.get(1).dscrt}</div>
 								</div>
 							</a>
 						</div>
 						<div class="main-recommand">
-							<img
-								src="${pageContext.request.contextPath}/resources/image/course/course.jpg" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(2).crsNum}"><img
+								src="${pageContext.request.contextPath}/${rec.get(2).imgPath}" />
 							<div class="main-third_course">
-								<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
-								<div class="main-third_course_explain">예전 같지 않은 허리 이대로
-									괜찮으신가요?</div>
+								<div class="main-course_title">${rec.get(2).title}</div>
+								<div class="main-third_course_explain">${rec.get(2).dscrt}</div>
 							</div>
+						</a>
 						</div>
 					</div>
 				</div>
 				<div class="up-on-scroll">
-					<div class="main-second_bg">
-						<div class="main-recommand">
-							<img
-								src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
+					 <div class="main-second_bg">
+						<div class="main-recommand"> 
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(3).crsNum}"><img
+								src="${pageContext.request.contextPath}/${rec.get(3).imgPath}" />
 							<div class="main-first_course">
-								<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
-								<div class="main-first_course_explain">예전 같지 않은 허리 이대로
-									괜찮으신가요?</div>
+								<div class="main-course_title">${rec.get(3).title}</div>
+								<div class="main-first_course_explain">${rec.get(3).dscrt}</div>
 							</div>
+							</a>
 						</div>
 						<div class="main-recommand">
-							<img
-								src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(3).crsNum}"><img
+								src="${pageContext.request.contextPath}/${rec.get(3).imgPath}" />
 							<div class="main-second_course">
-								<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
-								<div class="main-second_course_explain">예전 같지 않은 허리 이대로
-									괜찮으신가요?</div>
+								<div class="main-course_title">${rec.get(3).title}</div>
+								<div class="main-second_course_explain">${rec.get(3).dscrt}</div>
 							</div>
+							</a>
 						</div>
 						<div class="main-recommand">
-							<img
-								src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(3).crsNum}"><img
+								src="${pageContext.request.contextPath}/${rec.get(3).imgPath}" />
 							<div class="main-third_course">
-								<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
-								<div class="main-third_course_explain">예전 같지 않은 허리 이대로
-									괜찮으신가요?</div>
+								<div class="main-course_title">${rec.get(3).title}</div>
+								<div class="main-third_course_explain">${rec.get(3).dscrt}</div>
 							</div>
+							</a>
 						</div>
-					</div>
-				</div> -->
+					</div> 
+				</div> 
 
 				<!--------------- end 두번째 세션-------------->
 
 				<!-- -----------------세번째 세션 ------------->
 			</div>
-		</div>
-		<div class="newsletter_section">
-			<div class="newsletter">
-				<div class="first">YOGAYO NEWSLETTER</div>
-				<div class="second">
-					요가요 뉴스레터 구독 신청하고 최신 소식과 여러 혜택을 만나보세요! <i
-						class="fas fa-arrow-circle-right" id="arrow"></i>
-				</div>
-			</div>
-		</div>
-		<div class="main-third_container">
-			<div class="up-on-scroll">
-				<div class="main-third_bg">
-					<div class="main-latest_title_section">
-						<div class="main-latest_courses_title">새로 올라운 코스</div>
-						<div class="main-latest_courses_explain">
-							<p>세계 각지 사람들의 다양한 코스들을 경험해보세요. 저희 요가요에서 제공하는 코스들도 놓치지 마세요.</p>
-						</div>
-					</div>
-					<div class="main-to_course_btn_section">
-						<a href="${pageContext.request.contextPath}/course-page">
-							<button id="main-to_course_btn">모두 둘러보기</button>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="main-latest_sections">
-				<a
-					href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(0).crsNum}">
-					<div class="up-on-scroll">
+      </div>
+      <div class="newsletter_section">
+         <div class="newsletter">
+            <div class="first">YOGAYO NEWSLETTER</div>
+            <div class="second">
+               요가요 뉴스레터 구독 신청하고 최신 소식과 여러 혜택을 만나보세요! <i class="fas fa-arrow-circle-right" id="arrow"></i>
+            </div>
+         </div>
+      </div>
+      <div class="main-third_container">
+         <div class="up-on-scroll">
+            <div class="main-third_bg">
+               <div class="main-latest_title_section">
+                  <div class="main-latest_courses_title">새로 올라운 코스</div>
+                  <div class="main-latest_courses_explain">
+                     <p>세계 각지 사람들의 다양한 코스들을 경험해보세요. 저희 요가요에서 제공하는 코스들도 놓치지 마세요.</p>
+                  </div>
+               </div>
+               <div class="main-to_course_btn_section">
+                  <a href="${pageContext.request.contextPath}/course-page">
+                     <button id="main-to_course_btn">모두 둘러보기</button>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="main-latest_sections">
 
-						<div class="main-latest_section">
-							<div class="img_wrapper">
-								<img
-									src="${pageContext.request.contextPath}/${allCourses.get(0).imgPath}" />
-							</div>
-							<div class="main-first_course">
-								<div class="main-first_course_title">
-									${allCourses.get(0).title}</div>
-							</div>
-						</div>
+            <div class="up-on-scroll">
+               <div class="main-latest_section">
+                  <a href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(0).crsNum}">
+                     <div class="img_wrapper">
+                        <img src="${pageContext.request.contextPath}/${allCourses.get(0).imgPath}" />
+                     </div>
+                     <div class="main-first_course">
+                        <div class="main-first_course_title">
+                           ${allCourses.get(0).title}</div>
+                     </div>
+                  </a>
+               </div>
+            </div>
 
-					</div>
-				</a>
-				<div class="main-latest_section2">
-					<div class="main-latest_section2-1">
-						<div class="main-small_latest_courses">
-							<a
-								href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(1).crsNum}">
-								<div class="up-on-scroll">
-									<div class="main-small_latest1">
-										<div class="img_wrapper2">
-											<img
-												src="${pageContext.request.contextPath}/${allCourses.get(1).imgPath}" />
-										</div>
-										<div class="main-first_course">
-											<div class="main-first_course_title">
-												${allCourses.get(1).title}</div>
-										</div>
-									</div>
-								</div>
-							</a> <a
-								href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(2).crsNum}">
-								<div class="up-on-scroll">
-									<div class="main-samll_latest2">
-										<div class="img_wrapper2">
-											<img
-												src="${pageContext.request.contextPath}/${allCourses.get(2).imgPath}" />
-										</div>
-										<div class="main-first_course">
-											<div class="main-first_course_title">
-												${allCourses.get(2).title}</div>
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
-					<a
-						href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(3).crsNum}">
-						<div class="up-on-scroll">
-							<div class="main-latest_section2-2">
-								<div class="main-latest">
-									<div class="img_wrapper3">
-										<img
-											src="${pageContext.request.contextPath}/${allCourses.get(3).imgPath}" />
-									</div>
-									<div class="main-first_course">
-										<div class="main-first_course_title">
-											${allCourses.get(3).title}</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				
-			</div>
-		</div>
-		<div class="newsletter_modal hiding" id="newsletter_modal">
-			<div class="temp">
-				<div class="pop_up">
-					<i class="far fa-envelope"></i> <span class="title">YOGAYO
-						NEWSLETTER</span> <span class="sentence">${user.name}님, 뉴스레터를 구독하고<br>
-						YOGAYO에서 제공하는 최신 정보와<br> 회원님에게 딱 맞는 요가 코스 추천을<br>받아보시겠어요?
-						:)
-					</span> <span class="email">${user.id} 로 메일 수신 동의</span>
-					<div class="btn_area">
-						<div class="no_btn" id="no_btn">아니요</div>
-						<div class="yes_btn" id="yes_btn">네</div>
-					</div>
-				</div>
-				<div class="black_back"></div>
-			</div>
-		</div>
-	</main>
-	<script language=JavaScript
-		src="${pageContext.request.contextPath}/resources/js/main_newsletter.js"></script>
-	<jsp:include page="footer/footer_grey.jsp" />
-	</main>
-	<script src="http://code.jquery.com/jquery.js"></script>
-	<script language=JavaScript
-		src="${pageContext.request.contextPath}/resources/js/main.js"></script>
+            <div class="main-latest_section2">
+               <div class="main-latest_section2-1">
+                  <div class="main-small_latest_courses">
+
+                     <div class="up-on-scroll">
+                        <div class="main-small_latest1">
+                           <a
+                              href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(1).crsNum}">
+                              <div class="img_wrapper2">
+                                 <img
+                                    src="${pageContext.request.contextPath}/${allCourses.get(1).imgPath}" />
+                              </div>
+                              <div class="main-first_course">
+                                 <div class="main-first_course_title">
+                                    ${allCourses.get(1).title}</div>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+
+                     <div class="up-on-scroll">
+                        <div class="main-samll_latest2">
+                           <a
+                              href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(2).crsNum}">
+                              <div class="img_wrapper2">
+                                 <img
+                                    src="${pageContext.request.contextPath}/${allCourses.get(2).imgPath}" />
+                              </div>
+                              <div class="main-first_course">
+                                 <div class="main-first_course_title">
+                                    ${allCourses.get(2).title}</div>
+                              </div>
+                           </a>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+
+               <div class="up-on-scroll">
+                  <div class="main-latest_section2-2">
+                     <div class="main-latest">
+                        <a
+                           href="${pageContext.request.contextPath}/course-detail?crsNum=${allCourses.get(3).crsNum}">
+                           <div class="img_wrapper3">
+                              <img src="${pageContext.request.contextPath}/${allCourses.get(3).imgPath}" />
+                           </div>
+                           <div class="main-first_course">
+                              <div class="main-first_course_title">
+                                 ${allCourses.get(3).title}</div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+
+         </div>
+      </div>
+      <div class="newsletter_modal hiding" id="newsletter_modal">
+         <div class="temp">
+            <div class="pop_up">
+               <i class="far fa-envelope"></i> <span class="title">YOGAYO
+                  NEWSLETTER</span> <span class="sentence">${user.name}님, 뉴스레터를 구독하고<br>
+                  YOGAYO에서 제공하는 최신 정보와<br> 회원님에게 딱 맞는 요가 코스 추천을<br>받아보시겠어요?
+                  :)
+               </span> <span class="email">${user.id} 로 메일 수신 동의</span>
+               <div class="btn_area">
+                  <div class="no_btn" id="no_btn">아니요</div>
+                  <div class="yes_btn" id="yes_btn">네</div>
+               </div>
+            </div>
+            <div class="black_back"></div>
+         </div>
+      </div>
+   </main>
+   <script language=JavaScript src="${pageContext.request.contextPath}/resources/js/main_newsletter.js"></script>
+   <jsp:include page="footer/footer_grey.jsp" />
+   </main>
+   <script src="http://code.jquery.com/jquery.js"></script>
+   <script language=JavaScript src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 </body>
 
 </html>

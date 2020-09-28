@@ -309,5 +309,9 @@
 	SELECT CRSNUM FROM COURSE
 	</select>
 	
+	<select id="selectCourseByCrsNum" parameterType="int" resultType="CourseVo">
+	SELECT * FROM COURSE WHERE CRSNUM=#{crsNum}
+	</select>
+	
 
 </mapper>

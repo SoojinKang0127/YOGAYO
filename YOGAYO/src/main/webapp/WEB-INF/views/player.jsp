@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>course player</title>
 
-	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player.css"  media="all and (min-width:600px) and (max-width:2000px)">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player.css"  media="all and (min-width:740px) and (max-width:2000px)">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player_vertical_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player_mobile_horizontal.css" media="all and (min-width:600px) and (max-width:739px)">
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/player-rSlider.min.css">

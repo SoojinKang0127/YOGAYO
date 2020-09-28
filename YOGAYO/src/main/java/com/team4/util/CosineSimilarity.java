@@ -20,12 +20,10 @@ import com.team4.vo.UserVo;
 
 public class CosineSimilarity implements R {
 
-	public static void main(String[] args) {
+	public static ArrayList<Integer> calc(UserVo vo) {
 		LikeDAOImpl lservice = new LikeDAOImpl();
 		List<Integer> listExceptMe = null;
 		CourseDAOImpl cservice = new CourseDAOImpl();
-		UserVo vo = new UserVo();
-		vo.setuNum(1048);
 		UserDAOImpl uservice = new UserDAOImpl();
 		BasicDBObject field = new BasicDBObject("keyword", 1);
 		try {
@@ -48,7 +46,8 @@ public class CosineSimilarity implements R {
 		for (int j = 0; j < myList.size(); j++) {
 			String key = myList.get(j);
 			int index = keywordList.indexOf(key);
-			mycsarray.getList().set(index + 2, 1);
+			if (index != -1)
+				mycsarray.getList().set(index + 2, 1);
 		}
 		for (int i = 0; i < listExceptMe.size(); i++) {
 			BasicDBObject userQuery = new BasicDBObject("_id", listExceptMe.get(i));
@@ -61,7 +60,8 @@ public class CosineSimilarity implements R {
 			for (int j = 0; j < userList.size(); j++) {
 				String key = userList.get(j);
 				int index = keywordList.indexOf(key);
-				csarray.getList().set(index + 2, 1);
+				if (index != -1)
+					csarray.getList().set(index + 2, 1);
 			}
 			int total = 0;
 			for (int j = 2; j < csarray.getList().size(); j++) {
@@ -71,8 +71,7 @@ public class CosineSimilarity implements R {
 			listAll.add(csarray);
 		}
 // like cs 시작
-		
-		
+
 		List<Integer> courseListExceptme = null;
 		List<Integer> myCourse = null;
 		LikeVo mylvo = new LikeVo();
@@ -92,11 +91,12 @@ public class CosineSimilarity implements R {
 		for (int j = 0; j < myCourse.size(); j++) {
 			int key = myCourse.get(j);
 			int index = courseList.indexOf(key);
-			myCourseList.set(index + 2, 1);
+			if (index != -1)
+				myCourseList.set(index + 2, 1);
 		}
 
-		System.out.println("코스 리스트 얼: " + courseList.toString());
-		System.out.println("마이코스 : " + myCourse.toString());
+		// System.out.println("코스 리스트 얼: " + courseList.toString());
+		// System.out.println("마이코스 : " + myCourse.toString());
 
 		for (int i = 0; i < listExceptMe.size(); i++) {
 			LikeVo lvo = new LikeVo();
@@ -112,11 +112,12 @@ public class CosineSimilarity implements R {
 			for (int j = 0; j < courseListExceptme.size(); j++) {
 				int key = courseListExceptme.get(j);
 				int index = courseList.indexOf(key);
-				intlist.getList().set(index + 2, 1);
+				if (index != -1)
+					intlist.getList().set(index + 2, 1);
 			}
 			intlist.getList().set(0, listExceptMe.get(i));
 			intlist.getList().set(1, courseListExceptme.size());
-			
+
 			int total = 0;
 			for (int j = 2; j < intlist.getList().size(); j++) {
 				total += intlist.getList().get(j) * myCourseList.get(j);
@@ -125,26 +126,43 @@ public class CosineSimilarity implements R {
 			courseListAll.add(intlist);
 		}
 
-
-		for(int i=0;i<listAll.size();i++) {
-			for(int j=0;j<courseListAll.size();j++) {
-				if(courseListAll.get(j).getList().get(0)==listAll.get(i).getList().get(0))
+		for (int i = 0; i < listAll.size(); i++) {
+			for (int j = 0; j < courseListAll.size(); j++) {
+				if (courseListAll.get(j).getList().get(0) == listAll.get(i).getList().get(0))
 					courseListAll.get(j).setKeywordcs(listAll.get(i).getKeywordcs());
 			}
 		}
 		Collections.sort(courseListAll);
-		System.out.println(courseListAll.toString());
-		
-		ArrayList<Integer> myRecommend=myCourseList;
-		ArrayList<Integer> recommendCourse= new ArrayList<Integer>();
-		
-		for(int i=2;i<myRecommend.size();i++) {
-			myRecommend.set(i,myRecommend.get(i)-courseListAll.get(0).getList().get(i));
-			if(myRecommend.get(i)==-1)
-				recommendCourse.add(i-1);
+		// System.out.println(courseListAll.toString());
+
+		ArrayList<Integer> myRecommend = myCourseList;
+		ArrayList<Integer> recommendCourse = new ArrayList<Integer>();
+
+		for (int i = 2; i < myRecommend.size(); i++) {
+			myRecommend.set(i, myRecommend.get(i) - courseListAll.get(0).getList().get(i));
+			myRecommend.set(i, myRecommend.get(i) - courseListAll.get(1).getList().get(i));
+			myRecommend.set(i, myRecommend.get(i) - courseListAll.get(2).getList().get(i));
+			myRecommend.set(i, myRecommend.get(i) - courseListAll.get(3).getList().get(i));
+			myRecommend.set(i, myRecommend.get(i) - courseListAll.get(4).getList().get(i));
+			if (myRecommend.get(i) <= -1) {
+
+				CourseVo courseVo = new CourseVo();
+				courseVo.setCrsNum(i-1);
+				double average = 0.0;
+				try {
+					average = cservice.courseDiffi(courseVo).getAverage();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				System.out.println(average);
+				if (Math.abs(vo.getProfiLevel() - average) <= 1.3)
+					recommendCourse.add(i - 1);
+
+			}
 		}
-		System.out.println(myRecommend.toString());
-		System.out.println(recommendCourse.toString());
+
+		// System.out.println(myRecommend.toString());
+		return recommendCourse;
 	}
 
 }

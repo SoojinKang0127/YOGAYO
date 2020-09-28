@@ -31,4 +31,5 @@ public interface CourseService {
 	public UserVo makerInfo(CourseVo vo) throws Exception;
 	public int userCount(CourseVo vo) throws Exception;
 	public DiffiVo courseDiffi(CourseVo vo) throws Exception;
+	public CourseVo selectCourseByCrsNum(Integer crsNum) throws Exception;
 }

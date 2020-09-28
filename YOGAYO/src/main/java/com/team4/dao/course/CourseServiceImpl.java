@@ -105,4 +105,9 @@ public class CourseServiceImpl implements CourseService {
 	
 	}
 
+	@Override
+	public CourseVo selectCourseByCrsNum(Integer crsNum) throws Exception {
+		return dao.selectCourseByCrsNum(crsNum);
+	}
+
 }
