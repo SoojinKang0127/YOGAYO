@@ -10,16 +10,15 @@
 
 <script src="https://kit.fontawesome.com/54919de5bd.js"
 	crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/dictionary-detail.css">
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script type="text/javascript"
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script language=JavaScript
-	src="${pageContext.request.contextPath}/resources/js/dictionary-detail.js"></script>
+	<link rel="stylesheet" type="text/css"
+		href="${pageContext.request.contextPath}/resources/css/dictionary-detail.css" media="all and (min-width:600px) and (max-width:2000px)">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/dictionary-detail_mobile.css" media="all and (min-width:300px) and (max-width:599px)">
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/dictionary-detail.js"></script>
 </head>
 <body>
-	<jsp:include page="header/header_black.jsp" />
+	<header><jsp:include page="header/header_black.jsp" /></header>
 	<main>
 	<div class="yoag-dictionary-box">
 		<div class="yoag-dictionary-box-section">

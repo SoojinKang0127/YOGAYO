@@ -59,7 +59,7 @@
 		$(document).ready(function () {
 			window.onload = function () {
 				$("#pop1").hide()
-				$("#pop2").css("visibility", "hidden")
+				$("#pop2").css("visibility", "visible")
 				$("#pop3").hide()
 			}
 

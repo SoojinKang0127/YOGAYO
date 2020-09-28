@@ -266,7 +266,8 @@ main {
 }
 
 .main-latest_section img {
-  height: 700px;
+  height: 100%;
+  width: auto;
 }
 
 .main-first_course_title {
@@ -286,7 +287,8 @@ main {
 }
 
 .main-latest_section2 .main-latest_section2-1 img {
-  height: 328px;
+  height: 100%;
+  width: auto;
 }
 
 .main-small_latest_courses {
@@ -311,18 +313,24 @@ main {
   width: 700px;
   height: 700px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
  .img_wrapper2 {
   width: 328px;
   height: 288px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .img_wrapper3{
   width: 673px;
   height: 300px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .main-latest_section2 .main-latest_section2-2 {
@@ -332,7 +340,8 @@ main {
 }
 
 .main-latest_section2 .main-latest_section2-2 img {
-  width: 673px;
+  width: auto;
+  height: 100%;
 }
 
 .footer {

@@ -5,7 +5,23 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2020-09-22T21:53:17Z</updated>
+  <updated>2020-09-24T22:51:34Z</updated>
+  <entry>
+    <title>Sentry CTO David Cramer on Automated Error Capture and Analysis</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/09/24/sentry-cto-david-cramer-on-automated-error-capture-and-analysis" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2020-09-24:4215</id>
+    <updated>2020-09-24T22:51:34Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! In this episode &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks about the wide world of web development with CSS, Figma, AdobeXD and more, and then talks to Sentry CTO &lt;a href="https://twitter.com/zeeg"&gt;David Cramer (@zeeg)&lt;/a&gt; about easy error capture and analysis with Sentry and Spring.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Want to see the worldwide flurry of activity as errors make their way to Sentry? &lt;a href="https://live.sentry.io"&gt;Check this out&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe title="Sentry CTO David Cramer on Automated Error Capture and Analysis" height="122" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/media/player/mzzb9-ed060b?from=pb6admin&amp;download=1&amp;version=1&amp;auto=0&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Helvetica&amp;skin=1&amp;pfauth=&amp;btn-skin=107"&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - September 22, 2020</title>
     <link rel="alternate" href="https://spring.io/blog/2020/09/22/this-week-in-spring-september-22-2020" />
@@ -17,11 +33,11 @@
     <updated>2020-09-22T21:53:17Z</updated>
     <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another fun-filled and fantastic installment of &lt;em&gt;This Week in Spring&lt;/em&gt; where we review the week that was in the Java ecosystem. It&amp;rsquo;s been quite a week indeed. SOoo many new releases and so many interesting things going on in the larger Spring, Java, Azure, and VMware ecosystems, that we don&amp;rsquo;t have a moment to waste so: onward! &lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/09/17/a-bootiful-podcast-lightbend-cto-jonas-bon-r-on-his-epic-aspect-oriented-distributed-reactive-work"&gt;A Bootiful Podcast: Lightbend CTO Jonas Bon√©r on his epic, aspect-oriented, distributed, reactive work&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2020/09/17/a-bootiful-podcast-lightbend-cto-jonas-bon-r-on-his-epic-aspect-oriented-distributed-reactive-work"&gt;A Bootiful Podcast: Lightbend CTO Jonas Bon?r on his epic, aspect-oriented, distributed, reactive work&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/09/17/ask-the-architects/"&gt;Ask the Java Architects Panel&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://www.infoq.com/articles/azure-spring-boot-serverles-dubois/"&gt;Azure + Spring Boot = Serverless - Q&amp;amp;A with Julien Dubois&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/09/16/azure-in-the-enterprise-azure-object-storage-service-and-spring-boot"&gt;Azure in the Enterprise: Azure Object Storage Service and Spring Boot&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://blogs.vmware.com/vmworld/2020/09/intels-vmworld-sessions-highlight-modernized-infrastructure-from-edge-to-cloud.html"&gt;Intel‚Äôs VMworld Sessions Highlight Modernized Infrastructure from Edge to Cloud&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://blogs.vmware.com/vmworld/2020/09/intels-vmworld-sessions-highlight-modernized-infrastructure-from-edge-to-cloud.html"&gt;Intel°Øs VMworld Sessions Highlight Modernized Infrastructure from Edge to Cloud&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/09/17/devlive-java-lang-futures/"&gt;Java Language Futures - Mid 2020 Edition&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/09/17/keep-java-apps-secure/"&gt;Keeping Your Java Applications Secure - Cryptographic Improvements and Best Practices&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/09/17/devlive-keynote/"&gt;Keynote - The Future of Java Is Now&lt;/a&gt;&lt;/li&gt;
@@ -43,7 +59,7 @@
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/09/16/spring-tools-4-8-0-released"&gt;Spring Tools 4.8.0 released&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://www.youtube.com/watch?feature=youtu.be&amp;t=7267&amp;v=QPXNfV9MciI&amp;app=desktop"&gt;Will it scale? Azure Spring Cloud for the win!&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://twitter.com/acoliver/status/1305939457946853376?s=12"&gt;Yugabyte - a unique distributed and NoSQL database - has a very promising Spring integratoin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://inside.java/2020/09/22/zgc-new-in-jdk-15/"&gt;ZGC - What‚Äôs new in JDK 15&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://inside.java/2020/09/22/zgc-new-in-jdk-15/"&gt;ZGC - What°Øs new in JDK 15&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
@@ -57,7 +73,7 @@
     <id>tag:spring.io,2020-09-21:4213</id>
     <updated>2020-09-22T14:51:17Z</updated>
     <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;With the recent release of Spring Security 5.4, we‚Äôd like to announce that maintenance for &lt;a href="https://github.com/spring-projects/spring-security-saml"&gt;Spring Security SAML Extensions 1.x&lt;/a&gt; will end on 6 October 2021.&lt;/p&gt;
+&lt;p&gt;With the recent release of Spring Security 5.4, we°Ød like to announce that maintenance for &lt;a href="https://github.com/spring-projects/spring-security-saml"&gt;Spring Security SAML Extensions 1.x&lt;/a&gt; will end on 6 October 2021.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-saml2"&gt;SAML 2.0 support&lt;/a&gt; has been added to the core Spring Security framework over the last three minor releases. There are two main reasons for this.&lt;/p&gt;
@@ -163,7 +179,7 @@ SSDG &lt;code&gt;2.4.0-RC1&lt;/code&gt; is now based on Apache Geode &lt;code&gt
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
   <entry>
-    <title>A Bootiful Podcast: Lightbend CTO Jonas Bon√©r on his epic, aspect-oriented, distributed, reactive work</title>
+    <title>A Bootiful Podcast: Lightbend CTO Jonas Bon?r on his epic, aspect-oriented, distributed, reactive work</title>
     <link rel="alternate" href="https://spring.io/blog/2020/09/17/a-bootiful-podcast-lightbend-cto-jonas-bon-r-on-his-epic-aspect-oriented-distributed-reactive-work" />
     <category term="engineering" label="Engineering" />
     <author>
@@ -171,15 +187,15 @@ SSDG &lt;code&gt;2.4.0-RC1&lt;/code&gt; is now based on Apache Geode &lt;code&gt
     </author>
     <id>tag:spring.io,2020-09-17:4210</id>
     <updated>2020-09-17T22:31:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! In this episode, &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to his friend and Lightbend CTO &lt;a href="http://twitter.com/jboner"&gt;Jonas Bon√©r (@jboner)&lt;/a&gt; about his epic, aspect-oriented, distributed, and reactive work over the decades, about the cooperation with the Spring team on the &lt;a href="http://reactive-streams.io/"&gt;Reactive Streams&lt;/a&gt;, the &lt;a href="http://Reactive.foundation"&gt;Reactive Foundation&lt;/a&gt;, and more. &lt;/p&gt;
+    <content type="html">&lt;p&gt;Hi, Spring fans! In this episode, &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to his friend and Lightbend CTO &lt;a href="http://twitter.com/jboner"&gt;Jonas Bon?r (@jboner)&lt;/a&gt; about his epic, aspect-oriented, distributed, and reactive work over the decades, about the cooperation with the Spring team on the &lt;a href="http://reactive-streams.io/"&gt;Reactive Streams&lt;/a&gt;, the &lt;a href="http://Reactive.foundation"&gt;Reactive Foundation&lt;/a&gt;, and more. &lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Check out the &lt;a href="https://www.reactivesummit.org/"&gt;upcoming Reactive Summit&lt;/a&gt;! Both Jonas and Josh will be speaking there :-)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;iframe title="Lightbend CTO Jonas Bon√©r on his epic, aspect-oriented, distributed, reactive work " height="122" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/media/player/c9h6k-ec02b2?from=pb6admin&amp;download=1&amp;version=1&amp;auto=0&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Helvetica&amp;skin=1&amp;pfauth=&amp;btn-skin=107"&gt;&lt;/iframe&gt;
+&lt;iframe title="Lightbend CTO Jonas Bon?r on his epic, aspect-oriented, distributed, reactive work " height="122" width="100%" style="border: none;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/media/player/c9h6k-ec02b2?from=pb6admin&amp;download=1&amp;version=1&amp;auto=0&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Helvetica&amp;skin=1&amp;pfauth=&amp;btn-skin=107"&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
   <entry>
-    <title>Spring Boot 2.4.0.M3 available now</title>
+    <title>Spring Boot 2.4.0-M3 available now</title>
     <link rel="alternate" href="https://spring.io/blog/2020/09/17/spring-boot-2-4-0-m3-available-now" />
     <category term="releases" label="Releases" />
     <author>
@@ -197,9 +213,9 @@ SSDG &lt;code&gt;2.4.0-RC1&lt;/code&gt; is now based on Apache Geode &lt;code&gt
   &lt;li&gt;Config data import improvements&lt;/li&gt;
   &lt;li&gt;Numerous dependency upgrades&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;For a complete list of changes and upgrade instructions, please see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.4.0-M3-Release-Notes"&gt;Spring Boot 2.4 Release Notes&lt;/a&gt; on the wiki and the &lt;a href="http://docs.spring.io/spring-boot/docs/2.4.0.M3/reference/html/"&gt;updated reference documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For a complete list of changes and upgrade instructions, please see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.4.0-M3-Release-Notes"&gt;Spring Boot 2.4 Release Notes&lt;/a&gt; on the wiki and the &lt;a href="http://docs.spring.io/spring-boot/docs/2.4.0-M3/reference/html/"&gt;updated reference documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you want to get started with 2.4 and try out the new features, you can bootstrap a new project on &lt;a href="https://start.spring.io"&gt;https://start.spring.io&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.3.0.M2/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.4.0-M3/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
   <entry>
@@ -211,7 +227,7 @@ SSDG &lt;code&gt;2.4.0-RC1&lt;/code&gt; is now based on Apache Geode &lt;code&gt
     </author>
     <id>tag:spring.io,2020-09-17:4206</id>
     <updated>2020-09-17T16:29:52Z</updated>
-    <content type="html">&lt;p&gt;I am pleased to announce that Spring Batch 4.3.0-RC1 is now available from our &lt;a href="https://repo.spring.io/milestone/"&gt;milestone repository&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-s-new" class="anchor" name="what-s-new"&gt;&lt;/a&gt;What‚Äôs New?&lt;/h2&gt;
+    <content type="html">&lt;p&gt;I am pleased to announce that Spring Batch 4.3.0-RC1 is now available from our &lt;a href="https://repo.spring.io/milestone/"&gt;milestone repository&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-s-new" class="anchor" name="what-s-new"&gt;&lt;/a&gt;What°Øs New?&lt;/h2&gt;
 &lt;p&gt;This release comes with a number of new features that you can find in the &lt;a href="https://github.com/spring-projects/spring-batch/releases/tag/4.3.0-RC1"&gt;release notes&lt;/a&gt;, but here are the major highlights:&lt;/p&gt;&lt;h3&gt;&lt;a href="#1-graalvm-support" class="anchor" name="1-graalvm-support"&gt;&lt;/a&gt;1. GraalVM Support&lt;/h3&gt;
 &lt;p&gt;A lot of work has already been done in Spring Framework to support running some types of Spring applications on GraalVM. In this release, we made changes in Spring Batch to correctly run Batch applications on GraalVM as well.&lt;/p&gt;
 &lt;p&gt;The support is still experimental, so we encourage you to give the release a try and share your feedback.&lt;/p&gt;&lt;h3&gt;&lt;a href="#2-java-records-support" class="anchor" name="2-java-records-support"&gt;&lt;/a&gt;2. Java Records Support&lt;/h3&gt;
@@ -444,7 +460,7 @@ Artem&lt;/p&gt;
     </author>
     <id>tag:spring.io,2020-09-16:4200</id>
     <updated>2020-09-16T12:43:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the Spring Data team, I‚Äôm pleased to announce a round of service releases for the Spring Data Neumann, Moore, and Lovelace release trains. &lt;code&gt;Neumann SR4&lt;/code&gt; ships with &lt;a href="https://jira.spring.io/issues/?filter=17038"&gt;43 tickets fixed&lt;/a&gt;, &lt;code&gt;Moore SR10&lt;/code&gt; ships with &lt;a href="https://jira.spring.io/issues/?filter=17035"&gt;46 tickets fixed&lt;/a&gt;, and, finally, &lt;code&gt;Lovelace SR20&lt;/code&gt; ships with &lt;a href="https://jira.spring.io/issues/?filter=17034"&gt;35 tickets fixed&lt;/a&gt;.&lt;/p&gt;
+    <content type="html">&lt;p&gt;On behalf of the Spring Data team, I°Øm pleased to announce a round of service releases for the Spring Data Neumann, Moore, and Lovelace release trains. &lt;code&gt;Neumann SR4&lt;/code&gt; ships with &lt;a href="https://jira.spring.io/issues/?filter=17038"&gt;43 tickets fixed&lt;/a&gt;, &lt;code&gt;Moore SR10&lt;/code&gt; ships with &lt;a href="https://jira.spring.io/issues/?filter=17035"&gt;46 tickets fixed&lt;/a&gt;, and, finally, &lt;code&gt;Lovelace SR20&lt;/code&gt; ships with &lt;a href="https://jira.spring.io/issues/?filter=17034"&gt;35 tickets fixed&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The releases ship with mostly bug fixes and dependency upgrades and will be picked up by Spring Boot &lt;code&gt;2.3.4&lt;/code&gt;, &lt;code&gt;2.2.10&lt;/code&gt;, &lt;code&gt;2.1.17&lt;/code&gt; ( respectively) in the coming days.&lt;/p&gt;
 &lt;p&gt;Here are the detailed links to each individual artifact and the reference documentation:&lt;/p&gt;&lt;h2&gt;&lt;a href="#neumann-sr4" class="anchor" name="neumann-sr4"&gt;&lt;/a&gt;Neumann SR4&lt;/h2&gt;
 &lt;ul&gt;
@@ -541,7 +557,7 @@ Artem&lt;/p&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2020/09/10/case-study-relational-database-source-and-file-sink"&gt;Case Study: Relational Database Source and File Sink&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://www.youtube.com/watch?reload=9&amp;v=Y5dcDyeRlDQ&amp;feature=youtu.be"&gt;Deploy Friday: E09 Spring Framework - Java in focus - YouTube. Did I mention I was on the &amp;ldquo;Deploy Friday&amp;rdquo; show not too long ago? The video is up!&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://blogs.vmware.com/opensource/2020/09/10/tuf-enhancing-software-update-security/"&gt;Enhancing Software Update Security With TUF (The Update Framework)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://inside.java/2020/09/14/podcast-003/"&gt;Episode 3 ‚ÄúThe State of Java‚Äù with Georges Saab&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://inside.java/2020/09/14/podcast-003/"&gt;Episode 3 °∞The State of Java°± with Georges Saab&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://inside.java/2020/09/10/elastic-metaspace-jep-proposed-to-target/"&gt;JEP proposed to target JDK 16: 387: Elastic Metaspace&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;I presented at my talk &lt;em&gt;Bootiful Testing&lt;/em&gt; for the &lt;a href="https://blog.jetbrains.com/idea/2020/09/jetbrains-technology-day-for-java-bootiful-testing/"&gt;JetBrains Technology Day for Java&lt;/a&gt; and Jetbrains did a nice recap blog on the talk.&lt;/li&gt;
   &lt;li&gt;&lt;a href="https://www.infoq.com/news/2020/09/azure-spring-cloud-ga/?itm_campaign=rightbar_v2&amp;itm_source=infoq&amp;itm_medium=news_link&amp;itm_content=link_text"&gt;Microsoft Announces the General Availability of Azure Spring Cloud&lt;/a&gt;&lt;/li&gt;
@@ -612,24 +628,6 @@ Artem&lt;/p&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="http://projects.spring.io/spring-vault/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-vault"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-vault/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-vault/docs/2.3.0-M1/reference/html/"&gt;Documentation for 2.3.0-M1&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-vault"&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Framework 5.2.9, 5.1.18, 5.0.19, and 4.3.29 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/09/15/spring-framework-5-2-9-5-1-18-5-0-19-and-4-3-29-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>St√©phane Nicoll</name>
-    </author>
-    <id>tag:spring.io,2020-09-15:4196</id>
-    <updated>2020-09-15T11:51:00Z</updated>
-    <content type="html">&lt;p&gt;&lt;strong&gt;Updated on 2020-09-17&lt;/strong&gt; to add links to CVE-2020-5421 and the corresponding Spring Boot releases.&lt;/p&gt;
-&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce a full round of Spring Framework releases.&lt;/p&gt;
-&lt;p&gt;Spring Framework 5.2.9 includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.2.9.RELEASE"&gt;42 fixes and improvements&lt;/a&gt;. Spring Framework 5.1.18 includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.1.18.RELEASE"&gt;16 selected fixes and improvements&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Maintenance releases for &lt;code&gt;5.0.x&lt;/code&gt; (&lt;code&gt;5.0.19&lt;/code&gt;) and &lt;code&gt;4.3.x&lt;/code&gt; (&lt;code&gt;4.3.29&lt;/code&gt;) with &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.0.19.RELEASE"&gt;13 selected fixes and improvements&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v4.3.29.RELEASE"&gt;9 selected fixes and improvements&lt;/a&gt; respectively are also available today.&lt;/p&gt;
-&lt;p&gt;All of the releases include a fix for &lt;a href="https://tanzu.vmware.com/security/cve-2020-5421"&gt;CVE-2020-5421&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Stay tuned for the release candidate of Spring Framework 5.3 and follow-up Spring Boot releases &lt;a href="https://spring.io/blog/2020/09/17/spring-boot-2-1-17-available-now"&gt;2.1.17&lt;/a&gt;, &lt;a href="https://spring.io/blog/2020/09/17/spring-boot-2-2-10-available-now"&gt;2.2.10&lt;/a&gt;, and &lt;a href="https://spring.io/blog/2020/09/17/spring-boot-2-3-4-available-now"&gt;2.3.4&lt;/a&gt;!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://projects.spring.io/spring-framework/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/5.2.9.RELEASE/spring-framework-reference"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

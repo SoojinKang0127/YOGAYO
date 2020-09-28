@@ -177,7 +177,11 @@ main {
   margin-top: 30px;
   /* display: flex;
   flex-direction: column; */
-  height: 100%;
+  height: 62%;
+}
+
+.main-third_container > .up-on-scroll{
+
 }
 
 .main-third_container a:link{
@@ -253,7 +257,9 @@ main {
   overflow-x: scroll;
   overflow-y: unset;
   scrollbar-width: none;
-  height: 350px;
+  height: 75%;
+  margin-top: 20px;
+  /* border:3px solid blue */
 }
 
 /* .main-latest_sections a{
@@ -276,7 +282,7 @@ main {
 .main-small_latest_courses{    /* 3개중 2개 포함하는 div */
    display:flex;
   flex-direction: row;
-  height: 80%;
+  height: 100%;
   box-shadow: var(--light-shadow);
 }
 
@@ -285,11 +291,12 @@ main {
 .main-latest_section{        /*1개만*/
   width: 300px;
   overflow:hidden;
-  height: 80%;
-  margin: 30px 20px 0px 25px;
+  height: 100%;
+  margin: 0px 20px 0px 25px;
   box-shadow: var(--light-shadow);
   border-radius: 12px;
   background-color:  #222222;
+  /* border: 1px solid red; */
 }
 /* ---------------------------제일 큰 틀---------------------------- */
 
@@ -316,6 +323,7 @@ main {
   width: 100%;
   height: 16px;
   overflow: hidden;
+  margin-top: 4px;
 }
 
 
@@ -325,7 +333,7 @@ main {
   overflow:hidden;
   height: 100%;
   border-radius: 12px;
-  margin: 30px 20px 0px 0px;
+  margin: 0px 20px 0px 0px;
   background-color:  #222222;
 }
 
@@ -334,7 +342,7 @@ main {
   overflow:hidden;
   height: 100%;
   border-radius: 12px;
-  margin: 30px 20px 0px 0px;
+  margin: 0px 20px 0px 0px;
   background-color:  #222222;
 }
 
@@ -342,16 +350,16 @@ main {
   width: 300px;
   height: 100%;
   overflow:hidden;
-  
- 
+  border-radius: 12px;
+  margin-right: 20px;
 }
 
 .main-latest {
   width: 300px;
-  height: 80%;
-  margin: 30px 20px 0px 0px;
+  height: 100%;
+  margin: 0px 20px 0px 0px;
   box-shadow: var(--light-shadow);
-  border-radius: 12px;
+  
   background-color:  #222222;
 }
 .main-latest img {
