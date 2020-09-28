@@ -4,5 +4,4 @@ INDEX VERSION 1.4+/Users/soo/Documents/YOGAYO/YOGAYO/.metadata/.plugins/org.ecli
 422180748.index
 1878283676.index
 405649730.index
-2687038020.index
 1440474290.index
