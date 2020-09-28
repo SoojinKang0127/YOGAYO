@@ -22,11 +22,17 @@ public class JavaJson{
 	PoseServiceImpl service= new PoseServiceImpl();
 	try {
 		JSONObject obj =(JSONObject) parser.parse(new FileReader("c:\\pose_eng.json"));
-		
 	
-		
-		
-		
+	} catch (FileNotFoundException e) {
+		e.printStackTrace();
+	} catch (IOException e) {
+		e.printStackTrace();
+	} catch (ParseException e) {
+		e.printStackTrace();
+	}
+	
+	
+	// db에 넣어주는 작업
 //		for(int i=0;i<71;i++) {
 //			JSONObject obj2=(JSONObject) obj.get(Integer.toString(i));
 //			String title=(String) obj2.get("title");
@@ -45,6 +51,8 @@ public class JavaJson{
 //			}
 //			
 //		}
+	}
+}
 				
 		
 
@@ -52,19 +60,6 @@ public class JavaJson{
 		
 		
 		
-		
-	} catch (FileNotFoundException e) {
-		e.printStackTrace();
-	} catch (IOException e) {
-		e.printStackTrace();
-	} catch (ParseException e) {
-		e.printStackTrace();
-	}
-	
-	
-	
-	
-	
 	
 	
 	
@@ -77,5 +72,3 @@ public class JavaJson{
 	
 	
 	
-}
-}

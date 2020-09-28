@@ -81,7 +81,7 @@ $(window).ready(function() {
 			top : scrollTop,
 			marginTop : "50px",
 			position : "fixed"
-		}, 1);
+		},1);
 	});
 	$("#more_review_btn").hover(function() {
 		// $(this).css("background-color", "#F7F7F7");

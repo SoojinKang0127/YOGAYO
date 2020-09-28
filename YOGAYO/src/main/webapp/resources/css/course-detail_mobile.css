@@ -528,17 +528,18 @@ color:#2196F3;
 .course_detail-review_user_name {
 	font-size: 14pt;
 	font-weight: 500;
+	margin-bottom:5px;
 }
 
 .course_detail-review_date {
 	color: #717171;
-	font-size: 11pt;
+	font-size: 10pt;
+	margin-bottom:5px;
 }
 
 .course_detail-review_box span {
-	font-size: 13pt;
-	line-height: 120%;
-	letter-spacing: 1px;
+	font-size: 12pt;
+	line-height: 110%;
 }
 
 .show_me_the_comment {
