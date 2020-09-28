@@ -24,9 +24,6 @@
 </head>
 <body>
 	<jsp:include page="header/header_white.jsp" />
-	<header>
-	<div class="mobile_header"></div>
-	</header>
 	<main>
 		<div class="course-first_container">
 			<div class="course_bg">

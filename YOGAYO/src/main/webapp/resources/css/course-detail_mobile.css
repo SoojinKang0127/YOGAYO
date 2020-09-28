@@ -11,9 +11,9 @@ main {
 	align-items: center;
 }
 
-.header {
+/* .header {
 	display: none;
-}
+} */
 
 .course_detail-bg{
 	/* border:1px solid black; */
@@ -22,15 +22,6 @@ main {
 	flex-direction:column;
 	justify-content:center;
 	align-items: center;
-}
-
-.course_detail-first .section {
-	border: 1px solid red;
-	display: flex;
-	flex-direction: row;
-	height: 60px;
-	align-items: center;
-	justify-content: space-around;
 }
 
 .course_detail-second{
