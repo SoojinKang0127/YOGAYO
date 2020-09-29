@@ -18,6 +18,7 @@
 
 	<script src="https://kit.fontawesome.com/7bad96e258.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.ajax-cross-origin.min.js"></script>
 	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/player-rSlider.min.js"></script>
 
 	<script>
@@ -54,6 +55,16 @@
 		poseArr.push('${pose6.img_Path}')
 		poseArr.push('${pose7.img_Path}')
 		poseArr.push('${pose8.img_Path}')
+
+		pnumArr=new Array();
+		pnumArr.push(${pose1.pNum})
+		pnumArr.push(${pose2.pNum})
+		pnumArr.push(${pose3.pNum})
+		pnumArr.push(${pose4.pNum})
+		pnumArr.push(${pose5.pNum})
+		pnumArr.push(${pose6.pNum})
+		pnumArr.push(${pose7.pNum})
+		pnumArr.push(${pose8.pNum})
 
 		
 		$(document).ready(function () {
@@ -279,8 +290,6 @@
 					</div>
 				</div>
 			</main>
-			<script language=JavaScript
-				src="${pageContext.request.contextPath}/resources/js/player.js"></script>
 		</div>
 		<div id="pop1">
 			<div class="pop1-txt">
@@ -452,6 +461,7 @@
 	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/adapter-latest.js"></script>
 	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/ga.js"></script>
 	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/capture.js"></script>
+	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/player.js"></script>
 </body>
 
 </html>
