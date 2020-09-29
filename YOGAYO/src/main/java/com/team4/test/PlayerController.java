@@ -42,7 +42,6 @@ import com.team4.vo.FeedVo;
 import com.team4.vo.LikeVo;
 import com.team4.vo.PoseVo;
 import com.team4.vo.UserVo;
-
 @Controller
 public class PlayerController implements R {
 	MongoClient mongoClient = new MongoClient(uri);

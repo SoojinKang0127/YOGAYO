@@ -156,21 +156,21 @@ document.addEventListener("DOMContentLoaded", function () {
   function sendAjaxRequest(index){
     takepicture();
     var json={'data':'123','pnum':'3'}
-    $.ajax({
-      type: 'POST',
-      url: 'http://52.78.54.179:5000/index',
-      data: json,
-      processData: false, // 비동기 파일 업로드시 꼭 설정해줘야 하는 속성
-      crossOrigin: true,
-      success:function(response){
-          if(response.value > 0)
-          alert(response)
-          res=response
-          },
-      error: function(request, status, error, response){
-          console.log(error)
-      }
-  })
+  //   $.ajax({
+  //     type: 'POST',
+  //     url: 'http://52.78.54.179:5000/index',
+  //     data: json,
+  //     processData: false, // 비동기 파일 업로드시 꼭 설정해줘야 하는 속성
+  //     crossOrigin: true,
+  //     success:function(response){
+  //         if(response.value > 0)
+  //         alert(response)
+  //         res=response
+  //         },
+  //     error: function(request, status, error, response){
+  //         console.log(error)
+  //     }
+  // })
   $.post('http://52.78.54.179:5000/index',json,function(data){
     console.log(data)
   })
