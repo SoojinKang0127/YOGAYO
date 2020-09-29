@@ -48,7 +48,7 @@ $(window).ready(function() {
 			 request_dislike.send(null);
 		}
 	});
-	$(".show_me").click(function() {
+	/*$(".show_me").click(function() {
 		if ($(this).attr('class') == 'fas fa-caret-down') {
 			$(this).attr('class', 'fas fa-caret-left');
 			$(this).parent().next().show();
@@ -67,7 +67,7 @@ $(window).ready(function() {
 		$(this).css({
 			color : "#C0C0C0"
 		});
-	});
+	});*/
 
 	$(window).scroll(function() {
 		var scrollTop = $(document).scrollTop();
