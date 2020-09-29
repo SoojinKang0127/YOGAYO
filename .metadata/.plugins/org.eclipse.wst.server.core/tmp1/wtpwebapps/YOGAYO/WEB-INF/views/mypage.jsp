@@ -137,13 +137,6 @@
                 </div>
               </a>
             </c:forEach>
-            <div class="feed3_content">
-              <div class="feed3_info">
-                <div class="img_wrapper3"><img class="feed3_img" alt="사진없음"
-                    src="${pageContext.request.contextPath}/resources/image/course/yoga.jpg"></div>
-                <div class="feed3_title">테스트입니다.</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
