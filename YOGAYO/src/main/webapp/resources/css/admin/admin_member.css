@@ -297,7 +297,8 @@ main {
 }
 
 .user_pic img {
-	width:100%;
-	min-width: 80px;
+	width:220%
+/* 	min-width: 80px; */
+	/* min-height: 80px;  */
 }
 
