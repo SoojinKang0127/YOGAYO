@@ -201,6 +201,7 @@
           margin: 0px;
           width: 100%;
           text-align: center;
+          border-bottom: 2px solid white;
         }
 
         .main-status_categories span.nowpage::after {

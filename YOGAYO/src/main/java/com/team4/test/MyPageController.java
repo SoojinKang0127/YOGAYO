@@ -50,7 +50,8 @@ public class MyPageController {
 		int cWeight =0;
 		int tWeight1 =0;
 		int tWeight2 =0;
-		int	lWeight =0;
+		int	lWeight1 =0;
+		int	lWeight2 =0;
 		int count1week = 0;
 		int count2week = 0;
 		int count3week = 0;
@@ -62,12 +63,23 @@ public class MyPageController {
 		int thisdate = 0;
 		String thismonth = "";
 		String thisday ="";
-	
+		
 		try {
 			cWeight = service.cWeight(vo);
+		} catch (Exception e1) {
+			System.out.println("cWeight is null");
+			cWeight=0;
+		}
+		
+		
+		
+		
+		
+		try {
 			tWeight1 = service.tWeight1(vo);
 			tWeight2 = service.tWeight2(vo);
-			lWeight = service.lWeight(vo);
+			lWeight1 = service.lWeight1(vo);
+			lWeight2 = service.lWeight2(vo);
 			count1week = service.count1week(vo);
 			count2week = service.count2week(vo);
 			count3week = service.count3week(vo);
@@ -94,6 +106,7 @@ public class MyPageController {
 		}
 		
 		int tWeight = tWeight1 - tWeight2;
+		int lWeight = lWeight1 - lWeight2;
 
 		model.addAttribute("cWeight", cWeight);
 		model.addAttribute("tWeight", tWeight);

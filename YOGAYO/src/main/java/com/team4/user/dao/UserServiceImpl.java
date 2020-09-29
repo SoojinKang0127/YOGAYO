@@ -36,9 +36,15 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public int lWeight(UserVo vo) throws Exception {
+	public int lWeight1(UserVo vo) throws Exception {
 		
-		return dao.lWeight(vo);
+		return dao.lWeight1(vo);
+	}
+	
+	@Override
+	public int lWeight2(UserVo vo) throws Exception {
+		
+		return dao.lWeight2(vo);
 	}
 
 	@Override

@@ -43,8 +43,8 @@
 			
   	</select>
   	
-  	<select id="lWeight" resultType="int">
-  	
+  	<select id="lWeight1" resultType="int">
+  	<![CDATA[ 
   		SELECT
   			WEIGHT 
   		FROM 
@@ -52,12 +52,37 @@
   		JOIN
   			USER u
   		ON
-  			(f.UNUM = u.UNUM)
-  		WHERE
-  			u.UNUM = #{uNum}
-  		ORDER BY 
-  			f.REGDATE DESC LIMIT 1;
+			(f.UNUM = u.UNUM)
+		WHERE
+			u.UNUM = #{uNum}
+		AND
+			NOW() - INTERVAL 1 MONTH >f.REGDATE
+		AND
+			NOW() - INTERVAL 2 MONTH < f.REGDATE
+		ORDER BY 
+			f.REGDATE LIMIT 1;
+  	]]>
+  	</select>
   	
+  	<select id="lWeight2" resultType="int">
+  	<![CDATA[ 
+  		SELECT
+			WEIGHT
+		FROM 
+			FEED f		
+		JOIN
+			USER u
+		ON
+			(f.UNUM = u.UNUM)
+		WHERE 
+			u.UNUM=1068
+		AND
+			(LAST_DAY(NOW() - INTERVAL 1 MONTH) >  f.REGDATE 
+		AND 
+			LAST_DAY(NOW() - INTERVAL 2 MONTH) + INTERVAL 1 DAY <= f.REGDATE)
+		ORDER BY 
+			f.REGDATE LIMIT 1;
+  	]]>
   	</select>
   	
   	<select id="cWeight" resultType="int">
@@ -146,66 +171,80 @@
   		<select id="count1week2" resultType="int">
   	<![CDATA[ 
 		SELECT 
-			COUNT(LNUM)
-		FROM
-			LIKEY L
-		JOIN
-			USER U
-		WHERE
-			U.UNUM=#{uNum}
-		AND
-			NOW() - INTERVAL 1 WEEK < L.REGDATE
+  			TRUNCATE(AVG(WEIGHT), 0)
+  		FROM
+  			FEED f  		
+  		JOIN
+  			USER u
+  		ON
+  			(f.UNUM = u.UNUM)
+  		WHERE
+  			u.UNUM = #{uNum}
+		ORDER BY 
+  			f.REGDATE DESC LIMIT 1;
   		]]>
   	</select>
   	
   	<select id="count2week2" resultType="int">
   	<![CDATA[ 
 		SELECT 
-			COUNT(LNUM)
-		FROM
-			LIKEY L
-		JOIN
-			USER U
-		WHERE
-			U.UNUM=#{uNum}
+  			TRUNCATE(AVG(WEIGHT), 0)
+  		FROM
+  			FEED f  		
+  		JOIN
+  			USER u
+  		ON
+  			(f.UNUM = u.UNUM)
+  		WHERE
+  			u.UNUM = #{uNum}
 		AND
-			NOW() - INTERVAL 1 WEEK >L.REGDATE
+			NOW() - INTERVAL 1 WEEK >f.REGDATE
 		AND
-			NOW() - INTERVAL 2 WEEK < L.REGDATE;
+			NOW() - INTERVAL 2 WEEK < f.REGDATE
+		ORDER BY 
+  			f.REGDATE DESC LIMIT 1;
   		]]>
   	</select>
   	
   	<select id="count3week2" resultType="int">
   	<![CDATA[ 
 		SELECT 
-			COUNT(LNUM)
-		FROM
-			LIKEY L
-		JOIN
-			USER U
-		WHERE
-			U.UNUM=#{uNum}
+  			TRUNCATE(AVG(WEIGHT), 0)
+  		FROM
+  			FEED f  		
+  		JOIN
+  			USER u
+  		ON
+  			(f.UNUM = u.UNUM)
+  		WHERE
+  			u.UNUM = #{uNum}
 		AND
-			NOW() - INTERVAL 2 WEEK > L.REGDATE
+			NOW() - INTERVAL 2 WEEK >f.REGDATE
 		AND
-			NOW() - INTERVAL 3 WEEK < L.REGDATE;
+			NOW() - INTERVAL 3 WEEK < f.REGDATE
+		ORDER BY 
+  			f.REGDATE DESC LIMIT 1;
   		]]>
   	</select>
   	
   	<select id="count4week2" resultType="int">
   	<![CDATA[ 
 		SELECT 
-			COUNT(LNUM)
-		FROM
-			LIKEY L
-		JOIN
-			USER U
-		WHERE
-			U.UNUM=#{uNum}
+  			TRUNCATE(AVG(WEIGHT), 0)
+  		FROM
+  			FEED f  		
+  		JOIN
+  			USER u
+  		ON
+  			(f.UNUM = u.UNUM)
+  		WHERE
+  			u.UNUM = #{uNum}
 		AND
-			NOW() - INTERVAL 3 WEEK > L.REGDATE
+			NOW() - INTERVAL 3 WEEK >f.REGDATE
 		AND
-			NOW() - INTERVAL 4 WEEK < L.REGDATE;
+			NOW() - INTERVAL 4 WEEK < f.REGDATE
+		ORDER BY 
+  			f.REGDATE DESC LIMIT 1;
   		]]>
   	</select>
   	

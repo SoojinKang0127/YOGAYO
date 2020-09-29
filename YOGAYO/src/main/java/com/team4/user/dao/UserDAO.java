@@ -15,7 +15,8 @@ public interface UserDAO {
 	public void update(UserVo vo) throws Exception;
 	public int tWeight1(UserVo vo) throws Exception;
 	public int tWeight2(UserVo vo) throws Exception;
-	public int lWeight(UserVo vo) throws Exception;
+	public int lWeight1(UserVo vo) throws Exception;
+	public int lWeight2(UserVo vo) throws Exception;
 	public int cWeight(UserVo vo) throws Exception;
 	public int count1week(UserVo vo) throws Exception;
 	public int count2week(UserVo vo) throws Exception;
