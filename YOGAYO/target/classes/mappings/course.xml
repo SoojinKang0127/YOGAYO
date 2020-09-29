@@ -9,6 +9,49 @@
 		COURSE(TITLE,UNUM,DSCRT,MATERIAL,IMGPATH,SEQ1,SEQ2,SEQ3,SEQ4,SEQ5,SEQ6,SEQ7,SEQ8)
 		values(#{title},#{uNum},#{dscrt},#{material},#{imgPath},#{seq1},#{seq2},#{seq3},#{seq4},#{seq5},#{seq6},#{seq7},#{seq8})
 	</insert>
+	
+	<select id="userThing" parameterType="CommentVo"
+		resultType="UserVo">
+		SELECT C.UNUM, U.NAME, U.IMG FROM COURSE C, (SELECT UNUM,
+		NAME, IMG FROM
+		USER WHERE UNUM=(SELECT UNUM FROM COURSE where
+		CRSNUM=#{crsNum})) U
+		WHERE CRSNUM=#{crsNum};
+	</select>
+	
+	<select id="userCount" parameterType="CourseVo" resultType="int">
+		SELECT COUNT(*) FROM FEED WHERE CRSNUM=#{crsNum}
+	</select>
+	
+	<select id="courseDiffi" parameterType="CourseVo"
+		resultType="DiffiVo">
+		SELECT
+		(select P.DIFFICULTY FROM COURSE C, POSE P WHERE
+		P.PNUM=C.SEQ1 AND
+		CRSNUM=#{crsNum}) AS DIFF1,
+		(select P.DIFFICULTY FROM
+		COURSE C, POSE P WHERE P.PNUM=C.SEQ2 AND
+		CRSNUM=#{crsNum}) AS DIFF2,
+		(select P.DIFFICULTY FROM COURSE C, POSE P WHERE P.PNUM=C.SEQ3 AND
+		CRSNUM=#{crsNum}) AS DIFF3,
+		(select P.DIFFICULTY FROM COURSE C, POSE P
+		WHERE P.PNUM=C.SEQ4 AND
+		CRSNUM=#{crsNum}) AS DIFF4,
+		(select P.DIFFICULTY
+		FROM COURSE C, POSE P WHERE P.PNUM=C.SEQ5 AND
+		CRSNUM=#{crsNum}) AS
+		DIFF5,
+		(select P.DIFFICULTY FROM COURSE C, POSE P WHERE P.PNUM=C.SEQ6
+		AND
+		CRSNUM=#{crsNum}) AS DIFF6,
+		(select P.DIFFICULTY FROM COURSE C, POSE
+		P WHERE P.PNUM=C.SEQ7 AND
+		CRSNUM=#{crsNum}) AS DIFF7,
+		(select
+		P.DIFFICULTY FROM COURSE C, POSE P WHERE P.PNUM=C.SEQ8 AND
+		CRSNUM=#{crsNum}) AS DIFF8
+		FROM dual
+	</select>
 
 	<insert id="addReview" parameterType="CommentVo">
 		INSERT INTO
@@ -31,7 +74,7 @@
 	<select id="commentAll" parameterType="CommentVo"
 		resultType="CommentVo">
 		SELECT * FROM COMMENT WHERE CRSNUM=#{crsNum} AND PARENT IS
-		NULL order by CMTNUM desc LIMIT 6
+		NULL order by CMTNUM DESC
 	</select>
 
 	<select id="commentCount" parameterType="CommentVo"
@@ -45,10 +88,69 @@
 		SELECT AVG(RATE) FROM COMMENT WHERE CRSNUM=#{crsNum} AND
 		PARENT IS NULL
 	</select>
+	
+	<select id="commentAllMore" parameterType="CommentVo"
+		resultType="CommentVo">
+		SELECT * FROM COMMENT WHERE CRSNUM=#{crsNum} AND PARENT IS
+		NULL ORDER BY CMTNUM DESC
+	</select>
 
-	<select id="selectAll" resultType="CourseVo">
+	<select id="selectAll" resultType="CourseVo" parameterType="int">
 		<!-- 테이블명 대소문자 구분 -->
-		SELECT * FROM COURSE ORDER BY CRSNUM DESC
+		SELECT C.CRSNUM, C.TITLE, C.UNUM, C.DSCRT, C.MATERIAL, C.IMGPATH,
+		C.REGDATE, IFNULL(R.TOTAL,0) as total, IFNULL(R.TOTALCOMMENT,0) as
+		totalComment
+		FROM COURSE AS C LEFT JOIN (SELECT ROUND(AVG(RATE),2) AS
+		TOTAL, COUNT(*) TOTALCOMMENT, CRSNUM FROM COMMENT WHERE PARENT IS NULL
+		GROUP BY CRSNUM ORDER BY CRSNUM) AS R
+		ON C.CRSNUM = R.CRSNUM
+		ORDER BY
+		CRSNUM DESC
+		LIMIT #{startNum},16
+	</select>
+	
+	<select id="searchCourse" parameterType="int"
+		resultType="CourseVo">
+		<!-- 테이블명 대소문자 구분 -->
+		SELECT C.CRSNUM, C.TITLE, C.UNUM, C.IMGPATH, C.REGDATE,
+		IFNULL(R.TOTAL,0) as total, IFNULL(R.TOTALCOMMENT,0) as totalComment
+		FROM COURSE AS C LEFT JOIN (SELECT ROUND(AVG(RATE),2) AS TOTAL,
+		COUNT(*) TOTALCOMMENT, CRSNUM FROM COMMENT WHERE PARENT IS NULL GROUP
+		BY CRSNUM ORDER BY CRSNUM) AS R
+		ON C.CRSNUM = R.CRSNUM
+		WHERE C.UNUM=101
+		ORDER BY CRSNUM DESC
+		LIMIT #{startNum},16
+		<!--SELECT * FROM COURSE WHERE UNUM=101 ORDER BY CRSNUM DESC -->
+	</select>
+	<select id="searchCourse_user" parameterType="int"
+		resultType="CourseVo">
+		<!-- 테이블명 대소문자 구분 -->
+		<!--SELECT * FROM COURSE WHERE UNUM!=101 ORDER BY CRSNUM DESC -->
+		SELECT C.CRSNUM, C.TITLE, C.UNUM, C.IMGPATH, C.REGDATE,
+		IFNULL(R.TOTAL,0) as total, IFNULL(R.TOTALCOMMENT,0) as totalComment
+		FROM COURSE AS C LEFT JOIN (SELECT ROUND(AVG(RATE),2) AS TOTAL,
+		COUNT(*) TOTALCOMMENT, CRSNUM FROM COMMENT WHERE PARENT IS NULL GROUP
+		BY CRSNUM ORDER BY CRSNUM) AS R
+		ON C.CRSNUM = R.CRSNUM
+		WHERE C.UNUM!=101
+		ORDER BY CRSNUM DESC
+		LIMIT #{startNum},16
+	</select>
+
+	<select id="searchCourse_date" parameterType="int"
+		resultType="CourseVo">
+		<!-- 테이블명 대소문자 구분 -->
+		<!--SELECT * FROM COURSE WHERE UNUM!=101 ORDER BY CRSNUM DESC -->
+		SELECT C.CRSNUM, C.TITLE, C.UNUM, C.IMGPATH, C.REGDATE,
+		IFNULL(R.TOTAL,0) as total, IFNULL(R.TOTALCOMMENT,0) as totalComment
+		FROM COURSE AS C LEFT JOIN (SELECT ROUND(AVG(RATE),2) AS TOTAL,
+		COUNT(*) TOTALCOMMENT, CRSNUM FROM COMMENT WHERE PARENT IS NULL GROUP
+		BY CRSNUM ORDER BY CRSNUM) AS R
+		ON C.CRSNUM = R.CRSNUM
+		ORDER BY REGDATE
+		DESC
+		LIMIT #{startNum},16
 	</select>
 
 	<!-- <select id="selectOne" parameterType="CourseVo" resultType="CourseVo"> 
@@ -70,8 +172,62 @@
 		WHERE TABLE_SCHEMA = 'project'
 		AND
 		TABLE_NAME = 'COURSE';
+	<select id="searchCourse_total" parameterType="int"
+		resultType="CourseVo">
+		<!-- 테이블명 대소문자 구분 -->
+		<!--SELECT * FROM COURSE WHERE UNUM!=101 ORDER BY CRSNUM DESC -->
+		SELECT C.CRSNUM, C.TITLE, C.UNUM, C.IMGPATH, C.REGDATE,
+		IFNULL(R.TOTAL,0) as total, IFNULL(R.TOTALCOMMENT,0) as totalComment
+		FROM COURSE AS C LEFT JOIN (SELECT ROUND(AVG(RATE),2) AS TOTAL,
+		COUNT(*) TOTALCOMMENT, CRSNUM FROM COMMENT WHERE PARENT IS NULL GROUP
+		BY CRSNUM ORDER BY CRSNUM) AS R
+		ON C.CRSNUM = R.CRSNUM
+		ORDER BY TOTAL
+		DESC
+		LIMIT #{startNum},16
 	</select>
 
+	<select id="searchCourse_totalComment" parameterType="int"
+		resultType="CourseVo">
+		<!-- 테이블명 대소문자 구분 -->
+		<!--SELECT * FROM COURSE WHERE UNUM!=101 ORDER BY CRSNUM DESC -->
+		SELECT C.CRSNUM, C.TITLE, C.UNUM, C.IMGPATH, C.REGDATE,
+		IFNULL(R.TOTAL,0) as total, IFNULL(R.TOTALCOMMENT,0) as totalComment
+		FROM COURSE AS C LEFT JOIN (SELECT ROUND(AVG(RATE),2) AS TOTAL,
+		COUNT(*) TOTALCOMMENT, CRSNUM FROM COMMENT WHERE PARENT IS NULL GROUP
+		BY CRSNUM ORDER BY CRSNUM) AS R
+		ON C.CRSNUM = R.CRSNUM
+		ORDER BY
+		TOTALCOMMENT DESC
+		LIMIT #{startNum},16
+	</select>
+
+	<!-- <select id="searchCourse_more" resultType="CourseVo"
+		parameterType="Criteria">
+		SELECT C.CRSNUM, C.TITLE, C.UNUM, C.IMGPATH, C.REGDATE,
+		IFNULL(R.TOTAL,0) as
+		total, IFNULL(R.TOTALCOMMENT,0) as totalComment
+		FROM COURSE AS C LEFT JOIN (SELECT ROUND(AVG(RATE),2) AS TOTAL,
+		COUNT(*)
+		TOTALCOMMENT, CRSNUM FROM COMMENT WHERE PARENT IS NULL GROUP
+		BY CRSNUM
+		ORDER BY CRSNUM) AS R
+		ON C.CRSNUM = R.CRSNUM
+		WHERE C.CRSNUM
+		between #{rowStart} AND #{rowEnd}
+		ORDER BY CRSNUM DESC
+	</select> -->
+
+	<select id="selectOne" parameterType="CourseVo" resultType="CourseVo">
+		<!-- 테이블명 대소문자 구분 -->
+		SELECT * FROM COURSE WHERE CRSNUM=#{crsNum}
+	</select>
+	
+	<!--
+	<select id="getLastCnum" resultType="Integer">
+	 	SELECT CRSNUM FROM COURSE WHERE TITLE=#{title} AND DSCRT=#{dscrt} AND UNUM=#{uNum}
+	</select>
+-->
 
 	<select id="coursePoses" resultType="CoursePosesVo"
 		parameterType="CourseVo">
@@ -159,6 +315,10 @@
 		TIME8
 		from dual
 	</select>
-
+	
+	<select id="courseAll" resultType="int">
+	SELECT CRSNUM FROM COURSE
+	</select>
+	
 
 </mapper>

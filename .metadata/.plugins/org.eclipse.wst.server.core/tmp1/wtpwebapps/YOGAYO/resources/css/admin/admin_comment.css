@@ -171,17 +171,20 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75px;
+  height: 70px;
 }
 
 .idx {
-  width: 70px;
+  width: 100px;
 }
 
 .comment_date{
-	width:100px;
+	width:150px;
 }
 
+.user_avatar{
+	width:100px;
+}
 .comment_profile{
 	width:100px;
 }
@@ -190,12 +193,32 @@ main {
 }
 
 .comment_couse{
-	width:100px;
+	width:90px;
 }
 
 .comment_content{
-	width:700px;
+	width:600px;
+	font-size:15px;
 }
 .comment_delete{
 	width:100px;
+}
+
+.comment_type{
+	width:120px;
+}
+
+
+.deleteBtn{
+	padding:9px;
+	color:black;
+	background-color: #ff715d;
+	border: none;
+	border-radius:8px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	transition: 0.3s ease-in-out;
+}
+
+.deleteBtn:hover{
+	background-color: #ff998d;
 }

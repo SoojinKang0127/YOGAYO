@@ -11,7 +11,7 @@ $(function() {
 					label: "weight",
 					data: array,
 					backgroundColor: [
-						"rgba(255, 99, 132, 1)",
+						"rgba(54, 162, 235, 1)",
 						"rgba(54, 162, 235, 1)",
 						"rgba(255, 206, 86, 1)",
 						"rgba(75, 192, 192, 1)",
@@ -24,11 +24,20 @@ $(function() {
 		},
 		options: {
 			responsive: false,
+			scales: {
+				yAxes: [
+					{
+						ticks: {
+							beginAtZero: true,
+						},
+					},
+					],
+			},
 		},
 	})
 	
 	var ctx3 = document.getElementById("stat2_data").getContext("2d")
-	array = [data1, data2, data3, data4]
+	array = [data5, data6, data7, data8]
 	var statistics_3_stat = new Chart(ctx3, {
 		type: "bar",
 		data: {

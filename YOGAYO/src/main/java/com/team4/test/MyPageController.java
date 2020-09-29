@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.mysql.cj.xdevapi.JsonArray;
 import com.team4.user.dao.UserDAO;
@@ -26,18 +27,23 @@ import com.team4.vo.UserVo;
 @Controller
 public class MyPageController {
 	
-	UserServiceImpl service = new UserServiceImpl();
-	UserDAO dao = new UserDAOImpl();
-	UserVo vo = new UserVo();
-	FeedVo fvo = new FeedVo();
-	CourseVo cvo = new CourseVo();
-	
 	@RequestMapping(value="/myPage", method = RequestMethod.GET)
-	public String myPage(Model model,HttpServletRequest req, HttpServletResponse res) 
+	public String myPage(Model model,HttpServletRequest req, HttpServletResponse res,
+			RedirectAttributes red) 
 			 {
+		
+		
+		UserDAO dao = new UserDAOImpl();
+		UserVo vo = new UserVo();
+		FeedVo fvo = new FeedVo();
+		CourseVo cvo = new CourseVo();
+		UserServiceImpl service = new UserServiceImpl();
 		HttpSession session = req.getSession();
 		UserVo user = (UserVo)session.getValue("user");
 		int uNum = user.getuNum();
+		
+		
+		
 		
 		vo.setuNum(uNum);
 		
@@ -83,10 +89,6 @@ public class MyPageController {
 			thismonth = service.thismonth();
 			likeList = service.allLikey(vo);
 			
-			System.out.println("crsList: " + crsList);
-			System.out.println("feList" + feList);
-			System.out.println("likeList" + likeList);
-						
 	
 		} catch (Exception e) {
 			System.out.println("[MyPageController / myPage]" + e.toString());
