@@ -19,7 +19,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="${pageContext.request.contextPath}/resources/js/myPage.js"></script>
-  <script language="JavaScript" src="${pageContext.request.contextPath}/resources/js/graph.js"></script>
+  <script language="JavaScript" src="${pageContext.request.contextPath}/resources/js/graph.js"></acript>
   <script>
     var data1 = ${ count1week };
     var data2 = ${ count2week };
@@ -29,14 +29,6 @@
     var data6 = ${ count2week2 };
     var data7 = ${ count3week2 };
     var data8 = ${ count4week2 };
-    console.log(data1);
-    console.log(data2);
-    console.log(data3);
-    console.log(data4);
-    console.log(data5);
-    console.log(data6);
-    console.log(data7);
-    console.log(data8);
 
   </script>
 </head>
@@ -136,14 +128,8 @@
                   </div>
                 </div>
               </a>
+
             </c:forEach>
-            <div class="feed3_content">
-              <div class="feed3_info">
-                <div class="img_wrapper3"><img class="feed3_img" alt="사진없음"
-                    src="${pageContext.request.contextPath}/resources/image/course/yoga.jpg"></div>
-                <div class="feed3_title">테스트입니다.</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -152,11 +138,11 @@
         <div class="main_3">
           <div class="main3_title">STATISTICS</div>
           <div class="stat1">
-            <div class="stat1_title">피드 올린 횟수</div>
+            <div class="stat1_title">나의 운동 횟수</div>
             <canvas id="stat1_data"></canvas>
           </div>
           <div class="stat2">
-            <div class="stat2_title">좋아요 누른 횟수</div>
+            <div class="stat2_title">최근 내 몸무게</div>
             <canvas id="stat2_data"></canvas>
           </div>
         </div>

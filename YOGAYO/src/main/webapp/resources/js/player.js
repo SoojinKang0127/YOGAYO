@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  data='';
-  res='';
+  data = "";
+  res = "";
   barArr = document.getElementsByClassName("order-progress-bar");
   bar = barArr[0];
   play = document.getElementsByClassName("play-button");
@@ -30,11 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
         timer.innerText = minute + ":0" + parseInt((time % 6000) / 100);
       }
       time--;
-      if(time==5000){
-        sendAjaxRequest(index)
+      if (time == 5000) {
+        sendAjaxRequest(index);
       }
     } else {
-      
       if (barArr.length > index) {
         index++;
         $("#pose_big_img").attr("src", poseArr[index]);
@@ -153,27 +152,27 @@ document.addEventListener("DOMContentLoaded", function () {
     location.href = "course-page";
   });
 
-  function sendAjaxRequest(index){
+  function sendAjaxRequest(index) {
     takepicture();
-    var json={'data':'123','pnum':'3'}
-  //   $.ajax({
-  //     type: 'POST',
-  //     url: 'http://52.78.54.179:5000/index',
-  //     data: json,
-  //     processData: false, // 비동기 파일 업로드시 꼭 설정해줘야 하는 속성
-  //     crossOrigin: true,
-  //     success:function(response){
-  //         if(response.value > 0)
-  //         alert(response)
-  //         res=response
-  //         },
-  //     error: function(request, status, error, response){
-  //         console.log(error)
-  //     }
-  // })
-  $.post('http://52.78.54.179:5000/index',json,function(data){
-    console.log(data)
-  })
+    var json = { data: data, pnum: pnumArr[index] };
+    //   $.ajax({
+    //     type: 'POST',
+    //     url: 'http://52.78.54.179:5000/index',
+    //     data: json,
+    //     processData: false, // 비동기 파일 업로드시 꼭 설정해줘야 하는 속성
+    //     crossOrigin: true,
+    //     success:function(response){
+    //         if(response.value > 0)
+    //         alert(response)
+    //         res=response
+    //         },
+    //     error: function(request, status, error, response){
+    //         console.log(error)
+    //     }
+    // })
+    $.post("http://52.78.54.179:5000/index", json, function (data) {
+      console.log(data);
+    });
   }
   /*
    * console.log(p_btn) length=0 velocity=1.28 pixel=0 max_pixel=380
@@ -185,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
    *  }, 100);
    */
 
-   // The width and height of the captured photo. We will set the
+  // The width and height of the captured photo. We will set the
   // width to the value defined here, but the height will be
   // calculated based on the aspect ratio of the input stream.
 
@@ -256,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function takepicture() {
     var context = canvas.getContext("2d");
-    console.log('사진찍음')
+    console.log("사진찍음");
     if (width && height) {
       canvas.width = width;
       canvas.height = height;
@@ -268,14 +267,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function clearphoto() {
-    var context = canvas.getContext('2d');
+    var context = canvas.getContext("2d");
     context.fillStyle = "#AAA";
     context.fillRect(0, 0, canvas.width, canvas.height);
-    var data = canvas.toDataURL('image/png');
+    var data = canvas.toDataURL("image/png");
     //photo.setAttribute('src', data);
   }
-
-
 
   // Set up our event listener to run the startup process
   // once loading is complete.
