@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< Updated upstream
 Built-By: HUND
 Build-Jdk: 13.0.1
+=======
+Built-By: paso
+Build-Jdk: 1.8.0_262
+>>>>>>> Stashed changes
 Created-By: Maven Integration for Eclipse
 
