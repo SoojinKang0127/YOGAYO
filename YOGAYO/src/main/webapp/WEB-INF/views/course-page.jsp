@@ -31,7 +31,7 @@
 		<div class="course-first_container">
 			<div class="course_bg">
 				<div class="course-bg_title_section">
-					<div class="course-bg_title">새로 올라온 코스</div>
+					<a href="logout"><div class="course-bg_title">새로 올라온 코스</div></a>
 					<div class="course-bg_explain">
 						<p>세계 각지 사람들의 다양한 코스들을 경험 해보세요.</p>
 						<p>저희 요가요에서 제공하는 코스들도 놓치지 마세요.</p>
