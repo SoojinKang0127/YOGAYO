@@ -115,6 +115,9 @@ header > nav_bar {
 
 #gum {
   height: 100%;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg); /* Safari and Chrome */
+  -moz-transform: rotateY(180deg); /* Firefox */
 }
 
 .pose_big_img_wrapper {
@@ -304,9 +307,9 @@ header > nav_bar {
 }
 
 .order-image {
-  display : flex;
-  justify-content : center;
-  align-items : center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
   overflow: hidden;
@@ -314,8 +317,7 @@ header > nav_bar {
 }
 
 .order-image img {
-  height: 60px
-  
+  height: 60px;
 }
 
 .order-title {
