@@ -30,7 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
         timer.innerText = minute + ":0" + parseInt((time % 6000) / 100);
       }
       time--;
-      if (time == 5000) {
+      if (time == 8500) {
+      	console.log(index);
         sendAjaxRequest(index);
       }
     } else {
@@ -155,21 +156,22 @@ document.addEventListener("DOMContentLoaded", function () {
   function sendAjaxRequest(index) {
     takepicture();
     var json = { data: data, pnum: pnumArr[index] };
-    //   $.ajax({
-    //     type: 'POST',
-    //     url: 'http://52.78.54.179:5000/index',
-    //     data: json,
-    //     processData: false, // 비동기 파일 업로드시 꼭 설정해줘야 하는 속성
-    //     crossOrigin: true,
-    //     success:function(response){
-    //         if(response.value > 0)
-    //         alert(response)
-    //         res=response
-    //         },
-    //     error: function(request, status, error, response){
-    //         console.log(error)
-    //     }
-    // })
+//       $.ajax({
+//         type: 'POST',
+//         url: 'http://52.78.54.179:5000/index',
+//         data: json,
+//         processData: false, // 비동기 파일 업로드시 꼭 설정해줘야 하는 속성
+//         crossOrigin: true,
+//         timeout: 60000,
+//         success:function(response){
+//             if(response.value > 0)
+//             alert(response)
+//             res=response
+//             },
+//         error: function(request, status, error, response){
+//             console.log(error)
+//         }
+//     })
     $.post("http://52.78.54.179:5000/index", json, function (data) {
       console.log(data);
     });
