@@ -6,11 +6,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
+
 .footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
+	justify-content: center;
 }
 
 @media all and (min-width:300px) and (max-width:599px){
