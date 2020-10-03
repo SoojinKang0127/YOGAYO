@@ -210,18 +210,27 @@ main {
   width: 700px;
   height: 700px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
  .img_wrapper2 {
   width: 328px;
   height: 288px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .img_wrapper3{
   width: 673px;
   height: 300px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .main-latest_section2 .main-latest_section2-2 {

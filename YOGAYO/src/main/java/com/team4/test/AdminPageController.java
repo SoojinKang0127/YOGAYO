@@ -28,7 +28,7 @@ public class AdminPageController {
 
 	
 
-	@RequestMapping(value = "/admin/", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
 	public String adminHome(Model model) throws Exception {
 
 		return "/admin/admin-home";

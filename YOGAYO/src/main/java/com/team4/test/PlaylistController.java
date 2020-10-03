@@ -28,12 +28,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.mongodb.BasicDBObject;
+import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
+import com.mongodb.DBObject;
 import com.mysql.cj.xdevapi.JsonArray;
 import com.mysql.cj.xdevapi.JsonParser;
 import com.team4.dao.pose.PoseDAO;
 import com.team4.dao.pose.PoseDAOImpl;
 import com.team4.dao.pose.PoseService;
 import com.team4.dao.pose.PoseServiceImpl;
+import com.team4.resource.R;
 import com.team4.util.UserAuthCheck;
 import com.team4.vo.PoseVo;
 import com.team4.vo.UserVo;
@@ -42,7 +47,7 @@ import com.team4.vo.UserVo;
 
 
 @Controller
-public class PlaylistController {
+public class PlaylistController implements R {
 	
 	private static final Logger logger = LoggerFactory.getLogger(PlaylistController.class);
 
@@ -77,8 +82,6 @@ public class PlaylistController {
 			list=dao.poseSelectAll();
 
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
-				System.out.println("aaa");
 			e1.printStackTrace();
 		}
 		JSONObject listObj= new JSONObject();
@@ -92,6 +95,21 @@ public class PlaylistController {
 			obj.put("time", vo.getTime());
 			obj.put("difficulty", vo.getDifficulty());
 			listObj.put(Integer.toString(k),obj);
+			DBCollection poseDB = mongoDBf.getCollection("POSE");
+			BasicDBObject myQuery = new BasicDBObject("_id", vo.getpNum());
+			BasicDBObject field = new BasicDBObject("keyword", 1);
+			DBCursor Cursor = poseDB.find(myQuery, field);
+			DBObject myobj = Cursor.next();
+			List<String> myList = (List<String>) myobj.get("keyword");
+			String keyword =myList.get(0);
+			if(myList.size()>1) {
+				keyword+=", "+myList.get(1);
+			}
+			if(keyword.equals("")) {
+				keyword="";
+			}
+			System.out.println(keyword);
+			obj.put("keyword",keyword);
 			k++;
 		}	
 		String msg= listObj.toString();

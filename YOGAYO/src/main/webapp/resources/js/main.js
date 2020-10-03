@@ -38,4 +38,15 @@ $(window).ready(function () {
   }
 
   window.addEventListener("scroll", handleScroll);
+  
+
+request = new XMLHttpRequest();
+request.open("POST", "./main", true);
+	request.onreadystatechange = after_ajax;
+	request.send(null);
+	function after_ajax() {
+	if (request.readyState == 4 && request.status == 200) {
+	
+	}
+	}
 });

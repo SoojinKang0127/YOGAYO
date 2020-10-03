@@ -1,5 +1,6 @@
 package com.team4.test;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -35,6 +36,7 @@ public class HomeController {
 		UserAuthCheck.loginCheck(req, res, model);
 		CourseServiceImpl cservice= new CourseServiceImpl();
 		UserVo vo= (UserVo)req.getSession().getValue("user");
+		System.out.println(vo.getuNum());
 		ArrayList<Integer> recommendation= CosineSimilarity.calc(vo);
 		ArrayList<CourseVo> crsRec= new ArrayList<CourseVo>();
 		for(int crsNum:recommendation) {
@@ -47,6 +49,31 @@ public class HomeController {
 		}
 		model.addAttribute("rec",crsRec);
 		return "main";
+	}
+	
+	@RequestMapping(value = "/main", method = RequestMethod.POST)
+	public void cos(Model model, HttpServletRequest req,HttpServletResponse res) {
+		UserAuthCheck.loginCheck(req, res, model);
+		CourseServiceImpl cservice= new CourseServiceImpl();
+		UserVo vo= (UserVo)req.getSession().getValue("user");
+		ArrayList<Integer> recommendation= CosineSimilarity.calc(vo);
+		String crsRec="{";
+		int k=0;
+		for(int crsNum:recommendation) {
+			try {
+				CourseVo cvo=cservice.selectCourseByCrsNum(crsNum);
+				crsRec+="\""+k+"\":"+cvo.toString2()+",";
+				k++;
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		crsRec+="}";
+		try {
+			res.getWriter().write(crsRec);
+		} catch (IOException e) {
+			e.printStackTrace();
+		};
 	}
 
 //	

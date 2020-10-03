@@ -34,6 +34,11 @@ main {
 	display: none;
 }
 
+#heart{
+	width: 25px;
+	height: 25px;
+}
+
 .course_detail-img_section {
 	width: 100%;
 	display: flex;
@@ -894,6 +899,8 @@ main {
   margin-top: 25px;
   margin-right: 20px;
   font-size: 25px;
+  width: 35px;
+  height: 31px;
 }
 
 .like .like_icon {

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   data = "";
   res = "";
+  mp3_path="";
   barArr = document.getElementsByClassName("order-progress-bar");
   bar = barArr[0];
   play = document.getElementsByClassName("play-button");
@@ -36,6 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     } else {
       if (barArr.length > index) {
+        $("audio").remove("#audio");
+        $("body").append(
+          '<audio id="audio" src=\"/test/resources/audio/' + mp3_path + "\"></audio>"
+        );
         index++;
         $("#pose_big_img").attr("src", poseArr[index]);
 
@@ -174,6 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //     })
     $.post("http://52.78.54.179:5000/index", json, function (data) {
       console.log(data);
+      mp3_path=data
     });
   }
   /*

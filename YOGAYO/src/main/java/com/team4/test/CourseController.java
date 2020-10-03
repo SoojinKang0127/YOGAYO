@@ -311,7 +311,6 @@ public class CourseController implements R  {
 
 			dv = service.courseDiffi(vo);
 			model.addAttribute("diffi", dv);
-
 			int[] diffiArr = { Integer.parseInt(dv.getDiff1()), Integer.parseInt(dv.getDiff2()),
 					Integer.parseInt(dv.getDiff3()), Integer.parseInt(dv.getDiff4()), Integer.parseInt(dv.getDiff5()),
 					Integer.parseInt(dv.getDiff6()), Integer.parseInt(dv.getDiff7()), Integer.parseInt(dv.getDiff8()) };
@@ -413,7 +412,7 @@ public class CourseController implements R  {
 			}
 
 		} catch (Exception e) {
-			System.out.println("[CourseController /  makeCourse]" + e.toString());
+			e.printStackTrace();
 		}
 
 		return "course-detail";
