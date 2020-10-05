@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   play = document.getElementsByClassName("play-button");
   p_btn = document.getElementsByClassName("fas fa-pause btn");
   index = 0;
+  flag=0;
   time = timeArr[index];
   timer = document.querySelector(
     "div.scroll-overflow > ul > li:nth-child(" +
@@ -15,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   interval = null;
   heart = document.getElementsByClassName("fa-heart");
+  $("body").append('<audio id="feedback"></audio>');
+
 
   bar.style.animationDuration = time / 100 + "s";
   bar.style.animationName = "progress";
@@ -30,31 +33,39 @@ document.addEventListener("DOMContentLoaded", function () {
       else {
         timer.innerText = minute + ":0" + parseInt((time % 6000) / 100);
       }
+      if(flag==0){
       time--;
-      if (time == 8500) {
-      	console.log(index);
+      }
+      if (time == 800) {
         sendAjaxRequest(index);
       }
     } else {
       if (barArr.length > index) {
-        $("audio").remove("#audio");
+        $("audio").remove("#feedback");
         $("body").append(
-          '<audio id="audio" src=\"/test/resources/audio/' + mp3_path + "\"></audio>"
+          '<audio id="feedback" src=\"/test/resources/audio/' + mp3_path + "\"></audio>"
         );
         index++;
-        $("#pose_big_img").attr("src", poseArr[index]);
-
-        if (barArr.length - 1 == index) {
-          time = 0;
-        } else {
-          time = timeArr[index];
-        }
+        flag=1
+        feedback=document.getElementById("feedback");
+        feedback.play();
+        feedback.onended=function(){
+        flag=0;
+        audio = document.getElementById("audio").play();
         bar = barArr[index];
         bar.style.animationDuration = parseInt(time / 100) + "s";
         bar.style.animationName = "progress";
         bar.style.animationTimingFunction = "linear";
         bar.style.animationPlayState = "running";
         bar.style.animationFillMode = "forwards";
+        
+        }
+        $("#pose_big_img").attr("src", poseArr[index]);
+        if (barArr.length - 1 == index) {
+          time = 0;
+        } else {
+          time = timeArr[index];
+        }
         timer = document.querySelector(
           "div.scroll-overflow > ul > li:nth-child(" +
             (index + 1) +
@@ -65,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
           '<audio id="audio" src=' + audioArr[index] + "></audio>"
         );
         console.log(audioArr[index]);
-        audio = document.getElementById("audio").play();
         $(".list-header-count").html("코스 " + (index + 1) + "/8");
       } else if (barArr.length == index) {
         index++;
@@ -161,42 +171,18 @@ document.addEventListener("DOMContentLoaded", function () {
   function sendAjaxRequest(index) {
     takepicture();
     var json = { data: data, pnum: pnumArr[index] };
-//       $.ajax({
-//         type: 'POST',
-//         url: 'http://52.78.54.179:5000/index',
-//         data: json,
-//         processData: false, // 비동기 파일 업로드시 꼭 설정해줘야 하는 속성
-//         crossOrigin: true,
-//         timeout: 60000,
-//         success:function(response){
-//             if(response.value > 0)
-//             alert(response)
-//             res=response
-//             },
-//         error: function(request, status, error, response){
-//             console.log(error)
-//         }
-//     })
     $.post("http://52.78.54.179:5000/index", json, function (data) {
       console.log(data);
       mp3_path=data
     });
   }
-  /*
-   * console.log(p_btn) length=0 velocity=1.28 pixel=0 max_pixel=380
-   * interval=setInterval(() => { if(pixel<=max_pixel){
-   * bar[0].style.width=length+"px" length+=velocity pixel=bar[0].style.width
-   * pixel=pixel.split("px") pixel=Number(pixel[0]) }else{
-   * bar[0].style.width=384+"px" clearInterval(interval)
-   *  }
-   *  }, 100);
-   */
+
 
   // The width and height of the captured photo. We will set the
   // width to the value defined here, but the height will be
   // calculated based on the aspect ratio of the input stream.
 
-  var width = 132; // We will scale the photo width to this
+  var width = 432; // We will scale the photo width to this
   var height = 0; // This will be computed based on the input stream
   // |streaming| indicates whether or not we're currently streaming
   // video from the camera. Obviously, we start at false.
@@ -281,8 +267,18 @@ document.addEventListener("DOMContentLoaded", function () {
     var data = canvas.toDataURL("image/png");
     //photo.setAttribute('src', data);
   }
+  
+  function fordomain(){
+  $('body').append('<div class="domain" style="height: 600px; width: 1310px; background-color: #2d8cff; display:inline-block;z-index=5;position:absolute;margin-top=20px;margin-left:90px;opacity:0.9"><div>죄송합니다 플레이어 피드백 기능은 서버 환경 문제로 영상으로 대체합니다.</div><div><a href="https://www.youtube.com">https://www.youtube.com/</a></div></div>')
+  $('.domain div:nth-child(1)').css({color:'white','align-items':'center','font-size':'30px','margin-left':'30px','margin-bottom':'30px','margin-top':'300px'})
+  $('.domain div:nth-child(2)').css({color:'white','align-items':'center','font-size':'20px','margin-left':'30px',})
+  $('.domain div:nth-child(2) a').css({color:'white'})
+  }
+
+
 
   // Set up our event listener to run the startup process
   // once loading is complete.
   window.addEventListener("load", startup, false);
+  fordomain()
 });
