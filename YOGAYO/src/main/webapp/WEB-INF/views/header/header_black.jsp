@@ -33,7 +33,7 @@
 	flex-direction: column;
 	align-items: center;
 	margin-left: 30px;
-	margin-top: 10px;
+	margin-top: 25px;
 }
 
 .box-div {
@@ -79,8 +79,8 @@
 	margin-right: 30px;
 	align-items: center;
 	font-size: 18pt;
-	/*font-family: "Noto Sans KR", sans-serif;*/
-	/*font-weight: 300;*/
+	font-family: "Noto Sans KR", sans-serif;
+	font-weight: 300;
 	margin-left: 50px;
 	position: relative;
 	height: 35px;
@@ -128,13 +128,13 @@
 
 .main-profile .welcome_user {
 	color: black;
-	margin-right: 22px;
+	margin-right: 30px;
 }
 
 .header .main-status_bar .main-profile img {
 	display: flex;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	border-radius: 50px;
 }
 
@@ -159,12 +159,16 @@
 		width: 300px;
 	}
 	.main_wrapper {
+	margin-top: 0;
+	height: 60px;	
+	display: block;
 		
 	}
 	.logo-wrapper {
 		height: 60px;
 		margin-left: 10px;
 		width: 110px;
+		margin-top: 0px;
 	}
 	.main-status_categories {
 		margin: 0px;
@@ -177,15 +181,17 @@
 		justify-content: center;
 		display: flex;
 		background-color: bisque;
+		height: 33px;
+		
 	}
 	.main-profile .welcome_user {
 		font-size: 14px;
 		margin-left: 15px;
 	}
 	.header .main-status_bar .main-profile img {
-		width: 35px;
-		height: 35px;
-		border-radius: 35px;
+		width: 30px;
+		height: 30px;
+		border-radius: 30px;
 	}
 	.main-status_categories span {
 		font-size: 15px;
@@ -193,6 +199,7 @@
 		margin: 0px;
 		width: 100%;
 		text-align: center;
+		border-bottom: 2px solid white;
 	}
 	.main-status_categories span.nowpage::after {
 		display: none;
@@ -225,12 +232,6 @@
 	font-size: 23px;
 	color: black;
 }
-
-.logout {
-	color:black;
-	font-size:10px;
-	margin-left:5px;
-}
 </style>
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -261,7 +262,7 @@
 					<div class="welcome_user">안녕하세요. ${user.name}님</div>
 					<a href="myPage"><img
 						src="${pageContext.request.contextPath}/${user.img}"
-						class="profile_img" /></a><a href="logout"><i class="fas fa-door-open"></i><span class="logout">로그아웃</span></a>
+						class="profile_img" /></a><i class="fas fa-door-open"></i>
 				</div>
 			</div>
 		</div>

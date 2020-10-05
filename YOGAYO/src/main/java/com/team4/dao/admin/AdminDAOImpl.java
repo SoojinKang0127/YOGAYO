@@ -160,6 +160,29 @@ public class AdminDAOImpl implements AdminDAO{
 		return mybatis.selectOne("AdminDAO.countAllMember");		
 				
 	}
+
+	@Override
+	public AdminVo countNewMember() throws Exception {
+		
+		return mybatis.selectOne("AdminDAO.countNewMember");
+	}
+
+	@Override
+	public AdminVo countNewFeed() throws Exception {
+	
+		return mybatis.selectOne("AdminDAO.countNewFeed");
+	}
+
+	@Override
+	public AdminVo countNewCourse() throws Exception {
+		
+		return mybatis.selectOne("AdminDAO.countNewCourse");
+	}
+
+	@Override
+	public AdminVo countNewComment() throws Exception {
+		return mybatis.selectOne("AdminDAO.countNewComment");
+	}
 	
 	
 	

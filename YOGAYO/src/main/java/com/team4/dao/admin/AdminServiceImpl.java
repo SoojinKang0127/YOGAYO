@@ -168,5 +168,29 @@ public class AdminServiceImpl implements AdminService {
 		return dao.countAllMember();
 	}
 
+
+	@Override
+	public AdminVo countNewMember() throws Exception {
+		return dao.countNewMember();
+	}
+
+
+	@Override
+	public AdminVo countNewFeed() throws Exception {
+		return dao.countNewFeed();
+	}
+
+
+	@Override
+	public AdminVo countNewCourse() throws Exception {
+		return dao.countNewCourse();
+	}
+
+
+	@Override
+	public AdminVo countNewComment() throws Exception {
+		return dao.countNewComment();
+	}
+
 	 
 }

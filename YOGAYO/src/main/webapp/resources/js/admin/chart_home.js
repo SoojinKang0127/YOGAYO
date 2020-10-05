@@ -7,8 +7,8 @@ var myChart = new Chart(ctx, {
 	data : {
 		labels : [ "7일전", "6일전", "5일전", "4일전", "3일전", "2일전", "어제", "오늘" ],
 		datasets : [ {
-			label : '코스 조회수',
-			data : [ 6, 3, 12, 19, 3, 5, 2, 3 ],
+			label : '가입 회원',
+			data : [ newMemberDay7ago, newMemberDay6ago, newMemberDay5ago, newMemberDay4ago, newMemberDay3ago, newMemberDay2ago, newMemberDay1ago, newMemberToday ],
 			backgroundColor : [ 'rgba(255, 99, 132, 0.2)',
 					'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)',
 					'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)',
@@ -40,8 +40,8 @@ var myChart = new Chart(ctx, {
 	data : {
 		labels : [ "7일전", "6일전", "5일전", "4일전", "3일전", "2일전", "어제", "오늘" ],
 		datasets : [ {
-			label : '코스 조회수',
-			data : [ 6, 3, 12, 19, 3, 5, 2, 3 ],
+			label : '작성 코스',
+			data : [ newCourseDay7ago, newCourseDay6ago, newCourseDay5ago, newCourseDay4ago, newCourseDay3ago, newCourseDay2ago, newCourseDay1ago, newCourseToday ],
 			backgroundColor : [ 'rgba(255, 99, 132, 0.2)',
 					'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)',
 					'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)',
@@ -73,8 +73,8 @@ var myChart = new Chart(ctx, {
 	data : {
 		labels : [ "7일전", "6일전", "5일전", "4일전", "3일전", "2일전", "어제", "오늘" ],
 		datasets : [ {
-			label : '코스 조회수',
-			data : [ 6, 3, 12, 19, 3, 5, 2, 3 ],
+			label : '피드수',
+			data : [ newFeedDay7ago, newFeedDay6ago, newFeedDay5ago, newFeedDay4ago, newFeedDay3ago, newFeedDay2ago, newFeedDay1ago, newFeedToday ],
 			backgroundColor : [ 'rgba(255, 99, 132, 0.2)',
 					'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)',
 					'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)',
@@ -106,8 +106,8 @@ var myChart = new Chart(ctx, {
 	data : {
 		labels : [ "7일전", "6일전", "5일전", "4일전", "3일전", "2일전", "어제", "오늘" ],
 		datasets : [ {
-			label : '코스 조회수',
-			data : [ 6, 3, 12, 19, 3, 5, 2, 3 ],
+			label : '댓글수',
+			data : [ newCommentDay7ago, newCommentDay6ago, newCommentDay5ago, newCommentDay4ago, newCommentDay3ago, newCommentDay2ago, newCommentDay1ago, newCommentToday ],
 			backgroundColor : [ 'rgba(255, 99, 132, 0.2)',
 					'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)',
 					'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)',

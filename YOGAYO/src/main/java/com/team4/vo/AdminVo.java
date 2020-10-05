@@ -59,8 +59,66 @@ public class AdminVo {
 	int age_50;
 	int age_60;
 	
+	int today;
+	int day1ago;
+	int day2ago;
+	int day3ago;
+	int day4ago;
+	int day5ago;
+	int day6ago;
+	int day7ago;
+	
+
 	
 	
+	public int getToday() {
+		return today;
+	}
+	public void setToday(int today) {
+		this.today = today;
+	}
+	public int getDay1ago() {
+		return day1ago;
+	}
+	public void setDay1ago(int day1ago) {
+		this.day1ago = day1ago;
+	}
+	public int getDay2ago() {
+		return day2ago;
+	}
+	public void setDay2ago(int day2ago) {
+		this.day2ago = day2ago;
+	}
+	public int getDay3ago() {
+		return day3ago;
+	}
+	public void setDay3ago(int day3ago) {
+		this.day3ago = day3ago;
+	}
+	public int getDay4ago() {
+		return day4ago;
+	}
+	public void setDay4ago(int day4ago) {
+		this.day4ago = day4ago;
+	}
+	public int getDay5ago() {
+		return day5ago;
+	}
+	public void setDay5ago(int day5ago) {
+		this.day5ago = day5ago;
+	}
+	public int getDay6ago() {
+		return day6ago;
+	}
+	public void setDay6ago(int day6ago) {
+		this.day6ago = day6ago;
+	}
+	public int getDay7ago() {
+		return day7ago;
+	}
+	public void setDay7ago(int day7ago) {
+		this.day7ago = day7ago;
+	}
 	public int getAge_10() {
 		return age_10;
 	}
@@ -357,9 +415,12 @@ public class AdminVo {
 				+ ", weight=" + weight + ", pNum=" + pNum + ", pTitle=" + pTitle + ", time=" + time + ", difficulty="
 				+ difficulty + ", highLevel=" + highLevel + ", middleLevel=" + middleLevel + ", lowLevel=" + lowLevel
 				+ ", age_10=" + age_10 + ", age_20=" + age_20 + ", age_30=" + age_30 + ", age_40=" + age_40
-				+ ", age_50=" + age_50 + ", age_60=" + age_60 + "]";
+				+ ", age_50=" + age_50 + ", age_60=" + age_60 + ", today=" + today + ", day1ago=" + day1ago
+				+ ", day2ago=" + day2ago + ", day3ago=" + day3ago + ", day4ago=" + day4ago + ", day5ago=" + day5ago
+				+ ", day6ago=" + day6ago + ", day7ago=" + day7ago + "]";
 	}
 
+	
 	
 	
 }

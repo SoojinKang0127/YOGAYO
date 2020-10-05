@@ -30,7 +30,15 @@ public class AdminPageController {
 
 	@RequestMapping(value = "/admin", method = RequestMethod.GET)
 	public String adminHome(Model model) throws Exception {
-
+		
+		AdminServiceImpl service = new AdminServiceImpl();
+		AdminVo vo = service.countNewMember();
+		model.addAttribute("newMember", vo);
+		model.addAttribute("newFeed", service.countNewFeed());
+		model.addAttribute("newCourse", service.countNewCourse());
+		model.addAttribute("newComment", service.countNewComment());
+		
+		
 		return "/admin/admin-home";
 	};
 

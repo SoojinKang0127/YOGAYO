@@ -47,8 +47,9 @@ import com.team4.vo.UserVo;
 public class ServiceClient extends Rcontroller {
 
 	public static void main(String[] args) throws Exception {
-		Rcontroller rc = new Rcontroller();
-		System.out.println(rc.getKeywordsByUnum(1062));
+		AdminServiceImpl service = new AdminServiceImpl();
+		AdminVo vo = service.countNewMember();
+		System.out.println(vo);
 
 	}
 

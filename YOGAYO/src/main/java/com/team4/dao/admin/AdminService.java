@@ -38,4 +38,8 @@ public interface AdminService {
 	public AdminVo ratioPerAge() throws Exception;
 	public void deleteNewsletterList(UserVo vo) throws Exception;
 	public int countAllMember() throws Exception;
+	public AdminVo countNewMember() throws Exception;
+	public AdminVo countNewFeed() throws Exception;
+	public AdminVo countNewCourse() throws Exception;
+	public AdminVo countNewComment() throws Exception;
 }

@@ -34,7 +34,7 @@
 	flex-direction: column;
 	align-items: center;
 	margin-left: 30px;
-	margin-top:10px;
+	margin-top:25px;
 }
 
 .box-div {
@@ -80,8 +80,8 @@
 	margin-right: 30px;
 	align-items: center;
 	font-size: 18pt;
-	/*font-family: "Noto Sans KR", sans-serif;*/
-	/*font-weight: 300;*/
+	font-family: "Noto Sans KR", sans-serif;
+	font-weight: 300;
 	margin-left: 50px;
 	position: relative;
 	height: 35px;
@@ -129,7 +129,7 @@
 
 .main-profile .welcome_user {
 	color: white;
-	margin-right: 22px;
+	margin-right: 25px;
 }
 
 .header .main-status_bar .main-profile img {
@@ -166,12 +166,16 @@
 		color: black;
 	}
 	.main_wrapper {
-		
+		margin-top: 0;
+		height: 60px;	
+		display: block;
 	}
 	.logo-wrapper {
 		height: 60px;
 		margin-left: 10px;
 		width: 110px;
+		margin-top: 0px;
+		
 	}
 	.main-status_categories {
 		margin: 0px;
@@ -184,6 +188,8 @@
 		justify-content: center;
 		display: flex;
 		background-color: bisque;
+		height: 33px;
+
 	}
 	.main-profile .welcome_user {
 		font-size: 14px;
@@ -191,9 +197,9 @@
 		color: black;
 	}
 	.header .main-status_bar .main-profile img {
-		width: 35px;
-		height: 35px;
-		border-radius: 35px;
+		width: 30px;
+		height: 30px;
+		border-radius: 30px;
 	}
 	.main-status_categories span {
 		font-size: 15px;
@@ -201,6 +207,8 @@
 		margin: 0px;
 		width: 100%;
 		text-align: center;
+		border-bottom: 2px solid white;
+		
 	}
 	.main-status_categories span.nowpage::after {
 		display: none;
