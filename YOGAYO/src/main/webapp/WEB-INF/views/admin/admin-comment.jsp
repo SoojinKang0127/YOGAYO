@@ -41,7 +41,9 @@
 						<div class="idx">${i.cmtNum }</div>
 						<div class="comment_date">${i.regDate }</div>
 						<div class="user_avatar">
-							<img src="${pageContext.request.contextPath}/${i.img}">
+							<div class="user_pic">
+								<img src="${pageContext.request.contextPath}/${i.img }" />
+							</div>
 						</div>
 						<div class="comment_user">${i.name }</div>
 						<div class="comment_couse">

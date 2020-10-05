@@ -162,5 +162,11 @@ public class AdminServiceImpl implements AdminService {
 		dao.deleteNewsletterList(vo);
 	}
 
+
+	@Override
+	public int countAllMember() throws Exception {
+		return dao.countAllMember();
+	}
+
 	 
 }

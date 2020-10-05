@@ -44,6 +44,7 @@ public class AdminPageController {
 		model.addAttribute("maleCount", service.countMaleUser());
 		model.addAttribute("levelCount", service.countByLevel());
 		model.addAttribute("ratioPerAge", service.ratioPerAge());
+		model.addAttribute("memberCount", service.countAllMember());
 
 		return "/admin/admin-member";
 	};
@@ -200,12 +201,9 @@ public class AdminPageController {
 		return "redirect:/admin/newsletter";
 	};
 
-	@RequestMapping(value = "/admin/sendnewsletter", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin/sendnewsletter", method = RequestMethod.POST)
 	public String sendNewsLetter(Model model, @RequestParam("subject") String subject,
 			@RequestParam("context") String context) throws Exception {
-
-		System.out.println("메일 제목 => " + subject);
-		System.out.println("메일 내용 => " + context);
 
 		AdminServiceImpl service = new AdminServiceImpl();
 		List<AdminVo> arrList = service.selectAllNewsletterSubscriber();

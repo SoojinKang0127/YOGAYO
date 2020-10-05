@@ -185,6 +185,11 @@
 	<delete id="deleteNewsletterList">
 		DELETE FROM NEWSLETTER WHERE UNUM = #{uNum};
 	</delete>
+	
+	<select id="countAllMember" resultType="int">
+		SELECT COUNT(UNUM) FROM
+		USER;
+	</select>
 
 
 </mapper>

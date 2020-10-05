@@ -36,5 +36,5 @@ public interface AdminDAO {
 	public AdminVo countByLevel() throws Exception;
 	public AdminVo ratioPerAge() throws Exception;
 	public void deleteNewsletterList(UserVo vo) throws Exception;
+	public int countAllMember() throws Exception;
 }
-

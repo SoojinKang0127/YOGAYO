@@ -134,8 +134,8 @@
 
 .header .main-status_bar .main-profile img {
 	display: flex;
-	width: 40px;
-	height: 40px;
+	width: 50px;
+	height: 50px;
 	border-radius: 50px;
 }
 
@@ -233,6 +233,12 @@
 	font-size: 23px;
 	color: white;
 }
+
+.logout {
+	color:white;
+	font-size:10px;
+	margin-left:5px;
+}
 </style>
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -263,7 +269,7 @@
 					<div class="welcome_user">안녕하세요. ${user.name}님</div>
 					<a href="myPage"><img
 						src="${pageContext.request.contextPath}/${user.img}"
-						class="profile_img" /></a> <i class="fas fa-door-open"></i>
+						class="profile_img" /></a> <a href="logout"><i class="fas fa-door-open"></i><span class="logout">로그아웃</span></a>
 				</div>
 			</div>
 		</div>

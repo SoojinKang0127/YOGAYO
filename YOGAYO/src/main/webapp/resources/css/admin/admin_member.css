@@ -8,10 +8,10 @@ body {
 	align-items: center;
 }
 
-a{
+.member_list a{
 	text-decoration: underline;
 	color:#1363f4;
-	font-weight: 800;
+	font-weight: 600;
 	
 }
 
@@ -229,6 +229,7 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-bottom:50px;
 }
 
 
@@ -301,3 +302,6 @@ main {
 	min-width: 80px;
 }
 
+.show {
+	width:100%;
+}

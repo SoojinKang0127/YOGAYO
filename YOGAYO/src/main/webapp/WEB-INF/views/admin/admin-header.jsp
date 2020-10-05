@@ -143,6 +143,10 @@ header {
 	align-items: flex-end;
 }
 
+.menu_list a{
+	color:black;
+}
+
 .menu_list li {
 	font-weight: 300;
 	font-size: 20px;
@@ -167,7 +171,7 @@ header {
 <body>
 	<header>
 		<div class="logo">
-			<a href="/"><div class="logo-wrapper">
+			<a href=""><div class="logo-wrapper">
 					<span>YOGAYO</span>
 					<div class="box-div"></div>
 				</div> </a>
@@ -175,12 +179,12 @@ header {
 			<div class="admin">Admin</div>
 		</div>
 		<ul class="menu_list">
-			<a href="/test/admin/"><li class="menu	">대시보드</li></a>
-			<a href="/test/admin/member"><li class="menu ">회원 관리</li></a>
-			<a href="/test/admin/comment"><li class="menu">댓글 관리</li></a>
-			<a href="/test/admin/newsletter"><li class="menu">뉴스레터 전송</li></a>
-			<a href="/test/admin/course"><li class="menu">코스 관리</li></a>
-			<li class="menu">LOG OUT</li>
+			<a href="${pageContext.request.contextPath}/admin/"><li class="menu	">대시보드</li></a>
+			<a href="${pageContext.request.contextPath}/admin/member"><li class="menu ">회원 관리</li></a>
+			<a href="${pageContext.request.contextPath}/admin/comment"><li class="menu">댓글 관리</li></a>
+			<a href="${pageContext.request.contextPath}/admin/newsletter"><li class="menu">뉴스레터 전송</li></a>
+			<a href="${pageContext.request.contextPath}/admin/course"><li class="menu">코스 관리</li></a>
+			<a href="${pageContext.request.contextPath}"><li class="menu">YOGAYO</li></a>
 		</ul>
 	</header>
 </body>

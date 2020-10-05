@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/admin/admin_course_update.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <title>ADMIN COURSE UPDATE</title>
 </head>
 <body>
@@ -50,7 +51,12 @@
 							<option>${course.material }</option>
 						</select>
 					</div>
-					<div class="imgPath"></div>
+					<div class="imgPath">
+						<i class="fas fa-image"></i>
+						<div class="img">
+							<img src="${pageContext.request.contextPath}/${course.img }">
+						</div>
+					</div>
 					<div class="seq1">
 						<input type="text" name="seq1" placeholder="${course.seq1Num }"
 							value="${course.seq1Num }" class="seq">

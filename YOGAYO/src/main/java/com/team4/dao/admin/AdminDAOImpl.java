@@ -154,6 +154,12 @@ public class AdminDAOImpl implements AdminDAO{
 		mybatis.delete("AdminDAO.deleteNewsletterList", vo);
 		mybatis.commit();
 	}
+
+	@Override
+	public int countAllMember() throws Exception {
+		return mybatis.selectOne("AdminDAO.countAllMember");		
+				
+	}
 	
 	
 	

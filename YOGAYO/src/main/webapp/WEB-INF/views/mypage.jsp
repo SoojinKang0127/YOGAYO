@@ -19,8 +19,9 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="${pageContext.request.contextPath}/resources/js/myPage.js"></script>
-  <script language="JavaScript" src="${pageContext.request.contextPath}/resources/js/graph.js"></acript>
+  <script language="JavaScript" src="${pageContext.request.contextPath}/resources/js/graph.js"></script>
   <script>
+  
     var data1 = ${ count1week };
     var data2 = ${ count2week };
     var data3 = ${ count3week };
@@ -29,6 +30,8 @@
     var data6 = ${ count2week2 };
     var data7 = ${ count3week2 };
     var data8 = ${ count4week2 };
+    
+    
 
   </script>
 </head>

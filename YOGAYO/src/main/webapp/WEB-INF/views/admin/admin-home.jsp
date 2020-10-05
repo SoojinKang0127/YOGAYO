@@ -24,15 +24,14 @@
 				<span class="underline">YOGAYO 일간 현황</span>
 			</div>
 			<div class="date_wrapper">
-				<i class="fas fa-chevron-left"></i><span class="date">2020.09.17</span>
-				<i class="fas fa-chevron-right"></i>
+				<span class="date">2020.09.17</span>
 			</div>
 		</div>
 		<div class="dash_board_wrapper">
 			<div class="dash_top_stat">
 				<ul>
 					<li class="course_view_container">
-						<div class="header">오늘 코스 조회수</div>
+						<div class="header">오늘 가입 회원</div>
 						<div class="course_view value">14</div>
 						<div class="now">
 							<div class="live">실시간</div>
@@ -51,7 +50,7 @@
 					</li>
 					<li class="feed_new_container">
 						<div class="header">오늘 작성 피드</div>
-						<div class="feed_new value">14</div>
+						<div class="feed_new value">8</div>
 						<div class="now">
 							<div class="live">실시간</div>
 							<div class="real_time">2020.09.17. 15:09</div>
@@ -59,8 +58,8 @@
 						</div>
 					</li>
 					<li class="member_new_container">
-						<div class="header">오늘 가입 회원</div>
-						<div class="member_new value">14</div>
+						<div class="header">오늘 작성 댓글</div>
+						<div class="member_new value">21</div>
 						<div class="now">
 							<div class="live">실시간</div>
 							<div class="real_time">2020.09.17. 15:09</div>

@@ -73,41 +73,151 @@ public class MyPageController {
 		
 		
 		
-		
+		try {
+			crsList = service.selectAllCrs(vo);
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			feList = service.selectAll(vo);
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			likeList = service.allLikey(vo);
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		try {
 			tWeight1 = service.tWeight1(vo);
-			tWeight2 = service.tWeight2(vo);
-			lWeight1 = service.lWeight1(vo);
-			lWeight2 = service.lWeight2(vo);
-			count1week = service.count1week(vo);
-			count2week = service.count2week(vo);
-			count3week = service.count3week(vo);
-			count4week = service.count4week(vo);
-			count1week2 = service.count1week2(vo);
-			count2week2 = service.count2week2(vo);
-			count3week2 = service.count3week2(vo);
-			count4week2 = service.count4week2(vo);
-			crsList = service.selectAllCrs(vo);
-			feList = service.selectAll(vo);
-			thisday = service.thisday();
-			thisdate = service.thisdate();
-			thismonth = service.thismonth();
-			likeList = service.allLikey(vo);
-			
-			System.out.println("crsList: " + crsList);
-			System.out.println("feList" + feList);
-			System.out.println("likeList" + likeList);
-						
-	
-		} catch (Exception e) {
-			System.out.println("[MyPageController / myPage]" + e.toString());
-			e.printStackTrace();
+		} catch (Exception e1) {
+			tWeight1 = 0;
+			e1.printStackTrace();
 		}
+		try {
+			tWeight2 = service.tWeight2(vo);
+		} catch (Exception e1) {
+			try {
+				tWeight1 = service.tWeight1(vo);
+			} catch (Exception e) {
+				tWeight1 = 0;
+				e.printStackTrace();
+			}
+			e1.printStackTrace();
+		}
+		try {
+			lWeight1 = service.lWeight1(vo);
+		} catch (Exception e1) {
+			try {
+				lWeight1 = service.lWeight2(vo);
+			} catch (Exception e) {
+				lWeight1 = 0;
+				e.printStackTrace();
+			}
+			e1.printStackTrace();
+		}
+		try {
+			lWeight2 = service.lWeight2(vo);
+		} catch (Exception e1) {
+			
+			e1.printStackTrace();
+		}
+		try {
+			count1week = service.count1week(vo);
+		} catch (Exception e1) {
+			count1week = 0;
+			e1.printStackTrace();
+		}
+		try {
+			count2week = service.count2week(vo);
+		} catch (Exception e1) {
+			count2week = 0;
+			e1.printStackTrace();
+		}
+		try {
+			count3week = service.count3week(vo);
+		} catch (Exception e1) {
+			count3week = 0;
+			e1.printStackTrace();
+		}
+		try {
+			count4week = service.count4week(vo);
+		} catch (Exception e1) {
+			count4week = 0;
+			e1.printStackTrace();
+		}
+		try {
+			count1week2 = service.count1week2(vo);
+		} catch (Exception e1) {
+			count1week2 = 0;
+			e1.printStackTrace();
+		}
+		try {
+			count2week2 = service.count2week2(vo);
+		} catch (Exception e1) {
+			count2week2 = 0;
+			e1.printStackTrace();
+		}
+		try {
+			count3week2 = service.count3week2(vo);
+		} catch (Exception e1) {
+			count3week2 = 0;
+			e1.printStackTrace();
+		}
+		try {
+			count4week2 = service.count4week2(vo);
+		} catch (Exception e1) {
+			count4week2 = 0;
+			e1.printStackTrace();
+		}
+
+		try {
+			thisday = service.thisday();
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			thisdate = service.thisdate();
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			thismonth = service.thismonth();
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		
+		System.out.println(cWeight);
+		System.out.println(tWeight1);
+		System.out.println(tWeight2);
+		System.out.println(lWeight1);
+		System.out.println(lWeight2);
+		System.out.println(count1week);
+		System.out.println(count2week);
+		System.out.println(count3week);
+		System.out.println(count4week);
+		System.out.println(count1week2);
+		System.out.println(count2week2);
+		System.out.println(count3week2);
+		System.out.println(count4week2);
+
+
+		
 		
 		int tWeight = tWeight1 - tWeight2;
 		int lWeight = lWeight1 - lWeight2;
 
+		model.addAttribute("crsList", crsList);
+		model.addAttribute("feList", feList);
+		model.addAttribute("likeList", likeList);
 		model.addAttribute("cWeight", cWeight);
 		model.addAttribute("tWeight", tWeight);
 		model.addAttribute("lWeight", lWeight);
@@ -119,12 +229,10 @@ public class MyPageController {
 		model.addAttribute("count2week2", count2week2);
 		model.addAttribute("count3week2", count3week2);
 		model.addAttribute("count4week2", count4week2);
-		model.addAttribute("crsList", crsList);
 		model.addAttribute("thisday", thisday);
 		model.addAttribute("thisdate", thisdate);
 		model.addAttribute("thismonth", thismonth);
-		model.addAttribute("feList", feList);
-		model.addAttribute("likeList", likeList);
+
 			
 		return "mypage";
 	}

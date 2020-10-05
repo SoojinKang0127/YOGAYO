@@ -157,7 +157,7 @@ main {
 	grid-gap: 1px;
 }
 
-.wrapper div {
+.wrapper div:not(.img) {
 	border: 1px solid #979797;
 	display: flex;
 	justify-content: center;
@@ -267,5 +267,33 @@ main {
 	background-color: #febe2e;
 }
 
+.imgPath {
+	grid-column: 3/4;
+	width: 100px;
+	position: relative;
+	cursor: pointer;
+}
 
+.img{
+	position:absolute;
+	top:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	width:0px;
+	height:0px;
+	z-index: 10;
+	background-color: #f0f0f0;
+	border-radius: 10px;
+}
 
+.img img{
+	width:600px;
+}
+
+.imgPath:hover > .img{
+	width:300px;
+	height:300px;
+	box-shadow: var(—light-shadow);
+}

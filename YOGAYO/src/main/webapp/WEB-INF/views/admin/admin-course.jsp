@@ -1,15 +1,16 @@
-
 <%@page import="com.team4.vo.PoseVo"%>
 <%@page import="java.util.ArrayList"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/resources/css/admin/admin_course.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <title>ADMIN COURSE</title>
 </head>
 <body>
@@ -20,7 +21,9 @@
 		<div class="pose_section">
 			<div class="pose_section_wrapper">
 				<div class="pose_section_cover">
-					<div>동작 번호에 마우스를 올리면 <br> 설명이 나타납니다.</div>
+					<div>
+						동작 번호에 마우스를 올리면 <br> 설명이 나타납니다.
+					</div>
 				</div>
 				<div class="pose_section_title">Boat Pose</div>
 				<div class="pose_img"></div>
@@ -48,7 +51,7 @@
 		<div class="member_title">
 			<span class="underline">YOGAYO 코스 목록</span>
 		</div>
-<!-- 		<div class="btnMenu">
+		<!-- 		<div class="btnMenu">
 			<div class="create_btn">관리자 코스 만들기</div>
 			<div class="admin_btn">관리자 코스 조회</div>
 			<div class="member_btn">회원 코스 조회</div>
@@ -77,7 +80,13 @@
 						<div class="seq7_ th">동작 7</div>
 						<div class="seq8_ th">동작 8</div>
 						<div class="metarial">${i.material }</div>
-						<div class="imgPath"></div>
+						<div class="imgPath">
+							<i class="fas fa-image"></i>
+								<div class="img">
+									<img src="${pageContext.request.contextPath}/${i.img }">
+								</div>
+							
+						</div>
 						<div class="seq1 seq">${i.seq1Num }</div>
 						<div class="seq2 seq">${i.seq2Num }</div>
 						<div class="seq3 seq">${i.seq3Num }</div>

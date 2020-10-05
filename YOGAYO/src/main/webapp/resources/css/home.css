@@ -174,8 +174,8 @@ header {
 	width: 300px;
 	height: 40px;
 	font-size: 17px;
-	background-color: white;
-	color: black;
+	background-color: black;
+	color: white;
 	border: 1px solid black;
 	box-shadow: var(--light-shadow);
 	cursor: pointer;
@@ -195,14 +195,20 @@ header {
 	width: 300px;
 	height: 40px;
 	font-size: 17px;
-	background-color: rgb(255, 255, 255);
-	color: black;
+	background-color: black;
+	color: white;
 	border: 1px solid black;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	box-shadow: var(--light-shadow);
+	box-shadow: var(—light-shadow);
 	cursor: pointer;
+	margin-bottom:13px;
+}
+
+
+.sign-up-btn:hover{
+	backgroung
 }
 
 .hiding {
@@ -216,4 +222,3 @@ header {
 input:focus {
 	outline: none;
 }
-
