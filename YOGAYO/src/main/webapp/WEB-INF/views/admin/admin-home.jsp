@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +25,11 @@
 				<span class="underline">YOGAYO 일간 현황</span>
 			</div>
 			<div class="date_wrapper">
-				<span class="date">2020.09.17</span>
+			<jsp:useBean id="now" class="java.util.Date" />
+			<jsp:useBean id="nowtime" class="java.util.Date" />
+			<fmt:formatDate var="now" value="${now}" pattern="yyyy-MM-dd" />
+			<fmt:formatDate var="nowtime" value="${nowtime}" pattern="yyyy-MM-dd hh:mm" />
+				<span class="date">${now }</span>
 			</div>
 		</div>
 		<div class="dash_board_wrapper">
@@ -35,7 +40,7 @@
 						<div class="course_view value">14</div>
 						<div class="now">
 							<div class="live">실시간</div>
-							<div class="real_time">2020.09.17. 15:09</div>
+							<div class="real_time">${nowtime }</div>
 							<span>기준</span>
 						</div>
 					</li>
@@ -44,7 +49,7 @@
 						<div class="course_new value">5</div>
 						<div class="now">
 							<div class="live">실시간</div>
-							<div class="real_time">2020.09.17. 15:09</div>
+							<div class="real_time">${nowtime }</div>
 							<span>기준</span>
 						</div>
 					</li>
@@ -53,7 +58,7 @@
 						<div class="feed_new value">8</div>
 						<div class="now">
 							<div class="live">실시간</div>
-							<div class="real_time">2020.09.17. 15:09</div>
+							<div class="real_time">${nowtime }</div>
 							<span>기준</span>
 						</div>
 					</li>
@@ -62,7 +67,7 @@
 						<div class="member_new value">21</div>
 						<div class="now">
 							<div class="live">실시간</div>
-							<div class="real_time">2020.09.17. 15:09</div>
+							<div class="real_time">${nowtime }</div>
 							<span>기준</span>
 						</div>
 					</li>

@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       time--;
       if (time == 8500) {
-      	console.log(index);
+         console.log(index);
         sendAjaxRequest(index);
       }
     } else {
@@ -281,8 +281,16 @@ document.addEventListener("DOMContentLoaded", function () {
     var data = canvas.toDataURL("image/png");
     //photo.setAttribute('src', data);
   }
+  
+  function fordomain(){
+  $('body').append('<div class="domain" style="height: 600px; width: 1310px; background-color: #2d8cff; display:inline-block;z-index=5;position:absolute;margin-top=20px;margin-left:90px;opacity:0.9"><div>죄송합니다 플레이어 피드백 기능은 서버 환경 문제로 영상으로 대체합니다.</div><div><a href="https://www.youtube.com">https://www.youtube.com/</a></div></div>')
+  $('.domain div:nth-child(1)').css({color:'white','align-items':'center','font-size':'30px','margin-left':'30px','margin-bottom':'30px','margin-top':'300px'})
+  $('.domain div:nth-child(2)').css({color:'white','align-items':'center','font-size':'20px','margin-left':'30px',})
+  $('.domain div:nth-child(2) a').css({color:'white'})
+  }
 
   // Set up our event listener to run the startup process
   // once loading is complete.
   window.addEventListener("load", startup, false);
+  fordomain()
 });

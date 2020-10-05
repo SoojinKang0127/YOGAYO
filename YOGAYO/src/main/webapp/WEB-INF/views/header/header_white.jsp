@@ -34,7 +34,7 @@
 	flex-direction: column;
 	align-items: center;
 	margin-left: 30px;
-	margin-top:25px;
+	margin-top:10px;
 }
 
 .box-div {
@@ -80,8 +80,8 @@
 	margin-right: 30px;
 	align-items: center;
 	font-size: 18pt;
-	font-family: "Noto Sans KR", sans-serif;
-	font-weight: 300;
+	/*font-family: "Noto Sans KR", sans-serif;*/
+	/*font-weight: 300;*/
 	margin-left: 50px;
 	position: relative;
 	height: 35px;
@@ -129,7 +129,7 @@
 
 .main-profile .welcome_user {
 	color: white;
-	margin-right: 25px;
+	margin-right: 22px;
 }
 
 .header .main-status_bar .main-profile img {

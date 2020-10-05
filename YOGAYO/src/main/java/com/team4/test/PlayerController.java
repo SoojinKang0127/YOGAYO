@@ -221,7 +221,7 @@ public class PlayerController implements R {
 			System.out.println("오류! 피드 안 들어감");
 		}
 
-		return "mypage";
+		return "redirect:/mypage";
 	}
 
 	@RequestMapping(value = "/likeCourse", method = RequestMethod.POST)

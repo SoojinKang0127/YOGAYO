@@ -14,7 +14,7 @@ body {
 main {
 	width: 100%;
 	height: 100%;
-	position:relative;
+	position: relative;
 }
 
 .main-first_bg {
@@ -30,7 +30,7 @@ main {
 
 .main-first_title_section {
 	position: absolute;
-	width: 16%;
+	width: 553px;
 	display: flex;
 	flex-direction: column;
 	justify-content: left;
@@ -38,6 +38,11 @@ main {
 	margin-top: 330px;
 	margin-left: 195px;
 	overflow: hidden;
+}
+
+.main-title p {
+	width: 374px;
+	line-height: 45px;
 }
 
 .main-first_title_section .main-title {
@@ -72,31 +77,60 @@ main {
 	width: 100%;
 }
 
+.temp1 {
+	background-color: white;
+	height: 60px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	padding-left: 260px;
+	align-items: flex-end;
+	font-size: 25px;
+	padding-top: 80px;
+}
+
 .main-second_bg {
-	padding-top: 50px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	margin-bottom: 40px;
 }
 
 .main-second_container img {
+	height:350px;
+}
+
+.rec_wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.img_temp {
+
+	height: 300px;
 	width: 450px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .main-recommand {
 	box-shadow: var(--light-shadow);
 	background-color: white;
-	margin-left: 20px;
-	transform: translateY(5rem);
+	transform: translateY(3rem);
 	animation: up 500ms linear forwards;
-	width:450px;
-	overflow:hidden;
+	width: 450px;
+	height: 400px; overflow : hidden;
+	margin-left: 20px;
+	overflow: hidden;
 }
 
-.main-first_course,
-.main-second_course,
-.main-third_course {
-  padding: 10px;
+.main-first_course, .main-second_course, .main-third_course {
+	width: 450px;
+	height: 100px;
+	padding: 10px;
+
 }
 
 .main-second_course_explain {
@@ -104,9 +138,9 @@ main {
 }
 
 .main-course_title {
-  font-size: 20px;
-  margin-bottom: 10px;
-  font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 10px;
+	font-weight: bold;
 }
 
 .main-third_container {
@@ -114,7 +148,6 @@ main {
 	color: white;
 	display: flex;
 	flex-direction: column;
-	
 }
 
 .main-third_bg {
@@ -158,23 +191,23 @@ main {
 }
 
 .main-latest_section {
-  margin-right: 20px;
-  width: 700px;
-  background-color: #222222;
-  text-align: center;
+	margin-right: 20px;
+	width: 700px;
+	background-color: #222222;
+	text-align: center;
 }
 
 .main-latest_section img {
-  height: 700px;
+	height: 700px;
 }
 
 .main-first_course_title {
-  margin-left: 15px;
-  margin-top: 18px;
-  margin-bottom: 43px;
-  text-align: left;
-  font-size: 20px;
-  /*  */
+	margin-left: 15px;
+	margin-top: 18px;
+	margin-bottom: 43px;
+	text-align: left;
+	font-size: 20px;
+	/*  */
 }
 
 .main-latest_section2 .main-latest_section2-1 {
@@ -185,7 +218,7 @@ main {
 }
 
 .main-latest_section2 .main-latest_section2-1 img {
-  height: 328px;
+	height: 328px;
 }
 
 .main-small_latest_courses {
@@ -194,53 +227,52 @@ main {
 	justify-content: space-between;
 }
 
-.main-small_latest1,
-.main-samll_latest2 {
-  display: inline-block;
-  background-color: #222222;
-  width: 328px;
-  text-align: center;
+.main-small_latest1, .main-samll_latest2 {
+	display: inline-block;
+	background-color: #222222;
+	width: 328px;
+	text-align: center;
 }
 
 .main-small_latest1 {
 	margin-right: 17px;
 }
 
-.img_wrapper{
-  width: 700px;
-  height: 700px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.img_wrapper {
+	width: 700px;
+	height: 700px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
- .img_wrapper2 {
-  width: 328px;
-  height: 288px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.img_wrapper2 {
+	width: 328px;
+	height: 288px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.img_wrapper3{
-  width: 673px;
-  height: 300px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.img_wrapper3 {
+	width: 673px;
+	height: 300px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .main-latest_section2 .main-latest_section2-2 {
-  background-color: #222222;
-  width: 100%;
-  text-align: center;
+	background-color: #222222;
+	width: 100%;
+	text-align: center;
 }
 
 .main-latest_section2 .main-latest_section2-2 img {
-  width: 673px;
+	width: 673px;
 }
 
 .footer {
@@ -296,7 +328,7 @@ main {
 .newsletter .second i {
 	font-size: 20px;
 	transition: 0.4s all easy-in-out;
-	cursor:pointer;
+	cursor: pointer;
 }
 
 .newsletter .second i:hover {
@@ -336,49 +368,48 @@ main {
 	height: 430px;
 	background-color: white;
 	z-index: 12;
-	display:flex;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.pop_up i{
-	margin-top:20px;
-	font-size:80px;
-	font-weight:300;
+.pop_up i {
+	margin-top: 20px;
+	font-size: 80px;
+	font-weight: 300;
 	opacity: 0.1;
 }
+
 .pop_up .title {
-	font-size:25px;
-	font-weight:500;
-	margin-top:20px;
-	margin-bottom:20px;
+	font-size: 25px;
+	font-weight: 500;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
-.pop_up .sentence{
-	font-size:17px;
+.pop_up .sentence {
+	font-size: 17px;
 	text-align: center;
 	line-height: 40px;
-	opacity:0.7;
-	margin-bottom:10px;
+	opacity: 0.7;
+	margin-bottom: 10px;
 }
 
-.pop_up .email{
-	
-	font-size:12px;
-	opacity:0.5;
+.pop_up .email {
+	font-size: 12px;
+	opacity: 0.5;
 }
 
-.btn_area{
-	margin-top:20px;
-	display:flex;
+.btn_area {
+	margin-top: 20px;
+	display: flex;
 	width: 250px;
 	justify-content: space-around;
-	
 }
 
-.btn_area div{
-	padding:10px 20px 10px 20px;
-	border-radius:10px;
+.btn_area div {
+	padding: 10px 20px 10px 20px;
+	border-radius: 10px;
 	box-shadow: var(--light-shadow);
 	/* border:1px solid black; */
 	cursor: pointer;
@@ -389,35 +420,33 @@ main {
 	background-color: #febe2e;
 }
 
-.btn_area div:nth-child(2):hover{
-	left:-10px;
+.btn_area div:nth-child(2):hover {
+	left: -10px;
 }
 
-
-.hiding{
+.hiding {
 	display: none;
 }
+
 a {
-  color: black;
+	color: black;
 }
 
 .main-latest_sections a {
-  color: white;
+	color: white;
 }
 
-
-
-.second_wrapper{
+.second_wrapper {
 	background-color: white;
-	padding-bottom:150px;
+	padding-bottom: 150px;
 }
 
-.newsletter_bg{
-	z-index:-1;
-	width:100vw;
-	height:100vh;
-	top:0px;
-	position:fixed;
+.newsletter_bg {
+	z-index: -1;
+	width: 100vw;
+	height: 100vh;
+	top: 0px;
+	position: fixed;
 	background-image: url("../image/home/newsletter_bg.jpg");
 	background-repeat: none;
 	opacity: 0.7;

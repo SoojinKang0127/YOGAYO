@@ -39,13 +39,14 @@
 				</div>
 			</div>
 		</div>
+		<div class="temp1"></br>${user.name }님을 위한 맞춤 추천 코스</div>
 		<div class="second_wrapper">
 			<div class="main-second_container">
 				<div class="up-on-scroll">
 					<div class="main-second_bg">
 						<div class="main-recommand">
 							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(0).crsNum}">
-								<img src="${pageContext.request.contextPath}/${rec.get(0).imgPath}"/>
+								<div class="img_temp"><img src="${pageContext.request.contextPath}/${rec.get(0).imgPath}"/></div>
 								<div class="main-first_course">
 									<div class="main-course_title">${rec.get(0).title}
 									</div>
@@ -55,8 +56,8 @@
 							</a>
 						</div>
 						<div class="main-recommand">
-							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(1).crsNum}"> <img
-								src="${pageContext.request.contextPath}/${rec.get(1).imgPath}" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(1).crsNum}"><div class="img_temp"><img
+								src="${pageContext.request.contextPath}/${rec.get(1).imgPath}" /></div>
 								<div class="main-second_course">
 									<div class="main-course_title">${rec.get(1).title}</div>
 									<div class="main-second_course_explain">${rec.get(1).dscrt}</div>
@@ -64,8 +65,8 @@
 							</a>
 						</div>
 						<div class="main-recommand">
-							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(2).crsNum}"><img
-								src="${pageContext.request.contextPath}/${rec.get(2).imgPath}" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(2).crsNum}"><div class="img_temp"><img
+								src="${pageContext.request.contextPath}/${rec.get(2).imgPath}" /></div>
 							<div class="main-third_course">
 								<div class="main-course_title">${rec.get(2).title}</div>
 								<div class="main-third_course_explain">${rec.get(2).dscrt}</div>
@@ -77,8 +78,8 @@
 				<div class="up-on-scroll">
 					 <div class="main-second_bg">
 						<div class="main-recommand"> 
-							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(3).crsNum}"><img
-								src="${pageContext.request.contextPath}/${rec.get(3).imgPath}" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(3).crsNum}"><div class="img_temp"><img
+								src="${pageContext.request.contextPath}/${rec.get(3).imgPath}" /></div>
 							<div class="main-first_course">
 								<div class="main-course_title">${rec.get(3).title}</div>
 								<div class="main-first_course_explain">${rec.get(3).dscrt}</div>
@@ -86,8 +87,8 @@
 							</a>
 						</div>
 						<div class="main-recommand">
-							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(3).crsNum}"><img
-								src="${pageContext.request.contextPath}/${rec.get(3).imgPath}" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(3).crsNum}"><div class="img_temp"><img
+								src="${pageContext.request.contextPath}/${rec.get(3).imgPath}" /></div>
 							<div class="main-second_course">
 								<div class="main-course_title">${rec.get(3).title}</div>
 								<div class="main-second_course_explain">${rec.get(3).dscrt}</div>
@@ -95,8 +96,8 @@
 							</a>
 						</div>
 						<div class="main-recommand">
-							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(3).crsNum}"><img
-								src="${pageContext.request.contextPath}/${rec.get(3).imgPath}" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(3).crsNum}"><div class="img_temp"><img
+								src="${pageContext.request.contextPath}/${rec.get(3).imgPath}" /></div>
 							<div class="main-third_course">
 								<div class="main-course_title">${rec.get(3).title}</div>
 								<div class="main-third_course_explain">${rec.get(3).dscrt}</div>
