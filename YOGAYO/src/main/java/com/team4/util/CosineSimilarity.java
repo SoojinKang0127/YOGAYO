@@ -145,7 +145,7 @@ public class CosineSimilarity implements R {
 			myRecommend.set(i, myRecommend.get(i) - courseListAll.get(3).getList().get(i));
 			myRecommend.set(i, myRecommend.get(i) - courseListAll.get(4).getList().get(i));
 			if (myRecommend.get(i) <= -1) {
-
+				
 				CourseVo courseVo = new CourseVo();
 				courseVo.setCrsNum(i-1);
 				double average = 0.0;
@@ -155,12 +155,13 @@ public class CosineSimilarity implements R {
 					e.printStackTrace();
 				}
 				System.out.println(average);
-				if (Math.abs(vo.getProfiLevel() - average) <= 1.3)
+				if (Math.abs(vo.getProfiLevel() - average) <= 1.5)
 					recommendCourse.add(i - 1);
 
 			}
 		}
-
+		System.out.println(myRecommend.toString());
+		System.out.println(recommendCourse.toString());
 		// System.out.println(myRecommend.toString());
 		return recommendCourse;
 	}

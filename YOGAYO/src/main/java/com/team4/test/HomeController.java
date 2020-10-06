@@ -34,20 +34,6 @@ public class HomeController {
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public String main(Model model, HttpServletRequest req,HttpServletResponse res) {
 		UserAuthCheck.loginCheck(req, res, model);
-		CourseServiceImpl cservice= new CourseServiceImpl();
-		UserVo vo= (UserVo)req.getSession().getValue("user");
-		System.out.println(vo.getuNum());
-		ArrayList<Integer> recommendation= CosineSimilarity.calc(vo);
-		ArrayList<CourseVo> crsRec= new ArrayList<CourseVo>();
-		for(int crsNum:recommendation) {
-			try {
-				CourseVo cvo=cservice.selectCourseByCrsNum(crsNum);
-				crsRec.add(cvo);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-		model.addAttribute("rec",crsRec);
 		return "main";
 	}
 	
@@ -76,35 +62,5 @@ public class HomeController {
 		};
 	}
 
-//	
-//	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
-//	public String couesePage(Model model) {
-//		return "course-page";
-//	}
-//	
-//
-//	
-//	@RequestMapping(value = "/course-detail", method = RequestMethod.GET)
-//	public String coueseDetail(Model model) {
-//
-//		return "course-detail";
-//	}
-//	
-//	@RequestMapping(value = "/course-page", method = RequestMethod.GET)
-//	public String couesePage(Model model) {
-//		
-//		
-//		
-//		return "course-page";
-//	}
-//	
-//	
-
-//	
-//	@RequestMapping(value = "/course-detail", method = RequestMethod.GET)
-//	public String coueseDetail(Model model) {
-//
-//		return "course-detail";
-//	}
 
 }
