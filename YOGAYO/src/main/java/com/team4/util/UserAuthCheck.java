@@ -41,7 +41,7 @@ public class UserAuthCheck {
 		model.addAttribute("user", (UserVo) user);
 		if (user != null) {
 			try {
-				res.sendRedirect("/test/main");
+				res.sendRedirect("main");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
