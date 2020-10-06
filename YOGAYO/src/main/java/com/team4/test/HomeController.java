@@ -2,6 +2,7 @@ package com.team4.test;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
@@ -34,6 +35,15 @@ public class HomeController {
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public String main(Model model, HttpServletRequest req,HttpServletResponse res) {
 		UserAuthCheck.loginCheck(req, res, model);
+		HttpSession session = req.getSession();	
+		CourseServiceImpl cService = new CourseServiceImpl();
+		List<CourseVo> courses=null;
+		try {
+			courses = cService.selectAll(0);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		session.setAttribute("allCourses", courses);
 		return "main";
 	}
 	

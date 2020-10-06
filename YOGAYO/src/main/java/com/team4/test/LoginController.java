@@ -36,12 +36,11 @@ public class LoginController {
 	@RequestMapping(value="/login", method = RequestMethod.POST)
 	public String login(CourseVo cvo,UserVo vo, HttpServletRequest req, RedirectAttributes rttr, Model model ) throws Exception{
 		UserServiceImpl service = new UserServiceImpl();
-		CourseServiceImpl cService = new CourseServiceImpl();
 		
 		HttpSession session = req.getSession();	
 		UserVo login = service.login(vo);
 		
-		List<CourseVo> courses = cService.selectAll(0);
+		
 		
 		if(login == null) {
 			session.setAttribute("user", null);
@@ -54,7 +53,6 @@ public class LoginController {
 		}else {
 			
 			session.setAttribute("user", login);
-			session.setAttribute("allCourses", courses);
 			System.out.println("로그인 됨");
 		}
 		return "redirect:/main";

@@ -76,7 +76,7 @@ public class PlayerController implements R {
 		lvo.setuNum(uvo.getuNum());
 		int likeFlag = 0;
 		int likeCount = 0;
-		String userName = "";
+		UserVo author = null;
 		int playTotal = 0;
 
 		try {
@@ -95,7 +95,7 @@ public class PlayerController implements R {
 
 		try {
 			resultCvo = cservice.selectOne(cvo);
-			userName = uservice.getUName(resultCvo);
+			author = uservice.getAuthor(resultCvo);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -151,7 +151,7 @@ public class PlayerController implements R {
 		model.addAttribute("pose8", resultPvo8);
 		model.addAttribute("uvo", uvo);
 		model.addAttribute("crsNum", course);
-		model.addAttribute("userName", userName);
+		model.addAttribute("author", author);
 		model.addAttribute("playTotal", playTotal);
 		model.addAttribute("regDate", resultCvo.getRegDate());
 

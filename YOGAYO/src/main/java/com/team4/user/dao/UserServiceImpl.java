@@ -180,6 +180,11 @@ public class UserServiceImpl implements UserService {
 		return dao.getUserByCommentVo(vo);
 	}
 
+	@Override
+	public UserVo getAuthor(CourseVo vo) throws Exception {
+		return dao.getAuthor(vo);
+	}
+
 
 	
 	

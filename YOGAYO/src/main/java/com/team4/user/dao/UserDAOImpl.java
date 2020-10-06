@@ -198,6 +198,12 @@ public class UserDAOImpl implements UserDAO {
 	public UserVo getUserByCommentVo(CommentVo vo) throws Exception {
 		return mybatis.selectOne("UserDao.getUserByCommentVo", vo);
 	}
+
+
+	@Override
+	public UserVo getAuthor(CourseVo vo) throws Exception {
+		return mybatis.selectOne("UserDao.getAuthor", vo);
+	}
 	
 	
 

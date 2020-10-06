@@ -31,6 +31,7 @@ public interface UserDAO {
 	public String thisday();
 	public String thismonth();
 	public int thisdate();
+	public UserVo getAuthor(CourseVo vo) throws Exception;
 	
 
 	public int tWeight() throws Exception;

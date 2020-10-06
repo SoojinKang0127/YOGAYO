@@ -48,5 +48,7 @@ public interface UserService {
 	public String getUName(CourseVo vo) throws Exception;
 	public List<Integer> selectExceptMe(UserVo vo) throws Exception;
 	public UserVo getUserByCommentVo(CommentVo vo) throws Exception;
+	
+	public UserVo getAuthor(CourseVo vo) throws Exception;
 
 }
