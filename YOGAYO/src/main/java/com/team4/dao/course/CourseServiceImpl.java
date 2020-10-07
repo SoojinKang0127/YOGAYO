@@ -1,5 +1,6 @@
 package com.team4.dao.course;
 
+import java.util.HashMap;
 import java.util.List;
 
 import com.team4.vo.CommentVo;
@@ -108,6 +109,11 @@ public class CourseServiceImpl implements CourseService {
 	@Override
 	public CourseVo selectCourseByCrsNum(Integer crsNum) throws Exception {
 		return dao.selectCourseByCrsNum(crsNum);
+	}
+
+	@Override
+	public List<CourseVo> selectMoreCourse(HashMap map) throws Exception {
+		return dao.selectMoreCourse(map);
 	}
 
 }

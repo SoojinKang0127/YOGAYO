@@ -2,6 +2,7 @@ package com.team4.util;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
@@ -161,8 +162,8 @@ public class CosineSimilarity implements R {
 			}
 		}
 		System.out.println(myRecommend.toString());
+		
 		System.out.println(recommendCourse.toString());
-		// System.out.println(myRecommend.toString());
 		return recommendCourse;
 	}
 

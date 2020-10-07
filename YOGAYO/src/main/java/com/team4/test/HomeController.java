@@ -2,6 +2,7 @@ package com.team4.test;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
@@ -62,6 +63,26 @@ public class HomeController {
 				k++;
 			} catch (Exception e) {
 				e.printStackTrace();
+			}
+		}
+		if(recommendation.size()<6) {
+			
+			List<CourseVo> moreList=null;
+			int more=6-recommendation.size();
+			if(recommendation.size()==0) {
+				recommendation.add(-1);
+			}
+			HashMap<String, Object> map = new HashMap<String, Object>();
+			map.put("list",recommendation);
+			map.put("number",more);
+			try {
+				 moreList=cservice.selectMoreCourse(map);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			for(CourseVo cvo: moreList) {
+				crsRec+="\""+k+"\":"+cvo.toString2()+",";
+				k++;
 			}
 		}
 		crsRec+="}";

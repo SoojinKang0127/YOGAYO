@@ -1,5 +1,6 @@
 package com.team4.dao.course;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -130,6 +131,12 @@ public class CourseDAOImpl implements CourseDAO {
 	public CourseVo selectCourseByCrsNum(Integer crsNum) throws Exception {
 		
 		return mybatis.selectOne("CourseDao.selectCourseByCrsNum",crsNum);
+	}
+
+
+	@Override
+	public List<CourseVo> selectMoreCourse(HashMap map) throws Exception {
+		return mybatis.selectList("CourseDao.selectMoreCourse",map);
 	}
 	
 	

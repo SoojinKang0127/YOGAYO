@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -47,9 +49,15 @@ import com.team4.vo.UserVo;
 public class ServiceClient extends Rcontroller {
 
 	public static void main(String[] args) throws Exception {
-		AdminServiceImpl service = new AdminServiceImpl();
-		AdminVo vo = service.countNewMember();
-		System.out.println(vo);
+		CourseServiceImpl cservice= new CourseServiceImpl();
+		HashMap<String, Object> map= new HashMap<String, Object>();
+		ArrayList<Integer> a= new ArrayList<Integer>();
+		a.add(1);
+		a.add(2);
+		map.put("list",a);
+		map.put("number",3);
+		List<CourseVo> c=cservice.selectMoreCourse(map);
+		System.out.println(c.toString());
 
 	}
 

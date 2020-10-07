@@ -1,5 +1,6 @@
 package com.team4.dao.course;
 
+import java.util.HashMap;
 import java.util.List;
 
 import com.team4.vo.CommentVo;
@@ -30,6 +31,7 @@ public interface CourseDAO {
 	public int userCount(CourseVo vo) throws Exception;
 	public DiffiVo courseDiffi(CourseVo vo) throws Exception;
 	public CourseVo selectCourseByCrsNum(Integer crsNum) throws Exception;
+	public List<CourseVo> selectMoreCourse(HashMap map) throws Exception;
 	
 }
 	

@@ -166,10 +166,8 @@ public class CourseVo {
 	}
 	
 	public String toString2() {
-		return "{\"crsNum\":" + crsNum + ", \"title\":" +"\"" +title +"\""+ ", \"uNum\":" + uNum + ", \"dscrt\":" + "\""+dscrt+"\""
-				+ ", \"material\":" + "\""+material+"\"" + ", \"imgPath\":" + "\""+imgPath+"\"" + ", \"seq1\":" + seq1 + ", \"seq2\":"
-				+ seq2 + ", \"seq3\":" + seq3 + ", \"seq4\":" + seq4 + ", \"seq5\":" + seq5 + ", \"seq6\":" + seq6
-				+ ", \"seq7\":" + seq7 + ", \"seq8\":" + seq8 + ", \"regDate\":" + "\""+regDate +"\""+ "}";
+		return "{\"crsNum\":" + crsNum + ", \"title\":" +"\"" +title +"\""+ ", \"dscrt\":" + "\""+dscrt+"\""
+				+ ", \"imgPath\":" + "\""+imgPath+"\""+"}";
 
 	}
 

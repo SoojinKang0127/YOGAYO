@@ -269,10 +269,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   
   function fordomain(){
-  $('body').append('<div class="domain" style="height: 600px; width: 1310px; background-color: #2d8cff; display:inline-block;z-index=5;position:absolute;margin-top=20px;margin-left:90px;opacity:0.9"><div>죄송합니다 플레이어 피드백 기능은 서버 환경 문제로 영상으로 대체합니다.</div><div><a href="https://www.youtube.com">https://www.youtube.com/</a></div></div>')
+  $('body').append('<div class="domain" style="height: 600px; width: 1310px; background-color: #2d8cff; display:inline-block;z-index=5;position:absolute;margin-top=20px;margin-left:90px;opacity:0.9"><div>의자 자세와 플랭크 자세에서 포즈 디텍팅을 진행합니다.</div><div><a>화면 중앙에 전신이 나오도록 위치해주세요.</a></div><div class="ok">확인</div></div>')
   $('.domain div:nth-child(1)').css({color:'white','align-items':'center','font-size':'30px','margin-left':'30px','margin-bottom':'30px','margin-top':'300px'})
-  $('.domain div:nth-child(2)').css({color:'white','align-items':'center','font-size':'20px','margin-left':'30px',})
+  $('.domain div:nth-child(2)').css({color:'white','align-items':'center','font-size':'20px','margin-left':'30px','margin-bottom':'30px'})
   $('.domain div:nth-child(2) a').css({color:'white'})
+   $('.ok').css({color:'white','align-items':'center','font-size':'20px','margin-left':'30px',})
+  $('.ok').click(function(){
+  $('.domain').hide()
+  })
   }
 
 
