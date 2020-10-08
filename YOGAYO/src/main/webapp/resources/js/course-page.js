@@ -55,10 +55,10 @@ $(window).ready(function () {
           var list =
             "<div class=up-on-scroll>" +
             "<div class=course_container>" +
-            "<a href=/test/course-detail?crsNum=" +
+            "<a href=/course-detail?crsNum=" +
             resultData.result[i].crsNum +
             ">" +
-            "<div class='img_wrapper'><img class='course_container_img' src=/test/" +
+            "<div class='img_wrapper'><img class='course_container_img' src=/" +
             resultData.result[i].imgPath +
             " alt=course /></div>" +
             "<div class=course_star_rating>" +
@@ -116,10 +116,10 @@ $(window).ready(function () {
           var list =
             "<div class=up-on-scroll>" +
             "<div class=course_container>" +
-            "<a href=/test/course-detail?crsNum=" +
+            "<a href=/course-detail?crsNum=" +
             resultData.result[i].crsNum +
             ">" +
-            "<div class='img_wrapper'><img class='course_container_img' src=/test/" +
+            "<div class='img_wrapper'><img class='course_container_img' src=/" +
             resultData.result[i].imgPath +
             " alt=course /></div>" +
             "<div class=course_star_rating>" +
@@ -173,10 +173,10 @@ $(window).ready(function () {
           var list =
             "<div class=up-on-scroll>" +
             "<div class=course_container>" +
-            "<a href=/test/course-detail?crsNum=" +
+            "<a href=/course-detail?crsNum=" +
             resultData.result[i].crsNum +
             ">" +
-            "<div class='img_wrapper'><img class='course_container_img' src=/test/" +
+            "<div class='img_wrapper'><img class='course_container_img' src=/" +
             resultData.result[i].imgPath +
             " alt=course /></div>" +
             "<div class=course_star_rating>" +
@@ -223,10 +223,10 @@ $(window).ready(function () {
           var list =
             "<div class=up-on-scroll>" +
             "<div class=course_container>" +
-            "<a href=/test/course-detail?crsNum=" +
+            "<a href=/course-detail?crsNum=" +
             resultData.result[i].crsNum +
             ">" +
-            "<div class='img_wrapper'><img class='course_container_img' src=/test/" +
+            "<div class='img_wrapper'><img class='course_container_img' src=/" +
             resultData.result[i].imgPath +
             " alt=course /></div>" +
             "<div class=course_star_rating>" +
@@ -278,10 +278,10 @@ $(window).ready(function () {
           var list =
             "<div class=up-on-scroll>" +
             "<div class=course_container>" +
-            "<a href=/test/course-detail?crsNum=" +
+            "<a href=/course-detail?crsNum=" +
             resultData.result[i].crsNum +
             ">" +
-            "<div class='img_wrapper'><img class='course_container_img' src=/test/" +
+            "<div class='img_wrapper'><img class='course_container_img' src=/" +
             resultData.result[i].imgPath +
             " alt=course /></div>" +
             "<div class=course_star_rating>" +
