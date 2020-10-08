@@ -313,5 +313,18 @@
 	SELECT * FROM COURSE WHERE CRSNUM=#{crsNum}
 	</select>
 	
+	<select id="selectMoreCourse" parameterType="java.util.HashMap" resultType="CourseVo">
+	
+
+		SELECT C.CRSNUM, C.TITLE, C.DSCRT, C.IMGPATH, A.COUNT  
+		FROM COURSE AS C 
+		JOIN (SELECT CRSNUM, COUNT(*) AS COUNT FROM LIKEY GROUP BY CRSNUM) AS A ON C.CRSNUM=A.CRSNUM 
+		WHERE NOT C.CRSNUM IN 
+		<foreach collection='list' index='index' open='(' close=')' separator=','>
+		${list[index]}
+		</foreach>
+		ORDER BY A.COUNT DESC 
+		LIMIT ${number};
+	</select>
 
 </mapper>

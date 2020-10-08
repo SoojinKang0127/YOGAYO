@@ -184,7 +184,7 @@ header {
 			<a href="${pageContext.request.contextPath}/admin/comment"><li class="menu">댓글 관리</li></a>
 			<a href="${pageContext.request.contextPath}/admin/newsletter"><li class="menu">뉴스레터 전송</li></a>
 			<a href="${pageContext.request.contextPath}/admin/course"><li class="menu">코스 관리</li></a>
-			<a href="${pageContext.request.contextPath}"><li class="menu">YOGAYO</li></a>
+			<a href="${pageContext.request.contextPath}/"><li class="menu">YOGAYO</li></a>
 		</ul>
 	</header>
 </body>

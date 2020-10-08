@@ -221,7 +221,6 @@
                      var request = new XMLHttpRequest();
                      $("#review_btn").click(function () {
                         ajax();
-
                      });
                      var object = null;
                      //////////////////////////////
@@ -272,7 +271,8 @@
                                  + '<div class="review_review">'
                                  + '<input type="text" id="comment_text" name="review" placeholder="답글.."/>'
                                  + '<input type="hidden" name="uNum" value='
-                                 + object.comment[parseInt(i)].uNum
+                                 /* + object.comment[parseInt(i)].uNum */
+                                 + ${user.uNum}
                                  + " />"
                                  + '<input type="hidden" name="parent" value='
                                  + object.comment[parseInt(i)].cmtNum
@@ -286,7 +286,7 @@
                                     review_string = review_string
                                        + '<div class="comments">'
                                        + '<img alt="comment_user_img" src="${pageContext.request.contextPath}/'
-                                       + object.comment[parseInt(j)].img
+                                       + object.review[parseInt(j)].img
                                        + '"/>'
                                        + '<div class="comments_box">'
                                        + '<div class="comment_user_name">'
@@ -306,6 +306,7 @@
                                  + comment_suffix;
                               $('.ajax').append(fin_string)
                            }////////////////////////////////////
+                           
                            $('#rating').html(object.avg.toFixed(2) + "")
                            $('.course_detail-rating span:nth-child(2)').html(object.avg.toFixed(2))
 

@@ -35,5 +35,6 @@
 		resultType="int">
 		SELECT CRSNUM FROM LIKEY
 	</select>
+	
 
 </mapper>

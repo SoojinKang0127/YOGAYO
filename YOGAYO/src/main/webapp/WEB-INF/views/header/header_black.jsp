@@ -131,11 +131,20 @@
 	margin-right: 30px;
 }
 
-.header .main-status_bar .main-profile img {
+
+.profile_wrapper{
 	display: flex;
-	width: 40px;
-	height: 40px;
-	border-radius: 50px;
+	width:50px;
+	height:50px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.header .main-status_bar .main-profile img {
+	width:50px;
+	height:50px;
+	object-fit:cover;
 }
 
 .hamburger {
@@ -232,6 +241,12 @@
 	font-size: 23px;
 	color: black;
 }
+
+.logout {
+	color:black;
+	font-size:10px;
+	margin-left:5px;
+}
 </style>
 <script type="text/javascript"
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -260,9 +275,9 @@
 				</div>
 				<div class="main-profile">
 					<div class="welcome_user">안녕하세요. ${user.name}님</div>
-					<a href="myPage"><img
+					<a href="myPage"><div class="profile_wrapper"><img
 						src="${pageContext.request.contextPath}/${user.img}"
-						class="profile_img" /></a><i class="fas fa-door-open"></i>
+						class="profile_img" /></div></a><a href="logout"><i class="fas fa-door-open"></i><span class="logout">로그아웃</span></a>
 				</div>
 			</div>
 		</div>
