@@ -312,21 +312,21 @@
 				pathname = window.location.pathname
 				menu_num = 0
 				switch (pathname) {
-				case "/test/main":
+				case "/main":
 					menu_num = 1
 					break
-				case "/test/course-page":
-				case "/test/course-detail":
-				case "/test/player":
+				case "/course-page":
+				case "/course-detail":
+				case "/player":
 					menu_num = 2
 					break
-				case "/test/dictionary":
-				case "/test/dictionary-detail":
+				case "/dictionary":
+				case "/dictionary-detail":
 					menu_num = 3
 					break
-				case "/test/update":
-				case "/test/myPage":
-				case "/test/course_playlist":
+				case "/update":
+				case "/myPage":
+				case "/course_playlist":
 					menu_num = 4
 					break
 				}
