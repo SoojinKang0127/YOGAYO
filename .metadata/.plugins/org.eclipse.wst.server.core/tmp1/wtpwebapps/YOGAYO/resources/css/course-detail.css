@@ -34,6 +34,11 @@ main {
 	display: none;
 }
 
+#heart{
+	width: 25px;
+	height: 25px;
+}
+
 .course_detail-img_section {
 	width: 100%;
 	display: flex;
@@ -345,6 +350,7 @@ color:#2196F3;
 	border-radius: 50px;
 	box-shadow: var(--light-shadow);
 	margin-top: 30px;
+	object-fit:cover;
 }
 
 .form {
@@ -439,6 +445,7 @@ color:#2196F3;
 	width: 54px;
 	height: 54px;
 	border-radius: 50px;
+	object-fit:cover;
 }
 
 .course_detail-review_user_info {
@@ -894,6 +901,8 @@ main {
   margin-top: 25px;
   margin-right: 20px;
   font-size: 25px;
+  width: 35px;
+  height: 31px;
 }
 
 .like .like_icon {
@@ -925,6 +934,7 @@ main {
 	width: 54px;
 	height: 54px;
 	border-radius: 50px;
+	object-fit:cover;
 }
 
 .course_detail-info_icon_section {

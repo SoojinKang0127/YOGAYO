@@ -14,6 +14,7 @@ $(function() {
 	var time = [];
 	var difficulty = [];
 	var audio_path = [];
+	var keywords=[];
 	request.open("POST", "./course_playlist?pose="
 			+ encodeURIComponent(docbox.value), true);
 	request.onreadystatechange = after_ajax;
@@ -31,6 +32,7 @@ $(function() {
 				time[i] = list[i].time
 				difficulty[i] = list[i].difficulty
 				audio_path[i] = list[i].audioPath
+				keywords[i]=list[i].keyword
 			}
 
 			for (var i = 0; i < Object.keys(list).length; i++) {
@@ -51,7 +53,7 @@ $(function() {
 				txt += "</div>"
 				txt += "<div class='pose_tag'>"
 				txt += "<i class='fas fa-hashtag' style='font-size: 24px;'></i>"
-				txt += "<p class='pose_tag_content'>허리</p>"
+				txt += "<p class='pose_tag_content'>"+keywords[i]+"</p>"
 				txt += "</div>"
 				txt += "<div class='difficulty'>"
 				txt += "<i class='fas fa-universal-access' style='font-size: 24px;'></i>"

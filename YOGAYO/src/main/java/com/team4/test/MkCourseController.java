@@ -41,13 +41,13 @@ public class MkCourseController implements R {
 		UserVo user = (UserVo) session.getValue("user");
 		int uNum = user.getuNum();
 
-		System.out.println("insure");
-
-//			System.out.println(multi.getParameter("title"));
+			
 		String title = multi.getParameter("title");
 		String dscrt = multi.getParameter("dscrt");
 		String material = multi.getParameter("material");
 
+		
+		//course addition to DB
 		try {
 			int seq1 = Integer.parseInt(multi.getParameter("seq1"));
 			vo.setSeq1(seq1);
@@ -66,7 +66,7 @@ public class MkCourseController implements R {
 			int seq8 = Integer.parseInt(multi.getParameter("seq8"));
 			vo.setSeq8(seq8);
 		} catch (NumberFormatException e) {
-			System.out.println("몇개 못가져옴");
+			System.out.println("did't take some elements");
 		}
 
 		String keyword = multi.getParameter("keywordBox");
@@ -78,31 +78,19 @@ public class MkCourseController implements R {
 
 		}
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////////////////
+//			file input & save
 
 			MultipartFile mf = multi.getFile("coursethumbnail");
 			String originalFileName = mf.getOriginalFilename();
-
-			System.out.println("original: " + originalFileName);
 			String fileType = originalFileName.substring(originalFileName.lastIndexOf('.'), originalFileName.length());
-			String realPath = multi.getRealPath("/");
-			String curUserPath = realPath.substring(0, realPath.indexOf(".metadata"));
-			curUserPath = curUserPath.replace('\\', '/');
 			String path = null;
-			if (curUserPath.indexOf("YOGAYO") == -1) {
-				path = curUserPath + "YOGAYO/YOGAYO/src/main/webapp/resources/image/coursethumbnail/";
-			} else {
-
-				path = curUserPath + "YOGAYO/src/main/webapp/resources/image/coursethumbnail/";
-			}
+			
 			String projectPath = "resources/image/coursethumbnail/";
-
+			path="/var/lib/tomcat8/webapps/YOGAYO/resources/image/coursethumbnail/";
 			int no = 0;
 			try {
 				no = service.getLastCnum() + 1;
-				System.out.println("사진의 no" + no);
+				System.out.println("picture no" + no);
 			} catch (Exception e1) {
 				e1.printStackTrace();
 				System.out.println("err" + e1);
@@ -121,19 +109,16 @@ public class MkCourseController implements R {
 				e.printStackTrace();
 				System.out.println("오류! 파일 안 들어감");
 			}
-
-
 		vo.setuNum(uNum);
 		vo.setTitle(title);
 		vo.setDscrt(dscrt);
 		vo.setMaterial(material);
-
 		try {
 			service.makeCourse(vo);
-			System.out.println("들어감");
+			System.out.println("succeed");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			System.out.println("잘안들어감 오류");
+			System.out.println("set the elements err");
 			e.printStackTrace();
 		}
 		int id = 0;
@@ -141,7 +126,7 @@ public class MkCourseController implements R {
 
 		System.out.println("id: " + (id));
 
-		///////////////////////////////////////////////////////////////
+		//append keyword to mongoDB
 
 		MongoCollection<Document> collection = mongoDBi.getCollection("COURSE");
 		Document doc = new Document("_id", id).append("keyword", keywordarray);

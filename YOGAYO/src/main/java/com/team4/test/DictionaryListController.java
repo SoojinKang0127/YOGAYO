@@ -34,7 +34,7 @@ public class DictionaryListController {
 		List<PoseVo> list = service.poseSelectAll();
 		model.addAttribute("user",(UserVo)req.getSession().getAttribute("user"));
 		model.addAttribute("pose", list);
-
+		
 		return "dictionary";
 	}
 }

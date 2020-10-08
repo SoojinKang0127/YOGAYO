@@ -46,7 +46,7 @@ $(document).ready(function(){
 	<main>
 		<section id="step_1">
 			<header>
-				<a href="/"><div class="logo-wrapper">
+				<a href="${pageContext.request.contextPath}"><div class="logo-wrapper">
 						<span>YOGAYO</span>
 						<div class="box-div"></div>
 					</div> </a>

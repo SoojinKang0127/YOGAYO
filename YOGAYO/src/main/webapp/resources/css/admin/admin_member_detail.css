@@ -163,7 +163,6 @@ main {
 }
 
 .detail_section {
-	height: 200vh;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -184,14 +183,15 @@ main {
 }
 
 .user_pic img {
-	width: 100%;
-	min-width: 160px;
+	width: 130px;
+	height: 130px;
+	object-fit:cover;
 }
 
 .info {
 	display: grid;
 	grid-gap: 1px;
-	margin-bottom: 50px;
+	margin-bottom: 200px;
 }
 
 .info>div {

@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <title>YOGAYO | COURSE</title>
    <script src="https://kit.fontawesome.com/54919de5bd.js" crossorigin="anonymous"></script>
-   <script src="http://code.jquery.com/jquery.js"></script>
+   <script src="https://code.jquery.com/jquery.js"></script>
    <script language="JavaScript" src="${pageContext.request.contextPath}/resources/js/course-detail.js"></script>
    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/course-detail.css"
       media="all and (min-width:600px) and (max-width:2000px)" />
@@ -221,7 +221,6 @@
                      var request = new XMLHttpRequest();
                      $("#review_btn").click(function () {
                         ajax();
-
                      });
                      var object = null;
                      //////////////////////////////
@@ -272,7 +271,8 @@
                                  + '<div class="review_review">'
                                  + '<input type="text" id="comment_text" name="review" placeholder="답글.."/>'
                                  + '<input type="hidden" name="uNum" value='
-                                 + object.comment[parseInt(i)].uNum
+                                 /* + object.comment[parseInt(i)].uNum */
+                                 + ${user.uNum}
                                  + " />"
                                  + '<input type="hidden" name="parent" value='
                                  + object.comment[parseInt(i)].cmtNum
@@ -286,7 +286,7 @@
                                     review_string = review_string
                                        + '<div class="comments">'
                                        + '<img alt="comment_user_img" src="${pageContext.request.contextPath}/'
-                                       + object.comment[parseInt(j)].img
+                                       + object.review[parseInt(j)].img
                                        + '"/>'
                                        + '<div class="comments_box">'
                                        + '<div class="comment_user_name">'
@@ -306,6 +306,7 @@
                                  + comment_suffix;
                               $('.ajax').append(fin_string)
                            }////////////////////////////////////
+                           
                            $('#rating').html(object.avg.toFixed(2) + "")
                            $('.course_detail-rating span:nth-child(2)').html(object.avg.toFixed(2))
 

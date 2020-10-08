@@ -460,6 +460,8 @@
 	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/adapter-latest.js"></script>
 	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/ga.js"></script>
 	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/capture.js"></script>
+	<!-- <iframe src = "http://52.78.54.179:5000/index; " allow = "camera https://localhost:8080;"></iframe> -->
+	<!-- <iframe src = "http://52.78.54.179:5000/index;" allow = "camera *;"></iframe> -->
 	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/player.js"></script>
 </body>
 

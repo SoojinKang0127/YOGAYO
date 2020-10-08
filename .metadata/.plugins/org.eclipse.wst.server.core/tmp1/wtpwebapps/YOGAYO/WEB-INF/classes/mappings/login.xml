@@ -42,6 +42,10 @@
 		SELECT NAME FROM USER WHERE UNUM=#{uNum};
 	</select>
 	
+	<select id="getAuthor" parameterType="CourseVo" resultType="UserVo">
+		SELECT * FROM USER WHERE UNUM=#{uNum};
+	</select>
+	
 	<select id="getUserByCommentVo" parameterType="CommentVo" resultType="UserVo">
 	 SELECT * FROM USER WHERE UNUM=#{uNum};
 	</select>

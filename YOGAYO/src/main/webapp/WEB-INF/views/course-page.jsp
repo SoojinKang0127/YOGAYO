@@ -12,7 +12,7 @@
 <title>YOGAYO | COURSE</title>
 <script src="https://kit.fontawesome.com/54919de5bd.js"
 	crossorigin="anonymous"></script>
-<script src="http://code.jquery.com/jquery.js"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
 <script language=JavaScript
 	src="${pageContext.request.contextPath}/resources/js/course-page.js"></script>
 <link rel="stylesheet" type="text/css"

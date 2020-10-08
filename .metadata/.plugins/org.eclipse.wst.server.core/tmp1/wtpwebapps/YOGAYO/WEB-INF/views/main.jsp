@@ -15,7 +15,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 	
 </head>
-
+<script>
+   contextPath='${pageContext.request.contextPath}'
+</script>
 <body>
 	<jsp:include page="header/header_white.jsp" />
 	<main>
@@ -39,36 +41,39 @@
 				</div>
 			</div>
 		</div>
+		<div class="temp1"></br>${user.name} 님을 위한 맞춤 추천 코스 </div>
 		<div class="second_wrapper">
 			<div class="main-second_container">
+			<div class="loading"><div class="loader"></div><p class="load_text">Loading...</p></div>
 				<div class="up-on-scroll">
 					<div class="main-second_bg">
 						<div class="main-recommand">
-							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(0).crsNum}">
-								<img src="${pageContext.request.contextPath}/${rec.get(0).imgPath}"/>
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=1">
+								<div class="img_temp"><img src="${pageContext.request.contextPath}/resources/image/course/course.jpg"/></div>
 								<div class="main-first_course">
-									<div class="main-course_title">${rec.get(0).title}
+									<div class="main-course_title">당신의 허리를 위한 스트레칭
+
 									</div>
 									<div class="main-first_course_explain">
-										${rec.get(0).dscrt}</div>
+										예전 같지 않은 허리 이대로 괜찮으신가요?</div>
 								</div>
 							</a>
 						</div>
 						<div class="main-recommand">
-							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(1).crsNum}"> <img
-								src="${pageContext.request.contextPath}/${rec.get(1).imgPath}" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=1"><div class="img_temp"><img
+								src="${pageContext.request.contextPath}/resources/image/course/course.jpg" /></div>
 								<div class="main-second_course">
-									<div class="main-course_title">${rec.get(1).title}</div>
-									<div class="main-second_course_explain">${rec.get(1).dscrt}</div>
+									<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
+									<div class="main-second_course_explain">예전 같지 않은 허리 이대로 괜찮으신가요?</div>
 								</div>
 							</a>
 						</div>
 						<div class="main-recommand">
-							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(2).crsNum}"><img
-								src="${pageContext.request.contextPath}/${rec.get(2).imgPath}" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=1"><div class="img_temp"><img
+								src="${pageContext.request.contextPath}/resources/image/course/course.jpg" /></div>
 							<div class="main-third_course">
-								<div class="main-course_title">${rec.get(2).title}</div>
-								<div class="main-third_course_explain">${rec.get(2).dscrt}</div>
+								<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
+								<div class="main-third_course_explain">예전 같지 않은 허리 이대로 괜찮으신가요?</div>
 							</div>
 						</a>
 						</div>
@@ -77,29 +82,29 @@
 				<div class="up-on-scroll">
 					 <div class="main-second_bg">
 						<div class="main-recommand"> 
-							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(3).crsNum}"><img
-								src="${pageContext.request.contextPath}/${rec.get(3).imgPath}" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=1"><div class="img_temp"><img
+								src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" /></div>
 							<div class="main-first_course">
-								<div class="main-course_title">${rec.get(3).title}</div>
-								<div class="main-first_course_explain">${rec.get(3).dscrt}</div>
+								<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
+								<div class="main-first_course_explain">예전 같지 않은 허리 이대로 괜찮으신가요?</div>
 							</div>
 							</a>
 						</div>
 						<div class="main-recommand">
-							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(3).crsNum}"><img
-								src="${pageContext.request.contextPath}/${rec.get(3).imgPath}" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=1"><div class="img_temp"><img
+								src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" /></div>
 							<div class="main-second_course">
-								<div class="main-course_title">${rec.get(3).title}</div>
-								<div class="main-second_course_explain">${rec.get(3).dscrt}</div>
+								<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
+								<div class="main-second_course_explain">예전 같지 않은 허리 이대로 괜찮으신가요?</div>
 							</div>
 							</a>
 						</div>
 						<div class="main-recommand">
-							<a href="${pageContext.request.contextPath}/course-detail?crsNum=${rec.get(3).crsNum}"><img
-								src="${pageContext.request.contextPath}/${rec.get(3).imgPath}" />
+							<a href="${pageContext.request.contextPath}/course-detail?crsNum=1"><div class="img_temp"><img
+								src="${pageContext.request.contextPath}/resources/image/course/course2.jpg" /></div>
 							<div class="main-third_course">
-								<div class="main-course_title">${rec.get(3).title}</div>
-								<div class="main-third_course_explain">${rec.get(3).dscrt}</div>
+								<div class="main-course_title">당신의 허리를 위한 스트레칭</div>
+								<div class="main-third_course_explain">예전 같지 않은 허리 이대로 괜찮으신가요?</div>
 							</div>
 							</a>
 						</div>
@@ -231,7 +236,7 @@
    <script language=JavaScript src="${pageContext.request.contextPath}/resources/js/main_newsletter.js"></script>
    <jsp:include page="footer/footer_grey.jsp" />
    </main>
-   <script src="http://code.jquery.com/jquery.js"></script>
+   <script src="https://code.jquery.com/jquery.js"></script>
    <script language=JavaScript src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 </body>
 

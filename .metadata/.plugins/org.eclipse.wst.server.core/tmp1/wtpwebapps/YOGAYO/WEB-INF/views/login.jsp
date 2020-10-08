@@ -38,7 +38,9 @@
               <div></div>
               <div></div> -->
             </div>
+            
             <a href="sign-up"><div class="sign-up-btn">회원가입</div></a>
+            <a href="admin"><div class="sign-up-btn admin-btn">관리자 페이지</div></a>
           </div>
         </div>
 
@@ -50,4 +52,3 @@
     </script>
   </body>
 </html>
-    

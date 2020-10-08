@@ -38,7 +38,7 @@
 	</header>
 	<main>
 		<div class="member_title">
-			<span class="underline">전체 회원 조회 | 총 ${userNum }명</span>
+			<span class="underline">전체 회원 조회 | 총 ${memberCount }명</span>
 		</div>
 		<div class="member_chart_section">
 			<div class="chart_wrapper">

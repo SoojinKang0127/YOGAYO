@@ -24,7 +24,6 @@
 	<script>
 		var uNum = encodeURIComponent("${uvo.uNum}");
 		var crsNum = encodeURIComponent("${crsNum}");
-		console.log(crsNum)
 		timeArr = new Array();
 		timeArr.push('${pose1.time}' * 100);
 		timeArr.push('${pose2.time}' * 100);
@@ -92,7 +91,7 @@
 				$(display).text(num[0].value + " kg")
 			})
 
-			$('.user-image').css("background-image", "URL(${pageContext.request.contextPath}/resources/image/profile/default_profile.png)")
+			$('.user-image').css({'background-image': 'url("${pageContext.request.contextPath}/${author.img}")'});
 			$('body').append('<audio id="audio" src=' + audioArr[0] + ' allow="autoplay"></audio>')
 			audio = document.getElementById('audio').play();
 		});
@@ -146,7 +145,7 @@
 							<div class="user-info">
 								<div class="user-image"></div>
 								<div class="user-detail">
-									<div class="user-name">${userName}</div>
+									<div class="user-name">${author.name}</div>
 									<div class="user-introduction">안녕하세요!</div>
 								</div>
 							</div>
@@ -354,7 +353,7 @@
 	<script>
 		var userImages = document.querySelectorAll(".userImage");
 		var btns = document.querySelectorAll(".btnContainer");
-
+		
 
 		function setThumbnailMulti(event) {
 
@@ -388,7 +387,7 @@
 		}
 	</script>
 	<script type="text/javascript">
-
+	
 		for (var i = 0; i < timeArr.length; i++) {
 			minute = parseInt(timeArr[i] / 6000)
 			second = parseInt((timeArr[i] % 6000) / 100)
@@ -456,11 +455,13 @@
 
 			form.submit();
 		}
-
+	
 	</script>
 	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/adapter-latest.js"></script>
 	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/ga.js"></script>
 	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/capture.js"></script>
+	<!-- <iframe src = "http://52.78.54.179:5000/index; " allow = "camera https://localhost:8080;"></iframe> -->
+	<!-- <iframe src = "http://52.78.54.179:5000/index;" allow = "camera *;"></iframe> -->
 	<script language=JavaScript src="${pageContext.request.contextPath}/resources/js/player.js"></script>
 </body>
 
