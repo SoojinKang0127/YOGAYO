@@ -161,19 +161,18 @@ public class SignUpController implements R {
 		String originalFileName = mf.getOriginalFilename();
 		String fileType = originalFileName.substring(originalFileName.lastIndexOf('.'), originalFileName.length());
 		
-		String realPath = multi.getRealPath("/");
-		System.out.println(realPath);
-		String curUserPath = realPath.substring(0, realPath.indexOf(".metadata"));
-		curUserPath = curUserPath.replace('\\', '/');
+//		String realPath = multi.getRealPath("/");
+//		String curUserPath = realPath.substring(0, realPath.indexOf(".metadata"));
+//		curUserPath = curUserPath.replace('\\', '/');
 		String path = null;
-		if (curUserPath.indexOf("YOGAYO") == -1) {
-			path = curUserPath + "YOGAYO/YOGAYO/src/main/webapp/resources/image/profile/";
-		} else {
-
-			path = curUserPath + "YOGAYO/src/main/webapp/resources/image/profile/";
-		}
+//		if (curUserPath.indexOf("YOGAYO") == -1) {
+//			path = curUserPath + "YOGAYO/YOGAYO/src/main/webapp/resources/image/profile/";
+//		} else {
+//
+//			path = curUserPath + "YOGAYO/src/main/webapp/resources/image/profile/";
+//		}
 		String projectPath = "resources/image/profile/";
-		
+		path="/var/lib/tomcat8/webapps/YOGAYO/resources/image/profile/";
 		int no = 0;
 		try {
 			no = service.getLastUnum() + 1;
