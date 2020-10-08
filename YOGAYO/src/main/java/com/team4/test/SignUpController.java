@@ -162,6 +162,7 @@ public class SignUpController implements R {
 		String fileType = originalFileName.substring(originalFileName.lastIndexOf('.'), originalFileName.length());
 		
 		String realPath = multi.getRealPath("/");
+		System.out.println(realPath);
 		String curUserPath = realPath.substring(0, realPath.indexOf(".metadata"));
 		curUserPath = curUserPath.replace('\\', '/');
 		String path = null;
