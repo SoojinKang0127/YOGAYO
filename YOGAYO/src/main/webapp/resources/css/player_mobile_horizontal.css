@@ -70,19 +70,20 @@ header{
   }
   
   .cam {
-	display: none;
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 490px;
+	width: 50%;
 	height: 490px;
-	overflow: hidden;
+   overflow: hidden;
+   /* border: 1px solid black; */
   }
   
   .pose_big_img_wrapper {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: 50%;
 	height: 100%;
 	overflow: hidden;
   }
@@ -688,4 +689,8 @@ color:  #fb3958;
 
 .fas.fa-heart{
    color:  #fb3958;
+}
+
+.domain{
+   display: none;
 }

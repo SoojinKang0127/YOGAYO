@@ -269,6 +269,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   
   function fordomain(){
+    var windowWidth = $( window ).width();
+    if(windowWidth>739)
   $('body').append('<div class="domain" style="height: 600px; width: 1310px; background-color: #2d8cff; display:inline-block;z-index=5;position:absolute;margin-top=20px;margin-left:90px;opacity:0.9"><div>의자 자세와 플랭크 자세에서 포즈 디텍팅을 진행합니다.</div><div><a>화면 중앙에 전신이 나오도록 위치해주세요.</a></div><div class="ok">확인</div></div>')
   $('.domain div:nth-child(1)').css({color:'white','align-items':'center','font-size':'30px','margin-left':'30px','margin-bottom':'30px','margin-top':'300px'})
   $('.domain div:nth-child(2)').css({color:'white','align-items':'center','font-size':'20px','margin-left':'30px','margin-bottom':'30px'})

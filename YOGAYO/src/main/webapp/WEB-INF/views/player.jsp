@@ -124,7 +124,16 @@
 					<div class="course-main">
 						<div class="image-wrapper">
 							<div class="image-progress-bar"></div>
-							<div class="course-image"><div class="gumandimage_wrapper"><div class="cam"><video id="gum" height="100%" width="150%"></video></div><div class="pose_big_img_wrapper"><img id="pose_big_img"></div></div></div>
+							<div class="course-image">
+								<div class="gumandimage_wrapper">
+									<div class="cam">
+										<video id="gum" height="100%" width="150%"></video>
+									</div>
+									<div class="pose_big_img_wrapper">
+										<img id="pose_big_img">
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="info-wrapper">
 							<div class="course-title">${course.title}</div>
