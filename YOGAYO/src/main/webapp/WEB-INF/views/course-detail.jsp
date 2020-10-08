@@ -9,7 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <title>YOGAYO | COURSE</title>
    <script src="https://kit.fontawesome.com/54919de5bd.js" crossorigin="anonymous"></script>
-   <script src="http://code.jquery.com/jquery.js"></script>
+   <script src="https://code.jquery.com/jquery.js"></script>
    <script language="JavaScript" src="${pageContext.request.contextPath}/resources/js/course-detail.js"></script>
    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/course-detail.css"
       media="all and (min-width:600px) and (max-width:2000px)" />

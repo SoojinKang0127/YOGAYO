@@ -236,7 +236,7 @@
    <script language=JavaScript src="${pageContext.request.contextPath}/resources/js/main_newsletter.js"></script>
    <jsp:include page="footer/footer_grey.jsp" />
    </main>
-   <script src="http://code.jquery.com/jquery.js"></script>
+   <script src="https://code.jquery.com/jquery.js"></script>
    <script language=JavaScript src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 </body>
 
