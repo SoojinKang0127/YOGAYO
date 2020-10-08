@@ -175,16 +175,8 @@ public class PlayerController implements R {
 		String originalFileName = mf.getOriginalFilename();
 		String fileType = originalFileName.substring(originalFileName.lastIndexOf('.'), originalFileName.length());
 
-		String realPath = multi.getRealPath("/");
-		String curUserPath = realPath.substring(0, realPath.indexOf(".metadata"));
-		curUserPath = curUserPath.replace('\\', '/');
 		String path = null;
-		if (curUserPath.indexOf("YOGAYO") == -1) {
-			path = curUserPath + "YOGAYO/YOGAYO/src/main/webapp/resources/image/feedimages/";
-		} else {
-
-			path = curUserPath + "YOGAYO/src/main/webapp/resources/image/feedimages/";
-		}
+		path="/var/lib/tomcat8/webapps/YOGAYO/resources/image/feedimages/";
 		String projectPath = "resources/image/feedimages/";
 
 		int no = 0;

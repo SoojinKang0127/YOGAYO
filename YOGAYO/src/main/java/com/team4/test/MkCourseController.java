@@ -83,18 +83,10 @@ public class MkCourseController implements R {
 			MultipartFile mf = multi.getFile("coursethumbnail");
 			String originalFileName = mf.getOriginalFilename();
 			String fileType = originalFileName.substring(originalFileName.lastIndexOf('.'), originalFileName.length());
-			String realPath = multi.getRealPath("/");
-			String curUserPath = realPath.substring(0, realPath.indexOf(".metadata"));
-			curUserPath = curUserPath.replace('\\', '/');
 			String path = null;
-			if (curUserPath.indexOf("YOGAYO") == -1) {
-				path = curUserPath + "YOGAYO/YOGAYO/src/main/webapp/resources/image/coursethumbnail/";
-			} else {
-
-				path = curUserPath + "YOGAYO/src/main/webapp/resources/image/coursethumbnail/";
-			}
+			
 			String projectPath = "resources/image/coursethumbnail/";
-
+			path="/var/lib/tomcat8/webapps/YOGAYO/resources/image/coursethumbnail/";
 			int no = 0;
 			try {
 				no = service.getLastCnum() + 1;
