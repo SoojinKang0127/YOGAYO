@@ -25,6 +25,8 @@ $(window).ready(function () {
   var clickMore = 0;
   former_height = 2300;
   $("#more_course_btn").on("click", function () {
+    scrollY=document.documentElement.scrollTop;
+    console.log(window.scrollY)
     var controllerUrl = "course-page-ajax.do"; //ajax url
     var radioValue = $("input[name=menu]:checked").val(); // data
     clickMore += 16;
@@ -55,10 +57,10 @@ $(window).ready(function () {
           var list =
             "<div class=up-on-scroll>" +
             "<div class=course_container>" +
-            "<a href=/test/course-detail?crsNum=" +
+            "<a href=/course-detail?crsNum=" +
             resultData.result[i].crsNum +
             ">" +
-            "<div class='img_wrapper'><img class='course_container_img' src=/test/" +
+            "<div class='img_wrapper'><img class='course_container_img' src=/" +
             resultData.result[i].imgPath +
             " alt=course /></div>" +
             "<div class=course_star_rating>" +
@@ -72,13 +74,14 @@ $(window).ready(function () {
             "</div>" +
             "</div></a></div></div>";
 
-		  $(".courses_first_line").append(list);
-		  $('.course_container').hover(function(){
-			$(this).find('.course_container_img').css({"height":370+"px"})
-		  },function(){
-			$(this).find('.course_container_img').css({"height":350+"px"})
-		  })
+        $(".courses_first_line").append(list);
+        $('.course_container').hover(function(){
+         $(this).find('.course_container_img').css({"height":370+"px"})
+        },function(){
+         $(this).find('.course_container_img').css({"height":350+"px"})
+        })
         }
+        $(document).scrollTop(scrollY);
       },
       error: function (request, status, error) {
         console.log(
@@ -93,7 +96,8 @@ $(window).ready(function () {
         );
       },
     });
-    $(document).scrollTop($(document.body).height() - 1920);
+    
+    console.log(scrollY)
     former_height = $(document.body).height();
     console.log($(document.body).height());
   });
@@ -116,10 +120,10 @@ $(window).ready(function () {
           var list =
             "<div class=up-on-scroll>" +
             "<div class=course_container>" +
-            "<a href=/test/course-detail?crsNum=" +
+            "<a href=/course-detail?crsNum=" +
             resultData.result[i].crsNum +
             ">" +
-            "<div class='img_wrapper'><img class='course_container_img' src=/test/" +
+            "<div class='img_wrapper'><img class='course_container_img' src=/" +
             resultData.result[i].imgPath +
             " alt=course /></div>" +
             "<div class=course_star_rating>" +
@@ -133,12 +137,12 @@ $(window).ready(function () {
             "</div>" +
             "</div></a></div></div>";
 
-		  $(".courses_first_line").append(list);
-		  $('.course_container').hover(function(){
-			$(this).find('.course_container_img').css({"height":370+"px"})
-		  },function(){
-			$(this).find('.course_container_img').css({"height":350+"px"})
-		  })
+        $(".courses_first_line").append(list);
+        $('.course_container').hover(function(){
+         $(this).find('.course_container_img').css({"height":370+"px"})
+        },function(){
+         $(this).find('.course_container_img').css({"height":350+"px"})
+        })
         }
       },
       error: function (request, status, error) {
@@ -173,10 +177,10 @@ $(window).ready(function () {
           var list =
             "<div class=up-on-scroll>" +
             "<div class=course_container>" +
-            "<a href=/test/course-detail?crsNum=" +
+            "<a href=/course-detail?crsNum=" +
             resultData.result[i].crsNum +
             ">" +
-            "<div class='img_wrapper'><img class='course_container_img' src=/test/" +
+            "<div class='img_wrapper'><img class='course_container_img' src=/" +
             resultData.result[i].imgPath +
             " alt=course /></div>" +
             "<div class=course_star_rating>" +
@@ -223,10 +227,10 @@ $(window).ready(function () {
           var list =
             "<div class=up-on-scroll>" +
             "<div class=course_container>" +
-            "<a href=/test/course-detail?crsNum=" +
+            "<a href=/course-detail?crsNum=" +
             resultData.result[i].crsNum +
             ">" +
-            "<div class='img_wrapper'><img class='course_container_img' src=/test/" +
+            "<div class='img_wrapper'><img class='course_container_img' src=/" +
             resultData.result[i].imgPath +
             " alt=course /></div>" +
             "<div class=course_star_rating>" +
@@ -240,12 +244,12 @@ $(window).ready(function () {
             "</div>" +
             "</div></a></div></div>";
 
-		  $(".courses_first_line").append(list);
-		  $('.course_container').hover(function(){
-			$(this).find('.course_container_img').css({"height":370+"px"})
-		  },function(){
-			$(this).find('.course_container_img').css({"height":350+"px"})
-		  })
+        $(".courses_first_line").append(list);
+        $('.course_container').hover(function(){
+         $(this).find('.course_container_img').css({"height":370+"px"})
+        },function(){
+         $(this).find('.course_container_img').css({"height":350+"px"})
+        })
         }
       },
       error: function (request, status, error) {
@@ -278,10 +282,10 @@ $(window).ready(function () {
           var list =
             "<div class=up-on-scroll>" +
             "<div class=course_container>" +
-            "<a href=/test/course-detail?crsNum=" +
+            "<a href=/course-detail?crsNum=" +
             resultData.result[i].crsNum +
             ">" +
-            "<div class='img_wrapper'><img class='course_container_img' src=/test/" +
+            "<div class='img_wrapper'><img class='course_container_img' src=/" +
             resultData.result[i].imgPath +
             " alt=course /></div>" +
             "<div class=course_star_rating>" +
@@ -295,12 +299,12 @@ $(window).ready(function () {
             "</div>" +
             "</div></a></div></div>";
 
-		  $(".courses_first_line").append(list);
-		  $('.course_container').hover(function(){
-			$(this).find('.course_container_img').css({"height":370+"px"})
-		  },function(){
-			$(this).find('.course_container_img').css({"height":350+"px"})
-		  })
+        $(".courses_first_line").append(list);
+        $('.course_container').hover(function(){
+         $(this).find('.course_container_img').css({"height":370+"px"})
+        },function(){
+         $(this).find('.course_container_img').css({"height":350+"px"})
+        })
         }
       },
       error: function (request, status, error) {
@@ -325,9 +329,9 @@ $(window).ready(function () {
         relY = e.pageY - parentOffset.top;
       $(".more_course_btn_background").css({
         left: relX + "px",
-		top: relY + "px",
-		width: 800 + "px",
-		height: 800 + "px"
+      top: relY + "px",
+      width: 800 + "px",
+      height: 800 + "px"
       });
     },
     function (e) {
@@ -336,9 +340,9 @@ $(window).ready(function () {
         relY = e.pageY - parentOffset.top;
       $(".more_course_btn_background").css({
         left: relX + "px",
-		top: relY + "px",
-		width: 0 + "px",
-		height: 0 + "px"
+      top: relY + "px",
+      width: 0 + "px",
+      height: 0 + "px"
       });
     }
   );
@@ -419,9 +423,9 @@ $(window).ready(function () {
   }
 
   $('.course_container').hover(function(){
-	$(this).find('.course_container_img').css({"height":370+"px"})
+   $(this).find('.course_container_img').css({"height":370+"px"})
   },function(){
-	$(this).find('.course_container_img').css({"height":350+"px"})
+   $(this).find('.course_container_img').css({"height":350+"px"})
   })
 
   window.addEventListener("scroll", handleScroll);

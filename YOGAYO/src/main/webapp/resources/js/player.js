@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function sendAjaxRequest(index) {
     takepicture();
     var json = { data: data, pnum: pnumArr[index] };
-    $.post("http://52.78.54.179:5000/index", json, function (data) {
+    $.post("https://52.78.54.179:5000/index", json, function (data) {
       console.log(data);
       mp3_path=data
     });
@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
   $('.domain div:nth-child(1)').css({color:'white','align-items':'center','font-size':'30px','margin-left':'30px','margin-bottom':'30px','margin-top':'300px'})
   $('.domain div:nth-child(2)').css({color:'white','align-items':'center','font-size':'20px','margin-left':'30px','margin-bottom':'30px'})
   $('.domain div:nth-child(2) a').css({color:'white'})
-   $('.ok').css({color:'white','align-items':'center','font-size':'20px','margin-left':'30px',})
+   $('.ok').css({color:'white','align-items':'center','font-size':'25px','margin-left':'30px','font-weight':'bold','cursor':'pointer'})
   $('.ok').click(function(){
   $('.domain').hide()
   })
@@ -287,7 +287,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("load", startup, false);
   var windowWidth = $( window ).width();
   if(windowWidth>739){
-	  fordomain()
+     fordomain()
   }
   
 });

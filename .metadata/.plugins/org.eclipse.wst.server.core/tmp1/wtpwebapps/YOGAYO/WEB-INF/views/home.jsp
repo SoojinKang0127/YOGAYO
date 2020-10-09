@@ -33,10 +33,10 @@
             <div class="withgoogle">
               <div></div>
             </div>
+            <a href="tester-login"><div class="sign-up-btn">테스터로 로그인</div></a>
             <a href="sign-up"><div class="sign-up-btn">회원가입</div></a>
           </div>
         </div>
-        
         <span class="text" id="text">요가를 할 때 몸과 마음에서는 어떤 일이 일어날까요?</span>
         
         <a href="login">

@@ -575,7 +575,9 @@ transform: translateY(10px);
 }
 
 .user_avatar img{
-	width:160%;
+	width: 50px;
+	height: 50px;
+	object-fit:cover;
 }
 
 .sec_first .content{
@@ -599,7 +601,9 @@ transform: translateY(10px);
 }
 
 .feed_img img{
-	width:130%;
+	width:500px;
+	height:290px;
+	object-fit:cover;
 }
 
 .sec_third{

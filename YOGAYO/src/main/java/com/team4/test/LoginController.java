@@ -65,6 +65,24 @@ public class LoginController {
 		return "redirect:/";
 	}
 	
+	@RequestMapping(value="/tester-login", method = RequestMethod.GET)
+	public String testerLogin(HttpServletRequest req, Model model)throws Exception{
+		UserServiceImpl service = new UserServiceImpl();
+	
+		
+		HttpSession session = req.getSession();	
+		UserVo tester = new UserVo();
+		tester.setId("1");
+		tester.setPwd("1");
+
+		UserVo login = service.login(tester);
+		session.setAttribute("user", login);
+				
+
+		return "redirect:/main";
+	}
+	
+	
 	
 
 }

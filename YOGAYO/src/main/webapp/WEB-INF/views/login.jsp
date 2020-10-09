@@ -28,7 +28,7 @@
               <form action="login" method="post">
                 <input type="text" name="id" placeholder="이메일 (example@gmail.com)"/><br />
                 <input type="password" name="pwd" placeholder="비밀번호"/><br />
-                <input type="submit" value="로그인" />
+                <input type="submit" value="로그인" class="login-btn" />
               </form>
               
             </div>
@@ -39,7 +39,8 @@
               <div></div> -->
             </div>
             
-            <a href="sign-up"><div class="sign-up-btn">회원가입</div></a>
+            <a href="sign-up"><div class="sign-up-btn sign">회원가입</div></a>
+            <a href="tester-login"><div class="sign-up-btn admin-btn sample">샘플 아이디로 로그인</div></a>
             <a href="admin"><div class="sign-up-btn admin-btn">관리자 페이지</div></a>
           </div>
         </div>
